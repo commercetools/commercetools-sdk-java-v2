@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerSignin
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerSignin {
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @return email
      */
     @NotNull
@@ -49,8 +50,8 @@ public interface MyCustomerSignin {
 
     /**
      *  <ul>
-     *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
-     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
+     *   <li>If <code>MergeWithExistingCustomerCart</code>, <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
+     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> are merged.</li>
      *  </ul>
      * @return activeCartSignInMode
      */
@@ -59,10 +60,7 @@ public interface MyCustomerSignin {
     public AnonymousCartSignInMode getActiveCartSignInMode();
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated. If <code>false</code>, only the prices, discounts, and tax rates are updated.</p>
      * @return updateProductData
      */
 
@@ -70,7 +68,7 @@ public interface MyCustomerSignin {
     public Boolean getUpdateProductData();
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @param email value to be set
      */
 
@@ -85,8 +83,8 @@ public interface MyCustomerSignin {
 
     /**
      *  <ul>
-     *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
-     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
+     *   <li>If <code>MergeWithExistingCustomerCart</code>, <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
+     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> are merged.</li>
      *  </ul>
      * @param activeCartSignInMode value to be set
      */
@@ -94,10 +92,7 @@ public interface MyCustomerSignin {
     public void setActiveCartSignInMode(final AnonymousCartSignInMode activeCartSignInMode);
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated. If <code>false</code>, only the prices, discounts, and tax rates are updated.</p>
      * @param updateProductData value to be set
      */
 
@@ -124,6 +119,8 @@ public interface MyCustomerSignin {
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
+
+    public MyCustomerSignin copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSignin
@@ -174,8 +171,8 @@ public interface MyCustomerSignin {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSignin> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSignin>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSignin> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSignin>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSignin>";

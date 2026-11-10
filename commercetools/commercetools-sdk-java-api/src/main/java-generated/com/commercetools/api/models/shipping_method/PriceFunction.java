@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PriceFunction
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceFunction {
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -49,7 +50,7 @@ public interface PriceFunction {
     public String getFunction();
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      * @param currencyCode value to be set
      */
 
@@ -82,6 +83,8 @@ public interface PriceFunction {
         instance.setFunction(template.getFunction());
         return instance;
     }
+
+    public PriceFunction copyDeep();
 
     /**
      * factory method to create a deep copy of PriceFunction
@@ -130,8 +133,8 @@ public interface PriceFunction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PriceFunction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PriceFunction>() {
+    public static tools.jackson.core.type.TypeReference<PriceFunction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PriceFunction>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceFunction>";

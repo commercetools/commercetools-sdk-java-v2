@@ -91,4 +91,10 @@ public class CustomerDeletedMessageQueryBuilderDsl {
             CustomerDeletedMessageQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<CustomerDeletedMessageQueryBuilderDsl> email() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("email")),
+            p -> new CombinationQueryPredicate<>(p, CustomerDeletedMessageQueryBuilderDsl::of));
+    }
+
 }

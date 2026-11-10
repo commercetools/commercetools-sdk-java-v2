@@ -6,29 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Key on Cart Discounts.</li>
- *   <li>Set Key on Categories.</li>
- *   <li>Set Key on Customers.</li>
- *   <li>Set Key on Customer Groups.</li>
- *   <li>Set Key on Payments.</li>
- *   <li>Set Key on Products.</li>
- *   <li>Set Key on Product Discounts.</li>
- *   <li>Set Key on Product Selections.</li>
- *   <li>Set Key on Product Types.</li>
- *   <li>Set Key on Reviews.</li>
- *   <li>Set Key on Shopping Lists.</li>
- *   <li>Set Key on Zones.</li>
- *  </ul>
+ * SetKeyChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetKeyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetKeyChangeImpl.class)
 public interface SetKeyChange extends Change {
@@ -125,6 +113,8 @@ public interface SetKeyChange extends Change {
         return instance;
     }
 
+    public SetKeyChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetKeyChange
      * @param template instance to be copied
@@ -173,8 +163,8 @@ public interface SetKeyChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetKeyChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetKeyChange>() {
+    public static tools.jackson.core.type.TypeReference<SetKeyChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetKeyChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetKeyChange>";

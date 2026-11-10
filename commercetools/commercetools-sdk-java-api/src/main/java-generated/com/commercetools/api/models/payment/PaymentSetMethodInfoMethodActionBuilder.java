@@ -26,7 +26,7 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
     private String method;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return method
      */
 

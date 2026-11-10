@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StandalonePriceDraft
@@ -44,6 +45,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy;
+
     private com.commercetools.api.models.standalone_price.StagedPriceDraft staged;
 
     private Boolean active;
@@ -62,6 +65,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("recurrencePolicy") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy,
             @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedPriceDraft staged,
             @JsonProperty("active") final Boolean active) {
         this.key = key;
@@ -75,6 +79,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.recurrencePolicy = recurrencePolicy;
         this.staged = staged;
         this.active = active;
     }
@@ -87,6 +92,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -94,7 +100,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Specifies to which <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the API associates this Price. It is not validated to exist in product variants.</p>
      */
 
     public String getSku() {
@@ -103,6 +109,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -118,7 +125,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -126,7 +133,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -142,7 +150,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -175,6 +183,14 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
+     */
+
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      */
 
@@ -183,7 +199,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during <span>Product price selection</span>.</p>
      */
 
     public Boolean getActive() {
@@ -239,6 +255,11 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
     }
 
+    public void setRecurrencePolicy(
+            final com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+    }
+
     public void setStaged(final com.commercetools.api.models.standalone_price.StagedPriceDraft staged) {
         this.staged = staged;
     }
@@ -268,6 +289,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(staged, that.staged)
                 .append(active, that.active)
                 .append(key, that.key)
@@ -281,6 +303,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(staged, that.staged)
                 .append(active, that.active)
                 .isEquals();
@@ -299,6 +322,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(recurrencePolicy)
                 .append(staged)
                 .append(active)
                 .toHashCode();
@@ -317,9 +341,14 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append("tiers", tiers)
                 .append("discounted", discounted)
                 .append("custom", custom)
+                .append("recurrencePolicy", recurrencePolicy)
                 .append("staged", staged)
                 .append("active", active)
                 .build();
     }
 
+    @Override
+    public StandalonePriceDraft copyDeep() {
+        return StandalonePriceDraft.deepCopy(this);
+    }
 }

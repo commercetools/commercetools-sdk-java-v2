@@ -9,13 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the Cart the Order has been created from.</p>
- *  <p>Produces the Order Customer Email Set Message.</p>
+ *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> the Order has been created from.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomerEmailSetMessage" rel="nofollow">Order Customer Email Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetCustomerEmailActionImpl.class)
 public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateAction {
@@ -36,7 +38,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 
@@ -44,7 +46,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     public String getEmail();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      */
 
@@ -68,6 +70,8 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public StagedOrderSetCustomerEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetCustomerEmailAction
@@ -116,8 +120,8 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetCustomerEmailAction>";

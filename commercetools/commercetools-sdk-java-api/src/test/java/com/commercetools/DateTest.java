@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 public class DateTest {
     @Test
-    public void t() throws IOException {
+    public void dateSerialize() throws IOException {
         ZonedDateTime t = ZonedDateTime.of(2020, 1, 1, 11, 1, 9, 0, ZoneId.of("Z"));
         Cart cart = Cart.builder().createdAt(t).buildUnchecked();
 
@@ -24,5 +24,4 @@ public class DateTest {
         Cart c = JsonUtils.fromJsonString(cartString, Cart.class);
         Assertions.assertThat(c.getCreatedAt()).isEqualTo(t);
     }
-
 }

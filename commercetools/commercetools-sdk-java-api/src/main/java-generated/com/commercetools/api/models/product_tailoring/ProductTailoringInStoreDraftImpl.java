@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains all the tailored data of a Product for a specific Store.</p>
+ *  <p>Contains all the tailored information of a Product for a specific Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStoreDraft, ModelBase {
@@ -40,6 +41,10 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
 
     private Boolean publish;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants;
+
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -52,7 +57,9 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
-            @JsonProperty("publish") final Boolean publish) {
+            @JsonProperty("publish") final Boolean publish,
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
         this.key = key;
         this.product = product;
         this.name = name;
@@ -62,6 +69,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.metaKeywords = metaKeywords;
         this.slug = slug;
         this.publish = publish;
+        this.variants = variants;
+        this.attributes = attributes;
     }
 
     /**
@@ -103,7 +112,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -111,7 +120,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used in search engine.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -119,7 +128,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -135,11 +144,27 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Whether the ProductTailoring is published immediately.</p>
      */
 
     public Boolean getPublish() {
         return this.publish;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> getVariants() {
+        return this.variants;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
     }
 
     public void setKey(final String key) {
@@ -178,6 +203,26 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.publish = publish;
     }
 
+    public void setVariants(
+            final com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+
+    public void setVariants(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants) {
+        this.variants = variants;
+    }
+
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -197,6 +242,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(publish, that.publish)
+                .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(key, that.key)
                 .append(product, that.product)
                 .append(name, that.name)
@@ -206,6 +253,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(publish, that.publish)
+                .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -220,6 +269,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords)
                 .append(slug)
                 .append(publish)
+                .append(variants)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -234,7 +285,13 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append("metaKeywords", metaKeywords)
                 .append("slug", slug)
                 .append("publish", publish)
+                .append("variants", variants)
+                .append("attributes", attributes)
                 .build();
     }
 
+    @Override
+    public ProductTailoringInStoreDraft copyDeep() {
+        return ProductTailoringInStoreDraft.deepCopy(this);
+    }
 }

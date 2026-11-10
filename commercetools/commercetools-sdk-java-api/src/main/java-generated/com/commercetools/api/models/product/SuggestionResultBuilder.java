@@ -19,12 +19,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class SuggestionResultBuilder implements Builder<SuggestionResult> {
 
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +37,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +53,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     * values of pattern properties
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @return pattern properties
      */
 

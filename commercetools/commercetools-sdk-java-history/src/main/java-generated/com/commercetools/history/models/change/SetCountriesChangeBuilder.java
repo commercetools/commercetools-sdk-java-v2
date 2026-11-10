@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +31,10 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     private java.util.List<com.commercetools.history.models.common.StoreCountry> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.StoreCountry> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.StoreCountry> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.StoreCountry> removedItems;
 
     /**
      * set the value to the change
@@ -220,6 +226,184 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder addedItems(
+            final com.commercetools.history.models.common.StoreCountry... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.StoreCountry> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.StoreCountry... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder plusAddedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountryBuilder> builder) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder withAddedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountryBuilder> builder) {
+        this.addedItems = new ArrayList<>();
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder addAddedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountry> builder) {
+        return plusAddedItems(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder setAddedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountry> builder) {
+        return addedItems(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder removedItems(
+            final com.commercetools.history.models.common.StoreCountry... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.StoreCountry> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.StoreCountry... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder plusRemovedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountryBuilder> builder) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder withRemovedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountryBuilder> builder) {
+        this.removedItems = new ArrayList<>();
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder addRemovedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountry> builder) {
+        return plusRemovedItems(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetCountriesChangeBuilder setRemovedItems(
+            Function<com.commercetools.history.models.common.StoreCountryBuilder, com.commercetools.history.models.common.StoreCountry> builder) {
+        return removedItems(builder.apply(com.commercetools.history.models.common.StoreCountryBuilder.of()));
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -247,6 +431,24 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.StoreCountry> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.StoreCountry> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetCountriesChange with checking for non-null required values
      * @return SetCountriesChange
      */
@@ -254,7 +456,9 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
         Objects.requireNonNull(change, SetCountriesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetCountriesChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetCountriesChange.class + ": nextValue is missing");
-        return new SetCountriesChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetCountriesChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetCountriesChange.class + ": removedItems is missing");
+        return new SetCountriesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -262,7 +466,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
      * @return SetCountriesChange
      */
     public SetCountriesChange buildUnchecked() {
-        return new SetCountriesChangeImpl(change, previousValue, nextValue);
+        return new SetCountriesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -283,6 +487,8 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

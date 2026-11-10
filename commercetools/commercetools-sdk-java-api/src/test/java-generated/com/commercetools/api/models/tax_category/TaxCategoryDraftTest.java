@@ -3,35 +3,28 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxCategoryDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxCategoryDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxCategoryDraftBuilder builder) {
         TaxCategoryDraft taxCategoryDraft = builder.buildUnchecked();
         Assertions.assertThat(taxCategoryDraft).isInstanceOf(TaxCategoryDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TaxCategoryDraft.builder().name("name") },
-                new Object[] { TaxCategoryDraft.builder().description("description") },
-                new Object[] { TaxCategoryDraft.builder()
-                        .rates(Collections
-                                .singletonList(new com.commercetools.api.models.tax_category.TaxRateDraftImpl())) },
-                new Object[] { TaxCategoryDraft.builder().key("key") } };
+        return new Object[][] { new Object[] { "name", TaxCategoryDraft.builder().name("name") },
+                new Object[] { "description", TaxCategoryDraft.builder().description("description") },
+                new Object[] { "rates",
+                        TaxCategoryDraft.builder()
+                                .rates(Collections.singletonList(
+                                    new com.commercetools.api.models.tax_category.TaxRateDraftImpl())) },
+                new Object[] { "key", TaxCategoryDraft.builder().key("key") } };
     }
 
     @Test

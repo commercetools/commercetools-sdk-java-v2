@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssociateRoleDraft
@@ -49,7 +50,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public String getName();
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @return buyerAssignable
      */
 
@@ -87,7 +88,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public void setName(final String name);
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @param buyerAssignable value to be set
      */
 
@@ -137,6 +138,8 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public AssociateRoleDraft copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleDraft
@@ -188,8 +191,8 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleDraft>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleDraft>";

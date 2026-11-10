@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListChangeTextLineItemsOrderAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTextLineItemsOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeTextLineItemsOrderActionImpl.class)
 public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
     String CHANGE_TEXT_LINE_ITEMS_ORDER = "changeTextLineItemsOrder";
 
     /**
-     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>Must contain all existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @return textLineItemOrder
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
     public List<String> getTextLineItemOrder();
 
     /**
-     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>Must contain all existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder values to be set
      */
 
@@ -52,7 +54,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
     public void setTextLineItemOrder(final String... textLineItemOrder);
 
     /**
-     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>Must contain all existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder values to be set
      */
 
@@ -77,6 +79,8 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
         instance.setTextLineItemOrder(template.getTextLineItemOrder());
         return instance;
     }
+
+    public ShoppingListChangeTextLineItemsOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListChangeTextLineItemsOrderAction
@@ -128,8 +132,8 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemsOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemsOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemsOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemsOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListChangeTextLineItemsOrderAction>";

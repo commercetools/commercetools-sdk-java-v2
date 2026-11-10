@@ -34,7 +34,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     private com.commercetools.api.models.common.Money money;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -58,6 +58,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -70,6 +71,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -82,6 +84,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -93,7 +96,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -103,7 +106,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -114,6 +117,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
 

@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodRemoveShippingRateAction
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeShippingRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodRemoveShippingRateActionImpl.class)
 public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUpdateAction {
@@ -39,7 +41,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     String REMOVE_SHIPPING_RATE = "removeShippingRate";
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @return zone
      */
     @NotNull
@@ -57,7 +59,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @param zone value to be set
      */
 
@@ -89,6 +91,8 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
         instance.setShippingRate(template.getShippingRate());
         return instance;
     }
+
+    public ShippingMethodRemoveShippingRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodRemoveShippingRateAction
@@ -141,8 +145,8 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodRemoveShippingRateAction>";

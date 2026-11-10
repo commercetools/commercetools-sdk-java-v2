@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the country can lead to changes in the LineItem prices.</p>
+ *  <p>Setting the country can lead to changes in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCountry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetCountryActionImpl.class)
 public interface MyCartSetCountryAction extends MyCartUpdateAction {
@@ -34,8 +36,8 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     String SET_COUNTRY = "setCountry";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @return country
      */
 
@@ -43,8 +45,8 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     public String getCountry();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @param country value to be set
      */
 
@@ -68,6 +70,8 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public MyCartSetCountryAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartSetCountryAction
@@ -115,8 +119,8 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetCountryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetCountryAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetCountryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetCountryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetCountryAction>";

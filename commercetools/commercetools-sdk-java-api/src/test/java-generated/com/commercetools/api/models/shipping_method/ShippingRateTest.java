@@ -3,38 +3,33 @@ package com.commercetools.api.models.shipping_method;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingRateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingRateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingRateBuilder builder) {
         ShippingRate shippingRate = builder.buildUnchecked();
         Assertions.assertThat(shippingRate).isInstanceOf(ShippingRate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShippingRate.builder()
-                        .price(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { ShippingRate.builder()
-                        .freeAbove(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { ShippingRate.builder().isMatching(true) },
-                new Object[] { ShippingRate.builder()
-                        .tiers(Collections.singletonList(
-                            new com.commercetools.api.models.shipping_method.ShippingRatePriceTierImpl())) } };
+                new Object[] { "price",
+                        ShippingRate.builder()
+                                .price(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "freeAbove",
+                        ShippingRate.builder()
+                                .freeAbove(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "isMatching", ShippingRate.builder().isMatching(true) },
+                new Object[] { "tiers",
+                        ShippingRate.builder()
+                                .tiers(Collections.singletonList(
+                                    new com.commercetools.api.models.shipping_method.ShippingRatePriceTierImpl())) } };
     }
 
     @Test

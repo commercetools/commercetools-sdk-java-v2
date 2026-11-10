@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountCodeInfoTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountCodeInfoBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountCodeInfoBuilder builder) {
         DiscountCodeInfo discountCodeInfo = builder.buildUnchecked();
         Assertions.assertThat(discountCodeInfo).isInstanceOf(DiscountCodeInfo.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { DiscountCodeInfo.builder()
+                new Object[] { "discountCode", DiscountCodeInfo.builder()
                         .discountCode(new com.commercetools.api.models.discount_code.DiscountCodeReferenceImpl()) },
-                new Object[] { DiscountCodeInfo.builder()
+                new Object[] { "state", DiscountCodeInfo.builder()
                         .state(com.commercetools.api.models.cart.DiscountCodeState.findEnum("NotActive")) } };
     }
 

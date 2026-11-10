@@ -31,7 +31,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param oldShippingRateInput value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param builder function to build the oldShippingRateInput value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return shippingRateInput
      */
 
@@ -90,7 +90,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return oldShippingRateInput
      */
 

@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxRateDraft
@@ -43,7 +44,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getName();
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return amount
      */
 
@@ -51,7 +53,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public Double getAmount();
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @return includedInPrice
      */
     @NotNull
@@ -59,7 +61,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public Boolean getIncludedInPrice();
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return country
      */
     @NotNull
@@ -67,7 +70,9 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getCountry();
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return state
      */
 
@@ -75,7 +80,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getState();
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
     @Valid
@@ -83,12 +88,21 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public List<SubRate> getSubRates();
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
     @JsonProperty("key")
     public String getKey();
+
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @JsonProperty("taxRoundingTarget")
+    public TaxRoundingTarget getTaxRoundingTarget();
 
     /**
      *  <p>Name of the TaxRate.</p>
@@ -98,35 +112,39 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setName(final String name);
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param amount value to be set
      */
 
     public void setAmount(final Double amount);
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @param includedInPrice value to be set
      */
 
     public void setIncludedInPrice(final Boolean includedInPrice);
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param state value to be set
      */
 
     public void setState(final String state);
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
@@ -134,18 +152,26 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setSubRates(final SubRate... subRates);
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
     public void setSubRates(final List<SubRate> subRates);
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
+
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     */
+
+    public void setTaxRoundingTarget(final TaxRoundingTarget taxRoundingTarget);
 
     /**
      * factory method
@@ -169,8 +195,11 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
         instance.setKey(template.getKey());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
+
+    public TaxRateDraft copyDeep();
 
     /**
      * factory method to create a deep copy of TaxRateDraft
@@ -194,6 +223,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 
@@ -228,8 +258,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxRateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxRateDraft>() {
+    public static tools.jackson.core.type.TypeReference<TaxRateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxRateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxRateDraft>";

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
- *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it to the Composable Commerce support team.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it to the <span>commercetools support team</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PendingOperation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PendingOperationErrorImpl.class)
 public interface PendingOperationError extends ErrorObject {
@@ -79,6 +81,8 @@ public interface PendingOperationError extends ErrorObject {
         return instance;
     }
 
+    public PendingOperationError copyDeep();
+
     /**
      * factory method to create a deep copy of PendingOperationError
      * @param template instance to be copied
@@ -126,8 +130,8 @@ public interface PendingOperationError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PendingOperationError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PendingOperationError>() {
+    public static tools.jackson.core.type.TypeReference<PendingOperationError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PendingOperationError>() {
             @Override
             public String toString() {
                 return "TypeReference<PendingOperationError>";

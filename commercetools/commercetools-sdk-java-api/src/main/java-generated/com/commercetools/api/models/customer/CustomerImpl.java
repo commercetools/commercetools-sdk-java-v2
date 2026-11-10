@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>If <code>stores</code> is not empty, the Customer is specific to those Stores.</p>
@@ -72,6 +73,8 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private String locale;
@@ -105,6 +108,7 @@ public class CustomerImpl implements Customer, ModelBase {
             @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
@@ -134,6 +138,7 @@ public class CustomerImpl implements Customer, ModelBase {
         this.billingAddressIds = billingAddressIds;
         this.isEmailVerified = isEmailVerified;
         this.customerGroup = customerGroup;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
@@ -221,7 +226,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public String getEmail() {
@@ -333,7 +338,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      */
 
     public Boolean getIsEmailVerified() {
@@ -341,7 +346,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -349,7 +354,16 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
+     *  <p>Custom Fields of the Customer.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -373,10 +387,10 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      */
 
@@ -505,6 +519,16 @@ public class CustomerImpl implements Customer, ModelBase {
         this.customerGroup = customerGroup;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -565,6 +589,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
@@ -595,6 +620,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
@@ -630,6 +656,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds)
                 .append(isEmailVerified)
                 .append(customerGroup)
+                .append(customerGroupAssignments)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
@@ -665,6 +692,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append("billingAddressIds", billingAddressIds)
                 .append("isEmailVerified", isEmailVerified)
                 .append("customerGroup", customerGroup)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("custom", custom)
                 .append("locale", locale)
                 .append("salutation", salutation)
@@ -673,4 +701,8 @@ public class CustomerImpl implements Customer, ModelBase {
                 .build();
     }
 
+    @Override
+    public Customer copyDeep() {
+        return Customer.deepCopy(this);
+    }
 }

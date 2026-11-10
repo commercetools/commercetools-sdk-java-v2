@@ -30,7 +30,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
     /**
-     * set the value to the data
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @param data value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * set values to the errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * set value to the errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * add values to the errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * add the value to the errors using the builder function
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * set the value to the errors using the builder function
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * add the value to the errors using the builder function
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * set the value to the errors using the builder function
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * value of data}
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @return data
      */
 
@@ -139,7 +139,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     * value of errors}
+     *  <p>Errors that the GraphQL query returns.</p>
      * @return errors
      */
 

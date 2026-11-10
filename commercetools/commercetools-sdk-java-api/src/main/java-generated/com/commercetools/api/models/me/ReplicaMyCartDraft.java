@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReplicaMyCartDraft
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<ReplicaMyCartDraft> {
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @return reference
      */
     @NotNull
@@ -40,21 +41,21 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
     public Object getReference();
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @param reference value to be set
      */
 
     public void setReference(final CartReference reference);
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @param reference value to be set
      */
 
     public void setReference(final OrderReference reference);
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @param reference value to be set
      */
 
@@ -78,6 +79,8 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
         instance.setReference(template.getReference());
         return instance;
     }
+
+    public ReplicaMyCartDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ReplicaMyCartDraft
@@ -125,8 +128,8 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReplicaMyCartDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReplicaMyCartDraft>() {
+    public static tools.jackson.core.type.TypeReference<ReplicaMyCartDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReplicaMyCartDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ReplicaMyCartDraft>";

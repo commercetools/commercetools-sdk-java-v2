@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     @Nullable
+    private Boolean isPlatformClient;
+
+    @Nullable
     private String clientId;
 
     @Nullable
@@ -39,7 +42,18 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     private com.commercetools.api.models.customer.CustomerReference associate;
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @param isPlatformClient value to be set
+     * @return Builder
+     */
+
+    public ClientLoggingBuilder isPlatformClient(@Nullable final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -50,7 +64,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -61,7 +75,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -73,7 +87,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -85,7 +99,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -97,7 +111,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -108,7 +122,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -120,7 +134,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -132,7 +146,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -144,7 +158,17 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @return isPlatformClient
+     */
+
+    @Nullable
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
 
@@ -154,7 +178,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @return externalUserId
      */
 
@@ -164,7 +188,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
 
@@ -174,7 +198,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @return anonymousId
      */
 
@@ -184,7 +208,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
 
@@ -198,7 +222,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
      * @return ClientLogging
      */
     public ClientLogging build() {
-        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new ClientLoggingImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -206,7 +230,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
      * @return ClientLogging
      */
     public ClientLogging buildUnchecked() {
-        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new ClientLoggingImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -224,6 +248,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
      */
     public static ClientLoggingBuilder of(final ClientLogging template) {
         ClientLoggingBuilder builder = new ClientLoggingBuilder();
+        builder.isPlatformClient = template.getIsPlatformClient();
         builder.clientId = template.getClientId();
         builder.externalUserId = template.getExternalUserId();
         builder.customer = template.getCustomer();

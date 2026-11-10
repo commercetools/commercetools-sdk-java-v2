@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product_selection.ProductSelectionReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelectionSetting
@@ -43,7 +44,7 @@ public interface ProductSelectionSetting {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
     @NotNull
@@ -58,7 +59,7 @@ public interface ProductSelectionSetting {
     public void setProductSelection(final ProductSelectionReference productSelection);
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      */
 
@@ -83,6 +84,8 @@ public interface ProductSelectionSetting {
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public ProductSelectionSetting copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionSetting
@@ -132,8 +135,8 @@ public interface ProductSelectionSetting {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionSetting> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionSetting>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetting>";

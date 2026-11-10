@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer.Customer;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Customer request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">Create Customer</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerCreatedMessagePayloadImpl.class)
 public interface CustomerCreatedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
     String CUSTOMER_CREATED = "CustomerCreated";
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @return customer
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
     public Customer getCustomer();
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @param customer value to be set
      */
 
@@ -71,6 +73,8 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public CustomerCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerCreatedMessagePayload
@@ -118,8 +122,8 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerCreatedMessagePayload>";

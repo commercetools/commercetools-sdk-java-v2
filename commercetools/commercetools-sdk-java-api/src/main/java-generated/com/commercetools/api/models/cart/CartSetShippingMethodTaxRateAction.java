@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+ *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingMethodTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingMethodTaxRateActionImpl.class)
 public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
@@ -35,7 +37,7 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
     String SET_SHIPPING_METHOD_TAX_RATE = "setShippingMethodTaxRate";
 
     /**
-     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to update. This is required and valid only for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned if <code>shippingKey</code> is provided for Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, or omitted for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -43,7 +45,7 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
     public String getShippingKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -51,14 +53,14 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to update. This is required and valid only for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned if <code>shippingKey</code> is provided for Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, or omitted for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -83,6 +85,8 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public CartSetShippingMethodTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetShippingMethodTaxRateAction
@@ -133,8 +137,8 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxRateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxRateAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetShippingMethodTaxRateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetShippingMethodTaxRateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetShippingMethodTaxRateAction>";

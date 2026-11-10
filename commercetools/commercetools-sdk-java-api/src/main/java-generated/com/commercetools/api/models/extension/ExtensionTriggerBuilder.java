@@ -32,7 +32,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     private String condition;
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @param resourceTypeId value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @param condition value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @return resourceTypeId
      */
 
@@ -111,7 +111,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @return condition
      */
 

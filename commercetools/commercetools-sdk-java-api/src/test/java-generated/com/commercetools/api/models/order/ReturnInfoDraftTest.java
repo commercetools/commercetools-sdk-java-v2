@@ -4,36 +4,29 @@ package com.commercetools.api.models.order;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReturnInfoDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReturnInfoDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReturnInfoDraftBuilder builder) {
         ReturnInfoDraft returnInfoDraft = builder.buildUnchecked();
         Assertions.assertThat(returnInfoDraft).isInstanceOf(ReturnInfoDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "items",
                         ReturnInfoDraft.builder()
                                 .items(Collections
                                         .singletonList(new com.commercetools.api.models.order.ReturnItemDraftImpl())) },
-                new Object[] { ReturnInfoDraft.builder().returnTrackingId("returnTrackingId") },
-                new Object[] { ReturnInfoDraft.builder().returnDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "returnTrackingId", ReturnInfoDraft.builder().returnTrackingId("returnTrackingId") },
+                new Object[] { "returnDate",
+                        ReturnInfoDraft.builder().returnDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

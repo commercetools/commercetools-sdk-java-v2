@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetShippingRateInputActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetShippingRateInputActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetShippingRateInputActionBuilder builder) {
         StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetShippingRateInputAction)
                 .isInstanceOf(StagedOrderSetShippingRateInputAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StagedOrderSetShippingRateInputAction.builder()
+        return new Object[][] { new Object[] { "shippingRateInput", StagedOrderSetShippingRateInputAction.builder()
                 .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputDraftImpl()) } };
     }
 

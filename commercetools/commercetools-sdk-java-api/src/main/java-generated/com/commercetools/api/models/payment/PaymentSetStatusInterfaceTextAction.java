@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentSetStatusInterfaceTextAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStatusInterfaceText")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
 public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction {
@@ -36,7 +38,7 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty string to remove any existing value.</p>
      * @return interfaceText
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     public String getInterfaceText();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty string to remove any existing value.</p>
      * @param interfaceText value to be set
      */
 
@@ -68,6 +70,8 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
         instance.setInterfaceText(template.getInterfaceText());
         return instance;
     }
+
+    public PaymentSetStatusInterfaceTextAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetStatusInterfaceTextAction
@@ -117,8 +121,8 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetStatusInterfaceTextAction>";

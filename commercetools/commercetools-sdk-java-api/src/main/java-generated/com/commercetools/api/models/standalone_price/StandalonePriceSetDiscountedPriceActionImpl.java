@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Discounts a Standalone Price. The referenced ProductDiscount in the discounted field must be of type external, active, and its predicate must match the referenced Price. Produces the StandalonePriceExternalDiscountSet Message.</p>
+ *  <p>Discounts a Standalone Price of a Product Variant on a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product Variant does not exist or if it exists only in the staged representation of a Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperationError</a> error is returned.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceExternalDiscountSetMessage" rel="nofollow">StandalonePriceExternalDiscountSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePriceSetDiscountedPriceAction, ModelBase {
@@ -52,7 +54,8 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -92,4 +95,8 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetDiscountedPriceAction copyDeep() {
+        return StandalonePriceSetDiscountedPriceAction.deepCopy(this);
+    }
 }

@@ -7,16 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodDraft
@@ -48,7 +50,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *  <p>Unique name for the ShippingMethod within a Project.</p>
+     *  <p>Unique name for the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -80,7 +82,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public LocalizedString getLocalizedDescription();
 
     /**
-     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> for all ZoneRates of the ShippingMethod.</p>
      * @return taxCategory
      */
     @NotNull
@@ -89,7 +91,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @return zoneRates
      */
     @NotNull
@@ -98,7 +100,15 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public List<ZoneRateDraft> getZoneRates();
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>Whether the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    /**
+     *  <p>Whether the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
     @NotNull
@@ -106,7 +116,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public Boolean getIsDefault();
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @return predicate
      */
 
@@ -122,6 +132,26 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @return stores
+     */
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
+
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @JsonProperty("carrier")
+    public String getCarrier();
+
+    /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
      */
@@ -129,7 +159,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setKey(final String key);
 
     /**
-     *  <p>Unique name for the ShippingMethod within a Project.</p>
+     *  <p>Unique name for the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
@@ -157,14 +187,14 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
     /**
-     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> for all ZoneRates of the ShippingMethod.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
 
@@ -172,21 +202,28 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setZoneRates(final ZoneRateDraft... zoneRates);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
 
     public void setZoneRates(final List<ZoneRateDraft> zoneRates);
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>Whether the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     */
+
+    public void setActive(final Boolean active);
+
+    /**
+     *  <p>Whether the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      */
 
     public void setIsDefault(final Boolean isDefault);
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @param predicate value to be set
      */
 
@@ -198,6 +235,36 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier... stores);
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreResourceIdentifier> stores);
+
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     */
+
+    public void setCarrier(final String carrier);
 
     /**
      * factory method
@@ -221,11 +288,16 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         instance.setLocalizedDescription(template.getLocalizedDescription());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setZoneRates(template.getZoneRates());
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
+        instance.setStores(template.getStores());
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
+
+    public ShippingMethodDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodDraft
@@ -252,9 +324,16 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
                         .map(com.commercetools.api.models.shipping_method.ZoneRateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
 
@@ -289,8 +368,8 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodDraft>";

@@ -7,14 +7,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountDraft
@@ -49,6 +50,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -73,7 +75,7 @@ public interface ProductDiscountDraft
     public ProductDiscountValueDraft getValue();
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -81,7 +83,8 @@ public interface ProductDiscountDraft
     public String getPredicate();
 
     /**
-     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return sortOrder
      */
     @NotNull
@@ -89,7 +92,7 @@ public interface ProductDiscountDraft
     public String getSortOrder();
 
     /**
-     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     *  <p>Whether to activate the ProductDiscount. To deactivate it even though the <code>predicate</code> matches, set to <code>false</code>.</p>
      * @return isActive
      */
     @NotNull
@@ -97,7 +100,7 @@ public interface ProductDiscountDraft
     public Boolean getIsActive();
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @return validFrom
      */
 
@@ -105,7 +108,7 @@ public interface ProductDiscountDraft
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 
@@ -121,6 +124,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -141,35 +145,36 @@ public interface ProductDiscountDraft
     public void setValue(final ProductDiscountValueDraft value);
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @param predicate value to be set
      */
 
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param sortOrder value to be set
      */
 
     public void setSortOrder(final String sortOrder);
 
     /**
-     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     *  <p>Whether to activate the ProductDiscount. To deactivate it even though the <code>predicate</code> matches, set to <code>false</code>.</p>
      * @param isActive value to be set
      */
 
     public void setIsActive(final Boolean isActive);
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
 
@@ -201,6 +206,8 @@ public interface ProductDiscountDraft
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public ProductDiscountDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountDraft
@@ -258,8 +265,8 @@ public interface ProductDiscountDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountDraft>";

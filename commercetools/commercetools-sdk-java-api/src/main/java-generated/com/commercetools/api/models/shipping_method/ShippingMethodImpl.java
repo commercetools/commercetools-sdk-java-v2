@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethod
@@ -49,11 +50,17 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
 
+    private Boolean active;
+
     private Boolean isDefault;
 
     private String predicate;
 
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
+    private String carrier;
 
     /**
      * create instance with all properties
@@ -70,8 +77,11 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates,
-            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
+            @JsonProperty("predicate") final String predicate,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("carrier") final String carrier) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -85,9 +95,12 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.localizedDescription = localizedDescription;
         this.taxCategory = taxCategory;
         this.zoneRates = zoneRates;
+        this.active = active;
         this.isDefault = isDefault;
         this.predicate = predicate;
         this.custom = custom;
+        this.stores = stores;
+        this.carrier = carrier;
     }
 
     /**
@@ -153,7 +166,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getName() {
@@ -185,7 +198,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -193,7 +206,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
@@ -201,7 +214,16 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     *  <p>Whether this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      */
 
     public Boolean getIsDefault() {
@@ -209,7 +231,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      */
 
     public String getPredicate() {
@@ -222,6 +244,25 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     */
+
+    public String getCarrier() {
+        return this.carrier;
     }
 
     public void setId(final String id) {
@@ -282,6 +323,10 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.zoneRates = zoneRates;
     }
 
+    public void setActive(final Boolean active) {
+        this.active = active;
+    }
+
     public void setIsDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
     }
@@ -292,6 +337,18 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+    }
+
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
+    public void setCarrier(final String carrier) {
+        this.carrier = carrier;
     }
 
     @Override
@@ -317,9 +374,12 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
                 .append(zoneRates, that.zoneRates)
+                .append(active, that.active)
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -333,9 +393,12 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
                 .append(zoneRates, that.zoneRates)
+                .append(active, that.active)
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .isEquals();
     }
 
@@ -354,9 +417,12 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription)
                 .append(taxCategory)
                 .append(zoneRates)
+                .append(active)
                 .append(isDefault)
                 .append(predicate)
                 .append(custom)
+                .append(stores)
+                .append(carrier)
                 .toHashCode();
     }
 
@@ -375,10 +441,17 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append("localizedDescription", localizedDescription)
                 .append("taxCategory", taxCategory)
                 .append("zoneRates", zoneRates)
+                .append("active", active)
                 .append("isDefault", isDefault)
                 .append("predicate", predicate)
                 .append("custom", custom)
+                .append("stores", stores)
+                .append("carrier", carrier)
                 .build();
     }
 
+    @Override
+    public ShippingMethod copyDeep() {
+        return ShippingMethod.deepCopy(this);
+    }
 }

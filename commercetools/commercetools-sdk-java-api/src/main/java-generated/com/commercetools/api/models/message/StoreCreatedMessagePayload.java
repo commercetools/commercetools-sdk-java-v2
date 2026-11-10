@@ -7,8 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.LocalizedString;
@@ -16,12 +14,15 @@ import com.commercetools.api.models.store.ProductSelectionSetting;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Store request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/stores:POST" rel="nofollow">Create Store</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreCreatedMessagePayloadImpl.class)
 public interface StoreCreatedMessagePayload extends MessagePayload {
@@ -45,7 +47,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     String STORE_CREATED = "StoreCreated";
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return name
      */
     @Valid
@@ -53,7 +55,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public LocalizedString getName();
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @return languages
      */
 
@@ -61,7 +63,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<String> getLanguages();
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return countries
      */
     @Valid
@@ -69,7 +71,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<StoreCountry> getCountries();
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return distributionChannels
      */
     @NotNull
@@ -78,7 +80,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getDistributionChannels();
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return supplyChannels
      */
     @NotNull
@@ -87,7 +89,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getSupplyChannels();
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return productSelections
      */
     @NotNull
@@ -96,7 +98,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ProductSelectionSetting> getProductSelections();
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return custom
      */
     @Valid
@@ -104,14 +106,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public CustomFields getCustom();
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @param languages values to be set
      */
 
@@ -119,14 +121,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public void setLanguages(final String... languages);
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @param languages values to be set
      */
 
     public void setLanguages(final List<String> languages);
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param countries values to be set
      */
 
@@ -134,14 +136,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public void setCountries(final StoreCountry... countries);
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param countries values to be set
      */
 
     public void setCountries(final List<StoreCountry> countries);
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param distributionChannels values to be set
      */
 
@@ -149,14 +151,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public void setDistributionChannels(final ChannelReference... distributionChannels);
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param distributionChannels values to be set
      */
 
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param supplyChannels values to be set
      */
 
@@ -164,14 +166,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public void setSupplyChannels(final ChannelReference... supplyChannels);
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param supplyChannels values to be set
      */
 
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param productSelections values to be set
      */
 
@@ -179,14 +181,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public void setProductSelections(final ProductSelectionSetting... productSelections);
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param productSelections values to be set
      */
 
     public void setProductSelections(final List<ProductSelectionSetting> productSelections);
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param custom value to be set
      */
 
@@ -216,6 +218,8 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public StoreCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StoreCreatedMessagePayload
@@ -285,8 +289,8 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StoreCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreCreatedMessagePayload>";

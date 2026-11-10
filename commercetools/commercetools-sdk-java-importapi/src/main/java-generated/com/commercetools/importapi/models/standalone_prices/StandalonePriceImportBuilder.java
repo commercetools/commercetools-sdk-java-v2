@@ -56,8 +56,11 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    @Nullable
+    private Boolean active;
+
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the StandalonePrice. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -68,7 +71,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     *  <p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -79,7 +82,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -90,7 +93,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -102,7 +105,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -113,7 +116,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -127,7 +131,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -140,7 +145,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -152,7 +158,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -164,7 +171,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -176,7 +184,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -188,7 +197,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validFrom</code>.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -199,7 +208,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validUntil</code>.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -210,7 +219,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -222,7 +231,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -234,7 +243,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -249,7 +258,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -264,7 +273,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -277,7 +286,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -288,7 +297,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -335,7 +344,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -347,7 +356,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -359,7 +368,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -371,7 +380,19 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>Maps to <code>StandalonePrice.active</code>.</p>
+     *  <p>To exclude the StandalonePrice from <span>Product price selection</span>, set to <code>false</code>.</p>
+     * @param active value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder active(@Nullable final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier for the StandalonePrice. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -380,7 +401,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     *  <p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p>
      * @return sku
      */
 
@@ -389,7 +410,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      * @return value
      */
 
@@ -398,7 +419,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return country
      */
 
@@ -408,7 +429,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return customerGroup
      */
 
@@ -418,7 +440,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return channel
      */
 
@@ -428,7 +451,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validFrom</code>.</p>
      * @return validFrom
      */
 
@@ -438,7 +461,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validUntil</code>.</p>
      * @return validUntil
      */
 
@@ -448,7 +471,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @return tiers
      */
 
@@ -468,13 +491,24 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @return custom
      */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Maps to <code>StandalonePrice.active</code>.</p>
+     *  <p>To exclude the StandalonePrice from <span>Product price selection</span>, set to <code>false</code>.</p>
+     * @return active
+     */
+
+    @Nullable
+    public Boolean getActive() {
+        return this.active;
     }
 
     /**
@@ -486,7 +520,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
         Objects.requireNonNull(sku, StandalonePriceImport.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePriceImport.class + ": value is missing");
         return new StandalonePriceImportImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom);
+            tiers, discounted, custom, active);
     }
 
     /**
@@ -495,7 +529,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
      */
     public StandalonePriceImport buildUnchecked() {
         return new StandalonePriceImportImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom);
+            tiers, discounted, custom, active);
     }
 
     /**
@@ -524,6 +558,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
         builder.tiers = template.getTiers();
         builder.discounted = template.getDiscounted();
         builder.custom = template.getCustom();
+        builder.active = template.getActive();
         return builder;
     }
 

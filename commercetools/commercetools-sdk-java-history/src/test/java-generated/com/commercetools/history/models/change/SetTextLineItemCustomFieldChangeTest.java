@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetTextLineItemCustomFieldChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetTextLineItemCustomFieldChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetTextLineItemCustomFieldChangeBuilder builder) {
         SetTextLineItemCustomFieldChange setTextLineItemCustomFieldChange = builder.buildUnchecked();
         Assertions.assertThat(setTextLineItemCustomFieldChange).isInstanceOf(SetTextLineItemCustomFieldChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetTextLineItemCustomFieldChange.builder().change("change") },
-                new Object[] { SetTextLineItemCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { SetTextLineItemCustomFieldChange.builder().nextValue("nextValue") },
-                new Object[] { SetTextLineItemCustomFieldChange.builder().name("name") },
-                new Object[] { SetTextLineItemCustomFieldChange.builder().customTypeId("customTypeId") },
-                new Object[] { SetTextLineItemCustomFieldChange.builder()
+        return new Object[][] { new Object[] { "change", SetTextLineItemCustomFieldChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetTextLineItemCustomFieldChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetTextLineItemCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "name", SetTextLineItemCustomFieldChange.builder().name("name") },
+                new Object[] { "customTypeId",
+                        SetTextLineItemCustomFieldChange.builder().customTypeId("customTypeId") },
+                new Object[] { "textLineItem", SetTextLineItemCustomFieldChange.builder()
                         .textLineItem(new com.commercetools.history.models.change_value.TextLineItemValueImpl()) } };
     }
 

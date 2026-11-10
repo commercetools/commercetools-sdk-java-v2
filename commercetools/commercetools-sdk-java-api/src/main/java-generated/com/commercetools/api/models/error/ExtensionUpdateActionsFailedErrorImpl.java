@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a 400 Bad Request response if the same update action was sent from a regular client.</p>
+ *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a <span>400 Bad Request</span> response if the same update action was sent from a regular client.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateActionsFailedError, ModelBase {
@@ -39,7 +41,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
      */
     @JsonCreator
     ExtensionUpdateActionsFailedErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage,
             @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo,
             @JsonProperty("extensionErrors") final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors) {
@@ -181,4 +183,8 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
                 .build();
     }
 
+    @Override
+    public ExtensionUpdateActionsFailedError copyDeep() {
+        return ExtensionUpdateActionsFailedError.deepCopy(this);
+    }
 }

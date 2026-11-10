@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * OrderRemovePaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentRemovedMessage" rel="nofollow">Order Payment Removed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderRemovePaymentActionImpl.class)
 public interface OrderRemovePaymentAction extends OrderUpdateAction {
@@ -38,7 +40,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @return payment
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param payment value to be set
      */
 
@@ -71,6 +73,8 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public OrderRemovePaymentAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderRemovePaymentAction
@@ -119,8 +123,8 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderRemovePaymentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderRemovePaymentAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderRemovePaymentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderRemovePaymentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderRemovePaymentAction>";

@@ -187,7 +187,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @param returnShipmentState value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -377,7 +377,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return returnItemId
      */
 
@@ -386,7 +386,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @return returnShipmentState
      */
 

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeParentUnit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitChangeParentUnitActionImpl.class)
 public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAction {
@@ -37,7 +39,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be <span>eventually consistent</span>.</p>
      * @return parentUnit
      */
     @NotNull
@@ -46,7 +49,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be <span>eventually consistent</span>.</p>
      * @param parentUnit value to be set
      */
 
@@ -70,6 +74,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
+
+    public BusinessUnitChangeParentUnitAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitChangeParentUnitAction
@@ -119,8 +125,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeParentUnitAction>";

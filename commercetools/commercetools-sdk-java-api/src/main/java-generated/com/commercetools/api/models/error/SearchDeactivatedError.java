@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the indexing of Product information is deactivated in a Project.</p>
- *  <p>To activate indexing, call Change Product Search Indexing Enabled and set <code>enabled</code> to <code>true</code>.</p>
+ *  <p>To activate indexing, call <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeProductSearchIndexingEnabledAction" rel="nofollow">Change Product Search Indexing Enabled</a> and set <code>enabled</code> to <code>true</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchDeactivated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchDeactivatedErrorImpl.class)
 public interface SearchDeactivatedError extends ErrorObject {
@@ -79,6 +81,8 @@ public interface SearchDeactivatedError extends ErrorObject {
         return instance;
     }
 
+    public SearchDeactivatedError copyDeep();
+
     /**
      * factory method to create a deep copy of SearchDeactivatedError
      * @param template instance to be copied
@@ -126,8 +130,8 @@ public interface SearchDeactivatedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchDeactivatedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchDeactivatedError>() {
+    public static tools.jackson.core.type.TypeReference<SearchDeactivatedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchDeactivatedError>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchDeactivatedError>";

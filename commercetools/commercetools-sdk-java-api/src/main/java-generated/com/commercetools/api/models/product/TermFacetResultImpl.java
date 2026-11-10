@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,14 +15,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * TermFacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class TermFacetResultImpl implements TermFacetResult, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
+    @Deprecated
     private com.commercetools.api.models.product.TermFacetResultType dataType;
 
     private Long missing;
@@ -61,21 +65,21 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
 
     /**
-     *
+     *  <p>Data type to which the facet is applied.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
         return this.dataType;
     }
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> that have no value for the specified <span>term facet expression</span>.</p>
      */
 
     public Long getMissing() {
@@ -83,7 +87,11 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of terms matching the <span>term facet expression</span>.</p>
+     *  <ul>
+     *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
+     *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
+     *  </ul>
      */
 
     public Long getTotal() {
@@ -91,7 +99,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the <span>limit</span>).</p>
      */
 
     public Long getOther() {
@@ -99,13 +107,16 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> through the <code>counting products</code> <span>extension</span>, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {
         return this.terms;
     }
 
+    @Deprecated
     public void setDataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
         this.dataType = dataType;
     }
@@ -177,4 +188,8 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public TermFacetResult copyDeep() {
+        return TermFacetResult.deepCopy(this);
+    }
 }

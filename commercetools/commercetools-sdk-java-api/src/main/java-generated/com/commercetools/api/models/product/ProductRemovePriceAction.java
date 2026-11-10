@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductRemovePriceAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePrice")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemovePriceActionImpl.class)
 public interface ProductRemovePriceAction extends ProductUpdateAction {
@@ -44,7 +46,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
+     *  <p>Whether only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
      * @return staged
      */
 
@@ -59,7 +61,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
+     *  <p>Whether only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductRemovePriceAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemovePriceAction
@@ -132,8 +136,8 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductRemovePriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRemovePriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRemovePriceAction>";

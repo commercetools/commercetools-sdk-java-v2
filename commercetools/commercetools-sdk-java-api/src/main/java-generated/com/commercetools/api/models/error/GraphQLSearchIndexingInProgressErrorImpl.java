@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
@@ -30,7 +32,8 @@ public class GraphQLSearchIndexingInProgressErrorImpl implements GraphQLSearchIn
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLSearchIndexingInProgressErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLSearchIndexingInProgressErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = SEARCH_INDEXING_IN_PROGRESS;
     }
@@ -94,4 +97,8 @@ public class GraphQLSearchIndexingInProgressErrorImpl implements GraphQLSearchIn
                 .build();
     }
 
+    @Override
+    public GraphQLSearchIndexingInProgressError copyDeep() {
+        return GraphQLSearchIndexingInProgressError.deepCopy(this);
+    }
 }

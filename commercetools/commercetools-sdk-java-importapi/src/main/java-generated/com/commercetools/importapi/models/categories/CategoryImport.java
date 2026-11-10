@@ -7,8 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.CategoryKeyReference;
@@ -16,12 +14,15 @@ import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
+ *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CategoryImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -57,7 +58,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
     @NotNull
@@ -74,7 +75,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @return parent
      */
     @Valid
@@ -122,7 +123,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-     *
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @return assets
      */
     @Valid
@@ -130,7 +131,7 @@ public interface CategoryImport extends ImportResource {
     public List<Asset> getAssets();
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -138,7 +139,7 @@ public interface CategoryImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -152,7 +153,7 @@ public interface CategoryImport extends ImportResource {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
 
@@ -166,7 +167,7 @@ public interface CategoryImport extends ImportResource {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param parent value to be set
      */
 
@@ -208,7 +209,7 @@ public interface CategoryImport extends ImportResource {
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     * set assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets values to be set
      */
 
@@ -216,14 +217,14 @@ public interface CategoryImport extends ImportResource {
     public void setAssets(final Asset... assets);
 
     /**
-     * set assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets values to be set
      */
 
     public void setAssets(final List<Asset> assets);
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @param custom value to be set
      */
 
@@ -258,6 +259,8 @@ public interface CategoryImport extends ImportResource {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public CategoryImport copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryImport
@@ -325,8 +328,8 @@ public interface CategoryImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryImport>() {
+    public static tools.jackson.core.type.TypeReference<CategoryImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryImport>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryImport>";

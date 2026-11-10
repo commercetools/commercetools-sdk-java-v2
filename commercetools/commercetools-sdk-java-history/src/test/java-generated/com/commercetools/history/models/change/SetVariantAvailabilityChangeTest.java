@@ -1,36 +1,28 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetVariantAvailabilityChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetVariantAvailabilityChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetVariantAvailabilityChangeBuilder builder) {
         SetVariantAvailabilityChange setVariantAvailabilityChange = builder.buildUnchecked();
         Assertions.assertThat(setVariantAvailabilityChange).isInstanceOf(SetVariantAvailabilityChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetVariantAvailabilityChange.builder().change("change") },
-                new Object[] { SetVariantAvailabilityChange.builder()
+        return new Object[][] { new Object[] { "change", SetVariantAvailabilityChange.builder().change("change") },
+                new Object[] { "previousValue", SetVariantAvailabilityChange.builder()
                         .previousValue(new com.commercetools.history.models.common.ProductVariantAvailabilityImpl()) },
-                new Object[] { SetVariantAvailabilityChange.builder()
+                new Object[] { "nextValue", SetVariantAvailabilityChange.builder()
                         .nextValue(new com.commercetools.history.models.common.ProductVariantAvailabilityImpl()) },
-                new Object[] { SetVariantAvailabilityChange.builder().catalogData("catalogData") },
-                new Object[] { SetVariantAvailabilityChange.builder().variant("variant") } };
+                new Object[] { "catalogData", SetVariantAvailabilityChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetVariantAvailabilityChange.builder().variant("variant") } };
     }
 
     @Test

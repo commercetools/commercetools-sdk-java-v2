@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -52,8 +53,9 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the value exceeds the price of a Product Variant, the resulting discounted price is set to <code>0</code>.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
@@ -97,4 +99,8 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
                 .build();
     }
 
+    @Override
+    public ProductDiscountValueAbsoluteDraft copyDeep() {
+        return ProductDiscountValueAbsoluteDraft.deepCopy(this);
+    }
 }

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FilteredFacetResult
@@ -26,8 +27,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("filter")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
+@Deprecated
 public interface FilteredFacetResult extends FacetResult {
 
     /**
@@ -36,7 +39,7 @@ public interface FilteredFacetResult extends FacetResult {
     String FILTER = "filter";
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> matching the value specified in <span>filtered facet expression</span>.</p>
      * @return count
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface FilteredFacetResult extends FacetResult {
     public Long getCount();
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 
@@ -52,14 +56,15 @@ public interface FilteredFacetResult extends FacetResult {
     public Long getProductCount();
 
     /**
-     * set count
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> matching the value specified in <span>filtered facet expression</span>.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     * set productCount
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      */
 
@@ -84,6 +89,8 @@ public interface FilteredFacetResult extends FacetResult {
         instance.setProductCount(template.getProductCount());
         return instance;
     }
+
+    public FilteredFacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of FilteredFacetResult
@@ -132,8 +139,8 @@ public interface FilteredFacetResult extends FacetResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FilteredFacetResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FilteredFacetResult>() {
+    public static tools.jackson.core.type.TypeReference<FilteredFacetResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FilteredFacetResult>() {
             @Override
             public String toString() {
                 return "TypeReference<FilteredFacetResult>";

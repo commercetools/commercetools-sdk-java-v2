@@ -3,36 +3,36 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeCartDiscountsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeCartDiscountsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeCartDiscountsChangeBuilder builder) {
         ChangeCartDiscountsChange changeCartDiscountsChange = builder.buildUnchecked();
         Assertions.assertThat(changeCartDiscountsChange).isInstanceOf(ChangeCartDiscountsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeCartDiscountsChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", ChangeCartDiscountsChange.builder().change("change") },
+                new Object[] { "previousValue",
                         ChangeCartDiscountsChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { ChangeCartDiscountsChange.builder()
-                        .nextValue(
+                new Object[] { "nextValue",
+                        ChangeCartDiscountsChange.builder()
+                                .nextValue(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "addedItems",
+                        ChangeCartDiscountsChange.builder()
+                                .addedItems(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "removedItems", ChangeCartDiscountsChange.builder()
+                        .removedItems(
                             Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
     }
 
@@ -56,6 +56,22 @@ public class ChangeCartDiscountsChangeTest {
         ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
     }
 }

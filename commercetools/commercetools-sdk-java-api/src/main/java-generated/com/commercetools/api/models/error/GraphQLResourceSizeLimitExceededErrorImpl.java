@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the resource exceeds the maximum allowed size of 16 MB.</p>
@@ -30,7 +32,8 @@ public class GraphQLResourceSizeLimitExceededErrorImpl implements GraphQLResourc
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLResourceSizeLimitExceededErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLResourceSizeLimitExceededErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }
@@ -94,4 +97,8 @@ public class GraphQLResourceSizeLimitExceededErrorImpl implements GraphQLResourc
                 .build();
     }
 
+    @Override
+    public GraphQLResourceSizeLimitExceededError copyDeep() {
+        return GraphQLResourceSizeLimitExceededError.deepCopy(this);
+    }
 }

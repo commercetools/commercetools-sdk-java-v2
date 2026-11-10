@@ -22,38 +22,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
-    private java.util.List<com.commercetools.history.models.common.Reference> payments;
+    private java.util.List<com.commercetools.history.models.common.PaymentReference> payments;
 
     /**
-     * set values to the payments
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param payments value to be set
      * @return Builder
      */
 
-    public PaymentInfoBuilder payments(final com.commercetools.history.models.common.Reference... payments) {
+    public PaymentInfoBuilder payments(final com.commercetools.history.models.common.PaymentReference... payments) {
         this.payments = new ArrayList<>(Arrays.asList(payments));
         return this;
     }
 
     /**
-     * set value to the payments
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param payments value to be set
      * @return Builder
      */
 
     public PaymentInfoBuilder payments(
-            final java.util.List<com.commercetools.history.models.common.Reference> payments) {
+            final java.util.List<com.commercetools.history.models.common.PaymentReference> payments) {
         this.payments = payments;
         return this;
     }
 
     /**
-     * add values to the payments
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param payments value to be set
      * @return Builder
      */
 
-    public PaymentInfoBuilder plusPayments(final com.commercetools.history.models.common.Reference... payments) {
+    public PaymentInfoBuilder plusPayments(final com.commercetools.history.models.common.PaymentReference... payments) {
         if (this.payments == null) {
             this.payments = new ArrayList<>();
         }
@@ -62,61 +62,61 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     * add the value to the payments using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param builder function to build the payments value
      * @return Builder
      */
 
     public PaymentInfoBuilder plusPayments(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.PaymentReferenceBuilder, com.commercetools.history.models.common.PaymentReferenceBuilder> builder) {
         if (this.payments == null) {
             this.payments = new ArrayList<>();
         }
-        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        this.payments.add(builder.apply(com.commercetools.history.models.common.PaymentReferenceBuilder.of()).build());
         return this;
     }
 
     /**
-     * set the value to the payments using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param builder function to build the payments value
      * @return Builder
      */
 
     public PaymentInfoBuilder withPayments(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.PaymentReferenceBuilder, com.commercetools.history.models.common.PaymentReferenceBuilder> builder) {
         this.payments = new ArrayList<>();
-        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        this.payments.add(builder.apply(com.commercetools.history.models.common.PaymentReferenceBuilder.of()).build());
         return this;
     }
 
     /**
-     * add the value to the payments using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param builder function to build the payments value
      * @return Builder
      */
 
     public PaymentInfoBuilder addPayments(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return plusPayments(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+            Function<com.commercetools.history.models.common.PaymentReferenceBuilder, com.commercetools.history.models.common.PaymentReference> builder) {
+        return plusPayments(builder.apply(com.commercetools.history.models.common.PaymentReferenceBuilder.of()));
     }
 
     /**
-     * set the value to the payments using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param builder function to build the payments value
      * @return Builder
      */
 
     public PaymentInfoBuilder setPayments(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return payments(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+            Function<com.commercetools.history.models.common.PaymentReferenceBuilder, com.commercetools.history.models.common.PaymentReference> builder) {
+        return payments(builder.apply(com.commercetools.history.models.common.PaymentReferenceBuilder.of()));
     }
 
     /**
-     * value of payments}
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @return payments
      */
 
-    public java.util.List<com.commercetools.history.models.common.Reference> getPayments() {
+    public java.util.List<com.commercetools.history.models.common.PaymentReference> getPayments() {
         return this.payments;
     }
 

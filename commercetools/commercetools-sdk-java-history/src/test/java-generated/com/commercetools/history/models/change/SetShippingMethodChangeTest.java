@@ -1,34 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetShippingMethodChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetShippingMethodChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetShippingMethodChangeBuilder builder) {
         SetShippingMethodChange setShippingMethodChange = builder.buildUnchecked();
         Assertions.assertThat(setShippingMethodChange).isInstanceOf(SetShippingMethodChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetShippingMethodChange.builder().change("change") },
-                new Object[] { SetShippingMethodChange.builder()
+        return new Object[][] { new Object[] { "change", SetShippingMethodChange.builder().change("change") },
+                new Object[] { "previousValue", SetShippingMethodChange.builder()
                         .previousValue(
                             new com.commercetools.history.models.change_value.ShippingMethodChangeValueImpl()) },
-                new Object[] { SetShippingMethodChange.builder()
+                new Object[] { "nextValue", SetShippingMethodChange.builder()
                         .nextValue(
                             new com.commercetools.history.models.change_value.ShippingMethodChangeValueImpl()) } };
     }

@@ -28,7 +28,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @return zone
      */
 

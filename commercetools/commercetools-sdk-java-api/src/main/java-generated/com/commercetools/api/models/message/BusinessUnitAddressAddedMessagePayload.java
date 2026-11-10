@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitAddressAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAddressAddedMessagePayloadImpl.class)
 public interface BusinessUnitAddressAddedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface BusinessUnitAddressAddedMessagePayload extends MessagePayload {
     String BUSINESS_UNIT_ADDRESS_ADDED = "BusinessUnitAddressAdded";
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface BusinessUnitAddressAddedMessagePayload extends MessagePayload {
     public Address getAddress();
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 
@@ -71,6 +73,8 @@ public interface BusinessUnitAddressAddedMessagePayload extends MessagePayload {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public BusinessUnitAddressAddedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitAddressAddedMessagePayload
@@ -121,8 +125,8 @@ public interface BusinessUnitAddressAddedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddressAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddressAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddressAddedMessagePayload>";

@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Business Unit type to model divisions that are part of the Company or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +33,18 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Division")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DivisionImpl.class)
 public interface Division extends BusinessUnit {
@@ -75,6 +80,14 @@ public interface Division extends BusinessUnit {
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+    @NotNull
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
      *  <p>Parent unit of the Division.</p>
      * @param parentUnit value to be set
      */
@@ -94,6 +107,13 @@ public interface Division extends BusinessUnit {
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
      * factory method
@@ -119,10 +139,12 @@ public interface Division extends BusinessUnit {
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(template.getStores());
+        instance.setInheritedStores(template.getInheritedStores());
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddressIds(template.getShippingAddressIds());
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
@@ -133,8 +155,11 @@ public interface Division extends BusinessUnit {
         instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
+
+    public Division copyDeep();
 
     /**
      * factory method to create a deep copy of Division
@@ -161,10 +186,20 @@ public interface Division extends BusinessUnit {
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setInheritedStores(Optional.ofNullable(template.getInheritedStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)
@@ -191,6 +226,7 @@ public interface Division extends BusinessUnit {
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
         instance.setTopLevelUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 
@@ -225,8 +261,8 @@ public interface Division extends BusinessUnit {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Division> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Division>() {
+    public static tools.jackson.core.type.TypeReference<Division> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Division>() {
             @Override
             public String toString() {
                 return "TypeReference<Division>";

@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * StagedOrderAddPaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentAddedMessage" rel="nofollow">Order Payment Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addPayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddPaymentActionImpl.class)
 public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
@@ -39,7 +41,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @return payment
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      */
 
@@ -72,6 +74,8 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public StagedOrderAddPaymentAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderAddPaymentAction
@@ -120,8 +124,8 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddPaymentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddPaymentAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddPaymentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddPaymentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddPaymentAction>";

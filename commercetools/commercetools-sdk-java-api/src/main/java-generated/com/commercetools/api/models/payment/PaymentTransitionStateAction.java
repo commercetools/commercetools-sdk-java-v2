@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
- *  <p>Transitioning the State of a Payment produces the PaymentStatusStateTransition Message.</p>
+ *  <p>If the Payment has no current <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
+ *  <p>Transitioning the State of a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentStatusStateTransitionMessage" rel="nofollow">PaymentStatusStateTransition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("transitionState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentTransitionStateActionImpl.class)
 public interface PaymentTransitionStateAction extends PaymentUpdateAction {
@@ -39,7 +41,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return state
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @return force
      */
 
@@ -56,14 +58,14 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public Boolean getForce();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param state value to be set
      */
 
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @param force value to be set
      */
 
@@ -88,6 +90,8 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public PaymentTransitionStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentTransitionStateAction
@@ -136,8 +140,8 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransitionStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransitionStateAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentTransitionStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentTransitionStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentTransitionStateAction>";

@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when two Customers are simultaneously created or updated with the same email address.</p>
+ *  <p>Returned when two <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> are simultaneously created or updated with the same email address.</p>
  *  <p>To confirm if the operation was successful, repeat the request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -36,7 +38,7 @@ public class LockedFieldErrorImpl implements LockedFieldError, ModelBase {
      */
     @JsonCreator
     LockedFieldErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("field") final String field) {
         this.message = message;
         this.values = values;
@@ -133,4 +135,8 @@ public class LockedFieldErrorImpl implements LockedFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public LockedFieldError copyDeep() {
+        return LockedFieldError.deepCopy(this);
+    }
 }

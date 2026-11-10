@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the request results in too much data being returned from the API. Adjust the request query to reduce the size of the data returned.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ContentTooLarge")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLContentTooLargeErrorImpl.class)
 public interface GraphQLContentTooLargeError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLContentTooLargeError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLContentTooLargeError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLContentTooLargeError
@@ -107,8 +111,8 @@ public interface GraphQLContentTooLargeError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLContentTooLargeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLContentTooLargeError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLContentTooLargeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLContentTooLargeError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLContentTooLargeError>";

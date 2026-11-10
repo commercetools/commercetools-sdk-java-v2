@@ -17,29 +17,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Extension triggered for operations on Carts.</p> */
+    <p>Extension triggered for operations on <span>Carts</span>.</p> */
     ExtensionResourceTypeId CART = ExtensionResourceTypeIdEnum.CART;
     /**
-    <p>Extension triggered for operations on Orders.</p> */
+    <p>Extension triggered for operations on <span>Orders</span>.</p> */
     ExtensionResourceTypeId ORDER = ExtensionResourceTypeIdEnum.ORDER;
     /**
-    <p>Extension triggered for operations on Payments.</p> */
+    <p>Extension triggered for operations on <span>Payments</span>.</p> */
     ExtensionResourceTypeId PAYMENT = ExtensionResourceTypeIdEnum.PAYMENT;
     /**
-    <p>Extension triggered for operations on Customers.</p> */
+    <p>Extension triggered for operations on <span>PaymentMethods</span>.</p> */
+    ExtensionResourceTypeId PAYMENT_METHOD = ExtensionResourceTypeIdEnum.PAYMENT_METHOD;
+    /**
+    <p>Extension triggered for operations on <span>Customers</span>.</p> */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
     /**
-    <p>Extension triggered for operations on QuoteRequests.</p> */
+    <p>Extension triggered for operations on <span>CustomerGroups</span>.</p> */
+    ExtensionResourceTypeId CUSTOMER_GROUP = ExtensionResourceTypeIdEnum.CUSTOMER_GROUP;
+    /**
+    <p>Extension triggered for operations on <span>QuoteRequests</span>.</p> */
     ExtensionResourceTypeId QUOTE_REQUEST = ExtensionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    <p>Extension triggered for operations on StagedQuotes.</p> */
+    <p>Extension triggered for operations on <span>StagedQuotes</span>.</p> */
     ExtensionResourceTypeId STAGED_QUOTE = ExtensionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    <p>Extension triggered for operations on Quotes.</p> */
+    <p>Extension triggered for operations on <span>Quotes</span>.</p> */
     ExtensionResourceTypeId QUOTE = ExtensionResourceTypeIdEnum.QUOTE;
     /**
-    <p>Extension triggered for operations on BusinessUnits.</p> */
+    <p>Extension triggered for operations on <span>BusinessUnits</span>.</p> */
     ExtensionResourceTypeId BUSINESS_UNIT = ExtensionResourceTypeIdEnum.BUSINESS_UNIT;
+    /**
+    <p>Extension triggered for operations on <span>ShoppingLists</span>.</p> */
+    ExtensionResourceTypeId SHOPPING_LIST = ExtensionResourceTypeIdEnum.SHOPPING_LIST;
+    /**
+    <p>Extension triggered for operations on <span>Products</span>.</p> */
+    ExtensionResourceTypeId PRODUCT = ExtensionResourceTypeIdEnum.PRODUCT;
 
     /**
      * possible values of ExtensionResourceTypeId
@@ -61,9 +73,19 @@ public interface ExtensionResourceTypeId extends JsonEnum {
         PAYMENT("payment"),
 
         /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
+
+        /**
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
 
         /**
          * quote-request
@@ -83,7 +105,17 @@ public interface ExtensionResourceTypeId extends JsonEnum {
         /**
          * business-unit
          */
-        BUSINESS_UNIT("business-unit");
+        BUSINESS_UNIT("business-unit"),
+
+        /**
+         * shopping-list
+         */
+        SHOPPING_LIST("shopping-list"),
+
+        /**
+         * product
+         */
+        PRODUCT("product");
         private final String jsonName;
 
         private ExtensionResourceTypeIdEnum(final String jsonName) {

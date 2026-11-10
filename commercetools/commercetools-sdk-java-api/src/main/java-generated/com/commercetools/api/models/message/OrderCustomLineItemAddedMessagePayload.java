@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add CustomLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddCustomLineItemAction" rel="nofollow">Add CustomLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemAddedMessagePayloadImpl.class)
 public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayload {
@@ -38,7 +40,7 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
     String ORDER_CUSTOM_LINE_ITEM_ADDED = "OrderCustomLineItemAdded";
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
     public CustomLineItem getCustomLineItem();
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      */
 
@@ -71,6 +73,8 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
         instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
+
+    public OrderCustomLineItemAddedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemAddedMessagePayload
@@ -122,8 +126,8 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemAddedMessagePayload>";

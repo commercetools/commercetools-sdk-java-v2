@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPrice
@@ -36,6 +37,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     *  <p>When multiple discounts from <code>includedDiscounts</code> apply, they are applied sequentially based on the <code>sortOrder</code> of their associated <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> (discounts with higher <code>sortOrder</code> values are applied first). The Cart's <code>priceRoundingMode</code> field (<a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">RoundingMode</a>) is applied after each discount calculation, so rounding occurs after each discount step rather than only once on the final cumulative amount.</p>
      * @return value
      */
     @NotNull
@@ -54,6 +56,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     *  <p>When multiple discounts from <code>includedDiscounts</code> apply, they are applied sequentially based on the <code>sortOrder</code> of their associated <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> (discounts with higher <code>sortOrder</code> values are applied first). The Cart's <code>priceRoundingMode</code> field (<a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">RoundingMode</a>) is applied after each discount calculation, so rounding occurs after each discount step rather than only once on the final cumulative amount.</p>
      * @param value value to be set
      */
 
@@ -93,6 +96,8 @@ public interface DiscountedLineItemPrice {
         instance.setIncludedDiscounts(template.getIncludedDiscounts());
         return instance;
     }
+
+    public DiscountedLineItemPrice copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountedLineItemPrice
@@ -145,8 +150,8 @@ public interface DiscountedLineItemPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPrice>";

@@ -6,9 +6,8 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.ResourceIdentifier;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import io.vrap.rmf.base.client.utils.Generated;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * OrderResourceIdentifier
@@ -22,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 @JsonDeserialize(as = OrderResourceIdentifierImpl.class)
 public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Order> {
@@ -99,8 +97,8 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<OrderResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderResourceIdentifier>";

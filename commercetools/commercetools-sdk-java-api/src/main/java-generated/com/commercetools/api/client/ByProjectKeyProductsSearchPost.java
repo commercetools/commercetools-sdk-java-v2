@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>If indexing is in progress or if Product Search is inactive, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ObjectNotFoundError" rel="nofollow">ObjectNotFound</a> error is returned. If inactive, you can <span>reactivate</span> it.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -61,7 +61,7 @@ public class ByProjectKeyProductsSearchPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/products/search", this.projectKey);
+        String httpRequestPath = String.format("%s/products/search", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

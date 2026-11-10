@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The given value already exists for a field that is checked for unique values.</p>
@@ -50,7 +51,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -58,7 +59,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {
@@ -132,4 +133,8 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public DuplicateFieldError copyDeep() {
+        return DuplicateFieldError.deepCopy(this);
+    }
 }

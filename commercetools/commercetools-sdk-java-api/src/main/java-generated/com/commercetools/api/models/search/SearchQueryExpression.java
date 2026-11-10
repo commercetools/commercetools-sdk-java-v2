@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchQueryExpression
@@ -46,6 +47,8 @@ public interface SearchQueryExpression extends SearchQuery {
         return instance;
     }
 
+    public SearchQueryExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchQueryExpression
      * @param template instance to be copied
@@ -56,49 +59,9 @@ public interface SearchQueryExpression extends SearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.search.SearchDateRangeExpression) {
-            return com.commercetools.api.models.search.SearchDateRangeExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchDateRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchDateTimeRangeExpression) {
-            return com.commercetools.api.models.search.SearchDateTimeRangeExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchDateTimeRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchExactExpression) {
-            return com.commercetools.api.models.search.SearchExactExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchExactExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchExistsExpression) {
-            return com.commercetools.api.models.search.SearchExistsExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchExistsExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextExpression) {
-            return com.commercetools.api.models.search.SearchFullTextExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextPrefixExpression) {
-            return com.commercetools.api.models.search.SearchFullTextPrefixExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextPrefixExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchLongRangeExpression) {
-            return com.commercetools.api.models.search.SearchLongRangeExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchLongRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchNumberRangeExpression) {
-            return com.commercetools.api.models.search.SearchNumberRangeExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchNumberRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchPrefixExpression) {
-            return com.commercetools.api.models.search.SearchPrefixExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchPrefixExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchTimeRangeExpression) {
-            return com.commercetools.api.models.search.SearchTimeRangeExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchTimeRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchWildCardExpression) {
-            return com.commercetools.api.models.search.SearchWildCardExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchWildCardExpression) template);
+
+        if (!(template instanceof SearchQueryExpressionImpl)) {
+            return template.copyDeep();
         }
         SearchQueryExpressionImpl instance = new SearchQueryExpressionImpl();
         return instance;
@@ -135,8 +98,8 @@ public interface SearchQueryExpression extends SearchQuery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchQueryExpression> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchQueryExpression>() {
+    public static tools.jackson.core.type.TypeReference<SearchQueryExpression> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchQueryExpression>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchQueryExpression>";

@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerResetPasswordTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerResetPasswordBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerResetPasswordBuilder builder) {
         CustomerResetPassword customerResetPassword = builder.buildUnchecked();
         Assertions.assertThat(customerResetPassword).isInstanceOf(CustomerResetPassword.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerResetPassword.builder().tokenValue("tokenValue") },
-                new Object[] { CustomerResetPassword.builder().newPassword("newPassword") },
-                new Object[] { CustomerResetPassword.builder().version(2L) } };
+        return new Object[][] { new Object[] { "tokenValue", CustomerResetPassword.builder().tokenValue("tokenValue") },
+                new Object[] { "newPassword", CustomerResetPassword.builder().newPassword("newPassword") },
+                new Object[] { "version", CustomerResetPassword.builder().version(2L) } };
     }
 
     @Test

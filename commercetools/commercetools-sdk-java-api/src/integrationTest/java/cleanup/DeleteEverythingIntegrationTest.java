@@ -82,7 +82,7 @@ public class DeleteEverythingIntegrationTest {
         }
     }
 
-    private <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
+    private static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
             SimplePagedQueryResourceRequest<TMethod, TResult, ?> request, Consumer<TElement> deleteFn) {
 
         QueryUtils.queryAll(request, list -> {
@@ -90,7 +90,7 @@ public class DeleteEverythingIntegrationTest {
         }, 100).toCompletableFuture().join();
     }
 
-    private void checkDepends(Runnable block) {
+    public static void checkDepends(Runnable block) {
         assertEventually(Duration.ofSeconds(60), Duration.ofMillis(1000), block);
     }
 
@@ -212,7 +212,7 @@ public class DeleteEverythingIntegrationTest {
         } while (response.getResults().size() != 0);
     }
 
-    private void deleteAllCartDiscounts() {
+    public static void deleteAllCartDiscounts() {
         checkDepends(() -> Assertions.assertThat(
             CommercetoolsTestUtils.getProjectApiRoot().discountCodes().get().executeBlocking().getBody().getCount())
                 .isZero());

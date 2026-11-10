@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a server-side problem is caused by scaling infrastructure resources.</p>
@@ -34,7 +36,7 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
      */
     @JsonCreator
     BadGatewayErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = BAD_GATEWAY;
@@ -114,4 +116,8 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
                 .build();
     }
 
+    @Override
+    public BadGatewayError copyDeep() {
+        return BadGatewayError.deepCopy(this);
+    }
 }

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLError
+ *  <p>Contains an error message, the location of the code that caused the error, and other information to help you correct the error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorImpl implements GraphQLError, ModelBase {
@@ -51,7 +52,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Location within your query where the error occurred.</p>
      */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> getLocations() {
@@ -67,7 +68,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      */
 
     public java.util.List<java.lang.Object> getPath() {
@@ -75,7 +76,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      */
 
     public com.commercetools.api.models.error.GraphQLErrorObject getExtensions() {
@@ -146,4 +147,8 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLError copyDeep() {
+        return GraphQLError.deepCopy(this);
+    }
 }

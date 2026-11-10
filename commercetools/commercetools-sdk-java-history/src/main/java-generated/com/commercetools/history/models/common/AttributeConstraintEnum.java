@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeConstraintEnum
+ *  <p>Specifies how an Attribute (or a set of Attributes) should be validated across all variants of a Product:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface AttributeConstraintEnum extends JsonEnum {

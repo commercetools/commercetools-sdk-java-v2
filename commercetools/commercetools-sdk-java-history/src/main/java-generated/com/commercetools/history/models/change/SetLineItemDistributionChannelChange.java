@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set LineItem DistributionChannel update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemDistributionChannelAction" rel="nofollow">Set LineItem DistributionChannel</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemDistributionChannelChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemDistributionChannelChangeImpl.class)
 public interface SetLineItemDistributionChannelChange extends Change {
@@ -77,7 +79,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public Reference getNextValue();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -86,7 +88,8 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
@@ -115,14 +118,15 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public void setNextValue(final Reference nextValue);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 
@@ -150,6 +154,8 @@ public interface SetLineItemDistributionChannelChange extends Change {
         instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetLineItemDistributionChannelChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemDistributionChannelChange
@@ -204,8 +210,8 @@ public interface SetLineItemDistributionChannelChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemDistributionChannelChange>";

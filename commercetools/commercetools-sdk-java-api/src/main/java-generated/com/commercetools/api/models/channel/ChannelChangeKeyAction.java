@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelChangeKeyAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
@@ -36,7 +38,9 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     String CHANGE_KEY = "changeKey";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
     @NotNull
@@ -44,7 +48,9 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     public String getKey();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -68,6 +74,8 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ChannelChangeKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelChangeKeyAction
@@ -115,8 +123,8 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelChangeKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelChangeKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelChangeKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelChangeKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelChangeKeyAction>";

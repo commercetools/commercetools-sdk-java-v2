@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Description update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleDescriptionSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleDescriptionSetMessageImpl.class)
 public interface ApprovalRuleDescriptionSetMessage extends Message {
@@ -41,7 +43,7 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     String APPROVAL_RULE_DESCRIPTION_SET = "ApprovalRuleDescriptionSet";
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return description
      */
 
@@ -49,7 +51,7 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     public String getDescription();
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return oldDescription
      */
 
@@ -57,14 +59,14 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     public String getOldDescription();
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param description value to be set
      */
 
     public void setDescription(final String description);
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param oldDescription value to be set
      */
 
@@ -99,6 +101,8 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
         instance.setOldDescription(template.getOldDescription());
         return instance;
     }
+
+    public ApprovalRuleDescriptionSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleDescriptionSetMessage
@@ -160,8 +164,8 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleDescriptionSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleDescriptionSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleDescriptionSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleDescriptionSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleDescriptionSetMessage>";

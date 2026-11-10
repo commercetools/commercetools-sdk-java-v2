@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Product Tailoring or Create Product Tailoring in Store request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring in Store</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailoringCreatedMessagePayload, ModelBase {
@@ -38,6 +39,16 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    private com.commercetools.api.models.common.LocalizedString metaTitle;
+
+    private com.commercetools.api.models.common.LocalizedString metaDescription;
+
+    private com.commercetools.api.models.common.LocalizedString metaKeywords;
+
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     private Boolean published;
 
     /**
@@ -51,6 +62,11 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
+            @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,
+            @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
+            @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes,
             @JsonProperty("published") final Boolean published) {
         this.key = key;
         this.store = store;
@@ -59,6 +75,11 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
         this.description = description;
         this.name = name;
         this.slug = slug;
+        this.metaTitle = metaTitle;
+        this.metaDescription = metaDescription;
+        this.metaKeywords = metaKeywords;
+        this.variants = variants;
+        this.attributes = attributes;
         this.published = published;
         this.type = PRODUCT_TAILORING_CREATED;
     }
@@ -111,7 +132,7 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -119,7 +140,7 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -127,7 +148,7 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -135,7 +156,47 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     */
+
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+        return this.metaTitle;
+    }
+
+    /**
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     */
+
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+        return this.metaDescription;
+    }
+
+    /**
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     */
+
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+        return this.metaKeywords;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     *  <p>Whether the ProductTailoring is published.</p>
      */
 
     public Boolean getPublished() {
@@ -170,6 +231,37 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
         this.slug = slug;
     }
 
+    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle) {
+        this.metaTitle = metaTitle;
+    }
+
+    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription) {
+        this.metaDescription = metaDescription;
+    }
+
+    public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+        this.metaKeywords = metaKeywords;
+    }
+
+    public void setVariants(final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+
+    public void setVariants(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+    }
+
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     public void setPublished(final Boolean published) {
         this.published = published;
     }
@@ -192,6 +284,11 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
                 .append(description, that.description)
                 .append(name, that.name)
                 .append(slug, that.slug)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(published, that.published)
                 .append(type, that.type)
                 .append(key, that.key)
@@ -201,6 +298,11 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
                 .append(description, that.description)
                 .append(name, that.name)
                 .append(slug, that.slug)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(published, that.published)
                 .isEquals();
     }
@@ -215,6 +317,11 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
                 .append(description)
                 .append(name)
                 .append(slug)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(variants)
+                .append(attributes)
                 .append(published)
                 .toHashCode();
     }
@@ -229,8 +336,17 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
                 .append("description", description)
                 .append("name", name)
                 .append("slug", slug)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("variants", variants)
+                .append("attributes", attributes)
                 .append("published", published)
                 .build();
     }
 
+    @Override
+    public ProductTailoringCreatedMessagePayload copyDeep() {
+        return ProductTailoringCreatedMessagePayload.deepCopy(this);
+    }
 }

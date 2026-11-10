@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDraft
@@ -56,6 +57,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -77,7 +80,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
             @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
             @JsonProperty("publish") final Boolean publish,
-            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.productType = productType;
         this.name = name;
         this.slug = slug;
@@ -95,6 +99,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.state = state;
         this.publish = publish;
         this.priceMode = priceMode;
+        this.attributes = attributes;
     }
 
     /**
@@ -120,7 +125,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -129,7 +134,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      */
 
     public String getKey() {
@@ -153,7 +158,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -161,7 +166,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -169,7 +174,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -185,7 +190,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {
@@ -194,6 +200,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants() {
@@ -209,7 +216,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -225,7 +232,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>Whether the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      */
 
     public Boolean getPublish() {
@@ -238,6 +245,14 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
     }
 
     public void setProductType(
@@ -320,6 +335,14 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -347,6 +370,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .append(productType, that.productType)
                 .append(name, that.name)
                 .append(slug, that.slug)
@@ -364,6 +388,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -386,6 +411,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state)
                 .append(publish)
                 .append(priceMode)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -408,7 +434,12 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append("state", state)
                 .append("publish", publish)
                 .append("priceMode", priceMode)
+                .append("attributes", attributes)
                 .build();
     }
 
+    @Override
+    public ProductDraft copyDeep() {
+        return ProductDraft.deepCopy(this);
+    }
 }

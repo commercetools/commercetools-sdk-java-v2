@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductVariantDeletedMessagePayload productVariantDeletedMessagePayload = ProductVariantDeletedMessagePayload.builder()
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,8 +30,10 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     private java.util.List<String> removedImageUrls;
 
+    private Boolean staged;
+
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -42,7 +45,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -54,7 +57,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -66,7 +69,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -77,7 +80,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -88,7 +91,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -102,7 +105,18 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @param staged value to be set
+     * @return Builder
+     */
+
+    public ProductVariantDeletedMessagePayloadBuilder staged(final Boolean staged) {
+        this.staged = staged;
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
 
@@ -112,12 +126,21 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @return removedImageUrls
      */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
+    }
+
+    /**
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @return staged
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     /**
@@ -127,7 +150,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     public ProductVariantDeletedMessagePayload build() {
         Objects.requireNonNull(removedImageUrls,
             ProductVariantDeletedMessagePayload.class + ": removedImageUrls is missing");
-        return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);
+        Objects.requireNonNull(staged, ProductVariantDeletedMessagePayload.class + ": staged is missing");
+        return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls, staged);
     }
 
     /**
@@ -135,7 +159,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
      * @return ProductVariantDeletedMessagePayload
      */
     public ProductVariantDeletedMessagePayload buildUnchecked() {
-        return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);
+        return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls, staged);
     }
 
     /**
@@ -155,6 +179,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         ProductVariantDeletedMessagePayloadBuilder builder = new ProductVariantDeletedMessagePayloadBuilder();
         builder.variant = template.getVariant();
         builder.removedImageUrls = template.getRemovedImageUrls();
+        builder.staged = template.getStaged();
         return builder;
     }
 

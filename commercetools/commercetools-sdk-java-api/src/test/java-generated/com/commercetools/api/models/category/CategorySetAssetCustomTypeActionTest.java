@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.category;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategorySetAssetCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategorySetAssetCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategorySetAssetCustomTypeActionBuilder builder) {
         CategorySetAssetCustomTypeAction categorySetAssetCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(categorySetAssetCustomTypeAction).isInstanceOf(CategorySetAssetCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CategorySetAssetCustomTypeAction.builder().assetId("assetId") },
-                new Object[] { CategorySetAssetCustomTypeAction.builder().assetKey("assetKey") },
-                new Object[] { CategorySetAssetCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { CategorySetAssetCustomTypeAction.builder()
+        return new Object[][] {
+                new Object[] { "assetId", CategorySetAssetCustomTypeAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", CategorySetAssetCustomTypeAction.builder().assetKey("assetKey") },
+                new Object[] { "type",
+                        CategorySetAssetCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", CategorySetAssetCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

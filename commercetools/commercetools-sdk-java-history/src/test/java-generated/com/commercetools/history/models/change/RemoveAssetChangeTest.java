@@ -1,31 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RemoveAssetChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RemoveAssetChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RemoveAssetChangeBuilder builder) {
         RemoveAssetChange removeAssetChange = builder.buildUnchecked();
         Assertions.assertThat(removeAssetChange).isInstanceOf(RemoveAssetChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { RemoveAssetChange.builder().change("change") }, new Object[] {
-                RemoveAssetChange.builder().previousValue(new com.commercetools.history.models.common.AssetImpl()) } };
+        return new Object[][] { new Object[] { "change", RemoveAssetChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        RemoveAssetChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.AssetImpl()) },
+                new Object[] { "catalogData", RemoveAssetChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", RemoveAssetChange.builder().variant("variant") } };
     }
 
     @Test
@@ -41,5 +37,19 @@ public class RemoveAssetChangeTest {
         value.setPreviousValue(new com.commercetools.history.models.common.AssetImpl());
         Assertions.assertThat(value.getPreviousValue())
                 .isEqualTo(new com.commercetools.history.models.common.AssetImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        RemoveAssetChange value = RemoveAssetChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        RemoveAssetChange value = RemoveAssetChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

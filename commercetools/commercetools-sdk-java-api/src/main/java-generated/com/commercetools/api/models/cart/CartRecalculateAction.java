@@ -8,13 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action does not set any Cart field in particular, but it triggers several Cart updates to bring prices and discounts to the latest state. Those can become stale over time when no Cart updates have been performed for a while and prices on related Products have changed in the meanwhile.</p>
- *  <p>If the <code>priceMode</code> of the Product related to a Line Item is of <code>Embedded</code> ProductPriceMode, the updated <code>price</code> of that LineItem may not correspond to a Price in the <code>variant.prices</code> anymore.</p>
+ *  <p>This update action does not set any Cart field in particular, but it triggers several <span>Cart updates</span> to bring prices and discounts to the latest state. Those can become stale over time when no Cart updates have been performed for a while and prices on related Products have changed in the meanwhile.</p>
+ *  <p>If the <code>priceMode</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> related to a Line Item is of <code>Embedded</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a>, the updated <code>price</code> of that <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> may not correspond to a Price in the <code>variant.prices</code> anymore.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("recalculate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartRecalculateActionImpl.class)
 public interface CartRecalculateAction extends CartUpdateAction {
@@ -36,8 +38,8 @@ public interface CartRecalculateAction extends CartUpdateAction {
 
     /**
      *  <ul>
-     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
-     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items. Prices inside the <code>variant</code> are only updated if <code>updateProductData</code> is <code>true</code>.</li>
+     *   <li>Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.</li>
      *  </ul>
      * @return updateProductData
      */
@@ -47,8 +49,8 @@ public interface CartRecalculateAction extends CartUpdateAction {
 
     /**
      *  <ul>
-     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
-     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items. Prices inside the <code>variant</code> are only updated if <code>updateProductData</code> is <code>true</code>.</li>
+     *   <li>Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.</li>
      *  </ul>
      * @param updateProductData value to be set
      */
@@ -73,6 +75,8 @@ public interface CartRecalculateAction extends CartUpdateAction {
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
+
+    public CartRecalculateAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartRecalculateAction
@@ -120,8 +124,8 @@ public interface CartRecalculateAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction>() {
+    public static tools.jackson.core.type.TypeReference<CartRecalculateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartRecalculateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartRecalculateAction>";

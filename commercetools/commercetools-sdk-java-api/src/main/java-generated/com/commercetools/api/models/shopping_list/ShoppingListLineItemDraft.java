@@ -7,16 +7,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ public interface ShoppingListLineItemDraft
         io.vrap.rmf.base.client.Draft<ShoppingListLineItemDraft> {
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -42,7 +43,7 @@ public interface ShoppingListLineItemDraft
     public String getKey();
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -50,7 +51,8 @@ public interface ShoppingListLineItemDraft
     public String getProductId();
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @return variantId
      */
 
@@ -58,7 +60,7 @@ public interface ShoppingListLineItemDraft
     public Long getVariantId();
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -66,7 +68,7 @@ public interface ShoppingListLineItemDraft
     public String getSku();
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -74,7 +76,7 @@ public interface ShoppingListLineItemDraft
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @return custom
      */
     @Valid
@@ -90,42 +92,43 @@ public interface ShoppingListLineItemDraft
     public Long getQuantity();
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param custom value to be set
      */
 
@@ -162,6 +165,8 @@ public interface ShoppingListLineItemDraft
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public ShoppingListLineItemDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListLineItemDraft
@@ -215,8 +220,8 @@ public interface ShoppingListLineItemDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListLineItemDraft>";

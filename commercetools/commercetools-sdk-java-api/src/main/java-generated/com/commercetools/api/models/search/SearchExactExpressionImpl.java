@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,19 +15,21 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * SearchExactExpression
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchExactExpressionImpl implements SearchExactExpression, ModelBase {
 
-    private com.commercetools.api.models.search.SearchAnyValue exact;
+    private com.commercetools.api.models.search.SearchExactValue exact;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SearchExactExpressionImpl(@JsonProperty("exact") final com.commercetools.api.models.search.SearchAnyValue exact) {
+    SearchExactExpressionImpl(@JsonProperty("exact") final com.commercetools.api.models.search.SearchExactValue exact) {
         this.exact = exact;
     }
 
@@ -42,11 +43,11 @@ public class SearchExactExpressionImpl implements SearchExactExpression, ModelBa
      *
      */
 
-    public com.commercetools.api.models.search.SearchAnyValue getExact() {
+    public com.commercetools.api.models.search.SearchExactValue getExact() {
         return this.exact;
     }
 
-    public void setExact(final com.commercetools.api.models.search.SearchAnyValue exact) {
+    public void setExact(final com.commercetools.api.models.search.SearchExactValue exact) {
         this.exact = exact;
     }
 
@@ -73,4 +74,8 @@ public class SearchExactExpressionImpl implements SearchExactExpression, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("exact", exact).build();
     }
 
+    @Override
+    public SearchExactExpression copyDeep() {
+        return SearchExactExpression.deepCopy(this);
+    }
 }

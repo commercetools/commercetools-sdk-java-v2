@@ -12,16 +12,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Either the scope <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>Either the <span>scope</span> <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>The response status code is <code>200 OK</code>, unless the request contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetStoresWithDescendantsAction" rel="nofollow">Set Stores with Descendants</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryAddStoreWithDescendantsAction" rel="nofollow">Add Store with Descendants</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryRemoveStoreWithDescendantsAction" rel="nofollow">Remove Store with Descendants</a> update action. In that case, the API responds with <code>202 Accepted</code>, and the returned Category contains a <code>warnings</code> field with a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSettingOngoingWarning" rel="nofollow">StoreSettingOngoing</a> Warning.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -73,7 +74,8 @@ public class ByProjectKeyCategoriesByIDPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/categories/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/categories/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +31,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     private java.util.List<com.commercetools.history.models.common.Reference> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.Reference> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Reference> removedItems;
 
     /**
      * set the value to the change
@@ -87,7 +93,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
      */
 
     public SetDistributionChannelsChangeBuilder plusPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
@@ -102,32 +108,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
      */
 
     public SetDistributionChannelsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         this.previousValue = new ArrayList<>();
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetDistributionChannelsChangeBuilder addPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetDistributionChannelsChangeBuilder setPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return previousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
     }
 
     /**
@@ -176,7 +160,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
      */
 
     public SetDistributionChannelsChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
@@ -191,32 +175,144 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
      */
 
     public SetDistributionChannelsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
      * @return Builder
      */
 
-    public SetDistributionChannelsChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return plusNextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    public SetDistributionChannelsChangeBuilder addedItems(
+            final com.commercetools.history.models.common.Reference... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
      * @return Builder
      */
 
-    public SetDistributionChannelsChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return nextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    public SetDistributionChannelsChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.Reference> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.Reference... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder plusAddedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder withAddedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.addedItems = new ArrayList<>();
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder removedItems(
+            final com.commercetools.history.models.common.Reference... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.Reference> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.Reference... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder plusRemovedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetDistributionChannelsChangeBuilder withRemovedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.removedItems = new ArrayList<>();
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
     }
 
     /**
@@ -247,6 +343,24 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reference> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reference> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetDistributionChannelsChange with checking for non-null required values
      * @return SetDistributionChannelsChange
      */
@@ -254,7 +368,9 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         Objects.requireNonNull(change, SetDistributionChannelsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetDistributionChannelsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetDistributionChannelsChange.class + ": nextValue is missing");
-        return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetDistributionChannelsChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetDistributionChannelsChange.class + ": removedItems is missing");
+        return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -262,7 +378,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
      * @return SetDistributionChannelsChange
      */
     public SetDistributionChannelsChange buildUnchecked() {
-        return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
+        return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -283,6 +399,8 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

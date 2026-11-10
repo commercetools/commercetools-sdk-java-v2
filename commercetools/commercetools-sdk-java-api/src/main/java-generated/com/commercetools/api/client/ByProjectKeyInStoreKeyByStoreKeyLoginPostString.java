@@ -8,18 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Authenticates a Customer associated with a Store. For more information, see Global versus Store-specific Customers.</p>
- *  <p>Triggers Cart merge during sign-in.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns an InvalidCredentials error.</p>
+ *  <p>Authenticates a Customer associated with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>Allows <span>merging</span> items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. If the Customer has multiple active Carts, the anonymous Cart is merged into the most recently modified active Cart.</p>
+ *  <p>The anonymous Cart is not merged in any of the following cases:</p>
+ *  <ul>
+ *   <li>The referenced Shipping Method is not active.</li>
+ *   <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *   <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *  </ul>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, this method returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -67,7 +73,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/login", this.projectKey, this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/login", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

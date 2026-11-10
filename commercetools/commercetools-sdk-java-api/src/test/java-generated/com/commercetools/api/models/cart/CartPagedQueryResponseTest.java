@@ -3,34 +3,26 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartPagedQueryResponseBuilder builder) {
         CartPagedQueryResponse cartPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(cartPagedQueryResponse).isInstanceOf(CartPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartPagedQueryResponse.builder().limit(7L) },
-                new Object[] { CartPagedQueryResponse.builder().offset(3L) },
-                new Object[] { CartPagedQueryResponse.builder().count(2L) },
-                new Object[] { CartPagedQueryResponse.builder().total(1L) },
-                new Object[] { CartPagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", CartPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", CartPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", CartPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", CartPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results", CartPagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.cart.CartImpl())) } };
     }
 

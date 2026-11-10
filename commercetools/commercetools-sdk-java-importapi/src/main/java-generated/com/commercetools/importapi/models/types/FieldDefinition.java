@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Defines a Custom Field and its meta-information. Maps to <code>Type.FieldDefinition</code>.</p>
+ *  <p>Defines a <span>Custom Field</span> and its meta-information. Maps to <code>Type.FieldDefinition</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +46,7 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p>
      * @return name
      */
     @NotNull
@@ -70,7 +71,7 @@ public interface FieldDefinition {
     public Boolean getRequired();
 
     /**
-     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @return inputHint
      */
 
@@ -85,7 +86,7 @@ public interface FieldDefinition {
     public void setType(final FieldType type);
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p>
      * @param name value to be set
      */
 
@@ -106,7 +107,7 @@ public interface FieldDefinition {
     public void setRequired(final Boolean required);
 
     /**
-     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @param inputHint value to be set
      */
 
@@ -134,6 +135,8 @@ public interface FieldDefinition {
         instance.setInputHint(template.getInputHint());
         return instance;
     }
+
+    public FieldDefinition copyDeep();
 
     /**
      * factory method to create a deep copy of FieldDefinition
@@ -185,8 +188,8 @@ public interface FieldDefinition {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinition>() {
+    public static tools.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FieldDefinition>() {
             @Override
             public String toString() {
                 return "TypeReference<FieldDefinition>";

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the order of EnumValues in an EnumType FieldDefinition. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
+ *  <p>Changes the order of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">EnumValues</a> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a> FieldDefinition. This update action can be used to update an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a> FieldDefinition and a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> FieldDefinition of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeEnumValueOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
 public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
@@ -37,7 +39,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     String CHANGE_ENUM_VALUE_ORDER = "changeEnumValueOrder";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     public List<String> getKeys();
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @param fieldName value to be set
      */
 
@@ -93,6 +95,8 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
         instance.setKeys(template.getKeys());
         return instance;
     }
+
+    public TypeChangeEnumValueOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeChangeEnumValueOrderAction
@@ -141,8 +145,8 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeChangeEnumValueOrderAction>";

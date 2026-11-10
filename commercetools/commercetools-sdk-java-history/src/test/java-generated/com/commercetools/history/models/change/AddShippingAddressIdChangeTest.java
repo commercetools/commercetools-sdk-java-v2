@@ -3,34 +3,28 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddShippingAddressIdChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddShippingAddressIdChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddShippingAddressIdChangeBuilder builder) {
         AddShippingAddressIdChange addShippingAddressIdChange = builder.buildUnchecked();
         Assertions.assertThat(addShippingAddressIdChange).isInstanceOf(AddShippingAddressIdChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddShippingAddressIdChange.builder().change("change") },
-                new Object[] { AddShippingAddressIdChange.builder()
-                        .previousValue(Collections.singletonList("previousValue")) },
-                new Object[] { AddShippingAddressIdChange.builder().nextValue(Collections.singletonList("nextValue")) },
-                new Object[] { AddShippingAddressIdChange.builder()
+        return new Object[][] { new Object[] { "change", AddShippingAddressIdChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        AddShippingAddressIdChange.builder()
+                                .previousValue(Collections.singletonList("previousValue")) },
+                new Object[] { "nextValue",
+                        AddShippingAddressIdChange.builder().nextValue(Collections.singletonList("nextValue")) },
+                new Object[] { "address", AddShippingAddressIdChange.builder()
                         .address(new com.commercetools.history.models.common.AddressImpl()) } };
     }
 

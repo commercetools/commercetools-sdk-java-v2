@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("absolute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueAbsoluteDraftImpl.class)
 public interface ProductDiscountValueAbsoluteDraft
@@ -40,8 +42,9 @@ public interface ProductDiscountValueAbsoluteDraft
     String ABSOLUTE = "absolute";
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the value exceeds the price of a Product Variant, the resulting discounted price is set to <code>0</code>.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return money
      */
     @NotNull
@@ -50,8 +53,9 @@ public interface ProductDiscountValueAbsoluteDraft
     public List<Money> getMoney();
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the value exceeds the price of a Product Variant, the resulting discounted price is set to <code>0</code>.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money values to be set
      */
 
@@ -59,8 +63,9 @@ public interface ProductDiscountValueAbsoluteDraft
     public void setMoney(final Money... money);
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the value exceeds the price of a Product Variant, the resulting discounted price is set to <code>0</code>.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money values to be set
      */
 
@@ -84,6 +89,8 @@ public interface ProductDiscountValueAbsoluteDraft
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public ProductDiscountValueAbsoluteDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueAbsoluteDraft
@@ -136,8 +143,8 @@ public interface ProductDiscountValueAbsoluteDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueAbsoluteDraft>";

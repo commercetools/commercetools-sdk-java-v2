@@ -7,16 +7,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
+ *  <p>If the container was created <strong>without</strong> a <code>retentionPolicy</code>, it <strong>expires 72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, expiry follows the configured <code>timeToLive</code> (between the minimum and maximum allowed values). The <code>expiresAt</code> field holds the calculated deletion time.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportContainer {
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
     @NotNull
@@ -44,7 +47,7 @@ public interface ImportContainer {
     public String getKey();
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @return resourceType
      */
 
@@ -52,7 +55,7 @@ public interface ImportContainer {
     public ImportResourceType getResourceType();
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @return version
      */
     @NotNull
@@ -60,7 +63,15 @@ public interface ImportContainer {
     public Long getVersion();
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     * @return retentionPolicy
+     */
+    @Valid
+    @JsonProperty("retentionPolicy")
+    public RetentionPolicy getRetentionPolicy();
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -68,7 +79,7 @@ public interface ImportContainer {
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -76,39 +87,61 @@ public interface ImportContainer {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
+     * @return expiresAt
+     */
+
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
+
+    /**
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @param resourceType value to be set
      */
 
     public void setResourceType(final ImportResourceType resourceType);
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     * @param retentionPolicy value to be set
+     */
+
+    public void setRetentionPolicy(final RetentionPolicy retentionPolicy);
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
+     * @param expiresAt value to be set
+     */
+
+    public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
      * factory method
@@ -128,10 +161,14 @@ public interface ImportContainer {
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
         instance.setVersion(template.getVersion());
+        instance.setRetentionPolicy(template.getRetentionPolicy());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
         return instance;
     }
+
+    public ImportContainer copyDeep();
 
     /**
      * factory method to create a deep copy of ImportContainer
@@ -147,8 +184,11 @@ public interface ImportContainer {
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
         instance.setVersion(template.getVersion());
+        instance.setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy
+                .deepCopy(template.getRetentionPolicy()));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
         return instance;
     }
 
@@ -183,8 +223,8 @@ public interface ImportContainer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainer>() {
+    public static tools.jackson.core.type.TypeReference<ImportContainer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportContainer>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportContainer>";

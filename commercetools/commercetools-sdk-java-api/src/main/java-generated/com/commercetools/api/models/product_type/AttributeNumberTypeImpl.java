@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,8 +14,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * AttributeNumberType
+ *  <p>Attribute type for numeric values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
@@ -62,4 +63,8 @@ public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeNumberType copyDeep() {
+        return AttributeNumberType.deepCopy(this);
+    }
 }

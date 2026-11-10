@@ -29,7 +29,7 @@ public class ApprovalFlowSetCustomFieldActionBuilder implements Builder<Approval
     private java.lang.Object value;
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ApprovalFlowSetCustomFieldActionBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ApprovalFlowSetCustomFieldActionBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @return name
      */
 
@@ -60,7 +60,7 @@ public class ApprovalFlowSetCustomFieldActionBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 

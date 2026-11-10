@@ -1,44 +1,41 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
 import java.util.List;
 
 import com.commercetools.api.models.product.Attribute;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.SerializerProvider;
 
-public class AttributeSerializer extends JsonSerializer<Attribute> {
+import tools.jackson.core.JsonGenerator;
+import tools.jackson.databind.SerializationContext;
+import tools.jackson.databind.ValueSerializer;
+
+public class AttributeSerializer extends ValueSerializer<Attribute> {
 
     @Override
-    public void serialize(Attribute value, JsonGenerator gen, SerializerProvider provider) throws IOException {
+    public void serialize(Attribute value, JsonGenerator gen, SerializationContext provider) {
         gen.writeStartObject();
-        gen.writeStringField("name", value.getName());
+        gen.writeStringProperty("name", value.getName());
         Object val = value.getValue();
         if (val instanceof Double) {
-            gen.writeFieldName("value");
+            gen.writeName("value");
             new DoubleSerializer().serialize((Double) value.getValue(), gen, provider);
         }
         else if (val instanceof List) {
-            gen.writeArrayFieldStart("value");
+            gen.writeArrayPropertyStart("value");
             ((List<?>) val).forEach(o -> {
-                try {
-                    if (o instanceof Double) {
-                        new DoubleSerializer().serialize((Double) o, gen, provider);
-                    }
-                    else {
-                        provider.defaultSerializeValue(o, gen);
-                    }
+                if (o instanceof Double) {
+                    new DoubleSerializer().serialize((Double) o, gen, provider);
                 }
-                catch (IOException e) {
-                    throw new RuntimeException(e);
+                else {
+                    Object plainObject = o;
+                    gen.writePOJO(plainObject);
                 }
             });
             gen.writeEndArray();
         }
         else {
-            provider.defaultSerializeField("value", value.getValue(), gen);
+            gen.writeName("value");
+            gen.writePOJO(value.getValue());
 
         }
         gen.writeEndObject();

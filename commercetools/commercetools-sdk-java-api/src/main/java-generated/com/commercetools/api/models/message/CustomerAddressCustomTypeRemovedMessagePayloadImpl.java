@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Type from an Address of a Customer using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after removing a Custom Type from an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
@@ -27,12 +28,16 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("previousTypeId") final String previousTypeId) {
+    CustomerAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED;
     }
 
@@ -52,15 +57,27 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
         return this.previousTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setPreviousTypeId(final String previousTypeId) {
         this.previousTypeId = previousTypeId;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -75,21 +92,28 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(previousTypeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(previousTypeId).append(addressId).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeRemovedMessagePayload copyDeep() {
+        return CustomerAddressCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

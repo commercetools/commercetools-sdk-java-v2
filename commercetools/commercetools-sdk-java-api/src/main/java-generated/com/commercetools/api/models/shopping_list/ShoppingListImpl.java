@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingList
@@ -50,6 +51,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -73,6 +76,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -90,6 +94,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.anonymousId = anonymousId;
         this.store = store;
+        this.businessUnit = businessUnit;
         this.custom = custom;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
@@ -150,7 +155,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -158,7 +163,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -190,7 +195,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -198,7 +203,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      */
 
     public String getAnonymousId() {
@@ -211,6 +216,14 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -303,6 +316,11 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.store = store;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -339,6 +357,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(anonymousId, that.anonymousId)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -356,6 +375,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(anonymousId, that.anonymousId)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -378,6 +398,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(anonymousId)
                 .append(store)
+                .append(businessUnit)
                 .append(custom)
                 .append(lastModifiedBy)
                 .append(createdBy)
@@ -400,10 +421,15 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("anonymousId", anonymousId)
                 .append("store", store)
+                .append("businessUnit", businessUnit)
                 .append("custom", custom)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
                 .build();
     }
 
+    @Override
+    public ShoppingList copyDeep() {
+        return ShoppingList.deepCopy(this);
+    }
 }

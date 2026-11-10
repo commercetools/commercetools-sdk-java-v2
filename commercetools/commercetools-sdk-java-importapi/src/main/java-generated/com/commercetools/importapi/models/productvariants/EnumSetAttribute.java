@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is an enum. The attribute value refers to the key of the enum value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("enum-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumSetAttributeImpl.class)
 public interface EnumSetAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface EnumSetAttribute extends Attribute {
     String ENUM_SET = "enum-set";
 
     /**
-     *
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface EnumSetAttribute extends Attribute {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      * @param value values to be set
      */
 
@@ -52,7 +54,7 @@ public interface EnumSetAttribute extends Attribute {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface EnumSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public EnumSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of EnumSetAttribute
@@ -125,8 +129,8 @@ public interface EnumSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EnumSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EnumSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<EnumSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EnumSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<EnumSetAttribute>";

@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
+ *  <p>The response of each Import Request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportResponse {
 
     /**
-     *
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @return operationStatus
      */
     @NotNull
@@ -43,7 +44,7 @@ public interface ImportResponse {
     public List<ImportOperationStatus> getOperationStatus();
 
     /**
-     * set operationStatus
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 
@@ -51,7 +52,7 @@ public interface ImportResponse {
     public void setOperationStatus(final ImportOperationStatus... operationStatus);
 
     /**
-     * set operationStatus
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 
@@ -75,6 +76,8 @@ public interface ImportResponse {
         instance.setOperationStatus(template.getOperationStatus());
         return instance;
     }
+
+    public ImportResponse copyDeep();
 
     /**
      * factory method to create a deep copy of ImportResponse
@@ -126,8 +129,8 @@ public interface ImportResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportResponse>() {
+    public static tools.jackson.core.type.TypeReference<ImportResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportResponse>";

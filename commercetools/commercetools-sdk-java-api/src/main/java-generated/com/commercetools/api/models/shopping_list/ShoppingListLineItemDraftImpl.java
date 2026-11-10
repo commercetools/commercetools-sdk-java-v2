@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft, ModelBase {
@@ -61,7 +62,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getKey() {
@@ -69,7 +70,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getProductId() {
@@ -77,7 +78,8 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      */
 
     public Long getVariantId() {
@@ -85,7 +87,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getSku() {
@@ -93,7 +95,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -101,7 +103,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -195,4 +197,8 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemDraft copyDeep() {
+        return ShoppingListLineItemDraft.deepCopy(this);
+    }
 }

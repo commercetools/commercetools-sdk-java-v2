@@ -41,7 +41,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
 

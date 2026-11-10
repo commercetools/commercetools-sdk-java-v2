@@ -8,16 +8,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerDraft
@@ -39,7 +40,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<MyCustomerDraft> {
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
     @NotNull
@@ -151,7 +152,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -159,7 +160,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public String getLocale();
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @return stores
      */
     @Valid
@@ -167,7 +168,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      */
 
@@ -273,14 +274,14 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
     public void setLocale(final String locale);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @param stores values to be set
      */
 
@@ -288,7 +289,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @param stores values to be set
      */
 
@@ -327,6 +328,8 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public MyCustomerDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerDraft
@@ -397,8 +400,8 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerDraft>";

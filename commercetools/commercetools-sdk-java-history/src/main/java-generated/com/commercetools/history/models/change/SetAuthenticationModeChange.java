@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.AuthenticationMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set AuthenticationMode update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAuthenticationModeAction" rel="nofollow">Set AuthenticationMode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetAuthenticationModeChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAuthenticationModeChangeImpl.class)
 public interface SetAuthenticationModeChange extends Change {
@@ -112,6 +114,8 @@ public interface SetAuthenticationModeChange extends Change {
         return instance;
     }
 
+    public SetAuthenticationModeChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetAuthenticationModeChange
      * @param template instance to be copied
@@ -160,8 +164,8 @@ public interface SetAuthenticationModeChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetAuthenticationModeChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetAuthenticationModeChange>() {
+    public static tools.jackson.core.type.TypeReference<SetAuthenticationModeChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetAuthenticationModeChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetAuthenticationModeChange>";

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FacetRange
@@ -36,10 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FacetRangeImpl.class)
+@Deprecated
 public interface FacetRange {
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      * @return from
      */
     @NotNull
@@ -47,7 +50,8 @@ public interface FacetRange {
     public Double getFrom();
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      * @return fromStr
      */
     @NotNull
@@ -55,7 +59,8 @@ public interface FacetRange {
     public String getFromStr();
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      * @return to
      */
     @NotNull
@@ -63,7 +68,8 @@ public interface FacetRange {
     public Double getTo();
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      * @return toStr
      */
     @NotNull
@@ -71,7 +77,7 @@ public interface FacetRange {
     public String getToStr();
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      * @return count
      */
     @NotNull
@@ -79,7 +85,8 @@ public interface FacetRange {
     public Long getCount();
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 
@@ -87,7 +94,7 @@ public interface FacetRange {
     public Long getProductCount();
 
     /**
-     *
+     *  <p>Sum of all values contained in the range.</p>
      * @return total
      */
     @NotNull
@@ -95,7 +102,7 @@ public interface FacetRange {
     public Double getTotal();
 
     /**
-     *
+     *  <p>Minimum value within the range.</p>
      * @return min
      */
     @NotNull
@@ -103,7 +110,7 @@ public interface FacetRange {
     public Double getMin();
 
     /**
-     *
+     *  <p>Maximum value within the range.</p>
      * @return max
      */
     @NotNull
@@ -111,7 +118,7 @@ public interface FacetRange {
     public Double getMax();
 
     /**
-     *
+     *  <p>Arithmetic mean of the values within the range.</p>
      * @return mean
      */
     @NotNull
@@ -119,70 +126,75 @@ public interface FacetRange {
     public Double getMean();
 
     /**
-     * set from
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      * @param from value to be set
      */
 
     public void setFrom(final Double from);
 
     /**
-     * set fromStr
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      * @param fromStr value to be set
      */
 
     public void setFromStr(final String fromStr);
 
     /**
-     * set to
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      * @param to value to be set
      */
 
     public void setTo(final Double to);
 
     /**
-     * set toStr
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      * @param toStr value to be set
      */
 
     public void setToStr(final String toStr);
 
     /**
-     * set count
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     * set productCount
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      */
 
     public void setProductCount(final Long productCount);
 
     /**
-     * set total
+     *  <p>Sum of all values contained in the range.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Double total);
 
     /**
-     * set min
+     *  <p>Minimum value within the range.</p>
      * @param min value to be set
      */
 
     public void setMin(final Double min);
 
     /**
-     * set max
+     *  <p>Maximum value within the range.</p>
      * @param max value to be set
      */
 
     public void setMax(final Double max);
 
     /**
-     * set mean
+     *  <p>Arithmetic mean of the values within the range.</p>
      * @param mean value to be set
      */
 
@@ -215,6 +227,8 @@ public interface FacetRange {
         instance.setMean(template.getMean());
         return instance;
     }
+
+    public FacetRange copyDeep();
 
     /**
      * factory method to create a deep copy of FacetRange
@@ -271,8 +285,8 @@ public interface FacetRange {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FacetRange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FacetRange>() {
+    public static tools.jackson.core.type.TypeReference<FacetRange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FacetRange>() {
             @Override
             public String toString() {
                 return "TypeReference<FacetRange>";

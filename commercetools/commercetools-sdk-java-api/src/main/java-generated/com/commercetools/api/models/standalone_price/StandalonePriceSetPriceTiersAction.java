@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceTierDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets all PriceTiers for a StandalonePrice in one action, produces the Standalone Price Tiers Set Message.</p>
+ *  <p>Sets all <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTiers</a> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> in one action, produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTiersSetMessage" rel="nofollow">Standalone Price Tiers Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPriceTiers")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceSetPriceTiersActionImpl.class)
 public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdateAction {
@@ -39,7 +41,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     String SET_PRICE_TIERS = "setPriceTiers";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return tiers
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public List<PriceTierDraft> getTiers();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 
@@ -56,7 +58,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public void setTiers(final PriceTierDraft... tiers);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 
@@ -80,6 +82,8 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public StandalonePriceSetPriceTiersAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceSetPriceTiersAction
@@ -132,8 +136,8 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetPriceTiersAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetPriceTiersAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceSetPriceTiersAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceSetPriceTiersAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceSetPriceTiersAction>";

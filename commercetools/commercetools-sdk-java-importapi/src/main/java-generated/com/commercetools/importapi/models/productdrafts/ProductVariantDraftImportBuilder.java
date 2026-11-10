@@ -42,7 +42,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
     /**
-     * set the value to the sku
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set values to the prices
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set value to the prices
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add values to the prices
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the prices using the builder function
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the prices using the builder function
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the prices using the builder function
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the prices using the builder function
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set values to the attributes
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set value to the attributes
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add values to the attributes
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -194,7 +194,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add a value to the attributes using the builder function
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -210,7 +210,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the attributes using the builder function
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set values to the images
+     *  <p>Images for the Product Variant.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set value to the images
+     *  <p>Images for the Product Variant.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add values to the images
+     *  <p>Images for the Product Variant.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the images using the builder function
+     *  <p>Images for the Product Variant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the images using the builder function
+     *  <p>Images for the Product Variant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -291,7 +291,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the images using the builder function
+     *  <p>Images for the Product Variant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the images using the builder function
+     *  <p>Images for the Product Variant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set values to the assets
+     *  <p>Media assets for the Product Variant.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -325,7 +325,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set value to the assets
+     *  <p>Media assets for the Product Variant.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add values to the assets
+     *  <p>Media assets for the Product Variant.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -352,7 +352,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the assets using the builder function
+     *  <p>Media assets for the Product Variant.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -367,7 +367,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the assets using the builder function
+     *  <p>Media assets for the Product Variant.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -380,7 +380,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * add the value to the assets using the builder function
+     *  <p>Media assets for the Product Variant.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * set the value to the assets using the builder function
+     *  <p>Media assets for the Product Variant.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -402,7 +402,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of sku}
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      * @return sku
      */
 
@@ -412,7 +412,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      * @return key
      */
 
@@ -421,7 +421,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of prices}
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
 
@@ -431,7 +431,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of attributes}
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
 
@@ -441,7 +441,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of images}
+     *  <p>Images for the Product Variant.</p>
      * @return images
      */
 
@@ -451,7 +451,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     * value of assets}
+     *  <p>Media assets for the Product Variant.</p>
      * @return assets
      */
 

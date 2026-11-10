@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +36,8 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String lineItemId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -120,7 +123,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -132,7 +135,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -144,7 +147,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -156,13 +159,25 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
     public SetLineItemTaxedPriceChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTaxedPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -194,7 +209,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
 
@@ -203,12 +218,22 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     /**
@@ -221,7 +246,8 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         Objects.requireNonNull(nextValue, SetLineItemTaxedPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemTaxedPriceChange.class + ": lineItem is missing");
         Objects.requireNonNull(lineItemId, SetLineItemTaxedPriceChange.class + ": lineItemId is missing");
-        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
+        Objects.requireNonNull(variant, SetLineItemTaxedPriceChange.class + ": variant is missing");
+        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -229,7 +255,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
      * @return SetLineItemTaxedPriceChange
      */
     public SetLineItemTaxedPriceChange buildUnchecked() {
-        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
+        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -252,6 +278,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
         builder.lineItemId = template.getLineItemId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

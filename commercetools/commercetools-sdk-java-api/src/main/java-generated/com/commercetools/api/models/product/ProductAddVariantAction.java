@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductAddVariantAction
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddVariantActionImpl.class)
 public interface ProductAddVariantAction extends ProductUpdateAction {
@@ -39,7 +41,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     String ADD_VARIANT = "addVariant";
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -47,7 +49,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -79,7 +81,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     *  <p>Whether the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      * @return staged
      */
 
@@ -95,14 +97,14 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public List<AssetDraft> getAssets();
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      */
 
@@ -154,7 +156,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     *  <p>Whether the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      * @param staged value to be set
      */
 
@@ -199,6 +201,8 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
         instance.setAssets(template.getAssets());
         return instance;
     }
+
+    public ProductAddVariantAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAddVariantAction
@@ -268,8 +272,8 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductAddVariantAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductAddVariantAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductAddVariantAction>";

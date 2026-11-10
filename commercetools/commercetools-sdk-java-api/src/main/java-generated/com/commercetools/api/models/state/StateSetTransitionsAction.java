@@ -7,12 +7,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateSetTransitionsAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTransitions")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetTransitionsActionImpl.class)
 public interface StateSetTransitionsAction extends StateUpdateAction {
@@ -36,10 +38,11 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     String SET_TRANSITIONS = "setTransitions";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return transitions
      */
     @Valid
@@ -47,10 +50,11 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     public List<StateResourceIdentifier> getTransitions();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param transitions values to be set
      */
 
@@ -58,10 +62,11 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     public void setTransitions(final StateResourceIdentifier... transitions);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param transitions values to be set
      */
 
@@ -85,6 +90,8 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
         instance.setTransitions(template.getTransitions());
         return instance;
     }
+
+    public StateSetTransitionsAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetTransitionsAction
@@ -136,8 +143,8 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateSetTransitionsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateSetTransitionsAction>() {
+    public static tools.jackson.core.type.TypeReference<StateSetTransitionsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateSetTransitionsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateSetTransitionsAction>";

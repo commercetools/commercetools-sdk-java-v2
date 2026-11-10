@@ -57,6 +57,9 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     @Nullable
     private String oldTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -186,7 +189,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +201,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,13 +263,24 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
 
     public BusinessUnitAddressCustomTypeRemovedMessageBuilder oldTypeId(@Nullable final String oldTypeId) {
         this.oldTypeId = oldTypeId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomTypeRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -336,7 +350,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -364,13 +378,23 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
     @Nullable
     public String getOldTypeId() {
         return this.oldTypeId;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -390,7 +414,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
             BusinessUnitAddressCustomTypeRemovedMessage.class + ": resourceVersion is missing");
         return new BusinessUnitAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -400,7 +424,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     public BusinessUnitAddressCustomTypeRemovedMessage buildUnchecked() {
         return new BusinessUnitAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -430,6 +454,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.oldTypeId = template.getOldTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

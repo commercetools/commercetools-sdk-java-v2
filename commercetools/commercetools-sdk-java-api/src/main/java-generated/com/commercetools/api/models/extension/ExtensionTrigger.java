@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExtensionTrigger
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionTrigger {
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @return resourceTypeId
      */
     @NotNull
@@ -48,7 +49,7 @@ public interface ExtensionTrigger {
     public List<ExtensionAction> getActions();
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @return condition
      */
 
@@ -56,7 +57,7 @@ public interface ExtensionTrigger {
     public String getCondition();
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @param resourceTypeId value to be set
      */
 
@@ -78,7 +79,7 @@ public interface ExtensionTrigger {
     public void setActions(final List<ExtensionAction> actions);
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @param condition value to be set
      */
 
@@ -104,6 +105,8 @@ public interface ExtensionTrigger {
         instance.setCondition(template.getCondition());
         return instance;
     }
+
+    public ExtensionTrigger copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionTrigger
@@ -153,8 +156,8 @@ public interface ExtensionTrigger {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionTrigger> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionTrigger>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionTrigger>";

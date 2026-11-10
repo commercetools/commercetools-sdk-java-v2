@@ -17,4 +17,10 @@ public class CartFreezeCartActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartFreezeCartActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartFreezeCartActionQueryBuilderDsl> strategy() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("strategy")),
+            p -> new CombinationQueryPredicate<>(p, CartFreezeCartActionQueryBuilderDsl::of));
+    }
+
 }

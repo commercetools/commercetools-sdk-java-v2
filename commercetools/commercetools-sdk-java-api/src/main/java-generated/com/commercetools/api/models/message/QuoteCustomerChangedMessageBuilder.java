@@ -187,7 +187,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -296,7 +296,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param builder function to build the previousCustomer value
      * @return Builder
      */
@@ -309,7 +309,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param builder function to build the previousCustomer value
      * @return Builder
      */
@@ -321,7 +321,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param previousCustomer value to be set
      * @return Builder
      */
@@ -398,7 +398,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -426,7 +426,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @return customer
      */
 
@@ -435,7 +435,7 @@ public class QuoteCustomerChangedMessageBuilder implements Builder<QuoteCustomer
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @return previousCustomer
      */
 

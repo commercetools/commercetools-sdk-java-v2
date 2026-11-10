@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeOrderSearchStatusAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeOrderSearchStatus")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeOrderSearchStatusActionImpl.class)
 public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateAction {
@@ -36,7 +38,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     *  <p>Activates or deactivates the <span>Order Search</span> feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @return status
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     public OrderSearchStatus getStatus();
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     *  <p>Activates or deactivates the <span>Order Search</span> feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @param status value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
         instance.setStatus(template.getStatus());
         return instance;
     }
+
+    public ProjectChangeOrderSearchStatusAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeOrderSearchStatusAction
@@ -117,8 +121,8 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeOrderSearchStatusAction>";

@@ -7,18 +7,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
+ *  <p>Generated after a successful recalculation of a Discount on a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemDiscountSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessagePayload {
@@ -41,7 +43,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
 
     /**
-     *  <p>Unique identifier for the Custom Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -49,7 +51,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public String getCustomLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -57,7 +59,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
     @NotNull
@@ -66,7 +68,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @return taxedPrice
      */
     @Valid
@@ -74,21 +76,21 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Unique identifier for the Custom Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -96,7 +98,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -104,7 +106,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
             final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      */
 
@@ -132,6 +134,8 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
         instance.setTaxedPrice(template.getTaxedPrice());
         return instance;
     }
+
+    public OrderCustomLineItemDiscountSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemDiscountSetMessagePayload
@@ -189,8 +193,8 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemDiscountSetMessagePayload>";

@@ -1,36 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAddressCustomFieldChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAddressCustomFieldChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAddressCustomFieldChangeBuilder builder) {
         SetAddressCustomFieldChange setAddressCustomFieldChange = builder.buildUnchecked();
         Assertions.assertThat(setAddressCustomFieldChange).isInstanceOf(SetAddressCustomFieldChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAddressCustomFieldChange.builder().change("change") },
-                new Object[] { SetAddressCustomFieldChange.builder()
-                        .address(new com.commercetools.history.models.common.AddressImpl()) },
-                new Object[] { SetAddressCustomFieldChange.builder().name("name") },
-                new Object[] { SetAddressCustomFieldChange.builder().customTypeId("customTypeId") },
-                new Object[] { SetAddressCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { SetAddressCustomFieldChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetAddressCustomFieldChange.builder().change("change") },
+                new Object[] { "address",
+                        SetAddressCustomFieldChange.builder()
+                                .address(new com.commercetools.history.models.common.AddressImpl()) },
+                new Object[] { "name", SetAddressCustomFieldChange.builder().name("name") },
+                new Object[] { "customTypeId", SetAddressCustomFieldChange.builder().customTypeId("customTypeId") },
+                new Object[] { "previousValue", SetAddressCustomFieldChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetAddressCustomFieldChange.builder().nextValue("nextValue") } };
     }
 
     @Test

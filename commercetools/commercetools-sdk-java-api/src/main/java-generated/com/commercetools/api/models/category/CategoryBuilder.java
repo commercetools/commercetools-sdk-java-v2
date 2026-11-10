@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
  *             .orderHint("{orderHint}")
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -79,6 +80,11 @@ public class CategoryBuilder implements Builder<Category> {
 
     @Nullable
     private String key;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
 
     /**
      *  <p>Unique identifier of the Category.</p>
@@ -231,7 +237,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -243,7 +249,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -255,7 +261,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -424,7 +430,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -553,7 +559,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -565,7 +571,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -577,7 +583,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -685,6 +691,172 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder stores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder plusWarnings(
+            @Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CategoryBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CategoryBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Category.</p>
      * @return id
      */
@@ -750,7 +922,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @return slug
      */
 
@@ -788,7 +960,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @return orderHint
      */
 
@@ -837,7 +1009,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @return custom
      */
 
@@ -867,6 +1039,27 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds Category with checking for non-null required values
      * @return Category
      */
@@ -879,9 +1072,10 @@ public class CategoryBuilder implements Builder<Category> {
         Objects.requireNonNull(slug, Category.class + ": slug is missing");
         Objects.requireNonNull(ancestors, Category.class + ": ancestors is missing");
         Objects.requireNonNull(orderHint, Category.class + ": orderHint is missing");
+        Objects.requireNonNull(stores, Category.class + ": stores is missing");
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key);
+            assets, key, stores, warnings);
     }
 
     /**
@@ -891,7 +1085,7 @@ public class CategoryBuilder implements Builder<Category> {
     public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key);
+            assets, key, stores, warnings);
     }
 
     /**
@@ -928,6 +1122,8 @@ public class CategoryBuilder implements Builder<Category> {
         builder.custom = template.getCustom();
         builder.assets = template.getAssets();
         builder.key = template.getKey();
+        builder.stores = template.getStores();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

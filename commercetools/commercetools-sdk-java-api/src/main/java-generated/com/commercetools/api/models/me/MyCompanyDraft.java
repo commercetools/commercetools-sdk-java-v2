@@ -9,12 +9,13 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Company.</p>
+ *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">MyBusinessUnitDraft</a> that are used specifically for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Company")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCompanyDraftImpl.class)
 public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyCompanyDraft> {
@@ -62,6 +64,8 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         return instance;
     }
+
+    public MyCompanyDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MyCompanyDraft
@@ -123,8 +127,8 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCompanyDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCompanyDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyCompanyDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCompanyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCompanyDraft>";

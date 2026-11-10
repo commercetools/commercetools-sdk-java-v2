@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Middle Name update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetMiddleNameAction" rel="nofollow">Set Middle Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetMiddleNameChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetMiddleNameChangeImpl.class)
 public interface SetMiddleNameChange extends Change {
@@ -111,6 +113,8 @@ public interface SetMiddleNameChange extends Change {
         return instance;
     }
 
+    public SetMiddleNameChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetMiddleNameChange
      * @param template instance to be copied
@@ -159,8 +163,8 @@ public interface SetMiddleNameChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetMiddleNameChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetMiddleNameChange>() {
+    public static tools.jackson.core.type.TypeReference<SetMiddleNameChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetMiddleNameChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetMiddleNameChange>";

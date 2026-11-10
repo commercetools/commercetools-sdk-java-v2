@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
+ *  <p>Represents the data used to import a Customer. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerImportImpl implements CustomerImport, ModelBase {
@@ -126,7 +127,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -150,7 +151,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p>
+     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's <span>upsert behavior</span>, a non-empty value must still be provided when updating Customers.</p>
      */
 
     public String getPassword() {
@@ -158,7 +159,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     *  <p>Maps to <code>Customer.stores</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Stores are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
@@ -246,7 +247,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Customer.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -262,7 +263,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     public Integer getDefaultBillingAddress() {
@@ -270,7 +271,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     *  <p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p>
      */
 
     public java.util.List<Integer> getBillingAddresses() {
@@ -278,7 +279,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>The index of the address in the <code>addresses</code> array. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     public Integer getDefaultShippingAddress() {
@@ -286,7 +287,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     *  <p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p>
      */
 
     public java.util.List<Integer> getShippingAddresses() {
@@ -302,7 +303,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The Custom Fields for this Customer.</p>
+     *  <p>Maps to <code>Customer.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -554,4 +555,8 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerImport copyDeep() {
+        return CustomerImport.deepCopy(this);
+    }
 }

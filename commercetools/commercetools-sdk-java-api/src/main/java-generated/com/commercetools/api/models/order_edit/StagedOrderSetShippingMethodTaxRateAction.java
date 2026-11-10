@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+ *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingMethodTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetShippingMethodTaxRateActionImpl.class)
 public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUpdateAction {
@@ -37,7 +39,7 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     String SET_SHIPPING_METHOD_TAX_RATE = "setShippingMethodTaxRate";
 
     /**
-     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to update. This is required and valid only for Orders with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned if <code>shippingKey</code> is provided for Orders with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, or omitted for Orders with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -45,7 +47,7 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     public String getShippingKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -53,14 +55,14 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to update. This is required and valid only for Orders with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned if <code>shippingKey</code> is provided for Orders with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, or omitted for Orders with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -86,6 +88,8 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public StagedOrderSetShippingMethodTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetShippingMethodTaxRateAction
@@ -138,8 +142,8 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxRateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxRateAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxRateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxRateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingMethodTaxRateAction>";

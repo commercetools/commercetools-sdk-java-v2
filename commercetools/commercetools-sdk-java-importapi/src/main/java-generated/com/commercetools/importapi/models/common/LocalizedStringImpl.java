@@ -4,9 +4,9 @@ package com.commercetools.importapi.models.common;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+ *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
  *  <pre><code>{
  *    "de": "Hundefutter",
  *    "en": "dog food"
@@ -33,7 +35,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    LocalizedStringImpl(@JsonProperty("values") final Map<String, String> values) {
+    LocalizedStringImpl(@JsonAnySetter @JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 
@@ -81,4 +83,8 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public LocalizedString copyDeep() {
+        return LocalizedString.deepCopy(this);
+    }
 }

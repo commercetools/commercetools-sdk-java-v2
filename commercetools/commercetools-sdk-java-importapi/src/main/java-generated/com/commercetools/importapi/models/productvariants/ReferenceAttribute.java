@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a key reference.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
@@ -72,6 +74,8 @@ public interface ReferenceAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceAttribute
@@ -120,8 +124,8 @@ public interface ReferenceAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute>() {
+    public static tools.jackson.core.type.TypeReference<ReferenceAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReferenceAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<ReferenceAttribute>";

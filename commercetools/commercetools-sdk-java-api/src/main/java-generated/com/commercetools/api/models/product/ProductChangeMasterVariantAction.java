@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Assigns the specified Product Variant to the <code>masterVariant</code> and removes the same from <code>variants</code> at the same time. The current Master Variant becomes part of the <code>variants</code> array. Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeMasterVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
 public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
@@ -50,7 +52,7 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     *  <p>Whether only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
      * @return staged
      */
 
@@ -72,7 +74,7 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     *  <p>Whether only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
      * @param staged value to be set
      */
 
@@ -98,6 +100,8 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductChangeMasterVariantAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductChangeMasterVariantAction
@@ -147,8 +151,8 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangeMasterVariantAction>";

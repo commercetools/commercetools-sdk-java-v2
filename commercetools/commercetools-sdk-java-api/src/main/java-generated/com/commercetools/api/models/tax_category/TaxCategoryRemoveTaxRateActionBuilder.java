@@ -29,7 +29,8 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
     private String taxRateKey;
 
     /**
-     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateId value to be set
      * @return Builder
      */
@@ -40,7 +41,8 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
     }
 
     /**
-     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateKey value to be set
      * @return Builder
      */
@@ -51,7 +53,8 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
     }
 
     /**
-     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateId
      */
 
@@ -61,7 +64,8 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
     }
 
     /**
-     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateKey
      */
 

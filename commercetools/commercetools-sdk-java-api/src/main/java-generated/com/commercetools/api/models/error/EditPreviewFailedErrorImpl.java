@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
- *  <p>The error is returned as a failed response to the Get Shipping Methods for an OrderEdit request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-orderedit:GET" rel="nofollow">Get Shipping Methods for an OrderEdit</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, ModelBase {
@@ -36,7 +38,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
      */
     @JsonCreator
     EditPreviewFailedErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
         this.message = message;
         this.values = values;
@@ -133,4 +135,8 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
                 .build();
     }
 
+    @Override
+    public EditPreviewFailedError copyDeep() {
+        return EditPreviewFailedError.deepCopy(this);
+    }
 }

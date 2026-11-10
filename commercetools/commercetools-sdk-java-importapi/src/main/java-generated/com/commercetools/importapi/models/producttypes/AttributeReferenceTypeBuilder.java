@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
- *             .referenceTypeId(ReferenceType.CART)
+ *             .referenceTypeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +24,7 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
     private com.commercetools.importapi.models.common.ReferenceType referenceTypeId;
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @param referenceTypeId value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @return referenceTypeId
      */
 

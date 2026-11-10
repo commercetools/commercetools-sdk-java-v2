@@ -30,7 +30,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     private com.commercetools.api.models.channel.Channel obj;
 
     /**
-     *  <p>Unique identifier of the referenced Channel.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with <span>Reference Expansion</span> for Channels.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with <span>Reference Expansion</span> for Channels.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with <span>Reference Expansion</span> for Channels.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Channel.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with <span>Reference Expansion</span> for Channels.</p>
      * @return obj
      */
 

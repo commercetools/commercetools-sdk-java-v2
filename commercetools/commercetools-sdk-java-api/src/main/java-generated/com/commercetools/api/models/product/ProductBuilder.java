@@ -62,6 +62,9 @@ public class ProductBuilder implements Builder<Product> {
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      *  <p>Unique identifier of the Product.</p>
      * @param id value to be set
@@ -179,7 +182,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -262,7 +265,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -275,7 +278,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -287,7 +290,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -299,7 +302,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -311,7 +314,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -323,7 +326,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -385,6 +388,71 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductBuilder plusWarnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public ProductBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public ProductBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Product.</p>
      * @return id
      */
@@ -442,7 +510,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -470,7 +538,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @return taxCategory
      */
 
@@ -480,7 +548,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @return state
      */
 
@@ -510,6 +578,16 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds Product with checking for non-null required values
      * @return Product
      */
@@ -521,7 +599,7 @@ public class ProductBuilder implements Builder<Product> {
         Objects.requireNonNull(productType, Product.class + ": productType is missing");
         Objects.requireNonNull(masterData, Product.class + ": masterData is missing");
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
+            masterData, taxCategory, state, reviewRatingStatistics, priceMode, warnings);
     }
 
     /**
@@ -530,7 +608,7 @@ public class ProductBuilder implements Builder<Product> {
      */
     public Product buildUnchecked() {
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
+            masterData, taxCategory, state, reviewRatingStatistics, priceMode, warnings);
     }
 
     /**
@@ -561,6 +639,7 @@ public class ProductBuilder implements Builder<Product> {
         builder.state = template.getState();
         builder.reviewRatingStatistics = template.getReviewRatingStatistics();
         builder.priceMode = template.getPriceMode();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

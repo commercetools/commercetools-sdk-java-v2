@@ -4,9 +4,9 @@ package com.commercetools.importapi.models.products;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+ *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <span>IETF language tag</span>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
  *  <pre><code>{
  *    "en": [
  *      { "text": "Multi tool" },
@@ -45,7 +47,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
      */
     @JsonCreator
     SearchKeywordsImpl(
-            @JsonProperty("values") final Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values) {
         this.values = values;
     }
 
@@ -93,4 +95,8 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public SearchKeywords copyDeep() {
+        return SearchKeywords.deepCopy(this);
+    }
 }

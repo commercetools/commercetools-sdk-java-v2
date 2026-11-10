@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set a ReturnPaymentState, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>To set a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setReturnPaymentState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetReturnPaymentStateActionImpl.class)
 public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
@@ -36,7 +38,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -44,7 +46,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     public String getReturnItemId();
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -52,7 +54,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     public String getReturnItemKey();
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return paymentState
      */
     @NotNull
@@ -60,21 +62,21 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     public ReturnPaymentState getPaymentState();
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      */
 
     public void setReturnItemKey(final String returnItemKey);
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param paymentState value to be set
      */
 
@@ -100,6 +102,8 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public OrderSetReturnPaymentStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetReturnPaymentStateAction
@@ -149,8 +153,8 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnPaymentStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnPaymentStateAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetReturnPaymentStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetReturnPaymentStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetReturnPaymentStateAction>";

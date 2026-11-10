@@ -30,7 +30,7 @@ public class StandalonePriceValidFromSetMessagePayloadBuilder
     private java.time.ZonedDateTime previousValidFrom;
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StandalonePriceValidFromSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @param previousValidFrom value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StandalonePriceValidFromSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @return validFrom
      */
 
@@ -64,7 +64,7 @@ public class StandalonePriceValidFromSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @return previousValidFrom
      */
 

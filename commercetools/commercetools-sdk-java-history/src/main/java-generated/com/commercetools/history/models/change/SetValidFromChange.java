@@ -6,20 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Valid From on Cart Discounts.</li>
- *   <li>Set Valid From on Discount Codes.</li>
- *   <li>Set Valid From on Product Discounts.</li>
- *  </ul>
+ * SetValidFromChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetValidFromChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetValidFromChangeImpl.class)
 public interface SetValidFromChange extends Change {
@@ -116,6 +113,8 @@ public interface SetValidFromChange extends Change {
         return instance;
     }
 
+    public SetValidFromChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetValidFromChange
      * @param template instance to be copied
@@ -164,8 +163,8 @@ public interface SetValidFromChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetValidFromChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetValidFromChange>() {
+    public static tools.jackson.core.type.TypeReference<SetValidFromChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetValidFromChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetValidFromChange>";

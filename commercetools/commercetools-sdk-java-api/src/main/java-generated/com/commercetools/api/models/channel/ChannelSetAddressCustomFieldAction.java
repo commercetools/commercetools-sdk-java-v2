@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ChannelSetAddressCustomFieldAction
+ *  <p>To set a Custom Field for a Channel, <code>Channel.address</code> must be set; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAddressCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetAddressCustomFieldActionImpl.class)
 public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction {
@@ -36,7 +38,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     String SET_ADDRESS_CUSTOM_FIELD = "setAddressCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     public String getName();
 
     /**
-     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
+     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return value
      */
 
@@ -52,14 +54,14 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
+     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param value value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ChannelSetAddressCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetAddressCustomFieldAction
@@ -137,8 +141,8 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelSetAddressCustomFieldAction>";

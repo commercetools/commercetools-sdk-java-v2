@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This destination can be used to push events and messages to Confluent Cloud. To set up a Subscription of this type, first, create a topic in Confluent Cloud. Then, to allow Composable Commerce to push events and messages to your topic, generate API keys for your topic, and create the Subscription destination using the generated credentials.</p>
+ *  <p>This destination can be used to push notifications to <span>Confluent Cloud</span>. To set up a Subscription of this type, first, create a topic in Confluent Cloud. Then, to allow Composable Commerce to push notifications to your topic, generate <span>API keys</span> for your topic, and create the Subscription destination using the generated credentials.</p>
  *  <p>The Composable Commerce producer uses the following values: <code>SASL_SSL</code> for<code>security.protocol</code>, <code>PLAIN</code> for<code>sasl.mechanism</code>, and the default value (1048576) for <code>max.request.size</code>.</p>
  *
  * <hr>
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ConfluentCloud")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ConfluentCloudDestinationImpl.class)
 public interface ConfluentCloudDestination extends Destination {
@@ -154,6 +156,8 @@ public interface ConfluentCloudDestination extends Destination {
         return instance;
     }
 
+    public ConfluentCloudDestination copyDeep();
+
     /**
      * factory method to create a deep copy of ConfluentCloudDestination
      * @param template instance to be copied
@@ -205,8 +209,8 @@ public interface ConfluentCloudDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ConfluentCloudDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ConfluentCloudDestination>() {
+    public static tools.jackson.core.type.TypeReference<ConfluentCloudDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ConfluentCloudDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<ConfluentCloudDestination>";

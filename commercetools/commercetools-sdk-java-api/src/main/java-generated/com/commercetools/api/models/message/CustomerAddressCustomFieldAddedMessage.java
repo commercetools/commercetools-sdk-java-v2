@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Field to an Address of a Customer using the Set CustomField in Address update action. If a Custom Field already exists with the same name, a CustomerAddressCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldChangedMessage" rel="nofollow">CustomerAddressCustomFieldChanged</a> Message is generated instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerAddressCustomFieldAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerAddressCustomFieldAddedMessageImpl.class)
 public interface CustomerAddressCustomFieldAddedMessage extends Message {
@@ -51,12 +53,20 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
     public String getName();
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
     @JsonProperty("value")
     public Object getValue();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
 
     /**
      *  <p>Name of the Custom Field that was added.</p>
@@ -66,11 +76,18 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
     public void setName(final String name);
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -99,8 +116,11 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public CustomerAddressCustomFieldAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerAddressCustomFieldAddedMessage
@@ -128,6 +148,7 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -164,8 +185,8 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerAddressCustomFieldAddedMessage>";

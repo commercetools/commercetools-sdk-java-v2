@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
+ *  <p>Setting the title of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerTitleSetMessage" rel="nofollow">CustomerTitleSetMessage</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTitle")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetTitleActionImpl.class)
 public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     String SET_TITLE = "setTitle";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return title
      */
 
@@ -42,7 +44,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     public String getTitle();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param title value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
         instance.setTitle(template.getTitle());
         return instance;
     }
+
+    public MyCustomerSetTitleAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetTitleAction
@@ -113,8 +117,8 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetTitleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetTitleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetTitleAction>";

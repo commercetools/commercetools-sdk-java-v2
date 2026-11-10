@@ -19,6 +19,14 @@ public class ProjectUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProjectUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeBusinessUnitSearchStatus(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl
+                    .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeMyBusinessUnitStatusOnCreation(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -56,6 +64,13 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeCustomerSearchStatus(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeLanguages(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeLanguagesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeLanguagesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -85,6 +100,13 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangePriceRoundingMode(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeProductSearchIndexingEnabled(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -101,6 +123,14 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeTaxRoundingMode(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetMyBusinessUnitAssociateRoleOnCreation(
             Function<com.commercetools.api.predicates.query.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -109,10 +139,41 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetDiscountsConfiguration(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetExternalOAuth(
             Function<com.commercetools.api.predicates.query.project.ProjectSetExternalOAuthActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetExternalOAuthActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.project.ProjectSetExternalOAuthActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetProductCatalogModel(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetReleaseExpiredReservations(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl
+                    .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetReservationExpirationInMinutes(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl
+                    .of()),
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 

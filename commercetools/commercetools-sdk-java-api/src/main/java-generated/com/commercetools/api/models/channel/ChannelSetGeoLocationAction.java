@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.GeoJson;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelSetGeoLocationAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setGeoLocation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetGeoLocationActionImpl.class)
 public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
@@ -68,6 +70,8 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public ChannelSetGeoLocationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetGeoLocationAction
@@ -119,8 +123,8 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelSetGeoLocationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelSetGeoLocationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelSetGeoLocationAction>";

@@ -26,7 +26,7 @@ public class StandalonePriceSetValidUntilActionBuilder implements Builder<Standa
     private java.time.ZonedDateTime validUntil;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StandalonePriceSetValidUntilActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 

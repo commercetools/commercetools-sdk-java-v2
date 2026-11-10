@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create password reset token for Customer request. The <code>resource</code> property of the Message is a CustomerPasswordTokenReference.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password-token:POST" rel="nofollow">Create password reset token for Customer</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password-token:POST" rel="nofollow">Create password reset token for Customer in Store</a> request. The <code>resource</code> property of the Message is a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordTokenReference" rel="nofollow">CustomerPasswordTokenReference</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerPasswordTokenCreatedMessagePayloadImpl
@@ -29,14 +30,22 @@ public class CustomerPasswordTokenCreatedMessagePayloadImpl
 
     private java.time.ZonedDateTime expiresAt;
 
+    private String value;
+
+    private Boolean invalidateOlderTokens;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerPasswordTokenCreatedMessagePayloadImpl(@JsonProperty("customerId") final String customerId,
-            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
+            @JsonProperty("value") final String value,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens) {
         this.customerId = customerId;
         this.expiresAt = expiresAt;
+        this.value = value;
+        this.invalidateOlderTokens = invalidateOlderTokens;
         this.type = CUSTOMER_PASSWORD_TOKEN_CREATED;
     }
 
@@ -71,12 +80,36 @@ public class CustomerPasswordTokenCreatedMessagePayloadImpl
         return this.expiresAt;
     }
 
+    /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
     public void setCustomerId(final String customerId) {
         this.customerId = customerId;
     }
 
     public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
+    }
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     @Override
@@ -92,15 +125,24 @@ public class CustomerPasswordTokenCreatedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(type, that.type)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customerId).append(expiresAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customerId)
+                .append(expiresAt)
+                .append(value)
+                .append(invalidateOlderTokens)
+                .toHashCode();
     }
 
     @Override
@@ -108,7 +150,13 @@ public class CustomerPasswordTokenCreatedMessagePayloadImpl
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("customerId", customerId)
                 .append("expiresAt", expiresAt)
+                .append("value", value)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .build();
     }
 
+    @Override
+    public CustomerPasswordTokenCreatedMessagePayload copyDeep() {
+        return CustomerPasswordTokenCreatedMessagePayload.deepCopy(this);
+    }
 }

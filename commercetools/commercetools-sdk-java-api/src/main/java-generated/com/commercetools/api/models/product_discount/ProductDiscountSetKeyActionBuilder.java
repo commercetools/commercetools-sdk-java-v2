@@ -26,7 +26,8 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
     private String key;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +38,8 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 

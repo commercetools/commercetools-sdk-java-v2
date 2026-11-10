@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApproverConjunctionDraft
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<ApproverConjunctionDraft> {
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @return and
      */
     @NotNull
@@ -42,7 +43,7 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
     public List<ApproverDisjunctionDraft> getAnd();
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and values to be set
      */
 
@@ -50,7 +51,7 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
     public void setAnd(final ApproverDisjunctionDraft... and);
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and values to be set
      */
 
@@ -74,6 +75,8 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
         instance.setAnd(template.getAnd());
         return instance;
     }
+
+    public ApproverConjunctionDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ApproverConjunctionDraft
@@ -125,8 +128,8 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApproverConjunctionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApproverConjunctionDraft>() {
+    public static tools.jackson.core.type.TypeReference<ApproverConjunctionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApproverConjunctionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApproverConjunctionDraft>";

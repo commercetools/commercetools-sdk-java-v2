@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderEditSetCommentAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setComment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditSetCommentActionImpl.class)
 public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
@@ -34,7 +36,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     String SET_COMMENT = "setComment";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return comment
      */
 
@@ -42,7 +44,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     public String getComment();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param comment value to be set
      */
 
@@ -66,6 +68,8 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
         instance.setComment(template.getComment());
         return instance;
     }
+
+    public OrderEditSetCommentAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditSetCommentAction
@@ -113,8 +117,8 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCommentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCommentAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditSetCommentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditSetCommentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditSetCommentAction>";

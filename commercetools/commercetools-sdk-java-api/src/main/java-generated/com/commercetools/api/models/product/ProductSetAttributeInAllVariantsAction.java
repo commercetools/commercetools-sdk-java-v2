@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
+ *  <p>Adds, removes, or changes a Variant Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">Constraint</a> <code>SameForAll</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAttributeInAllVariants")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @return name
      */
     @NotNull
@@ -44,15 +46,15 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public String getName();
 
     /**
-     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
-     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <p>Value to set for the Attributes. If omitted, any existing value is removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a> determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
-     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
-     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
-     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
-     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
-     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
-     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">Enum Type</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">Localized Enum Type</a>, use the <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">Plain Enum Value</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">Localized Enum Value</a> objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">Localizable Text Type</a>, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:LocalizedString" rel="nofollow">LocalizedString</a> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeMoneyType" rel="nofollow">Money Type</a> Attributes, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">Set Type</a> Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNestedType" rel="nofollow">Nested Type</a> Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeReferenceType" rel="nofollow">Reference Type</a> Attributes, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> object as <code>value</code>.</li>
      *  </ul>
      * @return value
      */
@@ -61,7 +63,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public Object getValue();
 
     /**
-     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     *  <p>Whether only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @return staged
      */
 
@@ -69,22 +71,22 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public Boolean getStaged();
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
-     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <p>Value to set for the Attributes. If omitted, any existing value is removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a> determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
-     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
-     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
-     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
-     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
-     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
-     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">Enum Type</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">Localized Enum Type</a>, use the <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">Plain Enum Value</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">Localized Enum Value</a> objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">Localizable Text Type</a>, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:LocalizedString" rel="nofollow">LocalizedString</a> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeMoneyType" rel="nofollow">Money Type</a> Attributes, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">Set Type</a> Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNestedType" rel="nofollow">Nested Type</a> Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeReferenceType" rel="nofollow">Reference Type</a> Attributes, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> object as <code>value</code>.</li>
      *  </ul>
      * @param value value to be set
      */
@@ -92,7 +94,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public void setValue(final Object value);
 
     /**
-     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     *  <p>Whether only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @param staged value to be set
      */
 
@@ -118,6 +120,8 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetAttributeInAllVariantsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetAttributeInAllVariantsAction
@@ -178,8 +182,8 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetAttributeInAllVariantsAction>";

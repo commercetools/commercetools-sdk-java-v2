@@ -1,22 +1,50 @@
 import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
-    id "com.netflix.dgs.codegen" version "6.1.10"
+    id "com.netflix.dgs.codegen" version "8.6.0"
+    id 'java'
 }
 
 apply plugin:'com.netflix.dgs.codegen'
 apply plugin: GraphQLPlugin
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+tasks.register('integrationTestJar', Jar) {
+    archiveClassifier = 'test-utils'
+    from sourceSets.integrationTest.output
+}
+
+configurations {
+    integrationTestArtifacts
+}
+
+artifacts {
+    integrationTestArtifacts integrationTestJar
+}
+
 dependencies {
     api project(':commercetools:commercetools-sdk-java-api')
     testImplementation project(':commercetools:commercetools-http-client')
-    implementation google.findbugs
-    implementation javax.validation
-    api graphql.java
-    api jackson_core.databind
-    api jackson_core.core
-    api jackson_core.datatype
-    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:6.1.10'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
+    api 'com.graphql-java:graphql-java:19.11'
+    api 'tools.jackson.core:jackson-databind:3.2.3'
+    api 'tools.jackson.core:jackson-core:3.2.3'
+    //api jackson_core.datatype
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.6.0'
+    constraints {
+        implementation("com.fasterxml.jackson.core:jackson-core:2.22.3") {
+            because("security update")
+        }
+        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.3") {
+            because("security update")
+        }
+    }
 
 }
 
@@ -34,12 +62,15 @@ generateJava {
     typeMapping = [
             "Country": "String",
             "Locale": "String",
+            "CurrencyCode": "String",
             "Long": "Long",
-            "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "Json": "tools.jackson.databind.JsonNode",
+            "JsonPrimitive": "tools.jackson.databind.node.ValueNode",
             "KeyReferenceInput": "String",
             "Set": "Object",
             "Time": "String",
             "BigDecimal": "Double",
             "YearMonth": "String",
+            "SearchValueType": "Object"
     ]
 }

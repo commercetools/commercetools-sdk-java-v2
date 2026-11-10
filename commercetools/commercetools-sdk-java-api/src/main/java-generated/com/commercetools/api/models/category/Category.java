@@ -8,19 +8,22 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Category
@@ -38,6 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
  *             .orderHint("{orderHint}")
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -107,7 +111,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @return slug
      */
     @NotNull
@@ -141,7 +145,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public CategoryReference getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @return orderHint
      */
     @NotNull
@@ -181,7 +185,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @return custom
      */
     @Valid
@@ -203,6 +207,25 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
 
     @JsonProperty("key")
     public String getKey();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @return stores
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreKeyReference> getStores();
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
 
     /**
      *  <p>Unique identifier of the Category.</p>
@@ -254,7 +277,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      */
 
@@ -290,7 +313,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setParent(final CategoryReference parent);
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @param orderHint value to be set
      */
 
@@ -325,7 +348,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param custom value to be set
      */
 
@@ -352,6 +375,40 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
      */
 
     public void setKey(final String key);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreKeyReference... stores);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreKeyReference> stores);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
 
     /**
      * factory method
@@ -387,8 +444,12 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
         instance.setKey(template.getKey());
+        instance.setStores(template.getStores());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
+
+    public Category copyDeep();
 
     /**
      * factory method to create a deep copy of Category
@@ -432,6 +493,16 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -470,8 +541,8 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Category> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Category>() {
+    public static tools.jackson.core.type.TypeReference<Category> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Category>() {
             @Override
             public String toString() {
                 return "TypeReference<Category>";

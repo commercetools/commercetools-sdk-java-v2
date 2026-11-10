@@ -17,15 +17,19 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
+import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.node.NullNode;
 
 public class CustomFieldsTest {
 
@@ -254,6 +258,18 @@ public class CustomFieldsTest {
     }
 
     @Test
+    public void nullFieldValue() {
+        String json = "{\"type\":{\"typeId\":\"type\",\"id\":\"t1\"},"
+                + "\"fields\":{\"text\":\"foo\",\"nothing\":null,\"set-with-null\":[\"a\",null]}}";
+
+        CustomFields customFields = JsonUtils.fromJsonString(json, CustomFields.class);
+        Map<String, Object> fields = customFields.getFields().values();
+
+        assertThat(fields.get("text")).isEqualTo("foo");
+        assertThat(fields.get("nothing")).isInstanceOf(NullNode.class);
+    }
+
+    @Test
     public void fieldsAsDateFalseAccessor() throws IOException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withDateAttributeAsString(true)
@@ -330,7 +346,34 @@ public class CustomFieldsTest {
     }
 
     @Test
-    public void serializeCustomFields() throws JsonProcessingException {
+    public void customFieldTypeByName() throws JacksonException {
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withCustomFieldTypes(Maps.newHashMap("test", new TypeReference<String>() {
+                }));
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields-dates.json"), CustomFields.class);
+
+        assertThat(customFields.getFields().values()).isNotEmpty();
+
+        CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+
+        assertThat(fields.get("test")).isInstanceOf(String.class);
+        assertThat(fields.asString("test")).isEqualTo("2025-01-01");
+        assertThat(fields.asDate("test")).isEqualTo(LocalDate.of(2025, 1, 1));
+
+        assertThat(fields.get("date")).isInstanceOf(LocalDate.class);
+        assertThat(fields.asDate("date")).isEqualTo(LocalDate.of(2025, 1, 1));
+
+        assertThat(fields.get("invalidMonth")).isInstanceOf(String.class);
+        assertThat(fields.asString("invalidMonth")).isEqualTo("2025-13-01");
+
+        assertThat(fields.get("invalidDay")).isInstanceOf(String.class);
+        assertThat(fields.asString("invalidDay")).isEqualTo("2025-12-32");
+    }
+
+    @Test
+    public void serializeCustomFields() throws JacksonException {
         FieldContainer container = FieldContainerBuilder.of()
                 .addValue("int", 13)
                 .addValue("double", 13.0)
@@ -344,5 +387,18 @@ public class CustomFieldsTest {
         Assertions.assertThat(JsonUtils.toJsonString(container))
                 .isEqualTo(
                     "{\"bool\":true,\"string\":\"foo\",\"double\":13.0,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13.0,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
+    }
+
+    @Test
+    public void dateDeserialization() throws IOException {
+        String dateFields = stringFromResource("date-customfields.json");
+        CustomFields customFields = JsonUtils.fromJsonString(dateFields, CustomFields.class);
+        Map<String, Object> fields = customFields.getFields().values();
+        assertThat(fields.get("datetime")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("datetime-simple")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("datetime-max")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("time")).isInstanceOf(LocalTime.class);
+        assertThat(fields.get("time-simple")).isInstanceOf(LocalTime.class);
+        assertThat(fields.get("time-max")).isInstanceOf(LocalTime.class);
     }
 }

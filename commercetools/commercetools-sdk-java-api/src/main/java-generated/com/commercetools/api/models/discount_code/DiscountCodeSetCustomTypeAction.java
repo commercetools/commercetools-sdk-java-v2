@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetCustomTypeAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetCustomTypeActionImpl.class)
 public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateAction {
@@ -37,7 +39,7 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      * @return type
      */
     @Valid
@@ -45,7 +47,8 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the DiscountCode.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -53,14 +56,15 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the DiscountCode.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -85,6 +89,8 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public DiscountCodeSetCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetCustomTypeAction
@@ -133,8 +139,8 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetCustomTypeAction>";

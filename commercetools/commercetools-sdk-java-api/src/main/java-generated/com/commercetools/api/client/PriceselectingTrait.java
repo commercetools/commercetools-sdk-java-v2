@@ -17,9 +17,11 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
 
     List<String> getPriceCustomerGroup();
 
+    List<String> getPriceCustomerGroupAssignments();
+
     List<String> getPriceChannel();
 
-    List<String> getLocaleProjection();
+    List<String> getPriceRecurrencePolicy();
 
     /**
      * set priceCurrency with the specificied value
@@ -70,6 +72,22 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
     <TValue> PriceselectingTrait<T> addPriceCustomerGroup(final TValue priceCustomerGroup);
 
     /**
+     * set priceCustomerGroupAssignments with the specificied value
+     * @param priceCustomerGroupAssignments value to be set
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> withPriceCustomerGroupAssignments(final TValue priceCustomerGroupAssignments);
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param priceCustomerGroupAssignments value to be added
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> addPriceCustomerGroupAssignments(final TValue priceCustomerGroupAssignments);
+
+    /**
      * set priceChannel with the specificied value
      * @param priceChannel value to be set
      * @param <TValue> value type
@@ -86,20 +104,20 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
     <TValue> PriceselectingTrait<T> addPriceChannel(final TValue priceChannel);
 
     /**
-     * set localeProjection with the specificied value
-     * @param localeProjection value to be set
+     * set priceRecurrencePolicy with the specificied value
+     * @param priceRecurrencePolicy value to be set
      * @param <TValue> value type
      * @return PriceselectingTrait
      */
-    <TValue> PriceselectingTrait<T> withLocaleProjection(final TValue localeProjection);
+    <TValue> PriceselectingTrait<T> withPriceRecurrencePolicy(final TValue priceRecurrencePolicy);
 
     /**
-     * add additional localeProjection query parameter
-     * @param localeProjection value to be added
+     * add additional priceRecurrencePolicy query parameter
+     * @param priceRecurrencePolicy value to be added
      * @param <TValue> value type
      * @return PriceselectingTrait
      */
-    <TValue> PriceselectingTrait<T> addLocaleProjection(final TValue localeProjection);
+    <TValue> PriceselectingTrait<T> addPriceRecurrencePolicy(final TValue priceRecurrencePolicy);
 
     default PriceselectingTrait<T> asPriceselectingTrait() {
         return this;

@@ -66,7 +66,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>Set to <code>true</code> to turn off validation.</p>
+     *  <p>Whether to turn off validation.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>Set to <code>true</code> to turn off validation.</p>
+     *  <p>Whether to turn off validation.</p>
      * @return force
      */
 

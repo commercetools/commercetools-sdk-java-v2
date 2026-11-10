@@ -8,20 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Importing an Order produces the Order Imported Message.</p>
+ *  <p>Creates an Order without needing to create a Cart first. Importing an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportedMessage" rel="nofollow">Order Imported</a> Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>OutOfStock</li>
- *   <li>CountryNotConfiguredInStore</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
  *  </ul>
  *
  * <hr>
@@ -67,7 +67,7 @@ public class ByProjectKeyOrdersImportPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/orders/import", this.projectKey);
+        String httpRequestPath = String.format("%s/orders/import", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

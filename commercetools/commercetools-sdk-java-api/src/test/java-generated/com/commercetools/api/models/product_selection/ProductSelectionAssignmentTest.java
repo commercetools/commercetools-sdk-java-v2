@@ -1,39 +1,33 @@
 
 package com.commercetools.api.models.product_selection;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSelectionAssignmentTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSelectionAssignmentBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSelectionAssignmentBuilder builder) {
         ProductSelectionAssignment productSelectionAssignment = builder.buildUnchecked();
         Assertions.assertThat(productSelectionAssignment).isInstanceOf(ProductSelectionAssignment.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSelectionAssignment.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductSelectionAssignment.builder()
+                new Object[] { "product",
+                        ProductSelectionAssignment.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "productSelection", ProductSelectionAssignment.builder()
                         .productSelection(
                             new com.commercetools.api.models.product_selection.ProductSelectionReferenceImpl()) },
-                new Object[] { ProductSelectionAssignment.builder()
-                        .variantSelection(
-                            new com.commercetools.api.models.product_selection.ProductVariantSelectionImpl()) },
-                new Object[] { ProductSelectionAssignment.builder()
+                new Object[] { "variantSelection",
+                        ProductSelectionAssignment.builder()
+                                .variantSelection(
+                                    new com.commercetools.api.models.product_selection.ProductVariantSelectionImpl()) },
+                new Object[] { "variantExclusion", ProductSelectionAssignment.builder()
                         .variantExclusion(
                             new com.commercetools.api.models.product_selection.ProductVariantExclusionImpl()) } };
     }

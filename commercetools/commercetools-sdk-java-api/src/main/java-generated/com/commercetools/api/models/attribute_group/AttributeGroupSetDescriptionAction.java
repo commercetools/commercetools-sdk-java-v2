@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeGroupSetDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupSetDescriptionActionImpl.class)
 public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdateAction {
@@ -36,7 +38,7 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -44,7 +46,7 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -68,6 +70,8 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public AttributeGroupSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupSetDescriptionAction
@@ -117,8 +121,8 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<AttributeGroupSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeGroupSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeGroupSetDescriptionAction>";

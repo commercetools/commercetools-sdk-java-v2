@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Add Delivery update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddDeliveryAction" rel="nofollow">Add Delivery</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
@@ -30,16 +31,20 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
     private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.shippingKey = shippingKey;
         this.type = ADD_DELIVERY_CHANGE;
     }
 
@@ -82,6 +87,14 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -93,6 +106,10 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
     public void setNextValue(final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -109,10 +126,12 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -122,6 +141,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -131,7 +151,12 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 
+    @Override
+    public AddDeliveryChange copyDeep() {
+        return AddDeliveryChange.deepCopy(this);
+    }
 }

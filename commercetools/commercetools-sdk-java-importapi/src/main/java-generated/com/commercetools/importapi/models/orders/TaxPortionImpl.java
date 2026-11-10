@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxPortion
@@ -46,7 +47,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
      */
 
     public String getName() {
@@ -54,7 +55,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *
+     *  <p>A number in the range 0-1.</p>
      */
 
     public Double getRate() {
@@ -62,7 +63,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getAmount() {
@@ -113,4 +114,8 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxPortion copyDeep() {
+        return TaxPortion.deepCopy(this);
+    }
 }

@@ -55,6 +55,10 @@ public class ShoppingListUpdateActionBuilder {
         return com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitActionBuilder.of();
+    }
+
     public com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldActionBuilder.of();
     }

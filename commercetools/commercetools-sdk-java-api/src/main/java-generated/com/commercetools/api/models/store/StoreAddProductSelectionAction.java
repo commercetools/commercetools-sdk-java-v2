@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To make all included Products available to your customers of a given Store, add the Product Selections to the respective Store. This action has no effect if the given Product Selection is already present in the Store and has the same <code>active</code> flag.</p>
+ *  <p>To make all included Products available to your customers of a given Store, add the <span>Product Selections</span> to the respective Store. This action has no effect if the given Product Selection is already present in the Store and has the same <code>active</code> flag.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addProductSelection")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreAddProductSelectionActionImpl.class)
 public interface StoreAddProductSelectionAction extends StoreUpdateAction {
@@ -47,7 +49,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     *  <p>Whether to make all Products assigned to the referenced Product Selection available in the Store.</p>
      * @return active
      */
 
@@ -62,7 +64,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
 
     /**
-     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     *  <p>Whether to make all Products assigned to the referenced Product Selection available in the Store.</p>
      * @param active value to be set
      */
 
@@ -87,6 +89,8 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public StoreAddProductSelectionAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreAddProductSelectionAction
@@ -136,8 +140,8 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreAddProductSelectionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreAddProductSelectionAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreAddProductSelectionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreAddProductSelectionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreAddProductSelectionAction>";

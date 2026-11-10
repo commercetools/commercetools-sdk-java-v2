@@ -36,7 +36,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     private Boolean isMatching;
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @param score value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @param isMatching value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @return score
      */
 
@@ -159,7 +159,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @return isMatching
      */
 

@@ -39,7 +39,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     private com.commercetools.api.models.common.Price oldStagedPrice;
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the oldPrice value
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the oldPrice value
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldPrice value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the newPrice value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the newPrice value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param newPrice value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the oldStagedPrice value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param builder function to build the oldStagedPrice value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldStagedPrice value to be set
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @return variantId
      */
 
@@ -176,7 +176,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldPrice
      */
 
@@ -185,7 +185,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return newPrice
      */
 
@@ -194,7 +194,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 
@@ -203,7 +203,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldStagedPrice
      */
 

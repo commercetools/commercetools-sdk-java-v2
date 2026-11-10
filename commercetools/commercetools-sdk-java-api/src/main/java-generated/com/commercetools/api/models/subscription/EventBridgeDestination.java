@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
+ *  <p><span>AWS EventBridge</span> can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,10 +24,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
  *             .region("{region}")
  *             .accountId("{accountId}")
+ *             .source("{source}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EventBridge")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EventBridgeDestinationImpl.class)
 public interface EventBridgeDestination extends Destination {
@@ -53,6 +56,14 @@ public interface EventBridgeDestination extends Destination {
     public String getAccountId();
 
     /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @return source
+     */
+    @NotNull
+    @JsonProperty("source")
+    public String getSource();
+
+    /**
      *  <p>AWS region that receives the events.</p>
      * @param region value to be set
      */
@@ -65,6 +76,13 @@ public interface EventBridgeDestination extends Destination {
      */
 
     public void setAccountId(final String accountId);
+
+    /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @param source value to be set
+     */
+
+    public void setSource(final String source);
 
     /**
      * factory method
@@ -83,8 +101,11 @@ public interface EventBridgeDestination extends Destination {
         EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
         instance.setRegion(template.getRegion());
         instance.setAccountId(template.getAccountId());
+        instance.setSource(template.getSource());
         return instance;
     }
+
+    public EventBridgeDestination copyDeep();
 
     /**
      * factory method to create a deep copy of EventBridgeDestination
@@ -99,6 +120,7 @@ public interface EventBridgeDestination extends Destination {
         EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
         instance.setRegion(template.getRegion());
         instance.setAccountId(template.getAccountId());
+        instance.setSource(template.getSource());
         return instance;
     }
 
@@ -133,8 +155,8 @@ public interface EventBridgeDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination>() {
+    public static tools.jackson.core.type.TypeReference<EventBridgeDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EventBridgeDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<EventBridgeDestination>";

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * HttpDestinationAuthentication
@@ -26,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationImpl.class, name = AuthorizationHeaderAuthentication.AUTHORIZATION_HEADER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AzureFunctionsAuthenticationImpl.class, name = AzureFunctionsAuthentication.AZURE_FUNCTIONS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = HttpDestinationAuthenticationImpl.class, visible = true)
 @JsonDeserialize(as = HttpDestinationAuthenticationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface HttpDestinationAuthentication {
     @JsonProperty("type")
     public String getType();
 
+    public HttpDestinationAuthentication copyDeep();
+
     /**
      * factory method to create a deep copy of HttpDestinationAuthentication
      * @param template instance to be copied
@@ -52,13 +52,9 @@ public interface HttpDestinationAuthentication {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) {
-            return com.commercetools.api.models.extension.AuthorizationHeaderAuthentication
-                    .deepCopy((com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.AzureFunctionsAuthentication) {
-            return com.commercetools.api.models.extension.AzureFunctionsAuthentication
-                    .deepCopy((com.commercetools.api.models.extension.AzureFunctionsAuthentication) template);
+
+        if (!(template instanceof HttpDestinationAuthenticationImpl)) {
+            return template.copyDeep();
         }
         HttpDestinationAuthenticationImpl instance = new HttpDestinationAuthenticationImpl();
         return instance;
@@ -94,8 +90,8 @@ public interface HttpDestinationAuthentication {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication>() {
+    public static tools.jackson.core.type.TypeReference<HttpDestinationAuthentication> typeReference() {
+        return new tools.jackson.core.type.TypeReference<HttpDestinationAuthentication>() {
             @Override
             public String toString() {
                 return "TypeReference<HttpDestinationAuthentication>";

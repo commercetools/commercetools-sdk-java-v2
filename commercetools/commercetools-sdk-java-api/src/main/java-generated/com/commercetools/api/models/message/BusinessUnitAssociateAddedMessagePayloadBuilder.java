@@ -26,7 +26,7 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.Associate associate;
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return associate
      */
 

@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Specifies the status of the Order Search index.</p>
+ *  <p>Specifies the status of the <span>Order Search</span> index.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface OrderSearchStatus extends JsonEnum {
 
     /**
-    <p>indicates that the Search Orders endpoint is fully operational.</p> */
+    <p>indicates that the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/search:POST" rel="nofollow">Search Orders</a> endpoint is fully operational.</p> */
     OrderSearchStatus ACTIVATED = OrderSearchStatusEnum.ACTIVATED;
     /**
-    <p>indicates that the Order Search feature is currently not active, but can be activated by update action.</p> */
+    <p>indicates that the Order Search feature is currently not active, but can be activated by <span>update action</span>.</p> */
     OrderSearchStatus DEACTIVATED = OrderSearchStatusEnum.DEACTIVATED;
 
     /**

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -89,7 +90,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public String getLabel() {
@@ -97,7 +98,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      */
 
     public Boolean getStaged() {
@@ -171,4 +172,8 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
                 .build();
     }
 
+    @Override
+    public ProductSetImageLabelAction copyDeep() {
+        return ProductSetImageLabelAction.deepCopy(this);
+    }
 }

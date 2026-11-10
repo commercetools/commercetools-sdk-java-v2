@@ -1,0 +1,16 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 10,
+  "facets": [
+    {
+      "name": "price",
+      "count": 42,
+      "min": 1000,
+      "max": 50000,
+      "mean": 15000.5,
+      "sum": 1500050
+    }
+  ],
+  "results": []
+}

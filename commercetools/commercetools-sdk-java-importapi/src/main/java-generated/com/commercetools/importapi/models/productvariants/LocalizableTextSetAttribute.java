@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a localized text.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ltext-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizableTextSetAttributeImpl.class)
 public interface LocalizableTextSetAttribute extends Attribute {
@@ -39,7 +41,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     String LTEXT_SET = "ltext-set";
 
     /**
-     *
+     *  <p>A set of localized strings.</p>
      * @return value
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public List<LocalizedString> getValue();
 
     /**
-     * set value
+     *  <p>A set of localized strings.</p>
      * @param value values to be set
      */
 
@@ -56,7 +58,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public void setValue(final LocalizedString... value);
 
     /**
-     * set value
+     *  <p>A set of localized strings.</p>
      * @param value values to be set
      */
 
@@ -81,6 +83,8 @@ public interface LocalizableTextSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizableTextSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizableTextSetAttribute
@@ -133,8 +137,8 @@ public interface LocalizableTextSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<LocalizableTextSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizableTextSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizableTextSetAttribute>";

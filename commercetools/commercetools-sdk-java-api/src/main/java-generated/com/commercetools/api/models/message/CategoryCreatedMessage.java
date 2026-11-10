@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.category.Category;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Category request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/categories:POST" rel="nofollow">Create Category</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CategoryCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryCreatedMessageImpl.class)
 public interface CategoryCreatedMessage extends Message {
@@ -45,7 +47,7 @@ public interface CategoryCreatedMessage extends Message {
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @return category
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface CategoryCreatedMessage extends Message {
     public Category getCategory();
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @param category value to be set
      */
 
@@ -88,6 +90,8 @@ public interface CategoryCreatedMessage extends Message {
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public CategoryCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryCreatedMessage
@@ -147,8 +151,8 @@ public interface CategoryCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CategoryCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryCreatedMessage>";

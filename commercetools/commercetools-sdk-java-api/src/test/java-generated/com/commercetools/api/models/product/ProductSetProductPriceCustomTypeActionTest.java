@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetProductPriceCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetProductPriceCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetProductPriceCustomTypeActionBuilder builder) {
         ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(productSetProductPriceCustomTypeAction)
                 .isInstanceOf(ProductSetProductPriceCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetProductPriceCustomTypeAction.builder().priceId("priceId") },
-                new Object[] { ProductSetProductPriceCustomTypeAction.builder().staged(true) },
-                new Object[] { ProductSetProductPriceCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { ProductSetProductPriceCustomTypeAction.builder()
+        return new Object[][] {
+                new Object[] { "priceId", ProductSetProductPriceCustomTypeAction.builder().priceId("priceId") },
+                new Object[] { "staged", ProductSetProductPriceCustomTypeAction.builder().staged(true) },
+                new Object[] { "type",
+                        ProductSetProductPriceCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", ProductSetProductPriceCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

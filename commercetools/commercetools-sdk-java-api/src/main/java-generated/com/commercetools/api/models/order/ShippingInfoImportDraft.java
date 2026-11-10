@@ -7,19 +7,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ShippingMethodState;
+import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Becomes the <code>shippingInfo</code> of the imported Order.</p>
@@ -75,6 +77,14 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxRate getTaxRate();
 
     /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @return taxedPrice
+     */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedPriceDraft getTaxedPrice();
+
+    /**
      *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @return taxCategory
      */
@@ -107,7 +117,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
+     *  <p>Indicates if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced is allowed for the Order or not.</p>
      * @return shippingMethodState
      */
 
@@ -141,6 +151,13 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
      */
 
     public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @param taxedPrice value to be set
+     */
+
+    public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
      *  <p>Include a value to associate a Tax Category with the shipping information.</p>
@@ -179,7 +196,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
     /**
-     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
+     *  <p>Indicates if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced is allowed for the Order or not.</p>
      * @param shippingMethodState value to be set
      */
 
@@ -204,6 +221,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setPrice(template.getPrice());
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxRate(template.getTaxRate());
+        instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setShippingMethod(template.getShippingMethod());
         instance.setDeliveries(template.getDeliveries());
@@ -211,6 +229,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }
+
+    public ShippingInfoImportDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingInfoImportDraft
@@ -228,6 +248,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setShippingRate(
             com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
                 .deepCopy(template.getTaxCategory()));
         instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
@@ -274,8 +295,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingInfoImportDraft>";

@@ -29,4 +29,10 @@ public class CustomerAddressCustomFieldAddedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerAddressCustomFieldAddedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomerAddressCustomFieldAddedMessagePayloadQueryBuilderDsl> addressId() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressId")),
+            p -> new CombinationQueryPredicate<>(p, CustomerAddressCustomFieldAddedMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

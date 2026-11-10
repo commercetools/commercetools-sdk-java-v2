@@ -114,6 +114,12 @@ public class CartDraftQueryBuilderDsl {
             CartDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> taxRoundingMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
@@ -225,6 +231,12 @@ public class CartDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CartDraftQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> country() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),
@@ -256,6 +268,12 @@ public class CartDraftQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
             CartDraftQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
     }
 
 }

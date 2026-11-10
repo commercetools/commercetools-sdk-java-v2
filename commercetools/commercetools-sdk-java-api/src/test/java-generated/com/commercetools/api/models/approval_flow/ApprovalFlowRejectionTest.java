@@ -3,34 +3,28 @@ package com.commercetools.api.models.approval_flow;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalFlowRejectionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalFlowRejectionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalFlowRejectionBuilder builder) {
         ApprovalFlowRejection approvalFlowRejection = builder.buildUnchecked();
         Assertions.assertThat(approvalFlowRejection).isInstanceOf(ApprovalFlowRejection.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ApprovalFlowRejection.builder()
-                        .rejecter(new com.commercetools.api.models.business_unit.AssociateImpl()) },
-                new Object[] { ApprovalFlowRejection.builder().rejectedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ApprovalFlowRejection.builder().reason("reason") } };
+                new Object[] { "rejecter",
+                        ApprovalFlowRejection.builder()
+                                .rejecter(new com.commercetools.api.models.business_unit.AssociateImpl()) },
+                new Object[] { "rejectedAt",
+                        ApprovalFlowRejection.builder().rejectedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "reason", ApprovalFlowRejection.builder().reason("reason") } };
     }
 
     @Test

@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This action generates a DiscountCodeKeySet Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeKeySetMessage" rel="nofollow">DiscountCodeKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetKeyActionImpl.class)
 public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
@@ -34,7 +36,8 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -42,7 +45,8 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -66,6 +70,8 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public DiscountCodeSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetKeyAction
@@ -113,8 +119,8 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetKeyAction>";

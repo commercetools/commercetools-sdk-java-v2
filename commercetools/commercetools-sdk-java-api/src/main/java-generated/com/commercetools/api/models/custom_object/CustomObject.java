@@ -7,16 +7,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomObject
@@ -107,7 +108,10 @@ public interface CustomObject
     public String getKey();
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
+     *  <ul>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @return value
      */
     @NotNull
@@ -171,7 +175,10 @@ public interface CustomObject
     public void setKey(final String key);
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
+     *  <ul>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @param value value to be set
      */
 
@@ -203,6 +210,8 @@ public interface CustomObject
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public CustomObject copyDeep();
 
     /**
      * factory method to create a deep copy of CustomObject
@@ -263,8 +272,8 @@ public interface CustomObject
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomObject>() {
+    public static tools.jackson.core.type.TypeReference<CustomObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomObject>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomObject>";

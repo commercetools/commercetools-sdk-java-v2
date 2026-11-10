@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringSetMetaKeywordsAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaKeywords")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetMetaKeywordsActionImpl.class)
 public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
     String SET_META_KEYWORDS = "setMetaKeywords";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaKeywords
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @return staged
      */
 
@@ -52,14 +54,14 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetMetaKeywordsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetMetaKeywordsAction
@@ -135,8 +139,8 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaKeywordsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaKeywordsAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetMetaKeywordsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetMetaKeywordsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetMetaKeywordsAction>";

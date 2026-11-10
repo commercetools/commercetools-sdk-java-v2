@@ -4,47 +4,45 @@ package com.commercetools.api.models.discount_code;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountCodeDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountCodeDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountCodeDraftBuilder builder) {
         DiscountCodeDraft discountCodeDraft = builder.buildUnchecked();
         Assertions.assertThat(discountCodeDraft).isInstanceOf(DiscountCodeDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DiscountCodeDraft.builder().key("key") },
-                new Object[] { DiscountCodeDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCodeDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCodeDraft.builder().code("code") },
-                new Object[] { DiscountCodeDraft.builder()
+        return new Object[][] { new Object[] { "key", DiscountCodeDraft.builder().key("key") },
+                new Object[] { "name",
+                        DiscountCodeDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        DiscountCodeDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "code", DiscountCodeDraft.builder().code("code") },
+                new Object[] { "cartDiscounts", DiscountCodeDraft.builder()
                         .cartDiscounts(Collections.singletonList(
                             new com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl())) },
-                new Object[] { DiscountCodeDraft.builder().cartPredicate("cartPredicate") },
-                new Object[] { DiscountCodeDraft.builder().isActive(true) },
-                new Object[] { DiscountCodeDraft.builder().maxApplications(9L) },
-                new Object[] { DiscountCodeDraft.builder().maxApplicationsPerCustomer(5L) },
-                new Object[] { DiscountCodeDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { DiscountCodeDraft.builder().groups(Collections.singletonList("groups")) },
-                new Object[] { DiscountCodeDraft.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCodeDraft.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "cartPredicate", DiscountCodeDraft.builder().cartPredicate("cartPredicate") },
+                new Object[] { "isActive", DiscountCodeDraft.builder().isActive(true) },
+                new Object[] { "maxApplications", DiscountCodeDraft.builder().maxApplications(9L) },
+                new Object[] { "maxApplicationsPerCustomer",
+                        DiscountCodeDraft.builder().maxApplicationsPerCustomer(5L) },
+                new Object[] { "custom",
+                        DiscountCodeDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "groups", DiscountCodeDraft.builder().groups(Collections.singletonList("groups")) },
+                new Object[] { "validFrom",
+                        DiscountCodeDraft.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        DiscountCodeDraft.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

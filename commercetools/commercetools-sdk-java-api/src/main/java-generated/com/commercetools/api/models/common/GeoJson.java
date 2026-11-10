@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
+ *  <p>GeoJSON Geometry represents a <span>Geometry Object</span> as defined in the GeoJSON standard.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -26,8 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.GeoJsonPointImpl.class, name = GeoJsonPoint.POINT) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = GeoJsonImpl.class, visible = true)
 @JsonDeserialize(as = GeoJsonImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -41,6 +40,8 @@ public interface GeoJson {
     @JsonProperty("type")
     public String getType();
 
+    public GeoJson copyDeep();
+
     /**
      * factory method to create a deep copy of GeoJson
      * @param template instance to be copied
@@ -51,9 +52,9 @@ public interface GeoJson {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.GeoJsonPoint) {
-            return com.commercetools.api.models.common.GeoJsonPoint
-                    .deepCopy((com.commercetools.api.models.common.GeoJsonPoint) template);
+
+        if (!(template instanceof GeoJsonImpl)) {
+            return template.copyDeep();
         }
         GeoJsonImpl instance = new GeoJsonImpl();
         return instance;
@@ -81,8 +82,8 @@ public interface GeoJson {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GeoJson> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GeoJson>() {
+    public static tools.jackson.core.type.TypeReference<GeoJson> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GeoJson>() {
             @Override
             public String toString() {
                 return "TypeReference<GeoJson>";

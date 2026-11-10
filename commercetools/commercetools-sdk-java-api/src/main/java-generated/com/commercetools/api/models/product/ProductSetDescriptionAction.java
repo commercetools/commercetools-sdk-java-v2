@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetDescriptionActionImpl.class)
 public interface ProductSetDescriptionAction extends ProductUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @return staged
      */
 
@@ -52,14 +54,14 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetDescriptionAction
@@ -133,8 +137,8 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetDescriptionAction>";

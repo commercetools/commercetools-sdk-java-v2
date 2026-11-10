@@ -1,31 +1,24 @@
 
 package com.commercetools.importapi.models.order_patches;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DeliveryAddressDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DeliveryAddressDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DeliveryAddressDraftBuilder builder) {
         DeliveryAddressDraft deliveryAddressDraft = builder.buildUnchecked();
         Assertions.assertThat(deliveryAddressDraft).isInstanceOf(DeliveryAddressDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DeliveryAddressDraft.builder().deliveryId("deliveryId") }, new Object[] {
-                DeliveryAddressDraft.builder().address(new com.commercetools.importapi.models.common.AddressImpl()) } };
+        return new Object[][] { new Object[] { "deliveryId", DeliveryAddressDraft.builder().deliveryId("deliveryId") },
+                new Object[] { "address", DeliveryAddressDraft.builder()
+                        .address(new com.commercetools.importapi.models.common.AddressImpl()) } };
     }
 
     @Test

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategoryDraft
@@ -46,6 +47,8 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
 
     private String key;
 
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
     /**
      * create instance with all properties
      */
@@ -60,7 +63,8 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets,
-            @JsonProperty("key") final String key) {
+            @JsonProperty("key") final String key,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.name = name;
         this.slug = slug;
         this.description = description;
@@ -73,6 +77,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
         this.custom = custom;
         this.assets = assets;
         this.key = key;
+        this.stores = stores;
     }
 
     /**
@@ -90,7 +95,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -114,7 +119,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      */
 
     public String getOrderHint() {
@@ -171,10 +176,23 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      */
 
     public String getKey() {
         return this.key;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -229,6 +247,14 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
         this.key = key;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -251,6 +277,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(stores, that.stores)
                 .append(name, that.name)
                 .append(slug, that.slug)
                 .append(description, that.description)
@@ -263,6 +290,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
@@ -280,6 +308,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(custom)
                 .append(assets)
                 .append(key)
+                .append(stores)
                 .toHashCode();
     }
 
@@ -297,7 +326,12 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append("custom", custom)
                 .append("assets", assets)
                 .append("key", key)
+                .append("stores", stores)
                 .build();
     }
 
+    @Override
+    public CategoryDraft copyDeep() {
+        return CategoryDraft.deepCopy(this);
+    }
 }

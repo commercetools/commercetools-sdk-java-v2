@@ -188,7 +188,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -262,7 +262,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param associateMode value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param oldAssociateMode value to be set
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -379,7 +379,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return associateMode
      */
 
@@ -388,7 +388,7 @@ public class BusinessUnitAssociateModeChangedMessageBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return oldAssociateMode
      */
 

@@ -35,6 +35,14 @@ public class SubscriptionUpdateActionQueryBuilderDsl {
             SubscriptionUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl> asSetEvents(
+            Function<com.commercetools.api.predicates.query.subscription.SubscriptionSetEventsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.SubscriptionSetEventsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.subscription.SubscriptionSetEventsActionQueryBuilderDsl.of()),
+            SubscriptionUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.subscription.SubscriptionSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.SubscriptionSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

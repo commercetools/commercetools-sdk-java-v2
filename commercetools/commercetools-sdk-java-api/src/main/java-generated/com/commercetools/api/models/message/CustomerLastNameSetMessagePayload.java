@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Last Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerLastNameSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerLastNameSetMessagePayloadImpl.class)
 public interface CustomerLastNameSetMessagePayload extends MessagePayload {
@@ -34,7 +36,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
     /**
-     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     *  <p>The <code>lastName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
      * @return lastName
      */
 
@@ -42,7 +44,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     public String getLastName();
 
     /**
-     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     *  <p>The <code>lastName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
      * @param lastName value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
         instance.setLastName(template.getLastName());
         return instance;
     }
+
+    public CustomerLastNameSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerLastNameSetMessagePayload
@@ -114,8 +118,8 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerLastNameSetMessagePayload>";

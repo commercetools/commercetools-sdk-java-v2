@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetMethodInfoInterfaceAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceSetMessage" rel="nofollow">PaymentMethodInfoInterfaceSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoInterface")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetMethodInfoInterfaceActionImpl.class)
 public interface PaymentSetMethodInfoInterfaceAction extends PaymentUpdateAction {
@@ -68,6 +70,8 @@ public interface PaymentSetMethodInfoInterfaceAction extends PaymentUpdateAction
         instance.setInterface(template.getInterface());
         return instance;
     }
+
+    public PaymentSetMethodInfoInterfaceAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetMethodInfoInterfaceAction
@@ -117,8 +121,8 @@ public interface PaymentSetMethodInfoInterfaceAction extends PaymentUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetMethodInfoInterfaceAction>";

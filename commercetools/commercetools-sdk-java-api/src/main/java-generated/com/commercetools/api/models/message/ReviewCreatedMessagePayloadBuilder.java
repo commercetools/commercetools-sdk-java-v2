@@ -25,7 +25,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     private com.commercetools.api.models.review.Review review;
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @param builder function to build the review value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     }
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @param builder function to build the review value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     }
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @param review value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     }
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @return review
      */
 

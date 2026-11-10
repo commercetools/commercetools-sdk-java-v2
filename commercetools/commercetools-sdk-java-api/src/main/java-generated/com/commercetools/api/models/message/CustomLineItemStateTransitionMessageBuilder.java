@@ -199,7 +199,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @param transitionDate value to be set
      * @return Builder
      */
@@ -306,7 +306,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -317,7 +317,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -329,7 +329,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -353,7 +353,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -365,7 +365,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param toState value to be set
      * @return Builder
      */
@@ -454,7 +454,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -482,7 +482,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -491,7 +491,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -501,7 +501,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @return transitionDate
      */
 
@@ -510,7 +510,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @return quantity
      */
 
@@ -519,7 +519,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @return fromState
      */
 
@@ -528,7 +528,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @return toState
      */
 

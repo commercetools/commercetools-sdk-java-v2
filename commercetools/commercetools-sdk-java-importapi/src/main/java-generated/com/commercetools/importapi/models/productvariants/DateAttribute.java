@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a date.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("date")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateAttributeImpl.class)
 public interface DateAttribute extends Attribute {
@@ -37,7 +39,7 @@ public interface DateAttribute extends Attribute {
     String DATE = "date";
 
     /**
-     *
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateAttribute extends Attribute {
     public LocalDate getValue();
 
     /**
-     * set value
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      */
 
@@ -70,6 +72,8 @@ public interface DateAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of DateAttribute
@@ -118,8 +122,8 @@ public interface DateAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateAttribute>() {
+    public static tools.jackson.core.type.TypeReference<DateAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<DateAttribute>";

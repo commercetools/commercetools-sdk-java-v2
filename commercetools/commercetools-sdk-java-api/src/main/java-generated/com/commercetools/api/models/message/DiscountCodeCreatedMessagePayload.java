@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.discount_code.DiscountCode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create DiscountCode request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-codes:POST" rel="nofollow">Create DiscountCode</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeCreatedMessagePayloadImpl.class)
 public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
     String DISCOUNT_CODE_CREATED = "DiscountCodeCreated";
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @return discountCode
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
     public DiscountCode getDiscountCode();
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @param discountCode value to be set
      */
 
@@ -71,6 +73,8 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public DiscountCodeCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeCreatedMessagePayload
@@ -120,8 +124,8 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeCreatedMessagePayload>";

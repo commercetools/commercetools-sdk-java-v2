@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetDescriptionChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetDescriptionChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetDescriptionChangeBuilder builder) {
         SetDescriptionChange setDescriptionChange = builder.buildUnchecked();
         Assertions.assertThat(setDescriptionChange).isInstanceOf(SetDescriptionChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetDescriptionChange.builder().change("change") },
-                new Object[] { SetDescriptionChange.builder().previousValue("previousValue") },
-                new Object[] { SetDescriptionChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetDescriptionChange.builder().change("change") },
+                new Object[] { "previousValue", SetDescriptionChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetDescriptionChange.builder().nextValue("nextValue") } };
     }
 
     @Test

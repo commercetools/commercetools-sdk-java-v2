@@ -6,27 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Name on Cart Discounts.</li>
- *   <li>Change Name on Categories.</li>
- *   <li>Change Name on Channels.</li>
- *   <li>Change Name on Products.</li>
- *   <li>Change Name on Product Discounts.</li>
- *   <li>Change Name on Product Selections.</li>
- *   <li>Change Name on Shopping Lists.</li>
- *   <li>Change Name on Zones.</li>
- *  </ul>
+ * ChangeLocalizedNameChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,10 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeLocalizedNameChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLocalizedNameChangeImpl.class)
 public interface ChangeLocalizedNameChange extends Change {
@@ -84,6 +77,19 @@ public interface ChangeLocalizedNameChange extends Change {
     public LocalizedString getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -105,6 +111,18 @@ public interface ChangeLocalizedNameChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
      * factory method
      * @return instance of ChangeLocalizedNameChange
      */
@@ -122,8 +140,11 @@ public interface ChangeLocalizedNameChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
+
+    public ChangeLocalizedNameChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeLocalizedNameChange
@@ -141,6 +162,7 @@ public interface ChangeLocalizedNameChange extends Change {
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -175,8 +197,8 @@ public interface ChangeLocalizedNameChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedNameChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedNameChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeLocalizedNameChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeLocalizedNameChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeLocalizedNameChange>";

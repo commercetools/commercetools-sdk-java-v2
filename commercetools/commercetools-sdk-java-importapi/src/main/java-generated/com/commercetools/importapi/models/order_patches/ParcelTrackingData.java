@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.orders.TrackingData;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelTrackingData
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelTrackingData {
 
     /**
-     *
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -41,7 +42,7 @@ public interface ParcelTrackingData {
     public String getParcelId();
 
     /**
-     *
+     *  <p>Information that helps track a Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -49,14 +50,14 @@ public interface ParcelTrackingData {
     public TrackingData getTrackingData();
 
     /**
-     * set parcelId
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     * set trackingData
+     *  <p>Information that helps track a Parcel.</p>
      * @param trackingData value to be set
      */
 
@@ -81,6 +82,8 @@ public interface ParcelTrackingData {
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public ParcelTrackingData copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelTrackingData
@@ -130,8 +133,8 @@ public interface ParcelTrackingData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData>() {
+    public static tools.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelTrackingData>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelTrackingData>";

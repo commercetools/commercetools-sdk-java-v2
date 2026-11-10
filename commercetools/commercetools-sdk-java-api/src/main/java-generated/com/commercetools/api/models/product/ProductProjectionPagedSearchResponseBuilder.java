@@ -17,32 +17,34 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
- *             .facets(facetsBuilder -> facetsBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductProjectionPagedSearchResponseBuilder implements Builder<ProductProjectionPagedSearchResponse> {
 
     private Long limit;
+
+    private Long offset;
 
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
+    @Deprecated
+    @Nullable
     private com.commercetools.api.models.product.FacetResults facets;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -53,29 +55,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the count
-     * @param count value to be set
-     * @return Builder
-     */
-
-    public ProductProjectionPagedSearchResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     * set the value to the total
-     * @param total value to be set
-     * @return Builder
-     */
-
-    public ProductProjectionPagedSearchResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -86,7 +66,29 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set values to the results
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     * @return Builder
+     */
+
+    public ProductProjectionPagedSearchResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query.</p>
+     * @param total value to be set
+     * @return Builder
+     */
+
+    public ProductProjectionPagedSearchResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -98,7 +100,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set value to the results
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -110,7 +112,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * add values to the results
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -125,7 +127,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -140,7 +142,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -153,7 +155,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -164,7 +166,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -175,11 +177,12 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the facets using the builder function
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param builder function to build the facets value
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder facets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
@@ -187,11 +190,12 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the facets using the builder function
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param builder function to build the facets value
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder withFacets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResults> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of());
@@ -199,19 +203,20 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * set the value to the facets
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param facets value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder facets(
-            final com.commercetools.api.models.product.FacetResults facets) {
+            @Nullable final com.commercetools.api.models.product.FacetResults facets) {
         this.facets = facets;
         return this;
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @return limit
      */
 
@@ -220,7 +225,16 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * value of count}
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
+     * @return offset
+     */
+
+    public Long getOffset() {
+        return this.offset;
+    }
+
+    /**
+     *  <p>Actual number of results returned.</p>
      * @return count
      */
 
@@ -229,7 +243,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * value of total}
+     *  <p>Total number of results matching the query.</p>
      * @return total
      */
 
@@ -239,16 +253,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
-     * @return offset
-     */
-
-    public Long getOffset() {
-        return this.offset;
-    }
-
-    /**
-     * value of results}
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @return results
      */
 
@@ -257,10 +262,12 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     * value of facets}
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @return facets
      */
-
+    @Deprecated
+    @Nullable
     public com.commercetools.api.models.product.FacetResults getFacets() {
         return this.facets;
     }
@@ -271,11 +278,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      */
     public ProductProjectionPagedSearchResponse build() {
         Objects.requireNonNull(limit, ProductProjectionPagedSearchResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, ProductProjectionPagedSearchResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ProductProjectionPagedSearchResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ProductProjectionPagedSearchResponse.class + ": count is missing");
         Objects.requireNonNull(results, ProductProjectionPagedSearchResponse.class + ": results is missing");
-        Objects.requireNonNull(facets, ProductProjectionPagedSearchResponse.class + ": facets is missing");
-        return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
+        return new ProductProjectionPagedSearchResponseImpl(limit, offset, count, total, results, facets);
     }
 
     /**
@@ -283,7 +289,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      * @return ProductProjectionPagedSearchResponse
      */
     public ProductProjectionPagedSearchResponse buildUnchecked() {
-        return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
+        return new ProductProjectionPagedSearchResponseImpl(limit, offset, count, total, results, facets);
     }
 
     /**
@@ -302,9 +308,9 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     public static ProductProjectionPagedSearchResponseBuilder of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseBuilder builder = new ProductProjectionPagedSearchResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         builder.facets = template.getFacets();
         return builder;

@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListAddTextLineItemAction
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addTextLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddTextLineItemActionImpl.class)
 public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAction,
@@ -50,7 +52,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -74,7 +76,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public Long getQuantity();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -97,7 +99,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
@@ -118,7 +120,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 
@@ -154,6 +156,8 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public ShoppingListAddTextLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListAddTextLineItemAction
@@ -208,8 +212,8 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListAddTextLineItemAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListAddTextLineItemAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListAddTextLineItemAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListAddTextLineItemAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListAddTextLineItemAction>";

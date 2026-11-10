@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListChangeTextLineItemQuantityAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTextLineItemQuantity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemQuantityActionImpl.class)
 public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     String CHANGE_TEXT_LINE_ITEM_QUANTITY = "changeTextLineItemQuantity";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
@@ -44,7 +46,7 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     public String getTextLineItemId();
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemKey
      */
 
@@ -60,14 +62,14 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     public Long getQuantity();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemKey value to be set
      */
 
@@ -101,6 +103,8 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public MyShoppingListChangeTextLineItemQuantityAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListChangeTextLineItemQuantityAction
@@ -153,8 +157,8 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemQuantityAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemQuantityAction>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemQuantityAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemQuantityAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListChangeTextLineItemQuantityAction>";

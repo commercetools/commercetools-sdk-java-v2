@@ -6,19 +6,22 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
- *  <p>To unset a custom Shipping Method on a Cart, use the Set ShippingMethod update action without the <code>shippingMethod</code> field instead.</p>
+ *  <p>To set the Cart's custom Shipping Method (independent of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> managed through the <span>Shipping Methods API</span>) the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
+ *  <p>To unset a custom Shipping Method on a Cart, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Set ShippingMethod</a> update action without the <code>shippingMethod</code> field instead.</p>
+ *  <p>This update is not allowed when the Cart is <span>frozen</span> with the <code>HardFreeze</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomShippingMethodActionImpl.class)
 public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
@@ -58,7 +62,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -66,12 +70,28 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
@@ -88,18 +108,32 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
 
     /**
      * factory method
@@ -120,8 +154,12 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setCustom(template.getCustom());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
+
+    public CartSetCustomShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetCustomShippingMethodAction
@@ -142,6 +180,9 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
                 .deepCopy(template.getTaxCategory()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 
@@ -176,8 +217,8 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomShippingMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomShippingMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetCustomShippingMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetCustomShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetCustomShippingMethodAction>";

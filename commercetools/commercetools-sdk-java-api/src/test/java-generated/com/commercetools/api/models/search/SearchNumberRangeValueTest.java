@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchNumberRangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchNumberRangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchNumberRangeValueBuilder builder) {
         SearchNumberRangeValue searchNumberRangeValue = builder.buildUnchecked();
         Assertions.assertThat(searchNumberRangeValue).isInstanceOf(SearchNumberRangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchNumberRangeValue.builder().gte(0.8498576) },
-                new Object[] { SearchNumberRangeValue.builder().gt(0.15980393) },
-                new Object[] { SearchNumberRangeValue.builder().lte(0.26076245) },
-                new Object[] { SearchNumberRangeValue.builder().lt(0.5197181) } };
+        return new Object[][] { new Object[] { "gte", SearchNumberRangeValue.builder().gte(0.8498576) },
+                new Object[] { "gt", SearchNumberRangeValue.builder().gt(0.15980393) },
+                new Object[] { "lte", SearchNumberRangeValue.builder().lte(0.26076245) },
+                new Object[] { "lt", SearchNumberRangeValue.builder().lt(0.5197181) } };
     }
 
     @Test

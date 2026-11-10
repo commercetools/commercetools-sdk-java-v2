@@ -3,45 +3,39 @@ package com.commercetools.api.models.product_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchFacetRangesValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchFacetRangesValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchFacetRangesValueBuilder builder) {
         ProductSearchFacetRangesValue productSearchFacetRangesValue = builder.buildUnchecked();
         Assertions.assertThat(productSearchFacetRangesValue).isInstanceOf(ProductSearchFacetRangesValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSearchFacetRangesValue.builder().name("name") },
-                new Object[] {
+        return new Object[][] { new Object[] { "name", ProductSearchFacetRangesValue.builder().name("name") },
+                new Object[] { "scope",
                         ProductSearchFacetRangesValue.builder()
                                 .scope(com.commercetools.api.models.product_search.ProductSearchFacetScopeEnum
                                         .findEnum("all")) },
-                new Object[] { ProductSearchFacetRangesValue.builder()
-                        .filter(new com.commercetools.api.models.search.SearchQueryImpl()) },
-                new Object[] { ProductSearchFacetRangesValue.builder()
-                        .level(com.commercetools.api.models.product_search.ProductSearchFacetCountLevelEnum
-                                .findEnum("products")) },
-                new Object[] { ProductSearchFacetRangesValue.builder().field("field") },
-                new Object[] { ProductSearchFacetRangesValue.builder()
+                new Object[] { "filter",
+                        ProductSearchFacetRangesValue.builder()
+                                .filter(new com.commercetools.api.models.search.SearchQueryImpl()) },
+                new Object[] { "level",
+                        ProductSearchFacetRangesValue.builder()
+                                .level(com.commercetools.api.models.product_search.ProductSearchFacetCountLevelEnum
+                                        .findEnum("products")) },
+                new Object[] { "field", ProductSearchFacetRangesValue.builder().field("field") },
+                new Object[] { "ranges", ProductSearchFacetRangesValue.builder()
                         .ranges(Collections.singletonList(
                             new com.commercetools.api.models.product_search.ProductSearchFacetRangesFacetRangeImpl())) },
-                new Object[] { ProductSearchFacetRangesValue.builder().language("language") },
-                new Object[] { ProductSearchFacetRangesValue.builder()
+                new Object[] { "language", ProductSearchFacetRangesValue.builder().language("language") },
+                new Object[] { "fieldType", ProductSearchFacetRangesValue.builder()
                         .fieldType(com.commercetools.api.models.search.SearchFieldType.findEnum("boolean")) } };
     }
 

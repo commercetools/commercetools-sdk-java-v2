@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * GraphQLQueryComplexityLimitExceededError
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QueryComplexityLimitExceeded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLQueryComplexityLimitExceededErrorImpl.class)
 public interface GraphQLQueryComplexityLimitExceededError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLQueryComplexityLimitExceededError extends GraphQLErrorOb
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLQueryComplexityLimitExceededError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLQueryComplexityLimitExceededError
@@ -110,8 +114,8 @@ public interface GraphQLQueryComplexityLimitExceededError extends GraphQLErrorOb
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLQueryComplexityLimitExceededError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLQueryComplexityLimitExceededError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLQueryComplexityLimitExceededError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLQueryComplexityLimitExceededError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLQueryComplexityLimitExceededError>";

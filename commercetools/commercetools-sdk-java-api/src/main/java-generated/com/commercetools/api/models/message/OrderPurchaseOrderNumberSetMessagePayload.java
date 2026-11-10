@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Purchase Order Number update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderPurchaseOrderNumberSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderPurchaseOrderNumberSetMessagePayloadImpl.class)
 public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessagePayload {
@@ -34,7 +36,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     String ORDER_PURCHASE_ORDER_NUMBER_SET = "OrderPurchaseOrderNumberSet";
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return purchaseOrderNumber
      */
 
@@ -42,7 +44,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return oldPurchaseOrderNumber
      */
 
@@ -50,14 +52,14 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     public String getOldPurchaseOrderNumber();
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      */
 
@@ -83,6 +85,8 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
         instance.setOldPurchaseOrderNumber(template.getOldPurchaseOrderNumber());
         return instance;
     }
+
+    public OrderPurchaseOrderNumberSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderPurchaseOrderNumberSetMessagePayload
@@ -134,8 +138,8 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderPurchaseOrderNumberSetMessagePayload>";

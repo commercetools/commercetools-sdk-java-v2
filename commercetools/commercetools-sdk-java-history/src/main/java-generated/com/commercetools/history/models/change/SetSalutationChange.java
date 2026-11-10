@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Salutation update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetSalutationAction" rel="nofollow">Set Salutation</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetSalutationChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetSalutationChangeImpl.class)
 public interface SetSalutationChange extends Change {
@@ -111,6 +113,8 @@ public interface SetSalutationChange extends Change {
         return instance;
     }
 
+    public SetSalutationChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetSalutationChange
      * @param template instance to be copied
@@ -159,8 +163,8 @@ public interface SetSalutationChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetSalutationChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetSalutationChange>() {
+    public static tools.jackson.core.type.TypeReference<SetSalutationChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetSalutationChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetSalutationChange>";

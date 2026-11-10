@@ -29,9 +29,18 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -45,8 +54,14 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -59,8 +74,14 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -72,7 +93,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -85,7 +106,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -97,7 +118,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -109,8 +130,50 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @return shippingMethod
      */
 
@@ -120,7 +183,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 
@@ -130,11 +193,21 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
+    /**
      * builds CartSetShippingMethodAction with checking for non-null required values
      * @return CartSetShippingMethodAction
      */
     public CartSetShippingMethodAction build() {
-        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
+        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate, estimatedDelivery);
     }
 
     /**
@@ -142,7 +215,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
      * @return CartSetShippingMethodAction
      */
     public CartSetShippingMethodAction buildUnchecked() {
-        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
+        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate, estimatedDelivery);
     }
 
     /**
@@ -162,6 +235,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
         CartSetShippingMethodActionBuilder builder = new CartSetShippingMethodActionBuilder();
         builder.shippingMethod = template.getShippingMethod();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

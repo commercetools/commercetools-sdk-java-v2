@@ -184,6 +184,35 @@ public class InternalLoggerMiddlewareTest {
         testLogAppender.stop();
     }
 
+    @Test
+    public void testLoggerUnwrappedException() {
+
+        TestLogAppender testLogAppender = new TestLogAppender();
+        ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory
+                .getLogger(Logger.ROOT_LOGGER_NAME);
+        logger.addAppender(testLogAppender);
+        testLogAppender.start();
+
+        final InternalLoggerMiddleware loggerMiddleware = InternalLoggerMiddleware
+                .of((request, topic) -> new TestLogger(logger));
+
+        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("https://api.commercetools.com/"),
+            new ApiHttpHeaders(), null);
+        CompletableFuture<ApiHttpResponse<byte[]>> f = new CompletableFuture<>();
+        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(400, new ApiHttpHeaders(),
+            "".getBytes(StandardCharsets.UTF_8));
+        f.completeExceptionally(new ApiHttpException(response.getStatusCode(), response.getBodyAsString().orElse(""),
+            response.getHeaders(), response));
+        loggerMiddleware.invoke(request, apiHttpRequest -> f);
+
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.ERROR);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
+                .matches("GET https://api.commercetools.com/ 400 \\d+ - -");
+
+        testLogAppender.stop();
+    }
+
     static class TestLogAppender extends AppenderBase<ILoggingEvent> {
         ArrayList<ILoggingEvent> loggingEvents = new ArrayList<>();
 

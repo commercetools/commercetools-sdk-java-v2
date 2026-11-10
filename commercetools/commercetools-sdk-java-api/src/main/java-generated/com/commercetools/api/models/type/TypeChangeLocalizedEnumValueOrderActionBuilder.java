@@ -28,7 +28,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     private java.util.List<String> keys;
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
 

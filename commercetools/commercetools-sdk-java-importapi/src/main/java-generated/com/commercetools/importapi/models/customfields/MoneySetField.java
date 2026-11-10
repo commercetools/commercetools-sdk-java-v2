@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a money set value.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MoneySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneySetFieldImpl.class)
 public interface MoneySetField extends CustomField {
@@ -39,28 +41,28 @@ public interface MoneySetField extends CustomField {
     String MONEY_SET = "MoneySet";
 
     /**
-     *
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
     @Valid
     @JsonProperty("value")
-    public List<Money> getValue();
+    public List<TypedMoney> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
     @JsonIgnore
-    public void setValue(final Money... value);
+    public void setValue(final TypedMoney... value);
 
     /**
-     * set value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
-    public void setValue(final List<Money> value);
+    public void setValue(final List<TypedMoney> value);
 
     /**
      * factory method
@@ -81,6 +83,8 @@ public interface MoneySetField extends CustomField {
         return instance;
     }
 
+    public MoneySetField copyDeep();
+
     /**
      * factory method to create a deep copy of MoneySetField
      * @param template instance to be copied
@@ -94,7 +98,7 @@ public interface MoneySetField extends CustomField {
         MoneySetFieldImpl instance = new MoneySetFieldImpl();
         instance.setValue(Optional.ofNullable(template.getValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                        .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;
@@ -131,8 +135,8 @@ public interface MoneySetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MoneySetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MoneySetField>() {
+    public static tools.jackson.core.type.TypeReference<MoneySetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MoneySetField>() {
             @Override
             public String toString() {
                 return "TypeReference<MoneySetField>";

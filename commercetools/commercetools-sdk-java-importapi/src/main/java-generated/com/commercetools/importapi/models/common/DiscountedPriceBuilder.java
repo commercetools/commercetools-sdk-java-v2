@@ -28,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     /**
-     * set the value to the value
+     *  <p>Money value of the discounted price.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>Money value of the discounted price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     * value of value}
+     *  <p>Money value of the discounted price.</p>
      * @return value
      */
 
@@ -98,7 +98,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @return discount
      */
 

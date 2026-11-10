@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.store;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreRemoveCountryActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreRemoveCountryActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreRemoveCountryActionBuilder builder) {
         StoreRemoveCountryAction storeRemoveCountryAction = builder.buildUnchecked();
         Assertions.assertThat(storeRemoveCountryAction).isInstanceOf(StoreRemoveCountryAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StoreRemoveCountryAction.builder()
+        return new Object[][] { new Object[] { "country", StoreRemoveCountryAction.builder()
                 .country(new com.commercetools.api.models.store_country.StoreCountryImpl()) } };
     }
 

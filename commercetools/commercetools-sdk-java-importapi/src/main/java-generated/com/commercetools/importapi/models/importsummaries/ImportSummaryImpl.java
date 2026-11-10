@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
+ *  <p>The current status of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSummaryImpl implements ImportSummary, ModelBase {
@@ -44,7 +45,7 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      */
 
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
@@ -52,7 +53,7 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
     }
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      */
 
     public Long getTotal() {
@@ -96,4 +97,8 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportSummary copyDeep() {
+        return ImportSummary.deepCopy(this);
+    }
 }

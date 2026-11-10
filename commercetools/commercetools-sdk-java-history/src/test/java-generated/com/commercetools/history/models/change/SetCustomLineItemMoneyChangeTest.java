@@ -1,37 +1,33 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCustomLineItemMoneyChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCustomLineItemMoneyChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCustomLineItemMoneyChangeBuilder builder) {
         SetCustomLineItemMoneyChange setCustomLineItemMoneyChange = builder.buildUnchecked();
         Assertions.assertThat(setCustomLineItemMoneyChange).isInstanceOf(SetCustomLineItemMoneyChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCustomLineItemMoneyChange.builder().change("change") },
-                new Object[] { SetCustomLineItemMoneyChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { SetCustomLineItemMoneyChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { SetCustomLineItemMoneyChange.builder()
-                        .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetCustomLineItemMoneyChange.builder().customLineItemId("customLineItemId") } };
+        return new Object[][] { new Object[] { "change", SetCustomLineItemMoneyChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetCustomLineItemMoneyChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.MoneyImpl()) },
+                new Object[] { "nextValue",
+                        SetCustomLineItemMoneyChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.MoneyImpl()) },
+                new Object[] { "customLineItem",
+                        SetCustomLineItemMoneyChange.builder()
+                                .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "customLineItemId",
+                        SetCustomLineItemMoneyChange.builder().customLineItemId("customLineItemId") } };
     }
 
     @Test

@@ -3,41 +3,38 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLineItemDiscountSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLineItemDiscountSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLineItemDiscountSetMessageBuilder builder) {
         OrderLineItemDiscountSetMessage orderLineItemDiscountSetMessage = builder.buildUnchecked();
         Assertions.assertThat(orderLineItemDiscountSetMessage).isInstanceOf(OrderLineItemDiscountSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderLineItemDiscountSetMessage.builder().lineItemId("lineItemId") },
-                new Object[] { OrderLineItemDiscountSetMessage.builder().lineItemKey("lineItemKey") },
-                new Object[] { OrderLineItemDiscountSetMessage.builder()
-                        .discountedPricePerQuantity(Collections.singletonList(
-                            new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
-                new Object[] { OrderLineItemDiscountSetMessage.builder()
-                        .totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { OrderLineItemDiscountSetMessage.builder()
-                        .taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
-                new Object[] { OrderLineItemDiscountSetMessage.builder()
-                        .taxedPricePortions(Collections
-                                .singletonList(new com.commercetools.api.models.cart.MethodTaxedPriceImpl())) } };
+        return new Object[][] {
+                new Object[] { "lineItemId", OrderLineItemDiscountSetMessage.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", OrderLineItemDiscountSetMessage.builder().lineItemKey("lineItemKey") },
+                new Object[] { "discountedPricePerQuantity",
+                        OrderLineItemDiscountSetMessage.builder()
+                                .discountedPricePerQuantity(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
+                new Object[] { "totalPrice",
+                        OrderLineItemDiscountSetMessage.builder()
+                                .totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "taxedPrice",
+                        OrderLineItemDiscountSetMessage.builder()
+                                .taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
+                new Object[] { "taxedPricePortions",
+                        OrderLineItemDiscountSetMessage.builder()
+                                .taxedPricePortions(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.MethodTaxedPriceImpl())) } };
     }
 
     @Test

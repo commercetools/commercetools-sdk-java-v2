@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.quote.Quote;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Quote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quotes:POST" rel="nofollow">Create Quote</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteCreatedMessageImpl.class)
 public interface QuoteCreatedMessage extends Message {
@@ -45,7 +47,7 @@ public interface QuoteCreatedMessage extends Message {
     String QUOTE_CREATED = "QuoteCreated";
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @return quote
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface QuoteCreatedMessage extends Message {
     public Quote getQuote();
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @param quote value to be set
      */
 
@@ -88,6 +90,8 @@ public interface QuoteCreatedMessage extends Message {
         instance.setQuote(template.getQuote());
         return instance;
     }
+
+    public QuoteCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteCreatedMessage
@@ -147,8 +151,8 @@ public interface QuoteCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<QuoteCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteCreatedMessage>";

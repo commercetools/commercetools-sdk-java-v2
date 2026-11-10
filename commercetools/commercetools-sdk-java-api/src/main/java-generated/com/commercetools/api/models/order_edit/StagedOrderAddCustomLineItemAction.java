@@ -6,8 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CustomLineItemPriceMode;
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
@@ -15,17 +13,21 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
- *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.</p>
- *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
+ *  <p>If the Cart already contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a> of the Custom Line Item. In case of overlapping address keys the <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingTarget" rel="nofollow">ItemShippingTarget</a> <code>quantity</code> is summed up.</p>
+ *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>If the Tax Rate is not set, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,6 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addCustomLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddCustomLineItemActionImpl.class)
 public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAction,
@@ -51,6 +54,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
     @NotNull
@@ -68,7 +72,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the StagedOrder.</p>
      * @return key
      */
 
@@ -92,7 +96,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public String getSlug();
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @return taxCategory
      */
     @Valid
@@ -100,7 +104,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -117,7 +121,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode
@@ -135,7 +139,16 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public CustomLineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      */
 
@@ -149,7 +162,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the StagedOrder.</p>
      * @param key value to be set
      */
 
@@ -170,14 +183,14 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public void setSlug(final String slug);
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -192,7 +205,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
@@ -206,6 +219,13 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final CustomLineItemRecurrenceInfoDraft recurrenceInfo);
 
     /**
      * factory method
@@ -232,8 +252,11 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
         instance.setCustom(template.getCustom());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
+
+    public StagedOrderAddCustomLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderAddCustomLineItemAction
@@ -260,6 +283,8 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 
@@ -294,8 +319,8 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddCustomLineItemAction>";

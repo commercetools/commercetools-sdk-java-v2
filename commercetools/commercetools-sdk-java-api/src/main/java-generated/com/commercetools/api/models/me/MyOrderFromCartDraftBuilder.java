@@ -27,7 +27,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     private Long version;
 
     /**
-     *  <p><code>id</code> of the Cart from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     *  <p><code>id</code> of the Cart from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @return version
      */
 

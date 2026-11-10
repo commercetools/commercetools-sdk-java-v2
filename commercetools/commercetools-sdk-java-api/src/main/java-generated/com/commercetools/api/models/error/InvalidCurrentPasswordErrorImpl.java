@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +16,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the current password of the Customer does not match.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on Customers.</li>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on My Customer Profile.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -38,7 +40,7 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
      */
     @JsonCreator
     InvalidCurrentPasswordErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = INVALID_CURRENT_PASSWORD;
@@ -118,4 +120,8 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
                 .build();
     }
 
+    @Override
+    public InvalidCurrentPasswordError copyDeep() {
+        return InvalidCurrentPasswordError.deepCopy(this);
+    }
 }

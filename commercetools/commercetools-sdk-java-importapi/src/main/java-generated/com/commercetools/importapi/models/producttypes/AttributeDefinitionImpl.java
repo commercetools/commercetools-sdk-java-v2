@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeDefinition
@@ -38,6 +39,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     private Boolean isSearchable;
 
+    private com.commercetools.importapi.models.producttypes.AttributeLevel level;
+
     /**
      * create instance with all properties
      */
@@ -50,7 +53,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
             @JsonProperty("attributeConstraint") final com.commercetools.importapi.models.producttypes.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.importapi.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.importapi.models.producttypes.TextInputHint inputHint,
-            @JsonProperty("isSearchable") final Boolean isSearchable) {
+            @JsonProperty("isSearchable") final Boolean isSearchable,
+            @JsonProperty("level") final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
         this.type = type;
         this.name = name;
         this.label = label;
@@ -59,6 +63,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.inputTip = inputTip;
         this.inputHint = inputHint;
         this.isSearchable = isSearchable;
+        this.level = level;
     }
 
     /**
@@ -68,7 +73,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeType getType() {
@@ -76,7 +81,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getName() {
@@ -84,12 +89,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
@@ -97,7 +97,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Boolean getIsRequired() {
@@ -105,7 +105,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint() {
@@ -113,12 +113,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getInputTip() {
@@ -126,7 +121,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      */
 
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint() {
@@ -134,11 +129,19 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets.</p>
      */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
+    }
+
+    /**
+     *
+     */
+
+    public com.commercetools.importapi.models.producttypes.AttributeLevel getLevel() {
+        return this.level;
     }
 
     public void setType(final com.commercetools.importapi.models.producttypes.AttributeType type) {
@@ -174,6 +177,10 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.isSearchable = isSearchable;
     }
 
+    public void setLevel(final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
+        this.level = level;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -192,6 +199,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(level, that.level)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
@@ -200,6 +208,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(level, that.level)
                 .isEquals();
     }
 
@@ -213,6 +222,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip)
                 .append(inputHint)
                 .append(isSearchable)
+                .append(level)
                 .toHashCode();
     }
 
@@ -226,7 +236,12 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)
                 .append("isSearchable", isSearchable)
+                .append("level", level)
                 .build();
     }
 
+    @Override
+    public AttributeDefinition copyDeep() {
+        return AttributeDefinition.deepCopy(this);
+    }
 }

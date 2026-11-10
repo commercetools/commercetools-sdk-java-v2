@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetReturnItemCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetReturnItemCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetReturnItemCustomFieldActionBuilder builder) {
         StagedOrderSetReturnItemCustomFieldAction stagedOrderSetReturnItemCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetReturnItemCustomFieldAction)
                 .isInstanceOf(StagedOrderSetReturnItemCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetReturnItemCustomFieldAction.builder().returnItemId("returnItemId") },
-                new Object[] { StagedOrderSetReturnItemCustomFieldAction.builder().returnItemKey("returnItemKey") },
-                new Object[] { StagedOrderSetReturnItemCustomFieldAction.builder().name("name") },
-                new Object[] { StagedOrderSetReturnItemCustomFieldAction.builder().value("value") } };
+                new Object[] { "returnItemId",
+                        StagedOrderSetReturnItemCustomFieldAction.builder().returnItemId("returnItemId") },
+                new Object[] { "returnItemKey",
+                        StagedOrderSetReturnItemCustomFieldAction.builder().returnItemKey("returnItemKey") },
+                new Object[] { "name", StagedOrderSetReturnItemCustomFieldAction.builder().name("name") },
+                new Object[] { "value", StagedOrderSetReturnItemCustomFieldAction.builder().value("value") } };
     }
 
     @Test

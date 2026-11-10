@@ -12,17 +12,18 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Either the scope <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
- *  <p>Creating a Category produces the CategoryCreated Message.</p>
+ *  <p>Either the <span>scope</span> <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>Creating a Category with a <code>parent</code> locks that parent Category. For details, see <span>Category tree locking</span>.</p>
+ *  <p>Creating a Category produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryCreatedMessage" rel="nofollow">CategoryCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -68,7 +69,7 @@ public class ByProjectKeyCategoriesPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/categories", this.projectKey);
+        String httpRequestPath = String.format("%s/categories", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

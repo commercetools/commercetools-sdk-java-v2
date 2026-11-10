@@ -7,16 +7,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This payload is sent for a MessageSubscription.</p>
+ *  <p>This payload is sent for a <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscription</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Message")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MessageDeliveryPayloadImpl.class)
 public interface MessageDeliveryPayload extends DeliveryPayload, MessageDeliveryPayloadMixin {
@@ -85,7 +87,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getSequenceNumber();
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @return resourceVersion
      */
     @NotNull
@@ -93,7 +95,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getResourceVersion();
 
     /**
-     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     *  <p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p>
      * @return payloadNotIncluded
      */
     @Valid
@@ -136,14 +138,14 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @param resourceVersion value to be set
      */
 
     public void setResourceVersion(final Long resourceVersion);
 
     /**
-     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     *  <p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p>
      * @param payloadNotIncluded value to be set
      */
 
@@ -176,6 +178,8 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
         instance.setPayloadNotIncluded(template.getPayloadNotIncluded());
         return instance;
     }
+
+    public MessageDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of MessageDeliveryPayload
@@ -234,8 +238,8 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MessageDeliveryPayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MessageDeliveryPayload>() {
+    public static tools.jackson.core.type.TypeReference<MessageDeliveryPayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MessageDeliveryPayload>() {
             @Override
             public String toString() {
                 return "TypeReference<MessageDeliveryPayload>";

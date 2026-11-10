@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryAddressDraft
@@ -43,7 +44,7 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -51,7 +52,7 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -95,4 +96,8 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public DeliveryAddressDraft copyDeep() {
+        return DeliveryAddressDraft.deepCopy(this);
+    }
 }

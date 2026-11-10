@@ -8,12 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLInsufficientScopeError
+ *  <p>This error occurs when your <span>API Client</span> does not have the <span>OAuth scope</span> required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("insufficient_scope")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInsufficientScopeErrorImpl.class)
 public interface GraphQLInsufficientScopeError extends GraphQLErrorObject {
@@ -32,6 +35,14 @@ public interface GraphQLInsufficientScopeError extends GraphQLErrorObject {
      * discriminator value for GraphQLInsufficientScopeError
      */
     String INSUFFICIENT_SCOPE = "insufficient_scope";
+
+    /**
+     *
+     * @return code
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
 
     /**
      * factory method
@@ -51,6 +62,8 @@ public interface GraphQLInsufficientScopeError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInsufficientScopeError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInsufficientScopeError
@@ -98,8 +111,8 @@ public interface GraphQLInsufficientScopeError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLInsufficientScopeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLInsufficientScopeError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLInsufficientScopeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLInsufficientScopeError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLInsufficientScopeError>";

@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .requiresDiscountCode(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
  *             .stackingMode(StackingMode.STACKING)
+ *             .recurringOrderScope(recurringOrderScopeBuilder -> recurringOrderScopeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -85,6 +86,11 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    @Nullable
+    private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
+
+    private com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope;
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
@@ -307,7 +313,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @param cartPredicate value to be set
      * @return Builder
      */
@@ -319,7 +325,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -332,7 +338,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -344,7 +350,9 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
@@ -356,8 +364,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -370,8 +378,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -385,8 +393,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -402,8 +410,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -420,8 +428,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -436,8 +444,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -450,8 +458,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -496,7 +504,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      * @return Builder
      */
@@ -507,7 +515,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -518,7 +526,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -530,7 +538,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -544,7 +552,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param builder function to build the references value
      * @return Builder
      */
@@ -559,7 +567,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param builder function to build the references value
      * @return Builder
      */
@@ -615,6 +623,73 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     public CartDiscountBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder discountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder, com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder withDiscountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder, com.commercetools.api.models.discount_group.DiscountGroupReference> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param discountGroup value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder discountGroup(
+            @Nullable final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
+        this.discountGroup = discountGroup;
+        return this;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @param recurringOrderScope value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder recurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+        return this;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @param builder function to build the recurringOrderScope value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder recurringOrderScope(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderScopeBuilder, Builder<? extends com.commercetools.api.models.recurring_order.RecurringOrderScope>> builder) {
+        this.recurringOrderScope = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderScopeBuilder.of())
+                .build();
         return this;
     }
 
@@ -713,7 +788,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @return cartPredicate
      */
 
@@ -723,7 +798,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
 
@@ -733,7 +808,9 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
 
@@ -743,8 +820,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @return stores
      */
@@ -783,7 +860,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
 
@@ -792,7 +869,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @return references
      */
 
@@ -820,6 +897,26 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @return discountGroup
+     */
+
+    @Nullable
+    public com.commercetools.api.models.discount_group.DiscountGroupReference getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @return recurringOrderScope
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScope getRecurringOrderScope() {
+        return this.recurringOrderScope;
+    }
+
+    /**
      * builds CartDiscount with checking for non-null required values
      * @return CartDiscount
      */
@@ -837,9 +934,10 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         Objects.requireNonNull(requiresDiscountCode, CartDiscount.class + ": requiresDiscountCode is missing");
         Objects.requireNonNull(references, CartDiscount.class + ": references is missing");
         Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
+        Objects.requireNonNull(recurringOrderScope, CartDiscount.class + ": recurringOrderScope is missing");
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup, recurringOrderScope);
     }
 
     /**
@@ -849,7 +947,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup, recurringOrderScope);
     }
 
     /**
@@ -888,6 +986,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         builder.references = template.getReferences();
         builder.stackingMode = template.getStackingMode();
         builder.custom = template.getCustom();
+        builder.discountGroup = template.getDiscountGroup();
+        builder.recurringOrderScope = template.getRecurringOrderScope();
         return builder;
     }
 

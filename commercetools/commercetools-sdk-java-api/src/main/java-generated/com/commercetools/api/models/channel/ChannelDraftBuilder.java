@@ -46,6 +46,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +58,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -67,7 +70,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -79,7 +83,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -235,7 +240,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param geoLocation value to be set
      * @return Builder
      */
@@ -246,7 +251,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param builder function to build the geoLocation value
      * @return Builder
      */
@@ -259,6 +264,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -267,7 +274,8 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 
@@ -317,7 +325,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @return geoLocation
      */
 

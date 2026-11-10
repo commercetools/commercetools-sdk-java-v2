@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a time value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Time")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeFieldImpl.class)
 public interface TimeField extends CustomField {
@@ -37,7 +39,7 @@ public interface TimeField extends CustomField {
     String TIME = "Time";
 
     /**
-     *
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface TimeField extends CustomField {
     public LocalTime getValue();
 
     /**
-     * set value
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface TimeField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeField copyDeep();
 
     /**
      * factory method to create a deep copy of TimeField
@@ -116,8 +120,8 @@ public interface TimeField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TimeField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TimeField>() {
+    public static tools.jackson.core.type.TypeReference<TimeField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TimeField>() {
             @Override
             public String toString() {
                 return "TypeReference<TimeField>";

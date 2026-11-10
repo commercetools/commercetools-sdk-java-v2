@@ -6,16 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to a QuoteRequest.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("quote-request")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestReferenceImpl.class)
 public interface QuoteRequestReference extends Reference, com.commercetools.api.models.Identifiable<QuoteRequest>,
@@ -38,7 +42,15 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
     String QUOTE_REQUEST = "quote-request";
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @return obj
      */
     @Valid
@@ -46,7 +58,7 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
     public QuoteRequest getObj();
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @param obj value to be set
      */
 
@@ -71,6 +83,8 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public QuoteRequestReference copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestReference
@@ -119,8 +133,8 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestReference>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestReference>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestReference>";

@@ -3,39 +3,31 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxedPriceDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxedPriceDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxedPriceDraftBuilder builder) {
         TaxedPriceDraft taxedPriceDraft = builder.buildUnchecked();
         Assertions.assertThat(taxedPriceDraft).isInstanceOf(TaxedPriceDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "totalNet",
                         TaxedPriceDraft.builder().totalNet(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] {
+                new Object[] { "totalGross",
                         TaxedPriceDraft.builder().totalGross(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] {
+                new Object[] { "taxPortions",
                         TaxedPriceDraft.builder()
                                 .taxPortions(Collections
                                         .singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl())) },
-                new Object[] { TaxedPriceDraft.builder()
+                new Object[] { "totalTax", TaxedPriceDraft.builder()
                         .totalTax(new com.commercetools.api.models.common.TypedMoneyDraftImpl()) } };
     }
 

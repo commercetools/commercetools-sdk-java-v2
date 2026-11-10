@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCartSetBillingAddressAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBillingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetBillingAddressActionImpl.class)
 public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
@@ -36,7 +38,8 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -44,7 +47,8 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 
@@ -68,6 +72,8 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public MyCartSetBillingAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartSetBillingAddressAction
@@ -115,8 +121,8 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetBillingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetBillingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetBillingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetBillingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetBillingAddressAction>";

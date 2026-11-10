@@ -3,47 +3,43 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartAddCustomShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartAddCustomShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartAddCustomShippingMethodActionBuilder builder) {
         CartAddCustomShippingMethodAction cartAddCustomShippingMethodAction = builder.buildUnchecked();
         Assertions.assertThat(cartAddCustomShippingMethodAction).isInstanceOf(CartAddCustomShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartAddCustomShippingMethodAction.builder().shippingKey("shippingKey") },
-                new Object[] { CartAddCustomShippingMethodAction.builder().shippingMethodName("shippingMethodName") },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
-                        .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
+        return new Object[][] {
+                new Object[] { "shippingKey", CartAddCustomShippingMethodAction.builder().shippingKey("shippingKey") },
+                new Object[] { "shippingMethodName",
+                        CartAddCustomShippingMethodAction.builder().shippingMethodName("shippingMethodName") },
+                new Object[] { "shippingAddress",
+                        CartAddCustomShippingMethodAction.builder()
+                                .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingRate", CartAddCustomShippingMethodAction.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
+                new Object[] { "shippingRateInput", CartAddCustomShippingMethodAction.builder()
                         .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputDraftImpl()) },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
+                new Object[] { "taxCategory", CartAddCustomShippingMethodAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] {
+                new Object[] { "externalTaxRate",
+                        CartAddCustomShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "deliveries",
                         CartAddCustomShippingMethodAction.builder()
                                 .deliveries(Collections
                                         .singletonList(new com.commercetools.api.models.order.DeliveryDraftImpl())) },
-                new Object[] { CartAddCustomShippingMethodAction.builder()
+                new Object[] { "custom", CartAddCustomShippingMethodAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

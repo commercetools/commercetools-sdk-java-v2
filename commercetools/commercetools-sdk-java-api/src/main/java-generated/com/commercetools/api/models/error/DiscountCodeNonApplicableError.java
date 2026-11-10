@@ -7,19 +7,27 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
+ *  <p>Returned when the Cart contains a Discount Code with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">Create Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/carts:POST" rel="nofollow">Create Cart in Store</a> requests.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/carts:POST" rel="nofollow">Create Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/carts:POST" rel="nofollow">Create Cart in Store</a> requests.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts:POST" rel="nofollow">Create Cart in BusinessUnit</a> request on Associate Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddDiscountCodeAction" rel="nofollow">Add DiscountCode</a> update action on Carts, if the associated Cart Discounts are inactive or invalid, or belongs to a different Store than the Cart.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartAddDiscountCodeAction" rel="nofollow">Add DiscountCode</a> update action on My Carts, if the associated Cart Discounts are inactive or invalid, or belongs to a different Store than the Cart.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddDiscountCodeAction" rel="nofollow">Add DiscountCode</a> update action on Order Edits, if the associated Cart Discounts are inactive or invalid, or belongs to a different Store than the Order.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/orders:POST" rel="nofollow">Create Order from Cart in BusinessUnit</a> request on Associate Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -32,6 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeNonApplicable")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
 public interface DiscountCodeNonApplicableError extends ErrorObject {
@@ -180,6 +189,8 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
         return instance;
     }
 
+    public DiscountCodeNonApplicableError copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeNonApplicableError
      * @param template instance to be copied
@@ -233,8 +244,8 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeNonApplicableError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeNonApplicableError>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeNonApplicableError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeNonApplicableError>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeNonApplicableError>";

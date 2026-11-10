@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents errors related to authentication and authorization in a format conforming to the OAuth 2.0 specification.</p>
+ *  <p>Represents errors related to authentication and authorization in a format conforming to the <span>OAuth 2.0 specification</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AuthErrorResponse extends ErrorResponse {
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @return error
      */
     @NotNull
@@ -61,7 +62,7 @@ public interface AuthErrorResponse extends ErrorResponse {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @param error value to be set
      */
 
@@ -112,6 +113,8 @@ public interface AuthErrorResponse extends ErrorResponse {
         return instance;
     }
 
+    public AuthErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of AuthErrorResponse
      * @param template instance to be copied
@@ -121,6 +124,10 @@ public interface AuthErrorResponse extends ErrorResponse {
     public static AuthErrorResponse deepCopy(@Nullable final AuthErrorResponse template) {
         if (template == null) {
             return null;
+        }
+
+        if (!(template instanceof AuthErrorResponseImpl)) {
+            return template.copyDeep();
         }
         AuthErrorResponseImpl instance = new AuthErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
@@ -166,8 +173,8 @@ public interface AuthErrorResponse extends ErrorResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse>() {
+    public static tools.jackson.core.type.TypeReference<AuthErrorResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AuthErrorResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<AuthErrorResponse>";

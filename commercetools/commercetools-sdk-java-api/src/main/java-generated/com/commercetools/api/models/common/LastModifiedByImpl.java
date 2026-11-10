@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for <span>events not tracked</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
+
+    private Boolean isPlatformClient;
 
     private String clientId;
 
@@ -38,12 +41,14 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    LastModifiedByImpl(@JsonProperty("clientId") final String clientId,
+    LastModifiedByImpl(@JsonProperty("isPlatformClient") final Boolean isPlatformClient,
+            @JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate,
             @JsonProperty("attributedTo") final com.commercetools.api.models.common.Attribution attributedTo) {
+        this.isPlatformClient = isPlatformClient;
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
@@ -59,7 +64,15 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which modified the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     */
+
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p>
      */
 
     public String getClientId() {
@@ -67,7 +80,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      */
 
     public String getExternalUserId() {
@@ -75,7 +88,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -83,7 +96,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</p>
      */
 
     public String getAnonymousId() {
@@ -91,7 +104,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {
@@ -104,6 +117,10 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     public com.commercetools.api.models.common.Attribution getAttributedTo() {
         return this.attributedTo;
+    }
+
+    public void setIsPlatformClient(final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
     }
 
     public void setClientId(final String clientId) {
@@ -140,12 +157,14 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
         LastModifiedByImpl that = (LastModifiedByImpl) o;
 
-        return new EqualsBuilder().append(clientId, that.clientId)
+        return new EqualsBuilder().append(isPlatformClient, that.isPlatformClient)
+                .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
                 .append(attributedTo, that.attributedTo)
+                .append(isPlatformClient, that.isPlatformClient)
                 .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
@@ -157,7 +176,8 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(clientId)
+        return new HashCodeBuilder(17, 37).append(isPlatformClient)
+                .append(clientId)
                 .append(externalUserId)
                 .append(customer)
                 .append(anonymousId)
@@ -168,7 +188,8 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("clientId", clientId)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("isPlatformClient", isPlatformClient)
+                .append("clientId", clientId)
                 .append("externalUserId", externalUserId)
                 .append("customer", customer)
                 .append("anonymousId", anonymousId)
@@ -177,4 +198,8 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
                 .build();
     }
 
+    @Override
+    public LastModifiedBy copyDeep() {
+        return LastModifiedBy.deepCopy(this);
+    }
 }

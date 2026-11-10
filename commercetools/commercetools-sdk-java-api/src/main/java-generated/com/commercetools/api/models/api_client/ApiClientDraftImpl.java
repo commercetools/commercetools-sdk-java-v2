@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApiClientDraft
@@ -62,7 +63,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      */
 
     public String getScope() {
@@ -78,7 +79,11 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      */
 
     public Integer getAccessTokenValiditySeconds() {
@@ -156,4 +161,8 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApiClientDraft copyDeep() {
+        return ApiClientDraft.deepCopy(this);
+    }
 }

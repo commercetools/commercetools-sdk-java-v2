@@ -67,6 +67,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateActionBuilder changeShipmentStateBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateActionBuilder.of();
     }
@@ -129,6 +133,10 @@ public class StagedOrderUpdateActionBuilder {
 
     public com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionBuilder setBillingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder.of();
     }
 
     public com.commercetools.api.models.order_edit.StagedOrderSetCountryActionBuilder setCountryBuilder() {
@@ -205,6 +213,11 @@ public class StagedOrderUpdateActionBuilder {
 
     public com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder
+                .of();
     }
 
     public com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {

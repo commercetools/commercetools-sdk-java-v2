@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
+ *  <p>The current status of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSummary {
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @return states
      */
     @NotNull
@@ -42,7 +43,7 @@ public interface ImportSummary {
     public OperationStates getStates();
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @return total
      */
     @NotNull
@@ -50,14 +51,14 @@ public interface ImportSummary {
     public Long getTotal();
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      */
 
     public void setStates(final OperationStates states);
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @param total value to be set
      */
 
@@ -82,6 +83,8 @@ public interface ImportSummary {
         instance.setTotal(template.getTotal());
         return instance;
     }
+
+    public ImportSummary copyDeep();
 
     /**
      * factory method to create a deep copy of ImportSummary
@@ -131,8 +134,8 @@ public interface ImportSummary {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportSummary> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportSummary>() {
+    public static tools.jackson.core.type.TypeReference<ImportSummary> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportSummary>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportSummary>";

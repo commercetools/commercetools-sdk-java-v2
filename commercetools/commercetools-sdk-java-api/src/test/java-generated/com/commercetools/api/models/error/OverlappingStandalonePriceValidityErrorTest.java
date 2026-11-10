@@ -3,49 +3,47 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OverlappingStandalonePriceValidityErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OverlappingStandalonePriceValidityErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OverlappingStandalonePriceValidityErrorBuilder builder) {
         OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = builder.buildUnchecked();
         Assertions.assertThat(overlappingStandalonePriceValidityError)
                 .isInstanceOf(OverlappingStandalonePriceValidityError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OverlappingStandalonePriceValidityError.builder().message("message") },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
-                        .conflictingStandalonePrice(
-                            new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder().sku("sku") },
-                new Object[] { OverlappingStandalonePriceValidityError.builder().currency("currency") },
-                new Object[] { OverlappingStandalonePriceValidityError.builder().country("country") },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
+        return new Object[][] {
+                new Object[] { "message", OverlappingStandalonePriceValidityError.builder().message("message") },
+                new Object[] { "conflictingStandalonePrice",
+                        OverlappingStandalonePriceValidityError.builder()
+                                .conflictingStandalonePrice(
+                                    new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
+                new Object[] { "sku", OverlappingStandalonePriceValidityError.builder().sku("sku") },
+                new Object[] { "currency", OverlappingStandalonePriceValidityError.builder().currency("currency") },
+                new Object[] { "country", OverlappingStandalonePriceValidityError.builder().country("country") },
+                new Object[] { "customerGroup", OverlappingStandalonePriceValidityError.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
-                        .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
-                        .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
-                        .conflictingValidFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OverlappingStandalonePriceValidityError.builder()
+                new Object[] { "channel",
+                        OverlappingStandalonePriceValidityError.builder()
+                                .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "validFrom",
+                        OverlappingStandalonePriceValidityError.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        OverlappingStandalonePriceValidityError.builder()
+                                .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "conflictingValidFrom",
+                        OverlappingStandalonePriceValidityError.builder()
+                                .conflictingValidFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "conflictingValidUntil", OverlappingStandalonePriceValidityError.builder()
                         .conflictingValidUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

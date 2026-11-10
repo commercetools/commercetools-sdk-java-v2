@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetValidFromAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFrom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
@@ -35,7 +37,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -43,7 +45,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      */
 
@@ -67,6 +69,8 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public DiscountCodeSetValidFromAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetValidFromAction
@@ -114,8 +118,8 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetValidFromAction>";

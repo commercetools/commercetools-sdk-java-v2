@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLRequest
+ *  <p>The query, operation name, and variables that are sent to the GraphQL API.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLRequest {
 
     /**
-     *
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @return query
      */
     @NotNull
@@ -40,7 +41,7 @@ public interface GraphQLRequest {
     public String getQuery();
 
     /**
-     *
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @return operationName
      */
 
@@ -48,7 +49,7 @@ public interface GraphQLRequest {
     public String getOperationName();
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return variables
      */
     @Valid
@@ -56,21 +57,21 @@ public interface GraphQLRequest {
     public GraphQLVariablesMap getVariables();
 
     /**
-     * set query
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @param query value to be set
      */
 
     public void setQuery(final String query);
 
     /**
-     * set operationName
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @param operationName value to be set
      */
 
     public void setOperationName(final String operationName);
 
     /**
-     * set variables
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param variables value to be set
      */
 
@@ -96,6 +97,8 @@ public interface GraphQLRequest {
         instance.setVariables(template.getVariables());
         return instance;
     }
+
+    public GraphQLRequest copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLRequest
@@ -146,8 +149,8 @@ public interface GraphQLRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLRequest>";

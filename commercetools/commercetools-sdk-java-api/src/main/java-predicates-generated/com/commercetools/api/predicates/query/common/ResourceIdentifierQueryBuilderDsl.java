@@ -100,6 +100,20 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asDiscountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asExtension(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asInventoryEntry(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -175,6 +189,22 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asRecurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl
+                    .of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asRecurringOrder(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.recurring_order.RecurringOrderResourceIdentifierQueryBuilderDsl
+                    .of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asReview(
             Function<com.commercetools.api.predicates.query.review.ReviewResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.review.ReviewResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -239,6 +269,13 @@ public class ResourceIdentifierQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asVariant(
+            Function<com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl.of()),
             ResourceIdentifierQueryBuilderDsl::of);
     }
 

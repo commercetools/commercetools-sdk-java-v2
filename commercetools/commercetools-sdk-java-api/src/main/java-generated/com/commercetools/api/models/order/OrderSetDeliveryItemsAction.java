@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the Delivery Items Updated Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItemsUpdatedMessage" rel="nofollow">Delivery Items Updated</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDeliveryItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
 public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
@@ -38,7 +40,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -47,7 +49,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public String getDeliveryId();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -56,7 +58,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @return items
      */
     @NotNull
@@ -65,7 +67,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
@@ -73,7 +75,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
@@ -81,7 +83,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 
@@ -89,7 +91,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 
@@ -115,6 +117,8 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public OrderSetDeliveryItemsAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetDeliveryItemsAction
@@ -168,8 +172,8 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetDeliveryItemsAction>";

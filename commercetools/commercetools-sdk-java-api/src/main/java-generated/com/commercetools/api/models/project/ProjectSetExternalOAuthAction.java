@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectSetExternalOAuthAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExternalOAuth")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
@@ -35,7 +37,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     String SET_EXTERNAL_O_AUTH = "setExternalOAuth";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalOAuth
      */
     @Valid
@@ -43,7 +45,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     public ExternalOAuth getExternalOAuth();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalOAuth value to be set
      */
 
@@ -67,6 +69,8 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
         instance.setExternalOAuth(template.getExternalOAuth());
         return instance;
     }
+
+    public ProjectSetExternalOAuthAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectSetExternalOAuthAction
@@ -115,8 +119,8 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectSetExternalOAuthAction>";

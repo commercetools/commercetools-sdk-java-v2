@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.OrderState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change OrderState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change OrderState</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderStateChangedMessagePayloadImpl.class)
 public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
@@ -37,7 +39,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     String ORDER_STATE_CHANGED = "OrderStateChanged";
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return orderState
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public OrderState getOrderState();
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return oldOrderState
      */
 
@@ -53,14 +55,14 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public OrderState getOldOrderState();
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param orderState value to be set
      */
 
     public void setOrderState(final OrderState orderState);
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param oldOrderState value to be set
      */
 
@@ -85,6 +87,8 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
         instance.setOldOrderState(template.getOldOrderState());
         return instance;
     }
+
+    public OrderStateChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderStateChangedMessagePayload
@@ -133,8 +137,8 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderStateChangedMessagePayload>";

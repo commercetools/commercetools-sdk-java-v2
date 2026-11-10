@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType already contains a value with the given key.</p>
- *  <p>The error is returned as a failed response to the Change the key of an EnumValue update action.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> already contains a value with the given key.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeEnumKeyAction" rel="nofollow">Change the key of an EnumValue</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNotExistError, ModelBase {
@@ -35,7 +37,8 @@ public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNo
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLEnumKeyDoesNotExistErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLEnumKeyDoesNotExistErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingEnumKey") final String conflictingEnumKey,
             @JsonProperty("conflictingAttributeName") final String conflictingAttributeName) {
         this.values = values;
@@ -137,4 +140,8 @@ public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNo
                 .build();
     }
 
+    @Override
+    public GraphQLEnumKeyDoesNotExistError copyDeep() {
+        return GraphQLEnumKeyDoesNotExistError.deepCopy(this);
+    }
 }

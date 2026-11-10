@@ -26,9 +26,9 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     private String change;
 
-    private com.commercetools.history.models.common.Reference previousValue;
+    private com.commercetools.history.models.common.KeyReference previousValue;
 
-    private com.commercetools.history.models.common.Reference nextValue;
+    private com.commercetools.history.models.common.KeyReference nextValue;
 
     /**
      * set the value to the change
@@ -43,36 +43,36 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetStoreChangeBuilder previousValue(
+            final com.commercetools.history.models.common.KeyReference previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
 
     public SetStoreChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
      * @return Builder
      */
 
-    public SetStoreChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetStoreChangeBuilder previousValue(final com.commercetools.history.models.common.Reference previousValue) {
-        this.previousValue = previousValue;
+    public SetStoreChangeBuilder nextValue(final com.commercetools.history.models.common.KeyReference nextValue) {
+        this.nextValue = nextValue;
         return this;
     }
 
@@ -83,31 +83,8 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
      */
 
     public SetStoreChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetStoreChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetStoreChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
-        this.nextValue = nextValue;
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -125,7 +102,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.Reference getPreviousValue() {
+    public com.commercetools.history.models.common.KeyReference getPreviousValue() {
         return this.previousValue;
     }
 
@@ -134,7 +111,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.Reference getNextValue() {
+    public com.commercetools.history.models.common.KeyReference getNextValue() {
         return this.nextValue;
     }
 

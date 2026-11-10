@@ -38,7 +38,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> to which the OrderEdit is applied.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> to which the OrderEdit is applied.</p>
      * @return resourceVersion
      */
 

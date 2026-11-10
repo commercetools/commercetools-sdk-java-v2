@@ -56,7 +56,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      *  <p>Current password of the Customer.</p>
-     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
      * @param currentPassword value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      *  <p>Current password of the Customer.</p>
-     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
      * @return currentPassword
      */
 

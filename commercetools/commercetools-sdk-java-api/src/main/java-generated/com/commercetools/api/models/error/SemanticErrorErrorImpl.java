@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a Discount predicate or API Extension predicate is not semantically correct.</p>
+ *  <p>Returned when a <span>Discount predicate</span> or <span>API Extension predicate</span> is not semantically correct.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
@@ -33,7 +35,7 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
      */
     @JsonCreator
     SemanticErrorErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = SEMANTIC_ERROR;
@@ -113,4 +115,8 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
                 .build();
     }
 
+    @Override
+    public SemanticErrorError copyDeep() {
+        return SemanticErrorError.deepCopy(this);
+    }
 }

@@ -184,7 +184,7 @@ public class BusinessUnitContactEmailSetMessageBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class BusinessUnitContactEmailSetMessageBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class BusinessUnitContactEmailSetMessageBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param contactEmail value to be set
      * @return Builder
      */
@@ -334,7 +334,7 @@ public class BusinessUnitContactEmailSetMessageBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -362,7 +362,7 @@ public class BusinessUnitContactEmailSetMessageBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return contactEmail
      */
 

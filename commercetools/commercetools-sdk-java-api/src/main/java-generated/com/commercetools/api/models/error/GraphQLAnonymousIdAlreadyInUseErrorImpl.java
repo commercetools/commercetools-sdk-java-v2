@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the anonymous ID is being used by another resource.</p>
@@ -31,7 +33,8 @@ public class GraphQLAnonymousIdAlreadyInUseErrorImpl implements GraphQLAnonymous
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLAnonymousIdAlreadyInUseErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLAnonymousIdAlreadyInUseErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = ANONYMOUS_ID_ALREADY_IN_USE;
     }
@@ -95,4 +98,8 @@ public class GraphQLAnonymousIdAlreadyInUseErrorImpl implements GraphQLAnonymous
                 .build();
     }
 
+    @Override
+    public GraphQLAnonymousIdAlreadyInUseError copyDeep() {
+        return GraphQLAnonymousIdAlreadyInUseError.deepCopy(this);
+    }
 }

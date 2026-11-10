@@ -84,6 +84,18 @@ public class InventoryEntryQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, InventoryEntryQueryBuilderDsl::of));
     }
 
+    public LongComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl> minCartQuantity() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minCartQuantity")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryQueryBuilderDsl::of));
+    }
+
+    public LongComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl> maxCartQuantity() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("maxCartQuantity")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl> restockableInDays() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("restockableInDays")),
@@ -94,6 +106,21 @@ public class InventoryEntryQueryBuilderDsl {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expectedDelivery")),
             p -> new CombinationQueryPredicate<>(p, InventoryEntryQueryBuilderDsl::of));
+    }
+
+    public LongComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl> reservationExpirationInMinutes() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("reservationExpirationInMinutes")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<InventoryEntryQueryBuilderDsl> stockLevels(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stockLevels"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl.of())),
+            InventoryEntryQueryBuilderDsl::of);
     }
 
     public CombinationQueryPredicate<InventoryEntryQueryBuilderDsl> custom(

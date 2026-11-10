@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
+ *  <p>Returned when a resource type cannot be created as it has reached its <span>limits</span>.</p>
  *  <p>The limits must be adjusted for this resource before sending the request again.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -33,7 +35,8 @@ public class GraphQLMaxResourceLimitExceededErrorImpl implements GraphQLMaxResou
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLMaxResourceLimitExceededErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLMaxResourceLimitExceededErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("exceededResource") final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.values = values;
         this.exceededResource = exceededResource;
@@ -114,4 +117,8 @@ public class GraphQLMaxResourceLimitExceededErrorImpl implements GraphQLMaxResou
                 .build();
     }
 
+    @Override
+    public GraphQLMaxResourceLimitExceededError copyDeep() {
+        return GraphQLMaxResourceLimitExceededError.deepCopy(this);
+    }
 }

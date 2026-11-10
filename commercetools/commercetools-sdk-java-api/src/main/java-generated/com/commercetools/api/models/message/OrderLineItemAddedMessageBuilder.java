@@ -187,7 +187,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param addedQuantity value to be set
      * @return Builder
      */
@@ -371,7 +371,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -399,7 +399,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return lineItem
      */
 
@@ -408,7 +408,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return addedQuantity
      */
 

@@ -1,36 +1,33 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeAssetNameChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeAssetNameChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeAssetNameChangeBuilder builder) {
         ChangeAssetNameChange changeAssetNameChange = builder.buildUnchecked();
         Assertions.assertThat(changeAssetNameChange).isInstanceOf(ChangeAssetNameChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeAssetNameChange.builder().change("change") },
-                new Object[] { ChangeAssetNameChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeAssetNameChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeAssetNameChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+        return new Object[][] { new Object[] { "change", ChangeAssetNameChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeAssetNameChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "nextValue",
+                        ChangeAssetNameChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "asset",
+                        ChangeAssetNameChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", ChangeAssetNameChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", ChangeAssetNameChange.builder().variant("variant") } };
     }
 
     @Test
@@ -62,5 +59,19 @@ public class ChangeAssetNameChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        ChangeAssetNameChange value = ChangeAssetNameChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        ChangeAssetNameChange value = ChangeAssetNameChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

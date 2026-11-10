@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomLineItemTaxAmount")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetCustomLineItemTaxAmountActionImpl.class)
 public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrderUpdateAction {
@@ -37,7 +39,7 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     String SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = "setCustomLineItemTaxAmount";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -45,7 +47,7 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public String getCustomLineItemId();
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -53,7 +55,7 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxAmount
      */
     @Valid
@@ -61,7 +63,7 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> used for this Custom Line Item. This is required for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -69,28 +71,28 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public String getShippingKey();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      */
 
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> used for this Custom Line Item. This is required for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
@@ -118,6 +120,8 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public StagedOrderSetCustomLineItemTaxAmountAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetCustomLineItemTaxAmountAction
@@ -172,8 +176,8 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetCustomLineItemTaxAmountAction>";

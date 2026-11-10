@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the Business Unit on the Cart. The Cart must have an existing Business Unit assigned already.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBusinessUnit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetBusinessUnitActionImpl.class)
 public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
@@ -38,7 +40,7 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
     String SET_BUSINESS_UNIT = "setBusinessUnit";
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> in the <span>Business Unit</span>.</p>
      * @return businessUnit
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> in the <span>Business Unit</span>.</p>
      * @param businessUnit value to be set
      */
 
@@ -71,6 +73,8 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
+
+    public MyCartSetBusinessUnitAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartSetBusinessUnitAction
@@ -119,8 +123,8 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetBusinessUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetBusinessUnitAction>";

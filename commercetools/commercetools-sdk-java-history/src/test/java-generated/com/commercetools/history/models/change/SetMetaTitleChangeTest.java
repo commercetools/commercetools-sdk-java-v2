@@ -1,34 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetMetaTitleChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetMetaTitleChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetMetaTitleChangeBuilder builder) {
         SetMetaTitleChange setMetaTitleChange = builder.buildUnchecked();
         Assertions.assertThat(setMetaTitleChange).isInstanceOf(SetMetaTitleChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetMetaTitleChange.builder().change("change") },
-                new Object[] { SetMetaTitleChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetMetaTitleChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+        return new Object[][] { new Object[] { "change", SetMetaTitleChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetMetaTitleChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "nextValue",
+                        SetMetaTitleChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "catalogData", SetMetaTitleChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -52,5 +47,12 @@ public class SetMetaTitleChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetMetaTitleChange value = SetMetaTitleChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

@@ -30,7 +30,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
     /**
-     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @return obj
      */
 

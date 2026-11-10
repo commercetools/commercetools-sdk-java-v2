@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message.</p>
+ *  <p>Adding a Transaction to a Payment generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionAddedMessage" rel="nofollow">PaymentTransactionAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addTransaction")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentAddTransactionActionImpl.class)
 public interface PaymentAddTransactionAction extends PaymentUpdateAction {
@@ -70,6 +72,8 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
         instance.setTransaction(template.getTransaction());
         return instance;
     }
+
+    public PaymentAddTransactionAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentAddTransactionAction
@@ -118,8 +122,8 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentAddTransactionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentAddTransactionAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentAddTransactionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentAddTransactionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentAddTransactionAction>";

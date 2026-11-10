@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelSetAddressAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetAddressActionImpl.class)
 public interface ChannelSetAddressAction extends ChannelUpdateAction {
@@ -36,7 +38,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     String SET_ADDRESS = "setAddress";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public ChannelSetAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetAddressAction
@@ -115,8 +119,8 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelSetAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelSetAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelSetAddressAction>";

@@ -13,7 +13,7 @@ import org.slf4j.event.Level;
  * {@include.toc}
  * <h2 id=logging>Logging</h2>
  *
- * <p>Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.</p>
+ * <p>Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.</p>
  *
  * <h3 id=logger-configuration>Logger configuration</h3>
  *
@@ -54,9 +54,9 @@ import org.slf4j.event.Level;
  *
  * <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>
  *
- * <p>The child loggers of commercetools Composable Commerce correspond with the names of the API endpoints, so for example {@code commercetools.categories} for Categories and {@code commercetools.product-types} for Product Types.</p>
+ * <p>The child loggers of commercetools correspond with the names of the API endpoints, so for example {@code commercetools.categories} for Categories and {@code commercetools.product-types} for Product Types.</p>
  *
- * <p>The grandchild loggers refer to actions. For example, {@code commercetools.categories.request} refers to performing requests via HTTPs to commercetools Composable Commerce for Categories and {@code commercetools.categories.response} refers to the response for Categories. </p>
+ * <p>The grandchild loggers refer to actions. For example, {@code commercetools.categories.request} refers to performing requests via HTTPs to commercetools for Categories and {@code commercetools.categories.response} refers to the response for Categories. </p>
  *
  * <p>The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):</p>
  *

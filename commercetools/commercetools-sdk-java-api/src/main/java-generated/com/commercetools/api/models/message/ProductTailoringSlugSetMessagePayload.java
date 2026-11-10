@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Product Tailoring Set Slug update action.</p>
+ *  <p>Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductTailoringSlugSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSlugSetMessagePayloadImpl.class)
 public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
@@ -67,7 +69,7 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public ProductReference getProduct();
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return slug
      */
     @Valid
@@ -75,7 +77,7 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return oldSlug
      */
     @Valid
@@ -104,14 +106,14 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param oldSlug value to be set
      */
 
@@ -139,6 +141,8 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
         instance.setOldSlug(template.getOldSlug());
         return instance;
     }
+
+    public ProductTailoringSlugSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSlugSetMessagePayload
@@ -192,8 +196,8 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSlugSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSlugSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSlugSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSlugSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSlugSetMessagePayload>";

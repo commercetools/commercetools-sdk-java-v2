@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a date time value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DateTime")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateTimeFieldImpl.class)
 public interface DateTimeField extends CustomField {
@@ -37,7 +39,7 @@ public interface DateTimeField extends CustomField {
     String DATE_TIME = "DateTime";
 
     /**
-     *
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateTimeField extends CustomField {
     public ZonedDateTime getValue();
 
     /**
-     * set value
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface DateTimeField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateTimeField copyDeep();
 
     /**
      * factory method to create a deep copy of DateTimeField
@@ -116,8 +120,8 @@ public interface DateTimeField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateTimeField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateTimeField>() {
+    public static tools.jackson.core.type.TypeReference<DateTimeField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateTimeField>() {
             @Override
             public String toString() {
                 return "TypeReference<DateTimeField>";

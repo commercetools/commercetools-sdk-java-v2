@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.state.StateReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReviewStateTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewStateTransitionMessagePayloadImpl.class)
 public interface ReviewStateTransitionMessagePayload extends MessagePayload {
@@ -42,7 +44,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
     @Valid
@@ -50,7 +52,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public StateReference getOldState();
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return newState
      */
     @NotNull
@@ -59,7 +61,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public StateReference getNewState();
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @return oldIncludedInStatistics
      */
     @NotNull
@@ -67,7 +69,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public Boolean getOldIncludedInStatistics();
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @return newIncludedInStatistics
      */
     @NotNull
@@ -75,7 +77,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public Boolean getNewIncludedInStatistics();
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
     @Valid
@@ -83,7 +85,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public Reference getTarget();
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
     @NotNull
@@ -91,42 +93,42 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public Boolean getForce();
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      */
 
     public void setOldState(final StateReference oldState);
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param newState value to be set
      */
 
     public void setNewState(final StateReference newState);
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @param oldIncludedInStatistics value to be set
      */
 
     public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @param newIncludedInStatistics value to be set
      */
 
     public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      */
 
     public void setTarget(final Reference target);
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      */
 
@@ -155,6 +157,8 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public ReviewStateTransitionMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewStateTransitionMessagePayload
@@ -209,8 +213,8 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewStateTransitionMessagePayload>";

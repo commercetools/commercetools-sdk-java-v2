@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerSetSalutationAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSalutation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetSalutationActionImpl.class)
 public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
     String SET_SALUTATION = "setSalutation";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return salutation
      */
 
@@ -42,7 +44,7 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
     public String getSalutation();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param salutation value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
         instance.setSalutation(template.getSalutation());
         return instance;
     }
+
+    public MyCustomerSetSalutationAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetSalutationAction
@@ -113,8 +117,8 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetSalutationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetSalutationAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetSalutationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetSalutationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetSalutationAction>";

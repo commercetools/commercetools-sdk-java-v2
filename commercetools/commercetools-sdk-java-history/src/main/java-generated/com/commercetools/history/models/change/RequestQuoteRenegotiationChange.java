@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.QuoteState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Request Quote Renegotiation update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">Request Quote Renegotiation</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RequestQuoteRenegotiationChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RequestQuoteRenegotiationChangeImpl.class)
 public interface RequestQuoteRenegotiationChange extends Change {
@@ -72,7 +74,7 @@ public interface RequestQuoteRenegotiationChange extends Change {
     public QuoteState getNextValue();
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @return buyerComment
      */
     @NotNull
@@ -101,7 +103,7 @@ public interface RequestQuoteRenegotiationChange extends Change {
     public void setNextValue(final QuoteState nextValue);
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @param buyerComment value to be set
      */
 
@@ -128,6 +130,8 @@ public interface RequestQuoteRenegotiationChange extends Change {
         instance.setBuyerComment(template.getBuyerComment());
         return instance;
     }
+
+    public RequestQuoteRenegotiationChange copyDeep();
 
     /**
      * factory method to create a deep copy of RequestQuoteRenegotiationChange
@@ -178,8 +182,8 @@ public interface RequestQuoteRenegotiationChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RequestQuoteRenegotiationChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RequestQuoteRenegotiationChange>() {
+    public static tools.jackson.core.type.TypeReference<RequestQuoteRenegotiationChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RequestQuoteRenegotiationChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RequestQuoteRenegotiationChange>";

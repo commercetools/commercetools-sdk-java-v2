@@ -57,6 +57,9 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
 
     private String name;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -186,7 +189,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +201,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -271,6 +274,17 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -336,7 +350,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -373,6 +387,16 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomFieldRemovedMessage with checking for non-null required values
      * @return CustomerAddressCustomFieldRemovedMessage
      */
@@ -389,7 +413,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
             CustomerAddressCustomFieldRemovedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(name, CustomerAddressCustomFieldRemovedMessage.class + ": name is missing");
         return new CustomerAddressCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, addressId);
     }
 
     /**
@@ -398,7 +422,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
      */
     public CustomerAddressCustomFieldRemovedMessage buildUnchecked() {
         return new CustomerAddressCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, addressId);
     }
 
     /**
@@ -428,6 +452,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.name = template.getName();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

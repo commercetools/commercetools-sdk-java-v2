@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is no longer initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed. It has been deprecated since the corresponding field on the Payment does not exist anymore.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,8 +31,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeAmountAuthorizedChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeAmountAuthorizedChangeImpl.class)
+@Deprecated
 public interface ChangeAmountAuthorizedChange extends Change {
 
     /**
@@ -115,6 +118,8 @@ public interface ChangeAmountAuthorizedChange extends Change {
         return instance;
     }
 
+    public ChangeAmountAuthorizedChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeAmountAuthorizedChange
      * @param template instance to be copied
@@ -163,8 +168,8 @@ public interface ChangeAmountAuthorizedChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeAmountAuthorizedChange>";

@@ -45,7 +45,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -333,7 +333,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     *  <p>Whether the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -433,7 +433,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -443,7 +443,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -483,7 +483,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     *  <p>Whether the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      * @return staged
      */
 

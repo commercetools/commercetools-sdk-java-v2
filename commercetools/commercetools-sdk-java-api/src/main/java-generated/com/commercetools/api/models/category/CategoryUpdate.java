@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategoryUpdate
@@ -35,7 +36,7 @@ public interface CategoryUpdate extends
         com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +53,7 @@ public interface CategoryUpdate extends
     public List<CategoryUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
@@ -92,6 +93,8 @@ public interface CategoryUpdate extends
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public CategoryUpdate copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryUpdate
@@ -144,8 +147,8 @@ public interface CategoryUpdate extends
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryUpdate>() {
+    public static tools.jackson.core.type.TypeReference<CategoryUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryUpdate>";

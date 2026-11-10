@@ -3,35 +3,27 @@ package com.commercetools.api.models.product_type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypeChangeLocalizedEnumValueOrderActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder) {
         ProductTypeChangeLocalizedEnumValueOrderAction productTypeChangeLocalizedEnumValueOrderAction = builder
                 .buildUnchecked();
         Assertions.assertThat(productTypeChangeLocalizedEnumValueOrderAction)
                 .isInstanceOf(ProductTypeChangeLocalizedEnumValueOrderAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "attributeName",
                         ProductTypeChangeLocalizedEnumValueOrderAction.builder().attributeName("attributeName") },
-                new Object[] { ProductTypeChangeLocalizedEnumValueOrderAction.builder()
+                new Object[] { "values", ProductTypeChangeLocalizedEnumValueOrderAction.builder()
                         .values(Collections.singletonList(
                             new com.commercetools.api.models.product_type.AttributeLocalizedEnumValueImpl())) } };
     }

@@ -1,5 +1,4 @@
-# commercetools Composable Commerce JAVA SDK
-
+# commercetools Java SDK
 
 [![][maven img]][maven]
 [![][snyk img]][snyk]
@@ -7,9 +6,9 @@
 
 ## Introduction
 
-This repository contains the commercetools Composable Commerce and Import API Java SDKs generated from our API reference.
+This repository contains commercetools Java SDKs generated from our [API reference](https://docs.commercetools.com/api).
 
-* [Getting Started](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/GettingStarted.html)
+* [Getting Started](https://docs.commercetools.com/dev-tooling/java-sdk-getting-started)
 
 ## Installation
 
@@ -21,11 +20,11 @@ The latest stable SDK release can be retrieved from [Maven Central](https://sear
 ```gradle
 ext {
     versions = [
-        commercetools: "17.11.0"
+        commercetools: "20.4.0"
     ]
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -42,7 +41,7 @@ dependencies {
 
 ```maven
 <properties>
-    <commercetools.version>17.11.0</commercetools.version>
+    <commercetools.version>20.4.0</commercetools.version>
 </properties>
 <dependencies>
     <dependency>
@@ -66,29 +65,34 @@ dependencies {
 ### Modules
 
 * `commercetools-http-client`: alias for commercetools-async-http-client
-* `commercetools-okhttp-client3`: uses OkHttp client 3.0
-* `commercetools-okhttp-client4`: uses OkHttp client 4.0
+* `commercetools-okhttp-client4`: uses OkHttp client 4.x
+* `commercetools-okhttp-client5`: uses OkHttp client 5.x
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
 * `commercetools-async-http-client`: uses Async HTTP client 2.12
 * `commercetools-reactornetty-client`: uses Reactor Netty HTTP Client
 * `commercetools-javanet-client`: uses HTTP client (`java.net.http.HttpClient`) included in JDK 11+
-* `commercetools-sdk-java-api`: models and request builders for the product API
-* `commercetools-sdk-java-importapi`: models and request builders for the import API
-* `commercetools-sdk-java-history`: models and request builders for the audit log API
+* `commercetools-sdk-java-api`: models and request builders for the [HTTP API](https://docs.commercetools.com/api)
+* `commercetools-sdk-java-importapi`: models and request builders for the [Import API](https://docs.commercetools.com/api/import-export/overview)
+* `commercetools-sdk-java-history`: models and request builders for the [Audit Log API](https://docs.commercetools.com/api/history/overview)
+* `commercetools-sdk-java-checkout`: models and request builders for the [Checkout API](https://docs.commercetools.com/checkout/general-concepts)
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances
 * `commercetools-monitoring-newrelic`: Middleware to integrate NewRelic monitoring
 * `commercetools-monitoring-datadog`: Middleware to integrate Datadog monitoring
 * `commercetools-monitoring-opentelemetry`: Middleware to collect metrics using OpenTelemetry
-* `commercetools-graphql-api`: type safe support for the commercetools GraphQL API
+* `commercetools-graphql-api`: type safe support for the commercetools [GraphQL API](https://docs.commercetools.com/api/graphql)
 
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
 * [Migration guidelines from v1 to v2](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/Migration.html)
 
+# Support
+
+Please see our [support policy](SUPPORT.md)
+
 ## Documentation
 
-* [Documentation](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc)
+* [Documentation](https://docs.commercetools.com/dev-tooling/jvm-sdk)
 
 [snyk]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2
 [snyk img]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2/badge.svg

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchExecutionFailure")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLSearchExecutionFailureErrorImpl.class)
 public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLSearchExecutionFailureError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLSearchExecutionFailureError
@@ -108,8 +112,8 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLSearchExecutionFailureError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLSearchExecutionFailureError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLSearchExecutionFailureError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLSearchExecutionFailureError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLSearchExecutionFailureError>";

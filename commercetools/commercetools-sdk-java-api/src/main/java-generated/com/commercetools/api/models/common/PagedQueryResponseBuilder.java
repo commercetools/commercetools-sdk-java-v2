@@ -41,7 +41,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     private java.lang.Object meta;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set values to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set value to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * add values to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set the value to the meta
+     *  <p>Object containing supplementary information about the results.</p>
      * @param meta value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -142,7 +142,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -160,7 +160,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -170,7 +170,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * value of results}
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @return results
      */
 
@@ -179,7 +179,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * value of meta}
+     *  <p>Object containing supplementary information about the results.</p>
      * @return meta
      */
 

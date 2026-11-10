@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
- *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/("{/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +24,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -50,7 +50,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     }
 
     /**
-     * values of pattern properties
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @return pattern properties
      */
 

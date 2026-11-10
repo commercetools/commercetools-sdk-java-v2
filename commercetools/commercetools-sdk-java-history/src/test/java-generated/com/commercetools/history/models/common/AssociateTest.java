@@ -3,35 +3,31 @@ package com.commercetools.history.models.common;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateBuilder builder) {
         Associate associate = builder.buildUnchecked();
         Assertions.assertThat(associate).isInstanceOf(Associate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { Associate.builder()
-                        .associateRoleAssignments(Collections.singletonList(
-                            new com.commercetools.history.models.common.AssociateRoleAssignmentImpl())) },
-                new Object[] {
-                        Associate.builder().customer(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                new Object[] { "associateRoleAssignments",
+                        Associate.builder()
+                                .associateRoleAssignments(Collections.singletonList(
+                                    new com.commercetools.history.models.common.AssociateRoleAssignmentImpl())) },
+                new Object[] { "roles", Associate.builder()
+                        .roles(Collections.singletonList(
+                            com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin"))) },
+                new Object[] { "customer", Associate.builder()
+                        .customer(new com.commercetools.history.models.common.CustomerReferenceImpl()) } };
     }
 
     @Test
@@ -45,10 +41,20 @@ public class AssociateTest {
     }
 
     @Test
+    public void roles() {
+        Associate value = Associate.of();
+        value.setRoles(Collections
+                .singletonList(com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin")));
+        Assertions.assertThat(value.getRoles())
+                .isEqualTo(Collections.singletonList(
+                    com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin")));
+    }
+
+    @Test
     public void customer() {
         Associate value = Associate.of();
-        value.setCustomer(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setCustomer(new com.commercetools.history.models.common.CustomerReferenceImpl());
         Assertions.assertThat(value.getCustomer())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.CustomerReferenceImpl());
     }
 }

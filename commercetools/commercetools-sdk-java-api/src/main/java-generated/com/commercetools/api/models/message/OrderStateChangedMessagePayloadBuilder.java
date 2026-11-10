@@ -29,7 +29,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param orderState value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     }
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param oldOrderState value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     }
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return orderState
      */
 
@@ -62,7 +62,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     }
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return oldOrderState
      */
 

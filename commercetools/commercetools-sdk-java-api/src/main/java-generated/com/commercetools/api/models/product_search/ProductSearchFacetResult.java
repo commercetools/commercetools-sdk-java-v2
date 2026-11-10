@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetResult
@@ -64,6 +65,8 @@ public interface ProductSearchFacetResult {
         return instance;
     }
 
+    public ProductSearchFacetResult copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetResult
      * @param template instance to be copied
@@ -74,13 +77,9 @@ public interface ProductSearchFacetResult {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetResultBucket) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetResultBucket
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetResultBucket) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetResultCount) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetResultCount
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetResultCount) template);
+
+        if (!(template instanceof ProductSearchFacetResultImpl)) {
+            return template.copyDeep();
         }
         ProductSearchFacetResultImpl instance = new ProductSearchFacetResultImpl();
         instance.setName(template.getName());
@@ -118,8 +117,8 @@ public interface ProductSearchFacetResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResult>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetResult>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetResult>";

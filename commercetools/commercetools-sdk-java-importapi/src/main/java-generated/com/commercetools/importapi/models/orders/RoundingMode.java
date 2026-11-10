@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+ *  <p>The rounding mode representation used in <code>Order.priceRoundingMode</code> and <code>Order.taxRoundingMode</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface RoundingMode extends JsonEnum {

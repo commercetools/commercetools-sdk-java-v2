@@ -26,7 +26,7 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
     private String companyName;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param companyName value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return companyName
      */
 

@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</p>
+ *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is <span>OrderEdit Applied</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addStagedAction")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAddStagedActionActionImpl.class)
 public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
@@ -71,6 +73,8 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
         instance.setStagedAction(template.getStagedAction());
         return instance;
     }
+
+    public OrderEditAddStagedActionAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditAddStagedActionAction
@@ -119,8 +123,8 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAddStagedActionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAddStagedActionAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditAddStagedActionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditAddStagedActionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditAddStagedActionAction>";

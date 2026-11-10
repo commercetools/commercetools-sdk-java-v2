@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitCustomFieldChangedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitCustomFieldChangedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitCustomFieldChangedMessageBuilder builder) {
         BusinessUnitCustomFieldChangedMessage businessUnitCustomFieldChangedMessage = builder.buildUnchecked();
         Assertions.assertThat(businessUnitCustomFieldChangedMessage)
                 .isInstanceOf(BusinessUnitCustomFieldChangedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitCustomFieldChangedMessage.builder().name("name") },
-                new Object[] { BusinessUnitCustomFieldChangedMessage.builder().value("value") },
-                new Object[] { BusinessUnitCustomFieldChangedMessage.builder().oldValue("oldValue") } };
+        return new Object[][] { new Object[] { "name", BusinessUnitCustomFieldChangedMessage.builder().name("name") },
+                new Object[] { "value", BusinessUnitCustomFieldChangedMessage.builder().value("value") },
+                new Object[] { "oldValue", BusinessUnitCustomFieldChangedMessage.builder().oldValue("oldValue") } };
     }
 
     @Test

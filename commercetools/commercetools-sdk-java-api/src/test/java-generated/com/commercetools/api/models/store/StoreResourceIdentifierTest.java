@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.store;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreResourceIdentifierTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreResourceIdentifierBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreResourceIdentifierBuilder builder) {
         StoreResourceIdentifier storeResourceIdentifier = builder.buildUnchecked();
         Assertions.assertThat(storeResourceIdentifier).isInstanceOf(StoreResourceIdentifier.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StoreResourceIdentifier.builder().id("id") },
-                new Object[] { StoreResourceIdentifier.builder().key("key") } };
+        return new Object[][] { new Object[] { "id", StoreResourceIdentifier.builder().id("id") },
+                new Object[] { "key", StoreResourceIdentifier.builder().key("key") } };
     }
 
     @Test

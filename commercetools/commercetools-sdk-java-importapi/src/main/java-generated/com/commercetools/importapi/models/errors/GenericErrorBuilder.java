@@ -24,7 +24,7 @@ public class GenericErrorBuilder implements Builder<GenericError> {
     private String message;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class GenericErrorBuilder implements Builder<GenericError> {
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>References a payment by key.</p>
+ *  <p>Used by the <span>Import API</span> to identify a Payment.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
@@ -43,7 +44,7 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced Payment.</p>
      */
 
     public String getKey() {
@@ -51,7 +52,7 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
@@ -91,4 +92,8 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentKeyReference copyDeep() {
+        return PaymentKeyReference.deepCopy(this);
+    }
 }

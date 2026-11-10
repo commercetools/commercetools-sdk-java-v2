@@ -1,31 +1,23 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RemoveProductSelectionChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RemoveProductSelectionChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RemoveProductSelectionChangeBuilder builder) {
         RemoveProductSelectionChange removeProductSelectionChange = builder.buildUnchecked();
         Assertions.assertThat(removeProductSelectionChange).isInstanceOf(RemoveProductSelectionChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { RemoveProductSelectionChange.builder().change("change") },
-                new Object[] { RemoveProductSelectionChange.builder()
+        return new Object[][] { new Object[] { "change", RemoveProductSelectionChange.builder().change("change") },
+                new Object[] { "previousValue", RemoveProductSelectionChange.builder()
                         .previousValue(new com.commercetools.history.models.common.ProductSelectionSettingImpl()) } };
     }
 

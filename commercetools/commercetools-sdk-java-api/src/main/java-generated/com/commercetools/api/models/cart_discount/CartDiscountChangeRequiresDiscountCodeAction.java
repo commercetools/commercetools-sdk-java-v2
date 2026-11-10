@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountChangeRequiresDiscountCodeAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeRequiresDiscountCode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeRequiresDiscountCodeActionImpl.class)
 public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscountUpdateAction {
@@ -36,7 +38,8 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     *  <p>New value to set. If <code>true</code>, the Cart Discount can only be used with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>When set to <code>false</code>, if the number of active Cart Discounts without a Discount Code exceeds the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @return requiresDiscountCode
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     public Boolean getRequiresDiscountCode();
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     *  <p>New value to set. If <code>true</code>, the Cart Discount can only be used with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>When set to <code>false</code>, if the number of active Cart Discounts without a Discount Code exceeds the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @param requiresDiscountCode value to be set
      */
 
@@ -69,6 +73,8 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         return instance;
     }
+
+    public CartDiscountChangeRequiresDiscountCodeAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeRequiresDiscountCodeAction
@@ -119,8 +125,8 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeRequiresDiscountCodeAction>";

@@ -68,8 +68,11 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -80,7 +83,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of a published Product.</p>
+     *  <p><code>id</code> of a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -91,7 +94,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -102,7 +105,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -124,7 +127,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      * @return Builder
@@ -136,8 +139,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -151,8 +154,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -165,8 +168,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -178,7 +181,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -191,7 +194,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -203,7 +206,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -215,7 +218,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -227,7 +231,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -239,7 +244,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -250,7 +256,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -264,7 +270,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -277,7 +283,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -289,7 +295,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -302,7 +308,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -314,7 +320,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -326,7 +332,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param perMethodExternalTaxRate value to be set
      * @return Builder
      */
@@ -338,7 +344,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param perMethodExternalTaxRate value to be set
      * @return Builder
      */
@@ -350,7 +356,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param perMethodExternalTaxRate value to be set
      * @return Builder
      */
@@ -365,7 +371,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the perMethodExternalTaxRate value
      * @return Builder
      */
@@ -381,7 +387,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the perMethodExternalTaxRate value
      * @return Builder
      */
@@ -395,7 +401,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the perMethodExternalTaxRate value
      * @return Builder
      */
@@ -407,7 +413,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the perMethodExternalTaxRate value
      * @return Builder
      */
@@ -419,7 +425,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param inventoryMode value to be set
      * @return Builder
      */
@@ -503,7 +509,46 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public LineItemDraftBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public LineItemDraftBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public LineItemDraftBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 
@@ -513,7 +558,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of a published Product.</p>
+     *  <p><code>id</code> of a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -523,7 +568,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @return variantId
      */
 
@@ -533,7 +578,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -553,7 +598,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
@@ -564,8 +609,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @return distributionChannel
      */
 
@@ -575,7 +620,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
 
@@ -585,7 +630,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return externalPrice
      */
 
@@ -595,7 +641,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @return externalTotalPrice
      */
 
@@ -605,7 +651,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @return externalTaxRate
      */
 
@@ -615,7 +661,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return perMethodExternalTaxRate
      */
 
@@ -625,7 +671,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return inventoryMode
      */
 
@@ -655,13 +701,23 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds LineItemDraft with checking for non-null required values
      * @return LineItemDraft
      */
     public LineItemDraft build() {
         return new LineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, custom, recurrenceInfo);
     }
 
     /**
@@ -671,7 +727,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     public LineItemDraft buildUnchecked() {
         return new LineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, custom, recurrenceInfo);
     }
 
     /**
@@ -704,6 +760,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

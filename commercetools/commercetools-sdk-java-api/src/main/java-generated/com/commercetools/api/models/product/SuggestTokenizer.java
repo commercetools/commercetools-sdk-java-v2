@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SuggestTokenizer
@@ -26,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = CustomTokenizer.CUSTOM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.WhitespaceTokenizerImpl.class, name = WhitespaceTokenizer.WHITESPACE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = SuggestTokenizerImpl.class, visible = true)
 @JsonDeserialize(as = SuggestTokenizerImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface SuggestTokenizer {
     @JsonProperty("type")
     public String getType();
 
+    public SuggestTokenizer copyDeep();
+
     /**
      * factory method to create a deep copy of SuggestTokenizer
      * @param template instance to be copied
@@ -52,13 +52,9 @@ public interface SuggestTokenizer {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product.CustomTokenizer) {
-            return com.commercetools.api.models.product.CustomTokenizer
-                    .deepCopy((com.commercetools.api.models.product.CustomTokenizer) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.WhitespaceTokenizer) {
-            return com.commercetools.api.models.product.WhitespaceTokenizer
-                    .deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer) template);
+
+        if (!(template instanceof SuggestTokenizerImpl)) {
+            return template.copyDeep();
         }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         return instance;
@@ -94,8 +90,8 @@ public interface SuggestTokenizer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer>() {
+    public static tools.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SuggestTokenizer>() {
             @Override
             public String toString() {
                 return "TypeReference<SuggestTokenizer>";

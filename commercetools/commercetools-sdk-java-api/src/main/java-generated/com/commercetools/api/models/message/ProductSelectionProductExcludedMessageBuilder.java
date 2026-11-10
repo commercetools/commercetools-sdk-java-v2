@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +56,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
     /**
@@ -187,7 +187,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -311,7 +311,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -324,13 +324,13 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
 
     public ProductSelectionProductExcludedMessageBuilder variantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
@@ -401,7 +401,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -429,7 +429,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return product
      */
 
@@ -438,10 +438,11 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @return variantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
         return this.variantExclusion;
     }
@@ -462,8 +463,6 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
         Objects.requireNonNull(resourceVersion,
             ProductSelectionProductExcludedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionProductExcludedMessage.class + ": product is missing");
-        Objects.requireNonNull(variantExclusion,
-            ProductSelectionProductExcludedMessage.class + ": variantExclusion is missing");
         return new ProductSelectionProductExcludedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product,
             variantExclusion);

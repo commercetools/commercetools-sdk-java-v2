@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
@@ -28,6 +29,10 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues customers;
+
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits;
+
     /**
      * create instance with all properties
      */
@@ -35,10 +40,14 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     SearchIndexingConfigurationImpl(
             @JsonProperty("products") final com.commercetools.api.models.project.SearchIndexingConfigurationValues products,
             @JsonProperty("productsSearch") final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch,
-            @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {
+            @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders,
+            @JsonProperty("customers") final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers,
+            @JsonProperty("businessUnits") final com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits) {
         this.products = products;
         this.productsSearch = productsSearch;
         this.orders = orders;
+        this.customers = customers;
+        this.businessUnits = businessUnits;
     }
 
     /**
@@ -48,7 +57,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
@@ -56,7 +65,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsSearch() {
@@ -64,11 +73,27 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {
         return this.orders;
+    }
+
+    /**
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
+     */
+
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getCustomers() {
+        return this.customers;
+    }
+
+    /**
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
+     */
+
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getBusinessUnits() {
+        return this.businessUnits;
     }
 
     public void setProducts(final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
@@ -84,6 +109,15 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         this.orders = orders;
     }
 
+    public void setCustomers(final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers) {
+        this.customers = customers;
+    }
+
+    public void setBusinessUnits(
+            final com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits) {
+        this.businessUnits = businessUnits;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -97,15 +131,24 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return new EqualsBuilder().append(products, that.products)
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
+                .append(customers, that.customers)
+                .append(businessUnits, that.businessUnits)
                 .append(products, that.products)
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
+                .append(customers, that.customers)
+                .append(businessUnits, that.businessUnits)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(products).append(productsSearch).append(orders).toHashCode();
+        return new HashCodeBuilder(17, 37).append(products)
+                .append(productsSearch)
+                .append(orders)
+                .append(customers)
+                .append(businessUnits)
+                .toHashCode();
     }
 
     @Override
@@ -113,7 +156,13 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("products", products)
                 .append("productsSearch", productsSearch)
                 .append("orders", orders)
+                .append("customers", customers)
+                .append("businessUnits", businessUnits)
                 .build();
     }
 
+    @Override
+    public SearchIndexingConfiguration copyDeep() {
+        return SearchIndexingConfiguration.deepCopy(this);
+    }
 }

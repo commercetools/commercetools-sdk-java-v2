@@ -65,7 +65,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     *  <p>User-defined identifier of the LineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Number of Line Items returned.</p>
+     *  <p>Quantity of Line Items returned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -112,8 +112,8 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @param paymentState value to be set
      * @return Builder
@@ -172,7 +172,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p><code>id</code> of the returned LineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     *  <p>User-defined identifier of the LineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -213,7 +213,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Number of Line Items returned.</p>
+     *  <p>Quantity of Line Items returned.</p>
      * @return quantity
      */
 
@@ -243,8 +243,8 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @return paymentState
      */
@@ -273,7 +273,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
 
@@ -282,7 +282,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p><code>id</code> of the returned LineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
 

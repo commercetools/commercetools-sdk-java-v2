@@ -53,6 +53,9 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     @Nullable
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      *  <p>Name of the Custom Line Item.</p>
      * @param builder function to build the name value
@@ -89,7 +92,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -112,6 +115,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -124,6 +128,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -136,6 +141,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -157,7 +163,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -171,7 +177,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -184,7 +190,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -196,7 +202,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -209,7 +215,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -221,7 +227,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -307,7 +313,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
@@ -321,6 +327,45 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Name of the Custom Line Item.</p>
      * @return name
      */
@@ -330,7 +375,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @return key
      */
 
@@ -351,6 +396,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
 
@@ -368,7 +414,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
 
@@ -378,7 +424,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 
@@ -409,7 +455,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode
@@ -421,6 +467,16 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds CustomLineItemDraft with checking for non-null required values
      * @return CustomLineItemDraft
      */
@@ -429,7 +485,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
         Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
         return new CustomLineItemDraftImpl(name, key, quantity, money, slug, taxCategory, externalTaxRate, custom,
-            shippingDetails, priceMode);
+            shippingDetails, priceMode, recurrenceInfo);
     }
 
     /**
@@ -438,7 +494,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      */
     public CustomLineItemDraft buildUnchecked() {
         return new CustomLineItemDraftImpl(name, key, quantity, money, slug, taxCategory, externalTaxRate, custom,
-            shippingDetails, priceMode);
+            shippingDetails, priceMode, recurrenceInfo);
     }
 
     /**
@@ -466,6 +522,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         builder.custom = template.getCustom();
         builder.shippingDetails = template.getShippingDetails();
         builder.priceMode = template.getPriceMode();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

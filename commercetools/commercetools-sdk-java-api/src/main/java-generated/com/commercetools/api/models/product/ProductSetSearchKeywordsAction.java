@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetSearchKeywordsAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSearchKeywords")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetSearchKeywordsActionImpl.class)
 public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
@@ -46,7 +48,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +63,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -86,6 +88,8 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetSearchKeywordsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetSearchKeywordsAction
@@ -135,8 +139,8 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetSearchKeywordsAction>";

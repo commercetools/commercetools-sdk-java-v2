@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Returns a Business Unit for a given <code>id</code>. Returns a <code>200</code> status if the Business Unit exists and the Customer has access to it, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -66,7 +66,8 @@ public class ByProjectKeyMeBusinessUnitsByIDGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/me/business-units/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/me/business-units/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

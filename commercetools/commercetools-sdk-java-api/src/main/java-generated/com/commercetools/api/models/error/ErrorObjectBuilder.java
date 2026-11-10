@@ -11,6 +11,78 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectBuilder {
 
+    public com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder missingShoppingListNameBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
     }
@@ -33,6 +105,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.BadGatewayErrorBuilder badGatewayBuilder() {
         return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
@@ -107,8 +183,36 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.ExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.ExactLockConflictErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder expiredCustomerPasswordTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {
@@ -183,6 +287,14 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.LockedFieldErrorBuilder lockedFieldBuilder() {
         return com.commercetools.api.models.error.LockedFieldErrorBuilder.of();
     }
@@ -193,6 +305,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
         return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
@@ -231,6 +347,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.OverCapacityErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {
         return com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder.of();
     }
@@ -261,6 +381,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.QueryTimedOutErrorBuilder queryTimedOutBuilder() {
         return com.commercetools.api.models.error.QueryTimedOutErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.ReferenceExistsErrorBuilder referenceExistsBuilder() {
@@ -299,6 +423,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.SearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.SearchNotReadyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.SemanticErrorErrorBuilder semanticErrorBuilder() {
         return com.commercetools.api.models.error.SemanticErrorErrorBuilder.of();
     }
@@ -313,6 +441,18 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.TooManyRequestsErrorBuilder tooManyRequestsBuilder() {
+        return com.commercetools.api.models.error.TooManyRequestsErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.UnauthorizedErrorBuilder unauthorizedBuilder() {
+        return com.commercetools.api.models.error.UnauthorizedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.ValidityLockConflictErrorBuilder.of();
     }
 
     /**

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a localizable enum to the values of AttributeLocalizedEnumType. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>Adds a localizable enum to the values of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a>. It can update an AttributeLocalizedEnumType AttributeDefinition or an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeLocalizedEnumType AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addLocalizedEnumValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeAddLocalizedEnumValueActionImpl.class)
 public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdateAction {
@@ -88,6 +90,8 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
         return instance;
     }
 
+    public ProductTypeAddLocalizedEnumValueAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeAddLocalizedEnumValueAction
      * @param template instance to be copied
@@ -139,8 +143,8 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeAddLocalizedEnumValueAction>";

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the CartDiscountValue for relative, absolute and fixed price CartDiscounts. Changing to Gift Line Item is not supported.</p>
+ *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValue" rel="nofollow">CartDiscountValue</a> for <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">relative</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueAbsolute" rel="nofollow">absolute</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueFixed" rel="nofollow">fixed price</a> CartDiscounts. Changing to <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItem" rel="nofollow">Gift Line Item</a> is not supported.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeValueActionImpl.class)
 public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction {
@@ -37,7 +39,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     String CHANGE_VALUE = "changeValue";
 
     /**
-     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +49,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     public CartDiscountValueDraft getValue();
 
     /**
-     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @param value value to be set
      */
 
@@ -70,6 +74,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public CartDiscountChangeValueAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeValueAction
@@ -118,8 +124,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeValueAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeValueAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeValueAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeValueAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeValueAction>";

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Field from a Business Unit using the Set CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitCustomFieldRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitCustomFieldRemovedMessageImpl.class)
 public interface BusinessUnitCustomFieldRemovedMessage extends Message {
@@ -85,6 +87,8 @@ public interface BusinessUnitCustomFieldRemovedMessage extends Message {
         instance.setName(template.getName());
         return instance;
     }
+
+    public BusinessUnitCustomFieldRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitCustomFieldRemovedMessage
@@ -146,8 +150,8 @@ public interface BusinessUnitCustomFieldRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomFieldRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomFieldRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCustomFieldRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCustomFieldRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCustomFieldRemovedMessage>";

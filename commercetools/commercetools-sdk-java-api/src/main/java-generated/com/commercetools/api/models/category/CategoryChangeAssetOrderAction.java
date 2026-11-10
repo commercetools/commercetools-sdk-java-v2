@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAssetOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeAssetOrderActionImpl.class)
 public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
@@ -77,6 +79,8 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
         return instance;
     }
 
+    public CategoryChangeAssetOrderAction copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryChangeAssetOrderAction
      * @param template instance to be copied
@@ -123,8 +127,8 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryChangeAssetOrderAction>";

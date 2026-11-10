@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductPriceModeEnum;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set PriceMode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceModeAction" rel="nofollow">Set PriceMode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPriceModeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceModeSetMessagePayloadImpl.class)
 public interface ProductPriceModeSetMessagePayload extends MessagePayload {
@@ -37,7 +39,7 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
     String PRODUCT_PRICE_MODE_SET = "ProductPriceModeSet";
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @return to
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
     public ProductPriceModeEnum getTo();
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @param to value to be set
      */
 
@@ -69,6 +71,8 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
         instance.setTo(template.getTo());
         return instance;
     }
+
+    public ProductPriceModeSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPriceModeSetMessagePayload
@@ -117,8 +121,8 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceModeSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceModeSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceModeSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceModeSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceModeSetMessagePayload>";

@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the Cart. Keys must be unique.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. Keys must be unique.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartClassification")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartClassificationTypeImpl.class)
 public interface CartClassificationType extends ShippingRateInputType {
@@ -39,7 +41,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @return values
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     public List<CustomFieldLocalizedEnumValue> getValues();
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param values values to be set
      */
 
@@ -56,7 +58,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     public void setValues(final CustomFieldLocalizedEnumValue... values);
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param values values to be set
      */
 
@@ -80,6 +82,8 @@ public interface CartClassificationType extends ShippingRateInputType {
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public CartClassificationType copyDeep();
 
     /**
      * factory method to create a deep copy of CartClassificationType
@@ -131,8 +135,8 @@ public interface CartClassificationType extends ShippingRateInputType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartClassificationType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartClassificationType>() {
+    public static tools.jackson.core.type.TypeReference<CartClassificationType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartClassificationType>() {
             @Override
             public String toString() {
                 return "TypeReference<CartClassificationType>";

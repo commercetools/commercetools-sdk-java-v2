@@ -39,6 +39,13 @@ public class ErrorResponseQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ErrorResponseQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> asAgentResponsesErrorResponse(
+            Function<com.commercetools.api.predicates.query.agent.AgentResponsesErrorResponseQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentResponsesErrorResponseQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentResponsesErrorResponseQueryBuilderDsl.of()),
+            ErrorResponseQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> asAuthErrorResponse(
             Function<com.commercetools.api.predicates.query.error.AuthErrorResponseQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.AuthErrorResponseQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

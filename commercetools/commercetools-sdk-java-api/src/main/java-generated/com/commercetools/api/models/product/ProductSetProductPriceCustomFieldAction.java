@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetProductPriceCustomFieldAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setProductPriceCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductPriceCustomFieldActionImpl.class)
 public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAction {
@@ -45,7 +47,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
+     *  <p>Whether only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      * @return staged
      */
 
@@ -53,7 +55,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     public Boolean getStaged();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -61,7 +63,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -76,21 +78,21 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
+     *  <p>Whether only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -117,6 +119,8 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ProductSetProductPriceCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetProductPriceCustomFieldAction
@@ -179,8 +183,8 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetProductPriceCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetProductPriceCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetProductPriceCustomFieldAction>";

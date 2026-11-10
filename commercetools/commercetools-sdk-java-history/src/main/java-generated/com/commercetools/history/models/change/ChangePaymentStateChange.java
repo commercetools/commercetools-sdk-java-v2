@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.PaymentState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change PaymentState on Orders.</li>
- *   <li>Change PaymentState on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change PaymentState</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangePaymentStateAction" rel="nofollow">Change PaymentState</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangePaymentStateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangePaymentStateChangeImpl.class)
 public interface ChangePaymentStateChange extends Change {
@@ -116,6 +118,8 @@ public interface ChangePaymentStateChange extends Change {
         return instance;
     }
 
+    public ChangePaymentStateChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangePaymentStateChange
      * @param template instance to be copied
@@ -164,8 +168,8 @@ public interface ChangePaymentStateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangePaymentStateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangePaymentStateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangePaymentStateChange>";

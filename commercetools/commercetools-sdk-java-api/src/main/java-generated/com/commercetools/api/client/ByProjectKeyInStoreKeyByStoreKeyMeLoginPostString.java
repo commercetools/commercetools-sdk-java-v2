@@ -8,22 +8,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Retrieves the authenticated Customer (that matches the given email/password pair) if they are part of a specific Store.</p>
+ *  <p>Retrieves the authenticated Customer (that matches the given email/password pair) if they are part of a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>If used with an optional <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">access token for an anonymous session</a>, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly logged-in Customer.</p>
  *  <ul>
  *   <li>If the Customer does not have a Cart, the most recently modified anonymous cart becomes the Customer's Cart.</li>
- *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to AnonymousCartSignInMode.</li>
+ *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousCartSignInMode" rel="nofollow">AnonymousCartSignInMode</a>.</li>
  *  </ul>
- *  <p>If a Cart is returned as part of CustomerSignInResult, it has been recalculated with up-to-date prices, taxes, discounts, and invalid line items removed.</p>
- *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
+ *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -72,7 +72,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/login", this.projectKey, this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/login", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

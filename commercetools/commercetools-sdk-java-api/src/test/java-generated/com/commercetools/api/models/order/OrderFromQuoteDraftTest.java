@@ -1,42 +1,38 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderFromQuoteDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderFromQuoteDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderFromQuoteDraftBuilder builder) {
         OrderFromQuoteDraft orderFromQuoteDraft = builder.buildUnchecked();
         Assertions.assertThat(orderFromQuoteDraft).isInstanceOf(OrderFromQuoteDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderFromQuoteDraft.builder()
-                        .quote(new com.commercetools.api.models.quote.QuoteResourceIdentifierImpl()) },
-                new Object[] { OrderFromQuoteDraft.builder().version(2L) },
-                new Object[] { OrderFromQuoteDraft.builder().quoteStateToAccepted(true) },
-                new Object[] { OrderFromQuoteDraft.builder().orderNumber("orderNumber") },
-                new Object[] { OrderFromQuoteDraft.builder()
-                        .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { OrderFromQuoteDraft.builder()
-                        .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
-                new Object[] { OrderFromQuoteDraft.builder()
-                        .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
-                new Object[] { OrderFromQuoteDraft.builder()
+                new Object[] { "quote",
+                        OrderFromQuoteDraft.builder()
+                                .quote(new com.commercetools.api.models.quote.QuoteResourceIdentifierImpl()) },
+                new Object[] { "version", OrderFromQuoteDraft.builder().version(2L) },
+                new Object[] { "quoteStateToAccepted", OrderFromQuoteDraft.builder().quoteStateToAccepted(true) },
+                new Object[] { "orderNumber", OrderFromQuoteDraft.builder().orderNumber("orderNumber") },
+                new Object[] { "paymentState",
+                        OrderFromQuoteDraft.builder()
+                                .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
+                new Object[] { "shipmentState",
+                        OrderFromQuoteDraft.builder()
+                                .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
+                new Object[] { "orderState",
+                        OrderFromQuoteDraft.builder()
+                                .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
+                new Object[] { "state", OrderFromQuoteDraft.builder()
                         .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) } };
     }
 

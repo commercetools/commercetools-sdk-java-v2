@@ -1,0 +1,136 @@
+
+package com.commercetools.api.models.variant;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>Moves a Variant's image to a new position.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class VariantMoveImageToPositionActionImpl implements VariantMoveImageToPositionAction, ModelBase {
+
+    private String action;
+
+    private String imageUrl;
+
+    private Long position;
+
+    private Boolean staged;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    VariantMoveImageToPositionActionImpl(@JsonProperty("imageUrl") final String imageUrl,
+            @JsonProperty("position") final Long position, @JsonProperty("staged") final Boolean staged) {
+        this.imageUrl = imageUrl;
+        this.position = position;
+        this.staged = staged;
+        this.action = MOVE_IMAGE_TO_POSITION;
+    }
+
+    /**
+     * create empty instance
+     */
+    public VariantMoveImageToPositionActionImpl() {
+        this.action = MOVE_IMAGE_TO_POSITION;
+    }
+
+    /**
+     *
+     */
+
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     *  <p>The URL of the image to update.</p>
+     */
+
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+
+    /**
+     *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
+     */
+
+    public Long getPosition() {
+        return this.position;
+    }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
+    public void setImageUrl(final String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setPosition(final Long position) {
+        this.position = position;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        VariantMoveImageToPositionActionImpl that = (VariantMoveImageToPositionActionImpl) o;
+
+        return new EqualsBuilder().append(action, that.action)
+                .append(imageUrl, that.imageUrl)
+                .append(position, that.position)
+                .append(staged, that.staged)
+                .append(action, that.action)
+                .append(imageUrl, that.imageUrl)
+                .append(position, that.position)
+                .append(staged, that.staged)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(action).append(imageUrl).append(position).append(staged).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("imageUrl", imageUrl)
+                .append("position", position)
+                .append("staged", staged)
+                .build();
+    }
+
+    @Override
+    public VariantMoveImageToPositionAction copyDeep() {
+        return VariantMoveImageToPositionAction.deepCopy(this);
+    }
+}

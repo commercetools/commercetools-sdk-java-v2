@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of numbers.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("number-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface NumberSetAttribute extends Attribute {
     String NUMBER_SET = "number-set";
 
     /**
-     *
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface NumberSetAttribute extends Attribute {
     public List<Double> getValue();
 
     /**
-     * set value
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @param value values to be set
      */
 
@@ -52,7 +54,7 @@ public interface NumberSetAttribute extends Attribute {
     public void setValue(final Double... value);
 
     /**
-     * set value
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface NumberSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public NumberSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of NumberSetAttribute
@@ -125,8 +129,8 @@ public interface NumberSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<NumberSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<NumberSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<NumberSetAttribute>";

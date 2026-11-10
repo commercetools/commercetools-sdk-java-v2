@@ -7,18 +7,20 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.variant.VariantReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains all the data of a Product and its Product Variants.</p>
+ * ProductData
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +52,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getName();
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @return categories
      */
     @NotNull
@@ -74,7 +77,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
     @NotNull
@@ -83,7 +86,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -91,7 +94,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -108,6 +111,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return masterVariant
      */
     @NotNull
@@ -117,6 +121,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return variants
      */
     @NotNull
@@ -125,13 +130,30 @@ public interface ProductData extends ProductDataLike {
     public List<ProductVariant> getVariants();
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @NotNull
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @return attributes
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @return defaultVariant
+     */
+    @Valid
+    @JsonProperty("defaultVariant")
+    public VariantReference getDefaultVariant();
 
     /**
      *  <p>Name of the Product.</p>
@@ -141,7 +163,7 @@ public interface ProductData extends ProductDataLike {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories values to be set
      */
 
@@ -149,7 +171,7 @@ public interface ProductData extends ProductDataLike {
     public void setCategories(final CategoryReference... categories);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories values to be set
      */
 
@@ -170,21 +192,21 @@ public interface ProductData extends ProductDataLike {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      */
 
@@ -199,6 +221,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param masterVariant value to be set
      */
 
@@ -206,6 +229,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants values to be set
      */
 
@@ -214,17 +238,40 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants values to be set
      */
 
     public void setVariants(final List<ProductVariant> variants);
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @param defaultVariant value to be set
+     */
+
+    public void setDefaultVariant(final VariantReference defaultVariant);
 
     /**
      * factory method
@@ -252,8 +299,12 @@ public interface ProductData extends ProductDataLike {
         instance.setMasterVariant(template.getMasterVariant());
         instance.setVariants(template.getVariants());
         instance.setSearchKeywords(template.getSearchKeywords());
+        instance.setAttributes(template.getAttributes());
+        instance.setDefaultVariant(template.getDefaultVariant());
         return instance;
     }
+
+    public ProductData copyDeep();
 
     /**
      * factory method to create a deep copy of ProductData
@@ -291,6 +342,13 @@ public interface ProductData extends ProductDataLike {
                 .orElse(null));
         instance.setSearchKeywords(
             com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDefaultVariant(
+            com.commercetools.api.models.variant.VariantReference.deepCopy(template.getDefaultVariant()));
         return instance;
     }
 
@@ -325,8 +383,8 @@ public interface ProductData extends ProductDataLike {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductData>() {
+    public static tools.jackson.core.type.TypeReference<ProductData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductData>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductData>";

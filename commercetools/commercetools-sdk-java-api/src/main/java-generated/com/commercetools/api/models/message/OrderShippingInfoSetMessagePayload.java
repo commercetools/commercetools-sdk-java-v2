@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ShippingInfo;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set ShippingMethod and Set Custom ShippingMethod update actions.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set ShippingMethod</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom ShippingMethod</a> update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderShippingInfoSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
 public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload {
@@ -36,7 +38,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return shippingInfo
      */
     @Valid
@@ -44,7 +46,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return oldShippingInfo
      */
     @Valid
@@ -52,14 +54,14 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public ShippingInfo getOldShippingInfo();
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param shippingInfo value to be set
      */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param oldShippingInfo value to be set
      */
 
@@ -84,6 +86,8 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
         instance.setOldShippingInfo(template.getOldShippingInfo());
         return instance;
     }
+
+    public OrderShippingInfoSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderShippingInfoSetMessagePayload
@@ -134,8 +138,8 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderShippingInfoSetMessagePayload>";

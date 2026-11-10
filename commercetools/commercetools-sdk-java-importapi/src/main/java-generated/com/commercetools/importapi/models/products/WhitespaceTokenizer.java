@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * WhitespaceTokenizer
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("whitespace")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = WhitespaceTokenizerImpl.class)
 public interface WhitespaceTokenizer extends SuggestTokenizer {
@@ -50,6 +52,8 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
         WhitespaceTokenizerImpl instance = new WhitespaceTokenizerImpl();
         return instance;
     }
+
+    public WhitespaceTokenizer copyDeep();
 
     /**
      * factory method to create a deep copy of WhitespaceTokenizer
@@ -96,8 +100,8 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer>() {
+    public static tools.jackson.core.type.TypeReference<WhitespaceTokenizer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<WhitespaceTokenizer>() {
             @Override
             public String toString() {
                 return "TypeReference<WhitespaceTokenizer>";

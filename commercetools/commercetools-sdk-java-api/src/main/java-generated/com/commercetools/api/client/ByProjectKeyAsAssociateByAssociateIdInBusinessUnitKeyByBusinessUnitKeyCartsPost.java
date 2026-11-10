@@ -11,16 +11,30 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creates a Cart in the BusinessUnit referenced by <code>businessUnitKey</code>. As such, the <code>businessUnit</code> field on CartDraft is ignored for this request. Creating a Cart can fail with an InvalidOperation if the referenced ShippingMethod in the CartDraft has a predicate that does not match the Cart.</p>
+ *  <p>Creates a Cart in the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> referenced by <code>businessUnitKey</code>. As such, the <code>businessUnit</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> is ignored for this request.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *    </ul></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -78,8 +92,8 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/carts", this.projectKey,
-            this.associateId, this.businessUnitKey);
+        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/carts",
+            encodePathParam(this.projectKey), encodePathParam(this.associateId), encodePathParam(this.businessUnitKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

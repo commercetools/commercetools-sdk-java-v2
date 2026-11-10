@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchRequest
@@ -32,6 +33,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
 
     private Boolean markMatchingVariants;
 
+    @Deprecated
     private com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters;
 
     private java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets;
@@ -66,7 +68,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      */
 
     public com.commercetools.api.models.search.SearchQuery getQuery() {
@@ -74,7 +76,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.search.SearchSorting> getSort() {
@@ -82,7 +84,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      */
 
     public Integer getLimit() {
@@ -90,7 +92,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      */
 
     public Integer getOffset() {
@@ -98,7 +100,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      */
 
     public Boolean getMarkMatchingVariants() {
@@ -106,15 +108,15 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_search.ProductSearchProjectionParams getProductProjectionParameters() {
         return this.productProjectionParameters;
     }
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> getFacets() {
@@ -153,6 +155,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
         this.markMatchingVariants = markMatchingVariants;
     }
 
+    @Deprecated
     public void setProductProjectionParameters(
             final com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters) {
         this.productProjectionParameters = productProjectionParameters;
@@ -226,4 +229,8 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductSearchRequest copyDeep() {
+        return ProductSearchRequest.deepCopy(this);
+    }
 }

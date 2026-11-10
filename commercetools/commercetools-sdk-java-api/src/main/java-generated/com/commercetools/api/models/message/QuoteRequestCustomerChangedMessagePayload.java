@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Customer update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeCustomerAction" rel="nofollow">Change Customer</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestCustomerChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestCustomerChangedMessagePayloadImpl.class)
 public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayload {
@@ -39,7 +41,7 @@ public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayloa
     String QUOTE_REQUEST_CUSTOMER_CHANGED = "QuoteRequestCustomerChanged";
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @return customer
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayloa
     public CustomerReference getCustomer();
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @return previousCustomer
      */
     @NotNull
@@ -57,14 +59,14 @@ public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayloa
     public CustomerReference getPreviousCustomer();
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param previousCustomer value to be set
      */
 
@@ -90,6 +92,8 @@ public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayloa
         instance.setPreviousCustomer(template.getPreviousCustomer());
         return instance;
     }
+
+    public QuoteRequestCustomerChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestCustomerChangedMessagePayload
@@ -142,8 +146,8 @@ public interface QuoteRequestCustomerChangedMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCustomerChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCustomerChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestCustomerChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestCustomerChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestCustomerChangedMessagePayload>";

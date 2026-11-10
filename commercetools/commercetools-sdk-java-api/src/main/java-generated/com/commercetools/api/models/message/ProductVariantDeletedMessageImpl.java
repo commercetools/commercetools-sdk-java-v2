@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove ProductVariant update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove ProductVariant</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMessage, ModelBase {
@@ -48,6 +49,8 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
 
     private java.util.List<String> removedImageUrls;
 
+    private Boolean staged;
+
     /**
      * create instance with all properties
      */
@@ -62,7 +65,8 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
-            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
+            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls,
+            @JsonProperty("staged") final Boolean staged) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -75,6 +79,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.variant = variant;
         this.removedImageUrls = removedImageUrls;
+        this.staged = staged;
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
@@ -142,7 +147,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +163,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +179,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -182,11 +187,19 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
+    }
+
+    /**
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     public void setId(final String id) {
@@ -242,6 +255,10 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.removedImageUrls = removedImageUrls;
     }
 
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -265,6 +282,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -278,6 +296,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
@@ -296,6 +315,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers)
                 .append(variant)
                 .append(removedImageUrls)
+                .append(staged)
                 .toHashCode();
     }
 
@@ -314,7 +334,12 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("variant", variant)
                 .append("removedImageUrls", removedImageUrls)
+                .append("staged", staged)
                 .build();
     }
 
+    @Override
+    public ProductVariantDeletedMessage copyDeep() {
+        return ProductVariantDeletedMessage.deepCopy(this);
+    }
 }

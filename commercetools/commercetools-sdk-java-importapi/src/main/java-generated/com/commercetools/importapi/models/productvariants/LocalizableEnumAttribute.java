@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a localized enum. The attribute value refers to the key of the enum value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("lenum")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     String LENUM = "lenum";
 
     /**
-     *
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public String getValue();
 
     /**
-     * set value
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface LocalizableEnumAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizableEnumAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizableEnumAttribute
@@ -117,8 +121,8 @@ public interface LocalizableEnumAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
+    public static tools.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizableEnumAttribute>";

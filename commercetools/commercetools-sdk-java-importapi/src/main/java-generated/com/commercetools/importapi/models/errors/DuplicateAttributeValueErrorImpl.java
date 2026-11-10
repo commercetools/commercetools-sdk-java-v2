@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The <code>Unique</code> AttributeConstraintEnum was violated.</p>
+ *  <p>The <code>Unique</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">AttributeConstraintEnum</a> was violated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError, ModelBase {
@@ -47,7 +48,7 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -55,7 +56,7 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {
@@ -110,4 +111,8 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
                 .build();
     }
 
+    @Override
+    public DuplicateAttributeValueError copyDeep() {
+        return DuplicateAttributeValueError.deepCopy(this);
+    }
 }

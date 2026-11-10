@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxCategoryAddTaxRateAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryAddTaxRateActionImpl.class)
 public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
@@ -70,6 +72,8 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public TaxCategoryAddTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryAddTaxRateAction
@@ -117,8 +121,8 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategoryAddTaxRateAction>";

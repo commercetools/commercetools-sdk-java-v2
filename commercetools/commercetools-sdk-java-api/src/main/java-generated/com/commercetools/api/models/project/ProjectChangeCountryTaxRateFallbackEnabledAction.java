@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeCountryTaxRateFallbackEnabledAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCountryTaxRateFallbackEnabled")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class)
 public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends ProjectUpdateAction {
@@ -36,7 +38,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     String CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED = "changeCountryTaxRateFallbackEnabled";
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return countryTaxRateFallbackEnabled
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     public Boolean getCountryTaxRateFallbackEnabled();
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param countryTaxRateFallbackEnabled value to be set
      */
 
@@ -69,6 +71,8 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;
     }
+
+    public ProjectChangeCountryTaxRateFallbackEnabledAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCountryTaxRateFallbackEnabledAction
@@ -119,8 +123,8 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>";

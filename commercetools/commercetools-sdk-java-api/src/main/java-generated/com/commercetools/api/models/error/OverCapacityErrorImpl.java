@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the service is having trouble handling the load.</p>
@@ -34,7 +36,7 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
      */
     @JsonCreator
     OverCapacityErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = OVER_CAPACITY;
@@ -114,4 +116,8 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
                 .build();
     }
 
+    @Override
+    public OverCapacityError copyDeep() {
+        return OverCapacityError.deepCopy(this);
+    }
 }

@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.order_edit.OrderEditApplied;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">applying an OrderEdit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderEditApplied")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAppliedMessagePayloadImpl.class)
 public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
@@ -40,7 +42,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @return edit
      */
     @NotNull
@@ -49,7 +51,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public OrderEdit getEdit();
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return result
      */
     @NotNull
@@ -58,14 +60,14 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public OrderEditApplied getResult();
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param edit value to be set
      */
 
     public void setEdit(final OrderEdit edit);
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param result value to be set
      */
 
@@ -90,6 +92,8 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public OrderEditAppliedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditAppliedMessagePayload
@@ -138,8 +142,8 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditAppliedMessagePayload>";

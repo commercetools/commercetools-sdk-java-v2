@@ -11,61 +11,94 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This data type represents the supported resource types. The value must be one of the following:</p>
+ *  <p>Value of resource types supported in Change History.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ChangeHistoryResourceType extends JsonEnum {
 
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeHistoryResourceType ASSOCIATE_ROLE = ChangeHistoryResourceTypeEnum.ASSOCIATE_ROLE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeHistoryResourceType BUSINESS_UNIT = ChangeHistoryResourceTypeEnum.BUSINESS_UNIT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a></p> */
     ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a></p> */
     ChangeHistoryResourceType CATEGORY = ChangeHistoryResourceTypeEnum.CATEGORY;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a></p> */
     ChangeHistoryResourceType CHANNEL = ChangeHistoryResourceTypeEnum.CHANNEL;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a></p> */
     ChangeHistoryResourceType CUSTOMER = ChangeHistoryResourceTypeEnum.CUSTOMER;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a></p> */
     ChangeHistoryResourceType CUSTOMER_GROUP = ChangeHistoryResourceTypeEnum.CUSTOMER_GROUP;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a></p> */
     ChangeHistoryResourceType DISCOUNT_CODE = ChangeHistoryResourceTypeEnum.DISCOUNT_CODE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a></p> */
     ChangeHistoryResourceType INVENTORY_ENTRY = ChangeHistoryResourceTypeEnum.INVENTORY_ENTRY;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a></p> */
     ChangeHistoryResourceType KEY_VALUE_DOCUMENT = ChangeHistoryResourceTypeEnum.KEY_VALUE_DOCUMENT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a></p> */
     ChangeHistoryResourceType ORDER = ChangeHistoryResourceTypeEnum.ORDER;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
     ChangeHistoryResourceType PAYMENT = ChangeHistoryResourceTypeEnum.PAYMENT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a></p> */
     ChangeHistoryResourceType PRODUCT = ChangeHistoryResourceTypeEnum.PRODUCT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a></p> */
     ChangeHistoryResourceType PRODUCT_DISCOUNT = ChangeHistoryResourceTypeEnum.PRODUCT_DISCOUNT;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a></p> */
     ChangeHistoryResourceType PRODUCT_SELECTION = ChangeHistoryResourceTypeEnum.PRODUCT_SELECTION;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a></p> */
     ChangeHistoryResourceType PRODUCT_TYPE = ChangeHistoryResourceTypeEnum.PRODUCT_TYPE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a></p> */
     ChangeHistoryResourceType QUOTE_REQUEST = ChangeHistoryResourceTypeEnum.QUOTE_REQUEST;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a></p> */
     ChangeHistoryResourceType QUOTE = ChangeHistoryResourceTypeEnum.QUOTE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a></p> */
     ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a></p> */
+    ChangeHistoryResourceType SHIPPING_METHOD = ChangeHistoryResourceTypeEnum.SHIPPING_METHOD;
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a></p> */
     ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a></p> */
     ChangeHistoryResourceType STAGED_QUOTE = ChangeHistoryResourceTypeEnum.STAGED_QUOTE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a></p> */
+    ChangeHistoryResourceType STANDALONE_PRICE = ChangeHistoryResourceTypeEnum.STANDALONE_PRICE;
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a></p> */
     ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a></p> */
     ChangeHistoryResourceType STORE = ChangeHistoryResourceTypeEnum.STORE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a></p> */
     ChangeHistoryResourceType TAX_CATEGORY = ChangeHistoryResourceTypeEnum.TAX_CATEGORY;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a></p> */
     ChangeHistoryResourceType TYPE = ChangeHistoryResourceTypeEnum.TYPE;
-
+    /**
+    <p>for <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a></p> */
     ChangeHistoryResourceType ZONE = ChangeHistoryResourceTypeEnum.ZONE;
 
     /**
@@ -168,6 +201,11 @@ public interface ChangeHistoryResourceType extends JsonEnum {
         REVIEW("review"),
 
         /**
+         * shipping-method
+         */
+        SHIPPING_METHOD("shipping-method"),
+
+        /**
          * shopping-list
          */
         SHOPPING_LIST("shopping-list"),
@@ -176,6 +214,11 @@ public interface ChangeHistoryResourceType extends JsonEnum {
          * staged-quote
          */
         STAGED_QUOTE("staged-quote"),
+
+        /**
+         * standalone-price
+         */
+        STANDALONE_PRICE("standalone-price"),
 
         /**
          * state

@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Retrieves an Order with the provided <code>orderNumber</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -72,8 +72,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet e
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/orders/order-number=%s", this.projectKey,
-            this.storeKey, this.orderNumber);
+        String httpRequestPath = String.format("%s/in-store/key=%s/orders/order-number=%s",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.orderNumber));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

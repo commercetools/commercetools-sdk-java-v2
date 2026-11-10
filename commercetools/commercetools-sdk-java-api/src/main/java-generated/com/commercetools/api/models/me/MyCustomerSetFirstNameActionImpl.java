@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the first name of the Customer produces the CustomerFirstNameSet Message.</p>
+ *  <p>Setting the first name of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerFirstNameSetMessage" rel="nofollow">CustomerFirstNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetFirstNameActionImpl implements MyCustomerSetFirstNameAction, ModelBase {
@@ -51,7 +52,7 @@ public class MyCustomerSetFirstNameActionImpl implements MyCustomerSetFirstNameA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public String getFirstName() {
@@ -91,4 +92,8 @@ public class MyCustomerSetFirstNameActionImpl implements MyCustomerSetFirstNameA
                 .build();
     }
 
+    @Override
+    public MyCustomerSetFirstNameAction copyDeep() {
+        return MyCustomerSetFirstNameAction.deepCopy(this);
+    }
 }

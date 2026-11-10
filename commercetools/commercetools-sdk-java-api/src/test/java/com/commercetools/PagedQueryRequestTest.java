@@ -4,33 +4,26 @@ package com.commercetools;
 import java.util.Collections;
 
 import com.commercetools.api.client.*;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PagedQueryRequestTest {
 
     private final static ApiRoot apiRoot = ApiRoot.of();
 
-    @TestTemplate
-    @UseDataProvider("requestWithMethodParameters")
+    @ParameterizedTest
+    @MethodSource("requestWithMethodParameters")
     public void defaultMethods(ApiHttpRequest request, String httpMethod, String uri) {
         Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
         Assertions.assertThat(request.getUri().toString()).isEqualTo(uri);
     }
 
-    @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")

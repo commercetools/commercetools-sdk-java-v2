@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountChangeCartPredicateAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCartPredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
@@ -68,6 +70,8 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
+
+    public CartDiscountChangeCartPredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeCartPredicateAction
@@ -117,8 +121,8 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeCartPredicateAction>";

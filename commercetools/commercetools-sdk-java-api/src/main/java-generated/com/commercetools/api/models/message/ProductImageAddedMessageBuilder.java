@@ -190,7 +190,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      * @return Builder
      */
@@ -309,7 +309,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -385,7 +385,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -413,7 +413,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @return variantId
      */
 
@@ -422,7 +422,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
 
@@ -431,7 +431,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

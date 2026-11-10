@@ -26,7 +26,7 @@ public class StandalonePriceSetValidFromActionBuilder implements Builder<Standal
     private java.time.ZonedDateTime validFrom;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StandalonePriceSetValidFromActionBuilder implements Builder<Standal
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 

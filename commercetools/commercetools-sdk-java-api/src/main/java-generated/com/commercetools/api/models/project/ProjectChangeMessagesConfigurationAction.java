@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.message.MessagesConfigurationDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeMessagesConfigurationAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeMessagesConfiguration")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
@@ -38,7 +40,7 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @return messagesConfiguration
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     public MessagesConfigurationDraft getMessagesConfiguration();
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @param messagesConfiguration value to be set
      */
 
@@ -71,6 +73,8 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
         instance.setMessagesConfiguration(template.getMessagesConfiguration());
         return instance;
     }
+
+    public ProjectChangeMessagesConfigurationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeMessagesConfigurationAction
@@ -122,8 +126,8 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeMessagesConfigurationAction>";

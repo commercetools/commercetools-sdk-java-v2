@@ -1,42 +1,37 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.time.ZonedDateTime;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SyncInfoTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SyncInfoBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SyncInfoBuilder builder) {
         SyncInfo syncInfo = builder.buildUnchecked();
         Assertions.assertThat(syncInfo).isInstanceOf(SyncInfo.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
-                        SyncInfo.builder().channel(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SyncInfo.builder().externalId("externalId") },
-                new Object[] { SyncInfo.builder().syncedAt("syncedAt") } };
+                new Object[] { "channel",
+                        SyncInfo.builder()
+                                .channel(new com.commercetools.history.models.common.ChannelReferenceImpl()) },
+                new Object[] { "externalId", SyncInfo.builder().externalId("externalId") },
+                new Object[] { "syncedAt", SyncInfo.builder().syncedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
     public void channel() {
         SyncInfo value = SyncInfo.of();
-        value.setChannel(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setChannel(new com.commercetools.history.models.common.ChannelReferenceImpl());
         Assertions.assertThat(value.getChannel())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.ChannelReferenceImpl());
     }
 
     @Test
@@ -49,7 +44,7 @@ public class SyncInfoTest {
     @Test
     public void syncedAt() {
         SyncInfo value = SyncInfo.of();
-        value.setSyncedAt("syncedAt");
-        Assertions.assertThat(value.getSyncedAt()).isEqualTo("syncedAt");
+        value.setSyncedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getSyncedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 }

@@ -6,104 +6,28 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents a single error. Multiple errors may be included in an ErrorResponse.</p>
+ *  <p>Represents a single error. Multiple errors may be included in an <a href="https://docs.commercetools.com/apis/ctp:api:type:ErrorResponse" rel="nofollow">ErrorResponse</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ErrorObject errorObject = ErrorObject.anonymousIdAlreadyInUseBuilder()
+ *     ErrorObject errorObject = ErrorObject.businessUnitAmbiguousBuilder()
  *             message("{message}")
  *
  *             .build()
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AssociateMissingPermissionErrorImpl.class, name = AssociateMissingPermissionError.ASSOCIATE_MISSING_PERMISSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ContentTooLargeErrorImpl.class, name = ContentTooLargeError.CONTENT_TOO_LARGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorImpl.class, name = CountryNotConfiguredInStoreError.COUNTRY_NOT_CONFIGURED_IN_STORE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateEnumValuesErrorImpl.class, name = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceKeyErrorImpl.class, name = DuplicatePriceKeyError.DUPLICATE_PRICE_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorImpl.class, name = DuplicateStandalonePriceScopeError.DUPLICATE_STANDALONE_PRICE_SCOPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EditPreviewFailedErrorImpl.class, name = EditPreviewFailedError.EDIT_PREVIEW_FAILED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl.class, name = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyDoesNotExistErrorImpl.class, name = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = EnumValueIsUsedError.ENUM_VALUE_IS_USED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorImpl.class, name = ExtensionPredicateEvaluationFailedError.EXTENSION_PREDICATE_EVALUATION_FAILED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GeneralErrorImpl.class, name = GeneralError.GENERAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InternalConstraintViolatedErrorImpl.class, name = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCurrentPasswordErrorImpl.class, name = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidInputErrorImpl.class, name = InvalidInputError.INVALID_INPUT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl.class, name = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidJsonInputErrorImpl.class, name = InvalidJsonInputError.INVALID_JSON_INPUT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = InvalidOperationError.INVALID_OPERATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LockedFieldErrorImpl.class, name = LockedFieldError.LOCKED_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxCartDiscountsReachedErrorImpl.class, name = MaxCartDiscountsReachedError.MAX_CART_DISCOUNTS_REACHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxStoreReferencesReachedErrorImpl.class, name = MaxStoreReferencesReachedError.MAX_STORE_REFERENCES_REACHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MoneyOverflowErrorImpl.class, name = MoneyOverflowError.MONEY_OVERFLOW),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorImpl.class, name = OverlappingStandalonePriceValidityError.OVERLAPPING_STANDALONE_PRICE_VALIDITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProductAssignmentMissingErrorImpl.class, name = ProductAssignmentMissingError.PRODUCT_ASSIGNMENT_MISSING),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorImpl.class, name = ProductPresentWithDifferentVariantSelectionError.PRODUCT_PRESENT_WITH_DIFFERENT_VARIANT_SELECTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = ReferenceExistsError.REFERENCE_EXISTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceSizeLimitExceededErrorImpl.class, name = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchDeactivatedErrorImpl.class, name = SearchDeactivatedError.SEARCH_DEACTIVATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorImpl.class, name = StoreCartDiscountsLimitReachedError.STORE_CART_DISCOUNTS_LIMIT_REACHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = ErrorObjectImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -149,6 +73,8 @@ public interface ErrorObject {
     @JsonAnySetter
     public void setValue(String key, Object value);
 
+    public ErrorObject copyDeep();
+
     /**
      * factory method to create a deep copy of ErrorObject
      * @param template instance to be copied
@@ -159,314 +85,158 @@ public interface ErrorObject {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) {
-            return com.commercetools.api.models.error.AnonymousIdAlreadyInUseError
-                    .deepCopy((com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AssociateMissingPermissionError) {
-            return com.commercetools.api.models.error.AssociateMissingPermissionError
-                    .deepCopy((com.commercetools.api.models.error.AssociateMissingPermissionError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) {
-            return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError
-                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) {
-            return com.commercetools.api.models.error.AttributeDefinitionTypeConflictError
-                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AttributeNameDoesNotExistError) {
-            return com.commercetools.api.models.error.AttributeNameDoesNotExistError
-                    .deepCopy((com.commercetools.api.models.error.AttributeNameDoesNotExistError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.BadGatewayError) {
-            return com.commercetools.api.models.error.BadGatewayError
-                    .deepCopy((com.commercetools.api.models.error.BadGatewayError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ConcurrentModificationError) {
-            return com.commercetools.api.models.error.ConcurrentModificationError
-                    .deepCopy((com.commercetools.api.models.error.ConcurrentModificationError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ContentTooLargeError) {
-            return com.commercetools.api.models.error.ContentTooLargeError
-                    .deepCopy((com.commercetools.api.models.error.ContentTooLargeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.CountryNotConfiguredInStoreError) {
-            return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
-                    .deepCopy((com.commercetools.api.models.error.CountryNotConfiguredInStoreError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DiscountCodeNonApplicableError) {
-            return com.commercetools.api.models.error.DiscountCodeNonApplicableError
-                    .deepCopy((com.commercetools.api.models.error.DiscountCodeNonApplicableError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValueError) {
-            return com.commercetools.api.models.error.DuplicateAttributeValueError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValueError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValuesError) {
-            return com.commercetools.api.models.error.DuplicateAttributeValuesError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateEnumValuesError) {
-            return com.commercetools.api.models.error.DuplicateEnumValuesError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateEnumValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateFieldError) {
-            return com.commercetools.api.models.error.DuplicateFieldError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) {
-            return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicatePriceKeyError) {
-            return com.commercetools.api.models.error.DuplicatePriceKeyError
-                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceKeyError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicatePriceScopeError) {
-            return com.commercetools.api.models.error.DuplicatePriceScopeError
-                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) {
-            return com.commercetools.api.models.error.DuplicateStandalonePriceScopeError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateVariantValuesError) {
-            return com.commercetools.api.models.error.DuplicateVariantValuesError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateVariantValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EditPreviewFailedError) {
-            return com.commercetools.api.models.error.EditPreviewFailedError
-                    .deepCopy((com.commercetools.api.models.error.EditPreviewFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumKeyAlreadyExistsError) {
-            return com.commercetools.api.models.error.EnumKeyAlreadyExistsError
-                    .deepCopy((com.commercetools.api.models.error.EnumKeyAlreadyExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumKeyDoesNotExistError) {
-            return com.commercetools.api.models.error.EnumKeyDoesNotExistError
-                    .deepCopy((com.commercetools.api.models.error.EnumKeyDoesNotExistError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumValueIsUsedError) {
-            return com.commercetools.api.models.error.EnumValueIsUsedError
-                    .deepCopy((com.commercetools.api.models.error.EnumValueIsUsedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumValuesMustMatchError) {
-            return com.commercetools.api.models.error.EnumValuesMustMatchError
-                    .deepCopy((com.commercetools.api.models.error.EnumValuesMustMatchError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ExtensionBadResponseError) {
-            return com.commercetools.api.models.error.ExtensionBadResponseError
-                    .deepCopy((com.commercetools.api.models.error.ExtensionBadResponseError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ExtensionNoResponseError) {
-            return com.commercetools.api.models.error.ExtensionNoResponseError
-                    .deepCopy((com.commercetools.api.models.error.ExtensionNoResponseError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError) {
-            return com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError
-                    .deepCopy((com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ExtensionUpdateActionsFailedError) {
-            return com.commercetools.api.models.error.ExtensionUpdateActionsFailedError
-                    .deepCopy((com.commercetools.api.models.error.ExtensionUpdateActionsFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ExternalOAuthFailedError) {
-            return com.commercetools.api.models.error.ExternalOAuthFailedError
-                    .deepCopy((com.commercetools.api.models.error.ExternalOAuthFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.FeatureRemovedError) {
-            return com.commercetools.api.models.error.FeatureRemovedError
-                    .deepCopy((com.commercetools.api.models.error.FeatureRemovedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GeneralError) {
-            return com.commercetools.api.models.error.GeneralError
-                    .deepCopy((com.commercetools.api.models.error.GeneralError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InsufficientScopeError) {
-            return com.commercetools.api.models.error.InsufficientScopeError
-                    .deepCopy((com.commercetools.api.models.error.InsufficientScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InternalConstraintViolatedError) {
-            return com.commercetools.api.models.error.InternalConstraintViolatedError
-                    .deepCopy((com.commercetools.api.models.error.InternalConstraintViolatedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidCredentialsError) {
-            return com.commercetools.api.models.error.InvalidCredentialsError
-                    .deepCopy((com.commercetools.api.models.error.InvalidCredentialsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidCurrentPasswordError) {
-            return com.commercetools.api.models.error.InvalidCurrentPasswordError
-                    .deepCopy((com.commercetools.api.models.error.InvalidCurrentPasswordError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidFieldError) {
-            return com.commercetools.api.models.error.InvalidFieldError
-                    .deepCopy((com.commercetools.api.models.error.InvalidFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidInputError) {
-            return com.commercetools.api.models.error.InvalidInputError
-                    .deepCopy((com.commercetools.api.models.error.InvalidInputError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidItemShippingDetailsError) {
-            return com.commercetools.api.models.error.InvalidItemShippingDetailsError
-                    .deepCopy((com.commercetools.api.models.error.InvalidItemShippingDetailsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidJsonInputError) {
-            return com.commercetools.api.models.error.InvalidJsonInputError
-                    .deepCopy((com.commercetools.api.models.error.InvalidJsonInputError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidOperationError) {
-            return com.commercetools.api.models.error.InvalidOperationError
-                    .deepCopy((com.commercetools.api.models.error.InvalidOperationError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidSubjectError) {
-            return com.commercetools.api.models.error.InvalidSubjectError
-                    .deepCopy((com.commercetools.api.models.error.InvalidSubjectError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.InvalidTokenError) {
-            return com.commercetools.api.models.error.InvalidTokenError
-                    .deepCopy((com.commercetools.api.models.error.InvalidTokenError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.LanguageUsedInStoresError) {
-            return com.commercetools.api.models.error.LanguageUsedInStoresError
-                    .deepCopy((com.commercetools.api.models.error.LanguageUsedInStoresError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.LockedFieldError) {
-            return com.commercetools.api.models.error.LockedFieldError
-                    .deepCopy((com.commercetools.api.models.error.LockedFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MatchingPriceNotFoundError) {
-            return com.commercetools.api.models.error.MatchingPriceNotFoundError
-                    .deepCopy((com.commercetools.api.models.error.MatchingPriceNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MaxCartDiscountsReachedError) {
-            return com.commercetools.api.models.error.MaxCartDiscountsReachedError
-                    .deepCopy((com.commercetools.api.models.error.MaxCartDiscountsReachedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MaxResourceLimitExceededError) {
-            return com.commercetools.api.models.error.MaxResourceLimitExceededError
-                    .deepCopy((com.commercetools.api.models.error.MaxResourceLimitExceededError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MaxStoreReferencesReachedError) {
-            return com.commercetools.api.models.error.MaxStoreReferencesReachedError
-                    .deepCopy((com.commercetools.api.models.error.MaxStoreReferencesReachedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MissingRoleOnChannelError) {
-            return com.commercetools.api.models.error.MissingRoleOnChannelError
-                    .deepCopy((com.commercetools.api.models.error.MissingRoleOnChannelError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MissingTaxRateForCountryError) {
-            return com.commercetools.api.models.error.MissingTaxRateForCountryError
-                    .deepCopy((com.commercetools.api.models.error.MissingTaxRateForCountryError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.MoneyOverflowError) {
-            return com.commercetools.api.models.error.MoneyOverflowError
-                    .deepCopy((com.commercetools.api.models.error.MoneyOverflowError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) {
-            return com.commercetools.api.models.error.NoMatchingProductDiscountFoundError
-                    .deepCopy((com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ObjectNotFoundError) {
-            return com.commercetools.api.models.error.ObjectNotFoundError
-                    .deepCopy((com.commercetools.api.models.error.ObjectNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.OutOfStockError) {
-            return com.commercetools.api.models.error.OutOfStockError
-                    .deepCopy((com.commercetools.api.models.error.OutOfStockError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.OverCapacityError) {
-            return com.commercetools.api.models.error.OverCapacityError
-                    .deepCopy((com.commercetools.api.models.error.OverCapacityError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.OverlappingStandalonePriceValidityError) {
-            return com.commercetools.api.models.error.OverlappingStandalonePriceValidityError
-                    .deepCopy((com.commercetools.api.models.error.OverlappingStandalonePriceValidityError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.PendingOperationError) {
-            return com.commercetools.api.models.error.PendingOperationError
-                    .deepCopy((com.commercetools.api.models.error.PendingOperationError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.PriceChangedError) {
-            return com.commercetools.api.models.error.PriceChangedError
-                    .deepCopy((com.commercetools.api.models.error.PriceChangedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ProductAssignmentMissingError) {
-            return com.commercetools.api.models.error.ProductAssignmentMissingError
-                    .deepCopy((com.commercetools.api.models.error.ProductAssignmentMissingError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError) {
-            return com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError.deepCopy(
-                (com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError) {
-            return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError
-                    .deepCopy((com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.QueryComplexityLimitExceededError) {
-            return com.commercetools.api.models.error.QueryComplexityLimitExceededError
-                    .deepCopy((com.commercetools.api.models.error.QueryComplexityLimitExceededError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.QueryTimedOutError) {
-            return com.commercetools.api.models.error.QueryTimedOutError
-                    .deepCopy((com.commercetools.api.models.error.QueryTimedOutError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ReferenceExistsError) {
-            return com.commercetools.api.models.error.ReferenceExistsError
-                    .deepCopy((com.commercetools.api.models.error.ReferenceExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ReferencedResourceNotFoundError) {
-            return com.commercetools.api.models.error.ReferencedResourceNotFoundError
-                    .deepCopy((com.commercetools.api.models.error.ReferencedResourceNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.RequiredFieldError) {
-            return com.commercetools.api.models.error.RequiredFieldError
-                    .deepCopy((com.commercetools.api.models.error.RequiredFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ResourceNotFoundError) {
-            return com.commercetools.api.models.error.ResourceNotFoundError
-                    .deepCopy((com.commercetools.api.models.error.ResourceNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ResourceSizeLimitExceededError) {
-            return com.commercetools.api.models.error.ResourceSizeLimitExceededError
-                    .deepCopy((com.commercetools.api.models.error.ResourceSizeLimitExceededError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SearchDeactivatedError) {
-            return com.commercetools.api.models.error.SearchDeactivatedError
-                    .deepCopy((com.commercetools.api.models.error.SearchDeactivatedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SearchExecutionFailureError) {
-            return com.commercetools.api.models.error.SearchExecutionFailureError
-                    .deepCopy((com.commercetools.api.models.error.SearchExecutionFailureError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SearchFacetPathNotFoundError) {
-            return com.commercetools.api.models.error.SearchFacetPathNotFoundError
-                    .deepCopy((com.commercetools.api.models.error.SearchFacetPathNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SearchIndexingInProgressError) {
-            return com.commercetools.api.models.error.SearchIndexingInProgressError
-                    .deepCopy((com.commercetools.api.models.error.SearchIndexingInProgressError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SemanticErrorError) {
-            return com.commercetools.api.models.error.SemanticErrorError
-                    .deepCopy((com.commercetools.api.models.error.SemanticErrorError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) {
-            return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError
-                    .deepCopy((com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError) {
-            return com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError
-                    .deepCopy((com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.SyntaxErrorError) {
-            return com.commercetools.api.models.error.SyntaxErrorError
-                    .deepCopy((com.commercetools.api.models.error.SyntaxErrorError) template);
+
+        if (!(template instanceof ErrorObjectImpl)) {
+            return template.copyDeep();
         }
         ErrorObjectImpl instance = new ErrorObjectImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
+    }
+
+    /**
+     * builder for businessUnitAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitLimitExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    /**
+     * builder for extractionFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for featureDisabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCountry subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCustomerEmail subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingEntityType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingShoppingListName subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder missingShoppingListNameBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder.of();
+    }
+
+    /**
+     * builder for noLineItemsExtracted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    /**
+     * builder for outOfScope subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder.of();
+    }
+
+    /**
+     * builder for productSearchNotEnabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for productsNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for quoteRequestCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeDistributionChannelsUnsupported subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder.of();
     }
 
     /**
@@ -515,6 +285,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.BadGatewayErrorBuilder badGatewayBuilder() {
         return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();
+    }
+
+    /**
+     * builder for bulkOperationMaxItemsExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
     }
 
     /**
@@ -662,11 +440,67 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for exactLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.ExactLockConflictErrorBuilder.of();
+    }
+
+    /**
+     * builder for expiredCustomerEmailToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder.of();
+    }
+
+    /**
+     * builder for expiredCustomerPasswordToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder expiredCustomerPasswordTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder.of();
+    }
+
+    /**
      * builder for extensionBadResponse subtype
      * @return builder
      */
     public static com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooDeep subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooWide subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionCircularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionDependencyExists subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder.of();
     }
 
     /**
@@ -814,6 +648,22 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for lineItemQuantityAboveLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    /**
+     * builder for lineItemQuantityBelowLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
+    /**
      * builder for lockedField subtype
      * @return builder
      */
@@ -835,6 +685,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
         return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
     }
 
     /**
@@ -910,6 +768,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for overlappingPriceValidity subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder.of();
+    }
+
+    /**
      * builder for overlappingStandalonePriceValidity subtype
      * @return builder
      */
@@ -971,6 +837,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.QueryTimedOutErrorBuilder queryTimedOutBuilder() {
         return com.commercetools.api.models.error.QueryTimedOutErrorBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderFailure subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder.of();
     }
 
     /**
@@ -1046,6 +920,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for searchNotReady subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.SearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.SearchNotReadyErrorBuilder.of();
+    }
+
+    /**
      * builder for semanticError subtype
      * @return builder
      */
@@ -1078,6 +960,30 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for tooManyRequests subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.TooManyRequestsErrorBuilder tooManyRequestsBuilder() {
+        return com.commercetools.api.models.error.TooManyRequestsErrorBuilder.of();
+    }
+
+    /**
+     * builder for unauthorized subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.UnauthorizedErrorBuilder unauthorizedBuilder() {
+        return com.commercetools.api.models.error.UnauthorizedErrorBuilder.of();
+    }
+
+    /**
+     * builder for validityLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.ValidityLockConflictErrorBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -1091,8 +997,8 @@ public interface ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ErrorObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ErrorObject>() {
+    public static tools.jackson.core.type.TypeReference<ErrorObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ErrorObject>() {
             @Override
             public String toString() {
                 return "TypeReference<ErrorObject>";

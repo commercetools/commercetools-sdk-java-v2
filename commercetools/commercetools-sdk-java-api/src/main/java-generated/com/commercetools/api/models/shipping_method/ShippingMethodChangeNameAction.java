@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodChangeNameAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodChangeNameActionImpl.class)
 public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateAction {
@@ -36,7 +38,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     String CHANGE_NAME = "changeName";
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     public String getName();
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @param name value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
         instance.setName(template.getName());
         return instance;
     }
+
+    public ShippingMethodChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodChangeNameAction
@@ -115,8 +119,8 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodChangeNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodChangeNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodChangeNameAction>";

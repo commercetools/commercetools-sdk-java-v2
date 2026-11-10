@@ -18,15 +18,18 @@ import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
+import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 public class AttributesTest {
 
@@ -126,7 +129,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void serializeAttributes() throws JsonProcessingException {
+    public void serializeAttributes() throws JacksonException {
         Attribute intAttribute = AttributeBuilder.of().name("int").value(13).build();
         Assertions.assertThat(JsonUtils.toJsonString(intAttribute)).isEqualTo("{\"name\":\"int\",\"value\":13}");
 
@@ -169,7 +172,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void attributesAsJsonNode() throws JsonProcessingException {
+    public void attributesAsJsonNode() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withAttributeAsJsonNode(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
@@ -180,13 +183,36 @@ public class AttributesTest {
     }
 
     @Test
-    public void attributesNumberAsDouble() throws JsonProcessingException {
+    public void attributesNumberAsDouble() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
         ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
 
         assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+    }
+
+    @Test
+    public void attributeTypeByName() throws JacksonException {
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withAttributeTypes(Maps.newHashMap("test", new TypeReference<String>() {
+                }));
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        Attribute attribute = mapper.readValue("{\"name\":\"test\", \"value\": \"2025-01-01\"}", Attribute.class);
+
+        assertThat(attribute.getValue()).isEqualTo("2025-01-01");
+
+        Attribute attributeDate = mapper.readValue("{\"name\":\"date\", \"value\": \"2025-01-01\"}", Attribute.class);
+        assertThat(attributeDate.getValue()).isEqualTo(LocalDate.parse("2025-01-01"));
+
+        Attribute attributeInvalidMonth = mapper.readValue("{\"name\":\"invalid\", \"value\": \"2025-13-01\"}",
+            Attribute.class);
+        assertThat(attributeInvalidMonth.getValue()).isEqualTo("2025-13-01");
+
+        Attribute attributeInvalidDay = mapper.readValue("{\"name\":\"invalid\", \"value\": \"2025-12-32\"}",
+            Attribute.class);
+        assertThat(attributeInvalidDay.getValue()).isEqualTo("2025-12-32");
     }
 
     @Test
@@ -467,5 +493,19 @@ public class AttributesTest {
         assertThat(nested).hasSize(1);
         assertThat(nested.get(0).asEnum("set-nested-enum")).isInstanceOf(AttributePlainEnumValue.class);
         assertThat(nested.get(0).asString("set-nested-string")).isInstanceOf(String.class);
+    }
+
+    @Test
+    public void dateDeserialization() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("date-attributes.json"),
+            ProductVariant.class);
+        assertThat(variant.getAttributes()).isNotEmpty();
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        assertThat(attributes.get("datetime").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("datetime-simple").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("datetime-max").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("time").getValue()).isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("time-simple").getValue()).isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("time-max").getValue()).isInstanceOf(LocalTime.class);
     }
 }

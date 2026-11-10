@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
+ *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPrice" rel="nofollow">DiscountedLineItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemsTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a> to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("fixed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueFixedDraftImpl.class)
 public interface CartDiscountValueFixedDraft
@@ -40,8 +42,8 @@ public interface CartDiscountValueFixedDraft
     String FIXED = "fixed";
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return money
      */
     @NotNull
@@ -50,8 +52,17 @@ public interface CartDiscountValueFixedDraft
     public List<Money> getMoney();
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money values to be set
      */
 
@@ -59,12 +70,20 @@ public interface CartDiscountValueFixedDraft
     public void setMoney(final Money... money);
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money values to be set
      */
 
     public void setMoney(final List<Money> money);
+
+    /**
+     *  <p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
 
     /**
      * factory method
@@ -82,8 +101,11 @@ public interface CartDiscountValueFixedDraft
     public static CartDiscountValueFixedDraft of(final CartDiscountValueFixedDraft template) {
         CartDiscountValueFixedDraftImpl instance = new CartDiscountValueFixedDraftImpl();
         instance.setMoney(template.getMoney());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
+
+    public CartDiscountValueFixedDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountValueFixedDraft
@@ -101,6 +123,7 @@ public interface CartDiscountValueFixedDraft
                         .map(com.commercetools.api.models.common.Money::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -135,8 +158,8 @@ public interface CartDiscountValueFixedDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountValueFixedDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountValueFixedDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountValueFixedDraft>";

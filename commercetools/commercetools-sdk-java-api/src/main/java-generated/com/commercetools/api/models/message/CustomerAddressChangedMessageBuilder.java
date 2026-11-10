@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,6 +56,8 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     private com.commercetools.api.models.common.Address address;
+
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -184,7 +187,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +198,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +260,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -269,7 +272,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -281,13 +284,52 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param address value to be set
      * @return Builder
      */
 
     public CustomerAddressChangedMessageBuilder address(final com.commercetools.api.models.common.Address address) {
         this.address = address;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessageBuilder addressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessageBuilder addressRoles(
+            final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessageBuilder plusAddressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        if (this.addressRoles == null) {
+            this.addressRoles = new ArrayList<>();
+        }
+        this.addressRoles.addAll(Arrays.asList(addressRoles));
         return this;
     }
 
@@ -357,7 +399,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -385,12 +427,21 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @return address
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
     }
 
     /**
@@ -406,8 +457,9 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
         Objects.requireNonNull(resource, CustomerAddressChangedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerAddressChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(address, CustomerAddressChangedMessage.class + ": address is missing");
+        Objects.requireNonNull(addressRoles, CustomerAddressChangedMessage.class + ": addressRoles is missing");
         return new CustomerAddressChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, addressRoles);
     }
 
     /**
@@ -416,7 +468,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
      */
     public CustomerAddressChangedMessage buildUnchecked() {
         return new CustomerAddressChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address, addressRoles);
     }
 
     /**
@@ -445,6 +497,7 @@ public class CustomerAddressChangedMessageBuilder implements Builder<CustomerAdd
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.address = template.getAddress();
+        builder.addressRoles = template.getAddressRoles();
         return builder;
     }
 

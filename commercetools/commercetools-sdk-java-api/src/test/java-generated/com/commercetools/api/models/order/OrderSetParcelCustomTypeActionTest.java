@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetParcelCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetParcelCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetParcelCustomTypeActionBuilder builder) {
         OrderSetParcelCustomTypeAction orderSetParcelCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetParcelCustomTypeAction).isInstanceOf(OrderSetParcelCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSetParcelCustomTypeAction.builder().parcelId("parcelId") },
-                new Object[] { OrderSetParcelCustomTypeAction.builder().parcelKey("parcelKey") },
-                new Object[] { OrderSetParcelCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { OrderSetParcelCustomTypeAction.builder()
+        return new Object[][] {
+                new Object[] { "parcelId", OrderSetParcelCustomTypeAction.builder().parcelId("parcelId") },
+                new Object[] { "parcelKey", OrderSetParcelCustomTypeAction.builder().parcelKey("parcelKey") },
+                new Object[] { "type",
+                        OrderSetParcelCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", OrderSetParcelCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

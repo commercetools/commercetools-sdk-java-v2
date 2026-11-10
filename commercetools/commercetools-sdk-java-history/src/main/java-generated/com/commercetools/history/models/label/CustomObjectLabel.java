@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomObjectLabel
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomObjectLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectLabelImpl.class)
 public interface CustomObjectLabel extends Label {
@@ -94,6 +96,8 @@ public interface CustomObjectLabel extends Label {
         return instance;
     }
 
+    public CustomObjectLabel copyDeep();
+
     /**
      * factory method to create a deep copy of CustomObjectLabel
      * @param template instance to be copied
@@ -141,8 +145,8 @@ public interface CustomObjectLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectLabel>() {
+    public static tools.jackson.core.type.TypeReference<CustomObjectLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomObjectLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomObjectLabel>";

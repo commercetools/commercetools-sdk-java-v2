@@ -6,21 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Asset;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Remove Asset on Categories.</li>
- *   <li>Remove Asset on Products.</li>
- *  </ul>
+ * RemoveAssetChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,10 +26,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RemoveAssetChange removeAssetChange = RemoveAssetChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveAssetChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveAssetChangeImpl.class)
 public interface RemoveAssetChange extends Change {
@@ -68,6 +68,27 @@ public interface RemoveAssetChange extends Change {
     public Asset getPreviousValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -80,6 +101,25 @@ public interface RemoveAssetChange extends Change {
      */
 
     public void setPreviousValue(final Asset previousValue);
+
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -98,8 +138,12 @@ public interface RemoveAssetChange extends Change {
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public RemoveAssetChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemoveAssetChange
@@ -114,6 +158,8 @@ public interface RemoveAssetChange extends Change {
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(com.commercetools.history.models.common.Asset.deepCopy(template.getPreviousValue()));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -148,8 +194,8 @@ public interface RemoveAssetChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveAssetChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveAssetChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveAssetChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveAssetChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveAssetChange>";

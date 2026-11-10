@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a server-side problem occurs before or after data persistence. In some cases, the requested action may successfully complete after the error is returned. Therefore, it is recommended to verify the status of the requested resource after receiving a 500 error.</p>
- *  <p>If you encounter this error, report it to the Composable Commerce support team.</p>
+ *  <p>If you encounter this error, report it to the <span>commercetools support team</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("General")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLGeneralErrorImpl.class)
 public interface GraphQLGeneralError extends GraphQLErrorObject {
@@ -61,6 +63,8 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLGeneralError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLGeneralError
@@ -108,8 +112,8 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLGeneralError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLGeneralError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLGeneralError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLGeneralError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLGeneralError>";

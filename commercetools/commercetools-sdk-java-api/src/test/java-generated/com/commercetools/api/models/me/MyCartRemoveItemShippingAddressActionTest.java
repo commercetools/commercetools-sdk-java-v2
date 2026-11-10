@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartRemoveItemShippingAddressActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartRemoveItemShippingAddressActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartRemoveItemShippingAddressActionBuilder builder) {
         MyCartRemoveItemShippingAddressAction myCartRemoveItemShippingAddressAction = builder.buildUnchecked();
         Assertions.assertThat(myCartRemoveItemShippingAddressAction)
                 .isInstanceOf(MyCartRemoveItemShippingAddressAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
-                new Object[] { MyCartRemoveItemShippingAddressAction.builder().addressKey("addressKey") } };
+        return new Object[][] { new Object[] { "addressKey",
+                MyCartRemoveItemShippingAddressAction.builder().addressKey("addressKey") } };
     }
 
     @Test

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds the given Price to the <code>prices</code> array of the ProductVariant. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Adds the given Price to the <code>prices</code> array of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBase {
@@ -79,6 +80,9 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If this Embedded Price has the same price scope as an existing Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If this Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -86,7 +90,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     *  <p>Whether only staged <code>prices</code> are updated. If <code>false</code>, both current and staged <code>prices</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -152,4 +156,8 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductAddPriceAction copyDeep() {
+        return ProductAddPriceAction.deepCopy(this);
+    }
 }

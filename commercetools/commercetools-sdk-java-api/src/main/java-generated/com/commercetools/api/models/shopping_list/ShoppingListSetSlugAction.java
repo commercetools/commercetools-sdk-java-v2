@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListSetSlugAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSlug")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListSetSlugActionImpl.class)
 public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     String SET_SLUG = "setSlug";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     *  <p>Value to set. If omitted, any existing value is removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @return slug
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     *  <p>Value to set. If omitted, any existing value is removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param slug value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public ShoppingListSetSlugAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListSetSlugAction
@@ -119,8 +123,8 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListSetSlugAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListSetSlugAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListSetSlugAction>";

@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a reference value.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceFieldImpl.class)
 public interface ReferenceField extends CustomField {
@@ -71,6 +73,8 @@ public interface ReferenceField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceField copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceField
@@ -118,8 +122,8 @@ public interface ReferenceField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceField>() {
+    public static tools.jackson.core.type.TypeReference<ReferenceField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReferenceField>() {
             @Override
             public String toString() {
                 return "TypeReference<ReferenceField>";

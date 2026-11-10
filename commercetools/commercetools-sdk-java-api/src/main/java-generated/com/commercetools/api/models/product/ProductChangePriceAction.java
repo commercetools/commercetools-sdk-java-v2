@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ProductChangePriceAction
+ *  <p>This action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceChangedMessage" rel="nofollow">ProductPriceChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changePrice")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangePriceActionImpl.class)
 public interface ProductChangePriceAction extends ProductUpdateAction {
@@ -48,6 +50,9 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If the new Embedded Price has the same price scope as another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If the new Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @return price
      */
     @NotNull
@@ -56,7 +61,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     public PriceDraft getPrice();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -72,13 +77,16 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If the new Embedded Price has the same price scope as another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If the new Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param price value to be set
      */
 
     public void setPrice(final PriceDraft price);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
 
@@ -104,6 +112,8 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductChangePriceAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductChangePriceAction
@@ -153,8 +163,8 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangePriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangePriceAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangePriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangePriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangePriceAction>";

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .email("{email}")
+ *             .oldEmail("{oldEmail}")
  *             .build()
  * </code></pre>
  * </div>
@@ -55,6 +56,8 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     private String email;
+
+    private String oldEmail;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -184,7 +187,7 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +198,7 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,13 +260,24 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     }
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      * @return Builder
      */
 
     public CustomerEmailChangedMessageBuilder email(final String email) {
         this.email = email;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @param oldEmail value to be set
+     * @return Builder
+     */
+
+    public CustomerEmailChangedMessageBuilder oldEmail(final String oldEmail) {
+        this.oldEmail = oldEmail;
         return this;
     }
 
@@ -333,7 +347,7 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -361,12 +375,21 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
     }
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @return email
      */
 
     public String getEmail() {
         return this.email;
+    }
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @return oldEmail
+     */
+
+    public String getOldEmail() {
+        return this.oldEmail;
     }
 
     /**
@@ -382,8 +405,9 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
         Objects.requireNonNull(resource, CustomerEmailChangedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerEmailChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(email, CustomerEmailChangedMessage.class + ": email is missing");
+        Objects.requireNonNull(oldEmail, CustomerEmailChangedMessage.class + ": oldEmail is missing");
         return new CustomerEmailChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email, oldEmail);
     }
 
     /**
@@ -392,7 +416,7 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
      */
     public CustomerEmailChangedMessage buildUnchecked() {
         return new CustomerEmailChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email, oldEmail);
     }
 
     /**
@@ -421,6 +445,7 @@ public class CustomerEmailChangedMessageBuilder implements Builder<CustomerEmail
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.email = template.getEmail();
+        builder.oldEmail = template.getOldEmail();
         return builder;
     }
 

@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetMaxApplicationsAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMaxApplications")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdateAction {
@@ -34,7 +36,10 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     String SET_MAX_APPLICATIONS = "setMaxApplications";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If omitted, any existing value is removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
      */
 
@@ -42,7 +47,10 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     public Long getMaxApplications();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If omitted, any existing value is removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set
      */
 
@@ -66,6 +74,8 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
         instance.setMaxApplications(template.getMaxApplications());
         return instance;
     }
+
+    public DiscountCodeSetMaxApplicationsAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetMaxApplicationsAction
@@ -115,8 +125,8 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetMaxApplicationsAction>";

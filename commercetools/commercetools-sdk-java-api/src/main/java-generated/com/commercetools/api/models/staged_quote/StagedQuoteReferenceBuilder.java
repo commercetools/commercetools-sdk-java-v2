@@ -41,7 +41,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @return obj
      */
 

@@ -1,35 +1,30 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAttributeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAttributeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAttributeChangeBuilder builder) {
         SetAttributeChange setAttributeChange = builder.buildUnchecked();
         Assertions.assertThat(setAttributeChange).isInstanceOf(SetAttributeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAttributeChange.builder().change("change") },
-                new Object[] { SetAttributeChange.builder()
-                        .previousValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
-                new Object[] { SetAttributeChange.builder()
-                        .nextValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
-                new Object[] { SetAttributeChange.builder().catalogData("catalogData") } };
+        return new Object[][] { new Object[] { "change", SetAttributeChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetAttributeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.AttributeImpl()) },
+                new Object[] { "nextValue",
+                        SetAttributeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.AttributeImpl()) },
+                new Object[] { "catalogData", SetAttributeChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAttributeChange.builder().variant("variant") } };
     }
 
     @Test
@@ -42,17 +37,17 @@ public class SetAttributeChangeTest {
     @Test
     public void previousValue() {
         SetAttributeChange value = SetAttributeChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.change_value.AttributeValueImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.AttributeImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.AttributeValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributeImpl());
     }
 
     @Test
     public void nextValue() {
         SetAttributeChange value = SetAttributeChange.of();
-        value.setNextValue(new com.commercetools.history.models.change_value.AttributeValueImpl());
+        value.setNextValue(new com.commercetools.history.models.common.AttributeImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.AttributeValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributeImpl());
     }
 
     @Test
@@ -60,5 +55,12 @@ public class SetAttributeChangeTest {
         SetAttributeChange value = SetAttributeChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAttributeChange value = SetAttributeChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

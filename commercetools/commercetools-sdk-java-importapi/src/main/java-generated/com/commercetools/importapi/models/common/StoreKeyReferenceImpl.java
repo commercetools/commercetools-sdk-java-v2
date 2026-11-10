@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>References a store by key.</p>
+ *  <p>Used by the <span>Import API</span> to identify a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
@@ -43,7 +44,7 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced Store.</p>
      */
 
     public String getKey() {
@@ -51,7 +52,7 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
@@ -91,4 +92,8 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreKeyReference copyDeep() {
+        return StoreKeyReference.deepCopy(this);
+    }
 }

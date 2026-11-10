@@ -4,8 +4,8 @@ package io.vrap.rmf.base.client;
 import java.time.Duration;
 import java.util.function.Function;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 public interface AsyncApiClient<TReturn> {
     <O> TReturn execute(final ApiHttpRequest request, final Class<O> outputType);

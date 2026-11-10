@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action produces the StoreCountriesChanged Message. It has no effect if a given country is not present in a Store.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountriesChangedMessage" rel="nofollow">StoreCountriesChanged</a> Message. It has no effect if a given country is not present in a Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeCountry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreRemoveCountryActionImpl.class)
 public interface StoreRemoveCountryAction extends StoreUpdateAction {
@@ -71,6 +73,8 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public StoreRemoveCountryAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreRemoveCountryAction
@@ -118,8 +122,8 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveCountryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveCountryAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreRemoveCountryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreRemoveCountryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreRemoveCountryAction>";

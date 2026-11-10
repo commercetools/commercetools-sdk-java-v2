@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a date time set value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DateTimeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateTimeSetFieldImpl.class)
 public interface DateTimeSetField extends CustomField {
@@ -37,7 +39,7 @@ public interface DateTimeSetField extends CustomField {
     String DATE_TIME_SET = "DateTimeSet";
 
     /**
-     *
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateTimeSetField extends CustomField {
     public List<ZonedDateTime> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -53,7 +55,7 @@ public interface DateTimeSetField extends CustomField {
     public void setValue(final ZonedDateTime... value);
 
     /**
-     * set value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface DateTimeSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateTimeSetField copyDeep();
 
     /**
      * factory method to create a deep copy of DateTimeSetField
@@ -124,8 +128,8 @@ public interface DateTimeSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateTimeSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateTimeSetField>() {
+    public static tools.jackson.core.type.TypeReference<DateTimeSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateTimeSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<DateTimeSetField>";

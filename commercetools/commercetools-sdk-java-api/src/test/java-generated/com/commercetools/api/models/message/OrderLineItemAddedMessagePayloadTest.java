@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLineItemAddedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLineItemAddedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLineItemAddedMessagePayloadBuilder builder) {
         OrderLineItemAddedMessagePayload orderLineItemAddedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(orderLineItemAddedMessagePayload).isInstanceOf(OrderLineItemAddedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderLineItemAddedMessagePayload.builder()
-                        .lineItem(new com.commercetools.api.models.cart.LineItemImpl()) },
-                new Object[] { OrderLineItemAddedMessagePayload.builder().addedQuantity(2L) } };
+                new Object[] { "lineItem",
+                        OrderLineItemAddedMessagePayload.builder()
+                                .lineItem(new com.commercetools.api.models.cart.LineItemImpl()) },
+                new Object[] { "addedQuantity", OrderLineItemAddedMessagePayload.builder().addedQuantity(2L) } };
     }
 
     @Test

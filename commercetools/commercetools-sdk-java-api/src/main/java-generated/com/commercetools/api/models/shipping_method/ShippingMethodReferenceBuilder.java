@@ -30,7 +30,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
     /**
-     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @return obj
      */
 

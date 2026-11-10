@@ -24,7 +24,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
     private Boolean value;
 
     /**
-     * set the value to the value
+     *  <p><code>true</code> or <code>false</code></p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
     }
 
     /**
-     * value of value}
+     *  <p><code>true</code> or <code>false</code></p>
      * @return value
      */
 

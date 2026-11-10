@@ -24,7 +24,7 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
     private Boolean active;
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
     }
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return active
      */
 

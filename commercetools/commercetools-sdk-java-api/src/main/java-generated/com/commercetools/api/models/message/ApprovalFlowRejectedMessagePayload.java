@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after an Approval Flow is rejected.</p>
+ *  <p>Generated after an <span>Approval Flow is rejected</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalFlowRejected")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalFlowRejectedMessagePayloadImpl.class)
 public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
@@ -40,7 +42,7 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
     String APPROVAL_FLOW_REJECTED = "ApprovalFlowRejected";
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @return associate
      */
     @NotNull
@@ -49,7 +51,7 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
     public CustomerReference getAssociate();
 
     /**
-     *  <p>Description of the reason why the Approval Flow was rejected.</p>
+     *  <p>Description of the reason why the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @return rejectionReason
      */
 
@@ -57,7 +59,7 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
     public String getRejectionReason();
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @return order
      */
     @NotNull
@@ -66,21 +68,21 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
     public OrderReference getOrder();
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @param associate value to be set
      */
 
     public void setAssociate(final CustomerReference associate);
 
     /**
-     *  <p>Description of the reason why the Approval Flow was rejected.</p>
+     *  <p>Description of the reason why the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @param rejectionReason value to be set
      */
 
     public void setRejectionReason(final String rejectionReason);
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @param order value to be set
      */
 
@@ -106,6 +108,8 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public ApprovalFlowRejectedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalFlowRejectedMessagePayload
@@ -157,8 +161,8 @@ public interface ApprovalFlowRejectedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejectedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejectedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowRejectedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowRejectedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowRejectedMessagePayload>";

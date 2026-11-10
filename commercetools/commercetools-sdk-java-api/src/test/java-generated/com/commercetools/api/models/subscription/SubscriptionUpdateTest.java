@@ -3,33 +3,26 @@ package com.commercetools.api.models.subscription;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SubscriptionUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SubscriptionUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SubscriptionUpdateBuilder builder) {
         SubscriptionUpdate subscriptionUpdate = builder.buildUnchecked();
         Assertions.assertThat(subscriptionUpdate).isInstanceOf(SubscriptionUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SubscriptionUpdate.builder().version(2L) },
-                new Object[] { SubscriptionUpdate.builder()
-                        .actions(Collections.singletonList(
-                            new com.commercetools.api.models.subscription.SubscriptionUpdateActionImpl())) } };
+        return new Object[][] { new Object[] { "version", SubscriptionUpdate.builder().version(2L) },
+                new Object[] { "actions",
+                        SubscriptionUpdate.builder()
+                                .actions(Collections.singletonList(
+                                    new com.commercetools.api.models.subscription.SubscriptionUpdateActionImpl())) } };
     }
 
     @Test

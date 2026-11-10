@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingRateDraft
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<ShippingRateDraft> {
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      * @return price
      */
     @NotNull
@@ -43,7 +44,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public Money getPrice();
 
     /**
-     *
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
     @Valid
@@ -51,7 +52,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public Money getFreeAbove();
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
      */
     @Valid
@@ -59,21 +60,21 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public List<ShippingRatePriceTier> getTiers();
 
     /**
-     * set price
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      */
 
     public void setPrice(final Money price);
 
     /**
-     * set freeAbove
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 
     public void setFreeAbove(final Money freeAbove);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 
@@ -81,7 +82,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public void setTiers(final ShippingRatePriceTier... tiers);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 
@@ -107,6 +108,8 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public ShippingRateDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingRateDraft
@@ -160,8 +163,8 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRateDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingRateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingRateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingRateDraft>";

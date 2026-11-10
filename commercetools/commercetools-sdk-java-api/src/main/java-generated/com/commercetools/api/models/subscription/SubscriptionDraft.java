@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Either <code>messages</code> or <code>changes</code> must be set.</p>
+ *  <p>Either <code>messages</code>, <code>changes</code>, or <code>events</code> must be set.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,15 +35,7 @@ public interface SubscriptionDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<SubscriptionDraft> {
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
-     * @return changes
-     */
-    @Valid
-    @JsonProperty("changes")
-    public List<ChangeSubscription> getChanges();
-
-    /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
     @NotNull
@@ -67,7 +60,23 @@ public interface SubscriptionDraft
     public List<MessageSubscription> getMessages();
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Changes to be subscribed to.</p>
+     * @return changes
+     */
+    @Valid
+    @JsonProperty("changes")
+    public List<ChangeSubscription> getChanges();
+
+    /**
+     *  <p>Events to be subscribed to.</p>
+     * @return events
+     */
+    @Valid
+    @JsonProperty("events")
+    public List<EventSubscription> getEvents();
+
+    /**
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @return format
      */
     @Valid
@@ -75,22 +84,7 @@ public interface SubscriptionDraft
     public DeliveryFormat getFormat();
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    @JsonIgnore
-    public void setChanges(final ChangeSubscription... changes);
-
-    /**
-     *  <p>Change notifications to be subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    public void setChanges(final List<ChangeSubscription> changes);
-
-    /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      */
 
@@ -119,7 +113,37 @@ public interface SubscriptionDraft
     public void setMessages(final List<MessageSubscription> messages);
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Changes to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    @JsonIgnore
+    public void setChanges(final ChangeSubscription... changes);
+
+    /**
+     *  <p>Changes to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    public void setChanges(final List<ChangeSubscription> changes);
+
+    /**
+     *  <p>Events to be subscribed to.</p>
+     * @param events values to be set
+     */
+
+    @JsonIgnore
+    public void setEvents(final EventSubscription... events);
+
+    /**
+     *  <p>Events to be subscribed to.</p>
+     * @param events values to be set
+     */
+
+    public void setEvents(final List<EventSubscription> events);
+
+    /**
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @param format value to be set
      */
 
@@ -140,13 +164,16 @@ public interface SubscriptionDraft
      */
     public static SubscriptionDraft of(final SubscriptionDraft template) {
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
-        instance.setChanges(template.getChanges());
         instance.setDestination(template.getDestination());
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
+        instance.setChanges(template.getChanges());
+        instance.setEvents(template.getEvents());
         instance.setFormat(template.getFormat());
         return instance;
     }
+
+    public SubscriptionDraft copyDeep();
 
     /**
      * factory method to create a deep copy of SubscriptionDraft
@@ -159,17 +186,22 @@ public interface SubscriptionDraft
             return null;
         }
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
-        instance.setChanges(Optional.ofNullable(template.getChanges())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setDestination(
             com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
         instance.setKey(template.getKey());
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setEvents(Optional.ofNullable(template.getEvents())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.EventSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));
@@ -207,8 +239,8 @@ public interface SubscriptionDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft>() {
+    public static tools.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubscriptionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<SubscriptionDraft>";

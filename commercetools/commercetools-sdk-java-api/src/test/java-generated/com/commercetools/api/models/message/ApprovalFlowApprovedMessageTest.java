@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalFlowApprovedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalFlowApprovedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalFlowApprovedMessageBuilder builder) {
         ApprovalFlowApprovedMessage approvalFlowApprovedMessage = builder.buildUnchecked();
         Assertions.assertThat(approvalFlowApprovedMessage).isInstanceOf(ApprovalFlowApprovedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ApprovalFlowApprovedMessage.builder()
-                        .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { ApprovalFlowApprovedMessage.builder()
+                new Object[] { "associate",
+                        ApprovalFlowApprovedMessage.builder()
+                                .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "order", ApprovalFlowApprovedMessage.builder()
                         .order(new com.commercetools.api.models.order.OrderReferenceImpl()) } };
     }
 

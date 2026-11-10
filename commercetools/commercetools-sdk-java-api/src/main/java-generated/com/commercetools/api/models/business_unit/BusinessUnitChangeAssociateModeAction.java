@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>. This update action generates a BusinessUnitAssociateModeChanged Message.</p>
+ *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateModeChangedMessage" rel="nofollow">BusinessUnitAssociateModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -22,10 +23,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     BusinessUnitChangeAssociateModeAction businessUnitChangeAssociateModeAction = BusinessUnitChangeAssociateModeAction.builder()
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
+ *             .makeInheritedAssociatesExplicit(true)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAssociateMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitChangeAssociateModeActionImpl.class)
 public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdateAction {
@@ -44,11 +47,26 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
+     *  <p>Whether all inherited Associates are converted to explicit Associates during a change to <code>associateMode="Explicit"</code>.</p>
+     * @return makeInheritedAssociatesExplicit
+     */
+    @NotNull
+    @JsonProperty("makeInheritedAssociatesExplicit")
+    public Boolean getMakeInheritedAssociatesExplicit();
+
+    /**
      *  <p>The new value for <code>associateMode</code>.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>Whether all inherited Associates are converted to explicit Associates during a change to <code>associateMode="Explicit"</code>.</p>
+     * @param makeInheritedAssociatesExplicit value to be set
+     */
+
+    public void setMakeInheritedAssociatesExplicit(final Boolean makeInheritedAssociatesExplicit);
 
     /**
      * factory method
@@ -66,8 +84,11 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public static BusinessUnitChangeAssociateModeAction of(final BusinessUnitChangeAssociateModeAction template) {
         BusinessUnitChangeAssociateModeActionImpl instance = new BusinessUnitChangeAssociateModeActionImpl();
         instance.setAssociateMode(template.getAssociateMode());
+        instance.setMakeInheritedAssociatesExplicit(template.getMakeInheritedAssociatesExplicit());
         return instance;
     }
+
+    public BusinessUnitChangeAssociateModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitChangeAssociateModeAction
@@ -82,6 +103,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
         }
         BusinessUnitChangeAssociateModeActionImpl instance = new BusinessUnitChangeAssociateModeActionImpl();
         instance.setAssociateMode(template.getAssociateMode());
+        instance.setMakeInheritedAssociatesExplicit(template.getMakeInheritedAssociatesExplicit());
         return instance;
     }
 
@@ -117,8 +139,8 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateModeAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeAssociateModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeAssociateModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeAssociateModeAction>";

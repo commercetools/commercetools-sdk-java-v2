@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.Order;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete Order request.</p>
+ *  <p>Generated after a successful <span>Delete Order</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDeletedMessageImpl.class)
 public interface OrderDeletedMessage extends OrderMessage {
@@ -45,7 +47,7 @@ public interface OrderDeletedMessage extends OrderMessage {
     String ORDER_DELETED = "OrderDeleted";
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @return order
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface OrderDeletedMessage extends OrderMessage {
     public Order getOrder();
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @param order value to be set
      */
 
@@ -88,6 +90,8 @@ public interface OrderDeletedMessage extends OrderMessage {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public OrderDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderDeletedMessage
@@ -147,8 +151,8 @@ public interface OrderDeletedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderDeletedMessage>";

@@ -25,10 +25,10 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     private Long version;
 
-    private java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions;
+    private java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      */
 
     public MyBusinessUnitUpdateBuilder actions(
-            final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction... actions) {
+            final com.commercetools.api.models.me.MyBusinessUnitUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
@@ -57,7 +57,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      */
 
     public MyBusinessUnitUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
+            final java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
@@ -69,7 +69,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      */
 
     public MyBusinessUnitUpdateBuilder plusActions(
-            final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction... actions) {
+            final com.commercetools.api.models.me.MyBusinessUnitUpdateAction... actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
@@ -84,12 +84,11 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      */
 
     public MyBusinessUnitUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
+            Function<com.commercetools.api.models.me.MyBusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyBusinessUnitUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.me.MyBusinessUnitUpdateActionBuilder.of()).build());
         return this;
     }
 
@@ -100,15 +99,14 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      */
 
     public MyBusinessUnitUpdateBuilder withActions(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
+            Function<com.commercetools.api.models.me.MyBusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyBusinessUnitUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.me.MyBusinessUnitUpdateActionBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 
@@ -121,7 +119,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
      * @return actions
      */
 
-    public java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> getActions() {
+    public java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> getActions() {
         return this.actions;
     }
 

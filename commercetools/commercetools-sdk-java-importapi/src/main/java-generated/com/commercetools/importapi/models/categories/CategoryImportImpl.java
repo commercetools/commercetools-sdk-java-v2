@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
+ *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportImpl implements CategoryImport, ModelBase {
@@ -82,7 +83,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -98,7 +99,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
@@ -114,7 +115,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
@@ -162,7 +163,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maps to <code>Category.assets</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
@@ -170,7 +171,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -300,4 +301,8 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public CategoryImport copyDeep() {
+        return CategoryImport.deepCopy(this);
+    }
 }

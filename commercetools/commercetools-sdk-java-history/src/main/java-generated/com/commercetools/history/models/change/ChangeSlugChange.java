@@ -6,21 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Slug on Categories.</li>
- *   <li>Change Slug on Products.</li>
- *  </ul>
+ * ChangeSlugChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,10 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeSlugChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeSlugChangeImpl.class)
 public interface ChangeSlugChange extends Change {
@@ -78,6 +77,18 @@ public interface ChangeSlugChange extends Change {
     public LocalizedString getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -99,6 +110,17 @@ public interface ChangeSlugChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
      * factory method
      * @return instance of ChangeSlugChange
      */
@@ -116,8 +138,11 @@ public interface ChangeSlugChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
+
+    public ChangeSlugChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeSlugChange
@@ -135,6 +160,7 @@ public interface ChangeSlugChange extends Change {
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -169,8 +195,8 @@ public interface ChangeSlugChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSlugChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSlugChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeSlugChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeSlugChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeSlugChange>";

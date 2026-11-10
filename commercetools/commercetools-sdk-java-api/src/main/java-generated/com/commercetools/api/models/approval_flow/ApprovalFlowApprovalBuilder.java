@@ -28,7 +28,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     private java.time.ZonedDateTime approvedAt;
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the approver value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the approver value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param approver value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @param approvedAt value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return approver
      */
 
@@ -83,7 +83,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @return approvedAt
      */
 

@@ -26,7 +26,7 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
     private String key;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 

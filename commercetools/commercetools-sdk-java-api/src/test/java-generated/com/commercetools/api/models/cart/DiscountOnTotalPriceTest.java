@@ -3,38 +3,33 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountOnTotalPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountOnTotalPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountOnTotalPriceBuilder builder) {
         DiscountOnTotalPrice discountOnTotalPrice = builder.buildUnchecked();
         Assertions.assertThat(discountOnTotalPrice).isInstanceOf(DiscountOnTotalPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { DiscountOnTotalPrice.builder()
-                        .discountedAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] { DiscountOnTotalPrice.builder()
-                        .includedDiscounts(Collections.singletonList(
-                            new com.commercetools.api.models.cart.DiscountedTotalPricePortionImpl())) },
-                new Object[] { DiscountOnTotalPrice.builder()
-                        .discountedNetAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] { DiscountOnTotalPrice.builder()
+                new Object[] { "discountedAmount",
+                        DiscountOnTotalPrice.builder()
+                                .discountedAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] { "includedDiscounts",
+                        DiscountOnTotalPrice.builder()
+                                .includedDiscounts(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.DiscountedTotalPricePortionImpl())) },
+                new Object[] { "discountedNetAmount",
+                        DiscountOnTotalPrice.builder()
+                                .discountedNetAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] { "discountedGrossAmount", DiscountOnTotalPrice.builder()
                         .discountedGrossAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) } };
     }
 

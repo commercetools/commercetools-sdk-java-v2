@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLResponse
+ *  <p><code>error</code> is present in the response only if the GraphQL query was unsuccessful.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLResponse {
 
     /**
-     *
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @return data
      */
 
@@ -39,7 +40,7 @@ public interface GraphQLResponse {
     public Object getData();
 
     /**
-     *
+     *  <p>Errors that the GraphQL query returns.</p>
      * @return errors
      */
     @Valid
@@ -47,14 +48,14 @@ public interface GraphQLResponse {
     public List<GraphQLError> getErrors();
 
     /**
-     * set data
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @param data value to be set
      */
 
     public void setData(final Object data);
 
     /**
-     * set errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors values to be set
      */
 
@@ -62,7 +63,7 @@ public interface GraphQLResponse {
     public void setErrors(final GraphQLError... errors);
 
     /**
-     * set errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors values to be set
      */
 
@@ -87,6 +88,8 @@ public interface GraphQLResponse {
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public GraphQLResponse copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLResponse
@@ -139,8 +142,8 @@ public interface GraphQLResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLResponse>";

@@ -112,6 +112,12 @@ public class ShippingMethodQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl> active() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("active")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl> isDefault() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isDefault")),
@@ -131,6 +137,25 @@ public class ShippingMethodQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
             ShippingMethodQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ShippingMethodQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            ShippingMethodQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ShippingMethodQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl> carrier() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("carrier")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
     }
 
 }

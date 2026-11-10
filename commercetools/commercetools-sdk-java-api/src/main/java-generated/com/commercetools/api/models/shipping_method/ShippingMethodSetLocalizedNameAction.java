@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodSetLocalizedNameAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocalizedName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetLocalizedNameActionImpl.class)
 public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpdateAction {
@@ -36,7 +38,7 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     String SET_LOCALIZED_NAME = "setLocalizedName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return localizedName
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     public LocalizedString getLocalizedName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param localizedName value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
         instance.setLocalizedName(template.getLocalizedName());
         return instance;
     }
+
+    public ShippingMethodSetLocalizedNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetLocalizedNameAction
@@ -118,8 +122,8 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodSetLocalizedNameAction>";

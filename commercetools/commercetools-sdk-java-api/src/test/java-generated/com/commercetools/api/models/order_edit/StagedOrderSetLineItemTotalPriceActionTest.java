@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetLineItemTotalPriceActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetLineItemTotalPriceActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetLineItemTotalPriceActionBuilder builder) {
         StagedOrderSetLineItemTotalPriceAction stagedOrderSetLineItemTotalPriceAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetLineItemTotalPriceAction)
                 .isInstanceOf(StagedOrderSetLineItemTotalPriceAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetLineItemTotalPriceAction.builder().lineItemId("lineItemId") },
-                new Object[] { StagedOrderSetLineItemTotalPriceAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { StagedOrderSetLineItemTotalPriceAction.builder()
+                new Object[] { "lineItemId",
+                        StagedOrderSetLineItemTotalPriceAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        StagedOrderSetLineItemTotalPriceAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "externalTotalPrice", StagedOrderSetLineItemTotalPriceAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) } };
     }
 

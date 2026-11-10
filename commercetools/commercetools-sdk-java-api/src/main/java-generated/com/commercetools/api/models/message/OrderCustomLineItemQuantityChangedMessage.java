@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change CustomLineItem Quantity</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemQuantityChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemQuantityChangedMessageImpl.class)
 public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage {
@@ -45,7 +47,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     String ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED = "OrderCustomLineItemQuantityChanged";
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     public String getCustomLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -61,7 +63,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return quantity
      */
     @NotNull
@@ -69,7 +71,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     public Long getQuantity();
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return oldQuantity
      */
     @NotNull
@@ -77,28 +79,28 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     public Long getOldQuantity();
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param oldQuantity value to be set
      */
 
@@ -136,6 +138,8 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
         instance.setOldQuantity(template.getOldQuantity());
         return instance;
     }
+
+    public OrderCustomLineItemQuantityChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemQuantityChangedMessage
@@ -201,8 +205,8 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemQuantityChangedMessage>";

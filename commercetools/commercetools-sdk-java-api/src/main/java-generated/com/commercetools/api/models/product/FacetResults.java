@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FacetResults
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FacetResultsImpl.class)
+@Deprecated
 public interface FacetResults {
 
     /**
@@ -37,6 +39,7 @@ public interface FacetResults {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonAnyGetter
     public Map<String, FacetResult> values();
 
@@ -45,7 +48,7 @@ public interface FacetResults {
      * @param key property name
      * @param value property value
      */
-
+    @Deprecated
     @JsonAnySetter
     public void setValue(String key, FacetResult value);
 
@@ -67,6 +70,8 @@ public interface FacetResults {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public FacetResults copyDeep();
 
     /**
      * factory method to create a deep copy of FacetResults
@@ -114,8 +119,8 @@ public interface FacetResults {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FacetResults> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FacetResults>() {
+    public static tools.jackson.core.type.TypeReference<FacetResults> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FacetResults>() {
             @Override
             public String toString() {
                 return "TypeReference<FacetResults>";

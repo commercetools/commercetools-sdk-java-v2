@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetCategoryOrderHintAction
@@ -58,7 +59,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getCategoryId() {
@@ -66,7 +67,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      */
 
     public String getOrderHint() {
@@ -74,7 +75,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -132,4 +133,8 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
                 .build();
     }
 
+    @Override
+    public ProductSetCategoryOrderHintAction copyDeep() {
+        return ProductSetCategoryOrderHintAction.deepCopy(this);
+    }
 }

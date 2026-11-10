@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the ProductTailoringUnpublished Message.</p>
+ *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringUnpublishedMessage" rel="nofollow">ProductTailoringUnpublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("unpublish")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringUnpublishActionImpl.class)
 public interface ProductTailoringUnpublishAction extends ProductTailoringUpdateAction {
@@ -50,6 +52,8 @@ public interface ProductTailoringUnpublishAction extends ProductTailoringUpdateA
         ProductTailoringUnpublishActionImpl instance = new ProductTailoringUnpublishActionImpl();
         return instance;
     }
+
+    public ProductTailoringUnpublishAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringUnpublishAction
@@ -96,8 +100,8 @@ public interface ProductTailoringUnpublishAction extends ProductTailoringUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUnpublishAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUnpublishAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringUnpublishAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringUnpublishAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringUnpublishAction>";

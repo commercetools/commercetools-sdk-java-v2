@@ -3,33 +3,26 @@ package com.commercetools.api.models.extension;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionUpdateBuilder builder) {
         ExtensionUpdate extensionUpdate = builder.buildUnchecked();
         Assertions.assertThat(extensionUpdate).isInstanceOf(ExtensionUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionUpdate.builder().version(2L) },
-                new Object[] { ExtensionUpdate.builder()
-                        .actions(Collections.singletonList(
-                            new com.commercetools.api.models.extension.ExtensionUpdateActionImpl())) } };
+        return new Object[][] { new Object[] { "version", ExtensionUpdate.builder().version(2L) },
+                new Object[] { "actions",
+                        ExtensionUpdate.builder()
+                                .actions(Collections.singletonList(
+                                    new com.commercetools.api.models.extension.ExtensionUpdateActionImpl())) } };
     }
 
     @Test

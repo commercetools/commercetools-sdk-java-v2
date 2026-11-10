@@ -12,16 +12,29 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creates an Order from a Cart in a BusinessUnit. The Cart must have a shipping address set before creating an Order. Creating an Order fails with an InvalidOperation if the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Creates an Order from a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
+ *  <p>The Cart must have a shipping address set, regardless of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
+ *  <p>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the shipping address is used for tax calculation.</p>
+ *  <p>If the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PriceChangedError" rel="nofollow">PriceChanged</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -79,8 +92,8 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/orders", this.projectKey,
-            this.associateId, this.businessUnitKey);
+        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/orders",
+            encodePathParam(this.projectKey), encodePathParam(this.associateId), encodePathParam(this.businessUnitKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

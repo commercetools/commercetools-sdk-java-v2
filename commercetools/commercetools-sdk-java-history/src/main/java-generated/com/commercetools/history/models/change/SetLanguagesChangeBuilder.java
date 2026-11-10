@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +30,10 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     private java.util.List<String> previousValue;
 
     private java.util.List<String> nextValue;
+
+    private java.util.List<String> addedItems;
+
+    private java.util.List<String> removedItems;
 
     /**
      * set the value to the change
@@ -113,6 +119,78 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder addedItems(final String... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder addedItems(final java.util.List<String> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder plusAddedItems(final String... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder removedItems(final String... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder removedItems(final java.util.List<String> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetLanguagesChangeBuilder plusRemovedItems(final String... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -140,6 +218,24 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<String> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<String> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetLanguagesChange with checking for non-null required values
      * @return SetLanguagesChange
      */
@@ -147,7 +243,9 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         Objects.requireNonNull(change, SetLanguagesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetLanguagesChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLanguagesChange.class + ": nextValue is missing");
-        return new SetLanguagesChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetLanguagesChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetLanguagesChange.class + ": removedItems is missing");
+        return new SetLanguagesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -155,7 +253,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
      * @return SetLanguagesChange
      */
     public SetLanguagesChange buildUnchecked() {
-        return new SetLanguagesChangeImpl(change, previousValue, nextValue);
+        return new SetLanguagesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -176,6 +274,8 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

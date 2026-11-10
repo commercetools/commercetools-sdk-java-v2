@@ -1,36 +1,37 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssetTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssetBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssetBuilder builder) {
         Asset asset = builder.buildUnchecked();
         Assertions.assertThat(asset).isInstanceOf(Asset.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Asset.builder().id("id") },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Asset.builder().id("id") },
+                new Object[] { "sources",
+                        Asset.builder()
+                                .sources(Collections.singletonList(
+                                    new com.commercetools.history.models.common.AssetSourceImpl())) },
+                new Object[] { "name",
                         Asset.builder().name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { Asset.builder()
-                        .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { Asset.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { Asset.builder().key("key") } };
+                new Object[] { "description",
+                        Asset.builder()
+                                .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "tags", Asset.builder().tags(Collections.singletonList("tags")) },
+                new Object[] { "custom",
+                        Asset.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "key", Asset.builder().key("key") } };
     }
 
     @Test
@@ -38,6 +39,14 @@ public class AssetTest {
         Asset value = Asset.of();
         value.setId("id");
         Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void sources() {
+        Asset value = Asset.of();
+        value.setSources(Collections.singletonList(new com.commercetools.history.models.common.AssetSourceImpl()));
+        Assertions.assertThat(value.getSources())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.AssetSourceImpl()));
     }
 
     @Test
@@ -54,6 +63,13 @@ public class AssetTest {
         value.setDescription(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getDescription())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void tags() {
+        Asset value = Asset.of();
+        value.setTags(Collections.singletonList("tags"));
+        Assertions.assertThat(value.getTags()).isEqualTo(Collections.singletonList("tags"));
     }
 
     @Test

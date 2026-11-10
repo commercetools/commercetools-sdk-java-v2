@@ -49,30 +49,6 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     /**
      *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemTaxCategoryChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -84,26 +60,14 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
-    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemTaxCategoryChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -120,7 +84,19 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -133,7 +109,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -145,7 +121,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -157,7 +133,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -195,7 +171,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
 
@@ -204,7 +180,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
 

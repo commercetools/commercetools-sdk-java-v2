@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Attribute type for LocalizedString values.</p>
+ *  <p>Attribute type for <a href="https://docs.commercetools.com/apis/ctp:api:type:LocalizedString" rel="nofollow">LocalizedString</a> type values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ltext")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeLocalizableTextTypeImpl.class)
 public interface AttributeLocalizableTextType extends AttributeType {
@@ -50,6 +52,8 @@ public interface AttributeLocalizableTextType extends AttributeType {
         AttributeLocalizableTextTypeImpl instance = new AttributeLocalizableTextTypeImpl();
         return instance;
     }
+
+    public AttributeLocalizableTextType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeLocalizableTextType
@@ -96,8 +100,8 @@ public interface AttributeLocalizableTextType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeLocalizableTextType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeLocalizableTextType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeLocalizableTextType>";

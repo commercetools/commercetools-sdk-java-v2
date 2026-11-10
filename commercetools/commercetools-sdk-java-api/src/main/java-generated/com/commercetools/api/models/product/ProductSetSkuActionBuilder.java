@@ -43,7 +43,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project. If omitted, any existing value is removed.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     *  <p>Whether only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project. If omitted, any existing value is removed.</p>
      * @return sku
      */
 
@@ -84,7 +84,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     *  <p>Whether only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
      * @return staged
      */
 

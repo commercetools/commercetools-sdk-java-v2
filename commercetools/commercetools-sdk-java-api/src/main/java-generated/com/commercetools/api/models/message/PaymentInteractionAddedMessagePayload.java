@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add InterfaceInteraction update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">Add InterfaceInteraction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentInteractionAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentInteractionAddedMessagePayloadImpl.class)
 public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
     String PAYMENT_INTERACTION_ADDED = "PaymentInteractionAdded";
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return interaction
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
     public CustomFields getInteraction();
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param interaction value to be set
      */
 
@@ -71,6 +73,8 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
         instance.setInteraction(template.getInteraction());
         return instance;
     }
+
+    public PaymentInteractionAddedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentInteractionAddedMessagePayload
@@ -120,8 +124,8 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentInteractionAddedMessagePayload>";

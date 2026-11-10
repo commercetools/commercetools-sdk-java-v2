@@ -11,17 +11,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creating a Discount Code produces the DiscountCodeCreated Message.</p>
- *  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
+ *  <p>Creating a Discount Code produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeCreatedMessage" rel="nofollow">DiscountCodeCreated</a> Message.</p>
+ *  <p>Deprecated OAuth 2.0 Scope: <code>manage_orders:{projectKey}</code></p>
  *
  * <hr>
  * <div class=code-example>
@@ -67,7 +67,7 @@ public class ByProjectKeyDiscountCodesPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/discount-codes", this.projectKey);
+        String httpRequestPath = String.format("%s/discount-codes", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -11,16 +11,22 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Retrieves an Order with the provided <code>id</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Orders exists in the Store with the provided <code>id</code>.</li>
+ *   <li>If an Order exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+ *   <li>If an Order exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -71,8 +77,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/orders/%s", this.projectKey, this.storeKey,
-            this.ID);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/orders/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey), encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

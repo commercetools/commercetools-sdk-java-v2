@@ -3,39 +3,35 @@ package com.commercetools.api.models.order_edit;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderTransitionLineItemStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderTransitionLineItemStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderTransitionLineItemStateActionBuilder builder) {
         StagedOrderTransitionLineItemStateAction stagedOrderTransitionLineItemStateAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderTransitionLineItemStateAction)
                 .isInstanceOf(StagedOrderTransitionLineItemStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder().lineItemId("lineItemId") },
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder().quantity(8L) },
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder()
-                        .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder()
-                        .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { StagedOrderTransitionLineItemStateAction.builder()
+                new Object[] { "lineItemId",
+                        StagedOrderTransitionLineItemStateAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        StagedOrderTransitionLineItemStateAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", StagedOrderTransitionLineItemStateAction.builder().quantity(8L) },
+                new Object[] { "fromState",
+                        StagedOrderTransitionLineItemStateAction.builder()
+                                .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "toState",
+                        StagedOrderTransitionLineItemStateAction.builder()
+                                .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "actualTransitionDate", StagedOrderTransitionLineItemStateAction.builder()
                         .actualTransitionDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

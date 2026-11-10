@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TypeChangeLabelAction
@@ -55,7 +56,7 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
     }
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      */
 
     public String getFieldName() {
@@ -63,7 +64,7 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
@@ -110,4 +111,8 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
                 .build();
     }
 
+    @Override
+    public TypeChangeLabelAction copyDeep() {
+        return TypeChangeLabelAction.deepCopy(this);
+    }
 }

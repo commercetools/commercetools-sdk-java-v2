@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class UpdateSyncInfoChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(UpdateSyncInfoChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, UpdateSyncInfoChangeBuilder builder) {
         UpdateSyncInfoChange updateSyncInfoChange = builder.buildUnchecked();
         Assertions.assertThat(updateSyncInfoChange).isInstanceOf(UpdateSyncInfoChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { UpdateSyncInfoChange.builder().change("change") },
-                new Object[] { UpdateSyncInfoChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.SyncInfoImpl()) },
-                new Object[] { UpdateSyncInfoChange.builder().channelId("channelId") } };
+        return new Object[][] { new Object[] { "change", UpdateSyncInfoChange.builder().change("change") },
+                new Object[] { "nextValue",
+                        UpdateSyncInfoChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.SyncInfoImpl()) },
+                new Object[] { "channelId", UpdateSyncInfoChange.builder().channelId("channelId") } };
     }
 
     @Test

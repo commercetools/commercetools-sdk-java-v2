@@ -77,7 +77,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *  <p><code>id</code> of the updated Channel.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channelId value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *  <p><code>id</code> of the updated Channel.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channelId
      */
 

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategoryChangeOrderHintAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeOrderHint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeOrderHintActionImpl.class)
 public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
@@ -36,7 +38,7 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
     String CHANGE_ORDER_HINT = "changeOrderHint";
 
     /**
-     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     *  <p>New value to set. Must be a decimal value between 0 and 1. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @return orderHint
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
     public String getOrderHint();
 
     /**
-     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     *  <p>New value to set. Must be a decimal value between 0 and 1. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @param orderHint value to be set
      */
 
@@ -68,6 +70,8 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
         instance.setOrderHint(template.getOrderHint());
         return instance;
     }
+
+    public CategoryChangeOrderHintAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryChangeOrderHintAction
@@ -115,8 +119,8 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction>() {
+    public static tools.jackson.core.type.TypeReference<CategoryChangeOrderHintAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryChangeOrderHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryChangeOrderHintAction>";

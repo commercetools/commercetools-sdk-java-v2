@@ -184,7 +184,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit as billing address.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> as billing address.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit as billing address.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> as billing address.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit as billing address.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> as billing address.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -387,7 +387,7 @@ public class BusinessUnitBillingAddressAddedMessageBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit as billing address.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> as billing address.</p>
      * @return address
      */
 

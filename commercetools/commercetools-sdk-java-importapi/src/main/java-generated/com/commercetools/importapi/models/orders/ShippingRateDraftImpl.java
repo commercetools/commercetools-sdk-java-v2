@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingRateDraft
@@ -47,7 +48,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getPrice() {
@@ -55,7 +56,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getFreeAbove() {
@@ -63,7 +64,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
@@ -118,4 +119,8 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShippingRateDraft copyDeep() {
+        return ShippingRateDraft.deepCopy(this);
+    }
 }

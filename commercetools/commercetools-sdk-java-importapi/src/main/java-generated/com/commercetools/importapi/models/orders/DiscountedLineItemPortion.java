@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.CartDiscountKeyReference;
 import com.commercetools.importapi.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPortion
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPortion {
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @return discount
      */
     @NotNull
@@ -44,7 +45,7 @@ public interface DiscountedLineItemPortion {
     public CartDiscountKeyReference getDiscount();
 
     /**
-     *
+     *  <p>Money value for the discount applicable.</p>
      * @return discountedAmount
      */
     @NotNull
@@ -53,14 +54,14 @@ public interface DiscountedLineItemPortion {
     public Money getDiscountedAmount();
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @param discount value to be set
      */
 
     public void setDiscount(final CartDiscountKeyReference discount);
 
     /**
-     * set discountedAmount
+     *  <p>Money value for the discount applicable.</p>
      * @param discountedAmount value to be set
      */
 
@@ -85,6 +86,8 @@ public interface DiscountedLineItemPortion {
         instance.setDiscountedAmount(template.getDiscountedAmount());
         return instance;
     }
+
+    public DiscountedLineItemPortion copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountedLineItemPortion
@@ -135,8 +138,8 @@ public interface DiscountedLineItemPortion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPortion>";

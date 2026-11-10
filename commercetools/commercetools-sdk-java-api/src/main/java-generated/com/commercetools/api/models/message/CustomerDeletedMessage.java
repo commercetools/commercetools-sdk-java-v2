@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete Customer request.</p>
+ *  <p>Generated after a successful <span>Delete Customer</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerDeletedMessageImpl.class)
 public interface CustomerDeletedMessage extends Message {
@@ -39,6 +41,21 @@ public interface CustomerDeletedMessage extends Message {
      * discriminator value for CustomerDeletedMessage
      */
     String CUSTOMER_DELETED = "CustomerDeleted";
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @return email
+     */
+
+    @JsonProperty("email")
+    public String getEmail();
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @param email value to be set
+     */
+
+    public void setEmail(final String email);
 
     /**
      * factory method
@@ -65,8 +82,11 @@ public interface CustomerDeletedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public CustomerDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerDeletedMessage
@@ -91,6 +111,7 @@ public interface CustomerDeletedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setEmail(template.getEmail());
         return instance;
     }
 
@@ -125,8 +146,8 @@ public interface CustomerDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerDeletedMessage>";

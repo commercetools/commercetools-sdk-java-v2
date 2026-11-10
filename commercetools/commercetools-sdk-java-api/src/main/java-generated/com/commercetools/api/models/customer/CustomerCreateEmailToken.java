@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerCreateEmailToken
@@ -56,6 +57,14 @@ public interface CustomerCreateEmailToken {
     public Long getTtlMinutes();
 
     /**
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      */
@@ -77,6 +86,13 @@ public interface CustomerCreateEmailToken {
     public void setTtlMinutes(final Long ttlMinutes);
 
     /**
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
+
+    /**
      * factory method
      * @return instance of CustomerCreateEmailToken
      */
@@ -94,8 +110,11 @@ public interface CustomerCreateEmailToken {
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
+
+    public CustomerCreateEmailToken copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerCreateEmailToken
@@ -111,6 +130,7 @@ public interface CustomerCreateEmailToken {
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -145,8 +165,8 @@ public interface CustomerCreateEmailToken {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerCreateEmailToken> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerCreateEmailToken>() {
+    public static tools.jackson.core.type.TypeReference<CustomerCreateEmailToken> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerCreateEmailToken>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerCreateEmailToken>";

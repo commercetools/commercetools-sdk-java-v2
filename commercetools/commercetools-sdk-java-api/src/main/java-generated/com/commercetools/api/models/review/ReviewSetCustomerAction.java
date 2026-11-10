@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewSetCustomerAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomer")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetCustomerActionImpl.class)
 public interface ReviewSetCustomerAction extends ReviewUpdateAction {
@@ -36,7 +38,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return customer
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param customer value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public ReviewSetCustomerAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetCustomerAction
@@ -120,8 +124,8 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomerAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomerAction>() {
+    public static tools.jackson.core.type.TypeReference<ReviewSetCustomerAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewSetCustomerAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewSetCustomerAction>";

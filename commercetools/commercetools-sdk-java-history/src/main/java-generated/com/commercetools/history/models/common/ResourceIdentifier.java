@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ResourceIdentifier
@@ -21,9 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
- *             .id("{id}")
- *             .key("{key}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>
@@ -36,7 +35,7 @@ public interface ResourceIdentifier {
      *
      * @return id
      */
-    @NotNull
+
     @JsonProperty("id")
     public String getId();
 
@@ -44,12 +43,12 @@ public interface ResourceIdentifier {
      *
      * @return key
      */
-    @NotNull
+
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @return typeId
      */
     @NotNull
@@ -71,7 +70,7 @@ public interface ResourceIdentifier {
     public void setKey(final String key);
 
     /**
-     * set typeId
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @param typeId value to be set
      */
 
@@ -98,6 +97,8 @@ public interface ResourceIdentifier {
         return instance;
     }
 
+    public ResourceIdentifier copyDeep();
+
     /**
      * factory method to create a deep copy of ResourceIdentifier
      * @param template instance to be copied
@@ -107,6 +108,10 @@ public interface ResourceIdentifier {
     public static ResourceIdentifier deepCopy(@Nullable final ResourceIdentifier template) {
         if (template == null) {
             return null;
+        }
+
+        if (!(template instanceof ResourceIdentifierImpl)) {
+            return template.copyDeep();
         }
         ResourceIdentifierImpl instance = new ResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -146,8 +151,8 @@ public interface ResourceIdentifier {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<ResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<ResourceIdentifier>";

@@ -25,7 +25,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return stores
      */
 

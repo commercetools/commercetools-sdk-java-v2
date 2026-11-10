@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.DeliveryDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Wraps all shipping-related information (such as address, rate, deliveries) per Shipping Method for Carts with multiple Shipping Methods.</p>
@@ -39,7 +40,7 @@ public interface ShippingDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShippingDraft> {
 
     /**
-     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return key
      */
     @NotNull
@@ -47,7 +48,7 @@ public interface ShippingDraft
     public String getKey();
 
     /**
-     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingMethod
      */
     @Valid
@@ -64,10 +65,10 @@ public interface ShippingDraft
     public BaseAddress getShippingAddress();
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @return shippingRateInput
@@ -77,7 +78,7 @@ public interface ShippingDraft
     public ShippingRateInputDraft getShippingRateInput();
 
     /**
-     *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -101,14 +102,14 @@ public interface ShippingDraft
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingMethod value to be set
      */
 
@@ -122,10 +123,10 @@ public interface ShippingDraft
     public void setShippingAddress(final BaseAddress shippingAddress);
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -134,7 +135,7 @@ public interface ShippingDraft
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
     /**
-     *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -186,6 +187,8 @@ public interface ShippingDraft
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public ShippingDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingDraft
@@ -247,8 +250,8 @@ public interface ShippingDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingDraft>";

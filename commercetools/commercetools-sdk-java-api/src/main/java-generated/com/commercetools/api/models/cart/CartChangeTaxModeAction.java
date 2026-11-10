@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <ul>
- *   <li>When <code>External</code> TaxMode is changed to <code>Platform</code> or <code>Disabled</code>, all previously set external Tax Rates are removed.</li>
+ *   <li>When <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is changed to <code>Platform</code> or <code>Disabled</code>, all previously set external Tax Rates are removed.</li>
  *   <li>When set to <code>Platform</code>, Line Items, Custom Line Items, and Shipping Method require a Tax Category with a Tax Rate for the Cart's <code>shippingAddress</code>.</li>
  *  </ul>
  *
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTaxMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartChangeTaxModeActionImpl.class)
 public interface CartChangeTaxModeAction extends CartUpdateAction {
@@ -71,6 +73,8 @@ public interface CartChangeTaxModeAction extends CartUpdateAction {
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
+
+    public CartChangeTaxModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartChangeTaxModeAction
@@ -118,8 +122,8 @@ public interface CartChangeTaxModeAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxModeAction>() {
+    public static tools.jackson.core.type.TypeReference<CartChangeTaxModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartChangeTaxModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartChangeTaxModeAction>";

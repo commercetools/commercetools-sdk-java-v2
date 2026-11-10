@@ -30,7 +30,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     private com.commercetools.importapi.models.common.Address address;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which Parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which Parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     * set the value to the address
+     *  <p>Address to which Parcels are delivered.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
 
@@ -86,7 +86,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     * value of address}
+     *  <p>Address to which Parcels are delivered.</p>
      * @return address
      */
 

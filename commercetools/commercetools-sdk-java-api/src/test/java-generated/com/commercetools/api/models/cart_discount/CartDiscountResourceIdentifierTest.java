@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDiscountResourceIdentifierTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDiscountResourceIdentifierBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDiscountResourceIdentifierBuilder builder) {
         CartDiscountResourceIdentifier cartDiscountResourceIdentifier = builder.buildUnchecked();
         Assertions.assertThat(cartDiscountResourceIdentifier).isInstanceOf(CartDiscountResourceIdentifier.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartDiscountResourceIdentifier.builder().id("id") },
-                new Object[] { CartDiscountResourceIdentifier.builder().key("key") } };
+        return new Object[][] { new Object[] { "id", CartDiscountResourceIdentifier.builder().id("id") },
+                new Object[] { "key", CartDiscountResourceIdentifier.builder().key("key") } };
     }
 
     @Test

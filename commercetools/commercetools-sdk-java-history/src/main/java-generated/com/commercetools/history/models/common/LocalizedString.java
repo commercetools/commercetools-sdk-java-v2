@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * LocalizedString
+ *  <p>JSON object where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>, and the values are the strings used for the corresponding language.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LocalizedString {
 
     /**
-     *
+     *  <p>String used for the specified language.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -39,7 +40,7 @@ public interface LocalizedString {
     public Map<String, String> values();
 
     /**
-     * set pattern property
+     *  <p>String used for the specified language.</p>
      * @param key property name
      * @param value property value
      */
@@ -65,6 +66,8 @@ public interface LocalizedString {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public LocalizedString copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizedString
@@ -112,8 +115,8 @@ public interface LocalizedString {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedString> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedString>() {
+    public static tools.jackson.core.type.TypeReference<LocalizedString> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizedString>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizedString>";

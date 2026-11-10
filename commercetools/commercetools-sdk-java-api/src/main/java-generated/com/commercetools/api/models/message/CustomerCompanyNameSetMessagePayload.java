@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Company Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerCompanyNameSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerCompanyNameSetMessagePayloadImpl.class)
 public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
@@ -34,7 +36,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @return companyName
      */
 
@@ -42,7 +44,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     public String getCompanyName();
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @param companyName value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
+
+    public CustomerCompanyNameSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerCompanyNameSetMessagePayload
@@ -115,8 +119,8 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerCompanyNameSetMessagePayload>";

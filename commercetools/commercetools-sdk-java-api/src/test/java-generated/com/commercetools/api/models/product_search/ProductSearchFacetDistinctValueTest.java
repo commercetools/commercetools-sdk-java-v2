@@ -3,50 +3,45 @@ package com.commercetools.api.models.product_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchFacetDistinctValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchFacetDistinctValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchFacetDistinctValueBuilder builder) {
         ProductSearchFacetDistinctValue productSearchFacetDistinctValue = builder.buildUnchecked();
         Assertions.assertThat(productSearchFacetDistinctValue).isInstanceOf(ProductSearchFacetDistinctValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSearchFacetDistinctValue.builder().name("name") },
-                new Object[] {
+        return new Object[][] { new Object[] { "name", ProductSearchFacetDistinctValue.builder().name("name") },
+                new Object[] { "scope",
                         ProductSearchFacetDistinctValue.builder()
                                 .scope(com.commercetools.api.models.product_search.ProductSearchFacetScopeEnum
                                         .findEnum("all")) },
-                new Object[] { ProductSearchFacetDistinctValue.builder()
-                        .filter(new com.commercetools.api.models.search.SearchQueryImpl()) },
-                new Object[] { ProductSearchFacetDistinctValue.builder()
-                        .level(com.commercetools.api.models.product_search.ProductSearchFacetCountLevelEnum
-                                .findEnum("products")) },
-                new Object[] { ProductSearchFacetDistinctValue.builder().field("field") },
-                new Object[] {
+                new Object[] { "filter",
+                        ProductSearchFacetDistinctValue.builder()
+                                .filter(new com.commercetools.api.models.search.SearchQueryImpl()) },
+                new Object[] { "level",
+                        ProductSearchFacetDistinctValue.builder()
+                                .level(com.commercetools.api.models.product_search.ProductSearchFacetCountLevelEnum
+                                        .findEnum("products")) },
+                new Object[] { "field", ProductSearchFacetDistinctValue.builder().field("field") },
+                new Object[] { "includes",
                         ProductSearchFacetDistinctValue.builder().includes(Collections.singletonList("includes")) },
-                new Object[] { ProductSearchFacetDistinctValue.builder()
+                new Object[] { "sort", ProductSearchFacetDistinctValue.builder()
                         .sort(
                             new com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionImpl()) },
-                new Object[] { ProductSearchFacetDistinctValue.builder().limit(7) },
-                new Object[] { ProductSearchFacetDistinctValue.builder().language("language") },
-                new Object[] { ProductSearchFacetDistinctValue.builder()
-                        .fieldType(com.commercetools.api.models.search.SearchFieldType.findEnum("boolean")) },
-                new Object[] { ProductSearchFacetDistinctValue.builder().missing("missing") } };
+                new Object[] { "limit", ProductSearchFacetDistinctValue.builder().limit(7) },
+                new Object[] { "language", ProductSearchFacetDistinctValue.builder().language("language") },
+                new Object[] { "fieldType",
+                        ProductSearchFacetDistinctValue.builder()
+                                .fieldType(com.commercetools.api.models.search.SearchFieldType.findEnum("boolean")) },
+                new Object[] { "missing", ProductSearchFacetDistinctValue.builder().missing("missing") } };
     }
 
     @Test

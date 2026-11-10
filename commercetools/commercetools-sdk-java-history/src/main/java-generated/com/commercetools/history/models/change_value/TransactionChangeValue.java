@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TransactionChangeValue
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TransactionChangeValue {
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,7 +58,7 @@ public interface TransactionChangeValue {
     public String getTimestamp();
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param id value to be set
      */
 
@@ -97,6 +98,8 @@ public interface TransactionChangeValue {
         instance.setTimestamp(template.getTimestamp());
         return instance;
     }
+
+    public TransactionChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of TransactionChangeValue
@@ -146,8 +149,8 @@ public interface TransactionChangeValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<TransactionChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransactionChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<TransactionChangeValue>";

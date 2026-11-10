@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetMethodInfoNameAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetMethodInfoNameActionImpl.class)
 public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
@@ -36,7 +38,7 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_NAME = "setMethodInfoName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return name
      */
     @Valid
@@ -44,7 +46,7 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param name value to be set
      */
 
@@ -68,6 +70,8 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public PaymentSetMethodInfoNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetMethodInfoNameAction
@@ -115,8 +119,8 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoNameAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetMethodInfoNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetMethodInfoNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetMethodInfoNameAction>";

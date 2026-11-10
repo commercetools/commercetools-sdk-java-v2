@@ -3,37 +3,32 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderCustomLineItemDiscountSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderCustomLineItemDiscountSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderCustomLineItemDiscountSetMessageBuilder builder) {
         OrderCustomLineItemDiscountSetMessage orderCustomLineItemDiscountSetMessage = builder.buildUnchecked();
         Assertions.assertThat(orderCustomLineItemDiscountSetMessage)
                 .isInstanceOf(OrderCustomLineItemDiscountSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderCustomLineItemDiscountSetMessage.builder().customLineItemId("customLineItemId") },
-                new Object[] { OrderCustomLineItemDiscountSetMessage.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { OrderCustomLineItemDiscountSetMessage.builder()
-                        .discountedPricePerQuantity(Collections.singletonList(
-                            new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
-                new Object[] { OrderCustomLineItemDiscountSetMessage.builder()
+                new Object[] { "customLineItemId",
+                        OrderCustomLineItemDiscountSetMessage.builder().customLineItemId("customLineItemId") },
+                new Object[] { "customLineItemKey",
+                        OrderCustomLineItemDiscountSetMessage.builder().customLineItemKey("customLineItemKey") },
+                new Object[] { "discountedPricePerQuantity",
+                        OrderCustomLineItemDiscountSetMessage.builder()
+                                .discountedPricePerQuantity(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
+                new Object[] { "taxedPrice", OrderCustomLineItemDiscountSetMessage.builder()
                         .taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) } };
     }
 

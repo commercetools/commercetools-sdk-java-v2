@@ -3,32 +3,30 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeGroupsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeGroupsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeGroupsChangeBuilder builder) {
         ChangeGroupsChange changeGroupsChange = builder.buildUnchecked();
         Assertions.assertThat(changeGroupsChange).isInstanceOf(ChangeGroupsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeGroupsChange.builder().change("change") },
-                new Object[] { ChangeGroupsChange.builder().previousValue(Collections.singletonList("previousValue")) },
-                new Object[] { ChangeGroupsChange.builder().nextValue(Collections.singletonList("nextValue")) } };
+        return new Object[][] { new Object[] { "change", ChangeGroupsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeGroupsChange.builder().previousValue(Collections.singletonList("previousValue")) },
+                new Object[] { "nextValue",
+                        ChangeGroupsChange.builder().nextValue(Collections.singletonList("nextValue")) },
+                new Object[] { "addedItems",
+                        ChangeGroupsChange.builder().addedItems(Collections.singletonList("addedItems")) },
+                new Object[] { "removedItems",
+                        ChangeGroupsChange.builder().removedItems(Collections.singletonList("removedItems")) } };
     }
 
     @Test
@@ -50,5 +48,19 @@ public class ChangeGroupsChangeTest {
         ChangeGroupsChange value = ChangeGroupsChange.of();
         value.setNextValue(Collections.singletonList("nextValue"));
         Assertions.assertThat(value.getNextValue()).isEqualTo(Collections.singletonList("nextValue"));
+    }
+
+    @Test
+    public void addedItems() {
+        ChangeGroupsChange value = ChangeGroupsChange.of();
+        value.setAddedItems(Collections.singletonList("addedItems"));
+        Assertions.assertThat(value.getAddedItems()).isEqualTo(Collections.singletonList("addedItems"));
+    }
+
+    @Test
+    public void removedItems() {
+        ChangeGroupsChange value = ChangeGroupsChange.of();
+        value.setRemovedItems(Collections.singletonList("removedItems"));
+        Assertions.assertThat(value.getRemovedItems()).isEqualTo(Collections.singletonList("removedItems"));
     }
 }

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetInterfaceIdAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInterfaceIdSetMessage" rel="nofollow">PaymentInterfaceIdSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAction, ModelBase {
@@ -51,7 +52,8 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
     }
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      */
 
     public String getInterfaceId() {
@@ -91,4 +93,8 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
                 .build();
     }
 
+    @Override
+    public PaymentSetInterfaceIdAction copyDeep() {
+        return PaymentSetInterfaceIdAction.deepCopy(this);
+    }
 }

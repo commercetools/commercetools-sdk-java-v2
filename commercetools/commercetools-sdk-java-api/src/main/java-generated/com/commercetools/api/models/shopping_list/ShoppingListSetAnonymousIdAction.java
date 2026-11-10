@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * ShoppingListSetAnonymousIdAction
+ *  <p>If the Shopping List is already associated with a Customer, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAnonymousId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListSetAnonymousIdActionImpl.class)
 public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateAction {
@@ -34,7 +36,7 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return anonymousId
      */
 
@@ -42,7 +44,7 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
     public String getAnonymousId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param anonymousId value to be set
      */
 
@@ -66,6 +68,8 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public ShoppingListSetAnonymousIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListSetAnonymousIdAction
@@ -113,8 +117,8 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListSetAnonymousIdAction>";

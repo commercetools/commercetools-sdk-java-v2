@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the DeliveryAddressSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddressSetMessage" rel="nofollow">DeliveryAddressSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDeliveryAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetDeliveryAddressActionImpl.class)
 public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAction {
@@ -37,7 +39,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     String SET_DELIVERY_ADDRESS = "setDeliveryAddress";
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -46,7 +48,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public String getDeliveryId();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -55,7 +57,8 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public String getDeliveryKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -63,7 +66,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public BaseAddress getAddress();
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
@@ -71,7 +74,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
@@ -79,7 +82,8 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 
@@ -105,6 +109,8 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public StagedOrderSetDeliveryAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetDeliveryAddressAction
@@ -160,8 +166,8 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetDeliveryAddressAction>";

@@ -26,7 +26,7 @@ public class StandalonePriceStagedChangesRemovedMessagePayloadBuilder
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges;
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StandalonePriceStagedChangesRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class StandalonePriceStagedChangesRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class StandalonePriceStagedChangesRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
 

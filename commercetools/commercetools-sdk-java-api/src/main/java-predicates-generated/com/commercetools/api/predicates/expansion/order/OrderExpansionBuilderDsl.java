@@ -102,6 +102,11 @@ public class OrderExpansionBuilderDsl implements ExpansionDsl {
                 .of(appendOne(path, "quote"));
     }
 
+    public com.commercetools.api.predicates.expansion.recurring_order.RecurringOrderReferenceExpansionBuilderDsl recurringOrder() {
+        return com.commercetools.api.predicates.expansion.recurring_order.RecurringOrderReferenceExpansionBuilderDsl
+                .of(appendOne(path, "recurringOrder"));
+    }
+
     public com.commercetools.api.predicates.expansion.state.StateReferenceExpansionBuilderDsl state() {
         return com.commercetools.api.predicates.expansion.state.StateReferenceExpansionBuilderDsl
                 .of(appendOne(path, "state"));

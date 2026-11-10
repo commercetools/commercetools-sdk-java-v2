@@ -7,18 +7,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
- *  <p>This action generates a CartDiscountStoresSet Message.</p>
+ *  <p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoresSetMessage" rel="nofollow">CartDiscountStoresSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStores")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetStoresActionImpl.class)
 public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
@@ -40,12 +42,9 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     String SET_STORES = "setStores";
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @return stores
      */
     @NotNull
@@ -54,12 +53,9 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores values to be set
      */
 
@@ -67,12 +63,9 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores values to be set
      */
 
@@ -96,6 +89,8 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public CartDiscountSetStoresAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountSetStoresAction
@@ -147,8 +142,8 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetStoresAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetStoresAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountSetStoresAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountSetStoresAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountSetStoresAction>";

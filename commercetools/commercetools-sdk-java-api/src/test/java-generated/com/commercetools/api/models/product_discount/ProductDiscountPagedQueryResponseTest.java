@@ -3,36 +3,29 @@ package com.commercetools.api.models.product_discount;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductDiscountPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductDiscountPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductDiscountPagedQueryResponseBuilder builder) {
         ProductDiscountPagedQueryResponse productDiscountPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(productDiscountPagedQueryResponse).isInstanceOf(ProductDiscountPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductDiscountPagedQueryResponse.builder().limit(7L) },
-                new Object[] { ProductDiscountPagedQueryResponse.builder().offset(3L) },
-                new Object[] { ProductDiscountPagedQueryResponse.builder().count(2L) },
-                new Object[] { ProductDiscountPagedQueryResponse.builder().total(1L) },
-                new Object[] { ProductDiscountPagedQueryResponse.builder()
-                        .results(Collections.singletonList(
-                            new com.commercetools.api.models.product_discount.ProductDiscountImpl())) } };
+        return new Object[][] { new Object[] { "limit", ProductDiscountPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", ProductDiscountPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", ProductDiscountPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ProductDiscountPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        ProductDiscountPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.product_discount.ProductDiscountImpl())) } };
     }
 
     @Test

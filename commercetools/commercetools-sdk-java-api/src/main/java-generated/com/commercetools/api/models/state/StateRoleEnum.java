@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StateRoleEnum extends JsonEnum {
 
     /**
-    <p>If a Review's <code>state</code> has this role its <code>rating</code> is taken into account for ReviewRatingStatistics. This role only applies for the <code>ReviewState</code> StateTypeEnum.</p> */
+    <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review's</a> <code>state</code> has this role its <code>rating</code> is taken into account for <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewRatingStatistics" rel="nofollow">ReviewRatingStatistics</a>. This role only applies for the <code>ReviewState</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateTypeEnum</a>.</p> */
     StateRoleEnum REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnumEnum.REVIEW_INCLUDED_IN_STATISTICS;
     /**
-    <p>Used by Orders in the update action transitionLineItemState. This role only applies for the <code>LineItemState</code> StateTypeEnum.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> in the update action <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionLineItemStateAction" rel="nofollow">transitionLineItemState</a>. This role only applies for the <code>LineItemState</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateTypeEnum</a>.</p> */
     StateRoleEnum RETURN = StateRoleEnumEnum.RETURN;
 
     /**

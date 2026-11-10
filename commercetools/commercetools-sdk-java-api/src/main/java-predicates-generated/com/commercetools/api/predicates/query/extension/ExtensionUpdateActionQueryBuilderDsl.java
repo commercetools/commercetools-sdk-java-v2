@@ -35,6 +35,29 @@ public class ExtensionUpdateActionQueryBuilderDsl {
             ExtensionUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> asSetAdditionalContext(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionSetAdditionalContextActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionSetAdditionalContextActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.extension.ExtensionSetAdditionalContextActionQueryBuilderDsl.of()),
+            ExtensionUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> asSetDependencies(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionSetDependenciesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionSetDependenciesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.extension.ExtensionSetDependenciesActionQueryBuilderDsl.of()),
+            ExtensionUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> asSetExpansionPaths(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionSetExpansionPathsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionSetExpansionPathsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.extension.ExtensionSetExpansionPathsActionQueryBuilderDsl.of()),
+            ExtensionUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.extension.ExtensionSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

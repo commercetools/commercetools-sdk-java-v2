@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TrackingData
@@ -54,7 +55,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Identifier to track the Parcel.</p>
      */
 
     public String getTrackingId() {
@@ -62,7 +63,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      */
 
     public String getCarrier() {
@@ -70,7 +71,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      */
 
     public String getProvider() {
@@ -78,7 +79,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      */
 
     public String getProviderTransaction() {
@@ -86,7 +87,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      */
 
     public Boolean getIsReturn() {
@@ -156,4 +157,8 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .build();
     }
 
+    @Override
+    public TrackingData copyDeep() {
+        return TrackingData.deepCopy(this);
+    }
 }

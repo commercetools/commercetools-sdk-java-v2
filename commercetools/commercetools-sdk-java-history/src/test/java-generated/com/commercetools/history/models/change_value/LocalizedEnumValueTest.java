@@ -1,31 +1,23 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LocalizedEnumValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LocalizedEnumValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LocalizedEnumValueBuilder builder) {
         LocalizedEnumValue localizedEnumValue = builder.buildUnchecked();
         Assertions.assertThat(localizedEnumValue).isInstanceOf(LocalizedEnumValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LocalizedEnumValue.builder().key("key") },
-                new Object[] { LocalizedEnumValue.builder()
+        return new Object[][] { new Object[] { "key", LocalizedEnumValue.builder().key("key") },
+                new Object[] { "label", LocalizedEnumValue.builder()
                         .label(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
     }
 

@@ -29,7 +29,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param category value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @return category
      */
 
@@ -85,7 +85,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

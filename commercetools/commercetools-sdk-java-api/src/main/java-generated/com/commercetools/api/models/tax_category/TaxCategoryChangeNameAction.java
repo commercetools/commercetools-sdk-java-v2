@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxCategoryChangeNameAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryChangeNameActionImpl.class)
 public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
@@ -36,7 +38,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     public String getName();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param name value to be set
      */
 
@@ -68,6 +72,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public TaxCategoryChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryChangeNameAction
@@ -115,8 +121,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategoryChangeNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategoryChangeNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategoryChangeNameAction>";

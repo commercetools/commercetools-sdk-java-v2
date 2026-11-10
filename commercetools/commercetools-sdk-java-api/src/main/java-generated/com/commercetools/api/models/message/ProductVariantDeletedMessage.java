@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductVariant;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove ProductVariant update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove ProductVariant</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,10 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductVariantDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantDeletedMessageImpl.class)
 public interface ProductVariantDeletedMessage extends Message {
@@ -45,7 +48,7 @@ public interface ProductVariantDeletedMessage extends Message {
     String PRODUCT_VARIANT_DELETED = "ProductVariantDeleted";
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
     @Valid
@@ -53,7 +56,7 @@ public interface ProductVariantDeletedMessage extends Message {
     public ProductVariant getVariant();
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -61,14 +64,22 @@ public interface ProductVariantDeletedMessage extends Message {
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @return staged
+     */
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final ProductVariant variant);
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -76,11 +87,18 @@ public interface ProductVariantDeletedMessage extends Message {
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
     public void setRemovedImageUrls(final List<String> removedImageUrls);
+
+    /**
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final Boolean staged);
 
     /**
      * factory method
@@ -109,8 +127,11 @@ public interface ProductVariantDeletedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setVariant(template.getVariant());
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductVariantDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantDeletedMessage
@@ -138,6 +159,7 @@ public interface ProductVariantDeletedMessage extends Message {
         instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setStaged(template.getStaged());
         return instance;
     }
 
@@ -172,8 +194,8 @@ public interface ProductVariantDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantDeletedMessage>";

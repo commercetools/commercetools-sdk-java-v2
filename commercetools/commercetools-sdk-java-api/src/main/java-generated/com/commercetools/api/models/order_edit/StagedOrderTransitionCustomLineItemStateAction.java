@@ -7,18 +7,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the Custom Line Item State Transition Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemStateTransitionMessage" rel="nofollow">Custom Line Item State Transition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("transitionCustomLineItemState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderTransitionCustomLineItemStateActionImpl.class)
 public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOrderUpdateAction {
@@ -42,7 +44,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -50,7 +52,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public String getCustomLineItemId();
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -58,7 +60,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Number of Custom Line Items that should transition State.</p>
+     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
     @NotNull
@@ -66,7 +68,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public Long getQuantity();
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @return fromState
      */
     @NotNull
@@ -75,7 +77,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @return toState
      */
     @NotNull
@@ -84,7 +86,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getToState();
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @return actualTransitionDate
      */
 
@@ -92,42 +94,42 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public ZonedDateTime getActualTransitionDate();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Number of Custom Line Items that should transition State.</p>
+     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @param fromState value to be set
      */
 
     public void setFromState(final StateResourceIdentifier fromState);
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @param toState value to be set
      */
 
     public void setToState(final StateResourceIdentifier toState);
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @param actualTransitionDate value to be set
      */
 
@@ -157,6 +159,8 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }
+
+    public StagedOrderTransitionCustomLineItemStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderTransitionCustomLineItemStateAction
@@ -213,8 +217,8 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderTransitionCustomLineItemStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderTransitionCustomLineItemStateAction>";

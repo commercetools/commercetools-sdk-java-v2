@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderFromQuoteDraft
@@ -68,7 +69,8 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Quote from which the Order is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a> and must be valid (not past the <code>validTo</code> date).</p>
      */
 
     public com.commercetools.api.models.quote.QuoteResourceIdentifier getQuote() {
@@ -76,7 +78,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -84,7 +86,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
      */
 
     public Boolean getQuoteStateToAccepted() {
@@ -218,4 +220,8 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderFromQuoteDraft copyDeep() {
+        return OrderFromQuoteDraft.deepCopy(this);
+    }
 }

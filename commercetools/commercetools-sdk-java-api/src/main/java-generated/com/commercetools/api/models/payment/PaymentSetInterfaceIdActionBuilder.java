@@ -24,7 +24,8 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
     private String interfaceId;
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      * @param interfaceId value to be set
      * @return Builder
      */
@@ -35,7 +36,8 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
     }
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      * @return interfaceId
      */
 

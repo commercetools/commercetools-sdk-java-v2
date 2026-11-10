@@ -37,6 +37,9 @@ public interface ShipmentState extends JsonEnum {
     /**
     <p>Indicates that items in the Order are not in stock and will be delivered once the items are restocked.</p> */
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
+    /**
+    <p>Indicates that the shipment of the Order is canceled.</p> */
+    ShipmentState CANCELED = ShipmentStateEnum.CANCELED;
 
     /**
      * possible values of ShipmentState
@@ -75,7 +78,12 @@ public interface ShipmentState extends JsonEnum {
         /**
          * Backorder
          */
-        BACKORDER("Backorder");
+        BACKORDER("Backorder"),
+
+        /**
+         * Canceled
+         */
+        CANCELED("Canceled");
         private final String jsonName;
 
         private ShipmentStateEnum(final String jsonName) {

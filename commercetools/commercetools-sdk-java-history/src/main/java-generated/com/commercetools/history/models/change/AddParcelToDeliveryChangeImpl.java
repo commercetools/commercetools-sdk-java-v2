@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Add Parcel on Orders.</li>
- *   <li>Add Parcel on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddParcelToDeliveryAction" rel="nofollow">Add Parcel</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddParcelToDeliveryAction" rel="nofollow">Add Parcel</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -34,16 +35,20 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
 
     private String deliveryId;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddParcelToDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Parcel nextValue,
-            @JsonProperty("deliveryId") final String deliveryId) {
+            @JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.nextValue = nextValue;
         this.deliveryId = deliveryId;
+        this.shippingKey = shippingKey;
         this.type = ADD_PARCEL_TO_DELIVERY_CHANGE;
     }
 
@@ -79,11 +84,19 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setChange(final String change) {
@@ -96,6 +109,10 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -112,10 +129,12 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -125,6 +144,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
                 .append(change)
                 .append(nextValue)
                 .append(deliveryId)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -134,7 +154,12 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
                 .append("change", change)
                 .append("nextValue", nextValue)
                 .append("deliveryId", deliveryId)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 
+    @Override
+    public AddParcelToDeliveryChange copyDeep() {
+        return AddParcelToDeliveryChange.deepCopy(this);
+    }
 }

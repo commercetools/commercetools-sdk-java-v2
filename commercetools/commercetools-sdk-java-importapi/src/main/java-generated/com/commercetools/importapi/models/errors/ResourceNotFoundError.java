@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ResourceNotFoundError
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
@@ -35,7 +37,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     String RESOURCE_NOT_FOUND = "ResourceNotFound";
 
     /**
-     *
+     *  <p>The resource that was not found.</p>
      * @return resource
      */
 
@@ -43,7 +45,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     public Object getResource();
 
     /**
-     * set resource
+     *  <p>The resource that was not found.</p>
      * @param resource value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ResourceNotFoundError extends ErrorObject {
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public ResourceNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceNotFoundError
@@ -116,8 +120,8 @@ public interface ResourceNotFoundError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ResourceNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ResourceNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<ResourceNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ResourceNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<ResourceNotFoundError>";

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelectionSetCustomFieldAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSetCustomFieldActionImpl.class)
 public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -52,14 +54,14 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ProductSelectionSetCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionSetCustomFieldAction
@@ -134,8 +138,8 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetCustomFieldAction>";

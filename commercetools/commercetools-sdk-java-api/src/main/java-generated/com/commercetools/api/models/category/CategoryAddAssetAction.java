@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategoryAddAssetAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addAsset")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryAddAssetActionImpl.class)
 public interface CategoryAddAssetAction extends CategoryUpdateAction {
@@ -88,6 +90,8 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
         return instance;
     }
 
+    public CategoryAddAssetAction copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryAddAssetAction
      * @param template instance to be copied
@@ -135,8 +139,8 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryAddAssetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryAddAssetAction>() {
+    public static tools.jackson.core.type.TypeReference<CategoryAddAssetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryAddAssetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryAddAssetAction>";

@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAssetKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAssetKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAssetKeyActionBuilder builder) {
         ProductSetAssetKeyAction productSetAssetKeyAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAssetKeyAction).isInstanceOf(ProductSetAssetKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAssetKeyAction.builder().variantId(5L) },
-                new Object[] { ProductSetAssetKeyAction.builder().sku("sku") },
-                new Object[] { ProductSetAssetKeyAction.builder().staged(true) },
-                new Object[] { ProductSetAssetKeyAction.builder().assetId("assetId") },
-                new Object[] { ProductSetAssetKeyAction.builder().assetKey("assetKey") } };
+        return new Object[][] { new Object[] { "variantId", ProductSetAssetKeyAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductSetAssetKeyAction.builder().sku("sku") },
+                new Object[] { "staged", ProductSetAssetKeyAction.builder().staged(true) },
+                new Object[] { "assetId", ProductSetAssetKeyAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductSetAssetKeyAction.builder().assetKey("assetKey") } };
     }
 
     @Test

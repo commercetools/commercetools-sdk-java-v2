@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryItem
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryItem {
 
     /**
-     *
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +41,7 @@ public interface DeliveryItem {
     public String getId();
 
     /**
-     *
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
     @NotNull
@@ -48,14 +49,14 @@ public interface DeliveryItem {
     public Long getQuantity();
 
     /**
-     * set id
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set quantity
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      */
 
@@ -80,6 +81,8 @@ public interface DeliveryItem {
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public DeliveryItem copyDeep();
 
     /**
      * factory method to create a deep copy of DeliveryItem
@@ -128,8 +131,8 @@ public interface DeliveryItem {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryItem>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryItem>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryItem>";

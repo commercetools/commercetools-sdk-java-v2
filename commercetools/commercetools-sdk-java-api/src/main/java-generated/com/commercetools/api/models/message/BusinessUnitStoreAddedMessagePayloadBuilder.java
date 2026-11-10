@@ -25,7 +25,7 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>The Store that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
     }
 
     /**
-     *  <p>The Store that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
     }
 
     /**
-     *  <p>The Store that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
     }
 
     /**
-     *  <p>The Store that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return store
      */
 

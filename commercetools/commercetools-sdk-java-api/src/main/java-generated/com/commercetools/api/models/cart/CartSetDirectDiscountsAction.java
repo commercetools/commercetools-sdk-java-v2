@@ -7,16 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Cart. Either a Discount Code or a Direct Discount can exist on a Cart at the same time.</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> to the Cart.</p>
+ *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, Direct Discounts can only be added when no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDirectDiscounts")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetDirectDiscountsActionImpl.class)
 public interface CartSetDirectDiscountsAction extends CartUpdateAction {
@@ -40,7 +43,7 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *   <li>If set to an empty array, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
      * @return discounts
      */
@@ -52,7 +55,7 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *   <li>If set to an empty array, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
      * @param discounts values to be set
      */
@@ -63,7 +66,7 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *   <li>If set to an empty array, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
      * @param discounts values to be set
      */
@@ -88,6 +91,8 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
         instance.setDiscounts(template.getDiscounts());
         return instance;
     }
+
+    public CartSetDirectDiscountsAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetDirectDiscountsAction
@@ -139,8 +144,8 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetDirectDiscountsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetDirectDiscountsAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetDirectDiscountsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetDirectDiscountsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetDirectDiscountsAction>";

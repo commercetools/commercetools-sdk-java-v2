@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a date set value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DateSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateSetFieldImpl.class)
 public interface DateSetField extends CustomField {
@@ -37,7 +39,7 @@ public interface DateSetField extends CustomField {
     String DATE_SET = "DateSet";
 
     /**
-     *
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateSetField extends CustomField {
     public List<LocalDate> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -53,7 +55,7 @@ public interface DateSetField extends CustomField {
     public void setValue(final LocalDate... value);
 
     /**
-     * set value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface DateSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateSetField copyDeep();
 
     /**
      * factory method to create a deep copy of DateSetField
@@ -124,8 +128,8 @@ public interface DateSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateSetField>() {
+    public static tools.jackson.core.type.TypeReference<DateSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<DateSetField>";

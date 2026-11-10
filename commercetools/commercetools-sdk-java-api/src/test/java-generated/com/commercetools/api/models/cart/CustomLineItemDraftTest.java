@@ -1,48 +1,46 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemDraftBuilder builder) {
         CustomLineItemDraft customLineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(customLineItemDraft).isInstanceOf(CustomLineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomLineItemDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CustomLineItemDraft.builder().key("key") },
-                new Object[] { CustomLineItemDraft.builder().quantity(8L) },
-                new Object[] {
+                new Object[] { "name",
+                        CustomLineItemDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", CustomLineItemDraft.builder().key("key") },
+                new Object[] { "quantity", CustomLineItemDraft.builder().quantity(8L) },
+                new Object[] { "money",
                         CustomLineItemDraft.builder().money(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CustomLineItemDraft.builder().slug("slug") },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "slug", CustomLineItemDraft.builder().slug("slug") },
+                new Object[] { "taxCategory", CustomLineItemDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "externalTaxRate",
+                        CustomLineItemDraft.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "custom",
+                        CustomLineItemDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "shippingDetails", CustomLineItemDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) } };
+                new Object[] { "priceMode", CustomLineItemDraft.builder()
+                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) },
+                new Object[] { "recurrenceInfo", CustomLineItemDraft.builder()
+                        .recurrenceInfo(
+                            new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl()) } };
     }
 
     @Test
@@ -118,5 +116,14 @@ public class CustomLineItemDraftTest {
         value.setPriceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        CustomLineItemDraft value = CustomLineItemDraft.of();
+        value.setRecurrenceInfo(
+            new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl());
     }
 }

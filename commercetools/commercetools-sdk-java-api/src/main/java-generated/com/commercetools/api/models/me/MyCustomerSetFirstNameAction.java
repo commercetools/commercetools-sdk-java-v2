@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the first name of the Customer produces the CustomerFirstNameSet Message.</p>
+ *  <p>Setting the first name of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerFirstNameSetMessage" rel="nofollow">CustomerFirstNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setFirstName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetFirstNameActionImpl.class)
 public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
     String SET_FIRST_NAME = "setFirstName";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return firstName
      */
 
@@ -42,7 +44,7 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
     public String getFirstName();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param firstName value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
         instance.setFirstName(template.getFirstName());
         return instance;
     }
+
+    public MyCustomerSetFirstNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetFirstNameAction
@@ -113,8 +117,8 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetFirstNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetFirstNameAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetFirstNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetFirstNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetFirstNameAction>";

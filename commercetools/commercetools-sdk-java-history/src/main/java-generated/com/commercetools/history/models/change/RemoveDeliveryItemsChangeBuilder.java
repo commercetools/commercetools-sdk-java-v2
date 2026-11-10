@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,7 +27,10 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     private String change;
 
-    private com.commercetools.history.models.common.Delivery previousValue;
+    private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -45,8 +50,10 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
      */
 
     public RemoveDeliveryItemsChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.DeliveryBuilder, com.commercetools.history.models.common.DeliveryBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.DeliveryBuilder.of()).build();
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -57,8 +64,9 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
      */
 
     public RemoveDeliveryItemsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.DeliveryBuilder, com.commercetools.history.models.common.Delivery> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.DeliveryBuilder.of());
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValue> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of());
         return this;
     }
 
@@ -69,8 +77,19 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
      */
 
     public RemoveDeliveryItemsChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Delivery previousValue) {
+            final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public RemoveDeliveryItemsChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -88,8 +107,18 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.Delivery getPreviousValue() {
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     /**
@@ -99,7 +128,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     public RemoveDeliveryItemsChange build() {
         Objects.requireNonNull(change, RemoveDeliveryItemsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveDeliveryItemsChange.class + ": previousValue is missing");
-        return new RemoveDeliveryItemsChangeImpl(change, previousValue);
+        return new RemoveDeliveryItemsChangeImpl(change, previousValue, shippingKey);
     }
 
     /**
@@ -107,7 +136,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
      * @return RemoveDeliveryItemsChange
      */
     public RemoveDeliveryItemsChange buildUnchecked() {
-        return new RemoveDeliveryItemsChangeImpl(change, previousValue);
+        return new RemoveDeliveryItemsChangeImpl(change, previousValue, shippingKey);
     }
 
     /**
@@ -127,6 +156,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
         RemoveDeliveryItemsChangeBuilder builder = new RemoveDeliveryItemsChangeBuilder();
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

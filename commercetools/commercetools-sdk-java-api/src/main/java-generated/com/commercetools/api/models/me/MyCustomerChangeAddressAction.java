@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Changing an address of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressChangedMessage" rel="nofollow">CustomerAddressChanged</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerChangeAddressActionImpl.class)
 public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
@@ -39,7 +41,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     String CHANGE_ADDRESS = "changeAddress";
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressId
      */
 
@@ -47,7 +49,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressKey
      */
 
@@ -64,14 +66,14 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressKey value to be set
      */
 
@@ -104,6 +106,8 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public MyCustomerChangeAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerChangeAddressAction
@@ -153,8 +157,8 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerChangeAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerChangeAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerChangeAddressAction>";

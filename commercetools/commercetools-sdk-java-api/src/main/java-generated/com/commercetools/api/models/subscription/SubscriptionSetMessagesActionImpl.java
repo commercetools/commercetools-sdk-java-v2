@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SubscriptionSetMessagesAction
@@ -52,7 +53,7 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
@@ -97,4 +98,8 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
                 .build();
     }
 
+    @Override
+    public SubscriptionSetMessagesAction copyDeep() {
+        return SubscriptionSetMessagesAction.deepCopy(this);
+    }
 }

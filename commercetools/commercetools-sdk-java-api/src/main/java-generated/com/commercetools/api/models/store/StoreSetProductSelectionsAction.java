@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Instead of adding or removing Product Selections individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>
+ *  <p>Instead of adding or removing <span>Product Selections</span> individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setProductSelections")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreSetProductSelectionsActionImpl.class)
 public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
@@ -39,7 +41,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      *  <ul>
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
-     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *   <li>If omitted or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> are available in this Store.</li>
      *  </ul>
      * @return productSelections
      */
@@ -51,7 +53,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      *  <ul>
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
-     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *   <li>If omitted or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> are available in this Store.</li>
      *  </ul>
      * @param productSelections values to be set
      */
@@ -63,7 +65,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      *  <ul>
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
-     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *   <li>If omitted or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> are available in this Store.</li>
      *  </ul>
      * @param productSelections values to be set
      */
@@ -88,6 +90,8 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
         instance.setProductSelections(template.getProductSelections());
         return instance;
     }
+
+    public StoreSetProductSelectionsAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreSetProductSelectionsAction
@@ -139,8 +143,8 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetProductSelectionsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetProductSelectionsAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreSetProductSelectionsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreSetProductSelectionsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreSetProductSelectionsAction>";

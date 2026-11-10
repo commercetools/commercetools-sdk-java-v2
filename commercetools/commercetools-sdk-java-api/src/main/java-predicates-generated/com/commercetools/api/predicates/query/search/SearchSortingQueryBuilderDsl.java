@@ -44,12 +44,11 @@ public class SearchSortingQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<SearchSortingQueryBuilderDsl> filter(
-            Function<com.commercetools.api.predicates.query.search.SearchQueryExpressionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchQueryExpressionQueryBuilderDsl>> fn) {
+            Function<com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("filter"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.search.SearchQueryExpressionQueryBuilderDsl.of())),
+                    .inner(fn.apply(com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl.of())),
             SearchSortingQueryBuilderDsl::of);
     }
 

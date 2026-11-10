@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetTargetChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetTargetChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetTargetChangeBuilder builder) {
         SetTargetChange setTargetChange = builder.buildUnchecked();
         Assertions.assertThat(setTargetChange).isInstanceOf(SetTargetChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetTargetChange.builder().change("change") },
-                new Object[] { SetTargetChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SetTargetChange.builder()
+        return new Object[][] { new Object[] { "change", SetTargetChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetTargetChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "nextValue", SetTargetChange.builder()
                         .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) } };
     }
 

@@ -30,7 +30,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     private String timestamp;
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return id
      */
 

@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodSetCustomTypeAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetCustomTypeActionImpl.class)
 public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateAction {
@@ -37,7 +39,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ShippingMethod with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @return type
      */
     @Valid
@@ -45,7 +47,8 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ShippingMethod.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -53,14 +56,15 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ShippingMethod with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ShippingMethod.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -85,6 +89,8 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public ShippingMethodSetCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetCustomTypeAction
@@ -134,8 +140,8 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodSetCustomTypeAction>";

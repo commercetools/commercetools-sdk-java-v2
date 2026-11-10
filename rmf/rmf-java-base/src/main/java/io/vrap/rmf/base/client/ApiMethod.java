@@ -15,11 +15,11 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base
         implements RequestCommand<TResult>, ClientRequestCommand<TResult>, CreateHttpRequestCommand {
@@ -401,5 +401,20 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     public ApiHttpResponse<byte[]> sendBlocking(final Duration timeout) {
         return apiHttpClient.sendBlocking(this, timeout);
+    }
+
+    protected static <V> String encodePathParam(V pathParameter) {
+        final String value = pathParameter.toString();
+        // "." and ".." are not touched by URLEncoder but are collapsed as dot segments when the URI is resolved
+        if (".".equals(value) || "..".equals(value)) {
+            throw new IllegalArgumentException("Invalid path parameter value: '" + value + "'");
+        }
+        try {
+            // URLEncoder is a form encoder and encodes a space as '+', which is a literal '+' within a path
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString()).replace("+", "%20");
+        }
+        catch (UnsupportedEncodingException e) {
+            throw new EncodingException(e);
+        }
     }
 }

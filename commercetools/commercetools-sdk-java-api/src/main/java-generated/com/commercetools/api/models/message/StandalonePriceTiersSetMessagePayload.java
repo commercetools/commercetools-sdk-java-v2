@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceTier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Price Tier update action</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetPriceTiersAction" rel="nofollow">Set Price Tier</a> update action</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceTiersSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceTiersSetMessagePayloadImpl.class)
 public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
@@ -40,7 +42,7 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
     String STANDALONE_PRICE_TIERS_SET = "StandalonePriceTiersSet";
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return tiers
      */
     @NotNull
@@ -49,7 +51,7 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
     public List<PriceTier> getTiers();
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return previousTiers
      */
     @NotNull
@@ -58,7 +60,7 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
     public List<PriceTier> getPreviousTiers();
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tiers values to be set
      */
 
@@ -66,14 +68,14 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
     public void setTiers(final PriceTier... tiers);
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tiers values to be set
      */
 
     public void setTiers(final List<PriceTier> tiers);
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param previousTiers values to be set
      */
 
@@ -81,7 +83,7 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
     public void setPreviousTiers(final PriceTier... previousTiers);
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param previousTiers values to be set
      */
 
@@ -106,6 +108,8 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
         instance.setPreviousTiers(template.getPreviousTiers());
         return instance;
     }
+
+    public StandalonePriceTiersSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceTiersSetMessagePayload
@@ -164,8 +168,8 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceTiersSetMessagePayload>";

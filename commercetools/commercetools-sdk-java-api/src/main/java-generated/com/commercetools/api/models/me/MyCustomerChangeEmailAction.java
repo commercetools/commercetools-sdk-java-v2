@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changing the email of the Customer produces the CustomerEmailChanged Message.</p>
+ *  <p>Changing the email of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailChangedMessage" rel="nofollow">CustomerEmailChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerChangeEmailActionImpl.class)
 public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
@@ -68,6 +70,8 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public MyCustomerChangeEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerChangeEmailAction
@@ -115,8 +119,8 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeEmailAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeEmailAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerChangeEmailAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerChangeEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerChangeEmailAction>";

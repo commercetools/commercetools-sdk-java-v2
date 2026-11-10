@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the query times out.</p>
- *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
+ *  <p>If a query constantly times out, please check if it follows the <span>performance best practices</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLQueryTimedOutErrorImpl implements GraphQLQueryTimedOutError, ModelBase {
@@ -31,7 +33,7 @@ public class GraphQLQueryTimedOutErrorImpl implements GraphQLQueryTimedOutError,
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLQueryTimedOutErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLQueryTimedOutErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = QUERY_TIMED_OUT;
     }
@@ -95,4 +97,8 @@ public class GraphQLQueryTimedOutErrorImpl implements GraphQLQueryTimedOutError,
                 .build();
     }
 
+    @Override
+    public GraphQLQueryTimedOutError copyDeep() {
+        return GraphQLQueryTimedOutError.deepCopy(this);
+    }
 }

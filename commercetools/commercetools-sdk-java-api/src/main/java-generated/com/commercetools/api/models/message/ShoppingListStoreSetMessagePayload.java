@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListStoreSetMessagePayload
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ShoppingListStoreSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListStoreSetMessagePayloadImpl.class)
 public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
     /**
-     *  <p>KeyReference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return store
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>KeyReference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param store value to be set
      */
 
@@ -71,6 +73,8 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public ShoppingListStoreSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListStoreSetMessagePayload
@@ -119,8 +123,8 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListStoreSetMessagePayload>";

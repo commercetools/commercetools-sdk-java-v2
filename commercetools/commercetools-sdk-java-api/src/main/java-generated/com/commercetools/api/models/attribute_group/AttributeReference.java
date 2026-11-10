@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeReference
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReference extends com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return key
      */
     @NotNull
@@ -39,7 +40,7 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
     public String getKey();
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param key value to be set
      */
 
@@ -63,6 +64,8 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public AttributeReference copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeReference
@@ -110,8 +113,8 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeReference>() {
+    public static tools.jackson.core.type.TypeReference<AttributeReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeReference>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeReference>";

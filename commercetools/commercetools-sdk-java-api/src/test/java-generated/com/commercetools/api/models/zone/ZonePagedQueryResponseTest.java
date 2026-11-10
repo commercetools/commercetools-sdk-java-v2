@@ -3,34 +3,26 @@ package com.commercetools.api.models.zone;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ZonePagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ZonePagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ZonePagedQueryResponseBuilder builder) {
         ZonePagedQueryResponse zonePagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(zonePagedQueryResponse).isInstanceOf(ZonePagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ZonePagedQueryResponse.builder().limit(7L) },
-                new Object[] { ZonePagedQueryResponse.builder().offset(3L) },
-                new Object[] { ZonePagedQueryResponse.builder().count(2L) },
-                new Object[] { ZonePagedQueryResponse.builder().total(1L) },
-                new Object[] { ZonePagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", ZonePagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", ZonePagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", ZonePagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ZonePagedQueryResponse.builder().total(1L) },
+                new Object[] { "results", ZonePagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.zone.ZoneImpl())) } };
     }
 

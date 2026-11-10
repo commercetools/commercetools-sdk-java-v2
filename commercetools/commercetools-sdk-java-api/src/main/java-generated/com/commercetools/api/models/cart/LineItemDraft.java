@@ -8,18 +8,20 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+ *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided. Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +38,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         io.vrap.rmf.base.client.Draft<LineItemDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 
@@ -44,7 +46,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public String getKey();
 
     /**
-     *  <p><code>id</code> of a published Product.</p>
+     *  <p><code>id</code> of a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -52,7 +54,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public String getProductId();
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @return variantId
      */
 
@@ -60,7 +62,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public Long getVariantId();
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -76,7 +78,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public Long getQuantity();
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
@@ -85,8 +87,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @return distributionChannel
      */
     @Valid
@@ -94,7 +96,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -102,7 +104,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return externalPrice
      */
     @Valid
@@ -110,7 +113,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public Money getExternalPrice();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -118,7 +121,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -126,7 +129,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return perMethodExternalTaxRate
      */
     @Valid
@@ -134,7 +137,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public List<MethodExternalTaxRateDraft> getPerMethodExternalTaxRate();
 
     /**
-     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return inventoryMode
      */
 
@@ -158,28 +161,36 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public LineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of a published Product.</p>
+     *  <p><code>id</code> of a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      */
 
@@ -193,7 +204,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      */
@@ -201,43 +212,44 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setAddedAt(final ZonedDateTime addedAt);
 
     /**
-     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      */
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The referenced Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param externalPrice value to be set
      */
 
     public void setExternalPrice(final Money externalPrice);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      * @param externalTotalPrice value to be set
      */
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, the Tax Rate is accepted but ignored.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param perMethodExternalTaxRate values to be set
      */
 
@@ -245,14 +257,14 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setPerMethodExternalTaxRate(final MethodExternalTaxRateDraft... perMethodExternalTaxRate);
 
     /**
-     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> and <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param perMethodExternalTaxRate values to be set
      */
 
     public void setPerMethodExternalTaxRate(final List<MethodExternalTaxRateDraft> perMethodExternalTaxRate);
 
     /**
-     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param inventoryMode value to be set
      */
 
@@ -271,6 +283,13 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final LineItemRecurrenceInfoDraft recurrenceInfo);
 
     /**
      * factory method
@@ -302,8 +321,11 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
+
+    public LineItemDraft copyDeep();
 
     /**
      * factory method to create a deep copy of LineItemDraft
@@ -340,6 +362,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 
@@ -374,8 +398,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<LineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemDraft>";

@@ -123,7 +123,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param builder function to build the oldDescription value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param builder function to build the oldDescription value
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param oldDescription value to be set
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return description
      */
 
@@ -233,7 +233,7 @@ public class ProductTailoringDescriptionSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return oldDescription
      */
 

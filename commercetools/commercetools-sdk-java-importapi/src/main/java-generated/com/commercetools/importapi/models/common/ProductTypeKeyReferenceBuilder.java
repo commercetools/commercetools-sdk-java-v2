@@ -24,7 +24,7 @@ public class ProductTypeKeyReferenceBuilder implements Builder<ProductTypeKeyRef
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced ProductType.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ProductTypeKeyReferenceBuilder implements Builder<ProductTypeKeyRef
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced ProductType.</p>
      * @return key
      */
 

@@ -12,16 +12,35 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creating a Cart fails with an InvalidOperation error if the ShippingMethod referenced in the CartDraft has a <code>predicate</code> that does not match the Cart.</p>
+ *  <p>Creates a Cart in the Project.</p>
+ *  <p>When using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
+ *  <ul>
+ *   <li>If only some Line Items can be reserved, the Cart creation succeeds, however, the items that could not be reserved are removed and reservation warnings are returned in the response.</li>
+ *   <li>If none of the Line Items can be reserved, the Cart creation fails with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</li>
+ *  </ul>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *    </ul></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -66,7 +85,7 @@ public class ByProjectKeyCartsPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/carts", this.projectKey);
+        String httpRequestPath = String.format("%s/carts", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

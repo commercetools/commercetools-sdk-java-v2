@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the DeliveryAddressSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddressSetMessage" rel="nofollow">DeliveryAddressSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddressAction, ModelBase {
@@ -59,7 +60,7 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
@@ -68,7 +69,7 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
@@ -77,7 +78,8 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -135,4 +137,8 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
                 .build();
     }
 
+    @Override
+    public OrderSetDeliveryAddressAction copyDeep() {
+        return OrderSetDeliveryAddressAction.deepCopy(this);
+    }
 }

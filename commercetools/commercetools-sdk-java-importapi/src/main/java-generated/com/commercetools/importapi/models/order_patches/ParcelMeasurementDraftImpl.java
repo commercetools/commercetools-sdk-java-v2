@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelMeasurementDraft
@@ -43,7 +44,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     *
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      */
 
     public String getParcelId() {
@@ -51,7 +52,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -95,4 +96,8 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
                 .build();
     }
 
+    @Override
+    public ParcelMeasurementDraft copyDeep() {
+        return ParcelMeasurementDraft.deepCopy(this);
+    }
 }

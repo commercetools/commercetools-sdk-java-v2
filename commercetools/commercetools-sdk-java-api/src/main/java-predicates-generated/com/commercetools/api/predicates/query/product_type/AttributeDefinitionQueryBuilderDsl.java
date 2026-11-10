@@ -44,6 +44,12 @@ public class AttributeDefinitionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, AttributeDefinitionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl> level() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("level")),
+            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl> attributeConstraint() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributeConstraint")),
@@ -68,6 +74,12 @@ public class AttributeDefinitionQueryBuilderDsl {
     public BooleanComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl> isSearchable() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isSearchable")),
+            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionQueryBuilderDsl::of));
+    }
+
+    public BooleanComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl> savedToLineItem() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("savedToLineItem")),
             p -> new CombinationQueryPredicate<>(p, AttributeDefinitionQueryBuilderDsl::of));
     }
 

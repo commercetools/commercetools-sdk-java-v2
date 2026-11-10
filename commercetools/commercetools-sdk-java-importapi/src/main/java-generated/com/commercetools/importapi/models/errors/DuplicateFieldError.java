@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The given value already exists for a field that is checked for unique values.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
@@ -85,6 +87,8 @@ public interface DuplicateFieldError extends ErrorObject {
         return instance;
     }
 
+    public DuplicateFieldError copyDeep();
+
     /**
      * factory method to create a deep copy of DuplicateFieldError
      * @param template instance to be copied
@@ -133,8 +137,8 @@ public interface DuplicateFieldError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError>() {
+    public static tools.jackson.core.type.TypeReference<DuplicateFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DuplicateFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<DuplicateFieldError>";

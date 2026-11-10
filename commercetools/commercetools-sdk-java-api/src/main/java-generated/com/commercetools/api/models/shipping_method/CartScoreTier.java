@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartScore")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartScoreTierImpl.class)
 public interface CartScoreTier extends ShippingRatePriceTier {
@@ -38,7 +40,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     String CART_SCORE = "CartScore";
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @return score
      */
     @NotNull
@@ -62,7 +64,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public PriceFunction getPriceFunction();
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @return isMatching
      */
 
@@ -70,7 +72,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public Boolean getIsMatching();
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @param score value to be set
      */
 
@@ -91,7 +93,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public void setPriceFunction(final PriceFunction priceFunction);
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @param isMatching value to be set
      */
 
@@ -118,6 +120,8 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }
+
+    public CartScoreTier copyDeep();
 
     /**
      * factory method to create a deep copy of CartScoreTier
@@ -169,8 +173,8 @@ public interface CartScoreTier extends ShippingRatePriceTier {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartScoreTier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartScoreTier>() {
+    public static tools.jackson.core.type.TypeReference<CartScoreTier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartScoreTier>() {
             @Override
             public String toString() {
                 return "TypeReference<CartScoreTier>";

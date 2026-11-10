@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Active update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceActiveChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceActiveChangedMessagePayloadImpl.class)
 public interface StandalonePriceActiveChangedMessagePayload extends MessagePayload {
@@ -37,7 +39,7 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     String STANDALONE_PRICE_ACTIVE_CHANGED = "StandalonePriceActiveChanged";
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return active
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     public Boolean getActive();
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return oldActive
      */
     @NotNull
@@ -53,14 +55,14 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     public Boolean getOldActive();
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param active value to be set
      */
 
     public void setActive(final Boolean active);
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param oldActive value to be set
      */
 
@@ -86,6 +88,8 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
         instance.setOldActive(template.getOldActive());
         return instance;
     }
+
+    public StandalonePriceActiveChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceActiveChangedMessagePayload
@@ -137,8 +141,8 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceActiveChangedMessagePayload>";

@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyShoppingListRemoveLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyShoppingListRemoveLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyShoppingListRemoveLineItemActionBuilder builder) {
         MyShoppingListRemoveLineItemAction myShoppingListRemoveLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(myShoppingListRemoveLineItemAction)
                 .isInstanceOf(MyShoppingListRemoveLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyShoppingListRemoveLineItemAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyShoppingListRemoveLineItemAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { MyShoppingListRemoveLineItemAction.builder().quantity(8L) } };
+        return new Object[][] {
+                new Object[] { "lineItemId", MyShoppingListRemoveLineItemAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", MyShoppingListRemoveLineItemAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", MyShoppingListRemoveLineItemAction.builder().quantity(8L) } };
     }
 
     @Test

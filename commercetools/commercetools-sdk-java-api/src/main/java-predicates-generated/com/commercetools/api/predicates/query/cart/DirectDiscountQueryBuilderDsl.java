@@ -38,4 +38,10 @@ public class DirectDiscountQueryBuilderDsl {
             DirectDiscountQueryBuilderDsl::of);
     }
 
+    public BooleanComparisonPredicateBuilder<DirectDiscountQueryBuilderDsl> participateInBestDealSelection() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("participateInBestDealSelection")),
+            p -> new CombinationQueryPredicate<>(p, DirectDiscountQueryBuilderDsl::of));
+    }
+
 }

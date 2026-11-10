@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeValueExternalChangeValue
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("external")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueExternalChangeValueImpl.class)
 public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
@@ -59,6 +61,8 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
         ChangeValueExternalChangeValueImpl instance = new ChangeValueExternalChangeValueImpl();
         return instance;
     }
+
+    public ChangeValueExternalChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeValueExternalChangeValue
@@ -105,8 +109,8 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeValueExternalChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeValueExternalChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeValueExternalChangeValue>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
@@ -55,7 +56,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -63,7 +64,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {
@@ -153,4 +154,8 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
                 .build();
     }
 
+    @Override
+    public ConcurrentModificationError copyDeep() {
+        return ConcurrentModificationError.deepCopy(this);
+    }
 }

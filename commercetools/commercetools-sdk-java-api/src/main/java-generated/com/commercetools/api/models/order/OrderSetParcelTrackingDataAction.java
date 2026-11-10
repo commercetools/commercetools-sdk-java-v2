@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ParcelTrackingDataUpdated Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelTrackingDataUpdatedMessage" rel="nofollow">ParcelTrackingDataUpdated</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setParcelTrackingData")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
@@ -35,7 +37,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -44,7 +46,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -53,7 +55,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return trackingData
      */
     @Valid
@@ -61,7 +63,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public TrackingData getTrackingData();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -69,7 +71,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
@@ -77,7 +79,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param trackingData value to be set
      */
 
@@ -103,6 +105,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public OrderSetParcelTrackingDataAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetParcelTrackingDataAction
@@ -152,8 +156,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetParcelTrackingDataAction>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove Delivery update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveDeliveryAction" rel="nofollow">Remove Delivery</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange, ModelBase {
@@ -26,16 +27,20 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
 
     private String change;
 
-    private com.commercetools.history.models.common.Delivery previousValue;
+    private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
+
+    private String shippingKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Delivery previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
+        this.shippingKey = shippingKey;
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
     }
 
@@ -66,16 +71,29 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Delivery getPreviousValue() {
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Delivery previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -91,15 +109,21 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(previousValue)
+                .append(shippingKey)
+                .toHashCode();
     }
 
     @Override
@@ -107,7 +131,12 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
                 .append("previousValue", previousValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 
+    @Override
+    public RemoveDeliveryItemsChange copyDeep() {
+        return RemoveDeliveryItemsChange.deepCopy(this);
+    }
 }

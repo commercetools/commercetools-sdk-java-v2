@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets the Store the Order is assigned to. It should be used to migrate Orders to a new Store. No validations are performed (such as that the Customer is allowed to create Orders in the Store).</p>
- *  <p>Produces the Order Store Set Message. Returns a <code>400</code> error if <code>store</code> references the same Store the Order is currently assigned to, including if you try to remove the value when no Store is currently assigned.</p>
+ *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the Order is assigned to. It should be used to migrate Orders to a new Store. No validations are performed (such as that the Customer is allowed to create Orders in the Store).</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderStoreSetMessage" rel="nofollow">Order Store Set</a> Message. Returns a <code>400</code> error if <code>store</code> references the same Store the Order is currently assigned to, including if you try to remove the value when no Store is currently assigned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStore")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetStoreActionImpl.class)
 public interface OrderSetStoreAction extends OrderUpdateAction {
@@ -37,7 +39,7 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>If <code>store</code> references the same Store the Order is currently assigned to or if you try to remove the value when no Store is currently assigned, a <code>400</code> error is returned.</p>
      * @return store
      */
@@ -46,7 +48,7 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>If <code>store</code> references the same Store the Order is currently assigned to or if you try to remove the value when no Store is currently assigned, a <code>400</code> error is returned.</p>
      * @param store value to be set
      */
@@ -71,6 +73,8 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public OrderSetStoreAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetStoreAction
@@ -118,8 +122,8 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetStoreAction>";

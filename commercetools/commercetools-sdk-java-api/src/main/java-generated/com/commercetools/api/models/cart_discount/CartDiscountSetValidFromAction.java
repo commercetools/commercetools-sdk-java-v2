@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountSetValidFromAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFrom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetValidFromActionImpl.class)
 public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction {
@@ -35,7 +37,7 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -43,7 +45,7 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      */
 
@@ -67,6 +69,8 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public CartDiscountSetValidFromAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountSetValidFromAction
@@ -114,8 +118,8 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountSetValidFromAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountSetValidFromAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountSetValidFromAction>";

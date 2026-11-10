@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the Associates of a Business Unit, generates a BusinessUnitAssociatesSet Message.</p>
+ *  <p>Changes the Associates of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociatesSetMessage" rel="nofollow">BusinessUnitAssociatesSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssociatesAction, ModelBase {
@@ -52,7 +53,7 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. Set to an empty array to remove all existing values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
@@ -97,4 +98,8 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetAssociatesAction copyDeep() {
+        return BusinessUnitSetAssociatesAction.deepCopy(this);
+    }
 }

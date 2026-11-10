@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitContactEmailSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitContactEmailSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitContactEmailSetMessagePayloadBuilder builder) {
         BusinessUnitContactEmailSetMessagePayload businessUnitContactEmailSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(businessUnitContactEmailSetMessagePayload)
                 .isInstanceOf(BusinessUnitContactEmailSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
-                new Object[] { BusinessUnitContactEmailSetMessagePayload.builder().contactEmail("contactEmail") } };
+        return new Object[][] { new Object[] { "contactEmail",
+                BusinessUnitContactEmailSetMessagePayload.builder().contactEmail("contactEmail") } };
     }
 
     @Test

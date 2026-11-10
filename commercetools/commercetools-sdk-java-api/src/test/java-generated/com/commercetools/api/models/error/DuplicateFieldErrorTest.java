@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DuplicateFieldErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DuplicateFieldErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DuplicateFieldErrorBuilder builder) {
         DuplicateFieldError duplicateFieldError = builder.buildUnchecked();
         Assertions.assertThat(duplicateFieldError).isInstanceOf(DuplicateFieldError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DuplicateFieldError.builder().message("message") },
-                new Object[] { DuplicateFieldError.builder().field("field") },
-                new Object[] { DuplicateFieldError.builder().duplicateValue("duplicateValue") } };
+        return new Object[][] { new Object[] { "message", DuplicateFieldError.builder().message("message") },
+                new Object[] { "field", DuplicateFieldError.builder().field("field") },
+                new Object[] { "duplicateValue", DuplicateFieldError.builder().duplicateValue("duplicateValue") } };
     }
 
     @Test

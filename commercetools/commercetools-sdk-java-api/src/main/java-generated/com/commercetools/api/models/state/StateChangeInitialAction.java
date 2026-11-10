@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateChangeInitialAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeInitial")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateChangeInitialActionImpl.class)
 public interface StateChangeInitialAction extends StateUpdateAction {
@@ -36,7 +38,8 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     String CHANGE_INITIAL = "changeInitial";
 
     /**
-     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return initial
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     public Boolean getInitial();
 
     /**
-     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param initial value to be set
      */
 
@@ -68,6 +72,8 @@ public interface StateChangeInitialAction extends StateUpdateAction {
         instance.setInitial(template.getInitial());
         return instance;
     }
+
+    public StateChangeInitialAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateChangeInitialAction
@@ -115,8 +121,8 @@ public interface StateChangeInitialAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateChangeInitialAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateChangeInitialAction>() {
+    public static tools.jackson.core.type.TypeReference<StateChangeInitialAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateChangeInitialAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateChangeInitialAction>";

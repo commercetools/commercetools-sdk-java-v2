@@ -3,32 +3,25 @@ package com.commercetools.api.models.zone;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ZoneDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ZoneDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ZoneDraftBuilder builder) {
         ZoneDraft zoneDraft = builder.buildUnchecked();
         Assertions.assertThat(zoneDraft).isInstanceOf(ZoneDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ZoneDraft.builder().key("key") },
-                new Object[] { ZoneDraft.builder().name("name") },
-                new Object[] { ZoneDraft.builder().description("description") }, new Object[] { ZoneDraft.builder()
+        return new Object[][] { new Object[] { "key", ZoneDraft.builder().key("key") },
+                new Object[] { "name", ZoneDraft.builder().name("name") },
+                new Object[] { "description", ZoneDraft.builder().description("description") },
+                new Object[] { "locations", ZoneDraft.builder()
                         .locations(Collections.singletonList(new com.commercetools.api.models.zone.LocationImpl())) } };
     }
 

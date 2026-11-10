@@ -1,39 +1,32 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetCustomLineItemTaxAmountActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetCustomLineItemTaxAmountActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetCustomLineItemTaxAmountActionBuilder builder) {
         StagedOrderSetCustomLineItemTaxAmountAction stagedOrderSetCustomLineItemTaxAmountAction = builder
                 .buildUnchecked();
         Assertions.assertThat(stagedOrderSetCustomLineItemTaxAmountAction)
                 .isInstanceOf(StagedOrderSetCustomLineItemTaxAmountAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "customLineItemId",
                         StagedOrderSetCustomLineItemTaxAmountAction.builder().customLineItemId("customLineItemId") },
-                new Object[] {
+                new Object[] { "customLineItemKey",
                         StagedOrderSetCustomLineItemTaxAmountAction.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { StagedOrderSetCustomLineItemTaxAmountAction.builder()
+                new Object[] { "externalTaxAmount", StagedOrderSetCustomLineItemTaxAmountAction.builder()
                         .externalTaxAmount(new com.commercetools.api.models.cart.ExternalTaxAmountDraftImpl()) },
-                new Object[] { StagedOrderSetCustomLineItemTaxAmountAction.builder().shippingKey("shippingKey") } };
+                new Object[] { "shippingKey",
+                        StagedOrderSetCustomLineItemTaxAmountAction.builder().shippingKey("shippingKey") } };
     }
 
     @Test

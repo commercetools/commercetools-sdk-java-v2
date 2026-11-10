@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringUpdateAction
@@ -20,21 +21,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductTailoringUpdateAction productTailoringUpdateAction = ProductTailoringUpdateAction.publishBuilder()
+ *     ProductTailoringUpdateAction productTailoringUpdateAction = ProductTailoringUpdateAction.addAssetBuilder()
+ *             asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringPublishActionImpl.class, name = ProductTailoringPublishAction.PUBLISH),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionImpl.class, name = ProductTailoringSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesActionImpl.class, name = ProductTailoringSetMetaAttributesAction.SET_META_ATTRIBUTES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaDescriptionActionImpl.class, name = ProductTailoringSetMetaDescriptionAction.SET_META_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaKeywordsActionImpl.class, name = ProductTailoringSetMetaKeywordsAction.SET_META_KEYWORDS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaTitleActionImpl.class, name = ProductTailoringSetMetaTitleAction.SET_META_TITLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetNameActionImpl.class, name = ProductTailoringSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugActionImpl.class, name = ProductTailoringSetSlugAction.SET_SLUG),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringUnpublishActionImpl.class, name = ProductTailoringUnpublishAction.UNPUBLISH) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductTailoringUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductTailoringUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -48,6 +40,8 @@ public interface ProductTailoringUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    public ProductTailoringUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringUpdateAction
      * @param template instance to be copied
@@ -58,44 +52,60 @@ public interface ProductTailoringUpdateAction {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringPublishAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringPublishAction
-                    .deepCopy((com.commercetools.api.models.product_tailoring.ProductTailoringPublishAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaDescriptionAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaDescriptionAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaKeywordsAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaKeywordsAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaKeywordsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaTitleAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaTitleAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaTitleAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetNameAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetNameAction
-                    .deepCopy((com.commercetools.api.models.product_tailoring.ProductTailoringSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugAction
-                    .deepCopy((com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringUnpublishAction) {
-            return com.commercetools.api.models.product_tailoring.ProductTailoringUnpublishAction.deepCopy(
-                (com.commercetools.api.models.product_tailoring.ProductTailoringUnpublishAction) template);
+
+        if (!(template instanceof ProductTailoringUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ProductTailoringUpdateActionImpl instance = new ProductTailoringUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for addAsset subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringAddAssetActionBuilder addAssetBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringAddAssetActionBuilder.of();
+    }
+
+    /**
+     * builder for addExternalImage subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringAddExternalImageActionBuilder addExternalImageBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringAddExternalImageActionBuilder.of();
+    }
+
+    /**
+     * builder for addVariant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringAddVariantActionBuilder addVariantBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringAddVariantActionBuilder.of();
+    }
+
+    /**
+     * builder for changeAssetName subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringChangeAssetNameActionBuilder changeAssetNameBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringChangeAssetNameActionBuilder.of();
+    }
+
+    /**
+     * builder for changeAssetOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringChangeAssetOrderActionBuilder changeAssetOrderBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringChangeAssetOrderActionBuilder.of();
+    }
+
+    /**
+     * builder for moveImageToPosition subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringMoveImageToPositionActionBuilder moveImageToPositionBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringMoveImageToPositionActionBuilder.of();
     }
 
     /**
@@ -107,11 +117,124 @@ public interface ProductTailoringUpdateAction {
     }
 
     /**
+     * builder for removeAsset subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringRemoveAssetActionBuilder removeAssetBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringRemoveAssetActionBuilder.of();
+    }
+
+    /**
+     * builder for removeImage subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringRemoveImageActionBuilder removeImageBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringRemoveImageActionBuilder.of();
+    }
+
+    /**
+     * builder for removeVariant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringRemoveVariantActionBuilder removeVariantBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringRemoveVariantActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetCustomFieldActionBuilder setAssetCustomFieldBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetCustomTypeActionBuilder setAssetCustomTypeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetDescription subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetDescriptionActionBuilder setAssetDescriptionBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetDescriptionActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetKey subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetKeyActionBuilder setAssetKeyBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetKeyActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetSources subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetSourcesActionBuilder setAssetSourcesBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetSourcesActionBuilder.of();
+    }
+
+    /**
+     * builder for setAssetTags subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionBuilder setAssetTagsBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionBuilder.of();
+    }
+
+    /**
+     * builder for setAttribute subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder setAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder.of();
+    }
+
+    /**
+     * builder for setAttributeInAllVariants subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder setAttributeInAllVariantsBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder
+                .of();
+    }
+
+    /**
      * builder for setDescription subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionBuilder.of();
+    }
+
+    /**
+     * builder for setImages subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetExternalImagesActionBuilder setImagesBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetExternalImagesActionBuilder.of();
+    }
+
+    /**
+     * builder for setImageLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetImageLabelActionBuilder setImageLabelBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetImageLabelActionBuilder.of();
+    }
+
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder.of();
     }
 
     /**
@@ -155,6 +278,14 @@ public interface ProductTailoringUpdateAction {
     }
 
     /**
+     * builder for setProductAttribute subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder.of();
+    }
+
+    /**
      * builder for setSlug subtype
      * @return builder
      */
@@ -184,8 +315,8 @@ public interface ProductTailoringUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringUpdateAction>";

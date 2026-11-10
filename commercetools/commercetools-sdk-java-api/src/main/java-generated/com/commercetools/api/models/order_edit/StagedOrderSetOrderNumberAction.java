@@ -9,9 +9,10 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrderSetOrderNumberAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setOrderNumber")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetOrderNumberActionImpl.class)
 public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction {
@@ -67,6 +69,8 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
         instance.setOrderNumber(template.getOrderNumber());
         return instance;
     }
+
+    public StagedOrderSetOrderNumberAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetOrderNumberAction
@@ -114,8 +118,8 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderNumberAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderNumberAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetOrderNumberAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetOrderNumberAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetOrderNumberAction>";

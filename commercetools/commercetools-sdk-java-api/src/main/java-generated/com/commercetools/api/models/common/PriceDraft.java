@@ -8,19 +8,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use StandalonePriceDraft.</p>
+ *  <p>The draft representation for prices to be embedded into <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantDraft" rel="nofollow">ProductVariantDrafts</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceDraft" rel="nofollow">StandalonePriceDraft</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +40,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PriceDraft> {
 
     /**
-     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @return key
      */
 
@@ -47,6 +50,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Money value of this Price.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
     @NotNull
@@ -63,7 +67,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public String getCountry();
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @return customerGroup
      */
     @Valid
@@ -71,7 +75,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channel
      */
     @Valid
@@ -87,7 +91,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @return validUntil
      */
 
@@ -96,11 +100,11 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @return discounted
      */
@@ -109,7 +113,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
@@ -126,7 +130,16 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyResourceIdentifier getRecurrencePolicy();
+
+    /**
+     *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -134,6 +147,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Money value of this Price.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      */
 
@@ -147,14 +161,14 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public void setCountry(final String country);
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channel value to be set
      */
 
@@ -168,7 +182,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @param validUntil value to be set
      */
 
@@ -176,11 +190,11 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @param discounted value to be set
      */
@@ -188,7 +202,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public void setDiscounted(final DiscountedPriceDraft discounted);
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
@@ -197,7 +211,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public void setTiers(final PriceTierDraft... tiers);
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
@@ -210,6 +224,13 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyResourceIdentifier recurrencePolicy);
 
     /**
      * factory method
@@ -236,8 +257,11 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         instance.setDiscounted(template.getDiscounted());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         return instance;
     }
+
+    public PriceDraft copyDeep();
 
     /**
      * factory method to create a deep copy of PriceDraft
@@ -267,6 +291,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier
+                .deepCopy(template.getRecurrencePolicy()));
         return instance;
     }
 
@@ -301,8 +327,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<PriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceDraft>";

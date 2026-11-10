@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated when an existing Custom Field has been changed using the Set CustomField action.</p>
+ *  <p>Generated when an existing Custom Field has been changed using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomFieldChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomFieldChangedMessagePayloadImpl.class)
 public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePayload {
@@ -44,7 +46,7 @@ public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePaylo
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
     @NotNull
@@ -52,7 +54,7 @@ public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePaylo
     public Object getValue();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an Order Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomFieldAddedMessage" rel="nofollow">Order Custom Field Added</a> Message is generated instead.</p>
      * @return previousValue
      */
 
@@ -67,14 +69,14 @@ public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePaylo
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an Order Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomFieldAddedMessage" rel="nofollow">Order Custom Field Added</a> Message is generated instead.</p>
      * @param previousValue value to be set
      */
 
@@ -100,6 +102,8 @@ public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePaylo
         instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
+
+    public OrderCustomFieldChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomFieldChangedMessagePayload
@@ -151,8 +155,8 @@ public interface OrderCustomFieldChangedMessagePayload extends OrderMessagePaylo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomFieldChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomFieldChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomFieldChangedMessagePayload>";

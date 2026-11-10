@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetExpression
@@ -46,6 +47,8 @@ public interface ProductSearchFacetExpression {
         return instance;
     }
 
+    public ProductSearchFacetExpression copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetExpression
      * @param template instance to be copied
@@ -56,17 +59,9 @@ public interface ProductSearchFacetExpression {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetCountExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetCountExpression
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetCountExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression.deepCopy(
-                (com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression.deepCopy(
-                (com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression) template);
+
+        if (!(template instanceof ProductSearchFacetExpressionImpl)) {
+            return template.copyDeep();
         }
         ProductSearchFacetExpressionImpl instance = new ProductSearchFacetExpressionImpl();
         return instance;
@@ -103,8 +98,8 @@ public interface ProductSearchFacetExpression {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetExpression> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetExpression>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetExpression> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetExpression>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetExpression>";

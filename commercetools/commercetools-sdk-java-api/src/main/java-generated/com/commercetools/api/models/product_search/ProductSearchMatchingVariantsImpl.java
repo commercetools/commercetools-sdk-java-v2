@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchMatchingVariants
@@ -43,7 +44,9 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
     }
 
     /**
-     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether all Variants of the returned Product match the search query, or if search query does not specify any expression for a <span>Product Variant field</span>.</p>
+     *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+     *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      */
 
     public Boolean getAllMatched() {
@@ -51,7 +54,8 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
     }
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_search.ProductSearchMatchingVariantEntry> getMatchedVariants() {
@@ -101,4 +105,8 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
                 .build();
     }
 
+    @Override
+    public ProductSearchMatchingVariants copyDeep() {
+        return ProductSearchMatchingVariants.deepCopy(this);
+    }
 }

@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.subscription;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SqsDestinationTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SqsDestinationBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SqsDestinationBuilder builder) {
         SqsDestination sqsDestination = builder.buildUnchecked();
         Assertions.assertThat(sqsDestination).isInstanceOf(SqsDestination.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SqsDestination.builder().accessKey("accessKey") },
-                new Object[] { SqsDestination.builder().accessSecret("accessSecret") },
-                new Object[] { SqsDestination.builder().queueUrl("queueUrl") },
-                new Object[] { SqsDestination.builder().region("region") },
-                new Object[] { SqsDestination.builder()
-                        .authenticationMode(com.commercetools.api.models.subscription.AwsAuthenticationMode
-                                .findEnum("Credentials")) } };
+        return new Object[][] { new Object[] { "accessKey", SqsDestination.builder().accessKey("accessKey") },
+                new Object[] { "accessSecret", SqsDestination.builder().accessSecret("accessSecret") },
+                new Object[] { "queueUrl", SqsDestination.builder().queueUrl("queueUrl") },
+                new Object[] { "region", SqsDestination.builder().region("region") },
+                new Object[] { "authenticationMode",
+                        SqsDestination.builder()
+                                .authenticationMode(com.commercetools.api.models.subscription.AwsAuthenticationMode
+                                        .findEnum("Credentials")) } };
     }
 
     @Test

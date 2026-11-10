@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Retrieves the import container given by the key.</p>
+ *  <p>Retrieves an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a> with the provided <code>importContainerKey</code>.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -61,7 +61,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/import-containers/%s", this.projectKey, this.importContainerKey);
+        String httpRequestPath = String.format("%s/import-containers/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.importContainerKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeDraft
@@ -87,6 +88,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -110,7 +113,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getCode() {
@@ -143,6 +147,9 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
     public Long getMaxApplications() {
@@ -151,6 +158,9 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
     public Long getMaxApplicationsPerCustomer() {
@@ -326,4 +336,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountCodeDraft copyDeep() {
+        return DiscountCodeDraft.deepCopy(this);
+    }
 }

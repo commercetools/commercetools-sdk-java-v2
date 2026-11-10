@@ -29,7 +29,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     private String key;
 
     /**
-     *  <p>Unique ID of the referenced Store. Required if <code>key</code> is absent.</p>
+     *  <p>Unique ID of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     }
 
     /**
-     *  <p>Unique key of the referenced Store. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     }
 
     /**
-     *  <p>Unique ID of the referenced Store. Required if <code>key</code> is absent.</p>
+     *  <p>Unique ID of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -61,7 +61,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     }
 
     /**
-     *  <p>Unique key of the referenced Store. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>id</code> is absent.</p>
      * @return key
      */
 

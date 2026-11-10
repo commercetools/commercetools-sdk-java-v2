@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of dates with time.</p>
@@ -47,7 +48,8 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      */
 
     public String getName() {
@@ -55,7 +57,7 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
     }
 
     /**
-     *
+     *  <p>Must match <code>type</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -63,7 +65,7 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
     }
 
     /**
-     *
+     *  <p>A set of dates with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      */
 
     public java.util.List<java.time.ZonedDateTime> getValue() {
@@ -114,4 +116,8 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
                 .build();
     }
 
+    @Override
+    public DateTimeSetAttribute copyDeep() {
+        return DateTimeSetAttribute.deepCopy(this);
+    }
 }

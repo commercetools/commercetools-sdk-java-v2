@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for an Order to be imported that is persisted as an Order in the Project.</p>
- *  <p>In commercetools, you can import an Order using the Create Order by Import endpoint method instead of creating it from a Cart.</p>
+ *  <p>Represents the data used to import an Order. Once imported, this data is persisted as an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> in the Project.</p>
  *  <p>An OrderImport is a snapshot of an order at the time it was imported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -141,7 +141,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerKeyReference getCustomer() {
@@ -205,7 +205,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -309,7 +309,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Store is created.</p>
      */
 
     public com.commercetools.importapi.models.common.StoreKeyReference getStore() {
@@ -317,7 +317,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      */
 
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
@@ -558,4 +558,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderImport copyDeep() {
+        return OrderImport.deepCopy(this);
+    }
 }

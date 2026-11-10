@@ -4,6 +4,8 @@ package com.commercetools.api.models.extension;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +28,9 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     private com.commercetools.api.models.extension.ExtensionAction action;
 
     private com.commercetools.api.models.common.Reference resource;
+
+    @Nullable
+    private com.commercetools.api.models.common.Reference oldResource;
 
     /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
@@ -62,6 +67,30 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @param oldResource value to be set
+     * @return Builder
+     */
+
+    public ExtensionInputBuilder oldResource(
+            @Nullable final com.commercetools.api.models.common.Reference oldResource) {
+        this.oldResource = oldResource;
+        return this;
+    }
+
+    /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @param builder function to build the oldResource value
+     * @return Builder
+     */
+
+    public ExtensionInputBuilder oldResource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.oldResource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
      * @return action
      */
@@ -80,13 +109,23 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @return oldResource
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.Reference getOldResource() {
+        return this.oldResource;
+    }
+
+    /**
      * builds ExtensionInput with checking for non-null required values
      * @return ExtensionInput
      */
     public ExtensionInput build() {
         Objects.requireNonNull(action, ExtensionInput.class + ": action is missing");
         Objects.requireNonNull(resource, ExtensionInput.class + ": resource is missing");
-        return new ExtensionInputImpl(action, resource);
+        return new ExtensionInputImpl(action, resource, oldResource);
     }
 
     /**
@@ -94,7 +133,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
      * @return ExtensionInput
      */
     public ExtensionInput buildUnchecked() {
-        return new ExtensionInputImpl(action, resource);
+        return new ExtensionInputImpl(action, resource, oldResource);
     }
 
     /**
@@ -114,6 +153,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
         ExtensionInputBuilder builder = new ExtensionInputBuilder();
         builder.action = template.getAction();
         builder.resource = template.getResource();
+        builder.oldResource = template.getOldResource();
         return builder;
     }
 

@@ -188,7 +188,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @return custom
      */
 

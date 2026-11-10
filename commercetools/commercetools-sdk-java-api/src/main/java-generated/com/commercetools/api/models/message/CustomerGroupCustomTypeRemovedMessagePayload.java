@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Type from a Customer Group using the Set Custom Type update action with empty parameters.</p>
+ *  <p>Generated after removing a Custom Type from a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action with empty parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerGroupCustomTypeRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupCustomTypeRemovedMessagePayloadImpl.class)
 public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePayload {
@@ -34,7 +36,7 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
     String CUSTOMER_GROUP_CUSTOM_TYPE_REMOVED = "CustomerGroupCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -42,7 +44,7 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
     public String getOldTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
@@ -67,6 +69,8 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
         instance.setOldTypeId(template.getOldTypeId());
         return instance;
     }
+
+    public CustomerGroupCustomTypeRemovedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerGroupCustomTypeRemovedMessagePayload
@@ -117,8 +121,8 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupCustomTypeRemovedMessagePayload>";

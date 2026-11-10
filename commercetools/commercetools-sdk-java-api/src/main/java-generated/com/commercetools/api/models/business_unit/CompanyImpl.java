@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CompanyImpl implements Company, ModelBase {
@@ -40,6 +41,8 @@ public class CompanyImpl implements Company, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores;
+
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
     private com.commercetools.api.models.business_unit.BusinessUnitType unitType;
@@ -49,6 +52,8 @@ public class CompanyImpl implements Company, ModelBase {
     private String contactEmail;
 
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
@@ -70,6 +75,8 @@ public class CompanyImpl implements Company, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     /**
      * create instance with all properties
      */
@@ -82,9 +89,11 @@ public class CompanyImpl implements Company, ModelBase {
             @JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("inheritedStores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores,
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
             @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds,
             @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId,
@@ -94,7 +103,8 @@ public class CompanyImpl implements Company, ModelBase {
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
             @JsonProperty("inheritedAssociates") final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit,
-            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit) {
+            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -104,10 +114,12 @@ public class CompanyImpl implements Company, ModelBase {
         this.key = key;
         this.status = status;
         this.stores = stores;
+        this.inheritedStores = inheritedStores;
         this.storeMode = storeMode;
         this.name = name;
         this.contactEmail = contactEmail;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.addresses = addresses;
         this.shippingAddressIds = shippingAddressIds;
         this.defaultShippingAddressId = defaultShippingAddressId;
@@ -118,6 +130,7 @@ public class CompanyImpl implements Company, ModelBase {
         this.inheritedAssociates = inheritedAssociates;
         this.parentUnit = parentUnit;
         this.topLevelUnit = topLevelUnit;
+        this.approvalRuleMode = approvalRuleMode;
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
@@ -185,7 +198,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
@@ -193,9 +206,9 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -203,7 +216,15 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
+        return this.inheritedStores;
+    }
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -235,11 +256,20 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -283,7 +313,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
@@ -291,7 +321,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
@@ -299,7 +329,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> getInheritedAssociates() {
@@ -320,6 +350,14 @@ public class CompanyImpl implements Company, ModelBase {
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getTopLevelUnit() {
         return this.topLevelUnit;
+    }
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
     }
 
     public void setId(final String id) {
@@ -362,6 +400,15 @@ public class CompanyImpl implements Company, ModelBase {
         this.stores = stores;
     }
 
+    public void setInheritedStores(final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        this.inheritedStores = new ArrayList<>(Arrays.asList(inheritedStores));
+    }
+
+    public void setInheritedStores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores) {
+        this.inheritedStores = inheritedStores;
+    }
+
     public void setStoreMode(final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
         this.storeMode = storeMode;
     }
@@ -376,6 +423,16 @@ public class CompanyImpl implements Company, ModelBase {
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+    }
+
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     public void setAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -442,6 +499,11 @@ public class CompanyImpl implements Company, ModelBase {
         this.topLevelUnit = topLevelUnit;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -461,11 +523,13 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(key, that.key)
                 .append(status, that.status)
                 .append(stores, that.stores)
+                .append(inheritedStores, that.inheritedStores)
                 .append(storeMode, that.storeMode)
                 .append(unitType, that.unitType)
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -476,6 +540,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -485,11 +550,13 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(key, that.key)
                 .append(status, that.status)
                 .append(stores, that.stores)
+                .append(inheritedStores, that.inheritedStores)
                 .append(storeMode, that.storeMode)
                 .append(unitType, that.unitType)
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -500,6 +567,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .isEquals();
     }
 
@@ -514,11 +582,13 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(key)
                 .append(status)
                 .append(stores)
+                .append(inheritedStores)
                 .append(storeMode)
                 .append(unitType)
                 .append(name)
                 .append(contactEmail)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .append(addresses)
                 .append(shippingAddressIds)
                 .append(defaultShippingAddressId)
@@ -529,6 +599,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates)
                 .append(parentUnit)
                 .append(topLevelUnit)
+                .append(approvalRuleMode)
                 .toHashCode();
     }
 
@@ -543,11 +614,13 @@ public class CompanyImpl implements Company, ModelBase {
                 .append("key", key)
                 .append("status", status)
                 .append("stores", stores)
+                .append("inheritedStores", inheritedStores)
                 .append("storeMode", storeMode)
                 .append("unitType", unitType)
                 .append("name", name)
                 .append("contactEmail", contactEmail)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("addresses", addresses)
                 .append("shippingAddressIds", shippingAddressIds)
                 .append("defaultShippingAddressId", defaultShippingAddressId)
@@ -558,7 +631,12 @@ public class CompanyImpl implements Company, ModelBase {
                 .append("inheritedAssociates", inheritedAssociates)
                 .append("parentUnit", parentUnit)
                 .append("topLevelUnit", topLevelUnit)
+                .append("approvalRuleMode", approvalRuleMode)
                 .build();
     }
 
+    @Override
+    public Company copyDeep() {
+        return Company.deepCopy(this);
+    }
 }

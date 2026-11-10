@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Deletes the Customer specified in the <span>customer:{id}</span> scope. Returns a <code>200</code> status if successful.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -63,7 +63,7 @@ public class ByProjectKeyMeDelete
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/me", this.projectKey);
+        String httpRequestPath = String.format("%s/me", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

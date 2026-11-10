@@ -91,6 +91,9 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
@@ -107,6 +110,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the <span>Import API</span>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -140,7 +144,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that must be <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -206,7 +210,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     *  <p>Deprecated since an anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> can be identified by its <code>id</code> or external <code>key</code>.</p>
      * @param anonymousCartId value to be set
      * @return Builder
      */
@@ -217,7 +221,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
@@ -230,7 +234,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
@@ -242,7 +246,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param anonymousCart value to be set
      * @return Builder
      */
@@ -254,7 +258,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -276,7 +281,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> provide extended functionality.</p>
      * @param companyName value to be set
      * @return Builder
      */
@@ -481,7 +486,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @param isEmailVerified value to be set
      * @return Builder
      */
@@ -492,7 +497,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -506,7 +512,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -519,7 +526,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -528,6 +536,106 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
     }
 
     /**
@@ -566,7 +674,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -588,10 +696,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -604,10 +712,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -620,10 +728,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -639,10 +747,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -658,10 +766,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -675,10 +783,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -690,10 +798,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -721,6 +829,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the <span>Import API</span>.</p>
      * @return key
      */
 
@@ -751,7 +860,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that must be <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
 
@@ -810,7 +919,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     *  <p>Deprecated since an anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> can be identified by its <code>id</code> or external <code>key</code>.</p>
      * @return anonymousCartId
      */
     @Deprecated
@@ -820,7 +929,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @return anonymousCart
      */
 
@@ -830,7 +939,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return anonymousId
      */
 
@@ -850,7 +960,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> provide extended functionality.</p>
      * @return companyName
      */
 
@@ -920,7 +1030,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @return isEmailVerified
      */
 
@@ -930,13 +1040,25 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @return customerGroup
      */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -950,7 +1072,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -970,10 +1092,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
@@ -1005,7 +1127,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return new CustomerDraftImpl(key, customerNumber, externalId, email, password, firstName, lastName, middleName,
             title, anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            customerGroup, custom, locale, salutation, stores, authenticationMode);
+            customerGroup, customerGroupAssignments, custom, locale, salutation, stores, authenticationMode);
     }
 
     /**
@@ -1016,7 +1138,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return new CustomerDraftImpl(key, customerNumber, externalId, email, password, firstName, lastName, middleName,
             title, anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            customerGroup, custom, locale, salutation, stores, authenticationMode);
+            customerGroup, customerGroupAssignments, custom, locale, salutation, stores, authenticationMode);
     }
 
     /**
@@ -1056,6 +1178,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         builder.billingAddresses = template.getBillingAddresses();
         builder.isEmailVerified = template.getIsEmailVerified();
         builder.customerGroup = template.getCustomerGroup();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         builder.custom = template.getCustom();
         builder.locale = template.getLocale();
         builder.salutation = template.getSalutation();

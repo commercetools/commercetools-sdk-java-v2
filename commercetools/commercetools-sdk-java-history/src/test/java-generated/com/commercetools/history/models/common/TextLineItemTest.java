@@ -1,45 +1,43 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.time.ZonedDateTime;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TextLineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TextLineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TextLineItemBuilder builder) {
         TextLineItem textLineItem = builder.buildUnchecked();
         Assertions.assertThat(textLineItem).isInstanceOf(TextLineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TextLineItem.builder().addedAt("addedAt") },
-                new Object[] {
+        return new Object[][] {
+                new Object[] { "addedAt", TextLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
                         TextLineItem.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { TextLineItem.builder()
-                        .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().id("id") },
-                new Object[] { TextLineItem.builder()
-                        .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().quantity(8) } };
+                new Object[] { "description",
+                        TextLineItem.builder()
+                                .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "id", TextLineItem.builder().id("id") },
+                new Object[] { "key", TextLineItem.builder().key("key") },
+                new Object[] { "name",
+                        TextLineItem.builder()
+                                .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "quantity", TextLineItem.builder().quantity(8L) } };
     }
 
     @Test
     public void addedAt() {
         TextLineItem value = TextLineItem.of();
-        value.setAddedAt("addedAt");
-        Assertions.assertThat(value.getAddedAt()).isEqualTo("addedAt");
+        value.setAddedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getAddedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test
@@ -66,6 +64,13 @@ public class TextLineItemTest {
     }
 
     @Test
+    public void key() {
+        TextLineItem value = TextLineItem.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
     public void name() {
         TextLineItem value = TextLineItem.of();
         value.setName(new com.commercetools.history.models.common.LocalizedStringImpl());
@@ -76,7 +81,7 @@ public class TextLineItemTest {
     @Test
     public void quantity() {
         TextLineItem value = TextLineItem.of();
-        value.setQuantity(8);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(8);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 }

@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
@@ -30,7 +32,8 @@ public class GraphQLSearchExecutionFailureErrorImpl implements GraphQLSearchExec
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLSearchExecutionFailureErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLSearchExecutionFailureErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = SEARCH_EXECUTION_FAILURE;
     }
@@ -94,4 +97,8 @@ public class GraphQLSearchExecutionFailureErrorImpl implements GraphQLSearchExec
                 .build();
     }
 
+    @Override
+    public GraphQLSearchExecutionFailureError copyDeep() {
+        return GraphQLSearchExecutionFailureError.deepCopy(this);
+    }
 }

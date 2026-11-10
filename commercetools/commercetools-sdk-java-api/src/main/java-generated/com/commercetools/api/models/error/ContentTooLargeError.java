@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the request results in too much data being returned from the API. Adjust the request query to reduce the size of the data returned.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ContentTooLarge")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ContentTooLargeErrorImpl.class)
 public interface ContentTooLargeError extends ErrorObject {
@@ -78,6 +80,8 @@ public interface ContentTooLargeError extends ErrorObject {
         return instance;
     }
 
+    public ContentTooLargeError copyDeep();
+
     /**
      * factory method to create a deep copy of ContentTooLargeError
      * @param template instance to be copied
@@ -125,8 +129,8 @@ public interface ContentTooLargeError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ContentTooLargeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ContentTooLargeError>() {
+    public static tools.jackson.core.type.TypeReference<ContentTooLargeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ContentTooLargeError>() {
             @Override
             public String toString() {
                 return "TypeReference<ContentTooLargeError>";

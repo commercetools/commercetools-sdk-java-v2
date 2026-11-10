@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountValue
@@ -26,10 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteImpl.class, name = ProductDiscountValueAbsolute.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalImpl.class, name = ProductDiscountValueExternal.EXTERNAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeImpl.class, name = ProductDiscountValueRelative.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductDiscountValueImpl.class, visible = true)
 @JsonDeserialize(as = ProductDiscountValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface ProductDiscountValue {
     @JsonProperty("type")
     public String getType();
 
+    public ProductDiscountValue copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountValue
      * @param template instance to be copied
@@ -53,17 +52,9 @@ public interface ProductDiscountValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueExternal) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueExternal
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueExternal) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueRelative) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueRelative
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueRelative) template);
+
+        if (!(template instanceof ProductDiscountValueImpl)) {
+            return template.copyDeep();
         }
         ProductDiscountValueImpl instance = new ProductDiscountValueImpl();
         return instance;
@@ -107,8 +98,8 @@ public interface ProductDiscountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValue>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValue>";

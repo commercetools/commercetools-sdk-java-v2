@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetCategoryOrderHintAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCategoryOrderHint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
 public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return categoryId
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public String getCategoryId();
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @return orderHint
      */
 
@@ -52,7 +54,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public String getOrderHint();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 
@@ -60,21 +62,21 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param categoryId value to be set
      */
 
     public void setCategoryId(final String categoryId);
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @param orderHint value to be set
      */
 
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -100,6 +102,8 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetCategoryOrderHintAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetCategoryOrderHintAction
@@ -150,8 +154,8 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetCategoryOrderHintAction>";

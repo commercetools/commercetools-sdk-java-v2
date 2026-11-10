@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
+ *  <p>Returned when an <span>external OAuth Introspection endpoint</span> does not return a response within the <span>time limit</span>, or the response isn't compliant with <span>RFC 7662</span> (for example, an HTTP status code like <code>500</code>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLExternalOAuthFailedErrorImpl implements GraphQLExternalOAuthFailedError, ModelBase {
@@ -30,7 +32,8 @@ public class GraphQLExternalOAuthFailedErrorImpl implements GraphQLExternalOAuth
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLExternalOAuthFailedErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLExternalOAuthFailedErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = EXTERNAL_O_AUTH_FAILED;
     }
@@ -94,4 +97,8 @@ public class GraphQLExternalOAuthFailedErrorImpl implements GraphQLExternalOAuth
                 .build();
     }
 
+    @Override
+    public GraphQLExternalOAuthFailedError copyDeep() {
+        return GraphQLExternalOAuthFailedError.deepCopy(this);
+    }
 }

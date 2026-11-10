@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changing the status of a Business Unit generates a BusinessUnitStatusChanged Message.</p>
+ *  <p>Changing the status of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStatusChangedMessage" rel="nofollow">BusinessUnitStatusChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeStatus")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitChangeStatusActionImpl.class)
 public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction {
@@ -68,6 +70,8 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
         instance.setStatus(template.getStatus());
         return instance;
     }
+
+    public BusinessUnitChangeStatusAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitChangeStatusAction
@@ -115,8 +119,8 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeStatusAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeStatusAction>";

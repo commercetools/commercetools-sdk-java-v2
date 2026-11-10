@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * CustomerSetExternalIdAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerExternalIdSetMessage" rel="nofollow">CustomerExternalIdSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExternalId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetExternalIdActionImpl.class)
 public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     String SET_EXTERNAL_ID = "setExternalId";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalId
      */
 
@@ -42,7 +44,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     public String getExternalId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalId value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public CustomerSetExternalIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetExternalIdAction
@@ -113,8 +117,8 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetExternalIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetExternalIdAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSetExternalIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSetExternalIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetExternalIdAction>";

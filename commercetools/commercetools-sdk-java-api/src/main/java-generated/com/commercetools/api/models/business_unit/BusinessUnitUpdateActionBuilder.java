@@ -23,6 +23,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionBuilder.of();
     }
@@ -33,6 +37,10 @@ public class BusinessUnitUpdateActionBuilder {
 
     public com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionBuilder changeAddressBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder changeApprovalRuleModeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder.of();
     }
 
     public com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
@@ -67,6 +75,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitRemoveBillingAddressIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdActionBuilder.of();
     }
@@ -99,6 +111,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressActionBuilder.of();
     }
@@ -113,6 +129,10 @@ public class BusinessUnitUpdateActionBuilder {
 
     public com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionBuilder setStoresBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeActionBuilder setUnitTypeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeActionBuilder.of();
     }
 
     /**

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+ *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <span>IETF language tag</span>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
  *  <pre><code>{
  *    "en": [
  *      { "text": "Multi tool" },
@@ -38,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SearchKeywords searchKeywords = SearchKeywords.builder()
- *             .plus/^[a-z]{2}(-[A-Z]{2})?$/(/^[a-z]{2}(-[A-Z]{2})?$/Builder -> /^[a-z]{2}(-[A-Z]{2})?$/Builder)
+ *             .plus/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/(/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/Builder -> /^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -83,6 +84,8 @@ public interface SearchKeywords {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public SearchKeywords copyDeep();
 
     /**
      * factory method to create a deep copy of SearchKeywords
@@ -130,8 +133,8 @@ public interface SearchKeywords {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchKeywords> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchKeywords>() {
+    public static tools.jackson.core.type.TypeReference<SearchKeywords> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchKeywords>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchKeywords>";

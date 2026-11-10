@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a number.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("number")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface NumberAttribute extends Attribute {
     String NUMBER = "number";
 
     /**
-     *
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface NumberAttribute extends Attribute {
     public Double getValue();
 
     /**
-     * set value
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface NumberAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public NumberAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of NumberAttribute
@@ -117,8 +121,8 @@ public interface NumberAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<NumberAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<NumberAttribute>() {
+    public static tools.jackson.core.type.TypeReference<NumberAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<NumberAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<NumberAttribute>";

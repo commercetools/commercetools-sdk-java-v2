@@ -4,9 +4,9 @@ package com.commercetools.importapi.models.productvariants;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Attributes
@@ -29,7 +31,7 @@ public class AttributesImpl implements Attributes, ModelBase {
      */
     @JsonCreator
     AttributesImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.importapi.models.productvariants.Attribute> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.importapi.models.productvariants.Attribute> values) {
         this.values = values;
     }
 
@@ -77,4 +79,8 @@ public class AttributesImpl implements Attributes, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public Attributes copyDeep() {
+        return Attributes.deepCopy(this);
+    }
 }

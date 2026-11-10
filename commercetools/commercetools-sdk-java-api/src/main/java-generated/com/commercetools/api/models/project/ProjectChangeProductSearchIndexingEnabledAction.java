@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ProjectChangeProductSearchIndexingEnabledAction
+ *  <p><span>Product Projection Search</span> is <strong>deprecated</strong>. For Projects created after 31 August 2026, the <code>"ProductProjectionsSearch"</code> mode cannot be activated. Use <code>ProductsSearch</code> instead. For such Projects, setting <code>enabled</code> to <code>true</code> with <code>mode</code> <code>"ProductProjectionsSearch"</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeProductSearchIndexingEnabled")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeProductSearchIndexingEnabledActionImpl.class)
 public interface ProjectChangeProductSearchIndexingEnabledAction extends ProjectUpdateAction {
@@ -36,9 +38,10 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     String CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED = "changeProductSearchIndexingEnabled";
 
     /**
+     *  <p>Whether to enable product indexing for the storefront search APIs selected by <code>mode</code>.</p>
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *   <li>If <code>true</code>, indexing starts for the selected API and the corresponding status changes to <code>"Indexing"</code>. After indexing finishes, the status changes to <code>"Activated"</code> and the selected API becomes available.</li>
+     *   <li>If <code>false</code>, indexing stops and the selected API become unavailable. The corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> changes to <code>"Deactivated"</code>.</li>
      *  </ul>
      * @return enabled
      */
@@ -47,7 +50,7 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public Boolean getEnabled();
 
     /**
-     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     *  <p>Controls whether the action should apply to <span>Product Projection Search</span> or to <span>Product Search</span>.</p>
      * @return mode
      */
 
@@ -55,9 +58,10 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public ProductSearchIndexingMode getMode();
 
     /**
+     *  <p>Whether to enable product indexing for the storefront search APIs selected by <code>mode</code>.</p>
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *   <li>If <code>true</code>, indexing starts for the selected API and the corresponding status changes to <code>"Indexing"</code>. After indexing finishes, the status changes to <code>"Activated"</code> and the selected API becomes available.</li>
+     *   <li>If <code>false</code>, indexing stops and the selected API become unavailable. The corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> changes to <code>"Deactivated"</code>.</li>
      *  </ul>
      * @param enabled value to be set
      */
@@ -65,7 +69,7 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public void setEnabled(final Boolean enabled);
 
     /**
-     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     *  <p>Controls whether the action should apply to <span>Product Projection Search</span> or to <span>Product Search</span>.</p>
      * @param mode value to be set
      */
 
@@ -91,6 +95,8 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
         instance.setMode(template.getMode());
         return instance;
     }
+
+    public ProjectChangeProductSearchIndexingEnabledAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeProductSearchIndexingEnabledAction
@@ -142,8 +148,8 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeProductSearchIndexingEnabledAction>";

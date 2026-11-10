@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart_discount;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,9 +26,12 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
+    @Nullable
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
+
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -37,8 +42,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -50,8 +55,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -65,8 +70,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -81,8 +86,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -95,8 +100,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -107,8 +112,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -119,8 +124,21 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @param applicationMode value to be set
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedDraftBuilder applicationMode(
+            @Nullable final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
+        return this;
+    }
+
+    /**
+     *  <p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return money
      */
 
@@ -129,12 +147,23 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
+     *  <p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
+    /**
      * builds CartDiscountValueFixedDraft with checking for non-null required values
      * @return CartDiscountValueFixedDraft
      */
     public CartDiscountValueFixedDraft build() {
         Objects.requireNonNull(money, CartDiscountValueFixedDraft.class + ": money is missing");
-        return new CartDiscountValueFixedDraftImpl(money);
+        return new CartDiscountValueFixedDraftImpl(money, applicationMode);
     }
 
     /**
@@ -142,7 +171,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
      * @return CartDiscountValueFixedDraft
      */
     public CartDiscountValueFixedDraft buildUnchecked() {
-        return new CartDiscountValueFixedDraftImpl(money);
+        return new CartDiscountValueFixedDraftImpl(money, applicationMode);
     }
 
     /**
@@ -161,6 +190,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     public static CartDiscountValueFixedDraftBuilder of(final CartDiscountValueFixedDraft template) {
         CartDiscountValueFixedDraftBuilder builder = new CartDiscountValueFixedDraftBuilder();
         builder.money = template.getMoney();
+        builder.applicationMode = template.getApplicationMode();
         return builder;
     }
 

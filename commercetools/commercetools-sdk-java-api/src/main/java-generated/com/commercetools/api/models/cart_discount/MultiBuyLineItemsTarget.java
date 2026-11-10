@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MultiBuyLineItemsTarget
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("multiBuyLineItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MultiBuyLineItemsTargetImpl.class)
 public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
@@ -39,7 +41,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @return predicate
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public String getPredicate();
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @return triggerQuantity
      */
     @NotNull
@@ -55,7 +57,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public Integer getTriggerQuantity();
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @return discountedQuantity
      */
     @NotNull
@@ -79,21 +81,21 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      */
 
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @param triggerQuantity value to be set
      */
 
     public void setTriggerQuantity(final Integer triggerQuantity);
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @param discountedQuantity value to be set
      */
 
@@ -135,6 +137,8 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
         instance.setSelectionMode(template.getSelectionMode());
         return instance;
     }
+
+    public MultiBuyLineItemsTarget copyDeep();
 
     /**
      * factory method to create a deep copy of MultiBuyLineItemsTarget
@@ -186,8 +190,8 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MultiBuyLineItemsTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MultiBuyLineItemsTarget>() {
+    public static tools.jackson.core.type.TypeReference<MultiBuyLineItemsTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MultiBuyLineItemsTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<MultiBuyLineItemsTarget>";

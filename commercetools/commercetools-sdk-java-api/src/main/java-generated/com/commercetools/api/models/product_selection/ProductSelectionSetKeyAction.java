@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelectionSetKeyAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSetKeyActionImpl.class)
 public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateAction {
@@ -66,6 +68,8 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ProductSelectionSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionSetKeyAction
@@ -117,8 +121,8 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetKeyAction>";

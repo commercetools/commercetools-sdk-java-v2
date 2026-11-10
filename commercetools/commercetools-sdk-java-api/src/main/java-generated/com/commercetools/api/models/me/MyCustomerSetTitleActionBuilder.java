@@ -26,7 +26,7 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
     private String title;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param title value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return title
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generates the ProductTailoringDescriptionSet Message.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringDescriptionSetMessage" rel="nofollow">ProductTailoringDescriptionSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringSetDescriptionActionImpl implements ProductTailoringSetDescriptionAction, ModelBase {
@@ -56,7 +57,7 @@ public class ProductTailoringSetDescriptionActionImpl implements ProductTailorin
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -64,7 +65,7 @@ public class ProductTailoringSetDescriptionActionImpl implements ProductTailorin
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -111,4 +112,8 @@ public class ProductTailoringSetDescriptionActionImpl implements ProductTailorin
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetDescriptionAction copyDeep() {
+        return ProductTailoringSetDescriptionAction.deepCopy(this);
+    }
 }

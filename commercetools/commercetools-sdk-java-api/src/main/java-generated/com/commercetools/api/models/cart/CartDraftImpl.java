@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDraft
@@ -46,6 +47,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -70,6 +73,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private java.util.List<String> discountCodes;
 
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private String country;
 
     private String locale;
@@ -79,6 +84,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     private Long deleteDaysAfterLastModification;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    private String purchaseOrderNumber;
 
     /**
      * create instance with all properties
@@ -95,6 +102,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -107,10 +115,12 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber) {
         this.currency = currency;
         this.key = key;
         this.customerId = customerId;
@@ -123,6 +133,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.customLineItems = customLineItems;
         this.taxMode = taxMode;
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
@@ -135,11 +146,13 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.shipping = shipping;
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.country = country;
         this.locale = locale;
         this.origin = origin;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.custom = custom;
+        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     /**
@@ -165,7 +178,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      */
 
     public String getCustomerId() {
@@ -181,8 +194,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
-     *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
+     *  <p>You can set either a <code>customerId</code> or a <code>customerGroup</code>. If the Customer referenced in <code>customerId</code> belongs to a Customer Group then <code>customerGroup</code> is set automatically.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -190,7 +203,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      */
 
     public String getAnonymousId() {
@@ -198,7 +211,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -206,7 +219,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -214,7 +227,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItemDraft> getLineItems() {
@@ -222,7 +235,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
@@ -238,7 +251,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {
@@ -246,7 +259,15 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -278,7 +299,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
@@ -286,7 +307,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *  <p>Shipping Method for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> has a <code>predicate</code> that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">creating a Cart</a>.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -294,10 +315,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      */
@@ -318,7 +339,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
@@ -326,7 +347,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {
@@ -334,8 +355,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -343,7 +364,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p><code>code</code> of the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a> to add to the Cart.</p>
      */
 
     public java.util.List<String> getDiscountCodes() {
@@ -351,7 +372,18 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
+     *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      */
 
     public String getCountry() {
@@ -359,7 +391,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -375,8 +407,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts to receive a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> upon deletion of the Cart.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -389,6 +421,15 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
     }
 
     public void setCurrency(final String currency) {
@@ -449,6 +490,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     public void setExternalTaxRateForShippingMethod(
             final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
+    }
+
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
     }
 
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -519,6 +564,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+    }
+
     public void setCountry(final String country) {
         this.country = country;
     }
@@ -537,6 +586,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+    }
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     @Override
@@ -561,6 +614,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(taxMode, that.taxMode)
                 .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -573,11 +627,13 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(country, that.country)
                 .append(locale, that.locale)
                 .append(origin, that.origin)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(currency, that.currency)
                 .append(key, that.key)
                 .append(customerId, that.customerId)
@@ -590,6 +646,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(taxMode, that.taxMode)
                 .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -602,11 +659,13 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(country, that.country)
                 .append(locale, that.locale)
                 .append(origin, that.origin)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }
 
@@ -624,6 +683,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems)
                 .append(taxMode)
                 .append(externalTaxRateForShippingMethod)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(inventoryMode)
@@ -636,11 +696,13 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping)
                 .append(itemShippingAddresses)
                 .append(discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(country)
                 .append(locale)
                 .append(origin)
                 .append(deleteDaysAfterLastModification)
                 .append(custom)
+                .append(purchaseOrderNumber)
                 .toHashCode();
     }
 
@@ -658,6 +720,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append("customLineItems", customLineItems)
                 .append("taxMode", taxMode)
                 .append("externalTaxRateForShippingMethod", externalTaxRateForShippingMethod)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)
@@ -670,12 +733,18 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append("shipping", shipping)
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("discountCodes", discountCodes)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("country", country)
                 .append("locale", locale)
                 .append("origin", origin)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("custom", custom)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
                 .build();
     }
 
+    @Override
+    public CartDraft copyDeep() {
+        return CartDraft.deepCopy(this);
+    }
 }

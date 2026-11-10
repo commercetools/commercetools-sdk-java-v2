@@ -5,23 +5,26 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product data tailored per Store.</p>
+ *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -121,7 +124,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductReference getProduct();
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
     @NotNull
@@ -129,7 +132,7 @@ public interface ProductTailoring extends BaseResource {
     public Boolean getPublished();
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @return current
      */
     @NotNull
@@ -138,7 +141,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductTailoringData getCurrent();
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @return staged
      */
     @NotNull
@@ -147,12 +150,20 @@ public interface ProductTailoring extends BaseResource {
     public ProductTailoringData getStaged();
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @return hasStagedChanges
      */
     @NotNull
     @JsonProperty("hasStagedChanges")
     public Boolean getHasStagedChanges();
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
 
     /**
      *  <p>Unique identifier of the ProductTailoring.</p>
@@ -218,32 +229,47 @@ public interface ProductTailoring extends BaseResource {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      */
 
     public void setPublished(final Boolean published);
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param current value to be set
      */
 
     public void setCurrent(final ProductTailoringData current);
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final ProductTailoringData staged);
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @param hasStagedChanges value to be set
      */
 
     public void setHasStagedChanges(final Boolean hasStagedChanges);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
 
     /**
      * factory method
@@ -273,8 +299,11 @@ public interface ProductTailoring extends BaseResource {
         instance.setCurrent(template.getCurrent());
         instance.setStaged(template.getStaged());
         instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
+
+    public ProductTailoring copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoring
@@ -303,6 +332,11 @@ public interface ProductTailoring extends BaseResource {
         instance.setStaged(
             com.commercetools.api.models.product_tailoring.ProductTailoringData.deepCopy(template.getStaged()));
         instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -337,8 +371,8 @@ public interface ProductTailoring extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoring>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoring>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoring>";

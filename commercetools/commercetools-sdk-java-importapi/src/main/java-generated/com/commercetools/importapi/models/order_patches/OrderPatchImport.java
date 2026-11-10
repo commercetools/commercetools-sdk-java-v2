@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
+ *  <p>Represents the data used to update an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderPatchImport {
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @return orderNumber
      */
     @NotNull
@@ -41,7 +42,7 @@ public interface OrderPatchImport {
     public String getOrderNumber();
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @return fields
      */
     @NotNull
@@ -50,14 +51,14 @@ public interface OrderPatchImport {
     public OrderField getFields();
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      */
 
@@ -82,6 +83,8 @@ public interface OrderPatchImport {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public OrderPatchImport copyDeep();
 
     /**
      * factory method to create a deep copy of OrderPatchImport
@@ -130,8 +133,8 @@ public interface OrderPatchImport {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport>() {
+    public static tools.jackson.core.type.TypeReference<OrderPatchImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderPatchImport>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderPatchImport>";

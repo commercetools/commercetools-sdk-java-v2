@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountChangeSortOrderAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeSortOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountChangeSortOrderActionImpl.class)
 public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpdateAction {
@@ -37,6 +39,7 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
 
     /**
      *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return sortOrder
      */
     @NotNull
@@ -45,6 +48,7 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
 
     /**
      *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param sortOrder value to be set
      */
 
@@ -68,6 +72,8 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
         instance.setSortOrder(template.getSortOrder());
         return instance;
     }
+
+    public ProductDiscountChangeSortOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountChangeSortOrderAction
@@ -117,8 +123,8 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountChangeSortOrderAction>";

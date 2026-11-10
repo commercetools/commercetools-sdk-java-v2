@@ -54,6 +54,12 @@ public class OrderQueryTests {
                     .orders()
                     .search()
                     .post(orderSearchRequestBuilder -> orderSearchRequestBuilder.query(new OrderSearchQuery() {
+
+                        @Override
+                        public OrderSearchQuery copyDeep() {
+                            return null;
+                        }
+
                         /*
                         {
                             "exists": {
@@ -102,7 +108,9 @@ public class OrderQueryTests {
                     .orders()
                     .search()
                     //                    .post("")
-                    .post(r -> r.withQuery(q -> q.exists(e -> e.field("custom.deliveryDate").customType("StringType")))
+                    .post(r -> r
+                            .withQuery(q -> q.exists(
+                                e -> e.field("custom.deliveryDate").customType(OrderSearchCustomType.STRING_TYPE)))
                             .withSort(b -> b.field("createdAt").order(OrderSearchSortOrder.DESC))
                             .limit(20))
                     .executeBlocking()

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxCategoryReplaceTaxRateAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("replaceTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)
 public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {
@@ -37,7 +39,8 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     String REPLACE_TAX_RATE = "replaceTaxRate";
 
     /**
-     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateId
      */
 
@@ -45,7 +48,8 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     public String getTaxRateId();
 
     /**
-     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateKey
      */
 
@@ -62,14 +66,16 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     public TaxRateDraft getTaxRate();
 
     /**
-     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateId value to be set
      */
 
     public void setTaxRateId(final String taxRateId);
 
     /**
-     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateKey value to be set
      */
 
@@ -102,6 +108,8 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public TaxCategoryReplaceTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryReplaceTaxRateAction
@@ -151,8 +159,8 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategoryReplaceTaxRateAction>";

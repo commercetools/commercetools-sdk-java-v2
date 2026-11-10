@@ -6,17 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to an AttributeGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("attribute-group")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupReferenceImpl.class)
 public interface AttributeGroupReference extends Reference, com.commercetools.api.models.Identifiable<AttributeGroup>,
@@ -39,7 +42,15 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     String ATTRIBUTE_GROUP = "attribute-group";
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @return obj
      */
     @Valid
@@ -47,7 +58,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public AttributeGroup getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @return id
      */
     @NotNull
@@ -55,14 +66,14 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @param obj value to be set
      */
 
     public void setObj(final AttributeGroup obj);
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @param id value to be set
      */
 
@@ -87,6 +98,8 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public AttributeGroupReference copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupReference
@@ -135,8 +148,8 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupReference>() {
+    public static tools.jackson.core.type.TypeReference<AttributeGroupReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeGroupReference>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeGroupReference>";

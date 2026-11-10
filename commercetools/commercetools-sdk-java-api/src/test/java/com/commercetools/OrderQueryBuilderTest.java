@@ -1,36 +1,31 @@
 
 package com.commercetools;
 
+import com.commercetools.api.models.order.OrderSearchCustomType;
 import com.commercetools.api.models.order.OrderSearchRequest;
 import com.commercetools.api.models.order.OrderSearchRequestBuilder;
 import com.commercetools.api.models.order.OrderSearchSortOrder;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.json.JSONException;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.skyscreamer.jsonassert.JSONAssert;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
+import tools.jackson.core.JacksonException;
+
 public class OrderQueryBuilderTest {
-    @TestTemplate
-    @UseDataProvider("searchBuilder")
+    @ParameterizedTest
+    @MethodSource("searchBuilder")
     public void buildUnchecked(OrderSearchRequestBuilder builder, String expectedQuery)
-            throws JSONException, JsonProcessingException {
+            throws JSONException, JacksonException {
         OrderSearchRequest request = builder.buildUnchecked();
         Assertions.assertThat(request).isInstanceOf(OrderSearchRequest.class);
         JSONAssert.assertEquals(expectedQuery, JsonUtils.toJsonString(request), true);
     }
 
-    @DataProvider
     public static Object[][] searchBuilder() {
         return new Object[][] { new Object[] { OrderSearchRequest.builder()
                 .withQuery(q -> q.and(b -> b
@@ -98,8 +93,9 @@ public class OrderQueryBuilderTest {
                                    }
                                  }""" },
                 new Object[] { OrderSearchRequest.builder()
-                        .withQuery(q -> q.exact(
-                            t -> t.field("custom.myOrderField").value("special order").customType("StringType"))),
+                        .withQuery(q -> q.exact(t -> t.field("custom.myOrderField")
+                                .value("special order")
+                                .customType(OrderSearchCustomType.STRING_TYPE))),
                         """
                                 {
                                   "query": {

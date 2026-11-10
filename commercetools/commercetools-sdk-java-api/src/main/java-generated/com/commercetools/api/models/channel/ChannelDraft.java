@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelDraft
@@ -38,6 +39,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
     @NotNull
@@ -45,7 +48,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public String getKey();
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 
@@ -85,7 +89,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @return geoLocation
      */
     @Valid
@@ -94,13 +98,16 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -108,7 +115,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public void setRoles(final ChannelRoleEnum... roles);
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -143,7 +151,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param geoLocation value to be set
      */
 
@@ -173,6 +181,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public ChannelDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelDraft
@@ -227,8 +237,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelDraft>() {
+    public static tools.jackson.core.type.TypeReference<ChannelDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelDraft>";

@@ -1,37 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetShippingMethodTaxAmountChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetShippingMethodTaxAmountChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetShippingMethodTaxAmountChangeBuilder builder) {
         SetShippingMethodTaxAmountChange setShippingMethodTaxAmountChange = builder.buildUnchecked();
         Assertions.assertThat(setShippingMethodTaxAmountChange).isInstanceOf(SetShippingMethodTaxAmountChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetShippingMethodTaxAmountChange.builder().change("change") },
-                new Object[] { SetShippingMethodTaxAmountChange.builder()
+        return new Object[][] { new Object[] { "change", SetShippingMethodTaxAmountChange.builder().change("change") },
+                new Object[] { "previousValue", SetShippingMethodTaxAmountChange.builder()
                         .previousValue(
                             new com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueImpl()) },
-                new Object[] { SetShippingMethodTaxAmountChange.builder()
+                new Object[] { "nextValue", SetShippingMethodTaxAmountChange.builder()
                         .nextValue(
                             new com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueImpl()) },
-                new Object[] { SetShippingMethodTaxAmountChange.builder()
+                new Object[] { "taxMode", SetShippingMethodTaxAmountChange.builder()
                         .taxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform")) } };
     }
 

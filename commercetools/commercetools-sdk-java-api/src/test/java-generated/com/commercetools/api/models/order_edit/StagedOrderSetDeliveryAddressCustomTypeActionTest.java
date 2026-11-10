@@ -1,37 +1,32 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetDeliveryAddressCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder) {
         StagedOrderSetDeliveryAddressCustomTypeAction stagedOrderSetDeliveryAddressCustomTypeAction = builder
                 .buildUnchecked();
         Assertions.assertThat(stagedOrderSetDeliveryAddressCustomTypeAction)
                 .isInstanceOf(StagedOrderSetDeliveryAddressCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetDeliveryAddressCustomTypeAction.builder().deliveryId("deliveryId") },
-                new Object[] { StagedOrderSetDeliveryAddressCustomTypeAction.builder().deliveryKey("deliveryKey") },
-                new Object[] { StagedOrderSetDeliveryAddressCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { StagedOrderSetDeliveryAddressCustomTypeAction.builder()
+                new Object[] { "deliveryId",
+                        StagedOrderSetDeliveryAddressCustomTypeAction.builder().deliveryId("deliveryId") },
+                new Object[] { "deliveryKey",
+                        StagedOrderSetDeliveryAddressCustomTypeAction.builder().deliveryKey("deliveryKey") },
+                new Object[] { "type",
+                        StagedOrderSetDeliveryAddressCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", StagedOrderSetDeliveryAddressCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

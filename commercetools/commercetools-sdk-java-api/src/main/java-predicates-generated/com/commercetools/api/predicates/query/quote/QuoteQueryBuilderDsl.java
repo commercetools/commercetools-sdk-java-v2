@@ -200,6 +200,12 @@ public class QuoteQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<QuoteQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<QuoteQueryBuilderDsl> taxRoundingMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
@@ -272,6 +278,12 @@ public class QuoteQueryBuilderDsl {
     public CollectionPredicateBuilder<QuoteQueryBuilderDsl> directDiscounts() {
         return new CollectionPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
+    }
+
+    public BooleanComparisonPredicateBuilder<QuoteQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
             p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
     }
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetMethodInfoNameAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoNameAction, ModelBase {
@@ -52,7 +53,7 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -92,4 +93,8 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
                 .build();
     }
 
+    @Override
+    public PaymentSetMethodInfoNameAction copyDeep() {
+        return PaymentSetMethodInfoNameAction.deepCopy(this);
+    }
 }

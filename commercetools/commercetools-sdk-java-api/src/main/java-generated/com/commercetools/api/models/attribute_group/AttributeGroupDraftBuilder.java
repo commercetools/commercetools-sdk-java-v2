@@ -107,7 +107,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @return attributes
      */
 

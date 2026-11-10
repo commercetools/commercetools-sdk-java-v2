@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email-token:POST" rel="nofollow">Create email token for Customer</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email-token:POST" rel="nofollow">Create email token for Customer in Store</a> request. The <code>resource</code> property of the Message is a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailTokenReference" rel="nofollow">CustomerEmailTokenReference</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,10 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .customerId("{customerId}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerEmailTokenCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerEmailTokenCreatedMessageImpl.class)
 public interface CustomerEmailTokenCreatedMessage extends Message {
@@ -61,6 +64,22 @@ public interface CustomerEmailTokenCreatedMessage extends Message {
     public ZonedDateTime getExpiresAt();
 
     /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @return value
+     */
+
+    @JsonProperty("value")
+    public String getValue();
+
+    /**
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+    @NotNull
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @param customerId value to be set
      */
@@ -73,6 +92,20 @@ public interface CustomerEmailTokenCreatedMessage extends Message {
      */
 
     public void setExpiresAt(final ZonedDateTime expiresAt);
+
+    /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @param value value to be set
+     */
+
+    public void setValue(final String value);
+
+    /**
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
 
     /**
      * factory method
@@ -101,8 +134,12 @@ public interface CustomerEmailTokenCreatedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomerId(template.getCustomerId());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setValue(template.getValue());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
+
+    public CustomerEmailTokenCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerEmailTokenCreatedMessage
@@ -129,6 +166,8 @@ public interface CustomerEmailTokenCreatedMessage extends Message {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomerId(template.getCustomerId());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setValue(template.getValue());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -163,8 +202,8 @@ public interface CustomerEmailTokenCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailTokenCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailTokenCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerEmailTokenCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerEmailTokenCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerEmailTokenCreatedMessage>";

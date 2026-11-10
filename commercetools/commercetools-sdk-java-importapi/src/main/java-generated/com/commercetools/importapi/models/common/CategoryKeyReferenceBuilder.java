@@ -24,7 +24,7 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Category.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Category.</p>
      * @return key
      */
 

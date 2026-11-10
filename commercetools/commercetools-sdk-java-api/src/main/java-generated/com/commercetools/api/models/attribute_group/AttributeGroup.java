@@ -8,17 +8,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeGroup
@@ -109,7 +110,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public LocalizedString getDescription();
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @return attributes
      */
     @NotNull
@@ -182,7 +183,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes values to be set
      */
 
@@ -190,7 +191,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public void setAttributes(final AttributeReference... attributes);
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes values to be set
      */
 
@@ -230,6 +231,8 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public AttributeGroup copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroup
@@ -292,8 +295,8 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroup> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroup>() {
+    public static tools.jackson.core.type.TypeReference<AttributeGroup> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeGroup>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeGroup>";

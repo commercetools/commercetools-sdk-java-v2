@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -81,6 +82,8 @@ public interface SubRate {
         return instance;
     }
 
+    public SubRate copyDeep();
+
     /**
      * factory method to create a deep copy of SubRate
      * @param template instance to be copied
@@ -128,8 +131,8 @@ public interface SubRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubRate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubRate>() {
+    public static tools.jackson.core.type.TypeReference<SubRate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubRate>() {
             @Override
             public String toString() {
                 return "TypeReference<SubRate>";

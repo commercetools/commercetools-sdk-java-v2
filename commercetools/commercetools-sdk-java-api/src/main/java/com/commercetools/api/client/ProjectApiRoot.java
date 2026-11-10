@@ -309,6 +309,36 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyDiscountGroupsRequestBuilder discountGroups() {
+        return with().discountGroups();
+    }
+
+    @Override
+    public ByProjectKeyPaymentMethodsRequestBuilder paymentMethods() {
+        return with().paymentMethods();
+    }
+
+    @Override
+    public ByProjectKeyRecurringOrdersRequestBuilder recurringOrders() {
+        return with().recurringOrders();
+    }
+
+    @Override
+    public ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies() {
+        return with().recurrencePolicies();
+    }
+
+    @Override
+    public ByProjectKeyMcpServersRequestBuilder mcpServers() {
+        return with().mcpServers();
+    }
+
+    @Override
+    public ByProjectKeyAgentsRequestBuilder agents() {
+        return with().agents();
+    }
+
+    @Override
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }
@@ -325,5 +355,15 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
         }
         catch (final Throwable ignored) {
         }
+    }
+
+    @Override
+    public ByProjectKeyVariantProjectionsRequestBuilder variantProjections() {
+        return with().variantProjections();
+    }
+
+    @Override
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return with().variants();
     }
 }

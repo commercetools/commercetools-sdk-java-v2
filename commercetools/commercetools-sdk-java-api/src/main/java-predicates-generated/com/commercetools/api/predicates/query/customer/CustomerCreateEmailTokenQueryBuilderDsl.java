@@ -28,4 +28,10 @@ public class CustomerCreateEmailTokenQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerCreateEmailTokenQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CustomerCreateEmailTokenQueryBuilderDsl> invalidateOlderTokens() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p -> new CombinationQueryPredicate<>(p, CustomerCreateEmailTokenQueryBuilderDsl::of));
+    }
+
 }

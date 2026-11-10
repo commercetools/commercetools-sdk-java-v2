@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewRatingStatistics
@@ -22,9 +23,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
- *             .averageRating(1)
- *             .highestRating(1)
- *             .lowestRating(1)
+ *             .averageRating(0.3)
+ *             .highestRating(0.3)
+ *             .lowestRating(0.3)
  *             .count(1)
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
@@ -41,7 +42,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("averageRating")
-    public Integer getAverageRating();
+    public Double getAverageRating();
 
     /**
      *  <p>Highest rating of one target</p>
@@ -49,7 +50,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("highestRating")
-    public Integer getHighestRating();
+    public Double getHighestRating();
 
     /**
      *  <p>Lowest rating of one target</p>
@@ -57,7 +58,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("lowestRating")
-    public Integer getLowestRating();
+    public Double getLowestRating();
 
     /**
      *  <p>Number of ratings taken into account</p>
@@ -68,7 +69,7 @@ public interface ReviewRatingStatistics {
     public Integer getCount();
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @return ratingsDistribution
      */
     @NotNull
@@ -81,21 +82,21 @@ public interface ReviewRatingStatistics {
      * @param averageRating value to be set
      */
 
-    public void setAverageRating(final Integer averageRating);
+    public void setAverageRating(final Double averageRating);
 
     /**
      *  <p>Highest rating of one target</p>
      * @param highestRating value to be set
      */
 
-    public void setHighestRating(final Integer highestRating);
+    public void setHighestRating(final Double highestRating);
 
     /**
      *  <p>Lowest rating of one target</p>
      * @param lowestRating value to be set
      */
 
-    public void setLowestRating(final Integer lowestRating);
+    public void setLowestRating(final Double lowestRating);
 
     /**
      *  <p>Number of ratings taken into account</p>
@@ -105,7 +106,7 @@ public interface ReviewRatingStatistics {
     public void setCount(final Integer count);
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @param ratingsDistribution value to be set
      */
 
@@ -133,6 +134,8 @@ public interface ReviewRatingStatistics {
         instance.setRatingsDistribution(template.getRatingsDistribution());
         return instance;
     }
+
+    public ReviewRatingStatistics copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewRatingStatistics
@@ -184,8 +187,8 @@ public interface ReviewRatingStatistics {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics>() {
+    public static tools.jackson.core.type.TypeReference<ReviewRatingStatistics> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewRatingStatistics>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewRatingStatistics>";

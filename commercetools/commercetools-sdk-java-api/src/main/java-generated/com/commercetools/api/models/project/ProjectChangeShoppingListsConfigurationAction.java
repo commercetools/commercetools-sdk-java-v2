@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeShoppingListsConfigurationAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeShoppingListsConfiguration")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeShoppingListsConfigurationActionImpl.class)
 public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUpdateAction {
@@ -37,7 +39,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingListsConfiguration
      */
     @NotNull
@@ -46,7 +48,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     public ShoppingListsConfiguration getShoppingListsConfiguration();
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingListsConfiguration value to be set
      */
 
@@ -71,6 +73,8 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
         instance.setShoppingListsConfiguration(template.getShoppingListsConfiguration());
         return instance;
     }
+
+    public ProjectChangeShoppingListsConfigurationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeShoppingListsConfigurationAction
@@ -122,8 +126,8 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeShoppingListsConfigurationAction>";

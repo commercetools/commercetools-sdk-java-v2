@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Type from an address of a Business Unit using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after removing a Custom Type from an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitAddressCustomTypeRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAddressCustomTypeRemovedMessageImpl.class)
 public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
@@ -41,7 +43,7 @@ public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
     String BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_REMOVED = "BusinessUnitAddressCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -49,11 +51,26 @@ public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
     public String getOldTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
     public void setOldTypeId(final String oldTypeId);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -82,8 +99,11 @@ public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public BusinessUnitAddressCustomTypeRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitAddressCustomTypeRemovedMessage
@@ -110,6 +130,7 @@ public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -146,8 +167,8 @@ public interface BusinessUnitAddressCustomTypeRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddressCustomTypeRemovedMessage>";

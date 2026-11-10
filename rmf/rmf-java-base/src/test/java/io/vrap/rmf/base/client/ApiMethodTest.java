@@ -277,4 +277,18 @@ public class ApiMethodTest {
     public static <T extends ApiMethod<T, TResult>, TResult> T addBar(ApiMethod<T, TResult> method) {
         return method.addHeader("bar", "bar");
     }
+
+    @Test
+    public void encodePathParamRejectsDotSegments() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> ApiMethod.encodePathParam(".."));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> ApiMethod.encodePathParam("."));
+    }
+
+    @Test
+    public void encodePathParamEncodesReservedCharacters() {
+        Assertions.assertEquals("..%2F..%2Fother%3Fa%3Db%23c", ApiMethod.encodePathParam("../../other?a=b#c"));
+        Assertions.assertEquals("a%20b%2Bc", ApiMethod.encodePathParam("a b+c"));
+        Assertions.assertEquals("...", ApiMethod.encodePathParam("..."));
+        Assertions.assertEquals("a-b_c.d", ApiMethod.encodePathParam("a-b_c.d"));
+    }
 }

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Shipping Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderShippingAddressSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShippingAddressSetMessageImpl.class)
 public interface OrderShippingAddressSetMessage extends OrderMessage {
@@ -43,7 +45,7 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
     String ORDER_SHIPPING_ADDRESS_SET = "OrderShippingAddressSet";
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @return address
      */
     @Valid
@@ -51,7 +53,7 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
     public Address getAddress();
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @return oldAddress
      */
     @Valid
@@ -59,14 +61,14 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
     public Address getOldAddress();
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param oldAddress value to be set
      */
 
@@ -101,6 +103,8 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public OrderShippingAddressSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderShippingAddressSetMessage
@@ -161,8 +165,8 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderShippingAddressSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderShippingAddressSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderShippingAddressSetMessage>";

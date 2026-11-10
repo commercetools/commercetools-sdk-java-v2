@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Describes a Product Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
+ * AttributeDefinition
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,9 +28,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
+ *             .savedToLineItem(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +51,7 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -65,12 +68,20 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+    @NotNull
+    @JsonProperty("level")
+    public AttributeLevelEnum getLevel();
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
@@ -89,7 +100,7 @@ public interface AttributeDefinition {
     public LocalizedString getInputTip();
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
     @NotNull
@@ -97,13 +108,22 @@ public interface AttributeDefinition {
     public TextInputHint getInputHint();
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
-     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
     @NotNull
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+    @NotNull
+    @JsonProperty("savedToLineItem")
+    public Boolean getSavedToLineItem();
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
@@ -113,7 +133,7 @@ public interface AttributeDefinition {
     public void setType(final AttributeType type);
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
@@ -127,11 +147,18 @@ public interface AttributeDefinition {
     public void setLabel(final LocalizedString label);
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      */
 
     public void setIsRequired(final Boolean isRequired);
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevelEnum level);
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
@@ -148,19 +175,27 @@ public interface AttributeDefinition {
     public void setInputTip(final LocalizedString inputTip);
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      */
 
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
-     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      */
 
     public void setIsSearchable(final Boolean isSearchable);
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     */
+
+    public void setSavedToLineItem(final Boolean savedToLineItem);
 
     /**
      * factory method
@@ -181,12 +216,16 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setSavedToLineItem(template.getSavedToLineItem());
         return instance;
     }
+
+    public AttributeDefinition copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeDefinition
@@ -203,10 +242,12 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setSavedToLineItem(template.getSavedToLineItem());
         return instance;
     }
 
@@ -241,8 +282,8 @@ public interface AttributeDefinition {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
+    public static tools.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeDefinition>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeDefinition>";

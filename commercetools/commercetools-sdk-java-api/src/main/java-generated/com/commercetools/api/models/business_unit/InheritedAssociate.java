@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * InheritedAssociate
@@ -44,7 +45,7 @@ public interface InheritedAssociate {
     public List<InheritedAssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
@@ -68,7 +69,7 @@ public interface InheritedAssociate {
     public void setAssociateRoleAssignments(final List<InheritedAssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
@@ -93,6 +94,8 @@ public interface InheritedAssociate {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public InheritedAssociate copyDeep();
 
     /**
      * factory method to create a deep copy of InheritedAssociate
@@ -145,8 +148,8 @@ public interface InheritedAssociate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InheritedAssociate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InheritedAssociate>() {
+    public static tools.jackson.core.type.TypeReference<InheritedAssociate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InheritedAssociate>() {
             @Override
             public String toString() {
                 return "TypeReference<InheritedAssociate>";

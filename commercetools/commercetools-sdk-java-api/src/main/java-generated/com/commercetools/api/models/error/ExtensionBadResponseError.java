@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the response from the API Extension could not be parsed successfully (such as a <code>500</code> HTTP status code, or an invalid JSON response).</p>
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionBadResponse")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionBadResponseErrorImpl.class)
 public interface ExtensionBadResponseError extends ErrorObject {
@@ -204,6 +206,8 @@ public interface ExtensionBadResponseError extends ErrorObject {
         return instance;
     }
 
+    public ExtensionBadResponseError copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionBadResponseError
      * @param template instance to be copied
@@ -263,8 +267,8 @@ public interface ExtensionBadResponseError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionBadResponseError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionBadResponseError>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionBadResponseError>";

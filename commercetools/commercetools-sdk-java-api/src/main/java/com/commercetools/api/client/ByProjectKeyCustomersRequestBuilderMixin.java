@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.Versioned;
-import com.commercetools.api.models.customer.*;
+import com.commercetools.api.models.customer.Customer;
+import com.commercetools.api.models.customer.CustomerDraft;
+import com.commercetools.api.models.customer.CustomerDraftBuilder;
+import com.commercetools.api.models.customer.CustomerUpdate;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerUpdateActionBuilder;
 
 public interface ByProjectKeyCustomersRequestBuilderMixin {
     public ByProjectKeyCustomersByIDRequestBuilder withId(String ID);

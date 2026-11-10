@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ImportOperationStatus
+ *  <p>The status of a new <span>ImportOperation</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationStatus {
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p><code>id</code> of the <span>ImportOperation</span>.</p>
      * @return operationId
      */
 
@@ -42,7 +43,7 @@ public interface ImportOperationStatus {
     public String getOperationId();
 
     /**
-     *  <p>The validation state of the ImportOperation.</p>
+     *  <p>Validation state of the <span>ImportOperation</span>.</p>
      * @return state
      */
     @NotNull
@@ -50,7 +51,7 @@ public interface ImportOperationStatus {
     public ImportOperationState getState();
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @return errors
      */
     @Valid
@@ -58,21 +59,21 @@ public interface ImportOperationStatus {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p><code>id</code> of the <span>ImportOperation</span>.</p>
      * @param operationId value to be set
      */
 
     public void setOperationId(final String operationId);
 
     /**
-     *  <p>The validation state of the ImportOperation.</p>
+     *  <p>Validation state of the <span>ImportOperation</span>.</p>
      * @param state value to be set
      */
 
     public void setState(final ImportOperationState state);
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @param errors values to be set
      */
 
@@ -80,7 +81,7 @@ public interface ImportOperationStatus {
     public void setErrors(final ErrorObject... errors);
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @param errors values to be set
      */
 
@@ -106,6 +107,8 @@ public interface ImportOperationStatus {
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public ImportOperationStatus copyDeep();
 
     /**
      * factory method to create a deep copy of ImportOperationStatus
@@ -159,8 +162,8 @@ public interface ImportOperationStatus {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus>() {
+    public static tools.jackson.core.type.TypeReference<ImportOperationStatus> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportOperationStatus>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportOperationStatus>";

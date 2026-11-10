@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.state.StateReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestStateTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestStateTransitionMessagePayloadImpl.class)
 public interface QuoteRequestStateTransitionMessagePayload extends MessagePayload {
@@ -39,7 +41,7 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
     String QUOTE_REQUEST_STATE_TRANSITION = "QuoteRequestStateTransition";
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
     public StateReference getState();
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
     @Valid
@@ -56,7 +58,7 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
     public StateReference getOldState();
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
     @NotNull
@@ -64,21 +66,21 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
     public Boolean getForce();
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      */
 
     public void setOldState(final StateReference oldState);
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      */
 
@@ -105,6 +107,8 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public QuoteRequestStateTransitionMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestStateTransitionMessagePayload
@@ -157,8 +161,8 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateTransitionMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateTransitionMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestStateTransitionMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestStateTransitionMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestStateTransitionMessagePayload>";

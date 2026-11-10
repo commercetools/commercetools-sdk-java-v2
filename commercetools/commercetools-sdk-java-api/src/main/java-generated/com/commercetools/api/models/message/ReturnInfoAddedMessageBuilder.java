@@ -184,7 +184,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -357,7 +357,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -385,7 +385,7 @@ public class ReturnInfoAddedMessageBuilder implements Builder<ReturnInfoAddedMes
     }
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return returnInfo
      */
 

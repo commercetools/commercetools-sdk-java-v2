@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnInfo
@@ -48,7 +49,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.ReturnItemDraft> getItems() {
@@ -56,7 +57,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -64,7 +65,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      */
 
     public java.time.ZonedDateTime getReturnDate() {
@@ -119,4 +120,8 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReturnInfo copyDeep() {
+        return ReturnInfo.deepCopy(this);
+    }
 }

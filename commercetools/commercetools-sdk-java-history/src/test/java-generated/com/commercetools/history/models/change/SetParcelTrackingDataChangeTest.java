@@ -1,36 +1,32 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetParcelTrackingDataChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetParcelTrackingDataChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetParcelTrackingDataChangeBuilder builder) {
         SetParcelTrackingDataChange setParcelTrackingDataChange = builder.buildUnchecked();
         Assertions.assertThat(setParcelTrackingDataChange).isInstanceOf(SetParcelTrackingDataChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetParcelTrackingDataChange.builder().change("change") },
-                new Object[] { SetParcelTrackingDataChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.TrackingDataImpl()) },
-                new Object[] { SetParcelTrackingDataChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.TrackingDataImpl()) },
-                new Object[] { SetParcelTrackingDataChange.builder()
-                        .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) } };
+        return new Object[][] { new Object[] { "change", SetParcelTrackingDataChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetParcelTrackingDataChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.TrackingDataImpl()) },
+                new Object[] { "nextValue",
+                        SetParcelTrackingDataChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.TrackingDataImpl()) },
+                new Object[] { "parcel",
+                        SetParcelTrackingDataChange.builder()
+                                .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) },
+                new Object[] { "shippingKey", SetParcelTrackingDataChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -62,5 +58,12 @@ public class SetParcelTrackingDataChangeTest {
         value.setParcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl());
         Assertions.assertThat(value.getParcel())
                 .isEqualTo(new com.commercetools.history.models.change_value.ParcelChangeValueImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        SetParcelTrackingDataChange value = SetParcelTrackingDataChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

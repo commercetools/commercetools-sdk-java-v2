@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelItems
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelItems {
 
     /**
-     *
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -42,7 +43,7 @@ public interface ParcelItems {
     public String getParcelId();
 
     /**
-     *
+     *  <p>Items in the Parcel.</p>
      * @return items
      */
     @Valid
@@ -50,14 +51,14 @@ public interface ParcelItems {
     public List<DeliveryItem> getItems();
 
     /**
-     * set parcelId
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     * set items
+     *  <p>Items in the Parcel.</p>
      * @param items values to be set
      */
 
@@ -65,7 +66,7 @@ public interface ParcelItems {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Items in the Parcel.</p>
      * @param items values to be set
      */
 
@@ -90,6 +91,8 @@ public interface ParcelItems {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public ParcelItems copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelItems
@@ -142,8 +145,8 @@ public interface ParcelItems {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelItems> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelItems>() {
+    public static tools.jackson.core.type.TypeReference<ParcelItems> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelItems>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelItems>";

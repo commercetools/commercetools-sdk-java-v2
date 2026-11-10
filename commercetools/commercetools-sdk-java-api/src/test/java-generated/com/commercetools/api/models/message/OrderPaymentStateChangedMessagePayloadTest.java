@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderPaymentStateChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderPaymentStateChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderPaymentStateChangedMessagePayloadBuilder builder) {
         OrderPaymentStateChangedMessagePayload orderPaymentStateChangedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(orderPaymentStateChangedMessagePayload)
                 .isInstanceOf(OrderPaymentStateChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderPaymentStateChangedMessagePayload.builder()
-                        .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { OrderPaymentStateChangedMessagePayload.builder()
+                new Object[] { "paymentState",
+                        OrderPaymentStateChangedMessagePayload.builder()
+                                .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
+                new Object[] { "oldPaymentState", OrderPaymentStateChangedMessagePayload.builder()
                         .oldPaymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) } };
     }
 

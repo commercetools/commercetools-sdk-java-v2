@@ -12,7 +12,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates the state of a Discount Code in a Cart.</p>
- *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code>, a DiscountCodeNonApplicable error is returned.</p>
+ *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a> error is returned.</p>
+ *  <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountCodeState extends JsonEnum {
@@ -21,20 +22,23 @@ public interface DiscountCodeState extends JsonEnum {
     <p>The Discount Code is not active or does not contain any active Cart Discounts.</p> */
     DiscountCodeState NOT_ACTIVE = DiscountCodeStateEnum.NOT_ACTIVE;
     /**
-    <p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the CartDiscount <code>validFrom</code> and <code>validUntil</code> dates.</p> */
+    <p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> <code>validFrom</code> and <code>validUntil</code> dates.</p> */
     DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
     /**
-    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do no match the Cart.</p> */
+    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do not match the Cart.</p> */
     DiscountCodeState DOES_NOT_MATCH_CART = DiscountCodeStateEnum.DOES_NOT_MATCH_CART;
     /**
-    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p> */
+    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p> */
     DiscountCodeState MATCHES_CART = DiscountCodeStateEnum.MATCHES_CART;
     /**
-    <p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</p> */
+    <p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been reached.</p> */
     DiscountCodeState MAX_APPLICATION_REACHED = DiscountCodeStateEnum.MAX_APPLICATION_REACHED;
     /**
-    <p>The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> StackingMode is defined.</p> */
+    <p>The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:StackingMode" rel="nofollow">StackingMode</a> is applied.</p> */
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
+    /**
+    <p>The Discount Code is active, but Cart Discounts from a Discount Group are not applied as another Cart Discount from that Discount Group, offering a better deal, is applied.</p> */
+    DiscountCodeState APPLICATION_STOPPED_BY_GROUP_BEST_DEAL = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_GROUP_BEST_DEAL;
 
     /**
      * possible values of DiscountCodeState
@@ -68,7 +72,12 @@ public interface DiscountCodeState extends JsonEnum {
         /**
          * ApplicationStoppedByPreviousDiscount
          */
-        APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount");
+        APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
+
+        /**
+         * ApplicationStoppedByGroupBestDeal
+         */
+        APPLICATION_STOPPED_BY_GROUP_BEST_DEAL("ApplicationStoppedByGroupBestDeal");
         private final String jsonName;
 
         private DiscountCodeStateEnum(final String jsonName) {

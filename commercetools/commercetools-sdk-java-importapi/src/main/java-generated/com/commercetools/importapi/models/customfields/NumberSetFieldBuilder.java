@@ -24,7 +24,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     private java.util.List<Double> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @return value
      */
 

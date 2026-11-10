@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Field using the Set CustomField.</p>
+ *  <p>Generated after adding a Custom Field using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomFieldAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomFieldAddedMessageImpl.class)
 public interface OrderCustomFieldAddedMessage extends OrderMessage {
@@ -51,7 +53,7 @@ public interface OrderCustomFieldAddedMessage extends OrderMessage {
     public String getName();
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
@@ -66,7 +68,7 @@ public interface OrderCustomFieldAddedMessage extends OrderMessage {
     public void setName(final String name);
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
@@ -101,6 +103,8 @@ public interface OrderCustomFieldAddedMessage extends OrderMessage {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public OrderCustomFieldAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomFieldAddedMessage
@@ -161,8 +165,8 @@ public interface OrderCustomFieldAddedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomFieldAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomFieldAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomFieldAddedMessage>";

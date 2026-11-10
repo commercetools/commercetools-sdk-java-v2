@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
+ *  <p>If the container was created <strong>without</strong> a <code>retentionPolicy</code>, it <strong>expires 72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, expiry follows the configured <code>timeToLive</code> (between the minimum and maximum allowed values). The <code>expiresAt</code> field holds the calculated deletion time.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerImpl implements ImportContainer, ModelBase {
@@ -28,9 +30,13 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
 
     private Long version;
 
+    private com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
+
+    private java.time.ZonedDateTime expiresAt;
 
     /**
      * create instance with all properties
@@ -39,13 +45,17 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     ImportContainerImpl(@JsonProperty("key") final String key,
             @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType,
             @JsonProperty("version") final Long version,
+            @JsonProperty("retentionPolicy") final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
+            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
+            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
         this.key = key;
         this.resourceType = resourceType;
         this.version = version;
+        this.retentionPolicy = retentionPolicy;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.expiresAt = expiresAt;
     }
 
     /**
@@ -55,7 +65,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      */
 
     public String getKey() {
@@ -63,7 +73,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
@@ -71,7 +81,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      */
 
     public Long getVersion() {
@@ -79,7 +89,15 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     */
+
+    public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
+        return this.retentionPolicy;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -87,11 +105,19 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
+     */
+
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     public void setKey(final String key) {
@@ -106,12 +132,21 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
         this.version = version;
     }
 
+    public void setRetentionPolicy(
+            final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
+        this.retentionPolicy = retentionPolicy;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+    }
+
+    public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
     }
 
     @Override
@@ -127,13 +162,17 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
         return new EqualsBuilder().append(key, that.key)
                 .append(resourceType, that.resourceType)
                 .append(version, that.version)
+                .append(retentionPolicy, that.retentionPolicy)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(expiresAt, that.expiresAt)
                 .append(key, that.key)
                 .append(resourceType, that.resourceType)
                 .append(version, that.version)
+                .append(retentionPolicy, that.retentionPolicy)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(expiresAt, that.expiresAt)
                 .isEquals();
     }
 
@@ -142,8 +181,10 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
         return new HashCodeBuilder(17, 37).append(key)
                 .append(resourceType)
                 .append(version)
+                .append(retentionPolicy)
                 .append(createdAt)
                 .append(lastModifiedAt)
+                .append(expiresAt)
                 .toHashCode();
     }
 
@@ -152,9 +193,15 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
                 .append("resourceType", resourceType)
                 .append("version", version)
+                .append("retentionPolicy", retentionPolicy)
                 .append("createdAt", createdAt)
                 .append("lastModifiedAt", lastModifiedAt)
+                .append("expiresAt", expiresAt)
                 .build();
     }
 
+    @Override
+    public ImportContainer copyDeep() {
+        return ImportContainer.deepCopy(this);
+    }
 }

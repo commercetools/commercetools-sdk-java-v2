@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This payload is sent for a ChangeSubscription when a resource is deleted.</p>
+ *  <p>This payload is sent for a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> when a resource is deleted.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletedDeliveryPayloadImpl.class)
 public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
@@ -56,7 +58,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     public ZonedDateTime getModifiedAt();
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p>Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @return dataErasure
      */
 
@@ -78,7 +80,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     public void setModifiedAt(final ZonedDateTime modifiedAt);
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p>Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @param dataErasure value to be set
      */
 
@@ -107,6 +109,8 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
         instance.setDataErasure(template.getDataErasure());
         return instance;
     }
+
+    public ResourceDeletedDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceDeletedDeliveryPayload
@@ -160,8 +164,8 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload>() {
+    public static tools.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ResourceDeletedDeliveryPayload>";

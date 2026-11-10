@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
  * <h2>Serialization</h2>
  *
  * <p>The SDK uses <a href="https://github.com/FasterXML/jackson">Jackson</a> for searializing and deserializing JSON.
- * The default configured {@link com.fasterxml.jackson.databind.ObjectMapper} uses some modules to correctly work with our API.
+ * The default configured {@link tools.jackson.databind.ObjectMapper} uses some modules to correctly work with our API.
  * The details can be found in {@link io.vrap.rmf.base.client.utils.json.JsonUtils#createObjectMapper(ModuleOptions)}</p>
  *
  * <h3 id="customization">Customization</h3>

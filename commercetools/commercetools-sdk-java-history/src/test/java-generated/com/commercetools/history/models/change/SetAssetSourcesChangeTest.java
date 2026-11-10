@@ -3,40 +3,35 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAssetSourcesChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAssetSourcesChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAssetSourcesChangeBuilder builder) {
         SetAssetSourcesChange setAssetSourcesChange = builder.buildUnchecked();
         Assertions.assertThat(setAssetSourcesChange).isInstanceOf(SetAssetSourcesChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAssetSourcesChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", SetAssetSourcesChange.builder().change("change") },
+                new Object[] { "previousValue",
                         SetAssetSourcesChange.builder()
                                 .previousValue(Collections.singletonList(
                                     new com.commercetools.history.models.common.AssetSourceImpl())) },
-                new Object[] {
+                new Object[] { "nextValue",
                         SetAssetSourcesChange.builder()
                                 .nextValue(Collections.singletonList(
                                     new com.commercetools.history.models.common.AssetSourceImpl())) },
-                new Object[] { SetAssetSourcesChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+                new Object[] { "asset",
+                        SetAssetSourcesChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", SetAssetSourcesChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAssetSourcesChange.builder().variant("variant") } };
     }
 
     @Test
@@ -69,5 +64,19 @@ public class SetAssetSourcesChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetAssetSourcesChange value = SetAssetSourcesChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAssetSourcesChange value = SetAssetSourcesChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

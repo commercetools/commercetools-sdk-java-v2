@@ -1,37 +1,29 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MatchingPriceNotFoundErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MatchingPriceNotFoundErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MatchingPriceNotFoundErrorBuilder builder) {
         MatchingPriceNotFoundError matchingPriceNotFoundError = builder.buildUnchecked();
         Assertions.assertThat(matchingPriceNotFoundError).isInstanceOf(MatchingPriceNotFoundError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MatchingPriceNotFoundError.builder().message("message") },
-                new Object[] { MatchingPriceNotFoundError.builder().productId("productId") },
-                new Object[] { MatchingPriceNotFoundError.builder().variantId(5) },
-                new Object[] { MatchingPriceNotFoundError.builder().currency("currency") },
-                new Object[] { MatchingPriceNotFoundError.builder().country("country") },
-                new Object[] { MatchingPriceNotFoundError.builder()
+        return new Object[][] { new Object[] { "message", MatchingPriceNotFoundError.builder().message("message") },
+                new Object[] { "productId", MatchingPriceNotFoundError.builder().productId("productId") },
+                new Object[] { "variantId", MatchingPriceNotFoundError.builder().variantId(5) },
+                new Object[] { "currency", MatchingPriceNotFoundError.builder().currency("currency") },
+                new Object[] { "country", MatchingPriceNotFoundError.builder().country("country") },
+                new Object[] { "customerGroup", MatchingPriceNotFoundError.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] { MatchingPriceNotFoundError.builder()
+                new Object[] { "channel", MatchingPriceNotFoundError.builder()
                         .channel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) } };
     }
 

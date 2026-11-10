@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +31,10 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     private java.util.List<com.commercetools.history.models.common.Reference> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.Reference> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Reference> removedItems;
 
     /**
      * set the value to the change
@@ -87,7 +93,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
      */
 
     public ChangeCartDiscountsChangeBuilder plusPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
@@ -102,32 +108,10 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
      */
 
     public ChangeCartDiscountsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         this.previousValue = new ArrayList<>();
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public ChangeCartDiscountsChangeBuilder addPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public ChangeCartDiscountsChangeBuilder setPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return previousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
     }
 
     /**
@@ -176,7 +160,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
      */
 
     public ChangeCartDiscountsChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
@@ -191,32 +175,144 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
      */
 
     public ChangeCartDiscountsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
      * @return Builder
      */
 
-    public ChangeCartDiscountsChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return plusNextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    public ChangeCartDiscountsChangeBuilder addedItems(
+            final com.commercetools.history.models.common.Reference... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
      * @return Builder
      */
 
-    public ChangeCartDiscountsChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        return nextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    public ChangeCartDiscountsChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.Reference> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.Reference... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder plusAddedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder withAddedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.addedItems = new ArrayList<>();
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder removedItems(
+            final com.commercetools.history.models.common.Reference... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.Reference> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.Reference... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder plusRemovedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public ChangeCartDiscountsChangeBuilder withRemovedItems(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.removedItems = new ArrayList<>();
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+        return this;
     }
 
     /**
@@ -247,6 +343,24 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reference> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reference> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds ChangeCartDiscountsChange with checking for non-null required values
      * @return ChangeCartDiscountsChange
      */
@@ -254,7 +368,9 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
         Objects.requireNonNull(change, ChangeCartDiscountsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeCartDiscountsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeCartDiscountsChange.class + ": nextValue is missing");
-        return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, ChangeCartDiscountsChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, ChangeCartDiscountsChange.class + ": removedItems is missing");
+        return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -262,7 +378,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
      * @return ChangeCartDiscountsChange
      */
     public ChangeCartDiscountsChange buildUnchecked() {
-        return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue);
+        return new ChangeCartDiscountsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -283,6 +399,8 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

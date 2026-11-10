@@ -4,36 +4,29 @@ package com.commercetools.api.models.order;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderAddReturnInfoActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderAddReturnInfoActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderAddReturnInfoActionBuilder builder) {
         OrderAddReturnInfoAction orderAddReturnInfoAction = builder.buildUnchecked();
         Assertions.assertThat(orderAddReturnInfoAction).isInstanceOf(OrderAddReturnInfoAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderAddReturnInfoAction.builder().returnTrackingId("returnTrackingId") },
-                new Object[] {
+                new Object[] { "returnTrackingId",
+                        OrderAddReturnInfoAction.builder().returnTrackingId("returnTrackingId") },
+                new Object[] { "items",
                         OrderAddReturnInfoAction.builder()
                                 .items(Collections
                                         .singletonList(new com.commercetools.api.models.order.ReturnItemDraftImpl())) },
-                new Object[] {
+                new Object[] { "returnDate",
                         OrderAddReturnInfoAction.builder().returnDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

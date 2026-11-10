@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.standalone_price;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StandalonePriceSetKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StandalonePriceSetKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StandalonePriceSetKeyActionBuilder builder) {
         StandalonePriceSetKeyAction standalonePriceSetKeyAction = builder.buildUnchecked();
         Assertions.assertThat(standalonePriceSetKeyAction).isInstanceOf(StandalonePriceSetKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StandalonePriceSetKeyAction.builder().key("key") } };
+        return new Object[][] { new Object[] { "key", StandalonePriceSetKeyAction.builder().key("key") } };
     }
 
     @Test

@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StoreDraft
@@ -54,7 +55,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public LocalizedString getName();
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 
@@ -70,7 +72,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public List<StoreCountry> getCountries();
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return distributionChannels
      */
     @Valid
@@ -78,7 +81,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public List<ChannelResourceIdentifier> getDistributionChannels();
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return supplyChannels
      */
     @Valid
@@ -88,8 +92,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -108,6 +112,14 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+    @Valid
+    @JsonProperty("storefront")
+    public Storefront getStorefront();
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @param key value to be set
      */
@@ -122,7 +134,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -130,7 +143,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setLanguages(final String... languages);
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -152,7 +166,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setCountries(final List<StoreCountry> countries);
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
@@ -160,14 +175,16 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 
@@ -175,7 +192,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setSupplyChannels(final ChannelResourceIdentifier... supplyChannels);
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 
@@ -184,8 +202,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -198,8 +216,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -214,6 +232,13 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     */
+
+    public void setStorefront(final Storefront storefront);
 
     /**
      * factory method
@@ -238,8 +263,11 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
+        instance.setStorefront(template.getStorefront());
         return instance;
     }
+
+    public StoreDraft copyDeep();
 
     /**
      * factory method to create a deep copy of StoreDraft
@@ -276,6 +304,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setStorefront(com.commercetools.api.models.store.Storefront.deepCopy(template.getStorefront()));
         return instance;
     }
 
@@ -310,8 +339,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreDraft>() {
+    public static tools.jackson.core.type.TypeReference<StoreDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreDraft>";

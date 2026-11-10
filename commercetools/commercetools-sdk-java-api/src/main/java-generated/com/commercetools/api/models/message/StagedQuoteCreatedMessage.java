@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.staged_quote.StagedQuote;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create StagedQuote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/staged-quotes:POST" rel="nofollow">Create StagedQuote</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StagedQuoteCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteCreatedMessageImpl.class)
 public interface StagedQuoteCreatedMessage extends Message {
@@ -45,7 +47,7 @@ public interface StagedQuoteCreatedMessage extends Message {
     String STAGED_QUOTE_CREATED = "StagedQuoteCreated";
 
     /**
-     *  <p>Staged Quote that was created.</p>
+     *  <p><span>Staged Quote</span> that was created.</p>
      * @return stagedQuote
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface StagedQuoteCreatedMessage extends Message {
     public StagedQuote getStagedQuote();
 
     /**
-     *  <p>Staged Quote that was created.</p>
+     *  <p><span>Staged Quote</span> that was created.</p>
      * @param stagedQuote value to be set
      */
 
@@ -88,6 +90,8 @@ public interface StagedQuoteCreatedMessage extends Message {
         instance.setStagedQuote(template.getStagedQuote());
         return instance;
     }
+
+    public StagedQuoteCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteCreatedMessage
@@ -148,8 +152,8 @@ public interface StagedQuoteCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteCreatedMessage>";

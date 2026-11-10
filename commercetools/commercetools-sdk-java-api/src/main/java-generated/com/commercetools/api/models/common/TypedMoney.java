@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Base polymorphic read-only money type that stores currency in cent precision or high precision, that is in sub-cents.</p>
@@ -28,9 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -47,8 +45,8 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @return fractionDigits
      */
@@ -59,13 +57,15 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @param fractionDigits value to be set
      */
 
     public void setFractionDigits(final Integer fractionDigits);
+
+    public TypedMoney copyDeep();
 
     /**
      * factory method to create a deep copy of TypedMoney
@@ -77,13 +77,9 @@ public interface TypedMoney extends Money {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.CentPrecisionMoney) {
-            return com.commercetools.api.models.common.CentPrecisionMoney
-                    .deepCopy((com.commercetools.api.models.common.CentPrecisionMoney) template);
-        }
-        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoney) {
-            return com.commercetools.api.models.common.HighPrecisionMoney
-                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoney) template);
+
+        if (!(template instanceof TypedMoneyImpl)) {
+            return template.copyDeep();
         }
         TypedMoneyImpl instance = new TypedMoneyImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -127,8 +123,8 @@ public interface TypedMoney extends Money {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
+    public static tools.jackson.core.type.TypeReference<TypedMoney> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypedMoney>() {
             @Override
             public String toString() {
                 return "TypeReference<TypedMoney>";

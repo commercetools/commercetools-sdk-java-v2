@@ -30,7 +30,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the currentProjection value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the currentProjection value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param currentProjection value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @return removedImageUrls
      */
 
@@ -112,7 +112,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return currentProjection
      */
 

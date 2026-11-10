@@ -4,37 +4,30 @@ package com.commercetools.api.models.api_client;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApiClientTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApiClientBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApiClientBuilder builder) {
         ApiClient apiClient = builder.buildUnchecked();
         Assertions.assertThat(apiClient).isInstanceOf(ApiClient.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApiClient.builder().id("id") },
-                new Object[] { ApiClient.builder().name("name") }, new Object[] { ApiClient.builder().scope("scope") },
-                new Object[] { ApiClient.builder().secret("secret") },
-                new Object[] { ApiClient.builder().lastUsedAt(LocalDate.parse("2023-06-01")) },
-                new Object[] { ApiClient.builder().deleteAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ApiClient.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ApiClient.builder().accessTokenValiditySeconds(8) },
-                new Object[] { ApiClient.builder().refreshTokenValiditySeconds(7) } };
+        return new Object[][] { new Object[] { "id", ApiClient.builder().id("id") },
+                new Object[] { "name", ApiClient.builder().name("name") },
+                new Object[] { "scope", ApiClient.builder().scope("scope") },
+                new Object[] { "secret", ApiClient.builder().secret("secret") },
+                new Object[] { "lastUsedAt", ApiClient.builder().lastUsedAt(LocalDate.parse("2023-06-01")) },
+                new Object[] { "deleteAt", ApiClient.builder().deleteAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "createdAt", ApiClient.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "accessTokenValiditySeconds", ApiClient.builder().accessTokenValiditySeconds(8) },
+                new Object[] { "refreshTokenValiditySeconds", ApiClient.builder().refreshTokenValiditySeconds(7) } };
     }
 
     @Test

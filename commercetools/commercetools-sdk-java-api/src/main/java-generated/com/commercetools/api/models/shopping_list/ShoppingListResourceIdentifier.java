@@ -7,14 +7,16 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ResourceIdentifier to a ShoppingList. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidJsonInputError" rel="nofollow">InvalidJsonInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shopping-list")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListResourceIdentifierImpl.class)
 public interface ShoppingListResourceIdentifier
@@ -36,7 +39,15 @@ public interface ShoppingListResourceIdentifier
     String SHOPPING_LIST = "shopping-list";
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList. Required if <code>key</code> is absent.</p>
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -44,7 +55,7 @@ public interface ShoppingListResourceIdentifier
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced ShoppingList. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Required if <code>id</code> is absent.</p>
      * @return key
      */
 
@@ -52,14 +63,14 @@ public interface ShoppingListResourceIdentifier
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the referenced ShoppingList. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      */
 
@@ -84,6 +95,8 @@ public interface ShoppingListResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ShoppingListResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListResourceIdentifier
@@ -132,8 +145,8 @@ public interface ShoppingListResourceIdentifier
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListResourceIdentifier>";

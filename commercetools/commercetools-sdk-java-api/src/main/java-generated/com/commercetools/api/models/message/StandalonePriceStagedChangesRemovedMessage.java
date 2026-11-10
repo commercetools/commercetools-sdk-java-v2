@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceStagedChangesRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceStagedChangesRemovedMessageImpl.class)
 public interface StandalonePriceStagedChangesRemovedMessage extends Message {
@@ -45,7 +47,7 @@ public interface StandalonePriceStagedChangesRemovedMessage extends Message {
     String STANDALONE_PRICE_STAGED_CHANGES_REMOVED = "StandalonePriceStagedChangesRemoved";
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface StandalonePriceStagedChangesRemovedMessage extends Message {
     public StagedStandalonePrice getStagedChanges();
 
     /**
-     *  <p>Removed changes of the StandalonePrice after the Remove Staged Changes update action.</p>
+     *  <p>Removed changes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemoveStagedChangesAction" rel="nofollow">Remove Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      */
 
@@ -89,6 +91,8 @@ public interface StandalonePriceStagedChangesRemovedMessage extends Message {
         instance.setStagedChanges(template.getStagedChanges());
         return instance;
     }
+
+    public StandalonePriceStagedChangesRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceStagedChangesRemovedMessage
@@ -152,8 +156,8 @@ public interface StandalonePriceStagedChangesRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceStagedChangesRemovedMessage>";

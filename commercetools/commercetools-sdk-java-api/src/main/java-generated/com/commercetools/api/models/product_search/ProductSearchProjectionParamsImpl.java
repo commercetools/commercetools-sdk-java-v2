@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * ProductSearchProjectionParams
+ *  <p>The query parameters used for the deprecated <span>data integration with Product Projection parameters</span> in Product Search.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductSearchProjectionParamsImpl implements ProductSearchProjectionParams, ModelBase {
 
     private java.util.List<String> expand;
@@ -31,6 +33,8 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     private String priceCountry;
 
     private String priceCustomerGroup;
+
+    private java.util.List<String> priceCustomerGroupAssignments;
 
     private String priceChannel;
 
@@ -46,6 +50,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
             @JsonProperty("staged") final Boolean staged, @JsonProperty("priceCurrency") final String priceCurrency,
             @JsonProperty("priceCountry") final String priceCountry,
             @JsonProperty("priceCustomerGroup") final String priceCustomerGroup,
+            @JsonProperty("priceCustomerGroupAssignments") final java.util.List<String> priceCustomerGroupAssignments,
             @JsonProperty("priceChannel") final String priceChannel,
             @JsonProperty("localeProjection") final java.util.List<String> localeProjection,
             @JsonProperty("storeProjection") final String storeProjection) {
@@ -54,6 +59,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
         this.priceCurrency = priceCurrency;
         this.priceCountry = priceCountry;
         this.priceCustomerGroup = priceCustomerGroup;
+        this.priceCustomerGroupAssignments = priceCustomerGroupAssignments;
         this.priceChannel = priceChannel;
         this.localeProjection = localeProjection;
         this.storeProjection = storeProjection;
@@ -66,7 +72,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      */
 
     public java.util.List<String> getExpand() {
@@ -74,7 +80,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      */
 
     public Boolean getStaged() {
@@ -82,7 +88,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>The currency used for Product price selection.</p>
+     *  <p>The currency used for <span>Product price selection</span>.</p>
      */
 
     public String getPriceCurrency() {
@@ -90,7 +96,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCountry() {
@@ -98,7 +104,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCustomerGroup() {
@@ -106,7 +112,15 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     */
+
+    public java.util.List<String> getPriceCustomerGroupAssignments() {
+        return this.priceCustomerGroupAssignments;
+    }
+
+    /**
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceChannel() {
@@ -114,7 +128,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      */
 
     public java.util.List<String> getLocaleProjection() {
@@ -122,7 +136,9 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
+     *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
+     *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      */
 
     public String getStoreProjection() {
@@ -151,6 +167,14 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
 
     public void setPriceCustomerGroup(final String priceCustomerGroup) {
         this.priceCustomerGroup = priceCustomerGroup;
+    }
+
+    public void setPriceCustomerGroupAssignments(final String... priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = new ArrayList<>(Arrays.asList(priceCustomerGroupAssignments));
+    }
+
+    public void setPriceCustomerGroupAssignments(final java.util.List<String> priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = priceCustomerGroupAssignments;
     }
 
     public void setPriceChannel(final String priceChannel) {
@@ -184,6 +208,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency, that.priceCurrency)
                 .append(priceCountry, that.priceCountry)
                 .append(priceCustomerGroup, that.priceCustomerGroup)
+                .append(priceCustomerGroupAssignments, that.priceCustomerGroupAssignments)
                 .append(priceChannel, that.priceChannel)
                 .append(localeProjection, that.localeProjection)
                 .append(storeProjection, that.storeProjection)
@@ -192,6 +217,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency, that.priceCurrency)
                 .append(priceCountry, that.priceCountry)
                 .append(priceCustomerGroup, that.priceCustomerGroup)
+                .append(priceCustomerGroupAssignments, that.priceCustomerGroupAssignments)
                 .append(priceChannel, that.priceChannel)
                 .append(localeProjection, that.localeProjection)
                 .append(storeProjection, that.storeProjection)
@@ -205,6 +231,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency)
                 .append(priceCountry)
                 .append(priceCustomerGroup)
+                .append(priceCustomerGroupAssignments)
                 .append(priceChannel)
                 .append(localeProjection)
                 .append(storeProjection)
@@ -218,10 +245,15 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append("priceCurrency", priceCurrency)
                 .append("priceCountry", priceCountry)
                 .append("priceCustomerGroup", priceCustomerGroup)
+                .append("priceCustomerGroupAssignments", priceCustomerGroupAssignments)
                 .append("priceChannel", priceChannel)
                 .append("localeProjection", localeProjection)
                 .append("storeProjection", storeProjection)
                 .build();
     }
 
+    @Override
+    public ProductSearchProjectionParams copyDeep() {
+        return ProductSearchProjectionParams.deepCopy(this);
+    }
 }

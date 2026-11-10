@@ -6,18 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
-import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
-import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support Reference Expansion.</p>
+ *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support <span>Reference Expansion</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -29,10 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceImpl.class, name = AssociateRoleKeyReference.ASSOCIATE_ROLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl.class, name = BusinessUnitKeyReference.BUSINESS_UNIT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
 @JsonDeserialize(as = KeyReferenceImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -61,6 +55,8 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
 
     public void setKey(final String key);
 
+    public KeyReference copyDeep();
+
     /**
      * factory method to create a deep copy of KeyReference
      * @param template instance to be copied
@@ -71,17 +67,9 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleKeyReference) {
-            return com.commercetools.api.models.associate_role.AssociateRoleKeyReference
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleKeyReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitKeyReference) {
-            return com.commercetools.api.models.business_unit.BusinessUnitKeyReference
-                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreKeyReference) {
-            return com.commercetools.api.models.store.StoreKeyReference
-                    .deepCopy((com.commercetools.api.models.store.StoreKeyReference) template);
+
+        if (!(template instanceof KeyReferenceImpl)) {
+            return template.copyDeep();
         }
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
@@ -126,8 +114,8 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
+    public static tools.jackson.core.type.TypeReference<KeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<KeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<KeyReference>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountDraft
@@ -79,6 +80,7 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
 
     /**
      *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -102,7 +104,7 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      */
 
     public String getPredicate() {
@@ -110,7 +112,8 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getSortOrder() {
@@ -118,7 +121,7 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     *  <p>Whether to activate the ProductDiscount. To deactivate it even though the <code>predicate</code> matches, set to <code>false</code>.</p>
      */
 
     public Boolean getIsActive() {
@@ -126,7 +129,7 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -134,7 +137,7 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -236,4 +239,8 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductDiscountDraft copyDeep() {
+        return ProductDiscountDraft.deepCopy(this);
+    }
 }

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscount
@@ -64,6 +65,10 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
+
+    private com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope;
+
     /**
      * create instance with all properties
      */
@@ -87,7 +92,9 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup,
+            @JsonProperty("recurringOrderScope") final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -109,6 +116,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.references = references;
         this.stackingMode = stackingMode;
         this.custom = custom;
+        this.discountGroup = discountGroup;
+        this.recurringOrderScope = recurringOrderScope;
     }
 
     /**
@@ -198,7 +207,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      */
 
     public String getCartPredicate() {
@@ -207,7 +216,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -215,7 +224,9 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      */
 
     public String getSortOrder() {
@@ -224,8 +235,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      */
 
@@ -258,7 +269,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      */
 
     public Boolean getRequiresDiscountCode() {
@@ -266,7 +277,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
@@ -287,6 +298,23 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     */
+
+    public com.commercetools.api.models.discount_group.DiscountGroupReference getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScope getRecurringOrderScope() {
+        return this.recurringOrderScope;
     }
 
     public void setId(final String id) {
@@ -381,6 +409,16 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.custom = custom;
     }
 
+    public void setDiscountGroup(
+            final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
+        this.discountGroup = discountGroup;
+    }
+
+    public void setRecurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -412,6 +450,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references, that.references)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -433,6 +473,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references, that.references)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .isEquals();
     }
 
@@ -459,6 +501,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references)
                 .append(stackingMode)
                 .append(custom)
+                .append(discountGroup)
+                .append(recurringOrderScope)
                 .toHashCode();
     }
 
@@ -485,7 +529,13 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append("references", references)
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
+                .append("discountGroup", discountGroup)
+                .append("recurringOrderScope", recurringOrderScope)
                 .build();
     }
 
+    @Override
+    public CartDiscount copyDeep() {
+        return CartDiscount.deepCopy(this);
+    }
 }

@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove DiscountCode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveDiscountCodeAction" rel="nofollow">Remove DiscountCode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderDiscountCodeRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
 public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayload {
@@ -38,7 +40,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @return discountCode
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @param discountCode value to be set
      */
 
@@ -71,6 +73,8 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public OrderDiscountCodeRemovedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderDiscountCodeRemovedMessagePayload
@@ -122,8 +126,8 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderDiscountCodeRemovedMessagePayload>";

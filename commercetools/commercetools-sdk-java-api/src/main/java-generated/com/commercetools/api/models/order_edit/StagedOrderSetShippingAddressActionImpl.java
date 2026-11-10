@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced Cart from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
- *  <p>Produces the Order Shipping Address Set Message.</p>
+ *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderShippingAddressSetMessage" rel="nofollow">Order Shipping Address Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetShippingAddressAction, ModelBase {
@@ -53,7 +54,8 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -93,4 +95,8 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
                 .build();
     }
 
+    @Override
+    public StagedOrderSetShippingAddressAction copyDeep() {
+        return StagedOrderSetShippingAddressAction.deepCopy(this);
+    }
 }

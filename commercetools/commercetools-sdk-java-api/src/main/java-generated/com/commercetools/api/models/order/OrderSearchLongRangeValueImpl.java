@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchLongRangeValue
@@ -26,7 +27,7 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
 
     private Integer boost;
 
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     private Long gte;
 
@@ -37,8 +38,8 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
      */
     @JsonCreator
     OrderSearchLongRangeValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost,
-            @JsonProperty("customType") final String customType, @JsonProperty("gte") final Long gte,
-            @JsonProperty("lte") final Long lte) {
+            @JsonProperty("customType") final com.commercetools.api.models.order.OrderSearchCustomType customType,
+            @JsonProperty("gte") final Long gte, @JsonProperty("lte") final Long lte) {
         this.field = field;
         this.boost = boost;
         this.customType = customType;
@@ -69,10 +70,10 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
     }
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      */
 
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 
@@ -100,7 +101,7 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
         this.boost = boost;
     }
 
-    public void setCustomType(final String customType) {
+    public void setCustomType(final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
     }
 
@@ -155,4 +156,8 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
                 .build();
     }
 
+    @Override
+    public OrderSearchLongRangeValue copyDeep() {
+        return OrderSearchLongRangeValue.deepCopy(this);
+    }
 }

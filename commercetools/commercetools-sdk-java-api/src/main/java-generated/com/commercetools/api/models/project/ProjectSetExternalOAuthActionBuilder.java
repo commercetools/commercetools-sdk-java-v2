@@ -27,7 +27,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalOAuth
      */
 

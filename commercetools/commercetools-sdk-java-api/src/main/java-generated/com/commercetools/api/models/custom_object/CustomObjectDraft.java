@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomObjectDraft
@@ -48,7 +49,11 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
     public String getKey();
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
+     *  <ul>
+     *   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @return value
      */
     @NotNull
@@ -78,7 +83,11 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
     public void setKey(final String key);
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
+     *  <ul>
+     *   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @param value value to be set
      */
 
@@ -112,6 +121,8 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
         instance.setVersion(template.getVersion());
         return instance;
     }
+
+    public CustomObjectDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CustomObjectDraft
@@ -162,8 +173,8 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomObjectDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomObjectDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomObjectDraft>";

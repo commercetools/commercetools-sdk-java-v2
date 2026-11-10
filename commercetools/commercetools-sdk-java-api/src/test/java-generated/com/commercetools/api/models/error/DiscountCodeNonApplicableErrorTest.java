@@ -3,38 +3,31 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountCodeNonApplicableErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountCodeNonApplicableErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountCodeNonApplicableErrorBuilder builder) {
         DiscountCodeNonApplicableError discountCodeNonApplicableError = builder.buildUnchecked();
         Assertions.assertThat(discountCodeNonApplicableError).isInstanceOf(DiscountCodeNonApplicableError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DiscountCodeNonApplicableError.builder().message("message") },
-                new Object[] { DiscountCodeNonApplicableError.builder().discountCode("discountCode") },
-                new Object[] { DiscountCodeNonApplicableError.builder().reason("reason") },
-                new Object[] { DiscountCodeNonApplicableError.builder().discountCodeId("discountCodeId") },
-                new Object[] {
+        return new Object[][] { new Object[] { "message", DiscountCodeNonApplicableError.builder().message("message") },
+                new Object[] { "discountCode", DiscountCodeNonApplicableError.builder().discountCode("discountCode") },
+                new Object[] { "reason", DiscountCodeNonApplicableError.builder().reason("reason") },
+                new Object[] { "discountCodeId",
+                        DiscountCodeNonApplicableError.builder().discountCodeId("discountCodeId") },
+                new Object[] { "validFrom",
                         DiscountCodeNonApplicableError.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+                new Object[] { "validUntil",
                         DiscountCodeNonApplicableError.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCodeNonApplicableError.builder()
+                new Object[] { "validityCheckTime", DiscountCodeNonApplicableError.builder()
                         .validityCheckTime(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

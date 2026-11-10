@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,13 +32,17 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Company")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CompanyImpl.class)
 public interface Company extends BusinessUnit {
@@ -48,7 +53,7 @@ public interface Company extends BusinessUnit {
     String COMPANY = "Company";
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
     @NotNull
@@ -56,7 +61,7 @@ public interface Company extends BusinessUnit {
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @return associateMode
      */
     @NotNull
@@ -64,18 +69,33 @@ public interface Company extends BusinessUnit {
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @return approvalRuleMode
+     */
+    @NotNull
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
      * factory method
@@ -101,10 +121,12 @@ public interface Company extends BusinessUnit {
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(template.getStores());
+        instance.setInheritedStores(template.getInheritedStores());
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddressIds(template.getShippingAddressIds());
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
@@ -115,8 +137,11 @@ public interface Company extends BusinessUnit {
         instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
+
+    public Company copyDeep();
 
     /**
      * factory method to create a deep copy of Company
@@ -143,10 +168,20 @@ public interface Company extends BusinessUnit {
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setInheritedStores(Optional.ofNullable(template.getInheritedStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)
@@ -173,6 +208,7 @@ public interface Company extends BusinessUnit {
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
         instance.setTopLevelUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 
@@ -207,8 +243,8 @@ public interface Company extends BusinessUnit {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Company> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Company>() {
+    public static tools.jackson.core.type.TypeReference<Company> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Company>() {
             @Override
             public String toString() {
                 return "TypeReference<Company>";

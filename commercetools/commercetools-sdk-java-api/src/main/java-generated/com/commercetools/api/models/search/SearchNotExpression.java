@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchNotExpression
@@ -75,6 +76,8 @@ public interface SearchNotExpression extends SearchCompoundExpression {
         return instance;
     }
 
+    public SearchNotExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchNotExpression
      * @param template instance to be copied
@@ -125,8 +128,8 @@ public interface SearchNotExpression extends SearchCompoundExpression {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchNotExpression> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchNotExpression>() {
+    public static tools.jackson.core.type.TypeReference<SearchNotExpression> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchNotExpression>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchNotExpression>";

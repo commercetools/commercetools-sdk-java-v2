@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addAsset")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddAssetActionImpl.class)
 public interface ProductAddAssetAction extends ProductUpdateAction {
@@ -54,7 +56,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 
@@ -93,7 +95,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -135,6 +137,8 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
         instance.setPosition(template.getPosition());
         return instance;
     }
+
+    public ProductAddAssetAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAddAssetAction
@@ -186,8 +190,8 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddAssetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddAssetAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductAddAssetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductAddAssetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductAddAssetAction>";

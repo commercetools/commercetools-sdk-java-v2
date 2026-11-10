@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerLabel
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerLabelImpl.class)
 public interface CustomerLabel extends Label {
@@ -62,7 +64,7 @@ public interface CustomerLabel extends Label {
     public String getLastName();
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return customerNumber
      */
     @NotNull
@@ -84,7 +86,7 @@ public interface CustomerLabel extends Label {
     public void setLastName(final String lastName);
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param customerNumber value to be set
      */
 
@@ -110,6 +112,8 @@ public interface CustomerLabel extends Label {
         instance.setCustomerNumber(template.getCustomerNumber());
         return instance;
     }
+
+    public CustomerLabel copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerLabel
@@ -159,8 +163,8 @@ public interface CustomerLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerLabel>() {
+    public static tools.jackson.core.type.TypeReference<CustomerLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerLabel>";

@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("applyDeltaToCustomLineItemShippingDetailsTargets")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction extends CartUpdateAction {
@@ -38,7 +40,7 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     String APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToCustomLineItemShippingDetailsTargets";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -46,7 +48,7 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     public String getCustomLineItemId();
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -63,14 +65,14 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     public List<ItemShippingTarget> getTargetsDelta();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      */
 
@@ -112,6 +114,8 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
         instance.setTargetsDelta(template.getTargetsDelta());
         return instance;
     }
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
@@ -168,8 +172,8 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction>() {
+    public static tools.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction>";

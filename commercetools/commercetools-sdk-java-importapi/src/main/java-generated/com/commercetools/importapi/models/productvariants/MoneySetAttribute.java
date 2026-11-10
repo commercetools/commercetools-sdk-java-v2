@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of money objects.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("money-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
 public interface MoneySetAttribute extends Attribute {
@@ -39,7 +41,7 @@ public interface MoneySetAttribute extends Attribute {
     String MONEY_SET = "money-set";
 
     /**
-     *
+     *  <p>A set of money values in cent precision format.</p>
      * @return value
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface MoneySetAttribute extends Attribute {
     public List<TypedMoney> getValue();
 
     /**
-     * set value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value values to be set
      */
 
@@ -56,7 +58,7 @@ public interface MoneySetAttribute extends Attribute {
     public void setValue(final TypedMoney... value);
 
     /**
-     * set value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value values to be set
      */
 
@@ -81,6 +83,8 @@ public interface MoneySetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public MoneySetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of MoneySetAttribute
@@ -133,8 +137,8 @@ public interface MoneySetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<MoneySetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MoneySetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<MoneySetAttribute>";

@@ -7,16 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Use this method to create a password reset token for a global Customer during their <span>password reset process</span>.</p>
+ *  <p>Creating a password reset token for the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordTokenCreatedMessage" rel="nofollow">CustomerPasswordTokenCreated</a> Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -61,7 +62,7 @@ public class ByProjectKeyCustomersPasswordTokenPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/customers/password-token", this.projectKey);
+        String httpRequestPath = String.format("%s/customers/password-token", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

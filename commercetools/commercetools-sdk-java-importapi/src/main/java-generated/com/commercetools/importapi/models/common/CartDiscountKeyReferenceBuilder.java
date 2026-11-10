@@ -24,7 +24,7 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced CartDiscount.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced CartDiscount.</p>
      * @return key
      */
 

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringSetMetaTitleAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaTitle")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetMetaTitleActionImpl.class)
 public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpda
     String SET_META_TITLE = "setMetaTitle";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaTitle
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpda
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @return staged
      */
 
@@ -52,14 +54,14 @@ public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpda
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpda
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetMetaTitleAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetMetaTitleAction
@@ -133,8 +137,8 @@ public interface ProductTailoringSetMetaTitleAction extends ProductTailoringUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaTitleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaTitleAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetMetaTitleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetMetaTitleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetMetaTitleAction>";

@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartSetLineItemSupplyChannelActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartSetLineItemSupplyChannelActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartSetLineItemSupplyChannelActionBuilder builder) {
         MyCartSetLineItemSupplyChannelAction myCartSetLineItemSupplyChannelAction = builder.buildUnchecked();
         Assertions.assertThat(myCartSetLineItemSupplyChannelAction)
                 .isInstanceOf(MyCartSetLineItemSupplyChannelAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyCartSetLineItemSupplyChannelAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyCartSetLineItemSupplyChannelAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { MyCartSetLineItemSupplyChannelAction.builder()
+                new Object[] { "lineItemId", MyCartSetLineItemSupplyChannelAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        MyCartSetLineItemSupplyChannelAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "supplyChannel", MyCartSetLineItemSupplyChannelAction.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) } };
     }
 

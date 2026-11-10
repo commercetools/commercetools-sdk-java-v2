@@ -26,6 +26,20 @@ public class CategoryUpdateActionQueryBuilderDsl {
             CategoryUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asAddStore(
+            Function<com.commercetools.api.predicates.query.category.CategoryAddStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryAddStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.category.CategoryAddStoreActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asAddStoreWithDescendants(
+            Function<com.commercetools.api.predicates.query.category.CategoryAddStoreWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryAddStoreWithDescendantsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.category.CategoryAddStoreWithDescendantsActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asChangeAssetName(
             Function<com.commercetools.api.predicates.query.category.CategoryChangeAssetNameActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryChangeAssetNameActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -73,6 +87,21 @@ public class CategoryUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.category.CategoryRemoveAssetActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryRemoveAssetActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.category.CategoryRemoveAssetActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asRemoveStore(
+            Function<com.commercetools.api.predicates.query.category.CategoryRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryRemoveStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.category.CategoryRemoveStoreActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asRemoveStoreWithDescendants(
+            Function<com.commercetools.api.predicates.query.category.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.category.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl
+                    .of()),
             CategoryUpdateActionQueryBuilderDsl::of);
     }
 
@@ -175,6 +204,20 @@ public class CategoryUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.category.CategorySetMetaTitleActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategorySetMetaTitleActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.category.CategorySetMetaTitleActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asSetStores(
+            Function<com.commercetools.api.predicates.query.category.CategorySetStoresActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategorySetStoresActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.category.CategorySetStoresActionQueryBuilderDsl.of()),
+            CategoryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> asSetStoresWithDescendants(
+            Function<com.commercetools.api.predicates.query.category.CategorySetStoresWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategorySetStoresWithDescendantsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.category.CategorySetStoresWithDescendantsActionQueryBuilderDsl.of()),
             CategoryUpdateActionQueryBuilderDsl::of);
     }
 }

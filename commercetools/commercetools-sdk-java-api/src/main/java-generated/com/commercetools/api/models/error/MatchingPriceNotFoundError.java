@@ -6,24 +6,30 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
- *  <p>The error is returned as a failed response to:</p>
+ *  <p>Returned when the Product Variant does not have a Price according to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
+ *  <p>The error can be returned as a failed response to all update actions on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartUpdateAction" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderUpdateAction" rel="nofollow">Staged Orders</a>.</p>
+ *  <p>The error is also returned as a failed response to:</p>
  *  <ul>
- *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
- *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set CustomerGroup</a> update action on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">Create Cart</a>, <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/carts:POST" rel="nofollow">Create Cart in Store</a>, <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts/replicate:POST" rel="nofollow">Replicate Cart</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/carts/replicate:POST" rel="nofollow">Replicate Cart in Store</a> requests on Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/carts:POST" rel="nofollow">Create Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/carts:POST" rel="nofollow">Create Cart in Store</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/carts/replicate:POST" rel="nofollow">Replicate My Cart</a> requests on My Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts:POST" rel="nofollow">Create Cart in BusinessUnit</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts/replicate:POST" rel="nofollow">Replicate Cart in Business Unit</a> requests on Associate Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/orders:POST" rel="nofollow">Create Order from Cart in BusinessUnit</a> request on Associate Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -38,6 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MatchingPriceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MatchingPriceNotFoundErrorImpl.class)
 public interface MatchingPriceNotFoundError extends ErrorObject {
@@ -64,7 +71,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
     @NotNull
@@ -72,7 +79,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public String getProductId();
 
     /**
-     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product.</p>
      * @return variantId
      */
     @NotNull
@@ -119,14 +126,14 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public void setMessage(final String message);
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product.</p>
      * @param variantId value to be set
      */
 
@@ -186,6 +193,8 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
         return instance;
     }
 
+    public MatchingPriceNotFoundError copyDeep();
+
     /**
      * factory method to create a deep copy of MatchingPriceNotFoundError
      * @param template instance to be copied
@@ -240,8 +249,8 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<MatchingPriceNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MatchingPriceNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<MatchingPriceNotFoundError>";

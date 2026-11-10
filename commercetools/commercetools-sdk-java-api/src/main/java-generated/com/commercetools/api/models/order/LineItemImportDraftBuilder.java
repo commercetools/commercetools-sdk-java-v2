@@ -45,6 +45,9 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
     @Nullable
+    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
@@ -98,7 +101,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -109,7 +112,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -121,7 +124,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -133,7 +136,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -145,7 +148,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Product Variant belongs to.</p>
      *  <p>If provided, you must also set <code>variant.id</code>.</p>
      * @param productId value to be set
      * @return Builder
@@ -157,7 +160,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -203,7 +206,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -215,7 +218,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -227,7 +230,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -239,7 +242,46 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraftBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraft> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @param taxedPrice value to be set
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder taxedPrice(
+            @Nullable final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
+        this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    /**
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -253,7 +295,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -266,7 +308,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -278,7 +320,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -291,7 +333,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -303,7 +345,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -315,7 +357,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>.</p>
      * @param inventoryMode value to be set
      * @return Builder
      */
@@ -451,7 +493,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -463,7 +505,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -475,7 +517,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -496,7 +538,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @return key
      */
 
@@ -506,7 +548,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return variant
      */
 
@@ -515,7 +557,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Product Variant belongs to.</p>
      *  <p>If provided, you must also set <code>variant.id</code>.</p>
      * @return productId
      */
@@ -526,7 +568,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @return quantity
      */
 
@@ -544,7 +586,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
      * @return taxRate
      */
 
@@ -554,7 +596,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @return taxedPrice
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    /**
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @return distributionChannel
      */
 
@@ -564,7 +617,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @return supplyChannel
      */
 
@@ -574,7 +627,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>.</p>
      * @return inventoryMode
      */
 
@@ -604,7 +657,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @return custom
      */
 
@@ -622,8 +675,8 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         Objects.requireNonNull(variant, LineItemImportDraft.class + ": variant is missing");
         Objects.requireNonNull(quantity, LineItemImportDraft.class + ": quantity is missing");
         Objects.requireNonNull(price, LineItemImportDraft.class + ": price is missing");
-        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, distributionChannel,
-            supplyChannel, inventoryMode, shippingDetails, state, custom);
+        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, taxedPrice,
+            distributionChannel, supplyChannel, inventoryMode, shippingDetails, state, custom);
     }
 
     /**
@@ -631,8 +684,8 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
      * @return LineItemImportDraft
      */
     public LineItemImportDraft buildUnchecked() {
-        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, distributionChannel,
-            supplyChannel, inventoryMode, shippingDetails, state, custom);
+        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, taxedPrice,
+            distributionChannel, supplyChannel, inventoryMode, shippingDetails, state, custom);
     }
 
     /**
@@ -657,6 +710,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         builder.quantity = template.getQuantity();
         builder.price = template.getPrice();
         builder.taxRate = template.getTaxRate();
+        builder.taxedPrice = template.getTaxedPrice();
         builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
         builder.inventoryMode = template.getInventoryMode();

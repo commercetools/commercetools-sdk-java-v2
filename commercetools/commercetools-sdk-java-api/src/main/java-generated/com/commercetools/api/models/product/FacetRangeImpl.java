@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * FacetRange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetRangeImpl implements FacetRange, ModelBase {
 
     private Double from;
@@ -70,7 +72,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      */
 
     public Double getFrom() {
@@ -78,7 +81,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      */
 
     public String getFromStr() {
@@ -86,7 +90,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      */
 
     public Double getTo() {
@@ -94,7 +99,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      */
 
     public String getToStr() {
@@ -102,7 +108,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      */
 
     public Long getCount() {
@@ -110,7 +116,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      */
 
     public Long getProductCount() {
@@ -118,7 +125,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Sum of all values contained in the range.</p>
      */
 
     public Double getTotal() {
@@ -126,7 +133,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Minimum value within the range.</p>
      */
 
     public Double getMin() {
@@ -134,7 +141,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maximum value within the range.</p>
      */
 
     public Double getMax() {
@@ -142,7 +149,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Arithmetic mean of the values within the range.</p>
      */
 
     public Double getMean() {
@@ -252,4 +259,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
                 .build();
     }
 
+    @Override
+    public FacetRange copyDeep() {
+        return FacetRange.deepCopy(this);
+    }
 }

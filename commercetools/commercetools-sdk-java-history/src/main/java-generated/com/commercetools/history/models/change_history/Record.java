@@ -7,21 +7,22 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.KeyReference;
 import com.commercetools.history.models.common.ResourceIdentifier;
 import com.commercetools.history.models.label.Label;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Captures the differences between the previous and next version of a resource.</p>
- *  <p>The maximum number of Records that can be stored and their retention period are subject to a limit.</p>
+ *  <p>The maximum number of Records that can be stored and their retention period are subject to a <span>limit</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +50,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
+     *  <p>For more information on how the version is incremented, see <span>Optimistic Concurrency Control</span>.</p>
      * @return version
      */
     @NotNull
@@ -65,7 +66,7 @@ public interface Record {
     public Integer getPreviousVersion();
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @return type
      */
     @NotNull
@@ -109,7 +110,7 @@ public interface Record {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @return changes
      */
     @NotNull
@@ -127,7 +128,7 @@ public interface Record {
     public ResourceIdentifier getResource();
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @return stores
      */
     @NotNull
@@ -136,7 +137,7 @@ public interface Record {
     public List<KeyReference> getStores();
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -144,7 +145,7 @@ public interface Record {
     public KeyReference getBusinessUnit();
 
     /**
-     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>Whether no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
      */
@@ -154,7 +155,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
+     *  <p>For more information on how the version is incremented, see <span>Optimistic Concurrency Control</span>.</p>
      * @param version value to be set
      */
 
@@ -168,7 +169,7 @@ public interface Record {
     public void setPreviousVersion(final Integer previousVersion);
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @param type value to be set
      */
 
@@ -204,7 +205,7 @@ public interface Record {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param changes values to be set
      */
 
@@ -213,7 +214,7 @@ public interface Record {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param changes values to be set
      */
 
@@ -227,7 +228,7 @@ public interface Record {
     public void setResource(final ResourceIdentifier resource);
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param stores values to be set
      */
 
@@ -235,21 +236,21 @@ public interface Record {
     public void setStores(final KeyReference... stores);
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<KeyReference> stores);
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final KeyReference businessUnit);
 
     /**
-     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>Whether no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      */
@@ -285,6 +286,8 @@ public interface Record {
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }
+
+    public Record copyDeep();
 
     /**
      * factory method to create a deep copy of Record
@@ -354,8 +357,8 @@ public interface Record {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Record> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Record>() {
+    public static tools.jackson.core.type.TypeReference<Record> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Record>() {
             @Override
             public String toString() {
                 return "TypeReference<Record>";

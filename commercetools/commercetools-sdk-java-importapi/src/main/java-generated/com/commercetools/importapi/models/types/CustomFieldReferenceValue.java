@@ -11,37 +11,55 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Defines which resource type a CustomFieldReferenceType can reference.</p>
+ *  <p>Defines which resource type a <a href="https://docs.commercetools.com/apis/ctp:import:type:CustomFieldReferenceType" rel="nofollow">CustomFieldReferenceType</a> can reference.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomFieldReferenceValue extends JsonEnum {
 
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a></p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a></p> */
     CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a></p> */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a></p> */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a></p> */
     CustomFieldReferenceValue CHANNEL = CustomFieldReferenceValueEnum.CHANNEL;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a></p> */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a></p> */
+    CustomFieldReferenceValue CUSTOMER_GROUP = CustomFieldReferenceValueEnum.CUSTOMER_GROUP;
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a></p> */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a></p> */
     CustomFieldReferenceValue ORDER = CustomFieldReferenceValueEnum.ORDER;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a></p> */
     CustomFieldReferenceValue PRODUCT = CustomFieldReferenceValueEnum.PRODUCT;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a></p> */
     CustomFieldReferenceValue PRODUCT_TYPE = CustomFieldReferenceValueEnum.PRODUCT_TYPE;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a></p> */
     CustomFieldReferenceValue REVIEW = CustomFieldReferenceValueEnum.REVIEW;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a></p> */
     CustomFieldReferenceValue STATE = CustomFieldReferenceValueEnum.STATE;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a></p> */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
-
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a></p> */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
     /**
@@ -77,6 +95,11 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
 
         /**
          * key-value-document

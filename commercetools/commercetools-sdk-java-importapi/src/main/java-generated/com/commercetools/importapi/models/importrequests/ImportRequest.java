@@ -6,54 +6,42 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
+ *  <p>An import request batches multiple import resources of the same import resource type for processing by an Import Container.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ImportRequest importRequest = ImportRequest.categoryBuilder()
+ *     ImportRequest importRequest = ImportRequest.businessUnitBuilder()
  *             plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CategoryImportRequestImpl.class, name = CategoryImportRequest.CATEGORY),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CustomerImportRequestImpl.class, name = CustomerImportRequest.CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestImpl.class, name = DiscountCodeImportRequest.DISCOUNT_CODE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.InventoryImportRequestImpl.class, name = InventoryImportRequest.INVENTORY),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.OrderImportRequestImpl.class, name = OrderImportRequest.ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.OrderPatchImportRequestImpl.class, name = OrderPatchImportRequest.ORDER_PATCH),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.PriceImportRequestImpl.class, name = PriceImportRequest.PRICE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductDraftImportRequestImpl.class, name = ProductDraftImportRequest.PRODUCT_DRAFT),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductImportRequestImpl.class, name = ProductImportRequest.PRODUCT),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductTypeImportRequestImpl.class, name = ProductTypeImportRequest.PRODUCT_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantImportRequestImpl.class, name = ProductVariantImportRequest.PRODUCT_VARIANT),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl.class, name = ProductVariantPatchRequest.PRODUCT_VARIANT_PATCH),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestImpl.class, name = StandalonePriceImportRequest.STANDALONE_PRICE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.TypeImportRequestImpl.class, name = TypeImportRequest.TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ImportRequestImpl.class, visible = true)
 @JsonDeserialize(as = ImportRequestImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ImportRequest {
 
     /**
-     *  <p>The resource types that can be imported.</p>
+     *  <p>The resource type that can be imported.</p>
      * @return type
      */
     @NotNull
     @JsonProperty("type")
     public ImportResourceType getType();
+
+    public ImportRequest copyDeep();
 
     /**
      * factory method to create a deep copy of ImportRequest
@@ -65,64 +53,20 @@ public interface ImportRequest {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.importrequests.CategoryImportRequest) {
-            return com.commercetools.importapi.models.importrequests.CategoryImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.CategoryImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.CustomerImportRequest) {
-            return com.commercetools.importapi.models.importrequests.CustomerImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.CustomerImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest) {
-            return com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.InventoryImportRequest) {
-            return com.commercetools.importapi.models.importrequests.InventoryImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.InventoryImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.OrderImportRequest) {
-            return com.commercetools.importapi.models.importrequests.OrderImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.OrderImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.OrderPatchImportRequest) {
-            return com.commercetools.importapi.models.importrequests.OrderPatchImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.OrderPatchImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.PriceImportRequest) {
-            return com.commercetools.importapi.models.importrequests.PriceImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.PriceImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductDraftImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductTypeImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductVariantImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) {
-            return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.deepCopy(
-                (com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.TypeImportRequest) {
-            return com.commercetools.importapi.models.importrequests.TypeImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.TypeImportRequest) template);
+
+        if (!(template instanceof ImportRequestImpl)) {
+            return template.copyDeep();
         }
         ImportRequestImpl instance = new ImportRequestImpl();
         return instance;
+    }
+
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder.of();
     }
 
     /**
@@ -198,6 +142,22 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for productSelection subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder productSelectionBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder.of();
+    }
+
+    /**
+     * builder for productTailoring subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder productTailoringBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder.of();
+    }
+
+    /**
      * builder for productType subtype
      * @return builder
      */
@@ -238,6 +198,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for variant subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder variantBuilder() {
+        return com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -251,8 +219,8 @@ public interface ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<ImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportRequest>";

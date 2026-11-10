@@ -3,56 +3,53 @@ package com.commercetools.importapi.models.orders;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemDraftBuilder builder) {
         CustomLineItemDraft customLineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(customLineItemDraft).isInstanceOf(CustomLineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomLineItemDraft.builder()
-                        .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .money(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "name",
+                        CustomLineItemDraft.builder()
+                                .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "money",
+                        CustomLineItemDraft.builder()
+                                .money(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
+                new Object[] { "taxedPrice", CustomLineItemDraft.builder()
                         .taxedPrice(new com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .totalPrice(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { CustomLineItemDraft.builder().slug("slug") },
-                new Object[] { CustomLineItemDraft.builder().quantity(8L) },
-                new Object[] {
+                new Object[] { "totalPrice",
+                        CustomLineItemDraft.builder()
+                                .totalPrice(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
+                new Object[] { "slug", CustomLineItemDraft.builder().slug("slug") },
+                new Object[] { "quantity", CustomLineItemDraft.builder().quantity(8L) },
+                new Object[] { "state",
                         CustomLineItemDraft.builder()
                                 .state(Collections.singletonList(
                                     new com.commercetools.importapi.models.orders.ItemStateImpl())) },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "taxCategory", CustomLineItemDraft.builder()
                         .taxCategory(new com.commercetools.importapi.models.common.TaxCategoryKeyReferenceImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .taxRate(new com.commercetools.importapi.models.prices.TaxRateImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "taxRate",
+                        CustomLineItemDraft.builder()
+                                .taxRate(new com.commercetools.importapi.models.prices.TaxRateImpl()) },
+                new Object[] { "externalTaxRate", CustomLineItemDraft.builder()
                         .externalTaxRate(new com.commercetools.importapi.models.orders.ExternalTaxRateDraftImpl()) },
-                new Object[] { CustomLineItemDraft.builder()
+                new Object[] { "discountedPricePerQuantity", CustomLineItemDraft.builder()
                         .discountedPricePerQuantity(Collections.singletonList(
                             new com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftImpl())) },
-                new Object[] { CustomLineItemDraft.builder()
-                        .shippingDetails(
-                            new com.commercetools.importapi.models.orders.ItemShippingDetailsDraftImpl()) } };
+                new Object[] { "shippingDetails",
+                        CustomLineItemDraft.builder()
+                                .shippingDetails(
+                                    new com.commercetools.importapi.models.orders.ItemShippingDetailsDraftImpl()) } };
     }
 
     @Test

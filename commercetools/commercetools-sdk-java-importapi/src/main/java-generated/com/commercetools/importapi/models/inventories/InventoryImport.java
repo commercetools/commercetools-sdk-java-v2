@@ -7,19 +7,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
+ *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -46,7 +47,7 @@ public interface InventoryImport extends ImportResource {
     public String getKey();
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @return sku
      */
     @NotNull
@@ -54,7 +55,7 @@ public interface InventoryImport extends ImportResource {
     public String getSku();
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @return quantityOnStock
      */
     @NotNull
@@ -62,7 +63,7 @@ public interface InventoryImport extends ImportResource {
     public Long getQuantityOnStock();
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @return restockableInDays
      */
 
@@ -70,7 +71,7 @@ public interface InventoryImport extends ImportResource {
     public Long getRestockableInDays();
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @return expectedDelivery
      */
 
@@ -78,7 +79,15 @@ public interface InventoryImport extends ImportResource {
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.reservationExpirationInMinutes</code></p>
+     * @return reservationExpirationInMinutes
+     */
+
+    @JsonProperty("reservationExpirationInMinutes")
+    public Integer getReservationExpirationInMinutes();
+
+    /**
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return supplyChannel
      */
     @Valid
@@ -86,7 +95,7 @@ public interface InventoryImport extends ImportResource {
     public ChannelKeyReference getSupplyChannel();
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -94,49 +103,56 @@ public interface InventoryImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @param quantityOnStock value to be set
      */
 
     public void setQuantityOnStock(final Long quantityOnStock);
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @param restockableInDays value to be set
      */
 
     public void setRestockableInDays(final Long restockableInDays);
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @param expectedDelivery value to be set
      */
 
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.reservationExpirationInMinutes</code></p>
+     * @param reservationExpirationInMinutes value to be set
+     */
+
+    public void setReservationExpirationInMinutes(final Integer reservationExpirationInMinutes);
+
+    /**
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @param custom value to be set
      */
 
@@ -162,10 +178,13 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public InventoryImport copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryImport
@@ -183,6 +202,7 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
         instance.setSupplyChannel(
             com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
@@ -220,8 +240,8 @@ public interface InventoryImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryImport>() {
+    public static tools.jackson.core.type.TypeReference<InventoryImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryImport>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryImport>";

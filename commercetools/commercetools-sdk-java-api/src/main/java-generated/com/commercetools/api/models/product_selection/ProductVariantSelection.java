@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
@@ -26,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptImpl.class, name = ProductVariantSelectionIncludeAllExcept.INCLUDE_ALL_EXCEPT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl.class, name = ProductVariantSelectionIncludeOnly.INCLUDE_ONLY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductVariantSelectionImpl.class, visible = true)
 @JsonDeserialize(as = ProductVariantSelectionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface ProductVariantSelection {
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
 
+    public ProductVariantSelection copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantSelection
      * @param template instance to be copied
@@ -52,13 +52,9 @@ public interface ProductVariantSelection {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) template);
+
+        if (!(template instanceof ProductVariantSelectionImpl)) {
+            return template.copyDeep();
         }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
         return instance;
@@ -94,8 +90,8 @@ public interface ProductVariantSelection {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelection> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelection>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantSelection> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantSelection>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantSelection>";

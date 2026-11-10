@@ -7,18 +7,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains the Product Variant to be used in the LineItemImportDraft.</p>
+ *  <p>Contains the Product Variant to be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft<ProductVariantImportDraft> {
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> also.</p>
      * @return id
      */
 
@@ -42,7 +43,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public Long getId();
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>id</code>.</p>
      * @return sku
      */
 
@@ -50,7 +51,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public String getSku();
 
     /**
-     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Prices</a> of the Product Variant if you want to override the <code>prices</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>prices</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
     @Valid
@@ -58,7 +59,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Attribute" rel="nofollow">Attributes</a> of the Product Variant if you want to override the <code>attributes</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>attributes</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @return attributes
      */
     @Valid
@@ -66,7 +67,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> of the Product Variant if you want to override the <code>images</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>images</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @return images
      */
     @Valid
@@ -74,21 +75,21 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public List<Image> getImages();
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> also.</p>
      * @param id value to be set
      */
 
     public void setId(final Long id);
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>id</code>.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Prices</a> of the Product Variant if you want to override the <code>prices</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>prices</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
@@ -96,14 +97,14 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public void setPrices(final PriceDraft... prices);
 
     /**
-     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Prices</a> of the Product Variant if you want to override the <code>prices</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>prices</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Attribute" rel="nofollow">Attributes</a> of the Product Variant if you want to override the <code>attributes</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>attributes</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @param attributes values to be set
      */
 
@@ -111,14 +112,14 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Attribute" rel="nofollow">Attributes</a> of the Product Variant if you want to override the <code>attributes</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>attributes</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @param attributes values to be set
      */
 
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> of the Product Variant if you want to override the <code>images</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>images</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @param images values to be set
      */
 
@@ -126,7 +127,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
     public void setImages(final Image... images);
 
     /**
-     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> of the Product Variant if you want to override the <code>images</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>images</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      * @param images values to be set
      */
 
@@ -154,6 +155,8 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
         instance.setImages(template.getImages());
         return instance;
     }
+
+    public ProductVariantImportDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantImportDraft
@@ -217,8 +220,8 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantImportDraft>";

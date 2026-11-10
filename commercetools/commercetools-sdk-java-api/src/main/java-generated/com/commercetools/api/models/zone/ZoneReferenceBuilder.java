@@ -30,7 +30,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     private com.commercetools.api.models.zone.Zone obj;
 
     /**
-     *  <p>Unique identifier of the referenced Zone.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <span>Reference Expansion</span> for Zones.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <span>Reference Expansion</span> for Zones.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <span>Reference Expansion</span> for Zones.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Zone.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <span>Reference Expansion</span> for Zones.</p>
      * @return obj
      */
 

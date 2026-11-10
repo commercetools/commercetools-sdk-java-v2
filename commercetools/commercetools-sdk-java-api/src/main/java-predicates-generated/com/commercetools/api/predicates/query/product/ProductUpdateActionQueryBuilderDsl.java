@@ -97,13 +97,6 @@ public class ProductUpdateActionQueryBuilderDsl {
             ProductUpdateActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asLegacySetSku(
-            Function<com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl.of()),
-            ProductUpdateActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asMoveImageToPosition(
             Function<com.commercetools.api.predicates.query.product.ProductMoveImageToPositionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductMoveImageToPositionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -237,6 +230,13 @@ public class ProductUpdateActionQueryBuilderDsl {
             ProductUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetDefaultVariant(
+            Function<com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl.of()),
+            ProductUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetDescription(
             Function<com.commercetools.api.predicates.query.product.ProductSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetDescriptionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -306,6 +306,14 @@ public class ProductUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.product.ProductSetPricesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetPricesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.product.ProductSetPricesActionQueryBuilderDsl.of()),
+            ProductUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetProductAttribute(
+            Function<com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl.of()),
             ProductUpdateActionQueryBuilderDsl::of);
     }
 

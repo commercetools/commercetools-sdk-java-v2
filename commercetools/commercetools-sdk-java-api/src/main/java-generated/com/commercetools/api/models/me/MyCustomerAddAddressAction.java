@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding an address to the Customer produces the CustomerAddressAdded Message.</p>
+ *  <p>Adding an address to the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressAddedMessage" rel="nofollow">CustomerAddressAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerAddAddressActionImpl.class)
 public interface MyCustomerAddAddressAction extends MyCustomerUpdateAction {
@@ -71,6 +73,8 @@ public interface MyCustomerAddAddressAction extends MyCustomerUpdateAction {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public MyCustomerAddAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerAddAddressAction
@@ -118,8 +122,8 @@ public interface MyCustomerAddAddressAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerAddAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerAddAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerAddAddressAction>";

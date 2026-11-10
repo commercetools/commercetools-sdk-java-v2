@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
- *  <p>For example, the <code>headerValue</code> for Basic Authentication should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
+ *  <p>For example, the <code>headerValue</code> for <span>Basic Authentication</span> should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AuthorizationHeader")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AuthorizationHeaderAuthenticationImpl.class)
 public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthentication {
@@ -69,6 +71,8 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
         instance.setHeaderValue(template.getHeaderValue());
         return instance;
     }
+
+    public AuthorizationHeaderAuthentication copyDeep();
 
     /**
      * factory method to create a deep copy of AuthorizationHeaderAuthentication
@@ -117,8 +121,8 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication>() {
+    public static tools.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication>() {
             @Override
             public String toString() {
                 return "TypeReference<AuthorizationHeaderAuthentication>";

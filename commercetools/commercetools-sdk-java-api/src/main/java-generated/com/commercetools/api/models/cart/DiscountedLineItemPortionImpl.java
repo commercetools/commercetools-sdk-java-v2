@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPortion
@@ -44,7 +45,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      */
 
     public com.commercetools.api.models.common.Reference getDiscount() {
@@ -53,6 +54,11 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedAmount() {
@@ -96,4 +102,8 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
                 .build();
     }
 
+    @Override
+    public DiscountedLineItemPortion copyDeep() {
+        return DiscountedLineItemPortion.deepCopy(this);
+    }
 }

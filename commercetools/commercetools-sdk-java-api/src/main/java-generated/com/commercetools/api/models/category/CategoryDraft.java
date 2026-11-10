@@ -7,16 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategoryDraft
@@ -47,7 +49,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
     @NotNull
@@ -72,7 +74,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public CategoryResourceIdentifier getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @return orderHint
      */
 
@@ -129,11 +131,24 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
     @JsonProperty("key")
     public String getKey();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @return stores
+     */
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
 
     /**
      *  <p>Name of the Category.</p>
@@ -143,7 +158,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
 
@@ -164,7 +179,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setParent(final CategoryResourceIdentifier parent);
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @param orderHint value to be set
      */
 
@@ -222,10 +237,34 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier... stores);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
      * factory method
@@ -254,8 +293,11 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
         instance.setKey(template.getKey());
+        instance.setStores(template.getStores());
         return instance;
     }
+
+    public CategoryDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryDraft
@@ -288,6 +330,11 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -322,8 +369,8 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryDraft>() {
+    public static tools.jackson.core.type.TypeReference<CategoryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryDraft>";

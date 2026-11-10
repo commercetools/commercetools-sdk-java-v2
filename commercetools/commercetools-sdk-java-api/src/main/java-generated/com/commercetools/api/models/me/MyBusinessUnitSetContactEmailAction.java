@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the contact email on a Business Unit generates a BusinessUnitContactEmailSet Message.</p>
+ *  <p>Setting the contact email on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitContactEmailSetMessage" rel="nofollow">BusinessUnitContactEmailSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setContactEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyBusinessUnitSetContactEmailActionImpl.class)
 public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdateAction {
@@ -66,6 +68,8 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
         instance.setContactEmail(template.getContactEmail());
         return instance;
     }
+
+    public MyBusinessUnitSetContactEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyBusinessUnitSetContactEmailAction
@@ -115,8 +119,8 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitSetContactEmailAction>";

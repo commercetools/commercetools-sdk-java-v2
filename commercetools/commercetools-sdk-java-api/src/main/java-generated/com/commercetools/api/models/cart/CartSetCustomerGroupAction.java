@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart has the same Customer Group as the assigned Customer.</p>
- *  <p>Setting the Customer Group also updates the LineItem <code>prices</code> according to the Customer Group.</p>
+ *  <p>This update action can only be used if a Customer is not assigned to the Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>
+ *  <p>To reflect the new Customer Group, this update action can result in <span>updates to the Cart</span>. When this occurs, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerGroup")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomerGroupActionImpl.class)
 public interface CartSetCustomerGroupAction extends CartUpdateAction {
@@ -37,7 +39,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return customerGroup
      */
     @Valid
@@ -45,7 +47,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param customerGroup value to be set
      */
 
@@ -69,6 +71,8 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public CartSetCustomerGroupAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetCustomerGroupAction
@@ -117,8 +121,8 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetCustomerGroupAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetCustomerGroupAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetCustomerGroupAction>";

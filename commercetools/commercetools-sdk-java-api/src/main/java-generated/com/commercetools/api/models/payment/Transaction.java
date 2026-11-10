@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
@@ -95,6 +96,14 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public CustomFields getCustom();
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @JsonProperty("interfaceId")
+    public String getInterfaceId();
+
+    /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param id value to be set
      */
@@ -144,6 +153,13 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     */
+
+    public void setInterfaceId(final String interfaceId);
+
+    /**
      * factory method
      * @return instance of Transaction
      */
@@ -165,8 +181,11 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
+
+    public Transaction copyDeep();
 
     /**
      * factory method to create a deep copy of Transaction
@@ -186,6 +205,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 
@@ -220,8 +240,8 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
+    public static tools.jackson.core.type.TypeReference<Transaction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Transaction>() {
             @Override
             public String toString() {
                 return "TypeReference<Transaction>";

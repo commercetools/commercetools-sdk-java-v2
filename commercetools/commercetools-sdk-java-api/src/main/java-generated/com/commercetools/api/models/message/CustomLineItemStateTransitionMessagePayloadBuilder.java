@@ -43,7 +43,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @param transitionDate value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @param toState value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -170,7 +170,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -180,7 +180,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @return transitionDate
      */
 
@@ -189,7 +189,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @return quantity
      */
 
@@ -198,7 +198,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      * @return fromState
      */
 
@@ -207,7 +207,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      * @return toState
      */
 

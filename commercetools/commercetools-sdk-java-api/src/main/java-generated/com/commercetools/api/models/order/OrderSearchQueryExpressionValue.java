@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchQueryExpressionValue
@@ -47,12 +48,12 @@ public interface OrderSearchQueryExpressionValue {
     public Integer getBoost();
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @return customType
      */
 
     @JsonProperty("customType")
-    public String getCustomType();
+    public OrderSearchCustomType getCustomType();
 
     /**
      * set field
@@ -69,11 +70,11 @@ public interface OrderSearchQueryExpressionValue {
     public void setBoost(final Integer boost);
 
     /**
-     * set customType
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @param customType value to be set
      */
 
-    public void setCustomType(final String customType);
+    public void setCustomType(final OrderSearchCustomType customType);
 
     /**
      * factory method
@@ -96,6 +97,8 @@ public interface OrderSearchQueryExpressionValue {
         return instance;
     }
 
+    public OrderSearchQueryExpressionValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchQueryExpressionValue
      * @param template instance to be copied
@@ -106,29 +109,9 @@ public interface OrderSearchQueryExpressionValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchAnyValue) {
-            return com.commercetools.api.models.order.OrderSearchAnyValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchAnyValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchDateRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchDateRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchFullTextValue) {
-            return com.commercetools.api.models.order.OrderSearchFullTextValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFullTextValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchLongRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchLongRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchNumberRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchNumberRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchStringValue) {
-            return com.commercetools.api.models.order.OrderSearchStringValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchStringValue) template);
+
+        if (!(template instanceof OrderSearchQueryExpressionValueImpl)) {
+            return template.copyDeep();
         }
         OrderSearchQueryExpressionValueImpl instance = new OrderSearchQueryExpressionValueImpl();
         instance.setField(template.getField());
@@ -168,8 +151,8 @@ public interface OrderSearchQueryExpressionValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue>() {
+    public static tools.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSearchQueryExpressionValue>";

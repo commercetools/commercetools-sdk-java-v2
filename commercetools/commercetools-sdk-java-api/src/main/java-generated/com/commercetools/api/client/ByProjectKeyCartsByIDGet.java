@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
+ *  <p>Retrieves a Cart with the provided <code>id</code>. To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -66,7 +66,8 @@ public class ByProjectKeyCartsByIDGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/carts/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/carts/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

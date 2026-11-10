@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * UnresolvedReferences
+ *  <p>Contains a reference to a resource which does not exist. For example, if a Category is imported with a parent Category that does not exist, the reference to the parent Category is an unresolved reference.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -22,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     UnresolvedReferences unresolvedReferences = UnresolvedReferences.builder()
  *             .key("{key}")
- *             .typeId(ReferenceType.CART)
+ *             .typeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface UnresolvedReferences {
 
     /**
-     *
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @return key
      */
     @NotNull
@@ -40,7 +41,7 @@ public interface UnresolvedReferences {
     public String getKey();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @return typeId
      */
     @NotNull
@@ -48,14 +49,14 @@ public interface UnresolvedReferences {
     public ReferenceType getTypeId();
 
     /**
-     * set key
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @param typeId value to be set
      */
 
@@ -80,6 +81,8 @@ public interface UnresolvedReferences {
         instance.setTypeId(template.getTypeId());
         return instance;
     }
+
+    public UnresolvedReferences copyDeep();
 
     /**
      * factory method to create a deep copy of UnresolvedReferences
@@ -128,8 +131,8 @@ public interface UnresolvedReferences {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences>() {
+    public static tools.jackson.core.type.TypeReference<UnresolvedReferences> typeReference() {
+        return new tools.jackson.core.type.TypeReference<UnresolvedReferences>() {
             @Override
             public String toString() {
                 return "TypeReference<UnresolvedReferences>";

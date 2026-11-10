@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .code("{code}")
  *             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .isActive(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
  *             .plusGroups(groupsBuilder -> groupsBuilder)
@@ -58,6 +59,8 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     private String code;
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     @Nullable
     private String cartPredicate;
@@ -284,7 +287,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     *  <p>User-defined unique identifier of the DiscountCode <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -388,6 +391,100 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder stores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
      * @param cartPredicate value to be set
      * @return Builder
@@ -410,7 +507,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -421,7 +518,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -433,7 +530,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param references value to be set
      * @return Builder
      */
@@ -447,7 +544,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param builder function to build the references value
      * @return Builder
      */
@@ -462,7 +559,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @param builder function to build the references value
      * @return Builder
      */
@@ -475,7 +572,10 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set
      * @return Builder
      */
@@ -486,7 +586,10 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported).</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplicationsPerCustomer value to be set
      * @return Builder
      */
@@ -687,7 +790,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     *  <p>User-defined unique identifier of the DiscountCode <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @return code
      */
 
@@ -702,6 +805,16 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getCartDiscounts() {
         return this.cartDiscounts;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
     }
 
     /**
@@ -724,7 +837,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     *  <p>References to all resources addressed in the <code>cartPredicate</code> by their IDs. This value is generated by the platform.</p>
      * @return references
      */
 
@@ -733,7 +846,10 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
      */
 
@@ -743,7 +859,10 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported).</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -812,11 +931,12 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         Objects.requireNonNull(lastModifiedAt, DiscountCode.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(code, DiscountCode.class + ": code is missing");
         Objects.requireNonNull(cartDiscounts, DiscountCode.class + ": cartDiscounts is missing");
+        Objects.requireNonNull(stores, DiscountCode.class + ": stores is missing");
         Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
         Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
         Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, name,
-            description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
+            description, code, cartDiscounts, stores, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
 
@@ -826,7 +946,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
      */
     public DiscountCode buildUnchecked() {
         return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, name,
-            description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
+            description, code, cartDiscounts, stores, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
 
@@ -856,6 +976,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         builder.description = template.getDescription();
         builder.code = template.getCode();
         builder.cartDiscounts = template.getCartDiscounts();
+        builder.stores = template.getStores();
         builder.cartPredicate = template.getCartPredicate();
         builder.isActive = template.getIsActive();
         builder.references = template.getReferences();

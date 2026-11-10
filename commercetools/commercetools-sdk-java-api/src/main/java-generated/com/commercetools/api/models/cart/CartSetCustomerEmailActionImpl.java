@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartSetCustomerEmailAction
@@ -51,7 +52,7 @@ public class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailActio
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public String getEmail() {
@@ -91,4 +92,8 @@ public class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailActio
                 .build();
     }
 
+    @Override
+    public CartSetCustomerEmailAction copyDeep() {
+        return CartSetCustomerEmailAction.deepCopy(this);
+    }
 }

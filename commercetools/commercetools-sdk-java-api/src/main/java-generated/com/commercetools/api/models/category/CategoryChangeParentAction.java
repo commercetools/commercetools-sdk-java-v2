@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * CategoryChangeParentAction
+ *  <p>This action locks the entire Category tree in the Project for the duration of the request. For details, see <span>Category tree locking</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeParent")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
@@ -70,6 +72,8 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
         instance.setParent(template.getParent());
         return instance;
     }
+
+    public CategoryChangeParentAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryChangeParentAction
@@ -118,8 +122,8 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction>() {
+    public static tools.jackson.core.type.TypeReference<CategoryChangeParentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryChangeParentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryChangeParentAction>";

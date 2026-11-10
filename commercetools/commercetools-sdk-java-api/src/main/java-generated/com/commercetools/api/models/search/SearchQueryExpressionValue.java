@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchQueryExpressionValue
@@ -47,7 +48,7 @@ public interface SearchQueryExpressionValue {
     public Double getBoost();
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @return fieldType
      */
 
@@ -69,7 +70,7 @@ public interface SearchQueryExpressionValue {
     public void setBoost(final Double boost);
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @param fieldType value to be set
      */
 
@@ -96,6 +97,8 @@ public interface SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchQueryExpressionValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchQueryExpressionValue
      * @param template instance to be copied
@@ -106,41 +109,9 @@ public interface SearchQueryExpressionValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.search.SearchAnyValue) {
-            return com.commercetools.api.models.search.SearchAnyValue
-                    .deepCopy((com.commercetools.api.models.search.SearchAnyValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchDateRangeValue) {
-            return com.commercetools.api.models.search.SearchDateRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchDateRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchDateTimeRangeValue) {
-            return com.commercetools.api.models.search.SearchDateTimeRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchDateTimeRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchExistsValue) {
-            return com.commercetools.api.models.search.SearchExistsValue
-                    .deepCopy((com.commercetools.api.models.search.SearchExistsValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextPrefixValue) {
-            return com.commercetools.api.models.search.SearchFullTextPrefixValue
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextPrefixValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextValue) {
-            return com.commercetools.api.models.search.SearchFullTextValue
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchLongRangeValue) {
-            return com.commercetools.api.models.search.SearchLongRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchLongRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchNumberRangeValue) {
-            return com.commercetools.api.models.search.SearchNumberRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchNumberRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchTimeRangeValue) {
-            return com.commercetools.api.models.search.SearchTimeRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchTimeRangeValue) template);
+
+        if (!(template instanceof SearchQueryExpressionValueImpl)) {
+            return template.copyDeep();
         }
         SearchQueryExpressionValueImpl instance = new SearchQueryExpressionValueImpl();
         instance.setField(template.getField());
@@ -180,8 +151,8 @@ public interface SearchQueryExpressionValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchQueryExpressionValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchQueryExpressionValue>() {
+    public static tools.jackson.core.type.TypeReference<SearchQueryExpressionValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchQueryExpressionValue>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchQueryExpressionValue>";

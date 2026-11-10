@@ -28,7 +28,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param edit value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param result value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @return edit
      */
 
@@ -108,7 +108,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return result
      */
 

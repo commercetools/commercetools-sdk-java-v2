@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * InheritedAssociate
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InheritedAssociate {
 
     /**
-     *
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -43,16 +44,16 @@ public interface InheritedAssociate {
     public List<InheritedAssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
     @Valid
     @JsonProperty("customer")
-    public Reference getCustomer();
+    public CustomerReference getCustomer();
 
     /**
-     * set associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -60,18 +61,18 @@ public interface InheritedAssociate {
     public void setAssociateRoleAssignments(final InheritedAssociateRoleAssignment... associateRoleAssignments);
 
     /**
-     * set associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
     public void setAssociateRoleAssignments(final List<InheritedAssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     * set customer
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
-    public void setCustomer(final Reference customer);
+    public void setCustomer(final CustomerReference customer);
 
     /**
      * factory method
@@ -93,6 +94,8 @@ public interface InheritedAssociate {
         return instance;
     }
 
+    public InheritedAssociate copyDeep();
+
     /**
      * factory method to create a deep copy of InheritedAssociate
      * @param template instance to be copied
@@ -109,7 +112,8 @@ public interface InheritedAssociate {
                         .map(com.commercetools.history.models.common.InheritedAssociateRoleAssignment::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setCustomer(
+            com.commercetools.history.models.common.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
 
@@ -144,8 +148,8 @@ public interface InheritedAssociate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InheritedAssociate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InheritedAssociate>() {
+    public static tools.jackson.core.type.TypeReference<InheritedAssociate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InheritedAssociate>() {
             @Override
             public String toString() {
                 return "TypeReference<InheritedAssociate>";

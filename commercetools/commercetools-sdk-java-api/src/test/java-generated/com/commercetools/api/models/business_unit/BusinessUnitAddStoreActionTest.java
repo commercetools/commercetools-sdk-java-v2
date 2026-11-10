@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.business_unit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAddStoreActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAddStoreActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAddStoreActionBuilder builder) {
         BusinessUnitAddStoreAction businessUnitAddStoreAction = builder.buildUnchecked();
         Assertions.assertThat(businessUnitAddStoreAction).isInstanceOf(BusinessUnitAddStoreAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitAddStoreAction.builder()
+        return new Object[][] { new Object[] { "store", BusinessUnitAddStoreAction.builder()
                 .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) } };
     }
 

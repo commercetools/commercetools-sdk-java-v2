@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set AttributeDefinition InputTip update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeSetInputTipAction" rel="nofollow">Set AttributeDefinition InputTip</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetInputTipChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetInputTipChangeImpl.class)
 public interface SetInputTipChange extends Change {
@@ -75,7 +77,7 @@ public interface SetInputTipChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributeName
      */
     @NotNull
@@ -104,7 +106,7 @@ public interface SetInputTipChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributeName value to be set
      */
 
@@ -131,6 +133,8 @@ public interface SetInputTipChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }
+
+    public SetInputTipChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetInputTipChange
@@ -183,8 +187,8 @@ public interface SetInputTipChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange>() {
+    public static tools.jackson.core.type.TypeReference<SetInputTipChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetInputTipChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetInputTipChange>";

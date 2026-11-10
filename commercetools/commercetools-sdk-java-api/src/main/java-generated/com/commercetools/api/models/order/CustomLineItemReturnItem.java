@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomLineItemReturnItem
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomLineItemReturnItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemReturnItemImpl.class)
 public interface CustomLineItemReturnItem extends ReturnItem {
@@ -42,7 +44,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     String CUSTOM_LINE_ITEM_RETURN_ITEM = "CustomLineItemReturnItem";
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -50,7 +52,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public String getKey();
 
     /**
-     *  <p><code>id</code> of the returned CustomLineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -58,7 +60,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public String getCustomLineItemId();
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @return quantity
      */
     @NotNull
@@ -66,21 +68,21 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public Long getQuantity();
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of the returned CustomLineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @param quantity value to be set
      */
 
@@ -113,6 +115,8 @@ public interface CustomLineItemReturnItem extends ReturnItem {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
+
+    public CustomLineItemReturnItem copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItemReturnItem
@@ -169,8 +173,8 @@ public interface CustomLineItemReturnItem extends ReturnItem {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemReturnItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemReturnItem>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemReturnItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemReturnItem>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemReturnItem>";

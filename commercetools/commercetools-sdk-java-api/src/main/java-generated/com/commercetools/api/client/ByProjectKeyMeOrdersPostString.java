@@ -12,24 +12,31 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>The Cart must have a shipping address set for taxes to be calculated. When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission.</p>
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creates an Order from a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
+ *  <p>The Cart must have a shipping address set.</p>
+ *  <p>When creating <span>B2B Orders</span>, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>.</p>
+ *  <p>If the Cart's <code>customerId</code> does not match the <span>customer:{id}</span> scope, or the <code>anonymousId</code> does not match the <span>anonymous_id:{id}</span> scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
+ *  <p>Creating an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCreatedMessage" rel="nofollow">OrderCreated</a> Message.</p>
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Order by querying a unique identifier supplied during the creation request, such as the Order number.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>AssociateMissingPermission</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateMissingPermissionError" rel="nofollow">AssociateMissingPermission</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PriceChangedError" rel="nofollow">PriceChanged</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
  *  </ul>
  *
  * <hr>
@@ -78,7 +85,7 @@ public class ByProjectKeyMeOrdersPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/me/orders", this.projectKey);
+        String httpRequestPath = String.format("%s/me/orders", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

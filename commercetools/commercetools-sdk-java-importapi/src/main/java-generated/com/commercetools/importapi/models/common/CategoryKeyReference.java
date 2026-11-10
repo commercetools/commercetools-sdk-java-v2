@@ -8,12 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>References a category by key.</p>
+ *  <p>Used by the <span>Import API</span> to identify a Category.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("category")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryKeyReferenceImpl.class)
 public interface CategoryKeyReference extends KeyReference {
@@ -33,6 +36,29 @@ public interface CategoryKeyReference extends KeyReference {
      * discriminator value for CategoryKeyReference
      */
     String CATEGORY = "category";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Category.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Category.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * factory method
@@ -52,6 +78,8 @@ public interface CategoryKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CategoryKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryKeyReference
@@ -99,8 +127,8 @@ public interface CategoryKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<CategoryKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategoryKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<CategoryKeyReference>";

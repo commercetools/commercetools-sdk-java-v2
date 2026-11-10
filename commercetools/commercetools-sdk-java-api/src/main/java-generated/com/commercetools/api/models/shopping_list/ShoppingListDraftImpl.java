@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListDraft
@@ -42,6 +43,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -58,6 +61,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
         this.slug = slug;
@@ -69,6 +73,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.lineItems = lineItems;
         this.textLineItems = textLineItems;
         this.store = store;
+        this.businessUnit = businessUnit;
         this.custom = custom;
     }
 
@@ -95,7 +100,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -119,7 +124,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      */
 
     public String getAnonymousId() {
@@ -127,7 +132,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -151,11 +156,19 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -216,6 +229,11 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.store = store;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -240,6 +258,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems, that.lineItems)
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(name, that.name)
                 .append(slug, that.slug)
@@ -251,6 +270,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems, that.lineItems)
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -267,6 +287,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems)
                 .append(textLineItems)
                 .append(store)
+                .append(businessUnit)
                 .append(custom)
                 .toHashCode();
     }
@@ -283,8 +304,13 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append("lineItems", lineItems)
                 .append("textLineItems", textLineItems)
                 .append("store", store)
+                .append("businessUnit", businessUnit)
                 .append("custom", custom)
                 .build();
     }
 
+    @Override
+    public ShoppingListDraft copyDeep() {
+        return ShoppingListDraft.deepCopy(this);
+    }
 }

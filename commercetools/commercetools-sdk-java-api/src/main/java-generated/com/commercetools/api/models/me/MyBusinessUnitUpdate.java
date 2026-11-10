@@ -7,14 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyBusinessUnitUpdate
@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyBusinessUnitUpdate {
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -49,10 +49,10 @@ public interface MyBusinessUnitUpdate {
     @NotNull
     @Valid
     @JsonProperty("actions")
-    public List<BusinessUnitUpdateAction> getActions();
+    public List<MyBusinessUnitUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
@@ -64,14 +64,14 @@ public interface MyBusinessUnitUpdate {
      */
 
     @JsonIgnore
-    public void setActions(final BusinessUnitUpdateAction... actions);
+    public void setActions(final MyBusinessUnitUpdateAction... actions);
 
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions values to be set
      */
 
-    public void setActions(final List<BusinessUnitUpdateAction> actions);
+    public void setActions(final List<MyBusinessUnitUpdateAction> actions);
 
     /**
      * factory method
@@ -93,6 +93,8 @@ public interface MyBusinessUnitUpdate {
         return instance;
     }
 
+    public MyBusinessUnitUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyBusinessUnitUpdate
      * @param template instance to be copied
@@ -107,7 +109,7 @@ public interface MyBusinessUnitUpdate {
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
                 .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.BusinessUnitUpdateAction::deepCopy)
+                        .map(com.commercetools.api.models.me.MyBusinessUnitUpdateAction::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;
@@ -144,8 +146,8 @@ public interface MyBusinessUnitUpdate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitUpdate>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitUpdate>";

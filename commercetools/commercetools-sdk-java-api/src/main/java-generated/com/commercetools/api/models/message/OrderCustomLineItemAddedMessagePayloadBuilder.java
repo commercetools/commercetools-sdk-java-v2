@@ -25,7 +25,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
 

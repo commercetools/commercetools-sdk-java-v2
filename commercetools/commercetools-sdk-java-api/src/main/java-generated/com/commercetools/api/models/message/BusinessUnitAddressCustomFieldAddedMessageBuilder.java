@@ -59,6 +59,9 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
 
     private java.lang.Object value;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -188,7 +191,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -200,7 +203,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -273,13 +276,24 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      * @return Builder
      */
 
     public BusinessUnitAddressCustomFieldAddedMessageBuilder value(final java.lang.Object value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldAddedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -349,7 +363,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -386,12 +400,22 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -413,7 +437,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
         Objects.requireNonNull(value, BusinessUnitAddressCustomFieldAddedMessage.class + ": value is missing");
         return new BusinessUnitAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
-            value);
+            value, addressId);
     }
 
     /**
@@ -423,7 +447,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
     public BusinessUnitAddressCustomFieldAddedMessage buildUnchecked() {
         return new BusinessUnitAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
-            value);
+            value, addressId);
     }
 
     /**
@@ -454,6 +478,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageBuilder
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.name = template.getName();
         builder.value = template.getValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

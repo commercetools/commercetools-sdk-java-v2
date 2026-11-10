@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +15,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * ProductSearchResult
  */
@@ -24,20 +25,21 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
 
     private String id;
 
-    private com.commercetools.api.models.product.ProductProjection productProjection;
-
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
+
+    @Deprecated
+    private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ProductSearchResultImpl(@JsonProperty("id") final String id,
-            @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection,
-            @JsonProperty("matchingVariants") final com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants) {
+            @JsonProperty("matchingVariants") final com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants,
+            @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.id = id;
-        this.productProjection = productProjection;
         this.matchingVariants = matchingVariants;
+        this.productProjection = productProjection;
     }
 
     /**
@@ -47,7 +49,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      */
 
     public String getId() {
@@ -55,32 +57,33 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
-        return this.productProjection;
-    }
-
-    /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      */
 
     public com.commercetools.api.models.product_search.ProductSearchMatchingVariants getMatchingVariants() {
         return this.matchingVariants;
     }
 
-    public void setId(final String id) {
-        this.id = id;
+    /**
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
+     */
+    @Deprecated
+    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
+        return this.productProjection;
     }
 
-    public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection) {
-        this.productProjection = productProjection;
+    public void setId(final String id) {
+        this.id = id;
     }
 
     public void setMatchingVariants(
             final com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants) {
         this.matchingVariants = matchingVariants;
+    }
+
+    @Deprecated
+    public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection) {
+        this.productProjection = productProjection;
     }
 
     @Override
@@ -94,25 +97,29 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
         ProductSearchResultImpl that = (ProductSearchResultImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
-                .append(productProjection, that.productProjection)
                 .append(matchingVariants, that.matchingVariants)
+                .append(productProjection, that.productProjection)
                 .append(id, that.id)
-                .append(productProjection, that.productProjection)
                 .append(matchingVariants, that.matchingVariants)
+                .append(productProjection, that.productProjection)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(productProjection).append(matchingVariants).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id).append(matchingVariants).append(productProjection).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
-                .append("productProjection", productProjection)
                 .append("matchingVariants", matchingVariants)
+                .append("productProjection", productProjection)
                 .build();
     }
 
+    @Override
+    public ProductSearchResult copyDeep() {
+        return ProductSearchResult.deepCopy(this);
+    }
 }

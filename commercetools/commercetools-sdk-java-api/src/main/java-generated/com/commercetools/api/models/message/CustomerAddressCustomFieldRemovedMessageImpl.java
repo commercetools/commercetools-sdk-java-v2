@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Field from an Address of a Customer using the Set CustomField in Address update action.</p>
+ *  <p>Generated after removing a Custom Field from an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressCustomFieldRemovedMessageImpl
@@ -47,6 +48,8 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
 
     private String name;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -61,7 +64,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("name") final String name) {
+            @JsonProperty("name") final String name, @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -73,6 +76,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.name = name;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_FIELD_REMOVED;
     }
 
@@ -140,7 +144,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -156,7 +160,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -177,6 +181,14 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
 
     public String getName() {
         return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     public void setId(final String id) {
@@ -224,6 +236,10 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
         this.name = name;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -246,6 +262,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -258,6 +275,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -275,6 +293,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(name)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -292,7 +311,12 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("name", name)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomFieldRemovedMessage copyDeep() {
+        return CustomerAddressCustomFieldRemovedMessage.deepCopy(this);
+    }
 }

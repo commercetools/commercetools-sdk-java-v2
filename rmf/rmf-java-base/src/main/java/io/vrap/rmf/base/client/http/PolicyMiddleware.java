@@ -2,9 +2,12 @@
 package io.vrap.rmf.base.client.http;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.function.Predicate;
 
+import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import dev.failsafe.Policy;
@@ -28,4 +31,23 @@ public interface PolicyMiddleware extends Middleware {
             final List<Policy<ApiHttpResponse<byte[]>>> policies) {
         return new PolicyMiddlewareImpl(Scheduler.of(scheduler), policies);
     }
+
+    public static PolicyMiddleware of(
+            final List<Map.Entry<Predicate<ApiHttpRequest>, List<Policy<ApiHttpResponse<byte[]>>>>> policies,
+            final Scheduler scheduler) {
+        return new RequestPolicyMiddlewareImpl(scheduler, policies);
+    }
+
+    public static PolicyMiddleware of(
+            final List<Map.Entry<Predicate<ApiHttpRequest>, List<Policy<ApiHttpResponse<byte[]>>>>> policies,
+            final ScheduledExecutorService scheduler) {
+        return new RequestPolicyMiddlewareImpl(Scheduler.of(scheduler), policies);
+    }
+
+    public static PolicyMiddleware of(
+            final List<Map.Entry<Predicate<ApiHttpRequest>, List<Policy<ApiHttpResponse<byte[]>>>>> policies,
+            final ExecutorService scheduler) {
+        return new RequestPolicyMiddlewareImpl(Scheduler.of(scheduler), policies);
+    }
+
 }

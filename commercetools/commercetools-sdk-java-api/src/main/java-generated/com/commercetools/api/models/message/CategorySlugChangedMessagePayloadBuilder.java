@@ -30,7 +30,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param oldSlug value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return slug
      */
 
@@ -111,7 +111,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return oldSlug
      */
 

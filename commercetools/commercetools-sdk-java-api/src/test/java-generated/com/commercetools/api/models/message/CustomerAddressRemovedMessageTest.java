@@ -1,31 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerAddressRemovedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerAddressRemovedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerAddressRemovedMessageBuilder builder) {
         CustomerAddressRemovedMessage customerAddressRemovedMessage = builder.buildUnchecked();
         Assertions.assertThat(customerAddressRemovedMessage).isInstanceOf(CustomerAddressRemovedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerAddressRemovedMessage.builder()
-                .address(new com.commercetools.api.models.common.AddressImpl()) } };
+        return new Object[][] {
+                new Object[] { "address",
+                        CustomerAddressRemovedMessage.builder()
+                                .address(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "addressRoles",
+                        CustomerAddressRemovedMessage.builder()
+                                .addressRoles(Collections.singletonList(
+                                    com.commercetools.api.models.common.AddressRole.findEnum("Shipping"))) } };
     }
 
     @Test
@@ -33,5 +33,15 @@ public class CustomerAddressRemovedMessageTest {
         CustomerAddressRemovedMessage value = CustomerAddressRemovedMessage.of();
         value.setAddress(new com.commercetools.api.models.common.AddressImpl());
         Assertions.assertThat(value.getAddress()).isEqualTo(new com.commercetools.api.models.common.AddressImpl());
+    }
+
+    @Test
+    public void addressRoles() {
+        CustomerAddressRemovedMessage value = CustomerAddressRemovedMessage.of();
+        value.setAddressRoles(
+            Collections.singletonList(com.commercetools.api.models.common.AddressRole.findEnum("Shipping")));
+        Assertions.assertThat(value.getAddressRoles())
+                .isEqualTo(
+                    Collections.singletonList(com.commercetools.api.models.common.AddressRole.findEnum("Shipping")));
     }
 }

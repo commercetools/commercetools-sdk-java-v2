@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionNoResponseErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionNoResponseErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionNoResponseErrorBuilder builder) {
         ExtensionNoResponseError extensionNoResponseError = builder.buildUnchecked();
         Assertions.assertThat(extensionNoResponseError).isInstanceOf(ExtensionNoResponseError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionNoResponseError.builder().message("message") },
-                new Object[] { ExtensionNoResponseError.builder().extensionId("extensionId") },
-                new Object[] { ExtensionNoResponseError.builder().extensionKey("extensionKey") } };
+        return new Object[][] { new Object[] { "message", ExtensionNoResponseError.builder().message("message") },
+                new Object[] { "extensionId", ExtensionNoResponseError.builder().extensionId("extensionId") },
+                new Object[] { "extensionKey", ExtensionNoResponseError.builder().extensionKey("extensionKey") } };
     }
 
     @Test

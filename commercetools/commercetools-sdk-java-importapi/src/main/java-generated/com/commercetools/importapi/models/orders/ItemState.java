@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The item's state.</p>
+ * ItemState
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemState {
 
     /**
-     *
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
     @NotNull
@@ -42,7 +43,7 @@ public interface ItemState {
     public Long getQuantity();
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @NotNull
@@ -51,14 +52,14 @@ public interface ItemState {
     public StateKeyReference getState();
 
     /**
-     * set quantity
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 
@@ -83,6 +84,8 @@ public interface ItemState {
         instance.setState(template.getState());
         return instance;
     }
+
+    public ItemState copyDeep();
 
     /**
      * factory method to create a deep copy of ItemState
@@ -131,8 +134,8 @@ public interface ItemState {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemState> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemState>() {
+    public static tools.jackson.core.type.TypeReference<ItemState> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemState>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemState>";

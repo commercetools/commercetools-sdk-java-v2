@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.category;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategoryChangeAssetNameActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategoryChangeAssetNameActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategoryChangeAssetNameActionBuilder builder) {
         CategoryChangeAssetNameAction categoryChangeAssetNameAction = builder.buildUnchecked();
         Assertions.assertThat(categoryChangeAssetNameAction).isInstanceOf(CategoryChangeAssetNameAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CategoryChangeAssetNameAction.builder().assetId("assetId") },
-                new Object[] { CategoryChangeAssetNameAction.builder().assetKey("assetKey") },
-                new Object[] { CategoryChangeAssetNameAction.builder()
+        return new Object[][] { new Object[] { "assetId", CategoryChangeAssetNameAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", CategoryChangeAssetNameAction.builder().assetKey("assetKey") },
+                new Object[] { "name", CategoryChangeAssetNameAction.builder()
                         .name(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
     }
 

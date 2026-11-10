@@ -11,21 +11,28 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TermFacetResultType
+ *  <p>Data type to which the facet is applied.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TermFacetResultType extends JsonEnum {
 
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> Attributes.</p> */
     TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
-
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateType" rel="nofollow">AttributeDateType</a> Attributes.</p> */
     TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
-
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTimeType" rel="nofollow">AttributeTimeType</a> Attributes.</p> */
     TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
-
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateTimeType" rel="nofollow">AttributeDateTimeType</a> Attributes.</p> */
     TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
-
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeBooleanType" rel="nofollow">AttributeBooleanType</a> Attributes.</p> */
     TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
-
+    /**
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes.</p> */
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
 
     /**

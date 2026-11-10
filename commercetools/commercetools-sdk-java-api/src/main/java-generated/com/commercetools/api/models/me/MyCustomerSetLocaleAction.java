@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerSetLocaleAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocale")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetLocaleActionImpl.class)
 public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     *  <p>Value to set. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -42,7 +44,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     public String getLocale();
 
     /**
-     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     *  <p>Value to set. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public MyCustomerSetLocaleAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetLocaleAction
@@ -113,8 +117,8 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetLocaleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetLocaleAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetLocaleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetLocaleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetLocaleAction>";

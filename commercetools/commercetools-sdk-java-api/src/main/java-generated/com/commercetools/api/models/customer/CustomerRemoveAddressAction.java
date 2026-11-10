@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removing an address from the Customer produces the CustomerAddressRemoved Message.</p>
+ *  <p>Removing an address from the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressRemovedMessage" rel="nofollow">CustomerAddressRemoved</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerRemoveAddressActionImpl.class)
 public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
@@ -35,7 +37,7 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
     String REMOVE_ADDRESS = "removeAddress";
 
     /**
-     *  <p><code>id</code> of the Address to remove.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      * @return addressId
      */
 
@@ -43,7 +45,7 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to remove.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      * @return addressKey
      */
 
@@ -51,14 +53,14 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to remove.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to remove.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      * @param addressKey value to be set
      */
 
@@ -83,6 +85,8 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public CustomerRemoveAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerRemoveAddressAction
@@ -131,8 +135,8 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerRemoveAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerRemoveAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerRemoveAddressAction>";

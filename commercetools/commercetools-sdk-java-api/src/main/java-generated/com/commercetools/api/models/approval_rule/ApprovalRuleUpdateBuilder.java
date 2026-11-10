@@ -28,7 +28,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     private java.util.List<com.commercetools.api.models.approval_rule.ApprovalRuleUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the ApprovalRule to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Expected version of the ApprovalRule to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 
@@ -117,7 +117,7 @@ public class ApprovalRuleUpdateBuilder implements Builder<ApprovalRuleUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      * @return actions
      */
 

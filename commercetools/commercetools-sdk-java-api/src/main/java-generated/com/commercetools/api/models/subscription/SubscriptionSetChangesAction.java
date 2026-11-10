@@ -7,12 +7,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SubscriptionSetChangesAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionSetChangesActionImpl.class)
 public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
@@ -36,7 +38,7 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     String SET_CHANGES = "setChanges";
 
     /**
-     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>events</code> is set.</p>
      * @return changes
      */
     @Valid
@@ -44,7 +46,7 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     public List<ChangeSubscription> getChanges();
 
     /**
-     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>events</code> is set.</p>
      * @param changes values to be set
      */
 
@@ -52,7 +54,7 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     public void setChanges(final ChangeSubscription... changes);
 
     /**
-     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>events</code> is set.</p>
      * @param changes values to be set
      */
 
@@ -76,6 +78,8 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
         instance.setChanges(template.getChanges());
         return instance;
     }
+
+    public SubscriptionSetChangesAction copyDeep();
 
     /**
      * factory method to create a deep copy of SubscriptionSetChangesAction
@@ -131,8 +135,8 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetChangesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetChangesAction>() {
+    public static tools.jackson.core.type.TypeReference<SubscriptionSetChangesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubscriptionSetChangesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<SubscriptionSetChangesAction>";

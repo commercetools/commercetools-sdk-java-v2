@@ -1,31 +1,23 @@
 
 package com.commercetools.history.models.label;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLabelTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLabelBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLabelBuilder builder) {
         OrderLabel orderLabel = builder.buildUnchecked();
         Assertions.assertThat(orderLabel).isInstanceOf(OrderLabel.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderLabel.builder().customerEmail("customerEmail") },
-                new Object[] { OrderLabel.builder().orderNumber("orderNumber") } };
+        return new Object[][] { new Object[] { "customerEmail", OrderLabel.builder().customerEmail("customerEmail") },
+                new Object[] { "orderNumber", OrderLabel.builder().orderNumber("orderNumber") } };
     }
 
     @Test

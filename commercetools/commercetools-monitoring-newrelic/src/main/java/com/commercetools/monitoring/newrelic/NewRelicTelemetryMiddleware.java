@@ -5,12 +5,13 @@ import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import com.newrelic.api.agent.*;
 
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ContextApiHttpClientImpl;
@@ -51,6 +52,17 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * See also the Spring MVC example application in the examples folder for further details.
  */
 public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
+
+    private final Map<String, Object> attributes;
+
+    public NewRelicTelemetryMiddleware() {
+        this.attributes = Collections.emptyMap();
+    }
+
+    public NewRelicTelemetryMiddleware(final Map<String, String> attributes) {
+        this.attributes = Collections.unmodifiableMap(attributes);
+    }
+
     @Trace(async = true)
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
@@ -61,21 +73,39 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
         Optional<Segment> segment = context.map(c -> c.getTransaction()
                 .startSegment("commercetools", request.getMethod() + " " + request.getUri().getPath()));
-        return next.apply(request).thenApply(response -> {
+        return next.apply(request).handle((response, throwable) -> {
             token.ifPresent(Token::linkAndExpire);
+
+            final int statusCode;
+            final String message;
+            if (response != null) {
+                statusCode = response.getStatusCode();
+                message = response.getMessage();
+            }
+            else if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable).getResponse();
+                statusCode = errorResponse.getStatusCode();
+                message = errorResponse.getMessage();
+            }
+            else {
+                statusCode = 0;
+                message = throwable.getMessage();
+            }
+
             segment.ifPresent(s -> s.reportAsExternal(HttpParameters.library("commercetools-sdk-java-v2")
                     .uri(request.getUri())
                     .procedure(request.getMethod().name())
                     .noInboundHeaders()
-                    .status(response.getStatusCode(), response.getMessage())
+                    .status(statusCode, message)
                     .build()));
+            segment.ifPresent(s -> s.addCustomAttributes(this.attributes));
             segment.ifPresent(Segment::end);
 
             NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);
             NewRelic.recordResponseTimeMetric(PREFIX + CLIENT_DURATION,
                 Duration.between(start, Instant.now()).toMillis());
 
-            if (response.getStatusCode() >= 400) {
+            if (statusCode >= 400 || throwable != null) {
                 NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_ERROR);
             }
             return response;

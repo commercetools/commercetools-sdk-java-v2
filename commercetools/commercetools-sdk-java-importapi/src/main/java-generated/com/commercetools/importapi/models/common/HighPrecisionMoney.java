@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * HighPrecisionMoney
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("highPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
@@ -73,6 +75,8 @@ public interface HighPrecisionMoney extends TypedMoney {
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
+
+    public HighPrecisionMoney copyDeep();
 
     /**
      * factory method to create a deep copy of HighPrecisionMoney
@@ -123,8 +127,8 @@ public interface HighPrecisionMoney extends TypedMoney {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
+    public static tools.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
+        return new tools.jackson.core.type.TypeReference<HighPrecisionMoney>() {
             @Override
             public String toString() {
                 return "TypeReference<HighPrecisionMoney>";

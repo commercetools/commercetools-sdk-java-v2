@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeNameAction" rel="nofollow">Change Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitNameChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitNameChangedMessageImpl.class)
 public interface BusinessUnitNameChangedMessage extends Message {
@@ -43,7 +45,7 @@ public interface BusinessUnitNameChangedMessage extends Message {
     String BUSINESS_UNIT_NAME_CHANGED = "BusinessUnitNameChanged";
 
     /**
-     *  <p>Updated name of the Business Unit.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return name
      */
     @NotNull
@@ -51,7 +53,7 @@ public interface BusinessUnitNameChangedMessage extends Message {
     public String getName();
 
     /**
-     *  <p>Updated name of the Business Unit.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param name value to be set
      */
 
@@ -85,6 +87,8 @@ public interface BusinessUnitNameChangedMessage extends Message {
         instance.setName(template.getName());
         return instance;
     }
+
+    public BusinessUnitNameChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitNameChangedMessage
@@ -144,8 +148,8 @@ public interface BusinessUnitNameChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitNameChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitNameChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitNameChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitNameChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitNameChangedMessage>";

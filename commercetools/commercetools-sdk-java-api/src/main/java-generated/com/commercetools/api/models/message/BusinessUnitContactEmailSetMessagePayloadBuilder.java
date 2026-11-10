@@ -27,7 +27,7 @@ public class BusinessUnitContactEmailSetMessagePayloadBuilder
     private String contactEmail;
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param contactEmail value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitContactEmailSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return contactEmail
      */
 

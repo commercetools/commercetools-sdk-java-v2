@@ -1,0 +1,209 @@
+
+package com.commercetools.api.client;
+
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+
+/**
+ *  <p>Checks if one or more Categories exist in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the provided query predicate. Returns a <code>200</code> status if any Categories match the query predicate, or a <code>404</code> status otherwise.</p>
+ *  <p>For global Categories, use the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/categories:HEAD" rel="nofollow">Check if Category exists by Query Predicate</a> endpoint.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .categories()
+ *            .head()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+        extends TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCategoriesHead, tools.jackson.databind.JsonNode>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCategoriesHead>,
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCategoriesHead> {
+
+    @Override
+    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<tools.jackson.databind.JsonNode>() {
+        };
+    }
+
+    private String projectKey;
+    private String storeKey;
+
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead(final ApiHttpClient apiHttpClient, String projectKey,
+            String storeKey) {
+        super(apiHttpClient);
+        this.projectKey = projectKey;
+        this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead(ByProjectKeyInStoreKeyByStoreKeyCategoriesHead t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+    }
+
+    @Override
+    protected ApiHttpRequest buildHttpRequest() {
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
+        String httpRequestPath = String.format("%s/in-store/key=%s/categories", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey));
+        if (!params.isEmpty()) {
+            httpRequestPath += "?" + String.join("&", params);
+        }
+        return new ApiHttpRequest(ApiHttpMethod.HEAD, URI.create(httpRequestPath), getHeaders(), null);
+    }
+
+    @Override
+    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+            final Duration timeout) {
+        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
+        return execute(client, tools.jackson.databind.JsonNode.class);
+    }
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getStoreKey() {
+        return this.storeKey;
+    }
+
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    public void setStoreKey(final String storeKey) {
+        this.storeKey = storeKey;
+    }
+
+    /**
+     * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCategoriesHead withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCategoriesHead addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesHead addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCategoriesHead withWhere(final Collection<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyCategoriesHead
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCategoriesHead addWhere(final Collection<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCategoriesHead that = (ByProjectKeyInStoreKeyByStoreKeyCategoriesHead) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(storeKey, that.storeKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).toHashCode();
+    }
+
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCategoriesHead copy() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCategoriesHead(this);
+    }
+}

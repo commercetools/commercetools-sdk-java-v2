@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * ProductSearchProjectionParams
+ *  <p>The query parameters used for the deprecated <span>data integration with Product Projection parameters</span> in Product Search.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,10 +27,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSearchProjectionParamsImpl.class)
+@Deprecated
 public interface ProductSearchProjectionParams {
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @return expand
      */
 
@@ -37,7 +39,7 @@ public interface ProductSearchProjectionParams {
     public List<String> getExpand();
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @return staged
      */
 
@@ -45,7 +47,7 @@ public interface ProductSearchProjectionParams {
     public Boolean getStaged();
 
     /**
-     *  <p>The currency used for Product price selection.</p>
+     *  <p>The currency used for <span>Product price selection</span>.</p>
      * @return priceCurrency
      */
 
@@ -53,7 +55,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCurrency();
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -61,7 +63,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCountry();
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -69,7 +71,15 @@ public interface ProductSearchProjectionParams {
     public String getPriceCustomerGroup();
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @return priceCustomerGroupAssignments
+     */
+
+    @JsonProperty("priceCustomerGroupAssignments")
+    public List<String> getPriceCustomerGroupAssignments();
+
+    /**
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 
@@ -77,7 +87,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceChannel();
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @return localeProjection
      */
 
@@ -85,7 +95,9 @@ public interface ProductSearchProjectionParams {
     public List<String> getLocaleProjection();
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
+     *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
+     *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @return storeProjection
      */
 
@@ -93,7 +105,7 @@ public interface ProductSearchProjectionParams {
     public String getStoreProjection();
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @param expand values to be set
      */
 
@@ -101,49 +113,64 @@ public interface ProductSearchProjectionParams {
     public void setExpand(final String... expand);
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @param expand values to be set
      */
 
     public void setExpand(final List<String> expand);
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The currency used for Product price selection.</p>
+     *  <p>The currency used for <span>Product price selection</span>.</p>
      * @param priceCurrency value to be set
      */
 
     public void setPriceCurrency(final String priceCurrency);
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      */
 
     public void setPriceCountry(final String priceCountry);
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      */
 
     public void setPriceCustomerGroup(final String priceCustomerGroup);
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setPriceCustomerGroupAssignments(final String... priceCustomerGroupAssignments);
+
+    /**
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments values to be set
+     */
+
+    public void setPriceCustomerGroupAssignments(final List<String> priceCustomerGroupAssignments);
+
+    /**
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      */
 
     public void setPriceChannel(final String priceChannel);
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection values to be set
      */
 
@@ -151,14 +178,16 @@ public interface ProductSearchProjectionParams {
     public void setLocaleProjection(final String... localeProjection);
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection values to be set
      */
 
     public void setLocaleProjection(final List<String> localeProjection);
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
+     *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
+     *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @param storeProjection value to be set
      */
 
@@ -184,11 +213,14 @@ public interface ProductSearchProjectionParams {
         instance.setPriceCurrency(template.getPriceCurrency());
         instance.setPriceCountry(template.getPriceCountry());
         instance.setPriceCustomerGroup(template.getPriceCustomerGroup());
+        instance.setPriceCustomerGroupAssignments(template.getPriceCustomerGroupAssignments());
         instance.setPriceChannel(template.getPriceChannel());
         instance.setLocaleProjection(template.getLocaleProjection());
         instance.setStoreProjection(template.getStoreProjection());
         return instance;
     }
+
+    public ProductSearchProjectionParams copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSearchProjectionParams
@@ -206,6 +238,8 @@ public interface ProductSearchProjectionParams {
         instance.setPriceCurrency(template.getPriceCurrency());
         instance.setPriceCountry(template.getPriceCountry());
         instance.setPriceCustomerGroup(template.getPriceCustomerGroup());
+        instance.setPriceCustomerGroupAssignments(
+            Optional.ofNullable(template.getPriceCustomerGroupAssignments()).map(ArrayList::new).orElse(null));
         instance.setPriceChannel(template.getPriceChannel());
         instance.setLocaleProjection(
             Optional.ofNullable(template.getLocaleProjection()).map(ArrayList::new).orElse(null));
@@ -244,8 +278,8 @@ public interface ProductSearchProjectionParams {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchProjectionParams> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchProjectionParams>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchProjectionParams> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchProjectionParams>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchProjectionParams>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ItemShippingDetails
@@ -52,10 +53,7 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
     }
 
     /**
-     *  <ul>
-     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
-     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>
-     *  </ul>
+     *  <p>Whether the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</p>
      */
 
     public Boolean getValid() {
@@ -103,4 +101,8 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
                 .build();
     }
 
+    @Override
+    public ItemShippingDetails copyDeep() {
+        return ItemShippingDetails.deepCopy(this);
+    }
 }

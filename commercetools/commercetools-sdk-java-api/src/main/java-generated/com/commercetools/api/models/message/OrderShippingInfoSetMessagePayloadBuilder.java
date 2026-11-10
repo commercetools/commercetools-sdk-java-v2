@@ -30,7 +30,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param builder function to build the oldShippingInfo value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param builder function to build the oldShippingInfo value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param oldShippingInfo value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return shippingInfo
      */
 
@@ -112,7 +112,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return oldShippingInfo
      */
 

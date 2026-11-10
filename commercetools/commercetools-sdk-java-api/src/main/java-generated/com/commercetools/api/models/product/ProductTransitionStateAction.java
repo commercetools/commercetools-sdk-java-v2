@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. Produces the ProductStateTransition Message.</p>
+ *  <p>If the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductStateTransitionMessage" rel="nofollow">ProductStateTransition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("transitionState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTransitionStateActionImpl.class)
 public interface ProductTransitionStateAction extends ProductUpdateAction {
@@ -44,7 +46,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @return force
      */
 
@@ -59,7 +61,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @param force value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public ProductTransitionStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTransitionStateAction
@@ -132,8 +136,8 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTransitionStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTransitionStateAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTransitionStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTransitionStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTransitionStateAction>";

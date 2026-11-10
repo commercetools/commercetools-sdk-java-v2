@@ -1,38 +1,37 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetCustomShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetCustomShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetCustomShippingMethodActionBuilder builder) {
         CartSetCustomShippingMethodAction cartSetCustomShippingMethodAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetCustomShippingMethodAction).isInstanceOf(CartSetCustomShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartSetCustomShippingMethodAction.builder().shippingMethodName("shippingMethodName") },
-                new Object[] { CartSetCustomShippingMethodAction.builder()
+                new Object[] { "shippingMethodName",
+                        CartSetCustomShippingMethodAction.builder().shippingMethodName("shippingMethodName") },
+                new Object[] { "shippingRate", CartSetCustomShippingMethodAction.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) },
-                new Object[] { CartSetCustomShippingMethodAction.builder()
+                new Object[] { "taxCategory", CartSetCustomShippingMethodAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { CartSetCustomShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) } };
+                new Object[] { "externalTaxRate",
+                        CartSetCustomShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "custom",
+                        CartSetCustomShippingMethodAction.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "estimatedDelivery", CartSetCustomShippingMethodAction.builder()
+                        .estimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl()) } };
     }
 
     @Test
@@ -64,5 +63,21 @@ public class CartSetCustomShippingMethodActionTest {
         value.setExternalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
         Assertions.assertThat(value.getExternalTaxRate())
                 .isEqualTo(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
+    }
+
+    @Test
+    public void custom() {
+        CartSetCustomShippingMethodAction value = CartSetCustomShippingMethodAction.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+        Assertions.assertThat(value.getCustom())
+                .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void estimatedDelivery() {
+        CartSetCustomShippingMethodAction value = CartSetCustomShippingMethodAction.of();
+        value.setEstimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
+        Assertions.assertThat(value.getEstimatedDelivery())
+                .isEqualTo(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
     }
 }

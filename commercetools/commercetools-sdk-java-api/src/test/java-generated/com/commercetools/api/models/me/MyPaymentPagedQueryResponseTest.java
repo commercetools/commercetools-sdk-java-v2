@@ -3,34 +3,26 @@ package com.commercetools.api.models.me;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyPaymentPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyPaymentPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyPaymentPagedQueryResponseBuilder builder) {
         MyPaymentPagedQueryResponse myPaymentPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(myPaymentPagedQueryResponse).isInstanceOf(MyPaymentPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyPaymentPagedQueryResponse.builder().limit(7L) },
-                new Object[] { MyPaymentPagedQueryResponse.builder().count(2L) },
-                new Object[] { MyPaymentPagedQueryResponse.builder().total(1L) },
-                new Object[] { MyPaymentPagedQueryResponse.builder().offset(3L) },
-                new Object[] { MyPaymentPagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", MyPaymentPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "count", MyPaymentPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", MyPaymentPagedQueryResponse.builder().total(1L) },
+                new Object[] { "offset", MyPaymentPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "results", MyPaymentPagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.me.MyPaymentImpl())) } };
     }
 

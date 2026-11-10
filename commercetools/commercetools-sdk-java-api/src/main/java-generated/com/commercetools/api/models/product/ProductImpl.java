@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p>
+ * Product
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImpl implements Product, ModelBase {
@@ -48,6 +49,8 @@ public class ProductImpl implements Product, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +66,8 @@ public class ProductImpl implements Product, ModelBase {
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics,
-            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -77,6 +81,7 @@ public class ProductImpl implements Product, ModelBase {
         this.state = state;
         this.reviewRatingStatistics = reviewRatingStatistics;
         this.priceMode = priceMode;
+        this.warnings = warnings;
     }
 
     /**
@@ -135,7 +140,7 @@ public class ProductImpl implements Product, ModelBase {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getKey() {
@@ -159,7 +164,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -167,7 +172,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -188,6 +193,14 @@ public class ProductImpl implements Product, ModelBase {
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
     }
 
     public void setId(final String id) {
@@ -243,6 +256,14 @@ public class ProductImpl implements Product, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -266,6 +287,7 @@ public class ProductImpl implements Product, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -279,6 +301,7 @@ public class ProductImpl implements Product, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -297,6 +320,7 @@ public class ProductImpl implements Product, ModelBase {
                 .append(state)
                 .append(reviewRatingStatistics)
                 .append(priceMode)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -315,7 +339,12 @@ public class ProductImpl implements Product, ModelBase {
                 .append("state", state)
                 .append("reviewRatingStatistics", reviewRatingStatistics)
                 .append("priceMode", priceMode)
+                .append("warnings", warnings)
                 .build();
     }
 
+    @Override
+    public Product copyDeep() {
+        return Product.deepCopy(this);
+    }
 }

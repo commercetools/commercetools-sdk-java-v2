@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateSetRolesAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetRolesActionImpl.class)
 public interface StateSetRolesAction extends StateUpdateAction {
@@ -36,7 +38,8 @@ public interface StateSetRolesAction extends StateUpdateAction {
     String SET_ROLES = "setRoles";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned. If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty array to remove any existing value.</p>
      * @return roles
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface StateSetRolesAction extends StateUpdateAction {
     public List<StateRoleEnum> getRoles();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned. If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty array to remove any existing value.</p>
      * @param roles values to be set
      */
 
@@ -52,7 +56,8 @@ public interface StateSetRolesAction extends StateUpdateAction {
     public void setRoles(final StateRoleEnum... roles);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned. If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty array to remove any existing value.</p>
      * @param roles values to be set
      */
 
@@ -76,6 +81,8 @@ public interface StateSetRolesAction extends StateUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public StateSetRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetRolesAction
@@ -123,8 +130,8 @@ public interface StateSetRolesAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateSetRolesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateSetRolesAction>() {
+    public static tools.jackson.core.type.TypeReference<StateSetRolesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateSetRolesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateSetRolesAction>";

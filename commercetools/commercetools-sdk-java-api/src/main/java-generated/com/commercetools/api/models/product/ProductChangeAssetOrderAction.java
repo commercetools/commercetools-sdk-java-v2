@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAssetOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeAssetOrderActionImpl.class)
 public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
@@ -52,7 +54,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 
@@ -82,7 +84,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -124,6 +126,8 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
         instance.setAssetOrder(template.getAssetOrder());
         return instance;
     }
+
+    public ProductChangeAssetOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductChangeAssetOrderAction
@@ -174,8 +178,8 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangeAssetOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangeAssetOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangeAssetOrderAction>";

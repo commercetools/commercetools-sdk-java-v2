@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a Payment interaction generates the PaymentInteractionAdded Message.</p>
+ *  <p>Adding a Payment interaction generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInteractionAddedMessage" rel="nofollow">PaymentInteractionAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addInterfaceInteraction")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentAddInterfaceInteractionActionImpl.class)
 public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateAction {
@@ -39,7 +41,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return type
      */
     @NotNull
@@ -48,7 +50,8 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the InterfaceInteraction.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -56,14 +59,15 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the InterfaceInteraction.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -88,6 +92,8 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public PaymentAddInterfaceInteractionAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentAddInterfaceInteractionAction
@@ -138,8 +144,8 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentAddInterfaceInteractionAction>";

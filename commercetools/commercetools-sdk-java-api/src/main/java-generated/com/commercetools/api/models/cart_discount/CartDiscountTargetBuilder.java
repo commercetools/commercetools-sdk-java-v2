@@ -19,6 +19,10 @@ public class CartDiscountTargetBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
     }
 
+    public com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder patternBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder shippingBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
     }

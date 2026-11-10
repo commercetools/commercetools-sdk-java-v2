@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodUpdateAction
@@ -27,21 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionImpl.class, name = ShippingMethodAddShippingRateAction.ADD_SHIPPING_RATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionImpl.class, name = ShippingMethodAddZoneAction.ADD_ZONE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionImpl.class, name = ShippingMethodChangeIsDefaultAction.CHANGE_IS_DEFAULT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionImpl.class, name = ShippingMethodChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionImpl.class, name = ShippingMethodChangeTaxCategoryAction.CHANGE_TAX_CATEGORY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionImpl.class, name = ShippingMethodRemoveShippingRateAction.REMOVE_SHIPPING_RATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionImpl.class, name = ShippingMethodRemoveZoneAction.REMOVE_ZONE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionImpl.class, name = ShippingMethodSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionImpl.class, name = ShippingMethodSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionImpl.class, name = ShippingMethodSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionImpl.class, name = ShippingMethodSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionImpl.class, name = ShippingMethodSetLocalizedDescriptionAction.SET_LOCALIZED_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionImpl.class, name = ShippingMethodSetLocalizedNameAction.SET_LOCALIZED_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionImpl.class, name = ShippingMethodSetPredicateAction.SET_PREDICATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ShippingMethodUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ShippingMethodUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,6 +42,8 @@ public interface ShippingMethodUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public ShippingMethodUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethodUpdateAction
      * @param template instance to be copied
@@ -66,61 +54,9 @@ public interface ShippingMethodUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction
-                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction
-                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction
-                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction
-                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction.deepCopy(
-                (com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction) {
-            return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction
-                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction) template);
+
+        if (!(template instanceof ShippingMethodUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ShippingMethodUpdateActionImpl instance = new ShippingMethodUpdateActionImpl();
         return instance;
@@ -135,11 +71,27 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for addStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder.of();
+    }
+
+    /**
      * builder for addZone subtype
      * @return builder
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder addZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
+    }
+
+    /**
+     * builder for changeActive subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder.of();
     }
 
     /**
@@ -175,11 +127,27 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for removeStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder.of();
+    }
+
+    /**
      * builder for removeZone subtype
      * @return builder
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder removeZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
+    }
+
+    /**
+     * builder for setCarrier subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder setCarrierBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder.of();
     }
 
     /**
@@ -239,6 +207,14 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for setStores subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -252,8 +228,8 @@ public interface ShippingMethodUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodUpdateAction>";

@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .imported(1)
  *             .rejected(1)
  *             .canceled(1)
+ *             .partiallyImported(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,8 +42,10 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     private Long canceled;
 
+    private Long partiallyImported;
+
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @param processing value to be set
      * @return Builder
      */
@@ -53,7 +56,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      * @return Builder
      */
@@ -64,7 +67,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      * @return Builder
      */
@@ -75,7 +78,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      * @return Builder
      */
@@ -86,7 +89,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @param imported value to be set
      * @return Builder
      */
@@ -97,7 +100,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      * @return Builder
      */
@@ -108,7 +111,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @param canceled value to be set
      * @return Builder
      */
@@ -119,7 +122,18 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @param partiallyImported value to be set
+     * @return Builder
+     */
+
+    public OperationStatesBuilder partiallyImported(final Long partiallyImported) {
+        this.partiallyImported = partiallyImported;
+        return this;
+    }
+
+    /**
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @return processing
      */
 
@@ -128,7 +142,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @return validationFailed
      */
 
@@ -137,7 +151,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @return unresolved
      */
 
@@ -146,7 +160,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
      */
 
@@ -155,7 +169,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @return imported
      */
 
@@ -164,7 +178,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @return rejected
      */
 
@@ -173,12 +187,21 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @return canceled
      */
 
     public Long getCanceled() {
         return this.canceled;
+    }
+
+    /**
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @return partiallyImported
+     */
+
+    public Long getPartiallyImported() {
+        return this.partiallyImported;
     }
 
     /**
@@ -193,8 +216,9 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         Objects.requireNonNull(imported, OperationStates.class + ": imported is missing");
         Objects.requireNonNull(rejected, OperationStates.class + ": rejected is missing");
         Objects.requireNonNull(canceled, OperationStates.class + ": canceled is missing");
+        Objects.requireNonNull(partiallyImported, OperationStates.class + ": partiallyImported is missing");
         return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected, canceled);
+            rejected, canceled, partiallyImported);
     }
 
     /**
@@ -203,7 +227,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
      */
     public OperationStates buildUnchecked() {
         return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected, canceled);
+            rejected, canceled, partiallyImported);
     }
 
     /**
@@ -228,6 +252,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         builder.imported = template.getImported();
         builder.rejected = template.getRejected();
         builder.canceled = template.getCanceled();
+        builder.partiallyImported = template.getPartiallyImported();
         return builder;
     }
 

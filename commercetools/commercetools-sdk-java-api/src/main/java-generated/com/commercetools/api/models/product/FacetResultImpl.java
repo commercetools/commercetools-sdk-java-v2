@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * FacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetResultImpl implements FacetResult, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
     /**
@@ -41,7 +44,7 @@ public class FacetResultImpl implements FacetResult, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
@@ -69,4 +72,8 @@ public class FacetResultImpl implements FacetResult, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public FacetResult copyDeep() {
+        return FacetResult.deepCopy(this);
+    }
 }

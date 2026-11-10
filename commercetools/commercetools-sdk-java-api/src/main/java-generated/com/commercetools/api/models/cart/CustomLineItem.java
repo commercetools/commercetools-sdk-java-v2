@@ -7,20 +7,22 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A generic item that can be added to the Cart but is not bound to a Product that can be used for discounts (negative money), vouchers, complex cart rules, additional services, or fees. You control the lifecycle of this item.</p>
@@ -58,7 +60,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @return key
      */
 
@@ -92,7 +94,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -102,7 +104,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
-     *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>Includes taxes if the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code>.</p>
      * @return totalPrice
      */
     @NotNull
@@ -119,7 +121,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public String getSlug();
 
     /**
-     *  <p>Number of Custom Line Items in the Cart or Order.</p>
+     *  <p>Number of Custom Line Items in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return quantity
      */
     @NotNull
@@ -127,7 +129,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public Long getQuantity();
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return state
      */
     @NotNull
@@ -136,7 +138,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public List<ItemState> getState();
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -145,8 +147,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</li>
      *  </ul>
      * @return taxRate
      */
@@ -155,7 +157,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public TaxRate getTaxRate();
 
     /**
-     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @return perMethodTaxRate
      */
     @NotNull
@@ -189,12 +191,20 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public ItemShippingDetails getShippingDetails();
 
     /**
-     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     *  <p>Indicates whether Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</p>
      * @return priceMode
      */
     @NotNull
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public CustomLineItemRecurrenceInfo getRecurrenceInfo();
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
@@ -204,7 +214,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @param key value to be set
      */
 
@@ -232,7 +242,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -240,7 +250,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of the Custom Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -248,7 +258,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
-     *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>Includes taxes if the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code>.</p>
      * @param totalPrice value to be set
      */
 
@@ -262,14 +272,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setSlug(final String slug);
 
     /**
-     *  <p>Number of Custom Line Items in the Cart or Order.</p>
+     *  <p>Number of Custom Line Items in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param state values to be set
      */
 
@@ -277,14 +287,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setState(final ItemState... state);
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param state values to be set
      */
 
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      */
 
@@ -292,8 +302,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</li>
      *  </ul>
      * @param taxRate value to be set
      */
@@ -301,7 +311,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param perMethodTaxRate values to be set
      */
 
@@ -309,7 +319,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setPerMethodTaxRate(final MethodTaxRate... perMethodTaxRate);
 
     /**
-     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param perMethodTaxRate values to be set
      */
 
@@ -346,11 +356,18 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
     /**
-     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     *  <p>Indicates whether Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</p>
      * @param priceMode value to be set
      */
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final CustomLineItemRecurrenceInfo recurrenceInfo);
 
     /**
      * factory method
@@ -384,8 +401,11 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
+
+    public CustomLineItem copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItem
@@ -434,6 +454,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 
@@ -468,8 +490,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItem>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItem>";

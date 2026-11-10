@@ -142,6 +142,13 @@ public class OrderUpdateActionQueryBuilderDsl {
             OrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetBusinessUnit(
+            Function<com.commercetools.api.predicates.query.order.OrderSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetBusinessUnitActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.order.OrderSetBusinessUnitActionQueryBuilderDsl.of()),
+            OrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.order.OrderSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -232,6 +239,13 @@ public class OrderUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.order.OrderSetDeliveryItemsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetDeliveryItemsActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.order.OrderSetDeliveryItemsActionQueryBuilderDsl.of()),
+            OrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetEstimatedDelivery(
+            Function<com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl.of()),
             OrderUpdateActionQueryBuilderDsl::of);
     }
 

@@ -66,6 +66,9 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     private Long newAvailableQuantity;
 
     @Nullable
+    private String sku;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
@@ -196,7 +199,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -208,7 +211,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -270,7 +273,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @param oldQuantityOnStock value to be set
      * @return Builder
      */
@@ -281,7 +284,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @param newQuantityOnStock value to be set
      * @return Builder
      */
@@ -292,7 +295,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @param oldAvailableQuantity value to be set
      * @return Builder
      */
@@ -303,7 +306,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @param newAvailableQuantity value to be set
      * @return Builder
      */
@@ -314,7 +317,18 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for which the quantity was updated.</p>
+     * @param sku value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryQuantitySetMessageBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -326,7 +340,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -338,7 +352,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -415,7 +429,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -443,7 +457,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @return oldQuantityOnStock
      */
 
@@ -452,7 +466,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @return newQuantityOnStock
      */
 
@@ -461,7 +475,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @return oldAvailableQuantity
      */
 
@@ -470,7 +484,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @return newAvailableQuantity
      */
 
@@ -479,7 +493,17 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for which the quantity was updated.</p>
+     * @return sku
+     */
+
+    @Nullable
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @return supplyChannel
      */
 
@@ -511,7 +535,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
             InventoryEntryQuantitySetMessage.class + ": newAvailableQuantity is missing");
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
-            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
+            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, sku, supplyChannel);
     }
 
     /**
@@ -521,7 +545,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     public InventoryEntryQuantitySetMessage buildUnchecked() {
         return new InventoryEntryQuantitySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldQuantityOnStock,
-            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
+            newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, sku, supplyChannel);
     }
 
     /**
@@ -553,6 +577,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
         builder.newQuantityOnStock = template.getNewQuantityOnStock();
         builder.oldAvailableQuantity = template.getOldAvailableQuantity();
         builder.newAvailableQuantity = template.getNewAvailableQuantity();
+        builder.sku = template.getSku();
         builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }

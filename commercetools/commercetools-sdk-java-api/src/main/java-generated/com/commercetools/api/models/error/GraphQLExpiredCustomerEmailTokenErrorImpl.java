@@ -1,0 +1,109 @@
+
+package com.commercetools.api.models.error;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>Returned when the provided email token of the Customer has expired.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer by email token</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer in Store by email token</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer in Store</a> requests</li>
+ *  </ul>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class GraphQLExpiredCustomerEmailTokenErrorImpl implements GraphQLExpiredCustomerEmailTokenError, ModelBase {
+
+    private String code;
+
+    private Map<String, java.lang.Object> values;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    GraphQLExpiredCustomerEmailTokenErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
+        this.values = values;
+        this.code = EXPIRED_CUSTOMER_EMAIL_TOKEN;
+    }
+
+    /**
+     * create empty instance
+     */
+    public GraphQLExpiredCustomerEmailTokenErrorImpl() {
+        this.code = EXPIRED_CUSTOMER_EMAIL_TOKEN;
+    }
+
+    /**
+     *
+     */
+
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     */
+
+    public Map<String, java.lang.Object> values() {
+        return values;
+    }
+
+    public void setValue(String key, java.lang.Object value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        GraphQLExpiredCustomerEmailTokenErrorImpl that = (GraphQLExpiredCustomerEmailTokenErrorImpl) o;
+
+        return new EqualsBuilder().append(code, that.code)
+                .append(values, that.values)
+                .append(code, that.code)
+                .append(values, that.values)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(code).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .build();
+    }
+
+    @Override
+    public GraphQLExpiredCustomerEmailTokenError copyDeep() {
+        return GraphQLExpiredCustomerEmailTokenError.deepCopy(this);
+    }
+}

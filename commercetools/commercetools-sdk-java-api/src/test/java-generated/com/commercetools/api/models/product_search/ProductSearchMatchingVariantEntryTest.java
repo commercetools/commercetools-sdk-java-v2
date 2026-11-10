@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.product_search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchMatchingVariantEntryTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchMatchingVariantEntryBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchMatchingVariantEntryBuilder builder) {
         ProductSearchMatchingVariantEntry productSearchMatchingVariantEntry = builder.buildUnchecked();
         Assertions.assertThat(productSearchMatchingVariantEntry).isInstanceOf(ProductSearchMatchingVariantEntry.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSearchMatchingVariantEntry.builder().id(2) },
-                new Object[] { ProductSearchMatchingVariantEntry.builder().sku("sku") } };
+        return new Object[][] { new Object[] { "id", ProductSearchMatchingVariantEntry.builder().id(2) },
+                new Object[] { "sku", ProductSearchMatchingVariantEntry.builder().sku("sku") } };
     }
 
     @Test

@@ -13,6 +13,12 @@ public class ClientLoggingQueryBuilderDsl {
         return new ClientLoggingQueryBuilderDsl();
     }
 
+    public BooleanComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl> isPlatformClient() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isPlatformClient")),
+            p -> new CombinationQueryPredicate<>(p, ClientLoggingQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl> clientId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("clientId")),

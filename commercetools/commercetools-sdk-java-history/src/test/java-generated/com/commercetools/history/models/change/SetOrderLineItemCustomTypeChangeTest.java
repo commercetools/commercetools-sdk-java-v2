@@ -1,37 +1,33 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetOrderLineItemCustomTypeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetOrderLineItemCustomTypeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetOrderLineItemCustomTypeChangeBuilder builder) {
         SetOrderLineItemCustomTypeChange setOrderLineItemCustomTypeChange = builder.buildUnchecked();
         Assertions.assertThat(setOrderLineItemCustomTypeChange).isInstanceOf(SetOrderLineItemCustomTypeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetOrderLineItemCustomTypeChange.builder().change("change") },
-                new Object[] { SetOrderLineItemCustomTypeChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetOrderLineItemCustomTypeChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetOrderLineItemCustomTypeChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetOrderLineItemCustomTypeChange.builder().variant("variant") } };
+        return new Object[][] { new Object[] { "change", SetOrderLineItemCustomTypeChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetOrderLineItemCustomTypeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "nextValue",
+                        SetOrderLineItemCustomTypeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "lineItem",
+                        SetOrderLineItemCustomTypeChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variant", SetOrderLineItemCustomTypeChange.builder().variant("variant") },
+                new Object[] { "lineItemId", SetOrderLineItemCustomTypeChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -70,5 +66,12 @@ public class SetOrderLineItemCustomTypeChangeTest {
         SetOrderLineItemCustomTypeChange value = SetOrderLineItemCustomTypeChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void lineItemId() {
+        SetOrderLineItemCustomTypeChange value = SetOrderLineItemCustomTypeChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

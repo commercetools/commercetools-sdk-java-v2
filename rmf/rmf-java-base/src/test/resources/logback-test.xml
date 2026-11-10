@@ -10,6 +10,7 @@
     </appender>
 
     <logger name="commercetools" level="INFO"/>
+    <logger name="org.reflections.Reflections" level="WARN" />
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />

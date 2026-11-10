@@ -85,6 +85,12 @@ public class CompanyDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CompanyDraftQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CompanyDraftQueryBuilderDsl> addresses(
             Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -130,6 +136,21 @@ public class CompanyDraftQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
             CompanyDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CompanyDraftQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl.of())),
+            CompanyDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CompanyDraftQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
     }
 
 }

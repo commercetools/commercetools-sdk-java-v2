@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.ErrorResponse;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchErrorResponse
@@ -109,6 +110,8 @@ public interface ProductSearchErrorResponse extends ErrorResponse {
         return instance;
     }
 
+    public ProductSearchErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchErrorResponse
      * @param template instance to be copied
@@ -161,8 +164,8 @@ public interface ProductSearchErrorResponse extends ErrorResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchErrorResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchErrorResponse>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchErrorResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchErrorResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchErrorResponse>";

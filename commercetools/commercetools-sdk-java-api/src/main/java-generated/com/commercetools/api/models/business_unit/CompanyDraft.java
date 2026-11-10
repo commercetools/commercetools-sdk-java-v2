@@ -9,12 +9,13 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Company.</p>
+ *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">BusinessUnitDraft</a> that are used specifically for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Company")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CompanyDraftImpl.class)
 public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client.Draft<CompanyDraft> {
@@ -59,14 +61,18 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
         instance.setContactEmail(template.getContactEmail());
         instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
         instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         return instance;
     }
+
+    public CompanyDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CompanyDraft
@@ -95,6 +101,7 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
@@ -107,6 +114,11 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -141,8 +153,8 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CompanyDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CompanyDraft>() {
+    public static tools.jackson.core.type.TypeReference<CompanyDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CompanyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CompanyDraft>";

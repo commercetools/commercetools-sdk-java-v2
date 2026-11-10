@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategorySetMetaKeywordsAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaKeywords")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetMetaKeywordsActionImpl.class)
 public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
@@ -68,6 +70,8 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
         instance.setMetaKeywords(template.getMetaKeywords());
         return instance;
     }
+
+    public CategorySetMetaKeywordsAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetMetaKeywordsAction
@@ -116,8 +120,8 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction>() {
+    public static tools.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySetMetaKeywordsAction>";

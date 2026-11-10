@@ -28,7 +28,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     private String interactionId;
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
 

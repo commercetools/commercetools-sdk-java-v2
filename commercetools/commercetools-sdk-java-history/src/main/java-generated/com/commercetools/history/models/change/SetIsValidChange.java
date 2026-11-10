@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAction" rel="nofollow">Set Valid From</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action is performed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetIsValidChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetIsValidChangeImpl.class)
 public interface SetIsValidChange extends Change {
@@ -111,6 +113,8 @@ public interface SetIsValidChange extends Change {
         return instance;
     }
 
+    public SetIsValidChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetIsValidChange
      * @param template instance to be copied
@@ -159,8 +163,8 @@ public interface SetIsValidChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetIsValidChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetIsValidChange>() {
+    public static tools.jackson.core.type.TypeReference<SetIsValidChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetIsValidChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetIsValidChange>";

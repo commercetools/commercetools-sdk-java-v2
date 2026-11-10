@@ -3,33 +3,27 @@ package com.commercetools.api.models.order;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderUpdateSyncInfoActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderUpdateSyncInfoActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderUpdateSyncInfoActionBuilder builder) {
         OrderUpdateSyncInfoAction orderUpdateSyncInfoAction = builder.buildUnchecked();
         Assertions.assertThat(orderUpdateSyncInfoAction).isInstanceOf(OrderUpdateSyncInfoAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderUpdateSyncInfoAction.builder().externalId("externalId") },
-                new Object[] { OrderUpdateSyncInfoAction.builder()
-                        .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] {
+        return new Object[][] {
+                new Object[] { "externalId", OrderUpdateSyncInfoAction.builder().externalId("externalId") },
+                new Object[] { "channel",
+                        OrderUpdateSyncInfoAction.builder()
+                                .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "syncedAt",
                         OrderUpdateSyncInfoAction.builder().syncedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

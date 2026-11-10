@@ -103,4 +103,16 @@ public class CustomerPasswordTokenCreatedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerPasswordTokenCreatedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomerPasswordTokenCreatedMessageQueryBuilderDsl> value() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+            p -> new CombinationQueryPredicate<>(p, CustomerPasswordTokenCreatedMessageQueryBuilderDsl::of));
+    }
+
+    public BooleanComparisonPredicateBuilder<CustomerPasswordTokenCreatedMessageQueryBuilderDsl> invalidateOlderTokens() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p -> new CombinationQueryPredicate<>(p, CustomerPasswordTokenCreatedMessageQueryBuilderDsl::of));
+    }
+
 }

@@ -28,7 +28,7 @@ public class ProductTailoringUpdateBuilder implements Builder<ProductTailoringUp
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ProductTailoringUpdateBuilder implements Builder<ProductTailoringUp
     }
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @return version
      */
 

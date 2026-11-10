@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.payment;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentReferenceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentReferenceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentReferenceBuilder builder) {
         PaymentReference paymentReference = builder.buildUnchecked();
         Assertions.assertThat(paymentReference).isInstanceOf(PaymentReference.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { PaymentReference.builder().obj(new com.commercetools.api.models.payment.PaymentImpl()) },
-                new Object[] { PaymentReference.builder().id("id") } };
+                new Object[] { "obj",
+                        PaymentReference.builder().obj(new com.commercetools.api.models.payment.PaymentImpl()) },
+                new Object[] { "id", PaymentReference.builder().id("id") } };
     }
 
     @Test

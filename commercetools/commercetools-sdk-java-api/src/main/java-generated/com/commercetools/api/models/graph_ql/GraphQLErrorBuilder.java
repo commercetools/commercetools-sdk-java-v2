@@ -36,7 +36,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     private com.commercetools.api.models.error.GraphQLErrorObject extensions;
 
     /**
-     * set the value to the message
+     *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set values to the locations
+     *  <p>Location within your query where the error occurred.</p>
      * @param locations value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set value to the locations
+     *  <p>Location within your query where the error occurred.</p>
      * @param locations value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * add values to the locations
+     *  <p>Location within your query where the error occurred.</p>
      * @param locations value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * add the value to the locations using the builder function
+     *  <p>Location within your query where the error occurred.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set the value to the locations using the builder function
+     *  <p>Location within your query where the error occurred.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * add the value to the locations using the builder function
+     *  <p>Location within your query where the error occurred.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set the value to the locations using the builder function
+     *  <p>Location within your query where the error occurred.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set values to the path
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @param path value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * set value to the path
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @param path value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * add values to the path
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @param path value to be set
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      * @param extensions value to be set
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      * @param builder function to build the extensions value
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * value of message}
+     *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
      * @return message
      */
 
@@ -206,7 +206,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * value of locations}
+     *  <p>Location within your query where the error occurred.</p>
      * @return locations
      */
 
@@ -215,7 +215,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     * value of path}
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @return path
      */
 
@@ -225,7 +225,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      * @return extensions
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * HighPrecisionMoney
@@ -54,7 +55,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     *
+     *  <p>The type of money. The <code>centPrecision</code> type is used for currencies with minor units, such as EUR and USD. The <code>highPrecision</code> type is used for currencies without minor units, such as JPY.</p>
      */
 
     public com.commercetools.importapi.models.common.MoneyType getType() {
@@ -62,7 +63,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     *
+     *  <p>The number of fraction digits of the money value. This is used to determine how many digits are after the decimal point. For example, for EUR and USD, this is <code>2</code>, and for JPY, this is <code>0</code>.</p>
      */
 
     public Integer getFractionDigits() {
@@ -70,7 +71,11 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     *
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      */
 
     public Long getCentAmount() {
@@ -78,7 +83,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {
@@ -152,4 +157,8 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
                 .build();
     }
 
+    @Override
+    public HighPrecisionMoney copyDeep() {
+        return HighPrecisionMoney.deepCopy(this);
+    }
 }

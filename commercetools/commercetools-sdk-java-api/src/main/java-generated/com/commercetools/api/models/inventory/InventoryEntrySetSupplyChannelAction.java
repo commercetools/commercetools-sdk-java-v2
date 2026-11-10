@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an DuplicateField error is returned.</p>
+ *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSupplyChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
@@ -36,7 +38,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     String SET_SUPPLY_CHANNEL = "setSupplyChannel";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return supplyChannel
      */
     @Valid
@@ -44,7 +46,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param supplyChannel value to be set
      */
 
@@ -68,6 +70,8 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public InventoryEntrySetSupplyChannelAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntrySetSupplyChannelAction
@@ -118,8 +122,8 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntrySetSupplyChannelAction>";

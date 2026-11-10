@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxCategoryDraft
@@ -35,6 +36,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return name
      */
     @NotNull
@@ -59,6 +61,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
+     *  <p>If the value is used by another TaxCategory in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -67,6 +70,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param name value to be set
      */
 
@@ -96,6 +100,7 @@ public interface TaxCategoryDraft
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
+     *  <p>If the value is used by another TaxCategory in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -122,6 +127,8 @@ public interface TaxCategoryDraft
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public TaxCategoryDraft copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryDraft
@@ -176,8 +183,8 @@ public interface TaxCategoryDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryDraft>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategoryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategoryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategoryDraft>";

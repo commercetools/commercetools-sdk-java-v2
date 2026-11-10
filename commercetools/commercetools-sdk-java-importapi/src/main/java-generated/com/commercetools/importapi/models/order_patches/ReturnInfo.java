@@ -8,13 +8,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnInfo
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnInfo {
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
     @NotNull
@@ -43,7 +44,7 @@ public interface ReturnInfo {
     public List<ReturnItemDraft> getItems();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @return returnTrackingId
      */
 
@@ -51,7 +52,7 @@ public interface ReturnInfo {
     public String getReturnTrackingId();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 
@@ -59,7 +60,7 @@ public interface ReturnInfo {
     public ZonedDateTime getReturnDate();
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
@@ -67,21 +68,21 @@ public interface ReturnInfo {
     public void setItems(final ReturnItemDraft... items);
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<ReturnItemDraft> items);
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @param returnTrackingId value to be set
      */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      */
 
@@ -107,6 +108,8 @@ public interface ReturnInfo {
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }
+
+    public ReturnInfo copyDeep();
 
     /**
      * factory method to create a deep copy of ReturnInfo
@@ -160,8 +163,8 @@ public interface ReturnInfo {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfo> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfo>() {
+    public static tools.jackson.core.type.TypeReference<ReturnInfo> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReturnInfo>() {
             @Override
             public String toString() {
                 return "TypeReference<ReturnInfo>";

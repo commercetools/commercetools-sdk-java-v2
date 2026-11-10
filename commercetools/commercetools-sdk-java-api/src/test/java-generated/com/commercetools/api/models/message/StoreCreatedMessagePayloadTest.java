@@ -3,46 +3,44 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreCreatedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreCreatedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreCreatedMessagePayloadBuilder builder) {
         StoreCreatedMessagePayload storeCreatedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(storeCreatedMessagePayload).isInstanceOf(StoreCreatedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StoreCreatedMessagePayload.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { StoreCreatedMessagePayload.builder().languages(Collections.singletonList("languages")) },
-                new Object[] { StoreCreatedMessagePayload.builder()
-                        .countries(Collections
-                                .singletonList(new com.commercetools.api.models.store_country.StoreCountryImpl())) },
-                new Object[] { StoreCreatedMessagePayload.builder()
-                        .distributionChannels(Collections
-                                .singletonList(new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
-                new Object[] { StoreCreatedMessagePayload.builder()
-                        .supplyChannels(Collections
-                                .singletonList(new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
-                new Object[] { StoreCreatedMessagePayload.builder()
-                        .productSelections(Collections
-                                .singletonList(new com.commercetools.api.models.store.ProductSelectionSettingImpl())) },
-                new Object[] { StoreCreatedMessagePayload.builder()
+                new Object[] { "name",
+                        StoreCreatedMessagePayload.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "languages",
+                        StoreCreatedMessagePayload.builder().languages(Collections.singletonList("languages")) },
+                new Object[] { "countries",
+                        StoreCreatedMessagePayload.builder()
+                                .countries(Collections.singletonList(
+                                    new com.commercetools.api.models.store_country.StoreCountryImpl())) },
+                new Object[] { "distributionChannels",
+                        StoreCreatedMessagePayload.builder()
+                                .distributionChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
+                new Object[] { "supplyChannels",
+                        StoreCreatedMessagePayload.builder()
+                                .supplyChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
+                new Object[] { "productSelections",
+                        StoreCreatedMessagePayload.builder()
+                                .productSelections(Collections.singletonList(
+                                    new com.commercetools.api.models.store.ProductSelectionSettingImpl())) },
+                new Object[] { "custom", StoreCreatedMessagePayload.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

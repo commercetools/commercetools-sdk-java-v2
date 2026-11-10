@@ -45,6 +45,21 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaTitle;
+
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaDescription;
+
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaKeywords;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     private Boolean published;
 
     /**
@@ -142,7 +157,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -154,7 +169,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -166,7 +181,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -178,7 +193,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -190,7 +205,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -202,7 +217,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -214,7 +229,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -226,7 +241,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -238,7 +253,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -250,7 +265,303 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param metaTitle value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaTitle(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
+        this.metaTitle = metaTitle;
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param metaDescription value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaDescription(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+        this.metaDescription = metaDescription;
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param metaKeywords value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaKeywords(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+        this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder variants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder variants(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusVariants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder addVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder setVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return variants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Whether the ProductTailoring is published.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -299,7 +610,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return description
      */
 
@@ -309,7 +620,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return name
      */
 
@@ -319,7 +630,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return slug
      */
 
@@ -329,7 +640,57 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @return metaTitle
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+        return this.metaTitle;
+    }
+
+    /**
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @return metaDescription
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+        return this.metaDescription;
+    }
+
+    /**
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @return metaKeywords
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+        return this.metaKeywords;
+    }
+
+    /**
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
+     * @return variants
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     *  <p>Whether the ProductTailoring is published.</p>
      * @return published
      */
 
@@ -346,7 +707,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         Objects.requireNonNull(product, ProductTailoringCreatedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(published, ProductTailoringCreatedMessagePayload.class + ": published is missing");
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            published);
+            metaTitle, metaDescription, metaKeywords, variants, attributes, published);
     }
 
     /**
@@ -355,7 +716,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
      */
     public ProductTailoringCreatedMessagePayload buildUnchecked() {
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            published);
+            metaTitle, metaDescription, metaKeywords, variants, attributes, published);
     }
 
     /**
@@ -381,6 +742,11 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         builder.description = template.getDescription();
         builder.name = template.getName();
         builder.slug = template.getSlug();
+        builder.metaTitle = template.getMetaTitle();
+        builder.metaDescription = template.getMetaDescription();
+        builder.metaKeywords = template.getMetaKeywords();
+        builder.variants = template.getVariants();
+        builder.attributes = template.getAttributes();
         builder.published = template.getPublished();
         return builder;
     }

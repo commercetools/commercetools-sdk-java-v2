@@ -27,7 +27,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     private String container;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     * set the value to the container
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @param container value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     * value of container}
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @return container
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetMaxApplicationsAction
@@ -51,7 +52,10 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If omitted, any existing value is removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
     public Long getMaxApplications() {
@@ -91,4 +95,8 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetMaxApplicationsAction copyDeep() {
+        return DiscountCodeSetMaxApplicationsAction.deepCopy(this);
+    }
 }

@@ -2,21 +2,23 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * Delivery
+ *  <p>Contains information on how items are shipped to Customers, for example, a delivery note.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,7 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Delivery delivery = Delivery.builder()
  *             .id("{id}")
- *             .createdAt("{createdAt}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .plusParcels(parcelsBuilder -> parcelsBuilder)
  *             .build()
@@ -36,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery {
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      * @return id
      */
     @NotNull
@@ -44,15 +46,23 @@ public interface Delivery {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
-    public String getCreatedAt();
+    public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @return items
      */
     @NotNull
@@ -61,7 +71,7 @@ public interface Delivery {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @return parcels
      */
     @NotNull
@@ -70,7 +80,7 @@ public interface Delivery {
     public List<Parcel> getParcels();
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -78,7 +88,7 @@ public interface Delivery {
     public Address getAddress();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      * @return custom
      */
     @Valid
@@ -86,21 +96,28 @@ public interface Delivery {
     public CustomFields getCustom();
 
     /**
-     * set id
+     *  <p>Unique identifier of the Delivery.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set createdAt
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @param createdAt value to be set
      */
 
-    public void setCreatedAt(final String createdAt);
+    public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
@@ -108,14 +125,14 @@ public interface Delivery {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
@@ -123,21 +140,21 @@ public interface Delivery {
     public void setParcels(final Parcel... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
     public void setParcels(final List<Parcel> parcels);
 
     /**
-     * set address
+     *  <p>Address to which Parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      * @param custom value to be set
      */
 
@@ -159,6 +176,7 @@ public interface Delivery {
     public static Delivery of(final Delivery template) {
         DeliveryImpl instance = new DeliveryImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setItems(template.getItems());
         instance.setParcels(template.getParcels());
@@ -166,6 +184,8 @@ public interface Delivery {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public Delivery copyDeep();
 
     /**
      * factory method to create a deep copy of Delivery
@@ -179,6 +199,7 @@ public interface Delivery {
         }
         DeliveryImpl instance = new DeliveryImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
@@ -226,8 +247,8 @@ public interface Delivery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Delivery> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Delivery>() {
+    public static tools.jackson.core.type.TypeReference<Delivery> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Delivery>() {
             @Override
             public String toString() {
                 return "TypeReference<Delivery>";

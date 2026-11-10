@@ -22,7 +22,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .isEmailVerified(true)
+ *             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
  *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
@@ -86,19 +89,19 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultBillingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     private Boolean isEmailVerified;
 
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
+
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
@@ -263,7 +266,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -464,7 +467,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CustomerBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -475,7 +478,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public CustomerBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -486,7 +489,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CustomerBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -511,7 +514,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public CustomerBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -522,7 +525,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public CustomerBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -533,7 +536,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public CustomerBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -542,7 +545,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @param isEmailVerified value to be set
      * @return Builder
      */
@@ -553,7 +556,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -567,7 +570,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -580,7 +583,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -592,7 +595,107 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder customerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder customerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder plusCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>Custom Fields of the Customer.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -604,7 +707,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -616,7 +719,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -649,10 +752,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -664,10 +767,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -679,10 +782,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -697,10 +800,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -716,10 +819,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -733,10 +836,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -748,10 +851,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -862,7 +965,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
 
@@ -974,7 +1077,6 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -994,13 +1096,12 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @return isEmailVerified
      */
 
@@ -1009,7 +1110,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @return customerGroup
      */
 
@@ -1019,7 +1120,17 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     * @return customerGroupAssignments
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
+     *  <p>Custom Fields of the Customer.</p>
      * @return custom
      */
 
@@ -1049,10 +1160,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
@@ -1081,13 +1192,17 @@ public class CustomerBuilder implements Builder<Customer> {
         Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(email, Customer.class + ": email is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Customer.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Customer.class + ": billingAddressIds is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
+        Objects.requireNonNull(customerGroupAssignments, Customer.class + ": customerGroupAssignments is missing");
         Objects.requireNonNull(stores, Customer.class + ": stores is missing");
         Objects.requireNonNull(authenticationMode, Customer.class + ": authenticationMode is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
             createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
             addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
-            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
+            isEmailVerified, customerGroup, customerGroupAssignments, custom, locale, salutation, stores,
+            authenticationMode);
     }
 
     /**
@@ -1098,7 +1213,8 @@ public class CustomerBuilder implements Builder<Customer> {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
             createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
             addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
-            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
+            isEmailVerified, customerGroup, customerGroupAssignments, custom, locale, salutation, stores,
+            authenticationMode);
     }
 
     /**
@@ -1141,6 +1257,7 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.billingAddressIds = template.getBillingAddressIds();
         builder.isEmailVerified = template.getIsEmailVerified();
         builder.customerGroup = template.getCustomerGroup();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         builder.custom = template.getCustom();
         builder.locale = template.getLocale();
         builder.salutation = template.getSalutation();

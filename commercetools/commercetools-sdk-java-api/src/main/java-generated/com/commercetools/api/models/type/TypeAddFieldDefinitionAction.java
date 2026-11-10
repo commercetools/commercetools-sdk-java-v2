@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Defines a new field for a Type. Adding new required fields to a Type that is already referenced by existing entities can put those entities in a temporarily inconsistent state.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addFieldDefinition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
@@ -71,6 +73,8 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
         instance.setFieldDefinition(template.getFieldDefinition());
         return instance;
     }
+
+    public TypeAddFieldDefinitionAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeAddFieldDefinitionAction
@@ -119,8 +123,8 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeAddFieldDefinitionAction>";

@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.producttypes.ProductTypeImport;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The request body to import ProductTypes. Contains data for ProductTypes to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/product-types/import-containers/{importContainerKey}:POST" rel="nofollow">import ProductTypes</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductTypes</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("product-type")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImportRequestImpl.class)
 public interface ProductTypeImportRequest extends ImportRequest {
@@ -81,6 +83,8 @@ public interface ProductTypeImportRequest extends ImportRequest {
         return instance;
     }
 
+    public ProductTypeImportRequest copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeImportRequest
      * @param template instance to be copied
@@ -131,8 +135,8 @@ public interface ProductTypeImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeImportRequest>";

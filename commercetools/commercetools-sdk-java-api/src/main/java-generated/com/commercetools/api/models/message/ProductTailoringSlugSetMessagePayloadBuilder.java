@@ -122,7 +122,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param oldSlug value to be set
      * @return Builder
      */
@@ -222,7 +222,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return slug
      */
 
@@ -232,7 +232,7 @@ public class ProductTailoringSlugSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return oldSlug
      */
 

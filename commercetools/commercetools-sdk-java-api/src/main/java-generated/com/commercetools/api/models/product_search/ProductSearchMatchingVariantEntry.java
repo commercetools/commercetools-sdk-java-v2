@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchMatchingVariantEntry
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchMatchingVariantEntry {
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @return id
      */
     @NotNull
@@ -39,7 +40,7 @@ public interface ProductSearchMatchingVariantEntry {
     public Integer getId();
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @return sku
      */
 
@@ -47,14 +48,14 @@ public interface ProductSearchMatchingVariantEntry {
     public String getSku();
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @param id value to be set
      */
 
     public void setId(final Integer id);
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @param sku value to be set
      */
 
@@ -79,6 +80,8 @@ public interface ProductSearchMatchingVariantEntry {
         instance.setSku(template.getSku());
         return instance;
     }
+
+    public ProductSearchMatchingVariantEntry copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSearchMatchingVariantEntry
@@ -128,8 +131,8 @@ public interface ProductSearchMatchingVariantEntry {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchMatchingVariantEntry> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchMatchingVariantEntry>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchMatchingVariantEntry> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchMatchingVariantEntry>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchMatchingVariantEntry>";

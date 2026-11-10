@@ -28,7 +28,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     private java.util.List<com.commercetools.api.models.common.PriceTier> previousTiers;
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param previousTiers value to be set
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param previousTiers value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param previousTiers value to be set
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the previousTiers value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the previousTiers value
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the previousTiers value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the previousTiers value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The updated content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The updated content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return tiers
      */
 
@@ -215,7 +215,7 @@ public class StandalonePriceTiersSetMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>The previous content of the field <code>tiers</code> of the affected StandalonePrice.</p>
+     *  <p>The previous content of the field <code>tiers</code> of the affected <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return previousTiers
      */
 

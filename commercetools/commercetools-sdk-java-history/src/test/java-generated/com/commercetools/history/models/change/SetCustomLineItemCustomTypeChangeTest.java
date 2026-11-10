@@ -1,37 +1,33 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCustomLineItemCustomTypeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCustomLineItemCustomTypeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCustomLineItemCustomTypeChangeBuilder builder) {
         SetCustomLineItemCustomTypeChange setCustomLineItemCustomTypeChange = builder.buildUnchecked();
         Assertions.assertThat(setCustomLineItemCustomTypeChange).isInstanceOf(SetCustomLineItemCustomTypeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCustomLineItemCustomTypeChange.builder().change("change") },
-                new Object[] { SetCustomLineItemCustomTypeChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetCustomLineItemCustomTypeChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetCustomLineItemCustomTypeChange.builder()
-                        .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetCustomLineItemCustomTypeChange.builder().customLineItemId("customLineItemId") } };
+        return new Object[][] { new Object[] { "change", SetCustomLineItemCustomTypeChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetCustomLineItemCustomTypeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "nextValue",
+                        SetCustomLineItemCustomTypeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "customLineItem",
+                        SetCustomLineItemCustomTypeChange.builder()
+                                .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "customLineItemId",
+                        SetCustomLineItemCustomTypeChange.builder().customLineItemId("customLineItemId") } };
     }
 
     @Test

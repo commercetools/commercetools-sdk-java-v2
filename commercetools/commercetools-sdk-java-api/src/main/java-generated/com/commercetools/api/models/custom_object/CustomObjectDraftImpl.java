@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomObjectDraft
@@ -65,7 +66,11 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
     }
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
+     *  <ul>
+     *   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      */
 
     public java.lang.Object getValue() {
@@ -131,4 +136,8 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomObjectDraft copyDeep() {
+        return CustomObjectDraft.deepCopy(this);
+    }
 }

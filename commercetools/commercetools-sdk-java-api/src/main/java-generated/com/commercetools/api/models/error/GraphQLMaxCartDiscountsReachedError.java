@@ -6,19 +6,21 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a Cart Discount cannot be created or activated as the limit for active Cart Discounts has been reached.</p>
+ *  <p>Returned when an action fails because the Project has reached its <span>limit</span> for active Cart Discounts.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create CartDiscount and Create CartDiscount in Store requests</li>
- *   <li>Change IsActive update action</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount in Store</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeIsActiveAction" rel="nofollow">Change IsActive</a> update action</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeRequiresDiscountCodeAction" rel="nofollow">Change RequiresDiscountCode</a> update action</li>
  *  </ul>
  *
  * <hr>
@@ -30,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MaxCartDiscountsReached")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLMaxCartDiscountsReachedErrorImpl.class)
 public interface GraphQLMaxCartDiscountsReachedError extends GraphQLErrorObject {
@@ -65,6 +68,8 @@ public interface GraphQLMaxCartDiscountsReachedError extends GraphQLErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLMaxCartDiscountsReachedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLMaxCartDiscountsReachedError
@@ -114,8 +119,8 @@ public interface GraphQLMaxCartDiscountsReachedError extends GraphQLErrorObject 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLMaxCartDiscountsReachedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLMaxCartDiscountsReachedError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLMaxCartDiscountsReachedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLMaxCartDiscountsReachedError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLMaxCartDiscountsReachedError>";

@@ -1,36 +1,31 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetShoppingListLineItemCustomFieldChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetShoppingListLineItemCustomFieldChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetShoppingListLineItemCustomFieldChangeBuilder builder) {
         SetShoppingListLineItemCustomFieldChange setShoppingListLineItemCustomFieldChange = builder.buildUnchecked();
         Assertions.assertThat(setShoppingListLineItemCustomFieldChange)
                 .isInstanceOf(SetShoppingListLineItemCustomFieldChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetShoppingListLineItemCustomFieldChange.builder().change("change") },
-                new Object[] { SetShoppingListLineItemCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { SetShoppingListLineItemCustomFieldChange.builder().nextValue("nextValue") },
-                new Object[] { SetShoppingListLineItemCustomFieldChange.builder().name("name") },
-                new Object[] { SetShoppingListLineItemCustomFieldChange.builder().customTypeId("customTypeId") },
-                new Object[] { SetShoppingListLineItemCustomFieldChange.builder()
+        return new Object[][] {
+                new Object[] { "change", SetShoppingListLineItemCustomFieldChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetShoppingListLineItemCustomFieldChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetShoppingListLineItemCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "name", SetShoppingListLineItemCustomFieldChange.builder().name("name") },
+                new Object[] { "customTypeId",
+                        SetShoppingListLineItemCustomFieldChange.builder().customTypeId("customTypeId") },
+                new Object[] { "lineItem", SetShoppingListLineItemCustomFieldChange.builder()
                         .lineItem(
                             new com.commercetools.history.models.change_value.ShoppingListLineItemValueImpl()) } };
     }

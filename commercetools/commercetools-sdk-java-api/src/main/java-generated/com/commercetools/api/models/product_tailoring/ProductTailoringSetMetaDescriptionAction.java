@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringSetMetaDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetMetaDescriptionActionImpl.class)
 public interface ProductTailoringSetMetaDescriptionAction extends ProductTailoringUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
     String SET_META_DESCRIPTION = "setMetaDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @return staged
      */
 
@@ -52,14 +54,14 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetMetaDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetMetaDescriptionAction
@@ -136,8 +140,8 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetMetaDescriptionAction>";

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
+ *  <p>Returned when a resource referenced by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> could not be found.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferencedResourceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLReferencedResourceNotFoundErrorImpl.class)
 public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObject {
@@ -111,6 +113,8 @@ public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObje
         return instance;
     }
 
+    public GraphQLReferencedResourceNotFoundError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLReferencedResourceNotFoundError
      * @param template instance to be copied
@@ -163,8 +167,8 @@ public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObje
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLReferencedResourceNotFoundError>";

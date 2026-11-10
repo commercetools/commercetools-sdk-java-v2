@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updating the name of an AssociateRole generates an AssociateRoleNameSet Message.</p>
+ *  <p>Updating the name of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleNameSetMessage" rel="nofollow">AssociateRoleNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleSetNameActionImpl.class)
 public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
@@ -66,6 +68,8 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public AssociateRoleSetNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleSetNameAction
@@ -113,8 +117,8 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleSetNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleSetNameAction>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleSetNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleSetNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleSetNameAction>";

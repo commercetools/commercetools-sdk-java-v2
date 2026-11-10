@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove Permissions update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleRemovePermissionAction" rel="nofollow">Remove Permissions</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateRolePermissionRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRolePermissionRemovedMessageImpl.class)
 public interface AssociateRolePermissionRemovedMessage extends Message {
@@ -86,6 +88,8 @@ public interface AssociateRolePermissionRemovedMessage extends Message {
         instance.setPermission(template.getPermission());
         return instance;
     }
+
+    public AssociateRolePermissionRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRolePermissionRemovedMessage
@@ -147,8 +151,8 @@ public interface AssociateRolePermissionRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRolePermissionRemovedMessage>";

@@ -25,7 +25,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     private java.util.List<String> removedImageUrls;
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @return removedImageUrls
      */
 

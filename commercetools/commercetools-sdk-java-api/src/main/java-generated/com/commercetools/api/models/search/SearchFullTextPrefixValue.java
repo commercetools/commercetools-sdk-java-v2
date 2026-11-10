@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchFullTextPrefixValue
@@ -39,7 +40,7 @@ public interface SearchFullTextPrefixValue extends SearchQueryExpressionValue {
     public Object getValue();
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 
@@ -62,7 +63,7 @@ public interface SearchFullTextPrefixValue extends SearchQueryExpressionValue {
     public void setValue(final Object value);
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      */
 
@@ -98,6 +99,8 @@ public interface SearchFullTextPrefixValue extends SearchQueryExpressionValue {
         instance.setMustMatch(template.getMustMatch());
         return instance;
     }
+
+    public SearchFullTextPrefixValue copyDeep();
 
     /**
      * factory method to create a deep copy of SearchFullTextPrefixValue
@@ -150,8 +153,8 @@ public interface SearchFullTextPrefixValue extends SearchQueryExpressionValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchFullTextPrefixValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchFullTextPrefixValue>() {
+    public static tools.jackson.core.type.TypeReference<SearchFullTextPrefixValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchFullTextPrefixValue>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchFullTextPrefixValue>";

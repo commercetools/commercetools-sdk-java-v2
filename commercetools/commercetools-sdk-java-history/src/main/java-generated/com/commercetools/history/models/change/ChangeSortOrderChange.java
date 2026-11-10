@@ -6,19 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Sort Order on Cart Discounts.</li>
- *   <li>Change Sort Order on Product Discounts.</li>
- *  </ul>
+ * ChangeSortOrderChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeSortOrderChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeSortOrderChangeImpl.class)
 public interface ChangeSortOrderChange extends Change {
@@ -115,6 +113,8 @@ public interface ChangeSortOrderChange extends Change {
         return instance;
     }
 
+    public ChangeSortOrderChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeSortOrderChange
      * @param template instance to be copied
@@ -163,8 +163,8 @@ public interface ChangeSortOrderChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeSortOrderChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeSortOrderChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeSortOrderChange>";

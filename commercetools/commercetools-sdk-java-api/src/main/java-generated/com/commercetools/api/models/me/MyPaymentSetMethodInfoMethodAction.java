@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPaymentSetMethodInfoMethodAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentSetMethodInfoMethodActionImpl.class)
 public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateAction {
@@ -34,7 +36,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return method
      */
 
@@ -42,7 +44,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     public String getMethod();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param method value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
         instance.setMethod(template.getMethod());
         return instance;
     }
+
+    public MyPaymentSetMethodInfoMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyPaymentSetMethodInfoMethodAction
@@ -114,8 +118,8 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentSetMethodInfoMethodAction>";

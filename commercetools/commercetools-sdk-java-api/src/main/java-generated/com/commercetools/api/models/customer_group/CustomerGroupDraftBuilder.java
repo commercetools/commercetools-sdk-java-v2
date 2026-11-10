@@ -44,7 +44,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> in the Project. If not, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param groupName value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> in the Project. If not, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return groupName
      */
 

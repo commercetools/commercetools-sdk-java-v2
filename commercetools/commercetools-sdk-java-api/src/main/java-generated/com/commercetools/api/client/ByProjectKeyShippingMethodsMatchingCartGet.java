@@ -11,16 +11,19 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Retrieves all the ShippingMethods that can ship to the shipping address of the given Cart. Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is added to the Cart.</p>
+ *  <p>Retrieves the active ShippingMethods that can ship to the shipping address of the provided Cart.</p>
+ *  <p>If the Cart belongs to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, the results include globally scoped ShippingMethods (those with an empty <code>stores</code> field) and ShippingMethods scoped to that Store. If the Cart has no Store, only globally scoped ShippingMethods are returned.</p>
+ *  <p>Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">added to the Cart</a>.</p>
+ *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -63,7 +66,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/shipping-methods/matching-cart", this.projectKey);
+        String httpRequestPath = String.format("%s/shipping-methods/matching-cart", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

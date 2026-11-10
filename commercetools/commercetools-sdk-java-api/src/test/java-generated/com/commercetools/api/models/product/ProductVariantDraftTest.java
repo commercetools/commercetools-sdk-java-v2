@@ -3,40 +3,34 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantDraftBuilder builder) {
         ProductVariantDraft productVariantDraft = builder.buildUnchecked();
         Assertions.assertThat(productVariantDraft).isInstanceOf(ProductVariantDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantDraft.builder().sku("sku") },
-                new Object[] { ProductVariantDraft.builder().key("key") },
-                new Object[] { ProductVariantDraft.builder()
-                        .prices(Collections.singletonList(new com.commercetools.api.models.common.PriceDraftImpl())) },
-                new Object[] {
+        return new Object[][] { new Object[] { "sku", ProductVariantDraft.builder().sku("sku") },
+                new Object[] { "key", ProductVariantDraft.builder().key("key") },
+                new Object[] { "prices",
+                        ProductVariantDraft.builder()
+                                .prices(Collections
+                                        .singletonList(new com.commercetools.api.models.common.PriceDraftImpl())) },
+                new Object[] { "attributes",
                         ProductVariantDraft.builder()
                                 .attributes(Collections
                                         .singletonList(new com.commercetools.api.models.product.AttributeImpl())) },
-                new Object[] { ProductVariantDraft.builder()
+                new Object[] { "images", ProductVariantDraft.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] { ProductVariantDraft.builder()
+                new Object[] { "assets", ProductVariantDraft.builder()
                         .assets(
                             Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) } };
     }

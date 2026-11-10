@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Variant
@@ -98,6 +99,8 @@ public interface Variant {
         return instance;
     }
 
+    public Variant copyDeep();
+
     /**
      * factory method to create a deep copy of Variant
      * @param template instance to be copied
@@ -146,8 +149,8 @@ public interface Variant {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Variant> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Variant>() {
+    public static tools.jackson.core.type.TypeReference<Variant> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Variant>() {
             @Override
             public String toString() {
                 return "TypeReference<Variant>";

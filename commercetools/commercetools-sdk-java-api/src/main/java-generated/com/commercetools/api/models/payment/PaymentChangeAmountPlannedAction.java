@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Can be used to update the Payment if a customer changes the Cart, or adds or removes a CartDiscount during checkout.</p>
+ *  <p>Can be used to update the Payment if a customer changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>, or adds or removes a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> during checkout.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAmountPlanned")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentChangeAmountPlannedActionImpl.class)
 public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
@@ -71,6 +73,8 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public PaymentChangeAmountPlannedAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentChangeAmountPlannedAction
@@ -118,8 +122,8 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentChangeAmountPlannedAction>";

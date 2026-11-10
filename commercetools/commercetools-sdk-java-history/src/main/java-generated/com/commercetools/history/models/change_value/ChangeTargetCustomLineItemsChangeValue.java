@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeTargetCustomLineItemsChangeValue
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("customLineItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChangeValue {
@@ -44,7 +46,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getType();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -52,7 +54,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getPredicate();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -76,6 +78,8 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public ChangeTargetCustomLineItemsChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeTargetCustomLineItemsChangeValue
@@ -126,8 +130,8 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTargetCustomLineItemsChangeValue>";

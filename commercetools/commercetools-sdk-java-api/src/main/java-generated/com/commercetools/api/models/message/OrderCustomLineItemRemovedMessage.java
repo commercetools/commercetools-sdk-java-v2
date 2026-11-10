@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove CustomLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveCustomLineItemAction" rel="nofollow">Remove CustomLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemRemovedMessageImpl.class)
 public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
@@ -46,7 +48,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     String ORDER_CUSTOM_LINE_ITEM_REMOVED = "OrderCustomLineItemRemoved";
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public String getCustomLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -62,7 +64,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -71,21 +73,21 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public CustomLineItem getCustomLineItem();
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      */
 
@@ -121,6 +123,8 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
         instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
+
+    public OrderCustomLineItemRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemRemovedMessage
@@ -184,8 +188,8 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemRemovedMessage>";

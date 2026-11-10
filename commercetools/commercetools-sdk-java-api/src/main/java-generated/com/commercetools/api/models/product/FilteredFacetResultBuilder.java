@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> {
 
     private Long count;
@@ -29,7 +30,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     private Long productCount;
 
     /**
-     * set the value to the count
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> matching the value specified in <span>filtered facet expression</span>.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -40,7 +41,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * set the value to the productCount
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      * @return Builder
      */
@@ -51,7 +53,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * value of count}
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> matching the value specified in <span>filtered facet expression</span>.</p>
      * @return count
      */
 
@@ -60,7 +62,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * value of productCount}
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 

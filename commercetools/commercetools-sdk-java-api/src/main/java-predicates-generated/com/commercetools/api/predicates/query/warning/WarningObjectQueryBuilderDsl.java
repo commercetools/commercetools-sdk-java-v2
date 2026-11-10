@@ -1,0 +1,76 @@
+
+package com.commercetools.api.predicates.query.warning;
+
+import java.util.function.Function;
+
+import com.commercetools.api.predicates.query.*;
+
+public class WarningObjectQueryBuilderDsl {
+    public WarningObjectQueryBuilderDsl() {
+    }
+
+    public static WarningObjectQueryBuilderDsl of() {
+        return new WarningObjectQueryBuilderDsl();
+    }
+
+    public StringComparisonPredicateBuilder<WarningObjectQueryBuilderDsl> code() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+            p -> new CombinationQueryPredicate<>(p, WarningObjectQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<WarningObjectQueryBuilderDsl> message() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+            p -> new CombinationQueryPredicate<>(p, WarningObjectQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asFileNotProcessed(
+            Function<com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asProductsNotFound(
+            Function<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotChangeReservationExpiry(
+            Function<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotCreateReservation(
+            Function<com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotUpdateReservation(
+            Function<com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asImageProcessingOngoing(
+            Function<com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asStoreSettingOngoing(
+            Function<com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+}

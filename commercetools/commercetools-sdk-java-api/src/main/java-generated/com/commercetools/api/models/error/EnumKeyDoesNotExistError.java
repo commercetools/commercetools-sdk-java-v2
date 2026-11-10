@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType already contains a value with the given key.</p>
- *  <p>The error is returned as a failed response to the Change the key of an EnumValue update action.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> already contains a value with the given key.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeEnumKeyAction" rel="nofollow">Change the key of an EnumValue</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EnumKeyDoesNotExist")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)
 public interface EnumKeyDoesNotExistError extends ErrorObject {
@@ -113,6 +115,8 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
         return instance;
     }
 
+    public EnumKeyDoesNotExistError copyDeep();
+
     /**
      * factory method to create a deep copy of EnumKeyDoesNotExistError
      * @param template instance to be copied
@@ -162,8 +166,8 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EnumKeyDoesNotExistError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EnumKeyDoesNotExistError>() {
+    public static tools.jackson.core.type.TypeReference<EnumKeyDoesNotExistError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EnumKeyDoesNotExistError>() {
             @Override
             public String toString() {
                 return "TypeReference<EnumKeyDoesNotExistError>";

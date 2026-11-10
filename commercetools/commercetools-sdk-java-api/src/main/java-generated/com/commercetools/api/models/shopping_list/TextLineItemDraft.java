@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TextLineItemDraft
@@ -36,7 +37,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         io.vrap.rmf.base.client.Draft<TextLineItemDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -44,7 +45,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public String getKey();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -85,14 +86,14 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public Long getQuantity();
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 
@@ -150,6 +151,8 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public TextLineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TextLineItemDraft
      * @param template instance to be copied
@@ -202,8 +205,8 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<TextLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TextLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TextLineItemDraft>";

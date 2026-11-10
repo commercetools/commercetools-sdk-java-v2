@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Type to an address of a Business Unit using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after adding a Custom Type to an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
@@ -29,15 +30,18 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
 
     private String oldTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     BusinessUnitAddressCustomTypeSetMessagePayloadImpl(
             @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
-            @JsonProperty("oldTypeId") final String oldTypeId) {
+            @JsonProperty("oldTypeId") final String oldTypeId, @JsonProperty("addressId") final String addressId) {
         this.customFields = customFields;
         this.oldTypeId = oldTypeId;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_SET;
     }
 
@@ -65,11 +69,19 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getOldTypeId() {
         return this.oldTypeId;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     public void setCustomFields(final com.commercetools.api.models.type.CustomFields customFields) {
@@ -78,6 +90,10 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
 
     public void setOldTypeId(final String oldTypeId) {
         this.oldTypeId = oldTypeId;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -93,15 +109,21 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(customFields, that.customFields)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(customFields, that.customFields)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customFields).append(oldTypeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customFields)
+                .append(oldTypeId)
+                .append(addressId)
+                .toHashCode();
     }
 
     @Override
@@ -109,7 +131,12 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("customFields", customFields)
                 .append("oldTypeId", oldTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomTypeSetMessagePayload copyDeep() {
+        return BusinessUnitAddressCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

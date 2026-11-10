@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetLineItemTotalPriceActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetLineItemTotalPriceActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetLineItemTotalPriceActionBuilder builder) {
         CartSetLineItemTotalPriceAction cartSetLineItemTotalPriceAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetLineItemTotalPriceAction).isInstanceOf(CartSetLineItemTotalPriceAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartSetLineItemTotalPriceAction.builder().lineItemId("lineItemId") },
-                new Object[] { CartSetLineItemTotalPriceAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { CartSetLineItemTotalPriceAction.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", CartSetLineItemTotalPriceAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", CartSetLineItemTotalPriceAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "externalTotalPrice", CartSetLineItemTotalPriceAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) } };
     }
 

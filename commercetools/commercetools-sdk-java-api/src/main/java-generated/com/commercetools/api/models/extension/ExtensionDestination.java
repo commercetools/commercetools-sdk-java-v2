@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generic type for destinations.</p>
@@ -28,10 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.GoogleCloudFunctionDestinationImpl.class, name = GoogleCloudFunctionDestination.GOOGLE_CLOUD_FUNCTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.HttpDestinationImpl.class, name = HttpDestination.HTTP) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ExtensionDestinationImpl.class, visible = true)
 @JsonDeserialize(as = ExtensionDestinationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,6 +42,8 @@ public interface ExtensionDestination {
     @JsonProperty("type")
     public String getType();
 
+    public ExtensionDestination copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionDestination
      * @param template instance to be copied
@@ -55,17 +54,9 @@ public interface ExtensionDestination {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {
-            return com.commercetools.api.models.extension.AWSLambdaDestination
-                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {
-            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination
-                    .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.HttpDestination) {
-            return com.commercetools.api.models.extension.HttpDestination
-                    .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);
+
+        if (!(template instanceof ExtensionDestinationImpl)) {
+            return template.copyDeep();
         }
         ExtensionDestinationImpl instance = new ExtensionDestinationImpl();
         return instance;
@@ -109,8 +100,8 @@ public interface ExtensionDestination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionDestination>";

@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set CustomLineItem Money update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemMoneyAction" rel="nofollow">Set CustomLineItem Money</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetCustomLineItemMoneyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomLineItemMoneyChangeImpl.class)
 public interface SetCustomLineItemMoneyChange extends Change {
@@ -77,7 +79,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public Money getNextValue();
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -86,7 +88,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -115,14 +117,14 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public void setNextValue(final Money nextValue);
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      */
 
     public void setCustomLineItem(final LocalizedString customLineItem);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
@@ -150,6 +152,8 @@ public interface SetCustomLineItemMoneyChange extends Change {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
+
+    public SetCustomLineItemMoneyChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetCustomLineItemMoneyChange
@@ -202,8 +206,8 @@ public interface SetCustomLineItemMoneyChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCustomLineItemMoneyChange>";

@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete DiscountCode request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-codes/{id}:DELETE" rel="nofollow">Delete DiscountCode</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeDeletedMessageImpl.class)
 public interface DiscountCodeDeletedMessage extends Message {
@@ -67,6 +69,8 @@ public interface DiscountCodeDeletedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public DiscountCodeDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeDeletedMessage
@@ -125,8 +129,8 @@ public interface DiscountCodeDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeDeletedMessage>";

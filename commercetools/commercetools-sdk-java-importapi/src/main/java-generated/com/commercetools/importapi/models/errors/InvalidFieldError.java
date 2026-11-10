@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
+ *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">Product Import</a>, is sent to the Product Import endpoint.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
@@ -61,7 +63,7 @@ public interface InvalidFieldError extends ErrorObject {
     public List<Object> getAllowedValues();
 
     /**
-     *
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @return resourceIndex
      */
 
@@ -98,7 +100,7 @@ public interface InvalidFieldError extends ErrorObject {
     public void setAllowedValues(final List<Object> allowedValues);
 
     /**
-     * set resourceIndex
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @param resourceIndex value to be set
      */
 
@@ -126,6 +128,8 @@ public interface InvalidFieldError extends ErrorObject {
         instance.setResourceIndex(template.getResourceIndex());
         return instance;
     }
+
+    public InvalidFieldError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidFieldError
@@ -177,8 +181,8 @@ public interface InvalidFieldError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError>() {
+    public static tools.jackson.core.type.TypeReference<InvalidFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InvalidFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidFieldError>";

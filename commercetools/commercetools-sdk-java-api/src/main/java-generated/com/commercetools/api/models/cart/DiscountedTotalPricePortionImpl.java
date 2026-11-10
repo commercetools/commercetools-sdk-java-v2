@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,13 +15,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * DiscountedTotalPricePortion
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePortion, ModelBase {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
+    private com.commercetools.api.models.common.Reference discount;
 
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
@@ -31,7 +32,7 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
      */
     @JsonCreator
     DiscountedTotalPricePortionImpl(
-            @JsonProperty("discount") final com.commercetools.api.models.cart_discount.CartDiscountReference discount,
+            @JsonProperty("discount") final com.commercetools.api.models.common.Reference discount,
             @JsonProperty("discountedAmount") final com.commercetools.api.models.common.TypedMoney discountedAmount) {
         this.discount = discount;
         this.discountedAmount = discountedAmount;
@@ -44,10 +45,10 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
     }
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
+    public com.commercetools.api.models.common.Reference getDiscount() {
         return this.discount;
     }
 
@@ -59,7 +60,7 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
         return this.discountedAmount;
     }
 
-    public void setDiscount(final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
+    public void setDiscount(final com.commercetools.api.models.common.Reference discount) {
         this.discount = discount;
     }
 
@@ -96,4 +97,8 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
                 .build();
     }
 
+    @Override
+    public DiscountedTotalPricePortion copyDeep() {
+        return DiscountedTotalPricePortion.deepCopy(this);
+    }
 }

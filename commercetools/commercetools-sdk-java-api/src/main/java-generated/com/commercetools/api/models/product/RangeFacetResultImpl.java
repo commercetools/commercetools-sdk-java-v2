@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * RangeFacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
@@ -46,13 +49,13 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
 
     /**
-     *
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {
@@ -96,4 +99,8 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public RangeFacetResult copyDeep() {
+        return RangeFacetResult.deepCopy(this);
+    }
 }

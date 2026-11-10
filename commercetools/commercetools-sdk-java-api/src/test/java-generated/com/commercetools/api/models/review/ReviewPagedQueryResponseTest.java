@@ -3,34 +3,26 @@ package com.commercetools.api.models.review;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewPagedQueryResponseBuilder builder) {
         ReviewPagedQueryResponse reviewPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(reviewPagedQueryResponse).isInstanceOf(ReviewPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReviewPagedQueryResponse.builder().limit(7L) },
-                new Object[] { ReviewPagedQueryResponse.builder().count(2L) },
-                new Object[] { ReviewPagedQueryResponse.builder().total(1L) },
-                new Object[] { ReviewPagedQueryResponse.builder().offset(3L) },
-                new Object[] { ReviewPagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", ReviewPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "count", ReviewPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ReviewPagedQueryResponse.builder().total(1L) },
+                new Object[] { "offset", ReviewPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "results", ReviewPagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.review.ReviewImpl())) } };
     }
 

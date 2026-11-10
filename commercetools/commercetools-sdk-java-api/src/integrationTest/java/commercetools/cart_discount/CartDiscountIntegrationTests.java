@@ -1,6 +1,7 @@
 
 package commercetools.cart_discount;
 
+import static cleanup.DeleteEverythingIntegrationTest.deleteAllCartDiscounts;
 import static commercetools.cart_discount.CartDiscountFixtures.*;
 import static commercetools.type.TypeFixtures.getFieldName;
 
@@ -16,9 +17,17 @@ import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class CartDiscountIntegrationTests {
+
+    @BeforeAll
+    @AfterAll
+    public static void deleteCartDiscounts() {
+        deleteAllCartDiscounts();
+    }
 
     @Test
     public void ref() {

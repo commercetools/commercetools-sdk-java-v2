@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Attribute type for nesting Attributes based on some existing ProductType. It does not support <code>isSearchable</code> and is not supported in queries. The only supported AttributeConstraint is <code>None</code>.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("nested")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
@@ -70,6 +72,8 @@ public interface AttributeNestedType extends AttributeType {
         instance.setTypeReference(template.getTypeReference());
         return instance;
     }
+
+    public AttributeNestedType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeNestedType
@@ -118,8 +122,8 @@ public interface AttributeNestedType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeNestedType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeNestedType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeNestedType>";

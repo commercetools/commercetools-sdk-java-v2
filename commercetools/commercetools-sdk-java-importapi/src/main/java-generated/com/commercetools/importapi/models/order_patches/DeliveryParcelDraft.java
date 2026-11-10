@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.commercetools.importapi.models.orders.ParcelMeasurements;
 import com.commercetools.importapi.models.orders.TrackingData;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryParcelDraft
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<DeliveryParcelDraft> {
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -42,7 +43,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -50,7 +51,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -58,21 +59,21 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public List<DeliveryItem> getItems();
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -80,7 +81,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -106,6 +107,8 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public DeliveryParcelDraft copyDeep();
 
     /**
      * factory method to create a deep copy of DeliveryParcelDraft
@@ -161,8 +164,8 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryParcelDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryParcelDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryParcelDraft>";

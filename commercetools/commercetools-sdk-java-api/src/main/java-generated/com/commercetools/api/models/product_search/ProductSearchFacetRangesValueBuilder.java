@@ -48,7 +48,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
     /**
-     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the ranges facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param filter value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -225,7 +225,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the ranges facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @return name
      */
 
@@ -267,7 +267,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @return filter
      */
 
@@ -287,7 +287,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @return field
      */
 
@@ -305,7 +305,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 

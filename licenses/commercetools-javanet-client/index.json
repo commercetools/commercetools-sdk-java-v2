@@ -2,48 +2,9 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.22",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-core"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
             "moduleLicenses": [
                 {
@@ -80,7 +41,7 @@
         },
         {
             "moduleName": "commons-io:commons-io",
-            "moduleVersion": "2.11.0",
+            "moduleVersion": "2.22.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-io/"
             ],
@@ -94,6 +55,9 @@
         {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -106,18 +70,8 @@
             ]
         },
         {
-            "moduleName": "net.bytebuddy:byte-buddy",
-            "moduleVersion": "1.14.9",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.14.0",
+            "moduleVersion": "3.20.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -129,17 +83,92 @@
             ]
         },
         {
+            "moduleName": "org.javassist:javassist",
+            "moduleVersion": "3.28.0-GA",
+            "moduleUrls": [
+                "http://www.javassist.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html"
+                },
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/lgpl-2.1"
+                },
+                {
+                    "moduleLicense": "Mozilla Public License Version 1.1",
+                    "moduleLicenseUrl": "https://www.mozilla.org/en-US/MPL/1.1"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.reflections:reflections",
+            "moduleVersion": "0.10.2",
+            "moduleUrls": [
+                "http://github.com/ronmamo/reflections"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "WTFPL",
+                    "moduleLicenseUrl": "http://www.wtfpl.net/"
+                }
+            ]
+        },
+        {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.36",
+            "moduleVersion": "2.0.18",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],
             "moduleLicenses": [
                 {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "https://opensource.org/license/mit"
+                },
+                {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
                 }
             ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-core",
+            "moduleVersion": "3.2.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-core"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-databind",
+            "moduleVersion": "3.2.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

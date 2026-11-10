@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnInfo;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add ReturnInfo update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddReturnInfoAction" rel="nofollow">Add ReturnInfo</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReturnInfoAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnInfoAddedMessageImpl.class)
 public interface ReturnInfoAddedMessage extends OrderMessage {
@@ -45,7 +47,7 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
     String RETURN_INFO_ADDED = "ReturnInfoAdded";
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return returnInfo
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
     public ReturnInfo getReturnInfo();
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param returnInfo value to be set
      */
 
@@ -88,6 +90,8 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
         instance.setReturnInfo(template.getReturnInfo());
         return instance;
     }
+
+    public ReturnInfoAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ReturnInfoAddedMessage
@@ -147,8 +151,8 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ReturnInfoAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReturnInfoAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ReturnInfoAddedMessage>";

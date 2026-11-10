@@ -215,6 +215,16 @@ public class LineItemQueryBuilderDsl {
             LineItemQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<LineItemQueryBuilderDsl> reservation(
+            Function<com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("reservation"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl.of())),
+            LineItemQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<LineItemQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -234,6 +244,15 @@ public class LineItemQueryBuilderDsl {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastModifiedAt")),
             p -> new CombinationQueryPredicate<>(p, LineItemQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<LineItemQueryBuilderDsl> recurrenceInfo(
+            Function<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrenceInfo"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl.of())),
+            LineItemQueryBuilderDsl::of);
     }
 
 }

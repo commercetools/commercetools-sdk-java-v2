@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * QueryComplexityLimitExceededError
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QueryComplexityLimitExceeded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QueryComplexityLimitExceededErrorImpl.class)
 public interface QueryComplexityLimitExceededError extends ErrorObject {
@@ -78,6 +80,8 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
         return instance;
     }
 
+    public QueryComplexityLimitExceededError copyDeep();
+
     /**
      * factory method to create a deep copy of QueryComplexityLimitExceededError
      * @param template instance to be copied
@@ -126,8 +130,8 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QueryComplexityLimitExceededError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QueryComplexityLimitExceededError>() {
+    public static tools.jackson.core.type.TypeReference<QueryComplexityLimitExceededError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QueryComplexityLimitExceededError>() {
             @Override
             public String toString() {
                 return "TypeReference<QueryComplexityLimitExceededError>";

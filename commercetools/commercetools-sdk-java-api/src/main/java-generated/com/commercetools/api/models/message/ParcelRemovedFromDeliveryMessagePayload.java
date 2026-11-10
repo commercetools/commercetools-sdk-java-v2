@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.Parcel;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove Parcel from Delivery update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveParcelFromDeliveryAction" rel="nofollow">Remove Parcel from Delivery</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ParcelRemovedFromDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessagePayloadImpl.class)
 public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePayload {
@@ -39,7 +41,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     String PARCEL_REMOVED_FROM_DELIVERY = "ParcelRemovedFromDelivery";
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     public String getDeliveryId();
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcel
      */
     @NotNull
@@ -56,7 +58,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     public Parcel getParcel();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -64,21 +66,21 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     public String getShippingKey();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcel value to be set
      */
 
     public void setParcel(final Parcel parcel);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
@@ -104,6 +106,8 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public ParcelRemovedFromDeliveryMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelRemovedFromDeliveryMessagePayload
@@ -156,8 +160,8 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelRemovedFromDeliveryMessagePayload>";

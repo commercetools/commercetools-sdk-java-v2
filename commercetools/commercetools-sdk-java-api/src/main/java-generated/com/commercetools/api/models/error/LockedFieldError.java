@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when two Customers are simultaneously created or updated with the same email address.</p>
+ *  <p>Returned when two <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> are simultaneously created or updated with the same email address.</p>
  *  <p>To confirm if the operation was successful, repeat the request.</p>
  *
  * <hr>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LockedField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LockedFieldErrorImpl.class)
 public interface LockedFieldError extends ErrorObject {
@@ -96,6 +98,8 @@ public interface LockedFieldError extends ErrorObject {
         return instance;
     }
 
+    public LockedFieldError copyDeep();
+
     /**
      * factory method to create a deep copy of LockedFieldError
      * @param template instance to be copied
@@ -144,8 +148,8 @@ public interface LockedFieldError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LockedFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LockedFieldError>() {
+    public static tools.jackson.core.type.TypeReference<LockedFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LockedFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<LockedFieldError>";

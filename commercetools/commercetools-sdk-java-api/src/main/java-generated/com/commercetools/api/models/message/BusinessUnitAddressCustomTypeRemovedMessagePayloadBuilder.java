@@ -26,8 +26,11 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder
     @Nullable
     private String oldTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
@@ -38,7 +41,18 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -48,11 +62,21 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomTypeRemovedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressCustomTypeRemovedMessagePayload
      */
     public BusinessUnitAddressCustomTypeRemovedMessagePayload build() {
-        return new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(oldTypeId);
+        return new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(oldTypeId, addressId);
     }
 
     /**
@@ -60,7 +84,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder
      * @return BusinessUnitAddressCustomTypeRemovedMessagePayload
      */
     public BusinessUnitAddressCustomTypeRemovedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(oldTypeId);
+        return new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(oldTypeId, addressId);
     }
 
     /**
@@ -80,6 +104,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder
             final BusinessUnitAddressCustomTypeRemovedMessagePayload template) {
         BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder builder = new BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder();
         builder.oldTypeId = template.getOldTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

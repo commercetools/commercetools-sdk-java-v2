@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action produces the StoreLanguagesChanged Message. Adding a language other than the ones defined in the Project returns a ProjectNotConfiguredForLanguages error.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreLanguagesChangedMessage" rel="nofollow">StoreLanguagesChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, ModelBase {
@@ -52,6 +53,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -95,4 +97,8 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
                 .build();
     }
 
+    @Override
+    public StoreSetLanguagesAction copyDeep() {
+        return StoreSetLanguagesAction.deepCopy(this);
+    }
 }

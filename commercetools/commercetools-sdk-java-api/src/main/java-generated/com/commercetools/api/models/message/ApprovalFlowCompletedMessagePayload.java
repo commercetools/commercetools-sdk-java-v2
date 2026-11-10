@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.approval_flow.ApprovalFlowStatus;
 import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after an Approval Flow is completed and reaches a final status.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is completed and reaches a final status.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalFlowCompleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalFlowCompletedMessagePayloadImpl.class)
 public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
@@ -40,7 +42,7 @@ public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
     String APPROVAL_FLOW_COMPLETED = "ApprovalFlowCompleted";
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return status
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
     public ApprovalFlowStatus getStatus();
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return order
      */
     @NotNull
@@ -57,14 +59,14 @@ public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
     public OrderReference getOrder();
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalFlowStatus status);
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param order value to be set
      */
 
@@ -89,6 +91,8 @@ public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public ApprovalFlowCompletedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalFlowCompletedMessagePayload
@@ -139,8 +143,8 @@ public interface ApprovalFlowCompletedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowCompletedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowCompletedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowCompletedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowCompletedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowCompletedMessagePayload>";

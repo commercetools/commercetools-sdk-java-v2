@@ -6,20 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Key on Channels.</li>
- *   <li>Change State key on States.</li>
- *   <li>Change Key on Types.</li>
- *  </ul>
+ * ChangeKeyChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeKeyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeKeyChangeImpl.class)
 public interface ChangeKeyChange extends Change {
@@ -116,6 +113,8 @@ public interface ChangeKeyChange extends Change {
         return instance;
     }
 
+    public ChangeKeyChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeKeyChange
      * @param template instance to be copied
@@ -164,8 +163,8 @@ public interface ChangeKeyChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeKeyChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeKeyChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeKeyChange>";

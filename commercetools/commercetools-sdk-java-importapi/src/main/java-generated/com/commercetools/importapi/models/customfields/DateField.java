@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a date value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Date")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateFieldImpl.class)
 public interface DateField extends CustomField {
@@ -37,7 +39,7 @@ public interface DateField extends CustomField {
     String DATE = "Date";
 
     /**
-     *
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateField extends CustomField {
     public LocalDate getValue();
 
     /**
-     * set value
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface DateField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateField copyDeep();
 
     /**
      * factory method to create a deep copy of DateField
@@ -116,8 +120,8 @@ public interface DateField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateField>() {
+    public static tools.jackson.core.type.TypeReference<DateField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateField>() {
             @Override
             public String toString() {
                 return "TypeReference<DateField>";

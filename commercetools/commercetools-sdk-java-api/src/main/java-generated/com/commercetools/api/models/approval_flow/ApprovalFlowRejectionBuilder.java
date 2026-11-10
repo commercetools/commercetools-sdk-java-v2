@@ -33,7 +33,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     private String reason;
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the rejecter value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the rejecter value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param rejecter value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @param rejectedAt value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param reason value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return rejecter
      */
 
@@ -99,7 +99,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @return rejectedAt
      */
 
@@ -108,7 +108,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return reason
      */
 

@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceTierDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a PriceTier to a StandalonePrice produces the Standalone Price Tier Added Message.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTierAddedMessage" rel="nofollow">Standalone Price Tier Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addPriceTier")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceAddPriceTierActionImpl.class)
 public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdateAction {
@@ -38,7 +40,7 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
     String ADD_PRICE_TIER = "addPriceTier";
 
     /**
-     *  <p>The PriceTier to be added to the <code>tiers</code> field of the StandalonePrice. The action returns an InvalidField error in the following cases:</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be added to the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. The action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error in the following cases:</p>
      *  <ul>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> &lt; <code>2</code>.</li>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> that already exists for the StandalonePrice.</li>
@@ -51,7 +53,7 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
     public PriceTierDraft getTier();
 
     /**
-     *  <p>The PriceTier to be added to the <code>tiers</code> field of the StandalonePrice. The action returns an InvalidField error in the following cases:</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be added to the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. The action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error in the following cases:</p>
      *  <ul>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> &lt; <code>2</code>.</li>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> that already exists for the StandalonePrice.</li>
@@ -79,6 +81,8 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
         instance.setTier(template.getTier());
         return instance;
     }
+
+    public StandalonePriceAddPriceTierAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceAddPriceTierAction
@@ -127,8 +131,8 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceAddPriceTierAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceAddPriceTierAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceAddPriceTierAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceAddPriceTierAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceAddPriceTierAction>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * PagedQueryResponse
+ *  <p>Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about <span>pagination</span>. This documents the fields all query responses have in common, for specific response types, see the respective API reference pages.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
@@ -57,7 +58,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {
@@ -65,7 +66,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -81,7 +82,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {
@@ -89,7 +90,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseResource> getResults() {
@@ -97,7 +98,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>Object containing supplementary information about the results.</p>
      */
 
     public java.lang.Object getMeta() {
@@ -179,4 +180,8 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public PagedQueryResponse copyDeep() {
+        return PagedQueryResponse.deepCopy(this);
+    }
 }

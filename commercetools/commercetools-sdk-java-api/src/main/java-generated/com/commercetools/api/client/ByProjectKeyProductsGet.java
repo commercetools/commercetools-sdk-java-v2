@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If Product price selection query parameters are provided, the selected Prices are added to the response.</p>
+ *  <p>If <span>Product price selection query parameters</span> are provided, the selected Prices are added to the response.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -66,7 +66,7 @@ public class ByProjectKeyProductsGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/products", this.projectKey);
+        String httpRequestPath = String.format("%s/products", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
@@ -105,12 +105,16 @@ public class ByProjectKeyProductsGet
         return this.getQueryParam("priceCustomerGroup");
     }
 
+    public List<String> getPriceCustomerGroupAssignments() {
+        return this.getQueryParam("priceCustomerGroupAssignments");
+    }
+
     public List<String> getPriceChannel() {
         return this.getQueryParam("priceChannel");
     }
 
-    public List<String> getLocaleProjection() {
-        return this.getQueryParam("localeProjection");
+    public List<String> getPriceRecurrencePolicy() {
+        return this.getQueryParam("priceRecurrencePolicy");
     }
 
     public List<String> getExpand() {
@@ -460,6 +464,91 @@ public class ByProjectKeyProductsGet
     }
 
     /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param priceCustomerGroupAssignments value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet withPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param priceCustomerGroupAssignments value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet addPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet withPriceCustomerGroupAssignments(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet addPriceCustomerGroupAssignments(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet withPriceCustomerGroupAssignments(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet addPriceCustomerGroupAssignments(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified values
+     * @param priceCustomerGroupAssignments values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet withPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().withoutQueryParam("priceCustomerGroupAssignments")
+                .addQueryParams(priceCustomerGroupAssignments.stream()
+                        .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameters
+     * @param priceCustomerGroupAssignments values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet addPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().addQueryParams(priceCustomerGroupAssignments.stream()
+                .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
      * set priceChannel with the specified value
      * @param priceChannel value to be set
      * @param <TValue> value type
@@ -541,83 +630,83 @@ public class ByProjectKeyProductsGet
     }
 
     /**
-     * set localeProjection with the specified value
-     * @param localeProjection value to be set
+     * set priceRecurrencePolicy with the specified value
+     * @param priceRecurrencePolicy value to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductsGet
      */
-    public <TValue> ByProjectKeyProductsGet withLocaleProjection(final TValue localeProjection) {
-        return copy().withQueryParam("localeProjection", localeProjection);
+    public <TValue> ByProjectKeyProductsGet withPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().withQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
     }
 
     /**
-     * add additional localeProjection query parameter
-     * @param localeProjection value to be added
+     * add additional priceRecurrencePolicy query parameter
+     * @param priceRecurrencePolicy value to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductsGet
      */
-    public <TValue> ByProjectKeyProductsGet addLocaleProjection(final TValue localeProjection) {
-        return copy().addQueryParam("localeProjection", localeProjection);
+    public <TValue> ByProjectKeyProductsGet addPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().addQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
     }
 
     /**
-     * set localeProjection with the specified value
+     * set priceRecurrencePolicy with the specified value
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyProductsGet
      */
-    public ByProjectKeyProductsGet withLocaleProjection(final Supplier<String> supplier) {
-        return copy().withQueryParam("localeProjection", supplier.get());
+    public ByProjectKeyProductsGet withPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceRecurrencePolicy", supplier.get());
     }
 
     /**
-     * add additional localeProjection query parameter
+     * add additional priceRecurrencePolicy query parameter
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyProductsGet
      */
-    public ByProjectKeyProductsGet addLocaleProjection(final Supplier<String> supplier) {
-        return copy().addQueryParam("localeProjection", supplier.get());
+    public ByProjectKeyProductsGet addPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceRecurrencePolicy", supplier.get());
     }
 
     /**
-     * set localeProjection with the specified value
+     * set priceRecurrencePolicy with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyProductsGet
      */
-    public ByProjectKeyProductsGet withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    public ByProjectKeyProductsGet withPriceRecurrencePolicy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
     }
 
     /**
-     * add additional localeProjection query parameter
+     * add additional priceRecurrencePolicy query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyProductsGet
      */
-    public ByProjectKeyProductsGet addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    public ByProjectKeyProductsGet addPriceRecurrencePolicy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
     }
 
     /**
-     * set localeProjection with the specified values
-     * @param localeProjection values to be set
+     * set priceRecurrencePolicy with the specified values
+     * @param priceRecurrencePolicy values to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductsGet
      */
-    public <TValue> ByProjectKeyProductsGet withLocaleProjection(final Collection<TValue> localeProjection) {
-        return copy().withoutQueryParam("localeProjection")
-                .addQueryParams(localeProjection.stream()
-                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+    public <TValue> ByProjectKeyProductsGet withPriceRecurrencePolicy(final Collection<TValue> priceRecurrencePolicy) {
+        return copy().withoutQueryParam("priceRecurrencePolicy")
+                .addQueryParams(priceRecurrencePolicy.stream()
+                        .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
                         .collect(Collectors.toList()));
     }
 
     /**
-     * add additional localeProjection query parameters
-     * @param localeProjection values to be added
+     * add additional priceRecurrencePolicy query parameters
+     * @param priceRecurrencePolicy values to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductsGet
      */
-    public <TValue> ByProjectKeyProductsGet addLocaleProjection(final Collection<TValue> localeProjection) {
-        return copy().addQueryParams(localeProjection.stream()
-                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+    public <TValue> ByProjectKeyProductsGet addPriceRecurrencePolicy(final Collection<TValue> priceRecurrencePolicy) {
+        return copy().addQueryParams(priceRecurrencePolicy.stream()
+                .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
                 .collect(Collectors.toList()));
     }
 

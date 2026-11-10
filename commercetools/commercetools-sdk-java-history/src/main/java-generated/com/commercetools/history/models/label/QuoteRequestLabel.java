@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteRequestLabel
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestLabelImpl.class)
 public interface QuoteRequestLabel extends Label {
@@ -55,7 +57,7 @@ public interface QuoteRequestLabel extends Label {
     public String getKey();
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @return customer
      */
     @NotNull
@@ -71,7 +73,7 @@ public interface QuoteRequestLabel extends Label {
     public void setKey(final String key);
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param customer value to be set
      */
 
@@ -96,6 +98,8 @@ public interface QuoteRequestLabel extends Label {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public QuoteRequestLabel copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestLabel
@@ -144,8 +148,8 @@ public interface QuoteRequestLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestLabel>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestLabel>";

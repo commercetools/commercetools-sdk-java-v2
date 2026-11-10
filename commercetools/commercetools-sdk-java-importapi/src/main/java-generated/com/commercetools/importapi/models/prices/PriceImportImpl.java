@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a price to be imported that is persisted as a Price in the Project.</p>
+ *  <p>Represents the data used to import an <span>Embedded Price</span> . Once imported, this data is persisted as a <span>Price</span> in a Product Variant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImportImpl implements PriceImport, ModelBase {
@@ -37,9 +38,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     private com.commercetools.importapi.models.common.ChannelKeyReference channel;
 
     private com.commercetools.importapi.models.common.DiscountedPrice discounted;
-
-    @Deprecated
-    private Boolean publish;
 
     private Boolean staged;
 
@@ -63,7 +61,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
             @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup,
             @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel,
             @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted,
-            @JsonProperty("publish") final Boolean publish, @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("staged") final Boolean staged,
             @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers,
             @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom,
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
@@ -76,7 +74,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
         this.customerGroup = customerGroup;
         this.channel = channel;
         this.discounted = discounted;
-        this.publish = publish;
         this.staged = staged;
         this.tiers = tiers;
         this.custom = custom;
@@ -91,7 +88,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -131,7 +128,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -139,7 +136,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -155,16 +152,8 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     */
-    @Deprecated
-    public Boolean getPublish() {
-        return this.publish;
-    }
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      */
@@ -182,7 +171,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -190,7 +179,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -198,7 +187,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
@@ -236,11 +225,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
 
     public void setDiscounted(final com.commercetools.importapi.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
-    }
-
-    @Deprecated
-    public void setPublish(final Boolean publish) {
-        this.publish = publish;
     }
 
     public void setStaged(final Boolean staged) {
@@ -286,7 +270,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
                 .append(discounted, that.discounted)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
@@ -300,7 +283,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
                 .append(discounted, that.discounted)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
@@ -319,7 +301,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(customerGroup)
                 .append(channel)
                 .append(discounted)
-                .append(publish)
                 .append(staged)
                 .append(tiers)
                 .append(custom)
@@ -338,7 +319,6 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append("customerGroup", customerGroup)
                 .append("channel", channel)
                 .append("discounted", discounted)
-                .append("publish", publish)
                 .append("staged", staged)
                 .append("tiers", tiers)
                 .append("custom", custom)
@@ -347,4 +327,8 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceImport copyDeep() {
+        return PriceImport.deepCopy(this);
+    }
 }

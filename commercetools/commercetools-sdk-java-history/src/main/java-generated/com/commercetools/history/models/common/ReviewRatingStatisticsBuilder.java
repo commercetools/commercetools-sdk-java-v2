@@ -13,9 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
- *             .averageRating(1)
- *             .highestRating(1)
- *             .lowestRating(1)
+ *             .averageRating(0.3)
+ *             .highestRating(0.3)
+ *             .lowestRating(0.3)
  *             .count(1)
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
@@ -25,11 +25,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatistics> {
 
-    private Integer averageRating;
+    private Double averageRating;
 
-    private Integer highestRating;
+    private Double highestRating;
 
-    private Integer lowestRating;
+    private Double lowestRating;
 
     private Integer count;
 
@@ -41,7 +41,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder averageRating(final Integer averageRating) {
+    public ReviewRatingStatisticsBuilder averageRating(final Double averageRating) {
         this.averageRating = averageRating;
         return this;
     }
@@ -52,7 +52,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder highestRating(final Integer highestRating) {
+    public ReviewRatingStatisticsBuilder highestRating(final Double highestRating) {
         this.highestRating = highestRating;
         return this;
     }
@@ -63,7 +63,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder lowestRating(final Integer lowestRating) {
+    public ReviewRatingStatisticsBuilder lowestRating(final Double lowestRating) {
         this.lowestRating = lowestRating;
         return this;
     }
@@ -80,7 +80,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @param ratingsDistribution value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return averageRating
      */
 
-    public Integer getAverageRating() {
+    public Double getAverageRating() {
         return this.averageRating;
     }
 
@@ -104,7 +104,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return highestRating
      */
 
-    public Integer getHighestRating() {
+    public Double getHighestRating() {
         return this.highestRating;
     }
 
@@ -113,7 +113,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return lowestRating
      */
 
-    public Integer getLowestRating() {
+    public Double getLowestRating() {
         return this.lowestRating;
     }
 
@@ -127,7 +127,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @return ratingsDistribution
      */
 

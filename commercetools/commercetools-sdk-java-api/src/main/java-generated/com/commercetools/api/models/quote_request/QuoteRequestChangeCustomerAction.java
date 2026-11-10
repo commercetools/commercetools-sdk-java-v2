@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the Quote Request Customer Changed Message.</p>
+ *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestCustomerChangedMessage" rel="nofollow">Quote Request Customer Changed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCustomer")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestChangeCustomerActionImpl.class)
 public interface QuoteRequestChangeCustomerAction extends QuoteRequestUpdateAction {
@@ -71,6 +73,8 @@ public interface QuoteRequestChangeCustomerAction extends QuoteRequestUpdateActi
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public QuoteRequestChangeCustomerAction copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestChangeCustomerAction
@@ -119,8 +123,8 @@ public interface QuoteRequestChangeCustomerAction extends QuoteRequestUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestChangeCustomerAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestChangeCustomerAction>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestChangeCustomerAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestChangeCustomerAction>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestChangeCustomerAction>";

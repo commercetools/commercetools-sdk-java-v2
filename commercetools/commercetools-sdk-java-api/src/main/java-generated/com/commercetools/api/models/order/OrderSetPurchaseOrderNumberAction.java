@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the PurchaseOrderNumberSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPurchaseOrderNumberSetMessage" rel="nofollow">PurchaseOrderNumberSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPurchaseOrderNumber")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetPurchaseOrderNumberActionImpl.class)
 public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
@@ -34,7 +36,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     String SET_PURCHASE_ORDER_NUMBER = "setPurchaseOrderNumber";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return purchaseOrderNumber
      */
 
@@ -42,7 +44,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param purchaseOrderNumber value to be set
      */
 
@@ -66,6 +68,8 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }
+
+    public OrderSetPurchaseOrderNumberAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetPurchaseOrderNumberAction
@@ -114,8 +118,8 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetPurchaseOrderNumberAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetPurchaseOrderNumberAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetPurchaseOrderNumberAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetPurchaseOrderNumberAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetPurchaseOrderNumberAction>";

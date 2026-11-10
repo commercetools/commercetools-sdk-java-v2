@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete QuoteRequest request.</p>
+ *  <p>Generated after a successful <span>Delete QuoteRequest</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestDeletedMessageImpl.class)
 public interface QuoteRequestDeletedMessage extends Message {
@@ -67,6 +69,8 @@ public interface QuoteRequestDeletedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public QuoteRequestDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestDeletedMessage
@@ -125,8 +129,8 @@ public interface QuoteRequestDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestDeletedMessage>";

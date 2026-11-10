@@ -3,36 +3,29 @@ package com.commercetools.api.models.approval_flow;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalFlowPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalFlowPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalFlowPagedQueryResponseBuilder builder) {
         ApprovalFlowPagedQueryResponse approvalFlowPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(approvalFlowPagedQueryResponse).isInstanceOf(ApprovalFlowPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalFlowPagedQueryResponse.builder().limit(7L) },
-                new Object[] { ApprovalFlowPagedQueryResponse.builder().offset(3L) },
-                new Object[] { ApprovalFlowPagedQueryResponse.builder().count(2L) },
-                new Object[] { ApprovalFlowPagedQueryResponse.builder().total(1L) },
-                new Object[] { ApprovalFlowPagedQueryResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.api.models.approval_flow.ApprovalFlowImpl())) } };
+        return new Object[][] { new Object[] { "limit", ApprovalFlowPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", ApprovalFlowPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", ApprovalFlowPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ApprovalFlowPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        ApprovalFlowPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_flow.ApprovalFlowImpl())) } };
     }
 
     @Test

@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListRemoveLineItemAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListRemoveLineItemActionImpl.class)
 public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdateAction {
@@ -34,7 +36,7 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -42,7 +44,7 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
     public String getLineItemId();
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -58,14 +60,14 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
     public Long getQuantity();
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 
@@ -98,6 +100,8 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public MyShoppingListRemoveLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListRemoveLineItemAction
@@ -148,8 +152,8 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListRemoveLineItemAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListRemoveLineItemAction>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListRemoveLineItemAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListRemoveLineItemAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListRemoveLineItemAction>";

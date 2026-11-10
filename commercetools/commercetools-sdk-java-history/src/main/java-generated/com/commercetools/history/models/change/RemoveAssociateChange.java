@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove Associate update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAssociateAction" rel="nofollow">Remove Associate</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetAssociatesChange" rel="nofollow">SetAssociatesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,8 +30,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveAssociateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveAssociateChangeImpl.class)
+@Deprecated
 public interface RemoveAssociateChange extends Change {
 
     /**
@@ -97,6 +100,8 @@ public interface RemoveAssociateChange extends Change {
         return instance;
     }
 
+    public RemoveAssociateChange copyDeep();
+
     /**
      * factory method to create a deep copy of RemoveAssociateChange
      * @param template instance to be copied
@@ -145,8 +150,8 @@ public interface RemoveAssociateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveAssociateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveAssociateChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveAssociateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveAssociateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveAssociateChange>";

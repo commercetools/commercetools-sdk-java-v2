@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderLabel
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLabelImpl.class)
 public interface OrderLabel extends Label {
@@ -94,6 +96,8 @@ public interface OrderLabel extends Label {
         return instance;
     }
 
+    public OrderLabel copyDeep();
+
     /**
      * factory method to create a deep copy of OrderLabel
      * @param template instance to be copied
@@ -141,8 +145,8 @@ public interface OrderLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderLabel>() {
+    public static tools.jackson.core.type.TypeReference<OrderLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderLabel>";

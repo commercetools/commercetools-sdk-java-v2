@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a value to a LocalizedEnumType. This update action can be used to update a LocalizedEnumType FieldDefinition and a SetType FieldDefinition of CustomFieldLocalizedEnumType.</p>
+ *  <p>Adds a value to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a>. This update action can be used to update a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinition and a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> FieldDefinition of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addLocalizedEnumValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeAddLocalizedEnumValueActionImpl.class)
 public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
@@ -38,7 +40,7 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -55,7 +57,7 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     public CustomFieldLocalizedEnumValue getValue();
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @param fieldName value to be set
      */
 
@@ -87,6 +89,8 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TypeAddLocalizedEnumValueAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeAddLocalizedEnumValueAction
@@ -136,8 +140,8 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeAddLocalizedEnumValueAction>";

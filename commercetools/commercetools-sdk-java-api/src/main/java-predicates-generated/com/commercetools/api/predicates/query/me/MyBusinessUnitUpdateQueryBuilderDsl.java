@@ -20,11 +20,12 @@ public class MyBusinessUnitUpdateQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<MyBusinessUnitUpdateQueryBuilderDsl> actions(
-            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitUpdateActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("actions"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.business_unit.BusinessUnitUpdateActionQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.me.MyBusinessUnitUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyBusinessUnitUpdateActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("actions"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.me.MyBusinessUnitUpdateActionQueryBuilderDsl.of())),
             MyBusinessUnitUpdateQueryBuilderDsl::of);
     }
 

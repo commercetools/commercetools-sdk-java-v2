@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Excludes a Product from a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
- *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Exclusion, a ProductPresentWithDifferentVariantSelection error is returned.</p>
+ *  <p>Excludes a Product from a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Exclusion, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPresentWithDifferentVariantSelectionError" rel="nofollow">ProductPresentWithDifferentVariantSelection</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("excludeProduct")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionExcludeProductActionImpl.class)
 public interface ProductSelectionExcludeProductAction extends ProductSelectionUpdateAction {
@@ -89,6 +91,8 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
         return instance;
     }
 
+    public ProductSelectionExcludeProductAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionExcludeProductAction
      * @param template instance to be copied
@@ -140,8 +144,8 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionExcludeProductAction>";

@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.customer_group;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerGroupDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerGroupDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerGroupDraftBuilder builder) {
         CustomerGroupDraft customerGroupDraft = builder.buildUnchecked();
         Assertions.assertThat(customerGroupDraft).isInstanceOf(CustomerGroupDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerGroupDraft.builder().key("key") },
-                new Object[] { CustomerGroupDraft.builder().groupName("groupName") },
-                new Object[] { CustomerGroupDraft.builder()
+        return new Object[][] { new Object[] { "key", CustomerGroupDraft.builder().key("key") },
+                new Object[] { "groupName", CustomerGroupDraft.builder().groupName("groupName") },
+                new Object[] { "custom", CustomerGroupDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

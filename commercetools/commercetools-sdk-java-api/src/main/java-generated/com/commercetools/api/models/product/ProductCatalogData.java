@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
+ * ProductCatalogData
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductCatalogData extends ProductCatalogDataMixin {
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>Whether the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @return published
      */
     @NotNull
@@ -61,7 +62,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public ProductData getStaged();
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @return hasStagedChanges
      */
     @NotNull
@@ -69,7 +70,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public Boolean getHasStagedChanges();
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>Whether the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @param published value to be set
      */
 
@@ -90,7 +91,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public void setStaged(final ProductData staged);
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @param hasStagedChanges value to be set
      */
 
@@ -117,6 +118,8 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
         instance.setHasStagedChanges(template.getHasStagedChanges());
         return instance;
     }
+
+    public ProductCatalogData copyDeep();
 
     /**
      * factory method to create a deep copy of ProductCatalogData
@@ -167,8 +170,8 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData>() {
+    public static tools.jackson.core.type.TypeReference<ProductCatalogData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductCatalogData>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductCatalogData>";

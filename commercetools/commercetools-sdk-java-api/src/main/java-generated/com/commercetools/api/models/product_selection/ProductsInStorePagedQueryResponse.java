@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>PagedQueryResult containing an array of ProductSelectionAssignment.</p>
+ *  <p><span>PagedQueryResult</span> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">ProductSelectionAssignment</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface ProductsInStorePagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelectionAssignment> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -45,7 +46,7 @@ public interface ProductsInStorePagedQueryResponse
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -61,7 +62,7 @@ public interface ProductsInStorePagedQueryResponse
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -78,14 +79,14 @@ public interface ProductsInStorePagedQueryResponse
     public List<ProductSelectionAssignment> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -99,7 +100,7 @@ public interface ProductsInStorePagedQueryResponse
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
@@ -142,6 +143,8 @@ public interface ProductsInStorePagedQueryResponse
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public ProductsInStorePagedQueryResponse copyDeep();
 
     /**
      * factory method to create a deep copy of ProductsInStorePagedQueryResponse
@@ -198,8 +201,8 @@ public interface ProductsInStorePagedQueryResponse
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductsInStorePagedQueryResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductsInStorePagedQueryResponse>() {
+    public static tools.jackson.core.type.TypeReference<ProductsInStorePagedQueryResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductsInStorePagedQueryResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductsInStorePagedQueryResponse>";

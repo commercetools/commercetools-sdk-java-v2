@@ -7,7 +7,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
@@ -107,20 +106,20 @@ public class CtOkHttp3Client extends HttpClientBase {
 
     }
 
-    private static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
-                .toMultimap()
-                .entrySet()
-                .stream()
-                .flatMap(e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value)))
-                .collect(Collectors.toList()));
+    static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
+        final okhttp3.Headers responseHeaders = response.headers();
+        final List<Map.Entry<String, String>> headerList = new ArrayList<>(responseHeaders.size());
+        for (int i = 0; i < responseHeaders.size(); i++) {
+            headerList.add(ApiHttpHeaders.headerEntry(responseHeaders.name(i), responseHeaders.value(i)));
+        }
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(headerList);
 
         final ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(response.code(), apiHttpHeaders,
             Optional.ofNullable(response.body())
                     .map(Utils.wrapToCompletionException(okhttp3.ResponseBody::bytes))
                     .orElse(null),
             response.message());
-        if (apiHttpResponse.getBody() != null) {
+        if (response.body() != null) {
             response.body().close();
         }
         return apiHttpResponse;
@@ -141,12 +140,9 @@ public class CtOkHttp3Client extends HttpClientBase {
 
         //default media type is JSON, if other media type is set as a header, use it
         okhttp3.MediaType mediaType = JSON;
-        if (apiHttpRequest.getHeaders()
-                .getHeaders()
-                .stream()
-                .anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
-            mediaType = okhttp3.MediaType
-                    .parse(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+        final String contentTypeValue = apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+        if (contentTypeValue != null) {
+            mediaType = okhttp3.MediaType.parse(contentTypeValue);
         }
 
         final okhttp3.RequestBody body = apiHttpRequest.getBody() == null ? null
@@ -194,17 +190,15 @@ public class CtOkHttp3Client extends HttpClientBase {
             return unzip(response);
         }
 
-        private okhttp3.Response unzip(final okhttp3.Response response) throws IOException {
+        okhttp3.Response unzip(final okhttp3.Response response) {
             if (!"gzip".equalsIgnoreCase(response.header("Content-Encoding"))) {
                 return response;
             }
 
-            okhttp3.ResponseBody responseBody = response.body();
-            if (responseBody == null) {
+            if (response.body() == null) {
                 return response;
             }
 
-            GzipSource gzipSource = new GzipSource(responseBody.source());
             okhttp3.Headers strippedHeaders = response.headers()
                     .newBuilder()
                     .removeAll("Content-Encoding")
@@ -213,8 +207,8 @@ public class CtOkHttp3Client extends HttpClientBase {
             String contentType = response.header("Content-Type");
             return response.newBuilder()
                     .headers(strippedHeaders)
-                    .body(
-                        okhttp3.ResponseBody.create(okhttp3.MediaType.parse(contentType), -1L, Okio.buffer(gzipSource)))
+                    .body(okhttp3.ResponseBody.create(okhttp3.MediaType.parse(contentType), -1L,
+                        Okio.buffer(new GzipSource(response.body().source()))))
                     .build();
         }
     }

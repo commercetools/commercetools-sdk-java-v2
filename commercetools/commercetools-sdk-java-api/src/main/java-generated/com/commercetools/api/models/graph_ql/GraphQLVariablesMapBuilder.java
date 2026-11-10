@@ -23,7 +23,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -34,7 +34,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -49,7 +49,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     }
 
     /**
-     * values of pattern properties
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return pattern properties
      */
 

@@ -3,42 +3,40 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLineItemRemovedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLineItemRemovedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLineItemRemovedMessageBuilder builder) {
         OrderLineItemRemovedMessage orderLineItemRemovedMessage = builder.buildUnchecked();
         Assertions.assertThat(orderLineItemRemovedMessage).isInstanceOf(OrderLineItemRemovedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderLineItemRemovedMessage.builder().lineItemId("lineItemId") },
-                new Object[] { OrderLineItemRemovedMessage.builder().lineItemKey("lineItemKey") },
-                new Object[] { OrderLineItemRemovedMessage.builder().removedQuantity(7L) },
-                new Object[] { OrderLineItemRemovedMessage.builder().newQuantity(4L) },
-                new Object[] { OrderLineItemRemovedMessage.builder()
-                        .newState(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
-                new Object[] { OrderLineItemRemovedMessage.builder()
-                        .newTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { OrderLineItemRemovedMessage.builder()
-                        .newTaxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
-                new Object[] { OrderLineItemRemovedMessage.builder()
-                        .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { OrderLineItemRemovedMessage.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", OrderLineItemRemovedMessage.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", OrderLineItemRemovedMessage.builder().lineItemKey("lineItemKey") },
+                new Object[] { "removedQuantity", OrderLineItemRemovedMessage.builder().removedQuantity(7L) },
+                new Object[] { "newQuantity", OrderLineItemRemovedMessage.builder().newQuantity(4L) },
+                new Object[] { "newState",
+                        OrderLineItemRemovedMessage.builder()
+                                .newState(Collections
+                                        .singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
+                new Object[] { "newTotalPrice",
+                        OrderLineItemRemovedMessage.builder()
+                                .newTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "newTaxedPrice",
+                        OrderLineItemRemovedMessage.builder()
+                                .newTaxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
+                new Object[] { "newPrice",
+                        OrderLineItemRemovedMessage.builder()
+                                .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "newShippingDetail", OrderLineItemRemovedMessage.builder()
                         .newShippingDetail(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) } };
     }
 

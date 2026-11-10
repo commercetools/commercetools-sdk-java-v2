@@ -127,6 +127,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asDiscountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.discount_group.DiscountGroupQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asExtension(
             Function<com.commercetools.api.predicates.query.extension.ExtensionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -138,6 +145,13 @@ public class BaseResourceQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.inventory.InventoryEntryQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asMcpServer(
+            Function<com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl.of()),
             BaseResourceQueryBuilderDsl::of);
     }
 
@@ -166,6 +180,13 @@ public class BaseResourceQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.payment.PaymentQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.payment.PaymentQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asPaymentMethod(
+            Function<com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl.of()),
             BaseResourceQueryBuilderDsl::of);
     }
 
@@ -222,6 +243,27 @@ public class BaseResourceQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.quote_request.QuoteRequestQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.quote_request.QuoteRequestQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.quote_request.QuoteRequestQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asRecurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asRecurringOrder(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asReservation(
+            Function<com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl.of()),
             BaseResourceQueryBuilderDsl::of);
     }
 
@@ -292,6 +334,13 @@ public class BaseResourceQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asVariant(
+            Function<com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl.of()),
             BaseResourceQueryBuilderDsl::of);
     }
 

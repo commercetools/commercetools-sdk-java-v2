@@ -3,45 +3,42 @@ package com.commercetools.api.models.product_selection;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSelectionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSelectionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSelectionBuilder builder) {
         ProductSelection productSelection = builder.buildUnchecked();
         Assertions.assertThat(productSelection).isInstanceOf(ProductSelection.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSelection.builder().id("id") },
-                new Object[] { ProductSelection.builder().version(2L) },
-                new Object[] { ProductSelection.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductSelection.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductSelection.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ProductSelection.builder().id("id") },
+                new Object[] { "version", ProductSelection.builder().version(2L) },
+                new Object[] { "createdAt",
+                        ProductSelection.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ProductSelection.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ProductSelection.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         ProductSelection.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ProductSelection.builder().key("key") },
-                new Object[] { ProductSelection.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductSelection.builder().productCount(1) },
-                new Object[] { ProductSelection.builder()
-                        .mode(com.commercetools.api.models.product_selection.ProductSelectionMode
-                                .findEnum("Individual")) },
-                new Object[] {
+                new Object[] { "key", ProductSelection.builder().key("key") },
+                new Object[] { "name",
+                        ProductSelection.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "productCount", ProductSelection.builder().productCount(1) },
+                new Object[] { "mode",
+                        ProductSelection.builder()
+                                .mode(com.commercetools.api.models.product_selection.ProductSelectionMode
+                                        .findEnum("Individual")) },
+                new Object[] { "custom",
                         ProductSelection.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

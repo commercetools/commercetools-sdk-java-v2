@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalRuleApproversSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalRuleApproversSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalRuleApproversSetMessagePayloadBuilder builder) {
         ApprovalRuleApproversSetMessagePayload approvalRuleApproversSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(approvalRuleApproversSetMessagePayload)
                 .isInstanceOf(ApprovalRuleApproversSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ApprovalRuleApproversSetMessagePayload.builder()
-                        .approvers(new com.commercetools.api.models.approval_rule.ApproverHierarchyImpl()) },
-                new Object[] { ApprovalRuleApproversSetMessagePayload.builder()
+                new Object[] { "approvers",
+                        ApprovalRuleApproversSetMessagePayload.builder()
+                                .approvers(new com.commercetools.api.models.approval_rule.ApproverHierarchyImpl()) },
+                new Object[] { "oldApprovers", ApprovalRuleApproversSetMessagePayload.builder()
                         .oldApprovers(new com.commercetools.api.models.approval_rule.ApproverHierarchyImpl()) } };
     }
 

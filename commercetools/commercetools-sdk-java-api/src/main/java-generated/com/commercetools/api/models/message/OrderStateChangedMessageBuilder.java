@@ -187,7 +187,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param orderState value to be set
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param oldOrderState value to be set
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -376,7 +376,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return orderState
      */
 
@@ -385,7 +385,7 @@ public class OrderStateChangedMessageBuilder implements Builder<OrderStateChange
     }
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return oldOrderState
      */
 

@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
+ *  <p>Returned when a resource referenced by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> could not be found.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLReferencedResourceNotFoundError, ModelBase {
@@ -36,7 +38,8 @@ public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLRefere
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLReferencedResourceNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLReferencedResourceNotFoundErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,
             @JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.values = values;
@@ -155,4 +158,8 @@ public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLRefere
                 .build();
     }
 
+    @Override
+    public GraphQLReferencedResourceNotFoundError copyDeep() {
+        return GraphQLReferencedResourceNotFoundError.deepCopy(this);
+    }
 }

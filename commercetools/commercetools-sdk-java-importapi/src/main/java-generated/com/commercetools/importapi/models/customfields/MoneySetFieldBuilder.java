@@ -22,37 +22,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneySetFieldBuilder implements Builder<MoneySetField> {
 
-    private java.util.List<com.commercetools.importapi.models.common.Money> value;
+    private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
 
-    public MoneySetFieldBuilder value(final com.commercetools.importapi.models.common.Money... value) {
+    public MoneySetFieldBuilder value(final com.commercetools.importapi.models.common.TypedMoney... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
 
-    public MoneySetFieldBuilder value(final java.util.List<com.commercetools.importapi.models.common.Money> value) {
+    public MoneySetFieldBuilder value(
+            final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
         return this;
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
 
-    public MoneySetFieldBuilder plusValue(final com.commercetools.importapi.models.common.Money... value) {
+    public MoneySetFieldBuilder plusValue(final com.commercetools.importapi.models.common.TypedMoney... value) {
         if (this.value == null) {
             this.value = new ArrayList<>();
         }
@@ -61,61 +62,39 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     * add the value to the value using the builder function
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
 
     public MoneySetFieldBuilder plusValue(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         if (this.value == null) {
             this.value = new ArrayList<>();
         }
-        this.value.add(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build());
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
 
     public MoneySetFieldBuilder withValue(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.value = new ArrayList<>();
-        this.value.add(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build());
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 
     /**
-     * add the value to the value using the builder function
-     * @param builder function to build the value value
-     * @return Builder
-     */
-
-    public MoneySetFieldBuilder addValue(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
-        return plusValue(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()));
-    }
-
-    /**
-     * set the value to the value using the builder function
-     * @param builder function to build the value value
-     * @return Builder
-     */
-
-    public MoneySetFieldBuilder setValue(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
-        return value(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()));
-    }
-
-    /**
-     * value of value}
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @return value
      */
 
-    public java.util.List<com.commercetools.importapi.models.common.Money> getValue() {
+    public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
     }
 

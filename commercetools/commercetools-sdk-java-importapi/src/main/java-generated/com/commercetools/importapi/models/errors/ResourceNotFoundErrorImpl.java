@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ResourceNotFoundError
@@ -47,7 +48,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -55,7 +56,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {
@@ -63,7 +64,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p>The resource that was not found.</p>
      */
 
     public java.lang.Object getResource() {
@@ -110,4 +111,8 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
                 .build();
     }
 
+    @Override
+    public ResourceNotFoundError copyDeep() {
+        return ResourceNotFoundError.deepCopy(this);
+    }
 }

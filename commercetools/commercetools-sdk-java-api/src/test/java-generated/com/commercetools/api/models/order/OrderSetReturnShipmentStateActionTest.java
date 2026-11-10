@@ -1,33 +1,27 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetReturnShipmentStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetReturnShipmentStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetReturnShipmentStateActionBuilder builder) {
         OrderSetReturnShipmentStateAction orderSetReturnShipmentStateAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetReturnShipmentStateAction).isInstanceOf(OrderSetReturnShipmentStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderSetReturnShipmentStateAction.builder().returnItemId("returnItemId") },
-                new Object[] { OrderSetReturnShipmentStateAction.builder().returnItemKey("returnItemKey") },
-                new Object[] { OrderSetReturnShipmentStateAction.builder()
+                new Object[] { "returnItemId",
+                        OrderSetReturnShipmentStateAction.builder().returnItemId("returnItemId") },
+                new Object[] { "returnItemKey",
+                        OrderSetReturnShipmentStateAction.builder().returnItemKey("returnItemKey") },
+                new Object[] { "shipmentState", OrderSetReturnShipmentStateAction.builder()
                         .shipmentState(com.commercetools.api.models.order.ReturnShipmentState.findEnum("Advised")) } };
     }
 

@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyShoppingListChangeLineItemQuantityActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyShoppingListChangeLineItemQuantityActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyShoppingListChangeLineItemQuantityActionBuilder builder) {
         MyShoppingListChangeLineItemQuantityAction myShoppingListChangeLineItemQuantityAction = builder
                 .buildUnchecked();
         Assertions.assertThat(myShoppingListChangeLineItemQuantityAction)
                 .isInstanceOf(MyShoppingListChangeLineItemQuantityAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyShoppingListChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyShoppingListChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { MyShoppingListChangeLineItemQuantityAction.builder().quantity(8L) } };
+                new Object[] { "lineItemId",
+                        MyShoppingListChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        MyShoppingListChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", MyShoppingListChangeLineItemQuantityAction.builder().quantity(8L) } };
     }
 
     @Test

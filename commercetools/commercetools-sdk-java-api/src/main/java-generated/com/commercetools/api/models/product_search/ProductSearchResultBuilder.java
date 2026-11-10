@@ -27,13 +27,14 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     private String id;
 
     @Nullable
-    private com.commercetools.api.models.product.ProductProjection productProjection;
-
-    @Nullable
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
 
+    @Deprecated
+    @Nullable
+    private com.commercetools.api.models.product.ProductProjection productProjection;
+
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -44,44 +45,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @param builder function to build the productProjection value
-     * @return Builder
-     */
-
-    public ProductSearchResultBuilder productProjection(
-            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
-        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @param builder function to build the productProjection value
-     * @return Builder
-     */
-
-    public ProductSearchResultBuilder withProductProjection(
-            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
-        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @param productProjection value to be set
-     * @return Builder
-     */
-
-    public ProductSearchResultBuilder productProjection(
-            @Nullable final com.commercetools.api.models.product.ProductProjection productProjection) {
-        this.productProjection = productProjection;
-        return this;
-    }
-
-    /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param builder function to build the matchingVariants value
      * @return Builder
      */
@@ -95,7 +59,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param builder function to build the matchingVariants value
      * @return Builder
      */
@@ -108,7 +72,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param matchingVariants value to be set
      * @return Builder
      */
@@ -120,7 +84,44 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
+     * @param builder function to build the productProjection value
+     * @return Builder
+     */
+    @Deprecated
+    public ProductSearchResultBuilder productProjection(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
+     * @param builder function to build the productProjection value
+     * @return Builder
+     */
+    @Deprecated
+    public ProductSearchResultBuilder withProductProjection(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
+     * @param productProjection value to be set
+     * @return Builder
+     */
+    @Deprecated
+    public ProductSearchResultBuilder productProjection(
+            @Nullable final com.commercetools.api.models.product.ProductProjection productProjection) {
+        this.productProjection = productProjection;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      * @return id
      */
 
@@ -129,17 +130,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @return productProjection
-     */
-
-    @Nullable
-    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
-        return this.productProjection;
-    }
-
-    /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @return matchingVariants
      */
 
@@ -149,12 +140,22 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
+     * @return productProjection
+     */
+    @Deprecated
+    @Nullable
+    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
+        return this.productProjection;
+    }
+
+    /**
      * builds ProductSearchResult with checking for non-null required values
      * @return ProductSearchResult
      */
     public ProductSearchResult build() {
         Objects.requireNonNull(id, ProductSearchResult.class + ": id is missing");
-        return new ProductSearchResultImpl(id, productProjection, matchingVariants);
+        return new ProductSearchResultImpl(id, matchingVariants, productProjection);
     }
 
     /**
@@ -162,7 +163,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
      * @return ProductSearchResult
      */
     public ProductSearchResult buildUnchecked() {
-        return new ProductSearchResultImpl(id, productProjection, matchingVariants);
+        return new ProductSearchResultImpl(id, matchingVariants, productProjection);
     }
 
     /**
@@ -181,8 +182,8 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     public static ProductSearchResultBuilder of(final ProductSearchResult template) {
         ProductSearchResultBuilder builder = new ProductSearchResultBuilder();
         builder.id = template.getId();
-        builder.productProjection = template.getProductProjection();
         builder.matchingVariants = template.getMatchingVariants();
+        builder.productProjection = template.getProductProjection();
         return builder;
     }
 

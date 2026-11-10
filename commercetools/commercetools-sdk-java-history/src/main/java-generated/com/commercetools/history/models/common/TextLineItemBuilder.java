@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,12 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TextLineItem textLineItem = TextLineItem.builder()
- *             .addedAt("{addedAt}")
- *             .custom(customBuilder -> customBuilder)
- *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .id("{id}")
  *             .name(nameBuilder -> nameBuilder)
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,31 +27,36 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemBuilder implements Builder<TextLineItem> {
 
-    private String addedAt;
+    private java.time.ZonedDateTime addedAt;
 
+    @Nullable
     private com.commercetools.history.models.common.CustomFields custom;
 
+    @Nullable
     private com.commercetools.history.models.common.LocalizedString description;
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private com.commercetools.history.models.common.LocalizedString name;
 
-    private Integer quantity;
+    private Long quantity;
 
     /**
-     * set the value to the addedAt
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param addedAt value to be set
      * @return Builder
      */
 
-    public TextLineItemBuilder addedAt(final String addedAt) {
+    public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
 
     /**
-     * set the value to the custom using the builder function
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -63,7 +68,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the custom using the builder function
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -75,18 +80,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the custom
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
 
-    public TextLineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
+    public TextLineItemBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
     /**
-     * set the value to the description using the builder function
+     *  <p>Description of the TextLineItem.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -98,7 +103,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the description using the builder function
+     *  <p>Description of the TextLineItem.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -110,18 +115,19 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the description
+     *  <p>Description of the TextLineItem.</p>
      * @param description value to be set
      * @return Builder
      */
 
-    public TextLineItemBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
+    public TextLineItemBuilder description(
+            @Nullable final com.commercetools.history.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
     /**
-     * set the value to the id
+     *  <p>Unique identifier of the TextLineItem.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -132,7 +138,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TextLineItemBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -144,7 +161,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the TextLineItem.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -156,7 +173,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the TextLineItem.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -167,45 +184,47 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * set the value to the quantity
+     *  <p>Number of entries in the TextLineItem.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public TextLineItemBuilder quantity(final Integer quantity) {
+    public TextLineItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     * value of addedAt}
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return addedAt
      */
 
-    public String getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-     * value of custom}
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @return custom
      */
 
+    @Nullable
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-     * value of description}
+     *  <p>Description of the TextLineItem.</p>
      * @return description
      */
 
+    @Nullable
     public com.commercetools.history.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     * value of id}
+     *  <p>Unique identifier of the TextLineItem.</p>
      * @return id
      */
 
@@ -214,7 +233,17 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * value of name}
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      * @return name
      */
 
@@ -223,11 +252,11 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of entries in the TextLineItem.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -237,12 +266,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
      */
     public TextLineItem build() {
         Objects.requireNonNull(addedAt, TextLineItem.class + ": addedAt is missing");
-        Objects.requireNonNull(custom, TextLineItem.class + ": custom is missing");
-        Objects.requireNonNull(description, TextLineItem.class + ": description is missing");
         Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
         Objects.requireNonNull(name, TextLineItem.class + ": name is missing");
         Objects.requireNonNull(quantity, TextLineItem.class + ": quantity is missing");
-        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+        return new TextLineItemImpl(addedAt, custom, description, id, key, name, quantity);
     }
 
     /**
@@ -250,7 +277,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
      * @return TextLineItem
      */
     public TextLineItem buildUnchecked() {
-        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+        return new TextLineItemImpl(addedAt, custom, description, id, key, name, quantity);
     }
 
     /**
@@ -272,6 +299,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         builder.custom = template.getCustom();
         builder.description = template.getDescription();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.quantity = template.getQuantity();
         return builder;

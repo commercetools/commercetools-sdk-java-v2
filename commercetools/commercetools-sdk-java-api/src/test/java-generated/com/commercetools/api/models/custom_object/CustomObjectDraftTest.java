@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.custom_object;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomObjectDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomObjectDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomObjectDraftBuilder builder) {
         CustomObjectDraft customObjectDraft = builder.buildUnchecked();
         Assertions.assertThat(customObjectDraft).isInstanceOf(CustomObjectDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomObjectDraft.builder().container("container") },
-                new Object[] { CustomObjectDraft.builder().key("key") },
-                new Object[] { CustomObjectDraft.builder().value("value") },
-                new Object[] { CustomObjectDraft.builder().version(2L) } };
+        return new Object[][] { new Object[] { "container", CustomObjectDraft.builder().container("container") },
+                new Object[] { "key", CustomObjectDraft.builder().key("key") },
+                new Object[] { "value", CustomObjectDraft.builder().value("value") },
+                new Object[] { "version", CustomObjectDraft.builder().version(2L) } };
     }
 
     @Test

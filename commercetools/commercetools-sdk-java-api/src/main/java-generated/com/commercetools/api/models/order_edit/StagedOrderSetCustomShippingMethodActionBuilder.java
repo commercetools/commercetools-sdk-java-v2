@@ -36,6 +36,9 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
@@ -85,7 +88,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -99,7 +102,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -112,7 +115,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -124,7 +127,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -137,7 +140,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -149,7 +152,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -157,6 +160,42 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -179,7 +218,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
 
@@ -189,13 +228,23 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     /**
@@ -208,7 +257,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         Objects.requireNonNull(shippingRate,
             StagedOrderSetCustomShippingMethodAction.class + ": shippingRate is missing");
         return new StagedOrderSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
-            externalTaxRate);
+            externalTaxRate, custom);
     }
 
     /**
@@ -217,7 +266,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
      */
     public StagedOrderSetCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
-            externalTaxRate);
+            externalTaxRate, custom);
     }
 
     /**
@@ -240,6 +289,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         builder.shippingRate = template.getShippingRate();
         builder.taxCategory = template.getTaxCategory();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.custom = template.getCustom();
         return builder;
     }
 

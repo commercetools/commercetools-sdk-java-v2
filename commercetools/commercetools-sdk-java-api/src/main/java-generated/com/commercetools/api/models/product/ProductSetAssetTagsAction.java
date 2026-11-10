@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetTags")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetTagsActionImpl.class)
 public interface ProductSetAssetTagsAction extends ProductUpdateAction {
@@ -50,7 +52,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -96,7 +98,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 
@@ -155,6 +157,8 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
         return instance;
     }
 
+    public ProductSetAssetTagsAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSetAssetTagsAction
      * @param template instance to be copied
@@ -206,8 +210,8 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetTagsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetTagsAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetAssetTagsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetAssetTagsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetAssetTagsAction>";

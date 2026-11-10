@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ParcelMeasurements;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Parcel Measurements update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelMeasurementsAction" rel="nofollow">Set Parcel Measurements</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ParcelMeasurementsUpdated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelMeasurementsUpdatedMessageImpl.class)
 public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
@@ -46,7 +48,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     String PARCEL_MEASUREMENTS_UPDATED = "ParcelMeasurementsUpdated";
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public String getDeliveryId();
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -62,7 +64,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public String getParcelId();
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return measurements
      */
     @Valid
@@ -70,7 +72,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public ParcelMeasurements getMeasurements();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -78,28 +80,28 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public String getShippingKey();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
@@ -136,6 +138,8 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public ParcelMeasurementsUpdatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelMeasurementsUpdatedMessage
@@ -199,8 +203,8 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelMeasurementsUpdatedMessage>";

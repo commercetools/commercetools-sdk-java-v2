@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the current password of the Customer does not match.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on Customers.</li>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on My Customer Profile.</li>
  *  </ul>
  *
  * <hr>
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidCurrentPassword")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidCurrentPasswordErrorImpl.class)
 public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
@@ -65,6 +67,8 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInvalidCurrentPasswordError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidCurrentPasswordError
@@ -113,8 +117,8 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLInvalidCurrentPasswordError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLInvalidCurrentPasswordError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLInvalidCurrentPasswordError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLInvalidCurrentPasswordError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLInvalidCurrentPasswordError>";

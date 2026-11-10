@@ -64,6 +64,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -145,7 +147,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -274,6 +277,9 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set
      * @return Builder
      */
@@ -285,6 +291,9 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplicationsPerCustomer value to be set
      * @return Builder
      */
@@ -389,6 +398,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -418,7 +429,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return code
      */
 
@@ -457,6 +469,9 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
      */
 
@@ -467,6 +482,9 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplicationsPerCustomer
      */
 

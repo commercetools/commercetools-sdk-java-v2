@@ -8,17 +8,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalRule
@@ -95,7 +97,7 @@ public interface ApprovalRule extends BaseResource {
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
 
@@ -119,7 +121,7 @@ public interface ApprovalRule extends BaseResource {
     public String getDescription();
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @return status
      */
     @NotNull
@@ -127,7 +129,7 @@ public interface ApprovalRule extends BaseResource {
     public ApprovalRuleStatus getStatus();
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @return predicate
      */
     @NotNull
@@ -144,7 +146,7 @@ public interface ApprovalRule extends BaseResource {
     public ApproverHierarchy getApprovers();
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @return requesters
      */
     @NotNull
@@ -153,13 +155,21 @@ public interface ApprovalRule extends BaseResource {
     public List<RuleRequester> getRequesters();
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @return businessUnit
      */
     @NotNull
     @Valid
     @JsonProperty("businessUnit")
     public BusinessUnitKeyReference getBusinessUnit();
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
 
     /**
      *  <p>Unique identifier of the Approval Rule.</p>
@@ -204,7 +214,7 @@ public interface ApprovalRule extends BaseResource {
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      */
 
@@ -225,14 +235,14 @@ public interface ApprovalRule extends BaseResource {
     public void setDescription(final String description);
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalRuleStatus status);
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @param predicate value to be set
      */
 
@@ -246,7 +256,7 @@ public interface ApprovalRule extends BaseResource {
     public void setApprovers(final ApproverHierarchy approvers);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
@@ -254,18 +264,25 @@ public interface ApprovalRule extends BaseResource {
     public void setRequesters(final RuleRequester... requesters);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
     public void setRequesters(final List<RuleRequester> requesters);
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
 
     /**
      * factory method
@@ -296,8 +313,11 @@ public interface ApprovalRule extends BaseResource {
         instance.setApprovers(template.getApprovers());
         instance.setRequesters(template.getRequesters());
         instance.setBusinessUnit(template.getBusinessUnit());
+        instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public ApprovalRule copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRule
@@ -331,6 +351,7 @@ public interface ApprovalRule extends BaseResource {
                 .orElse(null));
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 
@@ -365,8 +386,8 @@ public interface ApprovalRule extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRule> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRule>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRule> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRule>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRule>";

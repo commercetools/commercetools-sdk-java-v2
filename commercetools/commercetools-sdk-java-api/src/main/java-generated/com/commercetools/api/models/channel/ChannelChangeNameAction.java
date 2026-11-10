@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelChangeNameAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeNameActionImpl.class)
 public interface ChannelChangeNameAction extends ChannelUpdateAction {
@@ -38,7 +40,9 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return name
      */
     @NotNull
@@ -47,7 +51,9 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param name value to be set
      */
 
@@ -71,6 +77,8 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public ChannelChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelChangeNameAction
@@ -118,8 +126,8 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelChangeNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelChangeNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelChangeNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelChangeNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelChangeNameAction>";

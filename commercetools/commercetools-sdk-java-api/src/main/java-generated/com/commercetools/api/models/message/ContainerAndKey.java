@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p><code>ContainerAndKey</code> is specific to Custom Objects. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+ *  <p><code>ContainerAndKey</code> is specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,7 @@ public interface ContainerAndKey {
     public String getKey();
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @return container
      */
     @NotNull
@@ -55,7 +56,7 @@ public interface ContainerAndKey {
     public void setKey(final String key);
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @param container value to be set
      */
 
@@ -80,6 +81,8 @@ public interface ContainerAndKey {
         instance.setContainer(template.getContainer());
         return instance;
     }
+
+    public ContainerAndKey copyDeep();
 
     /**
      * factory method to create a deep copy of ContainerAndKey
@@ -128,8 +131,8 @@ public interface ContainerAndKey {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey>() {
+    public static tools.jackson.core.type.TypeReference<ContainerAndKey> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ContainerAndKey>() {
             @Override
             public String toString() {
                 return "TypeReference<ContainerAndKey>";

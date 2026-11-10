@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.Delivery;
+import com.commercetools.history.models.change_value.DeliveryChangeValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove Delivery update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveDeliveryAction" rel="nofollow">Remove Delivery</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveDeliveryItemsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveDeliveryItemsChangeImpl.class)
 public interface RemoveDeliveryItemsChange extends Change {
@@ -61,7 +63,15 @@ public interface RemoveDeliveryItemsChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Delivery getPreviousValue();
+    public DeliveryChangeValue getPreviousValue();
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     /**
      * set change
@@ -75,7 +85,14 @@ public interface RemoveDeliveryItemsChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Delivery previousValue);
+    public void setPreviousValue(final DeliveryChangeValue previousValue);
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      * factory method
@@ -94,8 +111,11 @@ public interface RemoveDeliveryItemsChange extends Change {
         RemoveDeliveryItemsChangeImpl instance = new RemoveDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public RemoveDeliveryItemsChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemoveDeliveryItemsChange
@@ -110,7 +130,8 @@ public interface RemoveDeliveryItemsChange extends Change {
         RemoveDeliveryItemsChangeImpl instance = new RemoveDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.Delivery.deepCopy(template.getPreviousValue()));
+            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -145,8 +166,8 @@ public interface RemoveDeliveryItemsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveDeliveryItemsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveDeliveryItemsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveDeliveryItemsChange>";

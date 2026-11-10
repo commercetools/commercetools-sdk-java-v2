@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint. For more information, see Requesting an access token using an external OAuth 2.0 server.</p>
- *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
+ *  <p>Represents an RFC 7662-compliant <span>OAuth 2.0 Token Introspection</span> endpoint. For more information, see <span>Requesting an access token using an external OAuth 2.0 server</span>.</p>
+ *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service that delegates to those services and exposes a single RFC 7662-compliant OAuth 2.0 Token Introspection endpoint to the commercetools APIs. This middle layer is a custom service that you build and host. It receives the token introspection request from the APIs, routes the token validation to the appropriate external service, and returns the introspection response in the expected format.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalOAuth {
 
     /**
-     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL with authorization header.</p>
      * @return url
      */
     @NotNull
@@ -49,7 +50,7 @@ public interface ExternalOAuth {
     public String getAuthorizationHeader();
 
     /**
-     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL with authorization header.</p>
      * @param url value to be set
      */
 
@@ -81,6 +82,8 @@ public interface ExternalOAuth {
         instance.setAuthorizationHeader(template.getAuthorizationHeader());
         return instance;
     }
+
+    public ExternalOAuth copyDeep();
 
     /**
      * factory method to create a deep copy of ExternalOAuth
@@ -129,8 +132,8 @@ public interface ExternalOAuth {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth>() {
+    public static tools.jackson.core.type.TypeReference<ExternalOAuth> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExternalOAuth>() {
             @Override
             public String toString() {
                 return "TypeReference<ExternalOAuth>";

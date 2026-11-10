@@ -11,76 +11,76 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+ *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface SearchFieldType extends JsonEnum {
 
     /**
-    <p>For Boolean fields and AttributeBooleanType Attributes.</p> */
+    <p>For Boolean fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeBooleanType" rel="nofollow">AttributeBooleanType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldBooleanType" rel="nofollow">BooleanType</a> Custom Fields.</p> */
     SearchFieldType BOOLEAN = SearchFieldTypeEnum.BOOLEAN;
     /**
-    <p>For string fields and AttributeTextType Attributes.</p> */
+    <p>For string fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">StringType</a> Custom Fields.</p> */
     SearchFieldType TEXT = SearchFieldTypeEnum.TEXT;
     /**
-    <p>For LocalizedString fields and AttributeLocalizableTextType Attributes.</p> */
+    <p>For <span>LocalizedString</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">LocalizedStringType</a> Custom Fields.</p> */
     SearchFieldType LTEXT = SearchFieldTypeEnum.LTEXT;
     /**
-    <p>For enum fields and AttributeEnumType Attributes.</p> */
+    <p>For enum fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a> Custom Fields.</p> */
     SearchFieldType ENUM = SearchFieldTypeEnum.ENUM;
     /**
-    <p>For localized enum fields and AttributeLocalizedEnumType Attributes.</p> */
+    <p>For localized enum fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> Custom Fields.</p> */
     SearchFieldType LENUM = SearchFieldTypeEnum.LENUM;
     /**
-    <p>For number fields and AttributeNumberType Attributes.</p> */
+    <p>For number fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldNumberType" rel="nofollow">NumberType</a> Custom Fields.</p> */
     SearchFieldType NUMBER = SearchFieldTypeEnum.NUMBER;
     /**
-    <p>For Money fields and AttributeMoneyType Attributes.</p> */
+    <p>For <span>Money</span> fields and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeMoneyType" rel="nofollow">AttributeMoneyType</a> Attributes.</p> */
     SearchFieldType MONEY = SearchFieldTypeEnum.MONEY;
     /**
-    <p>For Date fields and AttributeDateType Attributes.</p> */
+    <p>For <span>Date</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateType" rel="nofollow">AttributeDateType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldDateType" rel="nofollow">DateType</a> Custom Fields.</p> */
     SearchFieldType DATE = SearchFieldTypeEnum.DATE;
     /**
-    <p>For DateTime fields and AttributeDateTimeType Attributes.</p> */
+    <p>For <span>DateTime</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateTimeType" rel="nofollow">AttributeDateTimeType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldDateTimeType" rel="nofollow">DateTimeType</a> Custom Fields.</p> */
     SearchFieldType DATETIME = SearchFieldTypeEnum.DATETIME;
     /**
-    <p>For Time fields and AttributeTimeType Attributes.</p> */
+    <p>For <span>Time</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTimeType" rel="nofollow">AttributeTimeType</a> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldTimeType" rel="nofollow">TimeType</a> Custom Fields.</p> */
     SearchFieldType TIME = SearchFieldTypeEnum.TIME;
     /**
-    <p>For Reference fields and AttributeReferenceType Attributes.</p> */
+    <p>For <span>Reference</span> fields and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeReferenceType" rel="nofollow">AttributeReferenceType</a> Attributes.</p> */
     SearchFieldType REFERENCE = SearchFieldTypeEnum.REFERENCE;
     /**
-    <p>For Set of Boolean fields and AttributeSetType of <code>boolean</code> Attributes.</p> */
+    <p>For Set of Boolean fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>boolean</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>boolean</code> Custom Fields.</p> */
     SearchFieldType SET_BOOLEAN = SearchFieldTypeEnum.SET_BOOLEAN;
     /**
-    <p>For Set of string fields and AttributeSetType of <code>text</code> Attributes.</p> */
+    <p>For Set of string fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>text</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>text</code> Custom Fields.</p> */
     SearchFieldType SET_TEXT = SearchFieldTypeEnum.SET_TEXT;
     /**
-    <p>For Set of LocalizedString fields and AttributeSetType of <code>ltext</code> Attributes.</p> */
+    <p>For Set of <span>LocalizedString</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>ltext</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>ltext</code> Custom Fields.</p> */
     SearchFieldType SET_LTEXT = SearchFieldTypeEnum.SET_LTEXT;
     /**
-    <p>For Set of enum fields and AttributeSetType of <code>enum</code> Attributes.</p> */
+    <p>For Set of enum fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>enum</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>enum</code> Custom Fields.</p> */
     SearchFieldType SET_ENUM = SearchFieldTypeEnum.SET_ENUM;
     /**
-    <p>For Set of localized enum fields and AttributeSetType of <code>lenum</code> Attributes.</p> */
+    <p>For Set of localized enum fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>lenum</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>lenum</code> Custom Fields.</p> */
     SearchFieldType SET_LENUM = SearchFieldTypeEnum.SET_LENUM;
     /**
-    <p>For Set of number fields and AttributeSetType of <code>number</code> Attributes.</p> */
+    <p>For Set of number fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>number</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>number</code> Custom Fields.</p> */
     SearchFieldType SET_NUMBER = SearchFieldTypeEnum.SET_NUMBER;
     /**
-    <p>For Set of Money fields and AttributeSetType of <code>money</code> Attributes.</p> */
+    <p>For Set of <span>Money</span> fields and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>money</code> Attributes.</p> */
     SearchFieldType SET_MONEY = SearchFieldTypeEnum.SET_MONEY;
     /**
-    <p>For Set of Date fields and AttributeSetType of <code>date</code> Attributes.</p> */
+    <p>For Set of <span>Date</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>date</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>date</code> Custom Fields.</p> */
     SearchFieldType SET_DATE = SearchFieldTypeEnum.SET_DATE;
     /**
-    <p>For Set of DateTime fields and AttributeSetType of <code>datetime</code> Attributes.</p> */
+    <p>For Set of <span>DateTime</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>datetime</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>datetime</code> Custom Fields.</p> */
     SearchFieldType SET_DATETIME = SearchFieldTypeEnum.SET_DATETIME;
     /**
-    <p>For Set of Time fields and AttributeSetType of <code>time</code> Attributes.</p> */
+    <p>For Set of <span>Time</span> fields, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>time</code> Attributes, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <code>time</code> Custom Fields.</p> */
     SearchFieldType SET_TIME = SearchFieldTypeEnum.SET_TIME;
     /**
-    <p>For Set of Reference fields and AttributeSetType of <code>reference</code> Attributes.</p> */
+    <p>For Set of <span>Reference</span> fields and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of <code>reference</code> Attributes.</p> */
     SearchFieldType SET_REFERENCE = SearchFieldTypeEnum.SET_REFERENCE;
 
     /**

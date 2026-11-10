@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when certain API-specific constraints were not met. For example, the specified Discount Code was never applied and cannot be updated.</p>
+ *  <p>Returned when certain API-specific constraints were not met. For example, the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> was never applied and cannot be updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLInternalConstraintViolatedErrorImpl implements GraphQLInternalConstraintViolatedError, ModelBase {
@@ -30,7 +32,8 @@ public class GraphQLInternalConstraintViolatedErrorImpl implements GraphQLIntern
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLInternalConstraintViolatedErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLInternalConstraintViolatedErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = INTERNAL_CONSTRAINT_VIOLATED;
     }
@@ -94,4 +97,8 @@ public class GraphQLInternalConstraintViolatedErrorImpl implements GraphQLIntern
                 .build();
     }
 
+    @Override
+    public GraphQLInternalConstraintViolatedError copyDeep() {
+        return GraphQLInternalConstraintViolatedError.deepCopy(this);
+    }
 }

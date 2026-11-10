@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingInfo
@@ -42,6 +43,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      * create instance with all properties
      */
@@ -55,7 +58,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod,
             @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.Delivery> deliveries,
             @JsonProperty("discountedPrice") final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice,
-            @JsonProperty("shippingMethodState") final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {
+            @JsonProperty("shippingMethodState") final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState,
+            @JsonProperty("estimatedDelivery") final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
         this.shippingMethodName = shippingMethodName;
         this.price = price;
         this.shippingRate = shippingRate;
@@ -66,6 +70,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.deliveries = deliveries;
         this.discountedPrice = discountedPrice;
         this.shippingMethodState = shippingMethodState;
+        this.estimatedDelivery = estimatedDelivery;
     }
 
     /**
@@ -83,7 +88,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
@@ -107,8 +112,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -116,7 +121,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -148,11 +153,19 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced in this ShippingInfo is allowed for the Cart.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
         return this.shippingMethodState;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     */
+
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
     }
 
     public void setShippingMethodName(final String shippingMethodName) {
@@ -201,6 +214,10 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.shippingMethodState = shippingMethodState;
     }
 
+    public void setEstimatedDelivery(final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -221,6 +238,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .append(shippingMethodName, that.shippingMethodName)
                 .append(price, that.price)
                 .append(shippingRate, that.shippingRate)
@@ -231,6 +249,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .isEquals();
     }
 
@@ -246,6 +265,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries)
                 .append(discountedPrice)
                 .append(shippingMethodState)
+                .append(estimatedDelivery)
                 .toHashCode();
     }
 
@@ -262,7 +282,12 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append("deliveries", deliveries)
                 .append("discountedPrice", discountedPrice)
                 .append("shippingMethodState", shippingMethodState)
+                .append("estimatedDelivery", estimatedDelivery)
                 .build();
     }
 
+    @Override
+    public ShippingInfo copyDeep() {
+        return ShippingInfo.deepCopy(this);
+    }
 }

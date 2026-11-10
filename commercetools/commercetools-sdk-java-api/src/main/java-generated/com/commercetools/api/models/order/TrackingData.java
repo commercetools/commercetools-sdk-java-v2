@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information that helps track a Parcel.</p>
@@ -61,10 +62,7 @@ public interface TrackingData {
     public String getProviderTransaction();
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @return isReturn
      */
 
@@ -100,10 +98,7 @@ public interface TrackingData {
     public void setProviderTransaction(final String providerTransaction);
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @param isReturn value to be set
      */
 
@@ -131,6 +126,8 @@ public interface TrackingData {
         instance.setIsReturn(template.getIsReturn());
         return instance;
     }
+
+    public TrackingData copyDeep();
 
     /**
      * factory method to create a deep copy of TrackingData
@@ -182,8 +179,8 @@ public interface TrackingData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TrackingData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TrackingData>() {
+    public static tools.jackson.core.type.TypeReference<TrackingData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TrackingData>() {
             @Override
             public String toString() {
                 return "TypeReference<TrackingData>";

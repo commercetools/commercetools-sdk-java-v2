@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a time set value.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("TimeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeSetFieldImpl.class)
 public interface TimeSetField extends CustomField {
@@ -37,7 +39,7 @@ public interface TimeSetField extends CustomField {
     String TIME_SET = "TimeSet";
 
     /**
-     *
+     *  <p>JSON array of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface TimeSetField extends CustomField {
     public List<LocalTime> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -53,7 +55,7 @@ public interface TimeSetField extends CustomField {
     public void setValue(final LocalTime... value);
 
     /**
-     * set value
+     *  <p>JSON array of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface TimeSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeSetField copyDeep();
 
     /**
      * factory method to create a deep copy of TimeSetField
@@ -124,8 +128,8 @@ public interface TimeSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TimeSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TimeSetField>() {
+    public static tools.jackson.core.type.TypeReference<TimeSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TimeSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<TimeSetField>";

@@ -27,7 +27,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
     private com.commercetools.api.models.quote_request.QuoteRequestState oldQuoteRequestState;
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param quoteRequestState value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
     }
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param oldQuoteRequestState value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
     }
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return quoteRequestState
      */
 
@@ -60,7 +60,7 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
     }
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return oldQuoteRequestState
      */
 

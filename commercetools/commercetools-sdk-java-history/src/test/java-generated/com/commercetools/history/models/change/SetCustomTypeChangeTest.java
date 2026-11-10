@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCustomTypeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCustomTypeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCustomTypeChangeBuilder builder) {
         SetCustomTypeChange setCustomTypeChange = builder.buildUnchecked();
         Assertions.assertThat(setCustomTypeChange).isInstanceOf(SetCustomTypeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCustomTypeChange.builder().change("change") },
-                new Object[] { SetCustomTypeChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetCustomTypeChange.builder()
+        return new Object[][] { new Object[] { "change", SetCustomTypeChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetCustomTypeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "nextValue", SetCustomTypeChange.builder()
                         .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) } };
     }
 

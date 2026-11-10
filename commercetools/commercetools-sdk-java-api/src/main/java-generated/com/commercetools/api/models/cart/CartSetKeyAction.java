@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartSetKeyAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetKeyActionImpl.class)
 public interface CartSetKeyAction extends CartUpdateAction {
@@ -34,7 +36,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @return key
      */
 
@@ -42,7 +44,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @param key value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CartSetKeyAction extends CartUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CartSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetKeyAction
@@ -117,8 +121,8 @@ public interface CartSetKeyAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetKeyAction>";

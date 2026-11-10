@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the Associates of a Business Unit, generates a BusinessUnitAssociatesSet Message.</p>
+ *  <p>Changes the Associates of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociatesSetMessage" rel="nofollow">BusinessUnitAssociatesSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssociates")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitSetAssociatesActionImpl.class)
 public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateAction {
@@ -38,7 +40,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     String SET_ASSOCIATES = "setAssociates";
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. Set to an empty array to remove all existing values.</p>
      * @return associates
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public List<AssociateDraft> getAssociates();
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. Set to an empty array to remove all existing values.</p>
      * @param associates values to be set
      */
 
@@ -55,7 +57,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public void setAssociates(final AssociateDraft... associates);
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. Set to an empty array to remove all existing values.</p>
      * @param associates values to be set
      */
 
@@ -79,6 +81,8 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
         instance.setAssociates(template.getAssociates());
         return instance;
     }
+
+    public BusinessUnitSetAssociatesAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitSetAssociatesAction
@@ -130,8 +134,8 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAssociatesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAssociatesAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitSetAssociatesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitSetAssociatesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetAssociatesAction>";

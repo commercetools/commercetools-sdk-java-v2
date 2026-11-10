@@ -24,7 +24,7 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Embedded Price.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Embedded Price.</p>
      * @return key
      */
 

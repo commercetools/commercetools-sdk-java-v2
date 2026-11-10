@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountOnTotalPrice
@@ -68,7 +69,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
     }
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedNetAmount() {
@@ -76,7 +78,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
     }
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedGrossAmount() {
@@ -144,4 +147,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
                 .build();
     }
 
+    @Override
+    public DiscountOnTotalPrice copyDeep() {
+        return DiscountOnTotalPrice.deepCopy(this);
+    }
 }

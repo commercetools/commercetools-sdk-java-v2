@@ -8,16 +8,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeDraft
@@ -40,6 +41,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -63,7 +66,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return code
      */
     @NotNull
@@ -97,6 +101,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
      */
 
@@ -105,6 +112,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -145,6 +155,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -165,7 +177,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param code value to be set
      */
 
@@ -202,6 +215,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set
      */
 
@@ -209,6 +225,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 
@@ -281,6 +300,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public DiscountCodeDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeDraft
      * @param template instance to be copied
@@ -344,8 +365,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeDraft>";

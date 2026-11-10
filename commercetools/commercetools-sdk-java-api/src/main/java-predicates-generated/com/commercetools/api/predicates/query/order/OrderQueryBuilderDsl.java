@@ -122,11 +122,10 @@ public class OrderQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<OrderQueryBuilderDsl> totalPrice(
-            Function<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("totalPrice"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("totalPrice"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl.of())),
             OrderQueryBuilderDsl::of);
     }
 
@@ -154,6 +153,12 @@ public class OrderQueryBuilderDsl {
                 .parent(ConstantQueryPredicate.of().constant("discountOnTotalPrice"))
                 .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl.of())),
             OrderQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<OrderQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, OrderQueryBuilderDsl::of));
     }
 
     public StringComparisonPredicateBuilder<OrderQueryBuilderDsl> taxMode() {
@@ -296,6 +301,12 @@ public class OrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<OrderQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, OrderQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderQueryBuilderDsl> refusedGifts(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
@@ -356,6 +367,16 @@ public class OrderQueryBuilderDsl {
             OrderQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderQueryBuilderDsl> recurringOrder(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurringOrder"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl
+                            .of())),
+            OrderQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<OrderQueryBuilderDsl> orderState() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderState")),
@@ -410,6 +431,16 @@ public class OrderQueryBuilderDsl {
         return new CollectionPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("returnInfo")),
             p -> new CombinationQueryPredicate<>(p, OrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<OrderQueryBuilderDsl> discountTypeCombination(
+            Function<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("discountTypeCombination"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl.of())),
+            OrderQueryBuilderDsl::of);
     }
 
     public LongComparisonPredicateBuilder<OrderQueryBuilderDsl> lastMessageSequenceNumber() {

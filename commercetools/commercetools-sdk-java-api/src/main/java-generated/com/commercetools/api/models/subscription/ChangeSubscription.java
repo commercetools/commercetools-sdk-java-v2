@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
+ *  <p>Notification about changes to a resource. The payload format differs for resource <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">creation</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceUpdatedDeliveryPayload" rel="nofollow">update</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">deletion</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeSubscription {
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @return resourceTypeId
      */
     @NotNull
@@ -39,7 +40,7 @@ public interface ChangeSubscription {
     public ChangeSubscriptionResourceTypeId getResourceTypeId();
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @param resourceTypeId value to be set
      */
 
@@ -63,6 +64,8 @@ public interface ChangeSubscription {
         instance.setResourceTypeId(template.getResourceTypeId());
         return instance;
     }
+
+    public ChangeSubscription copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeSubscription
@@ -110,8 +113,8 @@ public interface ChangeSubscription {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSubscription> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSubscription>() {
+    public static tools.jackson.core.type.TypeReference<ChangeSubscription> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeSubscription>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeSubscription>";

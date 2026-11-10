@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductRemoveAssetActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductRemoveAssetActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductRemoveAssetActionBuilder builder) {
         ProductRemoveAssetAction productRemoveAssetAction = builder.buildUnchecked();
         Assertions.assertThat(productRemoveAssetAction).isInstanceOf(ProductRemoveAssetAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductRemoveAssetAction.builder().variantId(5L) },
-                new Object[] { ProductRemoveAssetAction.builder().sku("sku") },
-                new Object[] { ProductRemoveAssetAction.builder().staged(true) },
-                new Object[] { ProductRemoveAssetAction.builder().assetId("assetId") },
-                new Object[] { ProductRemoveAssetAction.builder().assetKey("assetKey") } };
+        return new Object[][] { new Object[] { "variantId", ProductRemoveAssetAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductRemoveAssetAction.builder().sku("sku") },
+                new Object[] { "staged", ProductRemoveAssetAction.builder().staged(true) },
+                new Object[] { "assetId", ProductRemoveAssetAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductRemoveAssetAction.builder().assetKey("assetKey") } };
     }
 
     @Test

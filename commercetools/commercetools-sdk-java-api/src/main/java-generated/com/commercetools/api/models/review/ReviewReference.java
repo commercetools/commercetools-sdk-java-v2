@@ -6,17 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to a Review.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("review")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewReferenceImpl.class)
 public interface ReviewReference extends Reference, com.commercetools.api.models.Identifiable<Review>,
@@ -39,7 +42,15 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     String REVIEW = "review";
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @return obj
      */
     @Valid
@@ -47,7 +58,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public Review getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @return id
      */
     @NotNull
@@ -55,14 +66,14 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Review obj);
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @param id value to be set
      */
 
@@ -87,6 +98,8 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public ReviewReference copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewReference
@@ -135,8 +148,8 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewReference>() {
+    public static tools.jackson.core.type.TypeReference<ReviewReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewReference>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewReference>";

@@ -4,7 +4,7 @@ package io.vrap.rmf.base.client;
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * Implementation of a non executable {@link ApiHttpClient}

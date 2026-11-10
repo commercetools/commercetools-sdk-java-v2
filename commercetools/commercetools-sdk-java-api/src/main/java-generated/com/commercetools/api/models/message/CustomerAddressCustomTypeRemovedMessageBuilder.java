@@ -57,6 +57,9 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     @Nullable
     private String previousTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -185,7 +188,7 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -197,7 +200,7 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -259,13 +262,24 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      * @return Builder
      */
 
     public CustomerAddressCustomTypeRemovedMessageBuilder previousTypeId(@Nullable final String previousTypeId) {
         this.previousTypeId = previousTypeId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomTypeRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -335,7 +349,7 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -363,13 +377,23 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
     @Nullable
     public String getPreviousTypeId() {
         return this.previousTypeId;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -388,7 +412,8 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
         Objects.requireNonNull(resourceVersion,
             CustomerAddressCustomTypeRemovedMessage.class + ": resourceVersion is missing");
         return new CustomerAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId,
+            addressId);
     }
 
     /**
@@ -397,7 +422,8 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
      */
     public CustomerAddressCustomTypeRemovedMessage buildUnchecked() {
         return new CustomerAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId,
+            addressId);
     }
 
     /**
@@ -427,6 +453,7 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.previousTypeId = template.getPreviousTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

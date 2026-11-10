@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeTargetShippingChangeValue
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shipping")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetShippingChangeValueImpl.class)
 public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue {
@@ -59,6 +61,8 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
         ChangeTargetShippingChangeValueImpl instance = new ChangeTargetShippingChangeValueImpl();
         return instance;
     }
+
+    public ChangeTargetShippingChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeTargetShippingChangeValue
@@ -105,8 +109,8 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTargetShippingChangeValue>";

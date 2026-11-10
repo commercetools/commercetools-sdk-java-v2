@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A snapshot of an Order at the time it was imported.</p>
@@ -43,6 +44,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     private com.commercetools.api.models.common.Money totalPrice;
 
     private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
+
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
@@ -91,6 +94,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.order.CustomLineItemImportDraft> customLineItems,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -118,6 +122,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.customLineItems = customLineItems;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
@@ -159,7 +164,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the Order belongs to.</p>
      */
 
     public String getCustomerId() {
@@ -167,7 +172,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> is required.</p>
      */
 
     public String getCustomerEmail() {
@@ -183,7 +188,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -191,8 +196,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -200,7 +205,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      */
 
@@ -209,7 +214,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      */
 
@@ -231,6 +236,14 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
         return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -417,6 +430,10 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -508,6 +525,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -535,6 +553,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -567,6 +586,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(inventoryMode)
@@ -599,6 +619,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append("customLineItems", customLineItems)
                 .append("totalPrice", totalPrice)
                 .append("taxedPrice", taxedPrice)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)
@@ -618,4 +639,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderImportDraft copyDeep() {
+        return OrderImportDraft.deepCopy(this);
+    }
 }

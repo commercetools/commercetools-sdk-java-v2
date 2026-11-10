@@ -25,7 +25,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @return discountCode
      */
 

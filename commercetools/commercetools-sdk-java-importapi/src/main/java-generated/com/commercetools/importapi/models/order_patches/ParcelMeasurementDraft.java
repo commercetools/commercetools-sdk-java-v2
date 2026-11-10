@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.orders.ParcelMeasurements;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelMeasurementDraft
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<ParcelMeasurementDraft> {
 
     /**
-     *
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -41,7 +42,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public String getParcelId();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -49,14 +50,14 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public ParcelMeasurements getMeasurements();
 
     /**
-     * set parcelId
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 
@@ -81,6 +82,8 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
+
+    public ParcelMeasurementDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelMeasurementDraft
@@ -130,8 +133,8 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft>() {
+    public static tools.jackson.core.type.TypeReference<ParcelMeasurementDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelMeasurementDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelMeasurementDraft>";

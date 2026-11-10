@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ProductSlugChanged Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSlugChangedMessage" rel="nofollow">ProductSlugChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeSlug")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeSlugActionImpl.class)
 public interface ProductChangeSlugAction extends ProductUpdateAction {
@@ -38,7 +40,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     String CHANGE_SLUG = "changeSlug";
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     public LocalizedString getSlug();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @return staged
      */
 
@@ -55,14 +57,14 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -87,6 +89,8 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductChangeSlugAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductChangeSlugAction
@@ -135,8 +139,8 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeSlugAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeSlugAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangeSlugAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangeSlugAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangeSlugAction>";

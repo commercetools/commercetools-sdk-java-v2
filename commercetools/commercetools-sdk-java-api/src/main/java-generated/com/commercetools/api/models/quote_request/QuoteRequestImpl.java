@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteRequest
@@ -62,6 +63,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -77,6 +80,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
+
+    private Boolean directDiscountsIgnoreCartDiscounts;
 
     private com.commercetools.api.models.type.CustomFields custom;
 
@@ -111,6 +116,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("country") final String country,
@@ -119,6 +125,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
@@ -144,6 +151,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.billingAddress = billingAddress;
         this.inventoryMode = inventoryMode;
         this.taxMode = taxMode;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.country = country;
@@ -152,6 +160,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.shippingRateInput = shippingRateInput;
         this.itemShippingAddresses = itemShippingAddresses;
         this.directDiscounts = directDiscounts;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.custom = custom;
         this.state = state;
         this.purchaseOrderNumber = purchaseOrderNumber;
@@ -238,7 +247,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -254,7 +263,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -294,7 +303,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -310,7 +319,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -318,11 +327,19 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
+    }
+
+    /**
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -350,7 +367,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -366,7 +383,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -390,6 +407,17 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      */
 
@@ -398,7 +426,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -406,7 +434,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -414,7 +442,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -422,7 +450,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -520,6 +548,10 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.taxMode = taxMode;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -560,6 +592,10 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     public void setDirectDiscounts(
             final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
         this.directDiscounts = directDiscounts;
+    }
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
     }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
@@ -613,6 +649,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(billingAddress, that.billingAddress)
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(country, that.country)
@@ -621,6 +658,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
@@ -646,6 +684,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(billingAddress, that.billingAddress)
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(country, that.country)
@@ -654,6 +693,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
@@ -684,6 +724,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(billingAddress)
                 .append(inventoryMode)
                 .append(taxMode)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(country)
@@ -692,6 +733,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(shippingRateInput)
                 .append(itemShippingAddresses)
                 .append(directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(custom)
                 .append(state)
                 .append(purchaseOrderNumber)
@@ -722,6 +764,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append("billingAddress", billingAddress)
                 .append("inventoryMode", inventoryMode)
                 .append("taxMode", taxMode)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("country", country)
@@ -730,6 +773,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append("shippingRateInput", shippingRateInput)
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("directDiscounts", directDiscounts)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("custom", custom)
                 .append("state", state)
                 .append("purchaseOrderNumber", purchaseOrderNumber)
@@ -738,4 +782,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteRequest copyDeep() {
+        return QuoteRequest.deepCopy(this);
+    }
 }

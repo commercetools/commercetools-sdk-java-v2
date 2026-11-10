@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCartPredicateChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCartPredicateChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCartPredicateChangeBuilder builder) {
         SetCartPredicateChange setCartPredicateChange = builder.buildUnchecked();
         Assertions.assertThat(setCartPredicateChange).isInstanceOf(SetCartPredicateChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCartPredicateChange.builder().change("change") },
-                new Object[] { SetCartPredicateChange.builder().previousValue("previousValue") },
-                new Object[] { SetCartPredicateChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetCartPredicateChange.builder().change("change") },
+                new Object[] { "previousValue", SetCartPredicateChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetCartPredicateChange.builder().nextValue("nextValue") } };
     }
 
     @Test

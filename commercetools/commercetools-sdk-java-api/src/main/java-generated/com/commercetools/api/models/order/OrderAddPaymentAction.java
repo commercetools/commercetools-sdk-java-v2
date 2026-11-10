@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * OrderAddPaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentAddedMessage" rel="nofollow">Order Payment Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addPayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderAddPaymentActionImpl.class)
 public interface OrderAddPaymentAction extends OrderUpdateAction {
@@ -38,7 +40,7 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @return payment
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      */
 
@@ -71,6 +73,8 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public OrderAddPaymentAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderAddPaymentAction
@@ -119,8 +123,8 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderAddPaymentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderAddPaymentAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderAddPaymentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderAddPaymentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderAddPaymentAction>";

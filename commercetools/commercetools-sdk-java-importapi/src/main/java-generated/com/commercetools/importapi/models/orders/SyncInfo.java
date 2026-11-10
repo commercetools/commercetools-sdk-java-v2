@@ -7,14 +7,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SyncInfo
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SyncInfo {
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
     @NotNull
@@ -60,7 +61,7 @@ public interface SyncInfo {
     public ZonedDateTime getSyncedAt();
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      */
 
@@ -100,6 +101,8 @@ public interface SyncInfo {
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public SyncInfo copyDeep();
 
     /**
      * factory method to create a deep copy of SyncInfo
@@ -150,8 +153,8 @@ public interface SyncInfo {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SyncInfo> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SyncInfo>() {
+    public static tools.jackson.core.type.TypeReference<SyncInfo> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SyncInfo>() {
             @Override
             public String toString() {
                 return "TypeReference<SyncInfo>";

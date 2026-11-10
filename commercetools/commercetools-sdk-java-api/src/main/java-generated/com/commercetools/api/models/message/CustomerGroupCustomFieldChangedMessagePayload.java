@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after changing an existing Custom Field on a Customer Group using the Set CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerGroupCustomFieldChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupCustomFieldChangedMessagePayloadImpl.class)
 public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePayload {
@@ -44,7 +46,7 @@ public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePa
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
     @NotNull
@@ -52,7 +54,7 @@ public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePa
     public Object getValue();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return oldValue
      */
 
@@ -67,14 +69,14 @@ public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePa
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param oldValue value to be set
      */
 
@@ -101,6 +103,8 @@ public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePa
         instance.setOldValue(template.getOldValue());
         return instance;
     }
+
+    public CustomerGroupCustomFieldChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerGroupCustomFieldChangedMessagePayload
@@ -153,8 +157,8 @@ public interface CustomerGroupCustomFieldChangedMessagePayload extends MessagePa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomFieldChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomFieldChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupCustomFieldChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupCustomFieldChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupCustomFieldChangedMessagePayload>";

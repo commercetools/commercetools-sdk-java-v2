@@ -63,6 +63,11 @@ public class LineItemExpansionBuilderDsl implements ExpansionDsl {
                 .of(appendOne(path, "distributionChannel"));
     }
 
+    public com.commercetools.api.predicates.expansion.reservation.ReservationReferenceExpansionBuilderDsl reservation() {
+        return com.commercetools.api.predicates.expansion.reservation.ReservationReferenceExpansionBuilderDsl
+                .of(appendOne(path, "reservation"));
+    }
+
     public com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl custom() {
         return com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl
                 .of(appendOne(path, "custom"));

@@ -1,36 +1,31 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeTransactionInteractionIdChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeTransactionInteractionIdChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeTransactionInteractionIdChangeBuilder builder) {
         ChangeTransactionInteractionIdChange changeTransactionInteractionIdChange = builder.buildUnchecked();
         Assertions.assertThat(changeTransactionInteractionIdChange)
                 .isInstanceOf(ChangeTransactionInteractionIdChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeTransactionInteractionIdChange.builder().change("change") },
-                new Object[] { ChangeTransactionInteractionIdChange.builder().previousValue("previousValue") },
-                new Object[] { ChangeTransactionInteractionIdChange.builder().nextValue("nextValue") },
-                new Object[] { ChangeTransactionInteractionIdChange.builder()
-                        .transaction(
-                            new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
+        return new Object[][] {
+                new Object[] { "change", ChangeTransactionInteractionIdChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeTransactionInteractionIdChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", ChangeTransactionInteractionIdChange.builder().nextValue("nextValue") },
+                new Object[] { "transaction",
+                        ChangeTransactionInteractionIdChange.builder()
+                                .transaction(
+                                    new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
     }
 
     @Test

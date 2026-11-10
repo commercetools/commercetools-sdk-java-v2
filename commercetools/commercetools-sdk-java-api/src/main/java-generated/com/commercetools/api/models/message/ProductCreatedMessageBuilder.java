@@ -184,7 +184,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -387,7 +387,7 @@ public class ProductCreatedMessageBuilder implements Builder<ProductCreatedMessa
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
 

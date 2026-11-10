@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelSetRolesAction
@@ -52,7 +53,8 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
     }
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
@@ -96,4 +98,8 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ChannelSetRolesAction copyDeep() {
+        return ChannelSetRolesAction.deepCopy(this);
+    }
 }

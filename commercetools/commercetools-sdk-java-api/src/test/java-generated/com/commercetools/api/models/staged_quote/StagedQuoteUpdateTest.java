@@ -3,33 +3,26 @@ package com.commercetools.api.models.staged_quote;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedQuoteUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedQuoteUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedQuoteUpdateBuilder builder) {
         StagedQuoteUpdate stagedQuoteUpdate = builder.buildUnchecked();
         Assertions.assertThat(stagedQuoteUpdate).isInstanceOf(StagedQuoteUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StagedQuoteUpdate.builder().version(2L) },
-                new Object[] { StagedQuoteUpdate.builder()
-                        .actions(Collections.singletonList(
-                            new com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionImpl())) } };
+        return new Object[][] { new Object[] { "version", StagedQuoteUpdate.builder().version(2L) },
+                new Object[] { "actions",
+                        StagedQuoteUpdate.builder()
+                                .actions(Collections.singletonList(
+                                    new com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionImpl())) } };
     }
 
     @Test

@@ -4,7 +4,11 @@ package com.commercetools;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.commercetools.api.models.cart_discount.*;
+import com.commercetools.api.models.common.ReferenceTypeId;
 
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CartDiscountTest {
@@ -93,5 +97,18 @@ public class CartDiscountTest {
                 assertThat(draft.getDistributionChannel().getId()).isEqualTo("foo");
             });
 
+    }
+
+    @Test
+    public void deserializeGiftLineItemWithoutTypeId() {
+        String json = "{\"value\": { \"type\": \"giftLineItem\", \"product\": { \"id\": \"foo\" } } }";
+        CartDiscount cartDiscount = JsonUtils.fromJsonString(json, CartDiscount.class);
+        Assertions.assertThat(cartDiscount.getValue())
+                .isInstanceOfSatisfying(CartDiscountValueGiftLineItem.class, cartDiscountValueGiftLineItem -> {
+                    assertThat(cartDiscountValueGiftLineItem.getProduct().getId()).isEqualTo("foo");
+                    assertThat(cartDiscountValueGiftLineItem.getProduct().getTypeId())
+                            .isEqualTo(ReferenceTypeId.PRODUCT);
+                });
+        Assertions.assertThat(cartDiscount.getValue()).isInstanceOf(CartDiscountValueGiftLineItem.class);
     }
 }

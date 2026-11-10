@@ -44,8 +44,8 @@ public class OrderPaymentAddedMessageExpansionBuilderDsl implements ExpansionDsl
                 .of(appendOne(path, "resource"));
     }
 
-    public com.commercetools.api.predicates.expansion.payment.PaymentReferenceExpansionBuilderDsl payment() {
+    public com.commercetools.api.predicates.expansion.payment.PaymentReferenceExpansionBuilderDsl paymentRef() {
         return com.commercetools.api.predicates.expansion.payment.PaymentReferenceExpansionBuilderDsl
-                .of(appendOne(path, "payment"));
+                .of(appendOne(path, "paymentRef"));
     }
 }

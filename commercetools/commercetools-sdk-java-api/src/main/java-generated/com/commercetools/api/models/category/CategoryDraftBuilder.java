@@ -59,6 +59,9 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     @Nullable
     private String key;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
     /**
      *  <p>Name of the Category.</p>
      * @param builder function to build the name value
@@ -95,7 +98,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -107,7 +110,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -119,7 +122,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -203,7 +206,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -456,6 +459,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -463,6 +467,123 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     public CategoryDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder stores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder plusStores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
 
     /**
@@ -475,7 +596,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
 
@@ -504,7 +625,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @return orderHint
      */
 
@@ -575,12 +696,27 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
     @Nullable
     public String getKey() {
         return this.key;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @return stores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
     }
 
     /**
@@ -591,7 +727,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         Objects.requireNonNull(name, CategoryDraft.class + ": name is missing");
         Objects.requireNonNull(slug, CategoryDraft.class + ": slug is missing");
         return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,
-            metaKeywords, custom, assets, key);
+            metaKeywords, custom, assets, key, stores);
     }
 
     /**
@@ -600,7 +736,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
      */
     public CategoryDraft buildUnchecked() {
         return new CategoryDraftImpl(name, slug, description, parent, orderHint, externalId, metaTitle, metaDescription,
-            metaKeywords, custom, assets, key);
+            metaKeywords, custom, assets, key, stores);
     }
 
     /**
@@ -630,6 +766,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         builder.custom = template.getCustom();
         builder.assets = template.getAssets();
         builder.key = template.getKey();
+        builder.stores = template.getStores();
         return builder;
     }
 

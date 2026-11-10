@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Field to an address of a Business Unit using the Set Address CustomField update action. If a Custom Field already exists with the same name, a BusinessUnitAddressCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address CustomField</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldChangedMessage" rel="nofollow">BusinessUnitAddressCustomFieldChanged</a> Message is generated instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressCustomFieldAddedMessageImpl
@@ -49,6 +50,8 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
 
     private java.lang.Object value;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +66,8 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +80,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.name = name;
         this.value = value;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED;
     }
 
@@ -143,7 +148,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +164,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -183,11 +188,19 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      */
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     public void setId(final String id) {
@@ -239,6 +252,10 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
         this.value = value;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +279,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +293,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -293,6 +312,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers)
                 .append(name)
                 .append(value)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -311,7 +331,12 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("name", name)
                 .append("value", value)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomFieldAddedMessage copyDeep() {
+        return BusinessUnitAddressCustomFieldAddedMessage.deepCopy(this);
+    }
 }

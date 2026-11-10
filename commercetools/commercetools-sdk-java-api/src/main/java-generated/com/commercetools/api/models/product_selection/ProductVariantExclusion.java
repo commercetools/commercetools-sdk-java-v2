@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+ *  <p>Defines the Product Variants that are excluded from a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Product Variants not listed remain available in the Product Selection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantExclusion {
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @return skus
      */
     @NotNull
@@ -39,7 +40,7 @@ public interface ProductVariantExclusion {
     public List<String> getSkus();
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param skus values to be set
      */
 
@@ -47,7 +48,7 @@ public interface ProductVariantExclusion {
     public void setSkus(final String... skus);
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param skus values to be set
      */
 
@@ -71,6 +72,8 @@ public interface ProductVariantExclusion {
         instance.setSkus(template.getSkus());
         return instance;
     }
+
+    public ProductVariantExclusion copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantExclusion
@@ -118,8 +121,8 @@ public interface ProductVariantExclusion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantExclusion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantExclusion>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantExclusion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantExclusion>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantExclusion>";

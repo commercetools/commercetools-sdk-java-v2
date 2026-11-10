@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategorySetAssetDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetAssetDescriptionActionImpl.class)
 public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction {
@@ -52,7 +54,7 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
     public String getAssetKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -74,7 +76,7 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
     public void setAssetKey(final String assetKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -100,6 +102,8 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public CategorySetAssetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetAssetDescriptionAction
@@ -151,8 +155,8 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<CategorySetAssetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategorySetAssetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySetAssetDescriptionAction>";

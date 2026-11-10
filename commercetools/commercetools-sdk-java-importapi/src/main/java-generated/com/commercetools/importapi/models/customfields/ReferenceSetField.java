@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a reference set value.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferenceSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
@@ -39,7 +41,7 @@ public interface ReferenceSetField extends CustomField {
     String REFERENCE_SET = "ReferenceSet";
 
     /**
-     *
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface ReferenceSetField extends CustomField {
     public List<KeyReference> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -56,7 +58,7 @@ public interface ReferenceSetField extends CustomField {
     public void setValue(final KeyReference... value);
 
     /**
-     * set value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -80,6 +82,8 @@ public interface ReferenceSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceSetField copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceSetField
@@ -131,8 +135,8 @@ public interface ReferenceSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceSetField>() {
+    public static tools.jackson.core.type.TypeReference<ReferenceSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReferenceSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<ReferenceSetField>";

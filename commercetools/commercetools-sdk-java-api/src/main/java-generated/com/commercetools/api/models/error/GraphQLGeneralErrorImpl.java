@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a server-side problem occurs before or after data persistence. In some cases, the requested action may successfully complete after the error is returned. Therefore, it is recommended to verify the status of the requested resource after receiving a 500 error.</p>
- *  <p>If you encounter this error, report it to the Composable Commerce support team.</p>
+ *  <p>If you encounter this error, report it to the <span>commercetools support team</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
@@ -31,7 +33,7 @@ public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLGeneralErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLGeneralErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = GENERAL;
     }
@@ -95,4 +97,8 @@ public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLGeneralError copyDeep() {
+        return GraphQLGeneralError.deepCopy(this);
+    }
 }

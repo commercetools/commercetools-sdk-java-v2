@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generates the ProductTailoringNameSet Message.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringNameSetMessage" rel="nofollow">ProductTailoringNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringSetNameActionImpl implements ProductTailoringSetNameAction, ModelBase {
@@ -56,7 +57,7 @@ public class ProductTailoringSetNameActionImpl implements ProductTailoringSetNam
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -64,7 +65,7 @@ public class ProductTailoringSetNameActionImpl implements ProductTailoringSetNam
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -111,4 +112,8 @@ public class ProductTailoringSetNameActionImpl implements ProductTailoringSetNam
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetNameAction copyDeep() {
+        return ProductTailoringSetNameAction.deepCopy(this);
+    }
 }

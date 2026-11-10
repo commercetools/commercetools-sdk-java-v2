@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ShipmentState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change ShipmentState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change ShipmentState</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderShipmentStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePayload {
@@ -37,7 +39,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     String ORDER_SHIPMENT_STATE_CHANGED = "OrderShipmentStateChanged";
 
     /**
-     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @return shipmentState
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     public ShipmentState getShipmentState();
 
     /**
-     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @return oldShipmentState
      */
 
@@ -53,14 +55,14 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     public ShipmentState getOldShipmentState();
 
     /**
-     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @param shipmentState value to be set
      */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
     /**
-     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @param oldShipmentState value to be set
      */
 
@@ -85,6 +87,8 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
         instance.setOldShipmentState(template.getOldShipmentState());
         return instance;
     }
+
+    public OrderShipmentStateChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderShipmentStateChangedMessagePayload
@@ -136,8 +140,8 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderShipmentStateChangedMessagePayload>";

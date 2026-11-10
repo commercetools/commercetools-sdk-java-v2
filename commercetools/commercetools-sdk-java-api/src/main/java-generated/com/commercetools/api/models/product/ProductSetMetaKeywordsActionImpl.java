@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetMetaKeywordsAction
@@ -56,7 +57,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -64,7 +65,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -111,4 +112,8 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
                 .build();
     }
 
+    @Override
+    public ProductSetMetaKeywordsAction copyDeep() {
+        return ProductSetMetaKeywordsAction.deepCopy(this);
+    }
 }

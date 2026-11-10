@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountCodeState;
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after the DiscountCodeState changes due to a recalculation.</p>
+ *  <p>Generated after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> changes due to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">recalculation</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,6 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderDiscountCodeStateSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeStateSetMessageImpl.class)
 public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
@@ -47,7 +49,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @return discountCode
      */
     @NotNull
@@ -56,7 +58,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @return state
      */
     @NotNull
@@ -64,7 +66,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     public DiscountCodeState getState();
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @return oldState
      */
 
@@ -72,21 +74,21 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     public DiscountCodeState getOldState();
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param discountCode value to be set
      */
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @param state value to be set
      */
 
     public void setState(final DiscountCodeState state);
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @param oldState value to be set
      */
 
@@ -122,6 +124,8 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
         instance.setOldState(template.getOldState());
         return instance;
     }
+
+    public OrderDiscountCodeStateSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderDiscountCodeStateSetMessage
@@ -184,8 +188,8 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderDiscountCodeStateSetMessage>";

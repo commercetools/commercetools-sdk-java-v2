@@ -85,6 +85,12 @@ public class DivisionDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, DivisionDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<DivisionDraftQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, DivisionDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<DivisionDraftQueryBuilderDsl> addresses(
             Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -130,6 +136,21 @@ public class DivisionDraftQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
             DivisionDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<DivisionDraftQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl.of())),
+            DivisionDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<DivisionDraftQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, DivisionDraftQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<DivisionDraftQueryBuilderDsl> parentUnit(

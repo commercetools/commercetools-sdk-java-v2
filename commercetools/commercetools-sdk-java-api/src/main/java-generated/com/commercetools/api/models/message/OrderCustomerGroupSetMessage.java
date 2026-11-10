@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Customer Group update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomerGroupSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerGroupSetMessageImpl.class)
 public interface OrderCustomerGroupSetMessage extends OrderMessage {
@@ -43,7 +45,7 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return customerGroup
      */
     @Valid
@@ -51,7 +53,7 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return oldCustomerGroup
      */
     @Valid
@@ -59,14 +61,14 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
     public CustomerGroupReference getOldCustomerGroup();
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param oldCustomerGroup value to be set
      */
 
@@ -101,6 +103,8 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
         return instance;
     }
+
+    public OrderCustomerGroupSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomerGroupSetMessage
@@ -163,8 +167,8 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomerGroupSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomerGroupSetMessage>";

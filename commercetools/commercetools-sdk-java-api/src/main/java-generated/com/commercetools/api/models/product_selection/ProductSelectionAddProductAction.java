@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Adds a Product to the Product Selection.</p>
- *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a ProductPresentWithDifferentVariantSelection error is returned.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPresentWithDifferentVariantSelectionError" rel="nofollow">ProductPresentWithDifferentVariantSelection</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addProduct")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionAddProductActionImpl.class)
 public interface ProductSelectionAddProductAction extends ProductSelectionUpdateAction {
@@ -89,6 +91,8 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
         return instance;
     }
 
+    public ProductSelectionAddProductAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionAddProductAction
      * @param template instance to be copied
@@ -138,8 +142,8 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAddProductAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAddProductAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionAddProductAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionAddProductAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionAddProductAction>";

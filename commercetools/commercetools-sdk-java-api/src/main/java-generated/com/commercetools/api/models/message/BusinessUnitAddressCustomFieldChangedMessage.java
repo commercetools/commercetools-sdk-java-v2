@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after changing an existing Custom Field on an address of a Business Unit using the Set Address CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address CustomField</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitAddressCustomFieldChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAddressCustomFieldChangedMessageImpl.class)
 public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
@@ -51,7 +53,7 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
     @NotNull
@@ -59,12 +61,20 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
     public Object getValue();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return oldValue
      */
 
     @JsonProperty("oldValue")
     public Object getOldValue();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
 
     /**
      *  <p>Name of the Custom Field that changed.</p>
@@ -74,18 +84,25 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param oldValue value to be set
      */
 
     public void setOldValue(final Object oldValue);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -116,8 +133,11 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setOldValue(template.getOldValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public BusinessUnitAddressCustomFieldChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitAddressCustomFieldChangedMessage
@@ -146,6 +166,7 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setOldValue(template.getOldValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -182,8 +203,8 @@ public interface BusinessUnitAddressCustomFieldChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomFieldChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomFieldChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomFieldChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomFieldChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddressCustomFieldChangedMessage>";

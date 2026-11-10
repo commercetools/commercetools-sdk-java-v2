@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleKeySetMessageImpl.class)
 public interface ApprovalRuleKeySetMessage extends Message {
@@ -41,7 +43,7 @@ public interface ApprovalRuleKeySetMessage extends Message {
     String APPROVAL_RULE_KEY_SET = "ApprovalRuleKeySet";
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -49,7 +51,7 @@ public interface ApprovalRuleKeySetMessage extends Message {
     public String getKey();
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 
@@ -57,14 +59,14 @@ public interface ApprovalRuleKeySetMessage extends Message {
     public String getOldKey();
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      */
 
@@ -99,6 +101,8 @@ public interface ApprovalRuleKeySetMessage extends Message {
         instance.setOldKey(template.getOldKey());
         return instance;
     }
+
+    public ApprovalRuleKeySetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleKeySetMessage
@@ -159,8 +163,8 @@ public interface ApprovalRuleKeySetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleKeySetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleKeySetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleKeySetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleKeySetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleKeySetMessage>";

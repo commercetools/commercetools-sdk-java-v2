@@ -8,6 +8,7 @@ target/
 classes/
 .classpath
 bin
+.DS_Store
 
 
 .idea

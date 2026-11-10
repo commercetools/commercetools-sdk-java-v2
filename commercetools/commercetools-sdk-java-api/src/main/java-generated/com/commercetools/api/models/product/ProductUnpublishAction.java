@@ -8,13 +8,19 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removes the current projection of the Product. The staged projection is unaffected. To retrieve unpublished Products, the <code>staged</code> parameter must be set to <code>false</code> when querying/searching Product Projections. Produces the ProductUnpublished Message.</p>
- *  <p>Unpublished Products cannot be added to a Cart. However, if a Cart contains Line Items for Products that were added before the Product was unpublished, the Cart is unaffected and can still be used to create an Order. To prevent this, in addition to unpublishing the Product you should remove the Prices from the Product using Remove Price for Embedded Prices or Delete StandalonePrice for Standalone Prices.</p>
+ *  <p>Sets the <code>published</code> flag on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>false</code>. This makes the <span>current</span> representation of a Product unavailable in <span>Product Projection</span> endpoints by default, and excludes it from <span>Product Search</span>. To retrieve unpublished Products on Product Projection endpoints, set parameter <code>staged=true</code>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishedMessage" rel="nofollow">ProductUnpublished</a> Message.</p>
+ *  <p>When a Product is unpublished, any associated Line Items already present in a Cart remain unaffected and can still be ordered. To prevent this, do the following:</p>
+ *  <ul>
+ *   <li>If the Product uses Embedded Prices, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">remove the Embedded Prices</a> from the unpublished Product.</li>
+ *   <li>If the Product uses Standalone Prices, <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">inactivate</a> or <span>delete</span> the Standalone Prices.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("unpublish")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductUnpublishActionImpl.class)
 public interface ProductUnpublishAction extends ProductUpdateAction {
@@ -51,6 +58,8 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
         ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
         return instance;
     }
+
+    public ProductUnpublishAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductUnpublishAction
@@ -97,8 +106,8 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductUnpublishAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductUnpublishAction>";

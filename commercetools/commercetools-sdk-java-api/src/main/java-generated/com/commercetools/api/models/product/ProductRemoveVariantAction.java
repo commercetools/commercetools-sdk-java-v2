@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message. If the Product Variant to remove is part of a ProductSelectionAssignment its SKU will be automatically removed from the respective ProductVariantSelection.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantDeletedMessage" rel="nofollow">ProductVariantDeleted</a> Message. If the Product Variant to remove is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">ProductSelectionAssignment</a> its SKU will be automatically removed from the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveVariantActionImpl.class)
 public interface ProductRemoveVariantAction extends ProductUpdateAction {
@@ -50,7 +52,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @return staged
      */
 
@@ -72,7 +74,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @param staged value to be set
      */
 
@@ -98,6 +100,8 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductRemoveVariantAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemoveVariantAction
@@ -147,8 +151,8 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductRemoveVariantAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRemoveVariantAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRemoveVariantAction>";

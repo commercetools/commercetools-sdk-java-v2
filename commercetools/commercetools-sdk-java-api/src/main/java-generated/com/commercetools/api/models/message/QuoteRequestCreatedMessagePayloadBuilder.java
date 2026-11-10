@@ -25,7 +25,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
     private com.commercetools.api.models.quote_request.QuoteRequest quoteRequest;
 
     /**
-     *  <p>Quote Request that was created.</p>
+     *  <p><span>Quote Request</span> that was created.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
     }
 
     /**
-     *  <p>Quote Request that was created.</p>
+     *  <p><span>Quote Request</span> that was created.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
     }
 
     /**
-     *  <p>Quote Request that was created.</p>
+     *  <p><span>Quote Request</span> that was created.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
     }
 
     /**
-     *  <p>Quote Request that was created.</p>
+     *  <p><span>Quote Request</span> that was created.</p>
      * @return quoteRequest
      */
 

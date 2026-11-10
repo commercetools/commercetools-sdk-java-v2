@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetDeliveryCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetDeliveryCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetDeliveryCustomFieldActionBuilder builder) {
         StagedOrderSetDeliveryCustomFieldAction stagedOrderSetDeliveryCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetDeliveryCustomFieldAction)
                 .isInstanceOf(StagedOrderSetDeliveryCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetDeliveryCustomFieldAction.builder().deliveryId("deliveryId") },
-                new Object[] { StagedOrderSetDeliveryCustomFieldAction.builder().deliveryKey("deliveryKey") },
-                new Object[] { StagedOrderSetDeliveryCustomFieldAction.builder().name("name") },
-                new Object[] { StagedOrderSetDeliveryCustomFieldAction.builder().value("value") } };
+                new Object[] { "deliveryId",
+                        StagedOrderSetDeliveryCustomFieldAction.builder().deliveryId("deliveryId") },
+                new Object[] { "deliveryKey",
+                        StagedOrderSetDeliveryCustomFieldAction.builder().deliveryKey("deliveryKey") },
+                new Object[] { "name", StagedOrderSetDeliveryCustomFieldAction.builder().name("name") },
+                new Object[] { "value", StagedOrderSetDeliveryCustomFieldAction.builder().value("value") } };
     }
 
     @Test

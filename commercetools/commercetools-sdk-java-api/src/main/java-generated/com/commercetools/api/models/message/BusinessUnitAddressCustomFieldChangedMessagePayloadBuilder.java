@@ -31,6 +31,9 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     @Nullable
     private java.lang.Object oldValue;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
@@ -43,7 +46,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -54,7 +57,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param oldValue value to be set
      * @return Builder
      */
@@ -62,6 +65,17 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     public BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder oldValue(
             @Nullable final java.lang.Object oldValue) {
         this.oldValue = oldValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -75,7 +89,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
 
@@ -84,7 +98,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return oldValue
      */
 
@@ -94,13 +108,23 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomFieldChangedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressCustomFieldChangedMessagePayload
      */
     public BusinessUnitAddressCustomFieldChangedMessagePayload build() {
         Objects.requireNonNull(name, BusinessUnitAddressCustomFieldChangedMessagePayload.class + ": name is missing");
         Objects.requireNonNull(value, BusinessUnitAddressCustomFieldChangedMessagePayload.class + ": value is missing");
-        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue);
+        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue, addressId);
     }
 
     /**
@@ -108,7 +132,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
      * @return BusinessUnitAddressCustomFieldChangedMessagePayload
      */
     public BusinessUnitAddressCustomFieldChangedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue);
+        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue, addressId);
     }
 
     /**
@@ -130,6 +154,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
         builder.name = template.getName();
         builder.value = template.getValue();
         builder.oldValue = template.getOldValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

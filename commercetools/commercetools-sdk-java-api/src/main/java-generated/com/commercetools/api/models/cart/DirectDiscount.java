@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
 import com.commercetools.api.models.cart_discount.CartDiscountValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents a CartDiscount that is only associated with a single Cart or Order.</p>
+ *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> that is only associated with a single Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,12 +54,24 @@ public interface DirectDiscount {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
     @Valid
     @JsonProperty("target")
     public CartDiscountTarget getTarget();
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @return participateInBestDealSelection
+     */
+
+    @JsonProperty("participateInBestDealSelection")
+    public Boolean getParticipateInBestDealSelection();
 
     /**
      *  <p>Unique identifier of the Direct Discount.</p>
@@ -76,11 +89,22 @@ public interface DirectDiscount {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
 
     public void setTarget(final CartDiscountTarget target);
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @param participateInBestDealSelection value to be set
+     */
+
+    public void setParticipateInBestDealSelection(final Boolean participateInBestDealSelection);
 
     /**
      * factory method
@@ -100,8 +124,11 @@ public interface DirectDiscount {
         instance.setId(template.getId());
         instance.setValue(template.getValue());
         instance.setTarget(template.getTarget());
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
+
+    public DirectDiscount copyDeep();
 
     /**
      * factory method to create a deep copy of DirectDiscount
@@ -118,6 +145,7 @@ public interface DirectDiscount {
         instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
 
@@ -152,8 +180,8 @@ public interface DirectDiscount {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DirectDiscount> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DirectDiscount>() {
+    public static tools.jackson.core.type.TypeReference<DirectDiscount> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DirectDiscount>() {
             @Override
             public String toString() {
                 return "TypeReference<DirectDiscount>";

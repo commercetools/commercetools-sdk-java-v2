@@ -202,7 +202,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -287,7 +287,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -321,7 +321,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -332,7 +332,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -346,7 +346,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param countries value to be set
      * @return Builder
      */
@@ -358,7 +358,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param countries value to be set
      * @return Builder
      */
@@ -370,7 +370,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param countries value to be set
      * @return Builder
      */
@@ -385,7 +385,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the countries value
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the countries value
      * @return Builder
      */
@@ -413,7 +413,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the countries value
      * @return Builder
      */
@@ -424,7 +424,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the countries value
      * @return Builder
      */
@@ -435,7 +435,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -447,7 +447,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -459,7 +459,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -474,7 +474,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -490,7 +490,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -504,7 +504,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -516,7 +516,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -527,7 +527,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -539,7 +539,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -551,7 +551,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -566,7 +566,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -582,7 +582,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -596,7 +596,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -607,7 +607,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -618,7 +618,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param productSelections value to be set
      * @return Builder
      */
@@ -630,7 +630,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param productSelections value to be set
      * @return Builder
      */
@@ -642,7 +642,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param productSelections value to be set
      * @return Builder
      */
@@ -657,7 +657,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the productSelections value
      * @return Builder
      */
@@ -673,7 +673,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the productSelections value
      * @return Builder
      */
@@ -687,7 +687,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the productSelections value
      * @return Builder
      */
@@ -699,7 +699,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the productSelections value
      * @return Builder
      */
@@ -710,7 +710,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -722,7 +722,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -734,7 +734,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -810,7 +810,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -838,7 +838,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return name
      */
 
@@ -848,7 +848,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      * @return languages
      */
 
@@ -858,7 +858,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return countries
      */
 
@@ -868,7 +868,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return distributionChannels
      */
 
@@ -877,7 +877,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return supplyChannels
      */
 
@@ -886,7 +886,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return productSelections
      */
 
@@ -895,7 +895,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      * @return custom
      */
 

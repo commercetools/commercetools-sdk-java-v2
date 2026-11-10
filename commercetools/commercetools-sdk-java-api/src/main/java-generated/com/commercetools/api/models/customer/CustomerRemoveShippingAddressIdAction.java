@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removes a shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>Removes a shipping address from <code>shippingAddressIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeShippingAddressId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerRemoveShippingAddressIdActionImpl.class)
 public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @return addressId
      */
 
@@ -42,7 +44,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @return addressKey
      */
 
@@ -50,14 +52,14 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @param addressKey value to be set
      */
 
@@ -82,6 +84,8 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public CustomerRemoveShippingAddressIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerRemoveShippingAddressIdAction
@@ -132,8 +136,8 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveShippingAddressIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveShippingAddressIdAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerRemoveShippingAddressIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerRemoveShippingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerRemoveShippingAddressIdAction>";

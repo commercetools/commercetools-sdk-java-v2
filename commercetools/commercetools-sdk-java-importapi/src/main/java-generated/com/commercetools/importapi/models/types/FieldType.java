@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * FieldType
+ *  <p>Defines the data type of a Custom Field. Maps to <code>Type.FieldDefinition.type</code>. The <code>discriminator</code> is used to determine the type of the field.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -25,31 +26,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldBooleanTypeImpl.class, name = CustomFieldBooleanType.BOOLEAN),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldDateTimeTypeImpl.class, name = CustomFieldDateTimeType.DATE_TIME),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldDateTypeImpl.class, name = CustomFieldDateType.DATE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldEnumTypeImpl.class, name = CustomFieldEnumType.ENUM),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldLocalizedEnumTypeImpl.class, name = CustomFieldLocalizedEnumType.LOCALIZED_ENUM),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldLocalizedStringTypeImpl.class, name = CustomFieldLocalizedStringType.LOCALIZED_STRING),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldMoneyTypeImpl.class, name = CustomFieldMoneyType.MONEY),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldNumberTypeImpl.class, name = CustomFieldNumberType.NUMBER),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldReferenceTypeImpl.class, name = CustomFieldReferenceType.REFERENCE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldSetTypeImpl.class, name = CustomFieldSetType.SET),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldStringTypeImpl.class, name = CustomFieldStringType.STRING),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.types.CustomFieldTimeTypeImpl.class, name = CustomFieldTimeType.TIME) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "name", defaultImpl = FieldTypeImpl.class, visible = true)
 @JsonDeserialize(as = FieldTypeImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface FieldType {
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field. This value can't be changed after you import the Type.</p>
      * @return name
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
+
+    public FieldType copyDeep();
 
     /**
      * factory method to create a deep copy of FieldType
@@ -61,53 +51,9 @@ public interface FieldType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldBooleanType) {
-            return com.commercetools.importapi.models.types.CustomFieldBooleanType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldBooleanType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldDateTimeType) {
-            return com.commercetools.importapi.models.types.CustomFieldDateTimeType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldDateTimeType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldDateType) {
-            return com.commercetools.importapi.models.types.CustomFieldDateType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldDateType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldEnumType) {
-            return com.commercetools.importapi.models.types.CustomFieldEnumType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldEnumType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldLocalizedEnumType) {
-            return com.commercetools.importapi.models.types.CustomFieldLocalizedEnumType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldLocalizedEnumType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldLocalizedStringType) {
-            return com.commercetools.importapi.models.types.CustomFieldLocalizedStringType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldLocalizedStringType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldMoneyType) {
-            return com.commercetools.importapi.models.types.CustomFieldMoneyType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldMoneyType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldNumberType) {
-            return com.commercetools.importapi.models.types.CustomFieldNumberType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldNumberType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldReferenceType) {
-            return com.commercetools.importapi.models.types.CustomFieldReferenceType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldReferenceType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldSetType) {
-            return com.commercetools.importapi.models.types.CustomFieldSetType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldSetType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldStringType) {
-            return com.commercetools.importapi.models.types.CustomFieldStringType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldStringType) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.types.CustomFieldTimeType) {
-            return com.commercetools.importapi.models.types.CustomFieldTimeType
-                    .deepCopy((com.commercetools.importapi.models.types.CustomFieldTimeType) template);
+
+        if (!(template instanceof FieldTypeImpl)) {
+            return template.copyDeep();
         }
         FieldTypeImpl instance = new FieldTypeImpl();
         return instance;
@@ -223,8 +169,8 @@ public interface FieldType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FieldType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FieldType>() {
+    public static tools.jackson.core.type.TypeReference<FieldType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FieldType>() {
             @Override
             public String toString() {
                 return "TypeReference<FieldType>";

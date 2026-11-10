@@ -8,13 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the Cart the Order has been created from.</p>
- *  <p>Produces the Order Customer Email Set Message.</p>
+ *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> the Order has been created from.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomerEmailSetMessage" rel="nofollow">Order Customer Email Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetCustomerEmailActionImpl.class)
 public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
@@ -35,7 +37,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 
@@ -43,7 +45,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
     public String getEmail();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      */
 
@@ -67,6 +69,8 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public OrderSetCustomerEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetCustomerEmailAction
@@ -114,8 +118,8 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomerEmailAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomerEmailAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetCustomerEmailAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetCustomerEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetCustomerEmailAction>";

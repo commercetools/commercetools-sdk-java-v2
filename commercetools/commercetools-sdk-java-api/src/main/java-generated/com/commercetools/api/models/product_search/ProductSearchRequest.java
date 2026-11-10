@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.search.SearchQuery;
 import com.commercetools.api.models.search.SearchSorting;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchRequest
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchRequest {
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      * @return query
      */
     @Valid
@@ -41,7 +42,7 @@ public interface ProductSearchRequest {
     public SearchQuery getQuery();
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @return sort
      */
     @Valid
@@ -49,7 +50,7 @@ public interface ProductSearchRequest {
     public List<SearchSorting> getSort();
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      * @return limit
      */
 
@@ -57,7 +58,7 @@ public interface ProductSearchRequest {
     public Integer getLimit();
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @return offset
      */
 
@@ -65,7 +66,7 @@ public interface ProductSearchRequest {
     public Integer getOffset();
 
     /**
-     *  <p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      * @return markMatchingVariants
      */
 
@@ -73,15 +74,16 @@ public interface ProductSearchRequest {
     public Boolean getMarkMatchingVariants();
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @return productProjectionParameters
      */
     @Valid
+    @Deprecated
     @JsonProperty("productProjectionParameters")
     public ProductSearchProjectionParams getProductProjectionParameters();
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @return facets
      */
     @Valid
@@ -97,14 +99,14 @@ public interface ProductSearchRequest {
     public SearchQuery getPostFilter();
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      * @param query value to be set
      */
 
     public void setQuery(final SearchQuery query);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
@@ -112,42 +114,42 @@ public interface ProductSearchRequest {
     public void setSort(final SearchSorting... sort);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
     public void setSort(final List<SearchSorting> sort);
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Integer offset);
 
     /**
-     *  <p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      * @param markMatchingVariants value to be set
      */
 
     public void setMarkMatchingVariants(final Boolean markMatchingVariants);
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param productProjectionParameters value to be set
      */
-
+    @Deprecated
     public void setProductProjectionParameters(final ProductSearchProjectionParams productProjectionParameters);
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @param facets values to be set
      */
 
@@ -155,7 +157,7 @@ public interface ProductSearchRequest {
     public void setFacets(final ProductSearchFacetExpression... facets);
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @param facets values to be set
      */
 
@@ -193,6 +195,8 @@ public interface ProductSearchRequest {
         instance.setPostFilter(template.getPostFilter());
         return instance;
     }
+
+    public ProductSearchRequest copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSearchRequest
@@ -257,8 +261,8 @@ public interface ProductSearchRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchRequest>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchRequest>";

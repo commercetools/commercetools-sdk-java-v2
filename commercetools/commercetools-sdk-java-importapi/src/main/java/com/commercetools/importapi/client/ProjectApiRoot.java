@@ -113,6 +113,26 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyProductSelectionsRequestBuilder productSelections() {
+        return with().productSelections();
+    }
+
+    @Override
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return with().businessUnits();
+    }
+
+    @Override
+    public ByProjectKeyProductTailoringsRequestBuilder productTailorings() {
+        return with().productTailorings();
+    }
+
+    @Override
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return with().variants();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

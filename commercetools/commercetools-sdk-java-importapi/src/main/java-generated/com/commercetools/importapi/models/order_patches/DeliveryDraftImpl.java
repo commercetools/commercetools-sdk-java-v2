@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryDraft
@@ -48,7 +49,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -56,7 +57,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -64,7 +65,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> getParcels() {
@@ -124,4 +125,8 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryDraft copyDeep() {
+        return DeliveryDraft.deepCopy(this);
+    }
 }

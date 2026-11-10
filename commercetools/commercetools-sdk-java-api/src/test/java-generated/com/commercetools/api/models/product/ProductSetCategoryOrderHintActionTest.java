@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetCategoryOrderHintActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetCategoryOrderHintActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetCategoryOrderHintActionBuilder builder) {
         ProductSetCategoryOrderHintAction productSetCategoryOrderHintAction = builder.buildUnchecked();
         Assertions.assertThat(productSetCategoryOrderHintAction).isInstanceOf(ProductSetCategoryOrderHintAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetCategoryOrderHintAction.builder().categoryId("categoryId") },
-                new Object[] { ProductSetCategoryOrderHintAction.builder().orderHint("orderHint") },
-                new Object[] { ProductSetCategoryOrderHintAction.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "categoryId", ProductSetCategoryOrderHintAction.builder().categoryId("categoryId") },
+                new Object[] { "orderHint", ProductSetCategoryOrderHintAction.builder().orderHint("orderHint") },
+                new Object[] { "staged", ProductSetCategoryOrderHintAction.builder().staged(true) } };
     }
 
     @Test

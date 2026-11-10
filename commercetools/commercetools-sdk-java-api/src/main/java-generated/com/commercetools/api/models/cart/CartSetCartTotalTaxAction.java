@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action adds the <code>taxedPrice</code> field to the Cart and must be used after any price-affecting change occurs within the Cart.</p>
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This update action adds the <code>taxedPrice</code> field to the Cart. It sets the <code>totalGross</code> amount, and Composable Commerce calculates the <code>totalNet</code> and <code>totalTax</code> values based on the provided <code>externalTotalGross</code>. You must use this update action after any price-affecting change occurs within the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCartTotalTax")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
@@ -39,7 +41,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     String SET_CART_TOTAL_TAX = "setCartTotalTax";
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @return externalTotalGross
      */
     @NotNull
@@ -56,7 +58,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public List<TaxPortionDraft> getExternalTaxPortions();
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @param externalTotalGross value to be set
      */
 
@@ -96,6 +98,8 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
         return instance;
     }
+
+    public CartSetCartTotalTaxAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetCartTotalTaxAction
@@ -149,8 +153,8 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetCartTotalTaxAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetCartTotalTaxAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetCartTotalTaxAction>";

@@ -40,6 +40,29 @@ public class MyPaymentUpdateActionQueryBuilderDsl {
             MyPaymentUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> asSetMethodInfoCustomField(
+            Function<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl.of()),
+            MyPaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> asSetMethodInfoCustomType(
+            Function<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl.of()),
+            MyPaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> asSetMethodInfoInterfaceAccount(
+            Function<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl.of()),
+            MyPaymentUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> asSetMethodInfoInterface(
             Function<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoInterfaceActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyPaymentSetMethodInfoInterfaceActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

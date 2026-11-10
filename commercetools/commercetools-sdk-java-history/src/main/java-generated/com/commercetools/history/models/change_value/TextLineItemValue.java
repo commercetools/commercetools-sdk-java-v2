@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TextLineItemValue
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItemValue {
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @return id
      */
     @NotNull
@@ -51,7 +52,7 @@ public interface TextLineItemValue {
     public LocalizedString getName();
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param id value to be set
      */
 
@@ -83,6 +84,8 @@ public interface TextLineItemValue {
         instance.setName(template.getName());
         return instance;
     }
+
+    public TextLineItemValue copyDeep();
 
     /**
      * factory method to create a deep copy of TextLineItemValue
@@ -131,8 +134,8 @@ public interface TextLineItemValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemValue>() {
+    public static tools.jackson.core.type.TypeReference<TextLineItemValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TextLineItemValue>() {
             @Override
             public String toString() {
                 return "TypeReference<TextLineItemValue>";

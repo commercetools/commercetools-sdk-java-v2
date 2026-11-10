@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleNameSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleNameSetMessageImpl.class)
 public interface ApprovalRuleNameSetMessage extends Message {
@@ -44,7 +46,7 @@ public interface ApprovalRuleNameSetMessage extends Message {
     String APPROVAL_RULE_NAME_SET = "ApprovalRuleNameSet";
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +54,7 @@ public interface ApprovalRuleNameSetMessage extends Message {
     public String getName();
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
     @NotNull
@@ -60,14 +62,14 @@ public interface ApprovalRuleNameSetMessage extends Message {
     public String getOldName();
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      */
 
@@ -102,6 +104,8 @@ public interface ApprovalRuleNameSetMessage extends Message {
         instance.setOldName(template.getOldName());
         return instance;
     }
+
+    public ApprovalRuleNameSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleNameSetMessage
@@ -162,8 +166,8 @@ public interface ApprovalRuleNameSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleNameSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleNameSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleNameSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleNameSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleNameSetMessage>";

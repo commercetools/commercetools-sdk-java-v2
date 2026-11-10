@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.product_selection;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSelectionExcludeProductActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSelectionExcludeProductActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSelectionExcludeProductActionBuilder builder) {
         ProductSelectionExcludeProductAction productSelectionExcludeProductAction = builder.buildUnchecked();
         Assertions.assertThat(productSelectionExcludeProductAction)
                 .isInstanceOf(ProductSelectionExcludeProductAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSelectionExcludeProductAction.builder()
-                        .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
-                new Object[] { ProductSelectionExcludeProductAction.builder()
+                new Object[] { "product",
+                        ProductSelectionExcludeProductAction.builder()
+                                .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
+                new Object[] { "variantExclusion", ProductSelectionExcludeProductAction.builder()
                         .variantExclusion(
                             new com.commercetools.api.models.product_selection.ProductVariantExclusionImpl()) } };
     }

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a Product Discount could not be found that could be applied to the Price of a Product Variant.</p>
- *  <p>The error is returned as a failed response to the Get Matching ProductDiscount request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-discounts/matching:POST" rel="nofollow">Get Matching ProductDiscount</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("NoMatchingProductDiscountFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NoMatchingProductDiscountFoundErrorImpl.class)
 public interface NoMatchingProductDiscountFoundError extends ErrorObject {
@@ -79,6 +81,8 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
         return instance;
     }
 
+    public NoMatchingProductDiscountFoundError copyDeep();
+
     /**
      * factory method to create a deep copy of NoMatchingProductDiscountFoundError
      * @param template instance to be copied
@@ -128,8 +132,8 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError>() {
+    public static tools.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<NoMatchingProductDiscountFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<NoMatchingProductDiscountFoundError>";

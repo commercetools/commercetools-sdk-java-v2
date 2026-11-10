@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerSetMiddleNameAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMiddleName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetMiddleNameActionImpl.class)
 public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
     String SET_MIDDLE_NAME = "setMiddleName";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return middleName
      */
 
@@ -42,7 +44,7 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
     public String getMiddleName();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param middleName value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
         instance.setMiddleName(template.getMiddleName());
         return instance;
     }
+
+    public CustomerSetMiddleNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetMiddleNameAction
@@ -113,8 +117,8 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetMiddleNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetMiddleNameAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSetMiddleNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSetMiddleNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetMiddleNameAction>";

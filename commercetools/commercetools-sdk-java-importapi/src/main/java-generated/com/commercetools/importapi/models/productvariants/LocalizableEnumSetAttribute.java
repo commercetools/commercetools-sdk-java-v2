@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a localized enum. The attribute value refers to the key of the enum value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("lenum-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizableEnumSetAttributeImpl.class)
 public interface LocalizableEnumSetAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface LocalizableEnumSetAttribute extends Attribute {
     String LENUM_SET = "lenum-set";
 
     /**
-     *
+     *  <p>A set of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface LocalizableEnumSetAttribute extends Attribute {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>A set of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value values to be set
      */
 
@@ -52,7 +54,7 @@ public interface LocalizableEnumSetAttribute extends Attribute {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>A set of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value values to be set
      */
 
@@ -77,6 +79,8 @@ public interface LocalizableEnumSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizableEnumSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizableEnumSetAttribute
@@ -125,8 +129,8 @@ public interface LocalizableEnumSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<LocalizableEnumSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizableEnumSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizableEnumSetAttribute>";

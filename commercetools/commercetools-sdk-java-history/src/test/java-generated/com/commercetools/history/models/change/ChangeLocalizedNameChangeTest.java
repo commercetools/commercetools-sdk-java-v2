@@ -1,34 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeLocalizedNameChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeLocalizedNameChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeLocalizedNameChangeBuilder builder) {
         ChangeLocalizedNameChange changeLocalizedNameChange = builder.buildUnchecked();
         Assertions.assertThat(changeLocalizedNameChange).isInstanceOf(ChangeLocalizedNameChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeLocalizedNameChange.builder().change("change") },
-                new Object[] { ChangeLocalizedNameChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeLocalizedNameChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+        return new Object[][] { new Object[] { "change", ChangeLocalizedNameChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeLocalizedNameChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "nextValue",
+                        ChangeLocalizedNameChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "catalogData", ChangeLocalizedNameChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -52,5 +47,12 @@ public class ChangeLocalizedNameChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        ChangeLocalizedNameChange value = ChangeLocalizedNameChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

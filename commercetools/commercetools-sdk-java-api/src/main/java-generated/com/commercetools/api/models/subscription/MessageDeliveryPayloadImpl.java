@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,15 +15,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This payload is sent for a MessageSubscription.</p>
+ *  <p>This payload is sent for a <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscription</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, ModelBase {
 
-    private String projectKey;
-
     private String notificationType;
+
+    private String projectKey;
 
     private com.commercetools.api.models.common.Reference resource;
 
@@ -78,14 +79,6 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     */
-
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    /**
      *  <p>Identifies the payload.</p>
      */
 
@@ -94,7 +87,15 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     */
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    /**
+     *  <p>Reference to the resource that triggered the notification.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -150,7 +151,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -158,7 +159,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     *  <p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p>
      */
 
     public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded() {
@@ -217,8 +218,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
         MessageDeliveryPayloadImpl that = (MessageDeliveryPayloadImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey)
-                .append(notificationType, that.notificationType)
+        return new EqualsBuilder().append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(id, that.id)
@@ -228,8 +229,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
                 .append(sequenceNumber, that.sequenceNumber)
                 .append(resourceVersion, that.resourceVersion)
                 .append(payloadNotIncluded, that.payloadNotIncluded)
-                .append(projectKey, that.projectKey)
                 .append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(id, that.id)
@@ -244,8 +245,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey)
-                .append(notificationType)
+        return new HashCodeBuilder(17, 37).append(notificationType)
+                .append(projectKey)
                 .append(resource)
                 .append(resourceUserProvidedIdentifiers)
                 .append(id)
@@ -260,8 +261,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
-                .append("notificationType", notificationType)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("notificationType", notificationType)
+                .append("projectKey", projectKey)
                 .append("resource", resource)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("id", id)
@@ -281,4 +282,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
         return messagePayload;
     }
 
+    @Override
+    public MessageDeliveryPayload copyDeep() {
+        return MessageDeliveryPayload.deepCopy(this);
+    }
 }

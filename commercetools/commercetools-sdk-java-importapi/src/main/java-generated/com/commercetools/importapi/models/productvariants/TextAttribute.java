@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a string.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("text")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TextAttributeImpl.class)
 public interface TextAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface TextAttribute extends Attribute {
     String TEXT = "text";
 
     /**
-     *
+     *  <p>A text value.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface TextAttribute extends Attribute {
     public String getValue();
 
     /**
-     * set value
+     *  <p>A text value.</p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface TextAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TextAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of TextAttribute
@@ -117,8 +121,8 @@ public interface TextAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TextAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TextAttribute>() {
+    public static tools.jackson.core.type.TypeReference<TextAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TextAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<TextAttribute>";

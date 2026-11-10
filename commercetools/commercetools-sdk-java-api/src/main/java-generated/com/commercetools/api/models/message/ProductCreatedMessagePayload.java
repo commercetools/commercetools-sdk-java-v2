@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductProjection;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Product request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Create Product</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductCreatedMessagePayloadImpl.class)
 public interface ProductCreatedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     String PRODUCT_CREATED = "ProductCreated";
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     public ProductProjection getProductProjection();
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      */
 
@@ -71,6 +73,8 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
         instance.setProductProjection(template.getProductProjection());
         return instance;
     }
+
+    public ProductCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductCreatedMessagePayload
@@ -119,8 +123,8 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductCreatedMessagePayload>";

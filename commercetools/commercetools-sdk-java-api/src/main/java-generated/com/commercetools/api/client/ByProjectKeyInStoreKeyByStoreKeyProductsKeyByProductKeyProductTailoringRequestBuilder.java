@@ -55,4 +55,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailo
         return delete().withVersion(version);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesRequestBuilder images() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesRequestBuilder(
+            apiHttpClient, projectKey, storeKey, productKey);
+    }
+
 }

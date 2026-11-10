@@ -65,6 +65,9 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      *  <p>Unique identifier of the Approval Rule.</p>
      * @param id value to be set
@@ -181,7 +184,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -214,7 +217,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -225,7 +228,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -272,7 +275,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -284,7 +287,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -296,7 +299,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -311,7 +314,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -327,7 +330,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -341,7 +344,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -352,7 +355,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -363,7 +366,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -377,7 +380,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -390,7 +393,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -398,6 +401,41 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     public ApprovalRuleBuilder businessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -458,7 +496,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
 
@@ -487,7 +525,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @return status
      */
 
@@ -496,7 +534,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @return predicate
      */
 
@@ -514,7 +552,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @return requesters
      */
 
@@ -523,12 +561,22 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @return businessUnit
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
     }
 
     /**
@@ -547,7 +595,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
         Objects.requireNonNull(requesters, ApprovalRule.class + ": requesters is missing");
         Objects.requireNonNull(businessUnit, ApprovalRule.class + ": businessUnit is missing");
         return new ApprovalRuleImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, key, name,
-            description, status, predicate, approvers, requesters, businessUnit);
+            description, status, predicate, approvers, requesters, businessUnit, custom);
     }
 
     /**
@@ -556,7 +604,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
      */
     public ApprovalRule buildUnchecked() {
         return new ApprovalRuleImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, key, name,
-            description, status, predicate, approvers, requesters, businessUnit);
+            description, status, predicate, approvers, requesters, businessUnit, custom);
     }
 
     /**
@@ -588,6 +636,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
         builder.approvers = template.getApprovers();
         builder.requesters = template.getRequesters();
         builder.businessUnit = template.getBusinessUnit();
+        builder.custom = template.getCustom();
         return builder;
     }
 

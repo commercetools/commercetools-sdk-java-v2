@@ -30,7 +30,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     private com.commercetools.api.models.payment.Payment obj;
 
     /**
-     *  <p>Unique identifier of the referenced Payment.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Payment.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @return obj
      */
 

@@ -66,6 +66,9 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -165,7 +168,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -177,7 +180,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -189,7 +192,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -201,7 +204,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -213,7 +216,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -225,7 +228,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -455,7 +458,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -466,7 +469,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -508,6 +511,45 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param businessUnit value to be set
+     * @return Builder
+     */
+
+    public ShoppingListBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
         return this;
     }
 
@@ -673,7 +715,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      * @return customer
      */
 
@@ -683,7 +725,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return slug
      */
 
@@ -721,7 +763,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -731,7 +773,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @return anonymousId
      */
 
@@ -748,6 +790,16 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @return businessUnit
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -793,8 +845,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         Objects.requireNonNull(lineItems, ShoppingList.class + ": lineItems is missing");
         Objects.requireNonNull(textLineItems, ShoppingList.class + ": textLineItems is missing");
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
-            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
-            createdBy);
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, businessUnit, custom,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -803,8 +855,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
      */
     public ShoppingList buildUnchecked() {
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
-            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
-            createdBy);
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, businessUnit, custom,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -836,6 +888,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.anonymousId = template.getAnonymousId();
         builder.store = template.getStore();
+        builder.businessUnit = template.getBusinessUnit();
         builder.custom = template.getCustom();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();

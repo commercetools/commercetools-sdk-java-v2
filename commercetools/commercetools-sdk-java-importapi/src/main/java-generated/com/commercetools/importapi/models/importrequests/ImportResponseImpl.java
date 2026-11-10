@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
+ *  <p>The response of each Import Request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportResponseImpl implements ImportResponse, ModelBase {
@@ -40,7 +41,7 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {
@@ -83,4 +84,8 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportResponse copyDeep() {
+        return ImportResponse.deepCopy(this);
+    }
 }

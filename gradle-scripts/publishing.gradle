@@ -21,8 +21,10 @@ def excludeProjects = [
 nexusPublishing {
     repositories {
         sonatype {
-            username = System.getenv('CTP_OSS_USER')
-            password = System.getenv('CTP_OSS_SECRET')
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
+            username = System.getenv('SONATYPE_USERNAME')
+            password = System.getenv('SONATYPE_PASSWORD')
         }
     }
 }
@@ -48,9 +50,9 @@ subprojects { project ->
                     from components.java
                     artifact sourcesJar
                     artifact javadocJar
-                    groupId group
-                    artifactId project.name
-                    version version
+                    groupId = group
+                    artifactId = project.name
+                    version = version
 
                     pom {
                         name = project.name
@@ -62,7 +64,7 @@ subprojects { project ->
                                 email = "jens.schulze@commercetools.com"
                             }
                         }
-                        url = scmHttpsUrl
+                        url = rootProject.ext.scmHttpsUrl
                     }
                     pom.withXml {
                         def root = asNode()

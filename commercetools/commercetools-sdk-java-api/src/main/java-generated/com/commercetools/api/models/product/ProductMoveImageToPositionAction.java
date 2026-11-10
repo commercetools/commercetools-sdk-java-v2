@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("moveImageToPosition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
 public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
@@ -69,7 +71,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     public Long getPosition();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 
@@ -105,7 +107,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     public void setPosition(final Long position);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -133,6 +135,8 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductMoveImageToPositionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductMoveImageToPositionAction
@@ -184,8 +188,8 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductMoveImageToPositionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductMoveImageToPositionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductMoveImageToPositionAction>";

@@ -38,7 +38,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @return isSearchable
      */
 

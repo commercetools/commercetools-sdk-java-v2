@@ -45,7 +45,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     *  <p>Number of Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -157,7 +157,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -167,7 +167,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -177,7 +177,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      * @return variantId
      */
 
@@ -187,7 +187,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     *  <p>Number of Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @return quantity
      */
 
@@ -197,7 +197,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 

@@ -34,7 +34,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -101,7 +101,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -111,7 +111,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
 

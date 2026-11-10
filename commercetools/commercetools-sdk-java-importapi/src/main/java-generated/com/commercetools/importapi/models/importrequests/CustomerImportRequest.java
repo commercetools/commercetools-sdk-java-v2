@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.customers.CustomerImport;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The request body to import Customers. Contains data for Customers to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/customers/import-containers/{importContainerKey}:POST" rel="nofollow">import Customers</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("customer")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerImportRequestImpl.class)
 public interface CustomerImportRequest extends ImportRequest {
@@ -81,6 +83,8 @@ public interface CustomerImportRequest extends ImportRequest {
         return instance;
     }
 
+    public CustomerImportRequest copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerImportRequest
      * @param template instance to be copied
@@ -131,8 +135,8 @@ public interface CustomerImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<CustomerImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerImportRequest>";

@@ -1,0 +1,194 @@
+
+package com.commercetools.api.client;
+
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+
+/**
+ *  <p>Checks if one or more Recurrence Policies exist for the provided query predicate. Returns a <code>200</code> status if any Recurrence Policies match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">NotFound</a> error otherwise.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .recurrencePolicies()
+ *            .head()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyRecurrencePoliciesHead
+        extends TypeApiMethod<ByProjectKeyRecurrencePoliciesHead, tools.jackson.databind.JsonNode>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyRecurrencePoliciesHead>,
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyRecurrencePoliciesHead> {
+
+    @Override
+    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<tools.jackson.databind.JsonNode>() {
+        };
+    }
+
+    private String projectKey;
+
+    public ByProjectKeyRecurrencePoliciesHead(final ApiHttpClient apiHttpClient, String projectKey) {
+        super(apiHttpClient);
+        this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyRecurrencePoliciesHead(ByProjectKeyRecurrencePoliciesHead t) {
+        super(t);
+        this.projectKey = t.projectKey;
+    }
+
+    @Override
+    protected ApiHttpRequest buildHttpRequest() {
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
+        String httpRequestPath = String.format("%s/recurrence-policies", encodePathParam(this.projectKey));
+        if (!params.isEmpty()) {
+            httpRequestPath += "?" + String.join("&", params);
+        }
+        return new ApiHttpRequest(ApiHttpMethod.HEAD, URI.create(httpRequestPath), getHeaders(), null);
+    }
+
+    @Override
+    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+            final Duration timeout) {
+        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
+        return execute(client, tools.jackson.databind.JsonNode.class);
+    }
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    /**
+     * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public <TValue> ByProjectKeyRecurrencePoliciesHead withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public <TValue> ByProjectKeyRecurrencePoliciesHead addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public ByProjectKeyRecurrencePoliciesHead withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public ByProjectKeyRecurrencePoliciesHead addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public ByProjectKeyRecurrencePoliciesHead withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public ByProjectKeyRecurrencePoliciesHead addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public <TValue> ByProjectKeyRecurrencePoliciesHead withWhere(final Collection<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyRecurrencePoliciesHead
+     */
+    public <TValue> ByProjectKeyRecurrencePoliciesHead addWhere(final Collection<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyRecurrencePoliciesHead that = (ByProjectKeyRecurrencePoliciesHead) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
+    }
+
+    @Override
+    protected ByProjectKeyRecurrencePoliciesHead copy() {
+        return new ByProjectKeyRecurrencePoliciesHead(this);
+    }
+}

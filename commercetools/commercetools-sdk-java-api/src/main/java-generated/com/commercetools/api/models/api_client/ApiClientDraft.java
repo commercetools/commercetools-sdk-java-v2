@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApiClientDraft
@@ -40,7 +41,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public String getName();
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
     @NotNull
@@ -56,7 +57,11 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public Long getDeleteDaysAfterCreation();
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @return accessTokenValiditySeconds
      */
 
@@ -79,7 +84,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public void setName(final String name);
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      */
 
@@ -93,7 +98,11 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @param accessTokenValiditySeconds value to be set
      */
 
@@ -128,6 +137,8 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
         instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
         return instance;
     }
+
+    public ApiClientDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ApiClientDraft
@@ -179,8 +190,8 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft>() {
+    public static tools.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApiClientDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApiClientDraft>";

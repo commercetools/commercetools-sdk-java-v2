@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodSetLocalizedDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocalizedDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetLocalizedDescriptionActionImpl.class)
 public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMethodUpdateAction {
@@ -36,7 +38,7 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     String SET_LOCALIZED_DESCRIPTION = "setLocalizedDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return localizedDescription
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     public LocalizedString getLocalizedDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param localizedDescription value to be set
      */
 
@@ -69,6 +71,8 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
         instance.setLocalizedDescription(template.getLocalizedDescription());
         return instance;
     }
+
+    public ShippingMethodSetLocalizedDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetLocalizedDescriptionAction
@@ -120,8 +124,8 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodSetLocalizedDescriptionAction>";

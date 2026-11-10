@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchMatchingVariantTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchMatchingVariantBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchMatchingVariantBuilder builder) {
         SearchMatchingVariant searchMatchingVariant = builder.buildUnchecked();
         Assertions.assertThat(searchMatchingVariant).isInstanceOf(SearchMatchingVariant.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchMatchingVariant.builder().id(2) },
-                new Object[] { SearchMatchingVariant.builder().sku("sku") } };
+        return new Object[][] { new Object[] { "id", SearchMatchingVariant.builder().id(2) },
+                new Object[] { "sku", SearchMatchingVariant.builder().sku("sku") } };
     }
 
     @Test

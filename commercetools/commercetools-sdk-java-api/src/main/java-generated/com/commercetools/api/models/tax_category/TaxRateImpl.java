@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxRate
@@ -38,6 +39,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      * create instance with all properties
      */
@@ -46,7 +49,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
             @JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("taxRoundingTarget") final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
         this.id = id;
         this.key = key;
         this.name = name;
@@ -55,6 +59,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.taxRoundingTarget = taxRoundingTarget;
     }
 
     /**
@@ -64,7 +69,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      */
 
     public String getId() {
@@ -72,7 +77,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     *  <p>User-defined identifier of the TaxRate. Unique within the TaxCategory containing it. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      */
 
     public String getKey() {
@@ -96,7 +101,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      */
 
     public Boolean getIncludedInPrice() {
@@ -104,7 +109,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
      */
 
     public String getCountry() {
@@ -112,7 +117,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>A TaxRate whose <code>state</code> is omitted does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      */
 
     public String getState() {
@@ -120,11 +126,20 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
+    }
+
+    /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
     }
 
     public void setId(final String id) {
@@ -163,6 +178,11 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.subRates = subRates;
     }
 
+    public void setTaxRoundingTarget(
+            final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -181,6 +201,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .append(id, that.id)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -189,6 +210,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .isEquals();
     }
 
@@ -202,6 +224,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(taxRoundingTarget)
                 .toHashCode();
     }
 
@@ -215,7 +238,12 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append("country", country)
                 .append("state", state)
                 .append("subRates", subRates)
+                .append("taxRoundingTarget", taxRoundingTarget)
                 .build();
     }
 
+    @Override
+    public TaxRate copyDeep() {
+        return TaxRate.deepCopy(this);
+    }
 }

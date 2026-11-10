@@ -3,34 +3,31 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAssetTagsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAssetTagsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAssetTagsChangeBuilder builder) {
         SetAssetTagsChange setAssetTagsChange = builder.buildUnchecked();
         Assertions.assertThat(setAssetTagsChange).isInstanceOf(SetAssetTagsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAssetTagsChange.builder().change("change") },
-                new Object[] { SetAssetTagsChange.builder().previousValue(Collections.singletonList("previousValue")) },
-                new Object[] { SetAssetTagsChange.builder().nextValue(Collections.singletonList("nextValue")) },
-                new Object[] { SetAssetTagsChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+        return new Object[][] { new Object[] { "change", SetAssetTagsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetAssetTagsChange.builder().previousValue(Collections.singletonList("previousValue")) },
+                new Object[] { "nextValue",
+                        SetAssetTagsChange.builder().nextValue(Collections.singletonList("nextValue")) },
+                new Object[] { "asset",
+                        SetAssetTagsChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", SetAssetTagsChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAssetTagsChange.builder().variant("variant") } };
     }
 
     @Test
@@ -60,5 +57,19 @@ public class SetAssetTagsChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetAssetTagsChange value = SetAssetTagsChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAssetTagsChange value = SetAssetTagsChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

@@ -13,15 +13,15 @@ public class DeliveryPayloadQueryBuilderDsl {
         return new DeliveryPayloadQueryBuilderDsl();
     }
 
-    public StringComparisonPredicateBuilder<DeliveryPayloadQueryBuilderDsl> projectKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("projectKey")),
-            p -> new CombinationQueryPredicate<>(p, DeliveryPayloadQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<DeliveryPayloadQueryBuilderDsl> notificationType() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("notificationType")),
+            p -> new CombinationQueryPredicate<>(p, DeliveryPayloadQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<DeliveryPayloadQueryBuilderDsl> projectKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("projectKey")),
             p -> new CombinationQueryPredicate<>(p, DeliveryPayloadQueryBuilderDsl::of));
     }
 

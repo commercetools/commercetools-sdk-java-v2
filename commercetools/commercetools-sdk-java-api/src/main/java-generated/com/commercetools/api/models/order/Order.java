@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CartOrigin;
@@ -18,6 +16,7 @@ import com.commercetools.api.models.cart.CustomLineItem;
 import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.DiscountOnTotalPrice;
+import com.commercetools.api.models.cart.DiscountTypeCombination;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.cart.RoundingMode;
@@ -31,18 +30,22 @@ import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.quote.QuoteReference;
+import com.commercetools.api.models.recurring_order.RecurringOrderReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Order
@@ -101,7 +104,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -109,7 +112,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      * @return customerId
      */
 
@@ -125,7 +128,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getCustomerEmail();
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @return customerGroup
      */
     @Valid
@@ -133,7 +136,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      * @return anonymousId
      */
 
@@ -141,7 +144,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getAnonymousId();
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -149,7 +152,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @return store
      */
     @Valid
@@ -157,7 +160,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @return lineItems
      */
     @NotNull
@@ -166,7 +169,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<LineItem> getLineItems();
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @return customLineItems
      */
     @NotNull
@@ -175,21 +178,21 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
-    public TypedMoney getTotalPrice();
+    public CentPrecisionMoney getTotalPrice();
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedPrice
      */
     @Valid
@@ -197,7 +200,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public TaxedPrice getTaxedPrice();
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedShippingPrice
      */
     @Valid
@@ -211,6 +215,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("discountOnTotalPrice")
     public DiscountOnTotalPrice getDiscountOnTotalPrice();
+
+    /**
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -253,7 +265,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public Address getBillingAddress();
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -269,7 +281,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public ShippingMode getShippingMode();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -277,7 +289,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getShippingKey();
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @return shippingInfo
      */
     @Valid
@@ -285,10 +297,10 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @return shippingRateInput
@@ -298,7 +310,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public ShippingRateInput getShippingRateInput();
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingCustomFields
      */
     @Valid
@@ -306,7 +318,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CustomFields getShippingCustomFields();
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @return shipping
      */
     @NotNull
@@ -315,7 +327,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<Shipping> getShipping();
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @Valid
@@ -323,7 +335,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<Address> getItemShippingAddresses();
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @return discountCodes
      */
     @Valid
@@ -331,7 +344,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @return directDiscounts
      */
     @Valid
@@ -339,7 +353,18 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @JsonProperty("directDiscountsIgnoreCartDiscounts")
+    public Boolean getDirectDiscountsIgnoreCartDiscounts();
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @return refusedGifts
      */
     @NotNull
@@ -356,7 +381,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return country
      */
 
@@ -364,7 +389,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getCountry();
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -380,7 +405,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CartOrigin getOrigin();
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @return cart
      */
     @Valid
@@ -388,12 +413,20 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CartReference getCart();
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @return quote
      */
     @Valid
     @JsonProperty("quote")
     public QuoteReference getQuote();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @return recurringOrder
+     */
+    @Valid
+    @JsonProperty("recurringOrder")
+    public RecurringOrderReference getRecurringOrder();
 
     /**
      *  <p>Current status of the Order.</p>
@@ -420,7 +453,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public PaymentState getPaymentState();
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -428,7 +461,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public StateReference getState();
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @return syncInfo
      */
     @NotNull
@@ -443,6 +476,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("returnInfo")
     public List<ReturnInfo> getReturnInfo();
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @return discountTypeCombination
+     */
+    @Valid
+    @JsonProperty("discountTypeCombination")
+    public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
      *  <p>Internal-only field.</p>
@@ -461,7 +502,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CustomFields getCustom();
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      * @return completedAt
      */
 
@@ -523,14 +564,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      * @param customerId value to be set
      */
 
@@ -544,35 +585,35 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param lineItems values to be set
      */
 
@@ -580,14 +621,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setLineItems(final LineItem... lineItems);
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<LineItem> lineItems);
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param customLineItems values to be set
      */
 
@@ -595,33 +636,34 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCustomLineItems(final CustomLineItem... customLineItems);
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param customLineItems values to be set
      */
 
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      */
 
-    public void setTotalPrice(final TypedMoney totalPrice);
+    public void setTotalPrice(final CentPrecisionMoney totalPrice);
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedShippingPrice value to be set
      */
 
@@ -633,6 +675,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      */
 
     public void setDiscountOnTotalPrice(final DiscountOnTotalPrice discountOnTotalPrice);
+
+    /**
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -670,7 +719,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -684,24 +733,24 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setShippingMode(final ShippingMode shippingMode);
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param shippingInfo value to be set
      */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -710,14 +759,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingCustomFields value to be set
      */
 
     public void setShippingCustomFields(final CustomFields shippingCustomFields);
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping values to be set
      */
 
@@ -725,14 +774,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setShipping(final Shipping... shipping);
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping values to be set
      */
 
     public void setShipping(final List<Shipping> shipping);
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -740,14 +789,15 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setItemShippingAddresses(final Address... itemShippingAddresses);
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes values to be set
      */
 
@@ -755,14 +805,16 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes values to be set
      */
 
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts values to be set
      */
 
@@ -770,14 +822,25 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setDirectDiscounts(final DirectDiscount... directDiscounts);
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts values to be set
      */
 
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     */
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts);
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param refusedGifts values to be set
      */
 
@@ -785,7 +848,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setRefusedGifts(final CartDiscountReference... refusedGifts);
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param refusedGifts values to be set
      */
 
@@ -799,14 +862,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
@@ -820,18 +883,25 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setOrigin(final CartOrigin origin);
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartReference cart);
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @param quote value to be set
      */
 
     public void setQuote(final QuoteReference quote);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @param recurringOrder value to be set
+     */
+
+    public void setRecurringOrder(final RecurringOrderReference recurringOrder);
 
     /**
      *  <p>Current status of the Order.</p>
@@ -855,14 +925,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setPaymentState(final PaymentState paymentState);
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param syncInfo values to be set
      */
 
@@ -870,7 +940,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setSyncInfo(final SyncInfo... syncInfo);
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param syncInfo values to be set
      */
 
@@ -892,6 +962,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param discountTypeCombination value to be set
+     */
+
+    public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
+
+    /**
      *  <p>Internal-only field.</p>
      * @param lastMessageSequenceNumber value to be set
      */
@@ -906,7 +983,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      * @param completedAt value to be set
      */
 
@@ -973,6 +1050,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -988,6 +1066,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(template.getRefusedGifts());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setCountry(template.getCountry());
@@ -995,12 +1074,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setRecurringOrder(template.getRecurringOrder());
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
         instance.setState(template.getState());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
         instance.setCompletedAt(template.getCompletedAt());
@@ -1008,6 +1089,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setCreatedBy(template.getCreatedBy());
         return instance;
     }
+
+    public Order copyDeep();
 
     /**
      * factory method to create a deep copy of Order
@@ -1019,9 +1102,9 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order_edit.StagedOrder) {
-            return com.commercetools.api.models.order_edit.StagedOrder
-                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrder) template);
+
+        if (!(template instanceof OrderImpl)) {
+            return template.copyDeep();
         }
         OrderImpl instance = new OrderImpl();
         instance.setId(template.getId());
@@ -1048,12 +1131,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
         instance.setDiscountOnTotalPrice(
             com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -1088,6 +1173,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
@@ -1099,6 +1185,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setOrigin(template.getOrigin());
         instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
         instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
+        instance.setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference
+                .deepCopy(template.getRecurringOrder()));
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
@@ -1113,6 +1201,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDiscountTypeCombination(
+            com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setCompletedAt(template.getCompletedAt());
@@ -1157,8 +1247,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Order> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Order>() {
+    public static tools.jackson.core.type.TypeReference<Order> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Order>() {
             @Override
             public String toString() {
                 return "TypeReference<Order>";

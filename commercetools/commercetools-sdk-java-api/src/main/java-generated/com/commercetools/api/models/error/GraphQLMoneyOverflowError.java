@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when a Money operation overflows the 64-bit integer range. See Money usage for more information.</p>
+ *  <p>Returned when a money operation overflows the 64-bit integer range.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MoneyOverflow")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLMoneyOverflowErrorImpl.class)
 public interface GraphQLMoneyOverflowError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLMoneyOverflowError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLMoneyOverflowError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLMoneyOverflowError
@@ -107,8 +111,8 @@ public interface GraphQLMoneyOverflowError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLMoneyOverflowError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLMoneyOverflowError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLMoneyOverflowError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLMoneyOverflowError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLMoneyOverflowError>";

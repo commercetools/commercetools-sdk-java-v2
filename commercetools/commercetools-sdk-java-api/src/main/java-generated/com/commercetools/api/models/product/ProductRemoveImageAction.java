@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been <span>uploaded to our CDN</span>. External images will not be deleted. The API deletes the removed image from the CDN in an <span>eventual consistent</span> way. Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeImage")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveImageActionImpl.class)
 public interface ProductRemoveImageAction extends ProductUpdateAction {
@@ -60,7 +62,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     public String getImageUrl();
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current image and staged image are removed.</p>
      * @return staged
      */
 
@@ -89,7 +91,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     public void setImageUrl(final String imageUrl);
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current image and staged image are removed.</p>
      * @param staged value to be set
      */
 
@@ -116,6 +118,8 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductRemoveImageAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemoveImageAction
@@ -166,8 +170,8 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveImageAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveImageAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductRemoveImageAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRemoveImageAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRemoveImageAction>";

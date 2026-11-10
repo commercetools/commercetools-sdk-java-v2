@@ -23,7 +23,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+ *             .active(true)
  *             .isDefault(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -64,6 +66,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
 
+    private Boolean active;
+
     private Boolean isDefault;
 
     @Nullable
@@ -71,6 +75,11 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
+    @Nullable
+    private String carrier;
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
@@ -199,7 +208,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -294,7 +303,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -307,7 +316,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -319,7 +328,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -331,7 +340,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param zoneRates value to be set
      * @return Builder
      */
@@ -342,7 +351,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param zoneRates value to be set
      * @return Builder
      */
@@ -354,7 +363,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param zoneRates value to be set
      * @return Builder
      */
@@ -369,7 +378,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param builder function to build the zoneRates value
      * @return Builder
      */
@@ -384,7 +393,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param builder function to build the zoneRates value
      * @return Builder
      */
@@ -397,7 +406,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param builder function to build the zoneRates value
      * @return Builder
      */
@@ -408,7 +417,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param builder function to build the zoneRates value
      * @return Builder
      */
@@ -419,7 +428,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder active(final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    /**
+     *  <p>Whether this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -430,7 +451,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -472,6 +493,125 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     public ShippingMethodBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder stores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder carrier(@Nullable final String carrier) {
+        this.carrier = carrier;
         return this;
     }
 
@@ -542,7 +682,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
 
@@ -581,7 +721,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @return taxCategory
      */
 
@@ -590,7 +730,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @return zoneRates
      */
 
@@ -599,7 +739,17 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     *  <p>Whether this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
 
@@ -608,7 +758,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @return predicate
      */
 
@@ -628,6 +778,28 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @Nullable
+    public String getCarrier() {
+        return this.carrier;
+    }
+
+    /**
      * builds ShippingMethod with checking for non-null required values
      * @return ShippingMethod
      */
@@ -639,9 +811,12 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         Objects.requireNonNull(name, ShippingMethod.class + ": name is missing");
         Objects.requireNonNull(taxCategory, ShippingMethod.class + ": taxCategory is missing");
         Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
+        Objects.requireNonNull(active, ShippingMethod.class + ": active is missing");
         Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
+        Objects.requireNonNull(stores, ShippingMethod.class + ": stores is missing");
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
+            custom, stores, carrier);
     }
 
     /**
@@ -650,7 +825,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
      */
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
+            custom, stores, carrier);
     }
 
     /**
@@ -681,9 +857,12 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         builder.localizedDescription = template.getLocalizedDescription();
         builder.taxCategory = template.getTaxCategory();
         builder.zoneRates = template.getZoneRates();
+        builder.active = template.getActive();
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();
+        builder.stores = template.getStores();
+        builder.carrier = template.getCarrier();
         return builder;
     }
 

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a search facet path could not be found.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchFacetPathNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLSearchFacetPathNotFoundErrorImpl.class)
 public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLSearchFacetPathNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLSearchFacetPathNotFoundError
@@ -109,8 +113,8 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLSearchFacetPathNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLSearchFacetPathNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLSearchFacetPathNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLSearchFacetPathNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLSearchFacetPathNotFoundError>";

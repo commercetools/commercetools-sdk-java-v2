@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Address
@@ -129,7 +130,8 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     public String getId() {
@@ -137,7 +139,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnits</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a>, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      */
 
     public String getKey() {
@@ -145,7 +147,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the contact, for example 'Dr.'</p>
      */
 
     public String getTitle() {
@@ -153,7 +155,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      */
 
     public String getSalutation() {
@@ -161,7 +163,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Given name (first name) of the contact.</p>
      */
 
     public String getFirstName() {
@@ -169,7 +171,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Family name (last name) of the contact.</p>
      */
 
     public String getLastName() {
@@ -177,7 +179,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the street.</p>
      */
 
     public String getStreetName() {
@@ -185,7 +187,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Street number.</p>
      */
 
     public String getStreetNumber() {
@@ -193,7 +195,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Further information on the street address.</p>
      */
 
     public String getAdditionalStreetInfo() {
@@ -201,7 +203,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Postal code.</p>
      */
 
     public String getPostalCode() {
@@ -209,7 +211,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the city.</p>
      */
 
     public String getCity() {
@@ -217,7 +219,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the region.</p>
      */
 
     public String getRegion() {
@@ -225,7 +227,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the state, for example, Colorado.</p>
      */
 
     public String getState() {
@@ -233,7 +235,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public String getCountry() {
@@ -241,7 +243,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the company.</p>
      */
 
     public String getCompany() {
@@ -249,7 +251,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the department.</p>
      */
 
     public String getDepartment() {
@@ -257,7 +259,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the building.</p>
      */
 
     public String getBuilding() {
@@ -265,7 +267,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the apartment.</p>
      */
 
     public String getApartment() {
@@ -273,7 +275,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Post office box number.</p>
      */
 
     public String getPOBox() {
@@ -281,7 +283,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Phone number of the contact.</p>
      */
 
     public String getPhone() {
@@ -289,7 +291,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Mobile phone number of the contact.</p>
      */
 
     public String getMobile() {
@@ -297,7 +299,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the contact.</p>
      */
 
     public String getEmail() {
@@ -305,7 +307,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Fax number of the contact.</p>
      */
 
     public String getFax() {
@@ -313,7 +315,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Further information on the Address.</p>
      */
 
     public String getAdditionalAddressInfo() {
@@ -321,7 +323,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>ID for the contact used in an external system.</p>
      */
 
     public String getExternalId() {
@@ -329,7 +331,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -567,4 +569,8 @@ public class AddressImpl implements Address, ModelBase {
                 .build();
     }
 
+    @Override
+    public Address copyDeep() {
+        return Address.deepCopy(this);
+    }
 }

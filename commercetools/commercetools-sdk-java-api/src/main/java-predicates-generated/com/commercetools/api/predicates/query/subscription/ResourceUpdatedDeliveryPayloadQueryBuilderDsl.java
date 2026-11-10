@@ -13,15 +13,15 @@ public class ResourceUpdatedDeliveryPayloadQueryBuilderDsl {
         return new ResourceUpdatedDeliveryPayloadQueryBuilderDsl();
     }
 
-    public StringComparisonPredicateBuilder<ResourceUpdatedDeliveryPayloadQueryBuilderDsl> projectKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("projectKey")),
-            p -> new CombinationQueryPredicate<>(p, ResourceUpdatedDeliveryPayloadQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<ResourceUpdatedDeliveryPayloadQueryBuilderDsl> notificationType() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("notificationType")),
+            p -> new CombinationQueryPredicate<>(p, ResourceUpdatedDeliveryPayloadQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<ResourceUpdatedDeliveryPayloadQueryBuilderDsl> projectKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("projectKey")),
             p -> new CombinationQueryPredicate<>(p, ResourceUpdatedDeliveryPayloadQueryBuilderDsl::of));
     }
 

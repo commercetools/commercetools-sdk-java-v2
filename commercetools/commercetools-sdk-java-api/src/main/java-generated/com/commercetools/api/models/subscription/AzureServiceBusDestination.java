@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Azure Service Bus can be used as a pull-queue with Queues, or to fan-out messages with Topics and Subscriptions. To set up a Subscription with Azure Service Bus, first create a queue/topic in the Azure Portal with a Shared Access Policy including the <code>Send</code> permission.</p>
+ *  <p><span>Azure Service Bus</span> can be used as a pull-queue with <span>Queues</span>, or to fan-out notifications with <span>Topics and Subscriptions</span>. To set up a Subscription with Azure Service Bus, first create a queue/topic in the <span>Azure Portal</span> with a Shared Access Policy including the <code>Send</code> permission.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AzureServiceBus")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
@@ -68,6 +70,8 @@ public interface AzureServiceBusDestination extends Destination {
         instance.setConnectionString(template.getConnectionString());
         return instance;
     }
+
+    public AzureServiceBusDestination copyDeep();
 
     /**
      * factory method to create a deep copy of AzureServiceBusDestination
@@ -115,8 +119,8 @@ public interface AzureServiceBusDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination>() {
+    public static tools.jackson.core.type.TypeReference<AzureServiceBusDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AzureServiceBusDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<AzureServiceBusDestination>";

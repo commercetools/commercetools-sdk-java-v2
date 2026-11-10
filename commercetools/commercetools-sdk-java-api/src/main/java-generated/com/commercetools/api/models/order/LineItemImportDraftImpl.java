@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
@@ -35,6 +36,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     private com.commercetools.api.models.common.PriceDraft price;
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
+
+    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
@@ -58,6 +61,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
             @JsonProperty("productId") final String productId, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
+            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -71,6 +75,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.quantity = quantity;
         this.price = price;
         this.taxRate = taxRate;
+        this.taxedPrice = taxedPrice;
         this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
         this.inventoryMode = inventoryMode;
@@ -94,7 +99,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      */
 
     public String getKey() {
@@ -102,7 +107,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      */
 
     public com.commercetools.api.models.order.ProductVariantImportDraft getVariant() {
@@ -110,7 +115,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Product Variant belongs to.</p>
      *  <p>If provided, you must also set <code>variant.id</code>.</p>
      */
 
@@ -119,7 +124,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      */
 
     public Long getQuantity() {
@@ -135,7 +140,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -143,7 +148,16 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    /**
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -151,7 +165,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -159,7 +173,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -183,7 +197,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -216,6 +230,10 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
+    }
+
+    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
+        this.taxedPrice = taxedPrice;
     }
 
     public void setDistributionChannel(
@@ -264,6 +282,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(quantity, that.quantity)
                 .append(price, that.price)
                 .append(taxRate, that.taxRate)
+                .append(taxedPrice, that.taxedPrice)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(inventoryMode, that.inventoryMode)
@@ -277,6 +296,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(quantity, that.quantity)
                 .append(price, that.price)
                 .append(taxRate, that.taxRate)
+                .append(taxedPrice, that.taxedPrice)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(inventoryMode, that.inventoryMode)
@@ -295,6 +315,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(quantity)
                 .append(price)
                 .append(taxRate)
+                .append(taxedPrice)
                 .append(distributionChannel)
                 .append(supplyChannel)
                 .append(inventoryMode)
@@ -313,6 +334,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append("quantity", quantity)
                 .append("price", price)
                 .append("taxRate", taxRate)
+                .append("taxedPrice", taxedPrice)
                 .append("distributionChannel", distributionChannel)
                 .append("supplyChannel", supplyChannel)
                 .append("inventoryMode", inventoryMode)
@@ -322,4 +344,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public LineItemImportDraft copyDeep() {
+        return LineItemImportDraft.deepCopy(this);
+    }
 }

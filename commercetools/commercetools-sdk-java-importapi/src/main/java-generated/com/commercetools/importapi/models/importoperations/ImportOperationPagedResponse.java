@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>PagedQueryResult for Import Operations.</p>
+ *  <p><span>PagedQueryResult</span> for Import Operations.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationPagedResponse {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -45,7 +46,7 @@ public interface ImportOperationPagedResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -78,14 +79,14 @@ public interface ImportOperationPagedResponse {
     public List<ImportOperation> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -143,6 +144,8 @@ public interface ImportOperationPagedResponse {
         return instance;
     }
 
+    public ImportOperationPagedResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ImportOperationPagedResponse
      * @param template instance to be copied
@@ -197,8 +200,8 @@ public interface ImportOperationPagedResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse>() {
+    public static tools.jackson.core.type.TypeReference<ImportOperationPagedResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportOperationPagedResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportOperationPagedResponse>";

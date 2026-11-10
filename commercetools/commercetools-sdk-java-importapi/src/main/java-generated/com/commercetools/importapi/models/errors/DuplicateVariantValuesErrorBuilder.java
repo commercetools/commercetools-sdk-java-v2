@@ -28,7 +28,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     private com.commercetools.importapi.models.errors.VariantValues variantValues;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

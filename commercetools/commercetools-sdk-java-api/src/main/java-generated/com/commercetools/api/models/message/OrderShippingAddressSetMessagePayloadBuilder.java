@@ -30,7 +30,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param builder function to build the oldAddress value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param builder function to build the oldAddress value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @param oldAddress value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @return address
      */
 
@@ -112,7 +112,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      * @return oldAddress
      */
 

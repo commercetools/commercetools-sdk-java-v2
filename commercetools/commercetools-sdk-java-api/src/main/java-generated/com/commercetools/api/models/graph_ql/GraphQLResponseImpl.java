@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLResponse
+ *  <p><code>error</code> is present in the response only if the GraphQL query was unsuccessful.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
@@ -43,7 +44,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      */
 
     public java.lang.Object getData() {
@@ -51,7 +52,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>Errors that the GraphQL query returns.</p>
      */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors() {
@@ -99,4 +100,8 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLResponse copyDeep() {
+        return GraphQLResponse.deepCopy(this);
+    }
 }

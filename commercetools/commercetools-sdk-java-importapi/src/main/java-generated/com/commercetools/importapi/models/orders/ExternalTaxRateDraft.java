@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.prices.SubRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExternalTaxRateDraft
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxRateDraft> {
 
     /**
-     *
+     *  <p>Name of the Tax Rate.</p>
      * @return name
      */
     @NotNull
@@ -43,7 +44,11 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public String getName();
 
     /**
-     *
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
      * @return amount
      */
 
@@ -51,7 +56,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public Double getAmount();
 
     /**
-     *
+     *  <p>Country for which the tax applies.</p>
      * @return country
      */
     @NotNull
@@ -59,7 +64,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public String getCountry();
 
     /**
-     *
+     *  <p>State within the specified country.</p>
      * @return state
      */
 
@@ -67,7 +72,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public String getState();
 
     /**
-     *
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
     @Valid
@@ -75,7 +80,10 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public List<SubRate> getSubRates();
 
     /**
-     *
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
      * @return includedInPrice
      */
 
@@ -83,35 +91,39 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public Boolean getIncludedInPrice();
 
     /**
-     * set name
+     *  <p>Name of the Tax Rate.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set amount
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
      * @param amount value to be set
      */
 
     public void setAmount(final Double amount);
 
     /**
-     * set country
+     *  <p>Country for which the tax applies.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     * set state
+     *  <p>State within the specified country.</p>
      * @param state value to be set
      */
 
     public void setState(final String state);
 
     /**
-     * set subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
@@ -119,14 +131,17 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setSubRates(final SubRate... subRates);
 
     /**
-     * set subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
     public void setSubRates(final List<SubRate> subRates);
 
     /**
-     * set includedInPrice
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
      * @param includedInPrice value to be set
      */
 
@@ -155,6 +170,8 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
         instance.setIncludedInPrice(template.getIncludedInPrice());
         return instance;
     }
+
+    public ExternalTaxRateDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ExternalTaxRateDraft
@@ -211,8 +228,8 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft>() {
+    public static tools.jackson.core.type.TypeReference<ExternalTaxRateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExternalTaxRateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ExternalTaxRateDraft>";

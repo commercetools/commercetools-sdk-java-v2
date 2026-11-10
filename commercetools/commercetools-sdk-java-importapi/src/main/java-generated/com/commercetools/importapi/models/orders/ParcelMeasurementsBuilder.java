@@ -35,7 +35,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     private Integer weightInGram;
 
     /**
-     * set the value to the heightInMillimeter
+     *  <p>Height of the Parcel.</p>
      * @param heightInMillimeter value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * set the value to the lengthInMillimeter
+     *  <p>Length of the Parcel.</p>
      * @param lengthInMillimeter value to be set
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * set the value to the widthInMillimeter
+     *  <p>Width of the Parcel.</p>
      * @param widthInMillimeter value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * set the value to the weightInGram
+     *  <p>Weight of the Parcel.</p>
      * @param weightInGram value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * value of heightInMillimeter}
+     *  <p>Height of the Parcel.</p>
      * @return heightInMillimeter
      */
 
@@ -89,7 +89,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * value of lengthInMillimeter}
+     *  <p>Length of the Parcel.</p>
      * @return lengthInMillimeter
      */
 
@@ -99,7 +99,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * value of widthInMillimeter}
+     *  <p>Width of the Parcel.</p>
      * @return widthInMillimeter
      */
 
@@ -109,7 +109,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     * value of weightInGram}
+     *  <p>Weight of the Parcel.</p>
      * @return weightInGram
      */
 

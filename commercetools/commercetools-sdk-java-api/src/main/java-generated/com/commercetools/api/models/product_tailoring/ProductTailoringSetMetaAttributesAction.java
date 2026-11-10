@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates all meta attributes at the same time.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaAttributes")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetMetaAttributesActionImpl.class)
 public interface ProductTailoringSetMetaAttributesAction extends ProductTailoringUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     String SET_META_ATTRIBUTES = "setMetaAttributes";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaTitle
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
     @Valid
@@ -52,7 +54,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaKeywords
      */
     @Valid
@@ -60,7 +62,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @return staged
      */
 
@@ -68,28 +70,28 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @param staged value to be set
      */
 
@@ -116,6 +118,8 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetMetaAttributesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetMetaAttributesAction
@@ -171,8 +175,8 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaAttributesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaAttributesAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetMetaAttributesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetMetaAttributesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetMetaAttributesAction>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Price Draft for the import purpose.</p>
@@ -75,7 +76,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Money value of this Price.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -83,7 +84,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
      */
 
     public String getCountry() {
@@ -91,7 +92,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -99,7 +100,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -107,7 +108,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -115,7 +116,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -123,7 +124,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -131,7 +132,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      */
 
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
@@ -262,4 +263,8 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceDraftImport copyDeep() {
+        return PriceDraftImport.deepCopy(this);
+    }
 }

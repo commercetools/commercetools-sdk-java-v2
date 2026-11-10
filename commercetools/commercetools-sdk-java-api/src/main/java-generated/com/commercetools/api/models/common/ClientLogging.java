@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
+ *  <p>These objects represent information about which <span>API Client</span> created or modified a resource. For more information, see <span>Client Logging</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ClientLogging {
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @return isPlatformClient
+     */
+
+    @JsonProperty("isPlatformClient")
+    public Boolean getIsPlatformClient();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
 
@@ -39,7 +48,7 @@ public interface ClientLogging {
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @return externalUserId
      */
 
@@ -47,7 +56,7 @@ public interface ClientLogging {
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
     @Valid
@@ -55,7 +64,7 @@ public interface ClientLogging {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @return anonymousId
      */
 
@@ -63,7 +72,7 @@ public interface ClientLogging {
     public String getAnonymousId();
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
     @Valid
@@ -71,35 +80,42 @@ public interface ClientLogging {
     public CustomerReference getAssociate();
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @param isPlatformClient value to be set
+     */
+
+    public void setIsPlatformClient(final Boolean isPlatformClient);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @param clientId value to be set
      */
 
     public void setClientId(final String clientId);
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @param externalUserId value to be set
      */
 
     public void setExternalUserId(final String externalUserId);
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      */
 
@@ -120,6 +136,7 @@ public interface ClientLogging {
      */
     public static ClientLogging of(final ClientLogging template) {
         ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
@@ -127,6 +144,8 @@ public interface ClientLogging {
         instance.setAssociate(template.getAssociate());
         return instance;
     }
+
+    public ClientLogging copyDeep();
 
     /**
      * factory method to create a deep copy of ClientLogging
@@ -138,15 +157,12 @@ public interface ClientLogging {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.CreatedBy) {
-            return com.commercetools.api.models.common.CreatedBy
-                    .deepCopy((com.commercetools.api.models.common.CreatedBy) template);
-        }
-        if (template instanceof com.commercetools.api.models.common.LastModifiedBy) {
-            return com.commercetools.api.models.common.LastModifiedBy
-                    .deepCopy((com.commercetools.api.models.common.LastModifiedBy) template);
+
+        if (!(template instanceof ClientLoggingImpl)) {
+            return template.copyDeep();
         }
         ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
@@ -187,8 +203,8 @@ public interface ClientLogging {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ClientLogging> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ClientLogging>() {
+    public static tools.jackson.core.type.TypeReference<ClientLogging> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ClientLogging>() {
             @Override
             public String toString() {
                 return "TypeReference<ClientLogging>";

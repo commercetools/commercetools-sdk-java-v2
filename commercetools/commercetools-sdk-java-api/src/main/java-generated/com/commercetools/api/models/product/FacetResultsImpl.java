@@ -4,9 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +16,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * FacetResults
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetResultsImpl implements FacetResults, ModelBase {
 
+    @Deprecated
     private Map<String, com.commercetools.api.models.product.FacetResult> values;
 
     /**
@@ -29,7 +33,7 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
      */
     @JsonCreator
     FacetResultsImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
     }
 
@@ -42,11 +46,12 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public Map<String, com.commercetools.api.models.product.FacetResult> values() {
         return values;
     }
 
+    @Deprecated
     public void setValue(String key, com.commercetools.api.models.product.FacetResult value) {
         if (values == null) {
             values = new HashMap<>();
@@ -77,4 +82,8 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public FacetResults copyDeep() {
+        return FacetResults.deepCopy(this);
+    }
 }

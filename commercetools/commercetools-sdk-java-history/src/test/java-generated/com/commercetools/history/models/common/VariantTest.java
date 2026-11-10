@@ -1,31 +1,24 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class VariantTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(VariantBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, VariantBuilder builder) {
         Variant variant = builder.buildUnchecked();
         Assertions.assertThat(variant).isInstanceOf(Variant.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Variant.builder().id(2) }, new Object[] { Variant.builder().sku("sku") },
-                new Object[] { Variant.builder().key("key") } };
+        return new Object[][] { new Object[] { "id", Variant.builder().id(2) },
+                new Object[] { "sku", Variant.builder().sku("sku") },
+                new Object[] { "key", Variant.builder().key("key") } };
     }
 
     @Test

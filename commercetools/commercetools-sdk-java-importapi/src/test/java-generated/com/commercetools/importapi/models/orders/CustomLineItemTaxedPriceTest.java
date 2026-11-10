@@ -1,33 +1,26 @@
 
 package com.commercetools.importapi.models.orders;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemTaxedPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemTaxedPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemTaxedPriceBuilder builder) {
         CustomLineItemTaxedPrice customLineItemTaxedPrice = builder.buildUnchecked();
         Assertions.assertThat(customLineItemTaxedPrice).isInstanceOf(CustomLineItemTaxedPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomLineItemTaxedPrice.builder()
-                        .totalNet(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { CustomLineItemTaxedPrice.builder()
+                new Object[] { "totalNet",
+                        CustomLineItemTaxedPrice.builder()
+                                .totalNet(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
+                new Object[] { "totalGross", CustomLineItemTaxedPrice.builder()
                         .totalGross(new com.commercetools.importapi.models.common.TypedMoneyImpl()) } };
     }
 

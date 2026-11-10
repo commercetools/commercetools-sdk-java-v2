@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .productId("{productId}")
  *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .published(true)
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -47,6 +48,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     private String productId;
 
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
+
+    private Boolean published;
 
     private Long quantity;
 
@@ -106,8 +109,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     *  <p>If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p>
      * @param deactivatedAt value to be set
      * @return Builder
      */
@@ -129,7 +132,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -141,7 +144,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -154,7 +157,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -167,7 +170,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -178,7 +181,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -189,7 +192,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -202,7 +205,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -214,7 +217,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -222,6 +225,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     public ShoppingListLineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
+        return this;
+    }
+
+    /**
+     *  <p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p>
+     * @param published value to be set
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder published(final Boolean published) {
+        this.published = published;
         return this;
     }
 
@@ -237,7 +252,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -248,7 +264,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @param builder function to build the variant value
      * @return Builder
@@ -261,7 +277,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @param builder function to build the variant value
      * @return Builder
@@ -274,7 +290,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @param variant value to be set
      * @return Builder
@@ -287,7 +303,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @param builder function to build the productSlug value
      * @return Builder
@@ -300,7 +316,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @param builder function to build the productSlug value
      * @return Builder
@@ -313,7 +329,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @param productSlug value to be set
      * @return Builder
@@ -345,8 +361,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     *  <p>If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p>
      * @return deactivatedAt
      */
 
@@ -365,7 +381,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -376,7 +392,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @return name
      */
 
@@ -385,7 +401,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -394,12 +410,22 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productType
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
+    }
+
+    /**
+     *  <p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p>
+     * @return published
+     */
+
+    public Boolean getPublished() {
+        return this.published;
     }
 
     /**
@@ -412,7 +438,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @return variantId
      */
 
@@ -422,7 +449,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @return variant
      */
@@ -433,7 +460,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @return productSlug
      */
@@ -453,9 +480,10 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         Objects.requireNonNull(name, ShoppingListLineItem.class + ": name is missing");
         Objects.requireNonNull(productId, ShoppingListLineItem.class + ": productId is missing");
         Objects.requireNonNull(productType, ShoppingListLineItem.class + ": productType is missing");
+        Objects.requireNonNull(published, ShoppingListLineItem.class + ": published is missing");
         Objects.requireNonNull(quantity, ShoppingListLineItem.class + ": quantity is missing");
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
-            quantity, variantId, variant, productSlug);
+            published, quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -464,7 +492,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
      */
     public ShoppingListLineItem buildUnchecked() {
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
-            quantity, variantId, variant, productSlug);
+            published, quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -490,6 +518,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         builder.name = template.getName();
         builder.productId = template.getProductId();
         builder.productType = template.getProductType();
+        builder.published = template.getPublished();
         builder.quantity = template.getQuantity();
         builder.variantId = template.getVariantId();
         builder.variant = template.getVariant();

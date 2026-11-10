@@ -29,8 +29,8 @@ public class DiscountedTotalPricePortionExpansionBuilderDsl implements Expansion
         return path;
     }
 
-    public com.commercetools.api.predicates.expansion.cart_discount.CartDiscountReferenceExpansionBuilderDsl discount() {
-        return com.commercetools.api.predicates.expansion.cart_discount.CartDiscountReferenceExpansionBuilderDsl
+    public com.commercetools.api.predicates.expansion.common.ReferenceExpansionBuilderDsl discount() {
+        return com.commercetools.api.predicates.expansion.common.ReferenceExpansionBuilderDsl
                 .of(appendOne(path, "discount"));
     }
 }

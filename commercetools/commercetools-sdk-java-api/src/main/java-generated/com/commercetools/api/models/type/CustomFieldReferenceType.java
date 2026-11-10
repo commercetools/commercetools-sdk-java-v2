@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Field type for Reference values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
@@ -68,6 +70,8 @@ public interface CustomFieldReferenceType extends FieldType {
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;
     }
+
+    public CustomFieldReferenceType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldReferenceType
@@ -115,8 +119,8 @@ public interface CustomFieldReferenceType extends FieldType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType>() {
+    public static tools.jackson.core.type.TypeReference<CustomFieldReferenceType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomFieldReferenceType>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFieldReferenceType>";

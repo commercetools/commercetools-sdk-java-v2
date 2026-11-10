@@ -3,36 +3,29 @@ package com.commercetools.api.models.product_type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypePagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypePagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypePagedQueryResponseBuilder builder) {
         ProductTypePagedQueryResponse productTypePagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(productTypePagedQueryResponse).isInstanceOf(ProductTypePagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTypePagedQueryResponse.builder().limit(7L) },
-                new Object[] { ProductTypePagedQueryResponse.builder().offset(3L) },
-                new Object[] { ProductTypePagedQueryResponse.builder().count(2L) },
-                new Object[] { ProductTypePagedQueryResponse.builder().total(1L) },
-                new Object[] { ProductTypePagedQueryResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.api.models.product_type.ProductTypeImpl())) } };
+        return new Object[][] { new Object[] { "limit", ProductTypePagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", ProductTypePagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", ProductTypePagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ProductTypePagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        ProductTypePagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.product_type.ProductTypeImpl())) } };
     }
 
     @Test

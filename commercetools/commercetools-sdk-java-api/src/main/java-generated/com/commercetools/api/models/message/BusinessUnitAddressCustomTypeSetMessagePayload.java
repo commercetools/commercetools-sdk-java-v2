@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Type to an address of a Business Unit using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after adding a Custom Type to an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitAddressCustomTypeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAddressCustomTypeSetMessagePayloadImpl.class)
 public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessagePayload {
@@ -47,12 +49,20 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
     @JsonProperty("oldTypeId")
     public String getOldTypeId();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
 
     /**
      *  <p>The Custom Fields that were set.</p>
@@ -62,11 +72,18 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
     public void setOldTypeId(final String oldTypeId);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -86,8 +103,11 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
         BusinessUnitAddressCustomTypeSetMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeSetMessagePayloadImpl();
         instance.setCustomFields(template.getCustomFields());
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public BusinessUnitAddressCustomTypeSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitAddressCustomTypeSetMessagePayload
@@ -103,6 +123,7 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
         BusinessUnitAddressCustomTypeSetMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeSetMessagePayloadImpl();
         instance.setCustomFields(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustomFields()));
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -139,8 +160,8 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddressCustomTypeSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddressCustomTypeSetMessagePayload>";

@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * RangeFacetResult
@@ -28,8 +29,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("range")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RangeFacetResultImpl.class)
+@Deprecated
 public interface RangeFacetResult extends FacetResult {
 
     /**
@@ -38,7 +41,7 @@ public interface RangeFacetResult extends FacetResult {
     String RANGE = "range";
 
     /**
-     *
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @return ranges
      */
     @NotNull
@@ -47,7 +50,7 @@ public interface RangeFacetResult extends FacetResult {
     public List<FacetRange> getRanges();
 
     /**
-     * set ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges values to be set
      */
 
@@ -55,7 +58,7 @@ public interface RangeFacetResult extends FacetResult {
     public void setRanges(final FacetRange... ranges);
 
     /**
-     * set ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges values to be set
      */
 
@@ -79,6 +82,8 @@ public interface RangeFacetResult extends FacetResult {
         instance.setRanges(template.getRanges());
         return instance;
     }
+
+    public RangeFacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of RangeFacetResult
@@ -130,8 +135,8 @@ public interface RangeFacetResult extends FacetResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult>() {
+    public static tools.jackson.core.type.TypeReference<RangeFacetResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RangeFacetResult>() {
             @Override
             public String toString() {
                 return "TypeReference<RangeFacetResult>";

@@ -55,10 +55,6 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductChangeSlugActionBuilder.of();
     }
 
-    public com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder legacySetSkuBuilder() {
-        return com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder.of();
-    }
-
     public com.commercetools.api.models.product.ProductMoveImageToPositionActionBuilder moveImageToPositionBuilder() {
         return com.commercetools.api.models.product.ProductMoveImageToPositionActionBuilder.of();
     }
@@ -131,6 +127,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductSetCategoryOrderHintActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder setDefaultVariantBuilder() {
+        return com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product.ProductSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.product.ProductSetDescriptionActionBuilder.of();
     }
@@ -169,6 +169,10 @@ public class ProductUpdateActionBuilder {
 
     public com.commercetools.api.models.product.ProductSetPricesActionBuilder setPricesBuilder() {
         return com.commercetools.api.models.product.ProductSetPricesActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder.of();
     }
 
     public com.commercetools.api.models.product.ProductSetProductPriceCustomFieldActionBuilder setProductPriceCustomFieldBuilder() {

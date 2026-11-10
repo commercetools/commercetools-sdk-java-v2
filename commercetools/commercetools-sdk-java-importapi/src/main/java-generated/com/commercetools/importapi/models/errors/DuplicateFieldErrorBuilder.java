@@ -32,7 +32,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     private java.lang.Object duplicateValue;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Price Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPriceKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceKeySetMessagePayloadImpl.class)
 public interface ProductPriceKeySetMessagePayload extends MessagePayload {
@@ -45,7 +47,7 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     public Long getVariantId();
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
 
@@ -53,7 +55,7 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     public String getPriceId();
 
     /**
-     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @return oldKey
      */
 
@@ -61,7 +63,7 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     public String getOldKey();
 
     /**
-     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @return key
      */
 
@@ -69,7 +71,7 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     public String getKey();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -84,28 +86,28 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @param oldKey value to be set
      */
 
     public void setOldKey(final String oldKey);
 
     /**
-     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
@@ -133,6 +135,8 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductPriceKeySetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPriceKeySetMessagePayload
@@ -184,8 +188,8 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceKeySetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceKeySetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceKeySetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceKeySetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceKeySetMessagePayload>";

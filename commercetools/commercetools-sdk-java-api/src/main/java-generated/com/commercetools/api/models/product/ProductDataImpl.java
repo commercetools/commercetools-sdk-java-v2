@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains all the data of a Product and its Product Variants.</p>
+ * ProductData
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDataImpl implements ProductData, ModelBase {
@@ -44,6 +45,10 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
+    private com.commercetools.api.models.variant.VariantReference defaultVariant;
+
     /**
      * create instance with all properties
      */
@@ -58,7 +63,9 @@ public class ProductDataImpl implements ProductData, ModelBase {
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariant masterVariant,
             @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants,
-            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
+            @JsonProperty("defaultVariant") final com.commercetools.api.models.variant.VariantReference defaultVariant) {
         this.name = name;
         this.categories = categories;
         this.categoryOrderHints = categoryOrderHints;
@@ -70,6 +77,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.masterVariant = masterVariant;
         this.variants = variants;
         this.searchKeywords = searchKeywords;
+        this.attributes = attributes;
+        this.defaultVariant = defaultVariant;
     }
 
     /**
@@ -87,7 +96,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
@@ -111,7 +120,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -119,7 +128,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -127,7 +136,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -144,6 +153,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -152,6 +162,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -159,11 +170,27 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     */
+
+    public com.commercetools.api.models.variant.VariantReference getDefaultVariant() {
+        return this.defaultVariant;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -220,6 +247,18 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.searchKeywords = searchKeywords;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
+    public void setDefaultVariant(final com.commercetools.api.models.variant.VariantReference defaultVariant) {
+        this.defaultVariant = defaultVariant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -241,6 +280,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant, that.masterVariant)
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
+                .append(attributes, that.attributes)
+                .append(defaultVariant, that.defaultVariant)
                 .append(name, that.name)
                 .append(categories, that.categories)
                 .append(categoryOrderHints, that.categoryOrderHints)
@@ -252,6 +293,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant, that.masterVariant)
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
+                .append(attributes, that.attributes)
+                .append(defaultVariant, that.defaultVariant)
                 .isEquals();
     }
 
@@ -268,6 +311,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant)
                 .append(variants)
                 .append(searchKeywords)
+                .append(attributes)
+                .append(defaultVariant)
                 .toHashCode();
     }
 
@@ -284,7 +329,13 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append("masterVariant", masterVariant)
                 .append("variants", variants)
                 .append("searchKeywords", searchKeywords)
+                .append("attributes", attributes)
+                .append("defaultVariant", defaultVariant)
                 .build();
     }
 
+    @Override
+    public ProductData copyDeep() {
+        return ProductData.deepCopy(this);
+    }
 }

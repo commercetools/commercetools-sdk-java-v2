@@ -7,20 +7,21 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Base representation of a Message containing common fields to all Message Types.</p>
+ *  <p>Base representation of a Message containing common fields to all <span>Message Types</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -40,235 +41,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowApprovedMessageImpl.class, name = ApprovalFlowApprovedMessage.APPROVAL_FLOW_APPROVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCompletedMessageImpl.class, name = ApprovalFlowCompletedMessage.APPROVAL_FLOW_COMPLETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCreatedMessageImpl.class, name = ApprovalFlowCreatedMessage.APPROVAL_FLOW_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowRejectedMessageImpl.class, name = ApprovalFlowRejectedMessage.APPROVAL_FLOW_REJECTED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleApproversSetMessageImpl.class, name = ApprovalRuleApproversSetMessage.APPROVAL_RULE_APPROVERS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleCreatedMessageImpl.class, name = ApprovalRuleCreatedMessage.APPROVAL_RULE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageImpl.class, name = ApprovalRuleDescriptionSetMessage.APPROVAL_RULE_DESCRIPTION_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleKeySetMessageImpl.class, name = ApprovalRuleKeySetMessage.APPROVAL_RULE_KEY_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleNameSetMessageImpl.class, name = ApprovalRuleNameSetMessage.APPROVAL_RULE_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRulePredicateSetMessageImpl.class, name = ApprovalRulePredicateSetMessage.APPROVAL_RULE_PREDICATE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageImpl.class, name = ApprovalRuleRequestersSetMessage.APPROVAL_RULE_REQUESTERS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleStatusSetMessageImpl.class, name = ApprovalRuleStatusSetMessage.APPROVAL_RULE_STATUS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageImpl.class, name = AssociateRoleBuyerAssignableChangedMessage.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessageImpl.class, name = AssociateRoleCreatedMessage.ASSOCIATE_ROLE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessageImpl.class, name = AssociateRoleDeletedMessage.ASSOCIATE_ROLE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameChangedMessageImpl.class, name = AssociateRoleNameChangedMessage.ASSOCIATE_ROLE_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionAddedMessageImpl.class, name = AssociateRolePermissionAddedMessage.ASSOCIATE_ROLE_PERMISSION_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageImpl.class, name = AssociateRolePermissionRemovedMessage.ASSOCIATE_ROLE_PERMISSION_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionsSetMessageImpl.class, name = AssociateRolePermissionsSetMessage.ASSOCIATE_ROLE_PERMISSIONS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressAddedMessageImpl.class, name = BusinessUnitAddressAddedMessage.BUSINESS_UNIT_ADDRESS_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressChangedMessageImpl.class, name = BusinessUnitAddressChangedMessage.BUSINESS_UNIT_ADDRESS_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageImpl.class, name = BusinessUnitAddressCustomFieldAddedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageImpl.class, name = BusinessUnitAddressCustomFieldChangedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageImpl.class, name = BusinessUnitAddressCustomFieldRemovedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageImpl.class, name = BusinessUnitAddressCustomTypeRemovedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageImpl.class, name = BusinessUnitAddressCustomTypeSetMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageImpl.class, name = BusinessUnitAddressRemovedMessage.BUSINESS_UNIT_ADDRESS_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageImpl.class, name = BusinessUnitAssociateAddedMessage.BUSINESS_UNIT_ASSOCIATE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageImpl.class, name = BusinessUnitAssociateChangedMessage.BUSINESS_UNIT_ASSOCIATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageImpl.class, name = BusinessUnitAssociateModeChangedMessage.BUSINESS_UNIT_ASSOCIATE_MODE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageImpl.class, name = BusinessUnitAssociateRemovedMessage.BUSINESS_UNIT_ASSOCIATE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociatesSetMessageImpl.class, name = BusinessUnitAssociatesSetMessage.BUSINESS_UNIT_ASSOCIATES_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessageImpl.class, name = BusinessUnitBillingAddressAddedMessage.BUSINESS_UNIT_BILLING_ADDRESS_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessageImpl.class, name = BusinessUnitBillingAddressRemovedMessage.BUSINESS_UNIT_BILLING_ADDRESS_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitContactEmailSetMessageImpl.class, name = BusinessUnitContactEmailSetMessage.BUSINESS_UNIT_CONTACT_EMAIL_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCreatedMessageImpl.class, name = BusinessUnitCreatedMessage.BUSINESS_UNIT_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageImpl.class, name = BusinessUnitCustomFieldAddedMessage.BUSINESS_UNIT_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageImpl.class, name = BusinessUnitCustomFieldChangedMessage.BUSINESS_UNIT_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageImpl.class, name = BusinessUnitCustomFieldRemovedMessage.BUSINESS_UNIT_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageImpl.class, name = BusinessUnitCustomTypeRemovedMessage.BUSINESS_UNIT_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageImpl.class, name = BusinessUnitCustomTypeSetMessage.BUSINESS_UNIT_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageImpl.class, name = BusinessUnitDefaultBillingAddressSetMessage.BUSINESS_UNIT_DEFAULT_BILLING_ADDRESS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessageImpl.class, name = BusinessUnitDefaultShippingAddressSetMessage.BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDeletedMessageImpl.class, name = BusinessUnitDeletedMessage.BUSINESS_UNIT_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitNameChangedMessageImpl.class, name = BusinessUnitNameChangedMessage.BUSINESS_UNIT_NAME_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentChangedMessageImpl.class, name = BusinessUnitParentChangedMessage.BUSINESS_UNIT_PARENT_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageImpl.class, name = BusinessUnitShippingAddressAddedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageImpl.class, name = BusinessUnitShippingAddressRemovedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStatusChangedMessageImpl.class, name = BusinessUnitStatusChangedMessage.BUSINESS_UNIT_STATUS_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreAddedMessageImpl.class, name = BusinessUnitStoreAddedMessage.BUSINESS_UNIT_STORE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessageImpl.class, name = BusinessUnitStoreModeChangedMessage.BUSINESS_UNIT_STORE_MODE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreRemovedMessageImpl.class, name = BusinessUnitStoreRemovedMessage.BUSINESS_UNIT_STORE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoresSetMessageImpl.class, name = BusinessUnitStoresSetMessage.BUSINESS_UNIT_STORES_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountCreatedMessageImpl.class, name = CartDiscountCreatedMessage.CART_DISCOUNT_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountDeletedMessageImpl.class, name = CartDiscountDeletedMessage.CART_DISCOUNT_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreAddedMessageImpl.class, name = CartDiscountStoreAddedMessage.CART_DISCOUNT_STORE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreRemovedMessageImpl.class, name = CartDiscountStoreRemovedMessage.CART_DISCOUNT_STORE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoresSetMessageImpl.class, name = CartDiscountStoresSetMessage.CART_DISCOUNT_STORES_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategoryCreatedMessageImpl.class, name = CategoryCreatedMessage.CATEGORY_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategorySlugChangedMessageImpl.class, name = CategorySlugChangedMessage.CATEGORY_SLUG_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomLineItemStateTransitionMessageImpl.class, name = CustomLineItemStateTransitionMessage.CUSTOM_LINE_ITEM_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressAddedMessageImpl.class, name = CustomerAddressAddedMessage.CUSTOMER_ADDRESS_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressChangedMessageImpl.class, name = CustomerAddressChangedMessage.CUSTOMER_ADDRESS_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageImpl.class, name = CustomerAddressCustomFieldAddedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageImpl.class, name = CustomerAddressCustomFieldChangedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageImpl.class, name = CustomerAddressCustomFieldRemovedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageImpl.class, name = CustomerAddressCustomTypeRemovedMessage.CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageImpl.class, name = CustomerAddressCustomTypeSetMessage.CUSTOMER_ADDRESS_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressRemovedMessageImpl.class, name = CustomerAddressRemovedMessage.CUSTOMER_ADDRESS_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCompanyNameSetMessageImpl.class, name = CustomerCompanyNameSetMessage.CUSTOMER_COMPANY_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCreatedMessageImpl.class, name = CustomerCreatedMessage.CUSTOMER_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldAddedMessageImpl.class, name = CustomerCustomFieldAddedMessage.CUSTOMER_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldChangedMessageImpl.class, name = CustomerCustomFieldChangedMessage.CUSTOMER_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageImpl.class, name = CustomerCustomFieldRemovedMessage.CUSTOMER_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageImpl.class, name = CustomerCustomTypeRemovedMessage.CUSTOMER_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomTypeSetMessageImpl.class, name = CustomerCustomTypeSetMessage.CUSTOMER_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessageImpl.class, name = CustomerDateOfBirthSetMessage.CUSTOMER_DATE_OF_BIRTH_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDeletedMessageImpl.class, name = CustomerDeletedMessage.CUSTOMER_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessageImpl.class, name = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageImpl.class, name = CustomerEmailTokenCreatedMessage.CUSTOMER_EMAIL_TOKEN_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessageImpl.class, name = CustomerFirstNameSetMessage.CUSTOMER_FIRST_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageImpl.class, name = CustomerGroupCustomFieldAddedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageImpl.class, name = CustomerGroupCustomFieldChangedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageImpl.class, name = CustomerGroupCustomFieldRemovedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageImpl.class, name = CustomerGroupCustomTypeRemovedMessage.CUSTOMER_GROUP_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageImpl.class, name = CustomerGroupCustomTypeSetMessage.CUSTOMER_GROUP_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessageImpl.class, name = CustomerGroupSetMessage.CUSTOMER_GROUP_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerLastNameSetMessageImpl.class, name = CustomerLastNameSetMessage.CUSTOMER_LAST_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageImpl.class, name = CustomerPasswordTokenCreatedMessage.CUSTOMER_PASSWORD_TOKEN_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessageImpl.class, name = CustomerPasswordUpdatedMessage.CUSTOMER_PASSWORD_UPDATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerTitleSetMessageImpl.class, name = CustomerTitleSetMessage.CUSTOMER_TITLE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessageImpl.class, name = DeliveryAddedMessage.DELIVERY_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessageImpl.class, name = DeliveryAddressSetMessage.DELIVERY_ADDRESS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryItemsUpdatedMessageImpl.class, name = DeliveryItemsUpdatedMessage.DELIVERY_ITEMS_UPDATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryRemovedMessageImpl.class, name = DeliveryRemovedMessage.DELIVERY_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeCreatedMessageImpl.class, name = DiscountCodeCreatedMessage.DISCOUNT_CODE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeDeletedMessageImpl.class, name = DiscountCodeDeletedMessage.DISCOUNT_CODE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeKeySetMessageImpl.class, name = DiscountCodeKeySetMessage.DISCOUNT_CODE_KEY_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryCreatedMessageImpl.class, name = InventoryEntryCreatedMessage.INVENTORY_ENTRY_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryDeletedMessageImpl.class, name = InventoryEntryDeletedMessage.INVENTORY_ENTRY_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryQuantitySetMessageImpl.class, name = InventoryEntryQuantitySetMessage.INVENTORY_ENTRY_QUANTITY_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessageImpl.class, name = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessageImpl.class, name = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessageImpl.class, name = OrderCreatedMessage.ORDER_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessageImpl.class, name = OrderCustomFieldAddedMessage.ORDER_CUSTOM_FIELD_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessageImpl.class, name = OrderCustomFieldChangedMessage.ORDER_CUSTOM_FIELD_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldRemovedMessageImpl.class, name = OrderCustomFieldRemovedMessage.ORDER_CUSTOM_FIELD_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemAddedMessageImpl.class, name = OrderCustomLineItemAddedMessage.ORDER_CUSTOM_LINE_ITEM_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageImpl.class, name = OrderCustomLineItemDiscountSetMessage.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessageImpl.class, name = OrderCustomLineItemQuantityChangedMessage.ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageImpl.class, name = OrderCustomLineItemRemovedMessage.ORDER_CUSTOM_LINE_ITEM_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeRemovedMessageImpl.class, name = OrderCustomTypeRemovedMessage.ORDER_CUSTOM_TYPE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeSetMessageImpl.class, name = OrderCustomTypeSetMessage.ORDER_CUSTOM_TYPE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerEmailSetMessageImpl.class, name = OrderCustomerEmailSetMessage.ORDER_CUSTOMER_EMAIL_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerGroupSetMessageImpl.class, name = OrderCustomerGroupSetMessage.ORDER_CUSTOMER_GROUP_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerSetMessageImpl.class, name = OrderCustomerSetMessage.ORDER_CUSTOMER_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderDeletedMessageImpl.class, name = OrderDeletedMessage.ORDER_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderDiscountCodeAddedMessageImpl.class, name = OrderDiscountCodeAddedMessage.ORDER_DISCOUNT_CODE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderDiscountCodeRemovedMessageImpl.class, name = OrderDiscountCodeRemovedMessage.ORDER_DISCOUNT_CODE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderDiscountCodeStateSetMessageImpl.class, name = OrderDiscountCodeStateSetMessage.ORDER_DISCOUNT_CODE_STATE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderEditAppliedMessageImpl.class, name = OrderEditAppliedMessage.ORDER_EDIT_APPLIED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderImportedMessageImpl.class, name = OrderImportedMessage.ORDER_IMPORTED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemAddedMessageImpl.class, name = OrderLineItemAddedMessage.ORDER_LINE_ITEM_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemDiscountSetMessageImpl.class, name = OrderLineItemDiscountSetMessage.ORDER_LINE_ITEM_DISCOUNT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessageImpl.class, name = OrderLineItemDistributionChannelSetMessage.ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemRemovedMessageImpl.class, name = OrderLineItemRemovedMessage.ORDER_LINE_ITEM_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentAddedMessageImpl.class, name = OrderPaymentAddedMessage.ORDER_PAYMENT_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentStateChangedMessageImpl.class, name = OrderPaymentStateChangedMessage.ORDER_PAYMENT_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessageImpl.class, name = OrderPurchaseOrderNumberSetMessage.ORDER_PURCHASE_ORDER_NUMBER_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageImpl.class, name = OrderReturnShipmentStateChangedMessage.ORDER_RETURN_SHIPMENT_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShipmentStateChangedMessageImpl.class, name = OrderShipmentStateChangedMessage.ORDER_SHIPMENT_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingAddressSetMessageImpl.class, name = OrderShippingAddressSetMessage.ORDER_SHIPPING_ADDRESS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingInfoSetMessageImpl.class, name = OrderShippingInfoSetMessage.ORDER_SHIPPING_INFO_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingRateInputSetMessageImpl.class, name = OrderShippingRateInputSetMessage.ORDER_SHIPPING_RATE_INPUT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStateChangedMessageImpl.class, name = OrderStateChangedMessage.ORDER_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStateTransitionMessageImpl.class, name = OrderStateTransitionMessage.ORDER_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderStoreSetMessageImpl.class, name = OrderStoreSetMessage.ORDER_STORE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelAddedToDeliveryMessageImpl.class, name = ParcelAddedToDeliveryMessage.PARCEL_ADDED_TO_DELIVERY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelItemsUpdatedMessageImpl.class, name = ParcelItemsUpdatedMessage.PARCEL_ITEMS_UPDATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessageImpl.class, name = ParcelMeasurementsUpdatedMessage.PARCEL_MEASUREMENTS_UPDATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessageImpl.class, name = ParcelRemovedFromDeliveryMessage.PARCEL_REMOVED_FROM_DELIVERY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessageImpl.class, name = ParcelTrackingDataUpdatedMessage.PARCEL_TRACKING_DATA_UPDATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentCreatedMessageImpl.class, name = PaymentCreatedMessage.PAYMENT_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentInteractionAddedMessageImpl.class, name = PaymentInteractionAddedMessage.PAYMENT_INTERACTION_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessageImpl.class, name = PaymentStatusInterfaceCodeSetMessage.PAYMENT_STATUS_INTERFACE_CODE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentStatusStateTransitionMessageImpl.class, name = PaymentStatusStateTransitionMessage.PAYMENT_STATUS_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentTransactionAddedMessageImpl.class, name = PaymentTransactionAddedMessage.PAYMENT_TRANSACTION_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.PaymentTransactionStateChangedMessageImpl.class, name = PaymentTransactionStateChangedMessage.PAYMENT_TRANSACTION_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductAddedToCategoryMessageImpl.class, name = ProductAddedToCategoryMessage.PRODUCT_ADDED_TO_CATEGORY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductCreatedMessageImpl.class, name = ProductCreatedMessage.PRODUCT_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductDeletedMessageImpl.class, name = ProductDeletedMessage.PRODUCT_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductImageAddedMessageImpl.class, name = ProductImageAddedMessage.PRODUCT_IMAGE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceAddedMessageImpl.class, name = ProductPriceAddedMessage.PRODUCT_PRICE_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceChangedMessageImpl.class, name = ProductPriceChangedMessage.PRODUCT_PRICE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceDiscountsSetMessageImpl.class, name = ProductPriceDiscountsSetMessage.PRODUCT_PRICE_DISCOUNTS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageImpl.class, name = ProductPriceExternalDiscountSetMessage.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceKeySetMessageImpl.class, name = ProductPriceKeySetMessage.PRODUCT_PRICE_KEY_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceModeSetMessageImpl.class, name = ProductPriceModeSetMessage.PRODUCT_PRICE_MODE_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceRemovedMessageImpl.class, name = ProductPriceRemovedMessage.PRODUCT_PRICE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPricesSetMessageImpl.class, name = ProductPricesSetMessage.PRODUCT_PRICES_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPublishedMessageImpl.class, name = ProductPublishedMessage.PRODUCT_PUBLISHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRemovedFromCategoryMessageImpl.class, name = ProductRemovedFromCategoryMessage.PRODUCT_REMOVED_FROM_CATEGORY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRevertedStagedChangesMessageImpl.class, name = ProductRevertedStagedChangesMessage.PRODUCT_REVERTED_STAGED_CHANGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionCreatedMessageImpl.class, name = ProductSelectionCreatedMessage.PRODUCT_SELECTION_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionDeletedMessageImpl.class, name = ProductSelectionDeletedMessage.PRODUCT_SELECTION_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductAddedMessageImpl.class, name = ProductSelectionProductAddedMessage.PRODUCT_SELECTION_PRODUCT_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductExcludedMessageImpl.class, name = ProductSelectionProductExcludedMessage.PRODUCT_SELECTION_PRODUCT_EXCLUDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductRemovedMessageImpl.class, name = ProductSelectionProductRemovedMessage.PRODUCT_SELECTION_PRODUCT_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageImpl.class, name = ProductSelectionVariantExclusionChangedMessage.PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageImpl.class, name = ProductSelectionVariantSelectionChangedMessage.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessageImpl.class, name = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessageImpl.class, name = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringCreatedMessageImpl.class, name = ProductTailoringCreatedMessage.PRODUCT_TAILORING_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDeletedMessageImpl.class, name = ProductTailoringDeletedMessage.PRODUCT_TAILORING_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageImpl.class, name = ProductTailoringDescriptionSetMessage.PRODUCT_TAILORING_DESCRIPTION_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringNameSetMessageImpl.class, name = ProductTailoringNameSetMessage.PRODUCT_TAILORING_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringPublishedMessageImpl.class, name = ProductTailoringPublishedMessage.PRODUCT_TAILORING_PUBLISHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringSlugSetMessageImpl.class, name = ProductTailoringSlugSetMessage.PRODUCT_TAILORING_SLUG_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringUnpublishedMessageImpl.class, name = ProductTailoringUnpublishedMessage.PRODUCT_TAILORING_UNPUBLISHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductUnpublishedMessageImpl.class, name = ProductUnpublishedMessage.PRODUCT_UNPUBLISHED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantAddedMessageImpl.class, name = ProductVariantAddedMessage.PRODUCT_VARIANT_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantDeletedMessageImpl.class, name = ProductVariantDeletedMessage.PRODUCT_VARIANT_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCreatedMessageImpl.class, name = QuoteCreatedMessage.QUOTE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCustomerChangedMessageImpl.class, name = QuoteCustomerChangedMessage.QUOTE_CUSTOMER_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteDeletedMessageImpl.class, name = QuoteDeletedMessage.QUOTE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageImpl.class, name = QuoteRenegotiationRequestedMessage.QUOTE_RENEGOTIATION_REQUESTED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCreatedMessageImpl.class, name = QuoteRequestCreatedMessage.QUOTE_REQUEST_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCustomerChangedMessageImpl.class, name = QuoteRequestCustomerChangedMessage.QUOTE_REQUEST_CUSTOMER_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestDeletedMessageImpl.class, name = QuoteRequestDeletedMessage.QUOTE_REQUEST_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestStateChangedMessageImpl.class, name = QuoteRequestStateChangedMessage.QUOTE_REQUEST_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestStateTransitionMessageImpl.class, name = QuoteRequestStateTransitionMessage.QUOTE_REQUEST_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateChangedMessageImpl.class, name = QuoteStateChangedMessage.QUOTE_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateTransitionMessageImpl.class, name = QuoteStateTransitionMessage.QUOTE_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoAddedMessageImpl.class, name = ReturnInfoAddedMessage.RETURN_INFO_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoSetMessageImpl.class, name = ReturnInfoSetMessage.RETURN_INFO_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessageImpl.class, name = ReviewCreatedMessage.REVIEW_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessageImpl.class, name = ReviewRatingSetMessage.REVIEW_RATING_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessageImpl.class, name = ReviewStateTransitionMessage.REVIEW_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteCreatedMessageImpl.class, name = StagedQuoteCreatedMessage.STAGED_QUOTE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteDeletedMessageImpl.class, name = StagedQuoteDeletedMessage.STAGED_QUOTE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessageImpl.class, name = StagedQuoteSellerCommentSetMessage.STAGED_QUOTE_SELLER_COMMENT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateChangedMessageImpl.class, name = StagedQuoteStateChangedMessage.STAGED_QUOTE_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateTransitionMessageImpl.class, name = StagedQuoteStateTransitionMessage.STAGED_QUOTE_STATE_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteValidToSetMessageImpl.class, name = StagedQuoteValidToSetMessage.STAGED_QUOTE_VALID_TO_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceActiveChangedMessageImpl.class, name = StandalonePriceActiveChangedMessage.STANDALONE_PRICE_ACTIVE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceCreatedMessageImpl.class, name = StandalonePriceCreatedMessage.STANDALONE_PRICE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessageImpl.class, name = StandalonePriceDeletedMessage.STANDALONE_PRICE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessageImpl.class, name = StandalonePriceDiscountSetMessage.STANDALONE_PRICE_DISCOUNT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessageImpl.class, name = StandalonePriceExternalDiscountSetMessage.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceKeySetMessageImpl.class, name = StandalonePriceKeySetMessage.STANDALONE_PRICE_KEY_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageImpl.class, name = StandalonePriceStagedChangesAppliedMessage.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageImpl.class, name = StandalonePriceStagedChangesRemovedMessage.STANDALONE_PRICE_STAGED_CHANGES_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierAddedMessageImpl.class, name = StandalonePriceTierAddedMessage.STANDALONE_PRICE_TIER_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierRemovedMessageImpl.class, name = StandalonePriceTierRemovedMessage.STANDALONE_PRICE_TIER_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTiersSetMessageImpl.class, name = StandalonePriceTiersSetMessage.STANDALONE_PRICE_TIERS_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessageImpl.class, name = StandalonePriceValidFromAndUntilSetMessage.STANDALONE_PRICE_VALID_FROM_AND_UNTIL_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidFromSetMessageImpl.class, name = StandalonePriceValidFromSetMessage.STANDALONE_PRICE_VALID_FROM_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidUntilSetMessageImpl.class, name = StandalonePriceValidUntilSetMessage.STANDALONE_PRICE_VALID_UNTIL_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValueChangedMessageImpl.class, name = StandalonePriceValueChangedMessage.STANDALONE_PRICE_VALUE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCountriesChangedMessageImpl.class, name = StoreCountriesChangedMessage.STORE_COUNTRIES_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCreatedMessageImpl.class, name = StoreCreatedMessage.STORE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessageImpl.class, name = StoreDeletedMessage.STORE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageImpl.class, name = StoreDistributionChannelsChangedMessage.STORE_DISTRIBUTION_CHANNELS_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreLanguagesChangedMessageImpl.class, name = StoreLanguagesChangedMessage.STORE_LANGUAGES_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreNameSetMessageImpl.class, name = StoreNameSetMessage.STORE_NAME_SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessageImpl.class, name = StoreProductSelectionsChangedMessage.STORE_PRODUCT_SELECTIONS_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageImpl.class, name = StoreSupplyChannelsChangedMessage.STORE_SUPPLY_CHANNELS_CHANGED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessageImpl.class, visible = true)
 @JsonDeserialize(as = MessageImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -331,7 +103,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getSequenceNumber();
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
     @NotNull
@@ -348,7 +120,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getResourceVersion();
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      * @return type
      */
     @NotNull
@@ -413,7 +185,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      */
 
@@ -433,6 +205,8 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
 
+    public Message copyDeep();
+
     /**
      * factory method to create a deep copy of Message
      * @param template instance to be copied
@@ -443,733 +217,9 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.message.ApprovalFlowApprovedMessage) {
-            return com.commercetools.api.models.message.ApprovalFlowApprovedMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowApprovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCompletedMessage) {
-            return com.commercetools.api.models.message.ApprovalFlowCompletedMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCompletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCreatedMessage) {
-            return com.commercetools.api.models.message.ApprovalFlowCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalFlowRejectedMessage) {
-            return com.commercetools.api.models.message.ApprovalFlowRejectedMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowRejectedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleApproversSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleApproversSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleApproversSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleCreatedMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleKeySetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleKeySetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleKeySetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleNameSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRulePredicateSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRulePredicateSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRulePredicateSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ApprovalRuleStatusSetMessage) {
-            return com.commercetools.api.models.message.ApprovalRuleStatusSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleStatusSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage) {
-            return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage.deepCopy(
-                (com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleCreatedMessage) {
-            return com.commercetools.api.models.message.AssociateRoleCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRoleCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleDeletedMessage) {
-            return com.commercetools.api.models.message.AssociateRoleDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRoleDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameChangedMessage) {
-            return com.commercetools.api.models.message.AssociateRoleNameChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionAddedMessage) {
-            return com.commercetools.api.models.message.AssociateRolePermissionAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage) {
-            return com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionsSetMessage) {
-            return com.commercetools.api.models.message.AssociateRolePermissionsSetMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionsSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociatesSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitAssociatesSetMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociatesSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitContactEmailSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitContactEmailSetMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitContactEmailSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCreatedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitDeletedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitNameChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitNameChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitNameChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitParentChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessage.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitStatusChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitStatusChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStatusChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreAddedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitStoreAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoreAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreRemovedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitStoreRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoreRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoresSetMessage) {
-            return com.commercetools.api.models.message.BusinessUnitStoresSetMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoresSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CartDiscountCreatedMessage) {
-            return com.commercetools.api.models.message.CartDiscountCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CartDiscountCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CartDiscountDeletedMessage) {
-            return com.commercetools.api.models.message.CartDiscountDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.CartDiscountDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CartDiscountStoreAddedMessage) {
-            return com.commercetools.api.models.message.CartDiscountStoreAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoreAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CartDiscountStoreRemovedMessage) {
-            return com.commercetools.api.models.message.CartDiscountStoreRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoreRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CartDiscountStoresSetMessage) {
-            return com.commercetools.api.models.message.CartDiscountStoresSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoresSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CategoryCreatedMessage) {
-            return com.commercetools.api.models.message.CategoryCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CategoryCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CategorySlugChangedMessage) {
-            return com.commercetools.api.models.message.CategorySlugChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CategorySlugChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressAddedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressChangedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage) {
-            return com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerAddressRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerAddressRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerAddressRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCompanyNameSetMessage) {
-            return com.commercetools.api.models.message.CustomerCompanyNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCompanyNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCreatedMessage) {
-            return com.commercetools.api.models.message.CustomerCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldAddedMessage) {
-            return com.commercetools.api.models.message.CustomerCustomFieldAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldChangedMessage) {
-            return com.commercetools.api.models.message.CustomerCustomFieldChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerCustomTypeSetMessage) {
-            return com.commercetools.api.models.message.CustomerCustomTypeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerCustomTypeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerDateOfBirthSetMessage) {
-            return com.commercetools.api.models.message.CustomerDateOfBirthSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerDateOfBirthSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerDeletedMessage) {
-            return com.commercetools.api.models.message.CustomerDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerEmailChangedMessage) {
-            return com.commercetools.api.models.message.CustomerEmailChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerEmailChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage) {
-            return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerEmailVerifiedMessage) {
-            return com.commercetools.api.models.message.CustomerEmailVerifiedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerEmailVerifiedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessage) {
-            return com.commercetools.api.models.message.CustomerFirstNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage) {
-            return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage) {
-            return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage) {
-            return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage) {
-            return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerGroupSetMessage) {
-            return com.commercetools.api.models.message.CustomerGroupSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerGroupSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerLastNameSetMessage) {
-            return com.commercetools.api.models.message.CustomerLastNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerLastNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage) {
-            return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerPasswordUpdatedMessage) {
-            return com.commercetools.api.models.message.CustomerPasswordUpdatedMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerPasswordUpdatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.CustomerTitleSetMessage) {
-            return com.commercetools.api.models.message.CustomerTitleSetMessage
-                    .deepCopy((com.commercetools.api.models.message.CustomerTitleSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.DiscountCodeCreatedMessage) {
-            return com.commercetools.api.models.message.DiscountCodeCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.DiscountCodeCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.DiscountCodeDeletedMessage) {
-            return com.commercetools.api.models.message.DiscountCodeDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.DiscountCodeDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.DiscountCodeKeySetMessage) {
-            return com.commercetools.api.models.message.DiscountCodeKeySetMessage
-                    .deepCopy((com.commercetools.api.models.message.DiscountCodeKeySetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.InventoryEntryCreatedMessage) {
-            return com.commercetools.api.models.message.InventoryEntryCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.InventoryEntryCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.InventoryEntryDeletedMessage) {
-            return com.commercetools.api.models.message.InventoryEntryDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.InventoryEntryDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.InventoryEntryQuantitySetMessage) {
-            return com.commercetools.api.models.message.InventoryEntryQuantitySetMessage
-                    .deepCopy((com.commercetools.api.models.message.InventoryEntryQuantitySetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.OrderMessage) {
-            return com.commercetools.api.models.message.OrderMessage
-                    .deepCopy((com.commercetools.api.models.message.OrderMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.OrderPaymentAddedMessage) {
-            return com.commercetools.api.models.message.OrderPaymentAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.OrderPaymentAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentCreatedMessage) {
-            return com.commercetools.api.models.message.PaymentCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentInteractionAddedMessage) {
-            return com.commercetools.api.models.message.PaymentInteractionAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentInteractionAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessage) {
-            return com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentStatusStateTransitionMessage) {
-            return com.commercetools.api.models.message.PaymentStatusStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentStatusStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentTransactionAddedMessage) {
-            return com.commercetools.api.models.message.PaymentTransactionAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentTransactionAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.PaymentTransactionStateChangedMessage) {
-            return com.commercetools.api.models.message.PaymentTransactionStateChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.PaymentTransactionStateChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductAddedToCategoryMessage) {
-            return com.commercetools.api.models.message.ProductAddedToCategoryMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductAddedToCategoryMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductCreatedMessage) {
-            return com.commercetools.api.models.message.ProductCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductDeletedMessage) {
-            return com.commercetools.api.models.message.ProductDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductImageAddedMessage) {
-            return com.commercetools.api.models.message.ProductImageAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductImageAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceAddedMessage) {
-            return com.commercetools.api.models.message.ProductPriceAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceChangedMessage) {
-            return com.commercetools.api.models.message.ProductPriceChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceDiscountsSetMessage) {
-            return com.commercetools.api.models.message.ProductPriceDiscountsSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceDiscountsSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessage) {
-            return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceKeySetMessage) {
-            return com.commercetools.api.models.message.ProductPriceKeySetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceKeySetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceModeSetMessage) {
-            return com.commercetools.api.models.message.ProductPriceModeSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceModeSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPriceRemovedMessage) {
-            return com.commercetools.api.models.message.ProductPriceRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPriceRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPricesSetMessage) {
-            return com.commercetools.api.models.message.ProductPricesSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPricesSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductPublishedMessage) {
-            return com.commercetools.api.models.message.ProductPublishedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductPublishedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductRemovedFromCategoryMessage) {
-            return com.commercetools.api.models.message.ProductRemovedFromCategoryMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductRemovedFromCategoryMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductRevertedStagedChangesMessage) {
-            return com.commercetools.api.models.message.ProductRevertedStagedChangesMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductRevertedStagedChangesMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionCreatedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSelectionCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionDeletedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSelectionDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductAddedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionProductAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSelectionProductAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductExcludedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionProductExcludedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSelectionProductExcludedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductRemovedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionProductRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSelectionProductRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessage.deepCopy(
-                (com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessage) {
-            return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessage.deepCopy(
-                (com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductSlugChangedMessage) {
-            return com.commercetools.api.models.message.ProductSlugChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductSlugChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductStateTransitionMessage) {
-            return com.commercetools.api.models.message.ProductStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringCreatedMessage) {
-            return com.commercetools.api.models.message.ProductTailoringCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringDeletedMessage) {
-            return com.commercetools.api.models.message.ProductTailoringDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage) {
-            return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringNameSetMessage) {
-            return com.commercetools.api.models.message.ProductTailoringNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringPublishedMessage) {
-            return com.commercetools.api.models.message.ProductTailoringPublishedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringPublishedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringSlugSetMessage) {
-            return com.commercetools.api.models.message.ProductTailoringSlugSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringSlugSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductTailoringUnpublishedMessage) {
-            return com.commercetools.api.models.message.ProductTailoringUnpublishedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductTailoringUnpublishedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductUnpublishedMessage) {
-            return com.commercetools.api.models.message.ProductUnpublishedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductUnpublishedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductVariantAddedMessage) {
-            return com.commercetools.api.models.message.ProductVariantAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductVariantAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ProductVariantDeletedMessage) {
-            return com.commercetools.api.models.message.ProductVariantDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.ProductVariantDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteCreatedMessage) {
-            return com.commercetools.api.models.message.QuoteCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteCustomerChangedMessage) {
-            return com.commercetools.api.models.message.QuoteCustomerChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteCustomerChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteDeletedMessage) {
-            return com.commercetools.api.models.message.QuoteDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) {
-            return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRequestCreatedMessage) {
-            return com.commercetools.api.models.message.QuoteRequestCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRequestCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRequestCustomerChangedMessage) {
-            return com.commercetools.api.models.message.QuoteRequestCustomerChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRequestCustomerChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRequestDeletedMessage) {
-            return com.commercetools.api.models.message.QuoteRequestDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRequestDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRequestStateChangedMessage) {
-            return com.commercetools.api.models.message.QuoteRequestStateChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRequestStateChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteRequestStateTransitionMessage) {
-            return com.commercetools.api.models.message.QuoteRequestStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteRequestStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteStateChangedMessage) {
-            return com.commercetools.api.models.message.QuoteStateChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteStateChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.QuoteStateTransitionMessage) {
-            return com.commercetools.api.models.message.QuoteStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.QuoteStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ReviewCreatedMessage) {
-            return com.commercetools.api.models.message.ReviewCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.ReviewCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ReviewRatingSetMessage) {
-            return com.commercetools.api.models.message.ReviewRatingSetMessage
-                    .deepCopy((com.commercetools.api.models.message.ReviewRatingSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ReviewStateTransitionMessage) {
-            return com.commercetools.api.models.message.ReviewStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.ReviewStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteCreatedMessage) {
-            return com.commercetools.api.models.message.StagedQuoteCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteDeletedMessage) {
-            return com.commercetools.api.models.message.StagedQuoteDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessage) {
-            return com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteStateChangedMessage) {
-            return com.commercetools.api.models.message.StagedQuoteStateChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteStateChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteStateTransitionMessage) {
-            return com.commercetools.api.models.message.StagedQuoteStateTransitionMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteStateTransitionMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StagedQuoteValidToSetMessage) {
-            return com.commercetools.api.models.message.StagedQuoteValidToSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StagedQuoteValidToSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceActiveChangedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceActiveChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceActiveChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceCreatedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceDeletedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceDiscountSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceDiscountSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceDiscountSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessage.deepCopy(
-                (com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceKeySetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceKeySetMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceKeySetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage.deepCopy(
-                (com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage.deepCopy(
-                (com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceTierAddedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceTierAddedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTierAddedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceTierRemovedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceTierRemovedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTierRemovedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceTiersSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceTiersSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTiersSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessage.deepCopy(
-                (com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidFromSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceValidFromSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceValidFromSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidUntilSetMessage) {
-            return com.commercetools.api.models.message.StandalonePriceValidUntilSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceValidUntilSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StandalonePriceValueChangedMessage) {
-            return com.commercetools.api.models.message.StandalonePriceValueChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StandalonePriceValueChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreCountriesChangedMessage) {
-            return com.commercetools.api.models.message.StoreCountriesChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreCountriesChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreCreatedMessage) {
-            return com.commercetools.api.models.message.StoreCreatedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreCreatedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreDeletedMessage) {
-            return com.commercetools.api.models.message.StoreDeletedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreDeletedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreDistributionChannelsChangedMessage) {
-            return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreDistributionChannelsChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreLanguagesChangedMessage) {
-            return com.commercetools.api.models.message.StoreLanguagesChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreLanguagesChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreNameSetMessage) {
-            return com.commercetools.api.models.message.StoreNameSetMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreNameSetMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreProductSelectionsChangedMessage) {
-            return com.commercetools.api.models.message.StoreProductSelectionsChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreProductSelectionsChangedMessage) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.StoreSupplyChannelsChangedMessage) {
-            return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.StoreSupplyChannelsChangedMessage) template);
+
+        if (!(template instanceof MessageImpl)) {
+            return template.copyDeep();
         }
         MessageImpl instance = new MessageImpl();
         instance.setId(template.getId());
@@ -1311,8 +361,8 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      * builder for associateRoleNameSet subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder associateRoleNameSetBuilder() {
-        return com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder.of();
+    public static com.commercetools.api.models.message.AssociateRoleNameSetMessageBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameSetMessageBuilder.of();
     }
 
     /**
@@ -1401,6 +451,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder businessUnitAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitApprovalRuleModeChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder businessUnitApprovalRuleModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder.of();
     }
 
     /**
@@ -1516,6 +574,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitCustomerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */
@@ -1612,6 +694,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitTopLevelUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessageBuilder businessUnitTopLevelUnitSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTypeSetMessageBuilder businessUnitTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTypeSetMessageBuilder.of();
+    }
+
+    /**
      * builder for cartDiscountCreated subtype
      * @return builder
      */
@@ -1649,6 +747,54 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder cartDiscountStoresSetBuilder() {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartEstimatedDeliverySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartEstimatedDeliverySetMessageBuilder cartEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.CartEstimatedDeliverySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartFrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartFrozenMessageBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartLocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartLockedMessageBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartPurchaseOrderNumberSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartUnfrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartUnlocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnlockedMessageBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessageBuilder.of();
     }
 
     /**
@@ -1740,6 +886,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerBillingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerBillingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder.of();
+    }
+
+    /**
      * builder for customerCompanyNameSet subtype
      * @return builder
      */
@@ -1804,6 +966,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerDefaultBillingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerDefaultShippingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerDeleted subtype
      * @return builder
      */
@@ -1836,11 +1014,43 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerExternalIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerFirstNameSet subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder customerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder customerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder customerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder.of();
     }
 
     /**
@@ -1916,6 +1126,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerShippingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerShippingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerStoresSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerStoresSetMessageBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerTitleSet subtype
      * @return builder
      */
@@ -1937,6 +1171,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.DeliveryAddressSetMessageBuilder deliveryAddressSetBuilder() {
         return com.commercetools.api.models.message.DeliveryAddressSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldAddedMessageBuilder deliveryCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldChangedMessageBuilder deliveryCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessageBuilder deliveryCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessageBuilder deliveryCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomTypeSetMessageBuilder deliveryCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeSetMessageBuilder.of();
     }
 
     /**
@@ -1980,6 +1254,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for discountGroupCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder discountGroupCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder discountGroupDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder discountGroupKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupSortOrderSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder discountGroupSortOrderSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryCreated subtype
      * @return builder
      */
@@ -1996,11 +1310,43 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for inventoryEntryOutOfStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryQuantitySet subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReorderPoint subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReservationExpirationInMinutesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntrySafetyStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder.of();
     }
 
     /**
@@ -2017,6 +1363,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderBillingAddressSetMessageBuilder orderBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.OrderBillingAddressSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderBusinessUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder orderBusinessUnitSetBuilder() {
+        return com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCreatedFromRecurringOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessageBuilder orderCreatedFromRecurringOrderBuilder() {
+        return com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessageBuilder.of();
     }
 
     /**
@@ -2164,6 +1526,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for orderEstimatedDeliverySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderEstimatedDeliverySetMessageBuilder orderEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.OrderEstimatedDeliverySetMessageBuilder.of();
+    }
+
+    /**
      * builder for orderImported subtype
      * @return builder
      */
@@ -2209,6 +1579,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder orderPaymentAddedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderPaymentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder.of();
     }
 
     /**
@@ -2348,6 +1726,206 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for paymentInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentInterfaceIdSetMessageBuilder paymentInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentInterfaceIdSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCreatedMessageBuilder paymentMethodCreatedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldAddedMessageBuilder paymentMethodCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldChangedMessageBuilder paymentMethodCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldRemovedMessageBuilder paymentMethodCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomTypeRemovedMessageBuilder paymentMethodCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomTypeSetMessageBuilder paymentMethodCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodDefaultSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodDefaultSetMessageBuilder paymentMethodDefaultSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodDefaultSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodDeletedMessageBuilder paymentMethodDeletedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldAddedMessageBuilder paymentMethodInfoCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldChangedMessageBuilder paymentMethodInfoCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldRemovedMessageBuilder paymentMethodInfoCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomTypeRemovedMessageBuilder paymentMethodInfoCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomTypeSetMessageBuilder paymentMethodInfoCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoInterfaceAccountSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoInterfaceAccountSetMessageBuilder paymentMethodInfoInterfaceAccountSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoInterfaceAccountSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoInterfaceSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoInterfaceSetMessageBuilder paymentMethodInfoInterfaceSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoInterfaceSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoMethodSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoMethodSetMessageBuilder paymentMethodInfoMethodSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoMethodSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoNameSetMessageBuilder paymentMethodInfoNameSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoTokenSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoTokenSetMessageBuilder paymentMethodInfoTokenSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoTokenSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInterfaceAccountSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInterfaceAccountSetMessageBuilder paymentMethodInterfaceAccountSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInterfaceAccountSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodKeySetMessageBuilder paymentMethodKeySetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodMethodSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodMethodSetMessageBuilder paymentMethodMethodSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodMethodSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodNameSetMessageBuilder paymentMethodNameSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodPaymentInterfaceSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodPaymentInterfaceSetMessageBuilder paymentMethodPaymentInterfaceSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodPaymentInterfaceSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodPaymentMethodStatusSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodPaymentMethodStatusSetMessageBuilder paymentMethodPaymentMethodStatusSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodPaymentMethodStatusSetMessageBuilder.of();
+    }
+
+    /**
      * builder for paymentStatusInterfaceCodeSet subtype
      * @return builder
      */
@@ -2369,6 +1947,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentTransactionInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder.of();
     }
 
     /**
@@ -2425,6 +2011,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.ProductPriceChangedMessageBuilder productPriceChangedBuilder() {
         return com.commercetools.api.models.message.ProductPriceChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessageBuilder productPriceCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessageBuilder productPriceCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessageBuilder productPriceCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldsRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessageBuilder productPriceCustomFieldsRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessageBuilder productPriceCustomFieldsSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessageBuilder.of();
     }
 
     /**
@@ -2596,6 +2222,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for productTailoringImageAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringImageAddedMessageBuilder productTailoringImageAddedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringImageAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringImagesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringImagesSetMessageBuilder productTailoringImagesSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringImagesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder productTailoringKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder.of();
+    }
+
+    /**
      * builder for productTailoringNameSet subtype
      * @return builder
      */
@@ -2649,6 +2299,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.ProductVariantDeletedMessageBuilder productVariantDeletedBuilder() {
         return com.commercetools.api.models.message.ProductVariantDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productVariantTailoringAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductVariantTailoringAddedMessageBuilder productVariantTailoringAddedBuilder() {
+        return com.commercetools.api.models.message.ProductVariantTailoringAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productVariantTailoringRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductVariantTailoringRemovedMessageBuilder productVariantTailoringRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductVariantTailoringRemovedMessageBuilder.of();
     }
 
     /**
@@ -2740,6 +2406,126 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for recurringOrderCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCreatedMessageBuilder recurringOrderCreatedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessageBuilder recurringOrderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessageBuilder recurringOrderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessageBuilder recurringOrderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessageBuilder recurringOrderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder recurringOrderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder recurringOrderDeletedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderExpiresAtSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder recurringOrderExpiresAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderNowRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder recurringOrderNowRequestedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderScheduleSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder recurringOrderScheduleSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStartsAtSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStartsAtSetMessageBuilder recurringOrderStartsAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStartsAtSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStateChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStateChangedMessageBuilder recurringOrderStateChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStateTransition subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStateTransitionMessageBuilder recurringOrderStateTransitionBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateTransitionMessageBuilder.of();
+    }
+
+    /**
      * builder for returnInfoAdded subtype
      * @return builder
      */
@@ -2777,6 +2563,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.ReviewStateTransitionMessageBuilder reviewStateTransitionBuilder() {
         return com.commercetools.api.models.message.ReviewStateTransitionMessageBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder shoppingListLineItemAddedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder shoppingListLineItemRemovedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder.of();
     }
 
     /**
@@ -2948,6 +2750,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for storeCheckoutUrlTemplateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessageBuilder storeCheckoutUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for storeContactUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreContactUrlSetMessageBuilder storeContactUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreContactUrlSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for storeCookiePolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessageBuilder storeCookiePolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessageBuilder.of();
+    }
+
+    /**
      * builder for storeCountriesChanged subtype
      * @return builder
      */
@@ -2980,6 +2806,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for storeFaqUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreFaqUrlSetMessageBuilder storeFaqUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreFaqUrlSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for storeImprintUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreImprintUrlSetMessageBuilder storeImprintUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreImprintUrlSetMessageBuilder.of();
+    }
+
+    /**
      * builder for storeLanguagesChanged subtype
      * @return builder
      */
@@ -2996,6 +2838,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for storeOrderUrlTemplateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessageBuilder storeOrderUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for storePrivacyPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessageBuilder storePrivacyPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessageBuilder.of();
+    }
+
+    /**
      * builder for storeProductSelectionsChanged subtype
      * @return builder
      */
@@ -3004,11 +2862,107 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for storeRefundPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessageBuilder storeRefundPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for storeShippingPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessageBuilder storeShippingPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessageBuilder.of();
+    }
+
+    /**
      * builder for storeSupplyChannelsChanged subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for storeTermsOfServiceUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessageBuilder storeTermsOfServiceUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantCreatedMessageBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantDeletedMessageBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantImageAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImageAddedMessageBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantImagesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImagesSetMessageBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantKeySetMessageBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantPublishedMessageBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantSkuSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantSkuSetMessageBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantUnpublishedMessageBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessageBuilder.of();
     }
 
     /**
@@ -3025,8 +2979,8 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Message> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Message>() {
+    public static tools.jackson.core.type.TypeReference<Message> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Message>() {
             @Override
             public String toString() {
                 return "TypeReference<Message>";

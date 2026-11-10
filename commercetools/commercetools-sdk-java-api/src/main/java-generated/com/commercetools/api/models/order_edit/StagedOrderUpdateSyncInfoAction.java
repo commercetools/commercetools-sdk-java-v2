@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrderUpdateSyncInfoAction
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("updateSyncInfo")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderUpdateSyncInfoActionImpl.class)
 public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction {
@@ -48,7 +50,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public String getExternalId();
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @return channel
      */
     @NotNull
@@ -72,7 +74,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @param channel value to be set
      */
 
@@ -105,6 +107,8 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public StagedOrderUpdateSyncInfoAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderUpdateSyncInfoAction
@@ -155,8 +159,8 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderUpdateSyncInfoAction>";

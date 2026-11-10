@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxedPriceDraft
@@ -56,7 +57,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
 
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @return taxPortions
      */
     @NotNull
@@ -88,7 +89,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
 
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 
@@ -97,7 +98,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
 
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 
@@ -131,6 +132,8 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
         instance.setTotalTax(template.getTotalTax());
         return instance;
     }
+
+    public TaxedPriceDraft copyDeep();
 
     /**
      * factory method to create a deep copy of TaxedPriceDraft
@@ -185,8 +188,8 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxedPriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxedPriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<TaxedPriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxedPriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxedPriceDraft>";

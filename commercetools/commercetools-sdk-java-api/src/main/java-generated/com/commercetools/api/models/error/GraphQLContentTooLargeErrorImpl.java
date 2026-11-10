@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the request results in too much data being returned from the API. Adjust the request query to reduce the size of the data returned.</p>
@@ -30,7 +32,7 @@ public class GraphQLContentTooLargeErrorImpl implements GraphQLContentTooLargeEr
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLContentTooLargeErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLContentTooLargeErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = CONTENT_TOO_LARGE;
     }
@@ -94,4 +96,8 @@ public class GraphQLContentTooLargeErrorImpl implements GraphQLContentTooLargeEr
                 .build();
     }
 
+    @Override
+    public GraphQLContentTooLargeError copyDeep() {
+        return GraphQLContentTooLargeError.deepCopy(this);
+    }
 }

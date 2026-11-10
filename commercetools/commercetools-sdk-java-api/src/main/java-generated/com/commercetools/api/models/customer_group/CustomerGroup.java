@@ -7,17 +7,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerGroup
@@ -109,7 +110,7 @@ public interface CustomerGroup
     public String getName();
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @return custom
      */
     @Valid
@@ -173,7 +174,7 @@ public interface CustomerGroup
     public void setName(final String name);
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @param custom value to be set
      */
 
@@ -205,6 +206,8 @@ public interface CustomerGroup
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public CustomerGroup copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerGroup
@@ -265,8 +268,8 @@ public interface CustomerGroup
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroup> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroup>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroup> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroup>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroup>";

@@ -48,4 +48,9 @@ public class PriceExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl
                 .of(appendOne(path, "custom"));
     }
+
+    public com.commercetools.api.predicates.expansion.recurrence_policy.RecurrencePolicyReferenceExpansionBuilderDsl recurrencePolicy() {
+        return com.commercetools.api.predicates.expansion.recurrence_policy.RecurrencePolicyReferenceExpansionBuilderDsl
+                .of(appendOne(path, "recurrencePolicy"));
+    }
 }

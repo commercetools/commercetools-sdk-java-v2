@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Update CustomObject request when an existing property is removed.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/custom-objects:POST" rel="nofollow">Update CustomObject</a> request when an existing property is removed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemovePropertyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemovePropertyChangeImpl.class)
 public interface RemovePropertyChange extends Change {
@@ -110,6 +112,8 @@ public interface RemovePropertyChange extends Change {
         return instance;
     }
 
+    public RemovePropertyChange copyDeep();
+
     /**
      * factory method to create a deep copy of RemovePropertyChange
      * @param template instance to be copied
@@ -158,8 +162,8 @@ public interface RemovePropertyChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemovePropertyChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemovePropertyChange>() {
+    public static tools.jackson.core.type.TypeReference<RemovePropertyChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemovePropertyChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemovePropertyChange>";

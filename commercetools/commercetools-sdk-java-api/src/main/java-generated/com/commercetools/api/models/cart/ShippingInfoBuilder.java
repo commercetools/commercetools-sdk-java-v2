@@ -53,6 +53,9 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      *  <p>Name of the Shipping Method.</p>
      * @param shippingMethodName value to be set
@@ -65,7 +68,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -77,7 +80,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -89,7 +92,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -172,8 +175,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -185,8 +188,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -198,8 +201,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -210,7 +213,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -223,7 +226,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -235,7 +238,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -411,7 +414,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced in this ShippingInfo is allowed for the Cart.</p>
      * @param shippingMethodState value to be set
      * @return Builder
      */
@@ -419,6 +422,42 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     public ShippingInfoBuilder shippingMethodState(
             final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {
         this.shippingMethodState = shippingMethodState;
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
         return this;
     }
 
@@ -432,7 +471,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @return price
      */
 
@@ -460,8 +499,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @return taxRate
      */
 
@@ -471,7 +510,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
 
@@ -511,12 +550,22 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced in this ShippingInfo is allowed for the Cart.</p>
      * @return shippingMethodState
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
         return this.shippingMethodState;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
     }
 
     /**
@@ -529,7 +578,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         Objects.requireNonNull(shippingRate, ShippingInfo.class + ": shippingRate is missing");
         Objects.requireNonNull(shippingMethodState, ShippingInfo.class + ": shippingMethodState is missing");
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+            shippingMethod, deliveries, discountedPrice, shippingMethodState, estimatedDelivery);
     }
 
     /**
@@ -538,7 +587,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
      */
     public ShippingInfo buildUnchecked() {
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+            shippingMethod, deliveries, discountedPrice, shippingMethodState, estimatedDelivery);
     }
 
     /**
@@ -566,6 +615,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         builder.deliveries = template.getDeliveries();
         builder.discountedPrice = template.getDiscountedPrice();
         builder.shippingMethodState = template.getShippingMethodState();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

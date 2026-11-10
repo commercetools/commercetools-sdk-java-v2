@@ -30,7 +30,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
     private String addressKey;
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressId
      */
 
@@ -62,7 +62,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressKey
      */
 

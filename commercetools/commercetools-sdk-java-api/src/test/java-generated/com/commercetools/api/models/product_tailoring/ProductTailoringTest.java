@@ -2,49 +2,51 @@
 package com.commercetools.api.models.product_tailoring;
 
 import java.time.ZonedDateTime;
-
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringBuilder builder) {
         ProductTailoring productTailoring = builder.buildUnchecked();
         Assertions.assertThat(productTailoring).isInstanceOf(ProductTailoring.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoring.builder().id("id") },
-                new Object[] { ProductTailoring.builder().version(2L) },
-                new Object[] { ProductTailoring.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductTailoring.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductTailoring.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ProductTailoring.builder().id("id") },
+                new Object[] { "version", ProductTailoring.builder().version(2L) },
+                new Object[] { "createdAt",
+                        ProductTailoring.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ProductTailoring.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ProductTailoring.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         ProductTailoring.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ProductTailoring.builder().key("key") },
-                new Object[] { ProductTailoring.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoring.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoring.builder().published(true) },
-                new Object[] { ProductTailoring.builder()
+                new Object[] { "key", ProductTailoring.builder().key("key") },
+                new Object[] { "store",
+                        ProductTailoring.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "product",
+                        ProductTailoring.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "published", ProductTailoring.builder().published(true) },
+                new Object[] { "current", ProductTailoring.builder()
                         .current(new com.commercetools.api.models.product_tailoring.ProductTailoringDataImpl()) },
-                new Object[] { ProductTailoring.builder()
+                new Object[] { "staged", ProductTailoring.builder()
                         .staged(new com.commercetools.api.models.product_tailoring.ProductTailoringDataImpl()) },
-                new Object[] { ProductTailoring.builder().hasStagedChanges(true) } };
+                new Object[] { "hasStagedChanges", ProductTailoring.builder().hasStagedChanges(true) },
+                new Object[] { "warnings",
+                        ProductTailoring.builder()
+                                .warnings(Collections.singletonList(
+                                    new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -141,5 +143,13 @@ public class ProductTailoringTest {
         ProductTailoring value = ProductTailoring.of();
         value.setHasStagedChanges(true);
         Assertions.assertThat(value.getHasStagedChanges()).isEqualTo(true);
+    }
+
+    @Test
+    public void warnings() {
+        ProductTailoring value = ProductTailoring.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

@@ -6,18 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the shipping address and a custom Shipping Method together to prevent an inconsistent state.</p>
@@ -34,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingAddressAndCustomShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction extends StagedOrderUpdateAction {
@@ -70,7 +73,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -78,12 +81,20 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
     /**
      *  <p>Value to set for <code>shippingAddress</code>.</p>
@@ -107,18 +118,25 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     /**
      * factory method
@@ -141,8 +159,11 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public StagedOrderSetShippingAddressAndCustomShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetShippingAddressAndCustomShippingMethodAction
@@ -164,6 +185,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
                 .deepCopy(template.getTaxCategory()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 
@@ -200,8 +222,8 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingAddressAndCustomShippingMethodAction>";

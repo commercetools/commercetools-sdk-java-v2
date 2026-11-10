@@ -17,14 +17,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface RoundingMode extends JsonEnum {
 
     /**
-    <p>Round half to even</p>
+    <p><span>Round half to even</span></p>
     <p>Default mode for a new Cart.</p> */
     RoundingMode HALF_EVEN = RoundingModeEnum.HALF_EVEN;
     /**
-    <p>Round half up</p> */
+    <p><span>Round half up</span></p> */
     RoundingMode HALF_UP = RoundingModeEnum.HALF_UP;
     /**
-    <p>Round half down</p> */
+    <p><span>Round half down</span></p> */
     RoundingMode HALF_DOWN = RoundingModeEnum.HALF_DOWN;
 
     /**

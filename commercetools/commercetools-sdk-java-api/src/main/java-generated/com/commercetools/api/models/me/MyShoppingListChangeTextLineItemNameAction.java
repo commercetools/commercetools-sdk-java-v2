@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListChangeTextLineItemNameAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTextLineItemName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemNameActionImpl.class)
 public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingListUpdateAction {
@@ -38,7 +40,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     String CHANGE_TEXT_LINE_ITEM_NAME = "changeTextLineItemName";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
@@ -46,7 +48,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     public String getTextLineItemId();
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemKey
      */
 
@@ -63,14 +65,14 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     public LocalizedString getName();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemKey value to be set
      */
 
@@ -104,6 +106,8 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
         instance.setName(template.getName());
         return instance;
     }
+
+    public MyShoppingListChangeTextLineItemNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListChangeTextLineItemNameAction
@@ -156,8 +160,8 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemNameAction>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListChangeTextLineItemNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListChangeTextLineItemNameAction>";

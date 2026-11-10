@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelChangeDescriptionAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
@@ -38,7 +40,9 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     String CHANGE_DESCRIPTION = "changeDescription";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return description
      */
     @NotNull
@@ -47,7 +51,9 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param description value to be set
      */
 
@@ -71,6 +77,8 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ChannelChangeDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelChangeDescriptionAction
@@ -119,8 +127,8 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelChangeDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelChangeDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelChangeDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelChangeDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelChangeDescriptionAction>";

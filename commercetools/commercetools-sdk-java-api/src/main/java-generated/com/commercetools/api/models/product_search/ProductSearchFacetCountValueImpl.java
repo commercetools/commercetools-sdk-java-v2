@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetCountValue
@@ -51,7 +52,7 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
     }
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      */
 
     public String getName() {
@@ -67,7 +68,7 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      */
 
     public com.commercetools.api.models.search.SearchQuery getFilter() {
@@ -133,4 +134,8 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetCountValue copyDeep() {
+        return ProductSearchFacetCountValue.deepCopy(this);
+    }
 }

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.quote_request.QuoteRequestState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Quote Request State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestStateChangedMessagePayloadImpl.class)
 public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     String QUOTE_REQUEST_STATE_CHANGED = "QuoteRequestStateChanged";
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return quoteRequestState
      */
     @NotNull
@@ -46,7 +48,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     public QuoteRequestState getQuoteRequestState();
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return oldQuoteRequestState
      */
     @NotNull
@@ -54,14 +56,14 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     public QuoteRequestState getOldQuoteRequestState();
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param quoteRequestState value to be set
      */
 
     public void setQuoteRequestState(final QuoteRequestState quoteRequestState);
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param oldQuoteRequestState value to be set
      */
 
@@ -86,6 +88,8 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
         instance.setOldQuoteRequestState(template.getOldQuoteRequestState());
         return instance;
     }
+
+    public QuoteRequestStateChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestStateChangedMessagePayload
@@ -137,8 +141,8 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestStateChangedMessagePayload>";

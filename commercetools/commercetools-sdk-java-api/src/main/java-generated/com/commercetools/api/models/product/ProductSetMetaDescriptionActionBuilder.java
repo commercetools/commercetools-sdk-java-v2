@@ -30,7 +30,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     private Boolean staged;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
 
@@ -87,7 +87,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @return staged
      */
 

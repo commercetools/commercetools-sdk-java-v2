@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the <code>Unique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
+ *  <p>Returned when the <code>Unique</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">AttributeConstraint</a> criteria are not met during an <span>Update Product</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateAttributeValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateAttributeValueErrorImpl.class)
 public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject {
@@ -81,6 +83,8 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
         return instance;
     }
 
+    public GraphQLDuplicateAttributeValueError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLDuplicateAttributeValueError
      * @param template instance to be copied
@@ -130,8 +134,8 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLDuplicateAttributeValueError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLDuplicateAttributeValueError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLDuplicateAttributeValueError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLDuplicateAttributeValueError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLDuplicateAttributeValueError>";

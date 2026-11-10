@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change_value.FieldDefinitionOrderValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Change the order of FieldDefinitions update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeFieldDefinitionOrderAction" rel="nofollow">Change the order of FieldDefinitions</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeFieldDefinitionOrderChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeFieldDefinitionOrderChangeImpl.class)
 public interface ChangeFieldDefinitionOrderChange extends Change {
@@ -132,6 +134,8 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
         return instance;
     }
 
+    public ChangeFieldDefinitionOrderChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeFieldDefinitionOrderChange
      * @param template instance to be copied
@@ -188,8 +192,8 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeFieldDefinitionOrderChange>";

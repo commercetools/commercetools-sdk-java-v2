@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomLineItemDraft
@@ -42,6 +43,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -54,7 +57,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
         this.name = name;
         this.key = key;
         this.quantity = quantity;
@@ -65,6 +69,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.custom = custom;
         this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
+        this.recurrenceInfo = recurrenceInfo;
     }
 
     /**
@@ -82,7 +87,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      */
 
     public String getKey() {
@@ -99,6 +104,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -114,7 +120,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -122,7 +128,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -147,13 +153,21 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -197,6 +211,11 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -217,6 +236,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(quantity, that.quantity)
@@ -227,6 +247,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -242,6 +263,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom)
                 .append(shippingDetails)
                 .append(priceMode)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -257,7 +279,12 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append("custom", custom)
                 .append("shippingDetails", shippingDetails)
                 .append("priceMode", priceMode)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 
+    @Override
+    public CustomLineItemDraft copyDeep() {
+        return CustomLineItemDraft.deepCopy(this);
+    }
 }

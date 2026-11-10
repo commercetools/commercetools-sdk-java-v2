@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the service is having trouble handling the load.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OverCapacity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OverCapacityErrorImpl.class)
 public interface OverCapacityError extends ErrorObject {
@@ -79,6 +81,8 @@ public interface OverCapacityError extends ErrorObject {
         return instance;
     }
 
+    public OverCapacityError copyDeep();
+
     /**
      * factory method to create a deep copy of OverCapacityError
      * @param template instance to be copied
@@ -126,8 +130,8 @@ public interface OverCapacityError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OverCapacityError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OverCapacityError>() {
+    public static tools.jackson.core.type.TypeReference<OverCapacityError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OverCapacityError>() {
             @Override
             public String toString() {
                 return "TypeReference<OverCapacityError>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates all meta attributes at the same time.</p>
@@ -64,7 +65,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -72,7 +73,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -80,7 +81,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -88,7 +89,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -154,4 +155,8 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetMetaAttributesAction copyDeep() {
+        return ProductTailoringSetMetaAttributesAction.deepCopy(this);
+    }
 }

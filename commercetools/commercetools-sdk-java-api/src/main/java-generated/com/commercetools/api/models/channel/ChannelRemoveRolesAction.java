@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelRemoveRolesAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelRemoveRolesActionImpl.class)
 public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
@@ -37,6 +39,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -45,6 +49,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -53,6 +59,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -76,6 +84,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public ChannelRemoveRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelRemoveRolesAction
@@ -123,8 +133,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelRemoveRolesAction>";

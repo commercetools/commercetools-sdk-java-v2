@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product data tailored per Store.</p>
+ *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringImpl implements ProductTailoring, ModelBase {
@@ -48,6 +49,8 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
 
     private Boolean hasStagedChanges;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +66,8 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
             @JsonProperty("published") final Boolean published,
             @JsonProperty("current") final com.commercetools.api.models.product_tailoring.ProductTailoringData current,
             @JsonProperty("staged") final com.commercetools.api.models.product_tailoring.ProductTailoringData staged,
-            @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges) {
+            @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -77,6 +81,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
         this.current = current;
         this.staged = staged;
         this.hasStagedChanges = hasStagedChanges;
+        this.warnings = warnings;
     }
 
     /**
@@ -158,7 +163,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      */
 
     public Boolean getPublished() {
@@ -166,7 +171,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getCurrent() {
@@ -174,7 +179,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getStaged() {
@@ -182,11 +187,19 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      */
 
     public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
     }
 
     public void setId(final String id) {
@@ -241,6 +254,14 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
         this.hasStagedChanges = hasStagedChanges;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -264,6 +285,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current, that.current)
                 .append(staged, that.staged)
                 .append(hasStagedChanges, that.hasStagedChanges)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -277,6 +299,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current, that.current)
                 .append(staged, that.staged)
                 .append(hasStagedChanges, that.hasStagedChanges)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -295,6 +318,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current)
                 .append(staged)
                 .append(hasStagedChanges)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -313,7 +337,12 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append("current", current)
                 .append("staged", staged)
                 .append("hasStagedChanges", hasStagedChanges)
+                .append("warnings", warnings)
                 .build();
     }
 
+    @Override
+    public ProductTailoring copyDeep() {
+        return ProductTailoring.deepCopy(this);
+    }
 }

@@ -7,12 +7,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.graph_ql.GraphQLError;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * GraphQLResponse
@@ -140,8 +141,8 @@ public interface GraphQLDataResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLDataResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLDataResponse>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLDataResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLDataResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLDataResponse>";

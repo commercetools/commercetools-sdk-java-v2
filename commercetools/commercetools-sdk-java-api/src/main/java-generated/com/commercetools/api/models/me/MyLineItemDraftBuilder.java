@@ -51,10 +51,13 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -65,7 +68,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -76,7 +79,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -87,7 +90,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -98,7 +101,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -109,7 +112,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      * @return Builder
@@ -121,7 +124,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -134,7 +137,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -146,7 +149,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -158,8 +161,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -173,8 +176,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -187,8 +190,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -237,6 +240,45 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -272,7 +314,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 
@@ -282,7 +324,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -292,7 +334,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @return variantId
      */
 
@@ -302,7 +344,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -312,7 +354,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @return quantity
      */
 
@@ -322,7 +364,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
@@ -333,7 +375,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
 
@@ -343,8 +385,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @return distributionChannel
      */
 
@@ -364,6 +406,16 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @return custom
      */
@@ -379,7 +431,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      */
     public MyLineItemDraft build() {
         return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
-            distributionChannel, shippingDetails, custom);
+            distributionChannel, shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -388,7 +440,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      */
     public MyLineItemDraft buildUnchecked() {
         return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
-            distributionChannel, shippingDetails, custom);
+            distributionChannel, shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -415,6 +467,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
         builder.shippingDetails = template.getShippingDetails();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         builder.custom = template.getCustom();
         return builder;
     }

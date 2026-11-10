@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListSetSlugAction
@@ -52,7 +53,7 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     *  <p>Value to set. If omitted, any existing value is removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -92,4 +93,8 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
                 .build();
     }
 
+    @Override
+    public ShoppingListSetSlugAction copyDeep() {
+        return ShoppingListSetSlugAction.deepCopy(this);
+    }
 }

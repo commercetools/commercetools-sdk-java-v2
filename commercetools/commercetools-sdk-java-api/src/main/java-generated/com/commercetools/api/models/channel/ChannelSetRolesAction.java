@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelSetRolesAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetRolesActionImpl.class)
 public interface ChannelSetRolesAction extends ChannelUpdateAction {
@@ -36,7 +38,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     String SET_ROLES = "setRoles";
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public List<ChannelRoleEnum> getRoles();
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -52,7 +56,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public void setRoles(final ChannelRoleEnum... roles);
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -76,6 +81,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public ChannelSetRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetRolesAction
@@ -123,8 +130,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetRolesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetRolesAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelSetRolesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelSetRolesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelSetRolesAction>";

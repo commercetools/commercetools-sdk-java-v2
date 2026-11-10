@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetValidUntilAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidUntil")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidUntilActionImpl.class)
 public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateAction {
@@ -35,7 +37,7 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -43,7 +45,7 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 
@@ -67,6 +69,8 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public DiscountCodeSetValidUntilAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetValidUntilAction
@@ -114,8 +118,8 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetValidUntilAction>";

@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
@@ -21,12 +19,15 @@ import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a price to be imported that is persisted as a Price in the Project.</p>
+ *  <p>Represents the data used to import an <span>Embedded Price</span> . Once imported, this data is persisted as a <span>Price</span> in a Product Variant.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +47,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -87,7 +88,7 @@ public interface PriceImport extends ImportResource {
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
     @Valid
@@ -95,7 +96,7 @@ public interface PriceImport extends ImportResource {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
     @Valid
@@ -111,16 +112,8 @@ public interface PriceImport extends ImportResource {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @return publish
-     */
-    @Deprecated
-    @JsonProperty("publish")
-    public Boolean getPublish();
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @return staged
@@ -138,7 +131,7 @@ public interface PriceImport extends ImportResource {
     public List<PriceTier> getTiers();
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -146,7 +139,7 @@ public interface PriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
     @NotNull
@@ -155,7 +148,7 @@ public interface PriceImport extends ImportResource {
     public ProductVariantKeyReference getProductVariant();
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
     @NotNull
@@ -164,7 +157,7 @@ public interface PriceImport extends ImportResource {
     public ProductKeyReference getProduct();
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -199,14 +192,14 @@ public interface PriceImport extends ImportResource {
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      */
 
@@ -220,15 +213,8 @@ public interface PriceImport extends ImportResource {
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @param publish value to be set
-     */
-    @Deprecated
-    public void setPublish(final Boolean publish);
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @param staged value to be set
@@ -252,21 +238,21 @@ public interface PriceImport extends ImportResource {
     public void setTiers(final List<PriceTier> tiers);
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final Custom custom);
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      */
 
     public void setProductVariant(final ProductVariantKeyReference productVariant);
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      */
 
@@ -295,7 +281,6 @@ public interface PriceImport extends ImportResource {
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setChannel(template.getChannel());
         instance.setDiscounted(template.getDiscounted());
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
@@ -303,6 +288,8 @@ public interface PriceImport extends ImportResource {
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public PriceImport copyDeep();
 
     /**
      * factory method to create a deep copy of PriceImport
@@ -326,7 +313,6 @@ public interface PriceImport extends ImportResource {
             com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getChannel()));
         instance.setDiscounted(
             com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
@@ -372,8 +358,8 @@ public interface PriceImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PriceImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PriceImport>() {
+    public static tools.jackson.core.type.TypeReference<PriceImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PriceImport>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceImport>";

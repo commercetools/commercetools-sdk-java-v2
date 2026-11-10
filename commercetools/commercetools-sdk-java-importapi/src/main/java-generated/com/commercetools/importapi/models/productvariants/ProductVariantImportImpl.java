@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
+ *  <p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportImpl implements ProductVariantImport, ModelBase {
@@ -34,9 +35,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
 
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
-    @Deprecated
-    private Boolean publish;
-
     private Boolean staged;
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
@@ -50,7 +48,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
             @JsonProperty("attributes") final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes,
             @JsonProperty("images") final java.util.List<com.commercetools.importapi.models.common.Image> images,
             @JsonProperty("assets") final java.util.List<com.commercetools.importapi.models.common.Asset> assets,
-            @JsonProperty("publish") final Boolean publish, @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("staged") final Boolean staged,
             @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.key = key;
         this.sku = sku;
@@ -58,7 +56,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
         this.attributes = attributes;
         this.images = images;
         this.assets = assets;
-        this.publish = publish;
         this.staged = staged;
         this.product = product;
     }
@@ -70,7 +67,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -86,7 +83,10 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     *  <ul>
+     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
+     *   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
+     *  </ul>
      */
 
     public Boolean getIsMasterVariant() {
@@ -94,7 +94,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -118,16 +118,8 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-     */
-    @Deprecated
-    public Boolean getPublish() {
-        return this.publish;
-    }
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      */
@@ -137,7 +129,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
@@ -181,11 +173,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
         this.assets = assets;
     }
 
-    @Deprecated
-    public void setPublish(final Boolean publish) {
-        this.publish = publish;
-    }
-
     public void setStaged(final Boolean staged) {
         this.staged = staged;
     }
@@ -210,7 +197,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(product, that.product)
                 .append(key, that.key)
@@ -219,7 +205,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(product, that.product)
                 .isEquals();
@@ -233,7 +218,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes)
                 .append(images)
                 .append(assets)
-                .append(publish)
                 .append(staged)
                 .append(product)
                 .toHashCode();
@@ -247,10 +231,13 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append("attributes", attributes)
                 .append("images", images)
                 .append("assets", assets)
-                .append("publish", publish)
                 .append("staged", staged)
                 .append("product", product)
                 .build();
     }
 
+    @Override
+    public ProductVariantImport copyDeep() {
+        return ProductVariantImport.deepCopy(this);
+    }
 }

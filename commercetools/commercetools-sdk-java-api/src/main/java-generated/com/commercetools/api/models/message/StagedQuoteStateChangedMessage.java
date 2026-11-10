@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.staged_quote.StagedQuoteState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Staged Quote State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StagedQuoteStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteStateChangedMessageImpl.class)
 public interface StagedQuoteStateChangedMessage extends Message {
@@ -45,7 +47,7 @@ public interface StagedQuoteStateChangedMessage extends Message {
     String STAGED_QUOTE_STATE_CHANGED = "StagedQuoteStateChanged";
 
     /**
-     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @return stagedQuoteState
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface StagedQuoteStateChangedMessage extends Message {
     public StagedQuoteState getStagedQuoteState();
 
     /**
-     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @return oldStagedQuoteState
      */
     @NotNull
@@ -61,14 +63,14 @@ public interface StagedQuoteStateChangedMessage extends Message {
     public StagedQuoteState getOldStagedQuoteState();
 
     /**
-     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @param stagedQuoteState value to be set
      */
 
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
 
     /**
-     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @param oldStagedQuoteState value to be set
      */
 
@@ -103,6 +105,8 @@ public interface StagedQuoteStateChangedMessage extends Message {
         instance.setOldStagedQuoteState(template.getOldStagedQuoteState());
         return instance;
     }
+
+    public StagedQuoteStateChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteStateChangedMessage
@@ -163,8 +167,8 @@ public interface StagedQuoteStateChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteStateChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteStateChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteStateChangedMessage>";

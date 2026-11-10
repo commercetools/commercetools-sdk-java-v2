@@ -39,10 +39,10 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
     @Nullable
-    private com.commercetools.api.models.search.SearchQueryExpression filter;
+    private com.commercetools.api.models.search.SearchQuery filter;
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      * @return Builder
      */
@@ -98,43 +98,42 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
 
     public SearchSortingBuilder filter(
-            Function<com.commercetools.api.models.search.SearchQueryExpressionBuilder, com.commercetools.api.models.search.SearchQueryExpressionBuilder> builder) {
-        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryExpressionBuilder.of()).build();
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQueryBuilder> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
 
     public SearchSortingBuilder withFilter(
-            Function<com.commercetools.api.models.search.SearchQueryExpressionBuilder, com.commercetools.api.models.search.SearchQueryExpression> builder) {
-        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryExpressionBuilder.of());
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQuery> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of());
         return this;
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param filter value to be set
      * @return Builder
      */
 
-    public SearchSortingBuilder filter(
-            @Nullable final com.commercetools.api.models.search.SearchQueryExpression filter) {
+    public SearchSortingBuilder filter(@Nullable final com.commercetools.api.models.search.SearchQuery filter) {
         this.filter = filter;
         return this;
     }
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @return field
      */
 
@@ -143,7 +142,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 
@@ -182,12 +181,12 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @return filter
      */
 
     @Nullable
-    public com.commercetools.api.models.search.SearchQueryExpression getFilter() {
+    public com.commercetools.api.models.search.SearchQuery getFilter() {
         return this.filter;
     }
 

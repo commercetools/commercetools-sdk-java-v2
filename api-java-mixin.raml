@@ -424,7 +424,10 @@ types:
           return com.commercetools.api.models.common.ReferenceTypeId.PAYMENT;
       }
   PaymentDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<PaymentDraft>, com.commercetools.api.models.WithKey'
+    (java-extends): 'PaymentDraftMixin, com.commercetools.api.models.CustomizableDraft<PaymentDraft>, com.commercetools.api.models.WithKey'
+    (java-builder-implements): 'PaymentDraftBuilderMixin'
+  PaymentMethodInfo:
+    (java-extends): 'PaymentMethodInfoMixin'
   PaymentPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Payment>'
   PaymentReference:
@@ -530,11 +533,11 @@ types:
       }
   ProductSetAttributeAction:
     (java-mixin): |
-      public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+      public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name, final tools.jackson.databind.JsonNode value, final Boolean staged) {
           return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).value(value).staged(staged).build();
       }
 
-      public static ProductSetAttributeAction ofSku(final String sku, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+      public static ProductSetAttributeAction ofSku(final String sku, final String name, final tools.jackson.databind.JsonNode value, final Boolean staged) {
           return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
       }
 
@@ -1145,9 +1148,9 @@ types:
           return AttributeGroupSetKeyAction.of();
       }
   BusinessUnit:
-    (java-extends): 'com.commercetools.api.models.WithKey'
+    (java-extends): 'com.commercetools.api.models.WithKey, com.commercetools.api.models.Customizable<BusinessUnit>'
   BusinessUnitDraft:
-    (java-extends): 'com.commercetools.api.models.WithKey'
+    (java-extends): 'com.commercetools.api.models.WithKey, com.commercetools.api.models.CustomizableDraft<BusinessUnitDraft>'
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:
@@ -1345,7 +1348,7 @@ types:
   MyPayment:
     (java-extends): 'com.commercetools.api.models.DomainResource<MyPayment>, com.commercetools.api.models.Customizable<MyPayment>'
   MyPaymentDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>'
+    (java-extends): 'MyPaymentDraftMixin, com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>'
   MyPaymentUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate,
       MyPaymentUpdateAction, MyPaymentUpdateBuilder>'

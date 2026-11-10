@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetDiscountedPriceActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetDiscountedPriceActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetDiscountedPriceActionBuilder builder) {
         ProductSetDiscountedPriceAction productSetDiscountedPriceAction = builder.buildUnchecked();
         Assertions.assertThat(productSetDiscountedPriceAction).isInstanceOf(ProductSetDiscountedPriceAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetDiscountedPriceAction.builder().priceId("priceId") },
-                new Object[] { ProductSetDiscountedPriceAction.builder().staged(true) },
-                new Object[] { ProductSetDiscountedPriceAction.builder()
+        return new Object[][] {
+                new Object[] { "priceId", ProductSetDiscountedPriceAction.builder().priceId("priceId") },
+                new Object[] { "staged", ProductSetDiscountedPriceAction.builder().staged(true) },
+                new Object[] { "discounted", ProductSetDiscountedPriceAction.builder()
                         .discounted(new com.commercetools.api.models.common.DiscountedPriceDraftImpl()) } };
     }
 

@@ -3,39 +3,34 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderEditDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderEditDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderEditDraftBuilder builder) {
         OrderEditDraft orderEditDraft = builder.buildUnchecked();
         Assertions.assertThat(orderEditDraft).isInstanceOf(OrderEditDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderEditDraft.builder().key("key") },
-                new Object[] { OrderEditDraft.builder()
-                        .resource(new com.commercetools.api.models.order.OrderReferenceImpl()) },
-                new Object[] { OrderEditDraft.builder()
-                        .stagedActions(Collections
-                                .singletonList(new com.commercetools.api.models.order.StagedOrderUpdateActionImpl())) },
-                new Object[] { OrderEditDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { OrderEditDraft.builder().comment("comment") },
-                new Object[] { OrderEditDraft.builder().dryRun(true) } };
+        return new Object[][] { new Object[] { "key", OrderEditDraft.builder().key("key") },
+                new Object[] { "resource",
+                        OrderEditDraft.builder()
+                                .resource(new com.commercetools.api.models.order.OrderReferenceImpl()) },
+                new Object[] { "stagedActions",
+                        OrderEditDraft.builder()
+                                .stagedActions(Collections.singletonList(
+                                    new com.commercetools.api.models.order.StagedOrderUpdateActionImpl())) },
+                new Object[] { "custom",
+                        OrderEditDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "comment", OrderEditDraft.builder().comment("comment") },
+                new Object[] { "dryRun", OrderEditDraft.builder().dryRun(true) } };
     }
 
     @Test

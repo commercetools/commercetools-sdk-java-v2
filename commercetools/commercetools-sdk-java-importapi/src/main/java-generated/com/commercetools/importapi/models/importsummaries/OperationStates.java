@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The number of resources in each Processing State.</p>
+ *  <p>The number of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in each <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingState</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .imported(1)
  *             .rejected(1)
  *             .canceled(1)
+ *             .partiallyImported(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -37,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OperationStates {
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @return processing
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface OperationStates {
     public Long getProcessing();
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @return validationFailed
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface OperationStates {
     public Long getValidationFailed();
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @return unresolved
      */
     @NotNull
@@ -61,7 +63,7 @@ public interface OperationStates {
     public Long getUnresolved();
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
      */
     @NotNull
@@ -69,7 +71,7 @@ public interface OperationStates {
     public Long getWaitForMasterVariant();
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @return imported
      */
     @NotNull
@@ -77,7 +79,7 @@ public interface OperationStates {
     public Long getImported();
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @return rejected
      */
     @NotNull
@@ -85,7 +87,7 @@ public interface OperationStates {
     public Long getRejected();
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @return canceled
      */
     @NotNull
@@ -93,53 +95,68 @@ public interface OperationStates {
     public Long getCanceled();
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @return partiallyImported
+     */
+    @NotNull
+    @JsonProperty("partiallyImported")
+    public Long getPartiallyImported();
+
+    /**
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @param processing value to be set
      */
 
     public void setProcessing(final Long processing);
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      */
 
     public void setValidationFailed(final Long validationFailed);
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      */
 
     public void setUnresolved(final Long unresolved);
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      */
 
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @param imported value to be set
      */
 
     public void setImported(final Long imported);
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      */
 
     public void setRejected(final Long rejected);
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @param canceled value to be set
      */
 
     public void setCanceled(final Long canceled);
+
+    /**
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @param partiallyImported value to be set
+     */
+
+    public void setPartiallyImported(final Long partiallyImported);
 
     /**
      * factory method
@@ -163,8 +180,11 @@ public interface OperationStates {
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
         instance.setCanceled(template.getCanceled());
+        instance.setPartiallyImported(template.getPartiallyImported());
         return instance;
     }
+
+    public OperationStates copyDeep();
 
     /**
      * factory method to create a deep copy of OperationStates
@@ -184,6 +204,7 @@ public interface OperationStates {
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
         instance.setCanceled(template.getCanceled());
+        instance.setPartiallyImported(template.getPartiallyImported());
         return instance;
     }
 
@@ -218,8 +239,8 @@ public interface OperationStates {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OperationStates> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OperationStates>() {
+    public static tools.jackson.core.type.TypeReference<OperationStates> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OperationStates>() {
             @Override
             public String toString() {
                 return "TypeReference<OperationStates>";

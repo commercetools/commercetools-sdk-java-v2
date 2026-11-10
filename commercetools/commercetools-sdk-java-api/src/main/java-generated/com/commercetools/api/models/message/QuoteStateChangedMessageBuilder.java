@@ -187,7 +187,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param quoteState value to be set
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param oldQuoteState value to be set
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -376,7 +376,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return quoteState
      */
 
@@ -385,7 +385,7 @@ public class QuoteStateChangedMessageBuilder implements Builder<QuoteStateChange
     }
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return oldQuoteState
      */
 

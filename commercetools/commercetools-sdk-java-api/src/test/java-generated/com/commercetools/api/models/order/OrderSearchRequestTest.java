@@ -3,37 +3,31 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSearchRequestTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSearchRequestBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSearchRequestBuilder builder) {
         OrderSearchRequest orderSearchRequest = builder.buildUnchecked();
         Assertions.assertThat(orderSearchRequest).isInstanceOf(OrderSearchRequest.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderSearchRequest.builder()
-                        .query(new com.commercetools.api.models.order.OrderSearchQueryImpl()) },
-                new Object[] { OrderSearchRequest.builder()
-                        .sort(Collections
-                                .singletonList(new com.commercetools.api.models.order.OrderSearchSortingImpl())) },
-                new Object[] { OrderSearchRequest.builder().limit(7) },
-                new Object[] { OrderSearchRequest.builder().offset(3) } };
+                new Object[] { "query",
+                        OrderSearchRequest.builder()
+                                .query(new com.commercetools.api.models.order.OrderSearchQueryImpl()) },
+                new Object[] { "sort",
+                        OrderSearchRequest.builder()
+                                .sort(Collections.singletonList(
+                                    new com.commercetools.api.models.order.OrderSearchSortingImpl())) },
+                new Object[] { "limit", OrderSearchRequest.builder().limit(7) },
+                new Object[] { "offset", OrderSearchRequest.builder().offset(3) } };
     }
 
     @Test

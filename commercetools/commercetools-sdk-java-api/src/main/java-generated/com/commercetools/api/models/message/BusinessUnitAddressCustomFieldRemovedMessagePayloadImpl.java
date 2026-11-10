@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Field from an address of a Business Unit using the Set Address CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address CustomField</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl
@@ -27,12 +28,16 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl
 
     private String name;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(@JsonProperty("name") final String name) {
+    BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(@JsonProperty("name") final String name,
+            @JsonProperty("addressId") final String addressId) {
         this.name = name;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_REMOVED;
     }
 
@@ -59,8 +64,20 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl
         return this.name;
     }
 
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setName(final String name) {
         this.name = name;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -75,21 +92,28 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(name).append(addressId).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("name", name)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomFieldRemovedMessagePayload copyDeep() {
+        return BusinessUnitAddressCustomFieldRemovedMessagePayload.deepCopy(this);
+    }
 }

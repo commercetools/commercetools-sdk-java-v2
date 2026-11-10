@@ -27,7 +27,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     private Double amount;
 
     /**
-     * set the value to the name
+     *  <p>Name of the SubRate.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     }
 
     /**
-     * value of name}
+     *  <p>Name of the SubRate.</p>
      * @return name
      */
 

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssociateRoleLabel
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateRoleLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleLabelImpl.class)
 public interface AssociateRoleLabel extends Label {
@@ -45,7 +47,7 @@ public interface AssociateRoleLabel extends Label {
     public String getType();
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @return key
      */
     @NotNull
@@ -61,7 +63,7 @@ public interface AssociateRoleLabel extends Label {
     public String getName();
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @param key value to be set
      */
 
@@ -93,6 +95,8 @@ public interface AssociateRoleLabel extends Label {
         instance.setName(template.getName());
         return instance;
     }
+
+    public AssociateRoleLabel copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleLabel
@@ -141,8 +145,8 @@ public interface AssociateRoleLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleLabel>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleLabel>";

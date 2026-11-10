@@ -57,6 +57,9 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
 
     private String name;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -186,7 +189,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +201,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -271,6 +274,17 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -336,7 +350,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -373,6 +387,16 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomFieldRemovedMessage with checking for non-null required values
      * @return BusinessUnitAddressCustomFieldRemovedMessage
      */
@@ -390,8 +414,8 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
             BusinessUnitAddressCustomFieldRemovedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(name, BusinessUnitAddressCustomFieldRemovedMessage.class + ": name is missing");
         return new BusinessUnitAddressCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
-            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            name);
+            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
+            addressId);
     }
 
     /**
@@ -400,8 +424,8 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
      */
     public BusinessUnitAddressCustomFieldRemovedMessage buildUnchecked() {
         return new BusinessUnitAddressCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
-            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            name);
+            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
+            addressId);
     }
 
     /**
@@ -431,6 +455,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.name = template.getName();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

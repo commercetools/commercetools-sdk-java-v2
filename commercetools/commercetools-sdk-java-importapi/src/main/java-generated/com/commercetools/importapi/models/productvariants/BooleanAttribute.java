@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is either "true" or "false".</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("boolean")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BooleanAttributeImpl.class)
 public interface BooleanAttribute extends Attribute {
@@ -36,7 +38,7 @@ public interface BooleanAttribute extends Attribute {
     String BOOLEAN = "boolean";
 
     /**
-     *
+     *  <p><code>true</code> or <code>false</code></p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface BooleanAttribute extends Attribute {
     public Boolean getValue();
 
     /**
-     * set value
+     *  <p><code>true</code> or <code>false</code></p>
      * @param value value to be set
      */
 
@@ -69,6 +71,8 @@ public interface BooleanAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public BooleanAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of BooleanAttribute
@@ -117,8 +121,8 @@ public interface BooleanAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BooleanAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BooleanAttribute>() {
+    public static tools.jackson.core.type.TypeReference<BooleanAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BooleanAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<BooleanAttribute>";

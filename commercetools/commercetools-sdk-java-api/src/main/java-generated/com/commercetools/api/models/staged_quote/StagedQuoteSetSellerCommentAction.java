@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedQuoteSetSellerCommentAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSellerComment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteSetSellerCommentActionImpl.class)
 public interface StagedQuoteSetSellerCommentAction extends StagedQuoteUpdateAction {
@@ -66,6 +68,8 @@ public interface StagedQuoteSetSellerCommentAction extends StagedQuoteUpdateActi
         instance.setSellerComment(template.getSellerComment());
         return instance;
     }
+
+    public StagedQuoteSetSellerCommentAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteSetSellerCommentAction
@@ -114,8 +118,8 @@ public interface StagedQuoteSetSellerCommentAction extends StagedQuoteUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSetSellerCommentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSetSellerCommentAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteSetSellerCommentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteSetSellerCommentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteSetSellerCommentAction>";

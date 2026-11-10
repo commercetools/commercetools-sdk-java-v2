@@ -42,6 +42,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asAddCustomerGroupAssignment(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.business_unit.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl
+                    .of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asAddShippingAddressId(
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitAddShippingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitAddShippingAddressIdActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -62,6 +70,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeAddressActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeAddressActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeAddressActionQueryBuilderDsl.of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asChangeApprovalRuleMode(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl
+                    .of()),
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
 
@@ -121,6 +137,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveBillingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveBillingAddressIdActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveBillingAddressIdActionQueryBuilderDsl
+                    .of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asRemoveCustomerGroupAssignment(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl
                     .of()),
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
@@ -185,6 +209,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asSetCustomerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl
+                    .of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asSetDefaultBillingAddress(
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetDefaultBillingAddressActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetDefaultBillingAddressActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -213,6 +245,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.business_unit.BusinessUnitSetStoresActionQueryBuilderDsl.of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asSetUnitType(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl.of()),
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
 }

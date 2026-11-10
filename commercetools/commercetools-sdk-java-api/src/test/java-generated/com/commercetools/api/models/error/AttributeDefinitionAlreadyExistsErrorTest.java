@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AttributeDefinitionAlreadyExistsErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AttributeDefinitionAlreadyExistsErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AttributeDefinitionAlreadyExistsErrorBuilder builder) {
         AttributeDefinitionAlreadyExistsError attributeDefinitionAlreadyExistsError = builder.buildUnchecked();
         Assertions.assertThat(attributeDefinitionAlreadyExistsError)
                 .isInstanceOf(AttributeDefinitionAlreadyExistsError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AttributeDefinitionAlreadyExistsError.builder().message("message") },
-                new Object[] { AttributeDefinitionAlreadyExistsError.builder()
-                        .conflictingProductTypeId("conflictingProductTypeId") },
-                new Object[] { AttributeDefinitionAlreadyExistsError.builder()
-                        .conflictingProductTypeName("conflictingProductTypeName") },
-                new Object[] { AttributeDefinitionAlreadyExistsError.builder()
+        return new Object[][] {
+                new Object[] { "message", AttributeDefinitionAlreadyExistsError.builder().message("message") },
+                new Object[] { "conflictingProductTypeId",
+                        AttributeDefinitionAlreadyExistsError.builder()
+                                .conflictingProductTypeId("conflictingProductTypeId") },
+                new Object[] { "conflictingProductTypeName",
+                        AttributeDefinitionAlreadyExistsError.builder()
+                                .conflictingProductTypeName("conflictingProductTypeName") },
+                new Object[] { "conflictingAttributeName", AttributeDefinitionAlreadyExistsError.builder()
                         .conflictingAttributeName("conflictingAttributeName") } };
     }
 

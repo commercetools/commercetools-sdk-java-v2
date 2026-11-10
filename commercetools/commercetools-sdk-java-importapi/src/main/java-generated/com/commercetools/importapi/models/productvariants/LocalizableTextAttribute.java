@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a localized text.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ltext")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizableTextAttributeImpl.class)
 public interface LocalizableTextAttribute extends Attribute {
@@ -38,12 +40,7 @@ public interface LocalizableTextAttribute extends Attribute {
     String LTEXT = "ltext";
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @return value
      */
     @NotNull
@@ -52,12 +49,7 @@ public interface LocalizableTextAttribute extends Attribute {
     public LocalizedString getValue();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param value value to be set
      */
 
@@ -82,6 +74,8 @@ public interface LocalizableTextAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizableTextAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizableTextAttribute
@@ -130,8 +124,8 @@ public interface LocalizableTextAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableTextAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableTextAttribute>() {
+    public static tools.jackson.core.type.TypeReference<LocalizableTextAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizableTextAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizableTextAttribute>";

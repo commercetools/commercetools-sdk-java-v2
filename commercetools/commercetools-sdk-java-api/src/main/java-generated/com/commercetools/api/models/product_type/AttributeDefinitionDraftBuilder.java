@@ -36,6 +36,9 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     private Boolean isRequired;
 
     @Nullable
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
+
+    @Nullable
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
     @Nullable
@@ -47,9 +50,12 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     @Nullable
     private Boolean isSearchable;
 
+    @Nullable
+    private Boolean savedToLineItem;
+
     /**
      *  <p>Describes the Type of the Attribute.</p>
-     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -61,7 +67,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
-     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -73,8 +79,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -120,7 +126,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      * @return Builder
      */
@@ -131,7 +137,19 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder level(
+            @Nullable final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -179,7 +197,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      * @return Builder
      */
@@ -191,7 +209,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>Which exact features are available with this flag depends on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -202,8 +221,20 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder savedToLineItem(@Nullable final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
+        return this;
+    }
+
+    /**
      *  <p>Describes the Type of the Attribute.</p>
-     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
      * @return type
      */
 
@@ -212,8 +243,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @return name
      */
 
@@ -231,7 +262,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
 
@@ -240,7 +271,17 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return attributeConstraint
      */
 
@@ -260,7 +301,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
 
@@ -270,13 +311,25 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>Which exact features are available with this flag depends on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
 
     @Nullable
     public Boolean getIsSearchable() {
         return this.isSearchable;
+    }
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+
+    @Nullable
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
     }
 
     /**
@@ -288,8 +341,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         Objects.requireNonNull(name, AttributeDefinitionDraft.class + ": name is missing");
         Objects.requireNonNull(label, AttributeDefinitionDraft.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinitionDraft.class + ": isRequired is missing");
-        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -297,8 +350,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
      * @return AttributeDefinitionDraft
      */
     public AttributeDefinitionDraft buildUnchecked() {
-        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -320,10 +373,12 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         builder.name = template.getName();
         builder.label = template.getLabel();
         builder.isRequired = template.getIsRequired();
+        builder.level = template.getLevel();
         builder.attributeConstraint = template.getAttributeConstraint();
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.savedToLineItem = template.getSavedToLineItem();
         return builder;
     }
 

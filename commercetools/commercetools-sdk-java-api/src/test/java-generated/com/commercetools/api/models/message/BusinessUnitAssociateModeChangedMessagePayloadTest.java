@@ -1,38 +1,32 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAssociateModeChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAssociateModeChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAssociateModeChangedMessagePayloadBuilder builder) {
         BusinessUnitAssociateModeChangedMessagePayload businessUnitAssociateModeChangedMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(businessUnitAssociateModeChangedMessagePayload)
                 .isInstanceOf(BusinessUnitAssociateModeChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitAssociateModeChangedMessagePayload.builder()
-                        .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
-                                .findEnum("Explicit")) },
-                new Object[] { BusinessUnitAssociateModeChangedMessagePayload.builder()
-                        .oldAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
-                                .findEnum("Explicit")) } };
+                new Object[] { "associateMode",
+                        BusinessUnitAssociateModeChangedMessagePayload.builder()
+                                .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                        .findEnum("Explicit")) },
+                new Object[] { "oldAssociateMode",
+                        BusinessUnitAssociateModeChangedMessagePayload.builder()
+                                .oldAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                        .findEnum("Explicit")) } };
     }
 
     @Test

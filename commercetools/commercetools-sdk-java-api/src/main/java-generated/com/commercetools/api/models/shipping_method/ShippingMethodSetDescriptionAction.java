@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodSetDescriptionAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetDescriptionActionImpl.class)
 @Deprecated
@@ -35,7 +37,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
 
@@ -43,7 +45,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     public String getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -67,6 +69,8 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ShippingMethodSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetDescriptionAction
@@ -115,8 +119,8 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodSetDescriptionAction>";

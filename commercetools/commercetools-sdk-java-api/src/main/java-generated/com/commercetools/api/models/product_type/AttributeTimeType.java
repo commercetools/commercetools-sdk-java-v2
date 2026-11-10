@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * AttributeTimeType
+ *  <p>Attribute type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Time" rel="nofollow">Time</a> type values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("time")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeTimeTypeImpl.class)
 public interface AttributeTimeType extends AttributeType {
@@ -50,6 +52,8 @@ public interface AttributeTimeType extends AttributeType {
         AttributeTimeTypeImpl instance = new AttributeTimeTypeImpl();
         return instance;
     }
+
+    public AttributeTimeType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeTimeType
@@ -96,8 +100,8 @@ public interface AttributeTimeType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeTimeType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeTimeType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeTimeType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeTimeType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeTimeType>";

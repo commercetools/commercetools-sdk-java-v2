@@ -6,20 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change IsActive on Cart Discounts.</li>
- *   <li>Change IsActive on Discount Codes.</li>
- *   <li>Change IsActive on Product Discounts.</li>
- *  </ul>
+ * ChangeIsActiveChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeIsActiveChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeIsActiveChangeImpl.class)
 public interface ChangeIsActiveChange extends Change {
@@ -116,6 +113,8 @@ public interface ChangeIsActiveChange extends Change {
         return instance;
     }
 
+    public ChangeIsActiveChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeIsActiveChange
      * @param template instance to be copied
@@ -164,8 +163,8 @@ public interface ChangeIsActiveChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeIsActiveChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeIsActiveChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeIsActiveChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeIsActiveChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeIsActiveChange>";

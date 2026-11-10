@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a date time value.</p>
@@ -51,7 +52,7 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      */
 
     public java.time.ZonedDateTime getValue() {
@@ -91,4 +92,8 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateTimeField copyDeep() {
+        return DateTimeField.deepCopy(this);
+    }
 }

@@ -41,6 +41,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryRequestMiddleware> retryMiddleware;
     private PolicyBuilder policyBuilder;
+    private RequestPolicyBuilder requestPolicyBuilder;
     private Supplier<PolicyMiddleware> policyMiddleware;
     private Supplier<QueueRequestMiddleware> queueMiddleware;
     private Supplier<Middleware> correlationIdMiddleware;
@@ -1272,6 +1273,24 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withPolicies(Function<PolicyBuilder, PolicyBuilder> fn) {
         this.policyBuilder = fn.apply(Optional.ofNullable(policyBuilder).orElse(PolicyBuilder.of()));
         this.policyMiddleware = policyBuilder::build;
+        return this;
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param requestPolicyBuilder the policy builder
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withRequestPolicies(RequestPolicyBuilder requestPolicyBuilder) {
+        this.requestPolicyBuilder = requestPolicyBuilder;
+        this.policyMiddleware = requestPolicyBuilder::build;
+        return this;
+    }
+
+    public ClientBuilder withRequestPolicies(Function<RequestPolicyBuilder, RequestPolicyBuilder> fn) {
+        this.requestPolicyBuilder = fn
+                .apply(Optional.ofNullable(requestPolicyBuilder).orElse(RequestPolicyBuilder.of()));
+        this.policyMiddleware = requestPolicyBuilder::build;
         return this;
     }
 

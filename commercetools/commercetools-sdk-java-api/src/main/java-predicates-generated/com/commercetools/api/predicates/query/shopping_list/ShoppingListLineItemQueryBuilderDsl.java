@@ -69,6 +69,12 @@ public class ShoppingListLineItemQueryBuilderDsl {
             ShoppingListLineItemQueryBuilderDsl::of);
     }
 
+    public BooleanComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl> published() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("published")),
+            p -> new CombinationQueryPredicate<>(p, ShoppingListLineItemQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

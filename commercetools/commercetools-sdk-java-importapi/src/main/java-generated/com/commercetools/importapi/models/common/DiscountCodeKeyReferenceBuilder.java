@@ -24,7 +24,7 @@ public class DiscountCodeKeyReferenceBuilder implements Builder<DiscountCodeKeyR
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced DiscountCode.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DiscountCodeKeyReferenceBuilder implements Builder<DiscountCodeKeyR
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced DiscountCode.</p>
      * @return key
      */
 

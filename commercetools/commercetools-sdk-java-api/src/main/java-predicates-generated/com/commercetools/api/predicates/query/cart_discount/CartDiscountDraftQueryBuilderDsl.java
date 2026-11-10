@@ -121,4 +121,24 @@ public class CartDiscountDraftQueryBuilderDsl {
             CartDiscountDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> discountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountGroup"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl
+                            .of())),
+            CartDiscountDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> recurringOrderScope(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurringOrderScope"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl
+                            .of())),
+            CartDiscountDraftQueryBuilderDsl::of);
+    }
+
 }

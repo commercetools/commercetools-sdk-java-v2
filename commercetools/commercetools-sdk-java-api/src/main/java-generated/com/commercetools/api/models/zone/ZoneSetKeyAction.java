@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ZoneSetKeyAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneSetKeyActionImpl.class)
 public interface ZoneSetKeyAction extends ZoneUpdateAction {
@@ -66,6 +68,8 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ZoneSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneSetKeyAction
@@ -113,8 +117,8 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ZoneSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ZoneSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ZoneSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ZoneSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ZoneSetKeyAction>";

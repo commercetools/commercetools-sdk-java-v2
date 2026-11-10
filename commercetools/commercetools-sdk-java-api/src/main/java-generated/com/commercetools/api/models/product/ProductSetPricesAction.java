@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPrices")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetPricesActionImpl.class)
 public interface ProductSetPricesAction extends ProductUpdateAction {
@@ -55,7 +57,10 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The Embedded Prices to set.</p>
+     *  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @return prices
      */
     @NotNull
@@ -64,7 +69,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @return staged
      */
 
@@ -86,7 +91,10 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The Embedded Prices to set.</p>
+     *  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param prices values to be set
      */
 
@@ -94,14 +102,17 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public void setPrices(final PriceDraft... prices);
 
     /**
-     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The Embedded Prices to set.</p>
+     *  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param prices values to be set
      */
 
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @param staged value to be set
      */
 
@@ -128,6 +139,8 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetPricesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetPricesAction
@@ -182,8 +195,8 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetPricesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetPricesAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetPricesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetPricesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetPricesAction>";

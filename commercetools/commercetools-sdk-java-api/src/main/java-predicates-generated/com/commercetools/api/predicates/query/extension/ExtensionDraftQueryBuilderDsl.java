@@ -49,4 +49,35 @@ public class ExtensionDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ExtensionDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl> dependencies(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("dependencies"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl.of())),
+            ExtensionDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl> dependencies() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("dependencies")),
+            p -> new CombinationQueryPredicate<>(p, ExtensionDraftQueryBuilderDsl::of));
+    }
+
+    public StringCollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl> expansionPaths() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expansionPaths")),
+            p -> new CombinationQueryPredicate<>(p, ExtensionDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl> additionalContext(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("additionalContext"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextDraftQueryBuilderDsl
+                            .of())),
+            ExtensionDraftQueryBuilderDsl::of);
+    }
+
 }

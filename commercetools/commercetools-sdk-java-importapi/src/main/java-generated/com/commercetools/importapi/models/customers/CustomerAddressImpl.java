@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,13 +15,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Different from Address in that <code>key</code> is required and <code>id</code> is not supported.</p>
+ *  <p>Different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in that <code>key</code> is required and <code>id</code> is not supported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressImpl implements CustomerAddress, ModelBase {
 
     private String key;
+
+    private String country;
 
     private String title;
 
@@ -45,8 +48,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     private String region;
 
     private String state;
-
-    private String country;
 
     private String company;
 
@@ -76,22 +77,24 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CustomerAddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
-            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
-            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
+    CustomerAddressImpl(@JsonProperty("key") final String key, @JsonProperty("country") final String country,
+            @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
+            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
+            @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
             @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
             @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
             @JsonProperty("region") final String region, @JsonProperty("state") final String state,
-            @JsonProperty("country") final String country, @JsonProperty("company") final String company,
-            @JsonProperty("department") final String department, @JsonProperty("building") final String building,
-            @JsonProperty("apartment") final String apartment, @JsonProperty("pOBox") final String pOBox,
-            @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
-            @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
+            @JsonProperty("company") final String company, @JsonProperty("department") final String department,
+            @JsonProperty("building") final String building, @JsonProperty("apartment") final String apartment,
+            @JsonProperty("pOBox") final String pOBox, @JsonProperty("phone") final String phone,
+            @JsonProperty("mobile") final String mobile, @JsonProperty("email") final String email,
+            @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
             @JsonProperty("externalId") final String externalId,
             @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.key = key;
+        this.country = country;
         this.title = title;
         this.salutation = salutation;
         this.firstName = firstName;
@@ -103,7 +106,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         this.city = city;
         this.region = region;
         this.state = state;
-        this.country = country;
         this.company = company;
         this.department = department;
         this.building = building;
@@ -125,7 +127,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     *  <p>User-defined identifier for the address. Must be unique per customer.</p>
      */
 
     public String getKey() {
@@ -133,95 +135,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    /**
-     *
-     */
-
-    public String getSalutation() {
-        return this.salutation;
-    }
-
-    /**
-     *
-     */
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    /**
-     *
-     */
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    /**
-     *
-     */
-
-    public String getStreetName() {
-        return this.streetName;
-    }
-
-    /**
-     *
-     */
-
-    public String getStreetNumber() {
-        return this.streetNumber;
-    }
-
-    /**
-     *
-     */
-
-    public String getAdditionalStreetInfo() {
-        return this.additionalStreetInfo;
-    }
-
-    /**
-     *
-     */
-
-    public String getPostalCode() {
-        return this.postalCode;
-    }
-
-    /**
-     *
-     */
-
-    public String getCity() {
-        return this.city;
-    }
-
-    /**
-     *
-     */
-
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
-     *
-     */
-
-    public String getState() {
-        return this.state;
-    }
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public String getCountry() {
@@ -229,7 +143,95 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     */
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     */
+
+    public String getSalutation() {
+        return this.salutation;
+    }
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     */
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     */
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    /**
+     *  <p>Name of the street.</p>
+     */
+
+    public String getStreetName() {
+        return this.streetName;
+    }
+
+    /**
+     *  <p>Street number.</p>
+     */
+
+    public String getStreetNumber() {
+        return this.streetNumber;
+    }
+
+    /**
+     *  <p>Further information on the street address.</p>
+     */
+
+    public String getAdditionalStreetInfo() {
+        return this.additionalStreetInfo;
+    }
+
+    /**
+     *  <p>Postal code.</p>
+     */
+
+    public String getPostalCode() {
+        return this.postalCode;
+    }
+
+    /**
+     *  <p>Name of the city.</p>
+     */
+
+    public String getCity() {
+        return this.city;
+    }
+
+    /**
+     *  <p>Name of the region.</p>
+     */
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     *  <p>Name of the company.</p>
      */
 
     public String getCompany() {
@@ -237,7 +239,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the department.</p>
      */
 
     public String getDepartment() {
@@ -245,7 +247,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the building.</p>
      */
 
     public String getBuilding() {
@@ -253,7 +255,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the apartment.</p>
      */
 
     public String getApartment() {
@@ -261,7 +263,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Post office box number.</p>
      */
 
     public String getPOBox() {
@@ -269,7 +271,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Phone number of the contact.</p>
      */
 
     public String getPhone() {
@@ -277,7 +279,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Mobile phone number of the contact.</p>
      */
 
     public String getMobile() {
@@ -285,7 +287,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the contact.</p>
      */
 
     public String getEmail() {
@@ -293,7 +295,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Fax number of the contact.</p>
      */
 
     public String getFax() {
@@ -301,7 +303,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>Further information on the Address.</p>
      */
 
     public String getAdditionalAddressInfo() {
@@ -309,7 +311,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *
+     *  <p>ID for the contact used in an external system.</p>
      */
 
     public String getExternalId() {
@@ -326,6 +328,10 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    public void setCountry(final String country) {
+        this.country = country;
     }
 
     public void setTitle(final String title) {
@@ -370,10 +376,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
 
     public void setState(final String state) {
         this.state = state;
-    }
-
-    public void setCountry(final String country) {
-        this.country = country;
     }
 
     public void setCompany(final String company) {
@@ -435,6 +437,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         CustomerAddressImpl that = (CustomerAddressImpl) o;
 
         return new EqualsBuilder().append(key, that.key)
+                .append(country, that.country)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -446,7 +449,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(city, that.city)
                 .append(region, that.region)
                 .append(state, that.state)
-                .append(country, that.country)
                 .append(company, that.company)
                 .append(department, that.department)
                 .append(building, that.building)
@@ -460,6 +462,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(externalId, that.externalId)
                 .append(custom, that.custom)
                 .append(key, that.key)
+                .append(country, that.country)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -471,7 +474,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(city, that.city)
                 .append(region, that.region)
                 .append(state, that.state)
-                .append(country, that.country)
                 .append(company, that.company)
                 .append(department, that.department)
                 .append(building, that.building)
@@ -490,6 +492,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(key)
+                .append(country)
                 .append(title)
                 .append(salutation)
                 .append(firstName)
@@ -501,7 +504,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(city)
                 .append(region)
                 .append(state)
-                .append(country)
                 .append(company)
                 .append(department)
                 .append(building)
@@ -520,6 +522,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("country", country)
                 .append("title", title)
                 .append("salutation", salutation)
                 .append("firstName", firstName)
@@ -531,7 +534,6 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append("city", city)
                 .append("region", region)
                 .append("state", state)
-                .append("country", country)
                 .append("company", company)
                 .append("department", department)
                 .append("building", building)
@@ -547,4 +549,8 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerAddress copyDeep() {
+        return CustomerAddress.deepCopy(this);
+    }
 }

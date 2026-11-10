@@ -23,47 +23,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
-    private com.commercetools.history.models.common.Reference discountCode;
+    private com.commercetools.history.models.common.DiscountCodeReference discountCode;
 
     private com.commercetools.history.models.common.DiscountCodeState state;
 
     /**
-     * set the value to the discountCode using the builder function
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
 
     public DiscountCodeInfoBuilder discountCode(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.discountCode = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.DiscountCodeReferenceBuilder, com.commercetools.history.models.common.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.history.models.common.DiscountCodeReferenceBuilder.of())
+                .build();
         return this;
     }
 
     /**
-     * set the value to the discountCode using the builder function
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
 
     public DiscountCodeInfoBuilder withDiscountCode(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.discountCode = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.DiscountCodeReferenceBuilder, com.commercetools.history.models.common.DiscountCodeReference> builder) {
+        this.discountCode = builder.apply(com.commercetools.history.models.common.DiscountCodeReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the discountCode
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @param discountCode value to be set
      * @return Builder
      */
 
-    public DiscountCodeInfoBuilder discountCode(final com.commercetools.history.models.common.Reference discountCode) {
+    public DiscountCodeInfoBuilder discountCode(
+            final com.commercetools.history.models.common.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
 
     /**
-     * set the value to the state
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -74,16 +76,16 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     * value of discountCode}
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @return discountCode
      */
 
-    public com.commercetools.history.models.common.Reference getDiscountCode() {
+    public com.commercetools.history.models.common.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
 
     /**
-     * value of state}
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @return state
      */
 

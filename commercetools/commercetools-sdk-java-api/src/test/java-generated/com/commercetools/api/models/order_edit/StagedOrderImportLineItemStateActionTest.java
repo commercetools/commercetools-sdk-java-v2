@@ -3,34 +3,27 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderImportLineItemStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderImportLineItemStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderImportLineItemStateActionBuilder builder) {
         StagedOrderImportLineItemStateAction stagedOrderImportLineItemStateAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderImportLineItemStateAction)
                 .isInstanceOf(StagedOrderImportLineItemStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderImportLineItemStateAction.builder().lineItemId("lineItemId") },
-                new Object[] { StagedOrderImportLineItemStateAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { StagedOrderImportLineItemStateAction.builder()
+                new Object[] { "lineItemId", StagedOrderImportLineItemStateAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        StagedOrderImportLineItemStateAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "state", StagedOrderImportLineItemStateAction.builder()
                         .state(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) } };
     }
 

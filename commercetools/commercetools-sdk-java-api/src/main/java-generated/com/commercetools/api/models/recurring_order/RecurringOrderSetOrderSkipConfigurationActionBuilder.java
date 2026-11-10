@@ -1,0 +1,128 @@
+
+package com.commercetools.api.models.recurring_order;
+
+import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Builder;
+import io.vrap.rmf.base.client.utils.Generated;
+
+/**
+ * RecurringOrderSetOrderSkipConfigurationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RecurringOrderSetOrderSkipConfigurationAction recurringOrderSetOrderSkipConfigurationAction = RecurringOrderSetOrderSkipConfigurationAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class RecurringOrderSetOrderSkipConfigurationActionBuilder
+        implements Builder<RecurringOrderSetOrderSkipConfigurationAction> {
+
+    @Nullable
+    private com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft;
+
+    @Nullable
+    private java.time.ZonedDateTime updatedExpiresAt;
+
+    /**
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @param skipConfigurationInputDraft value to be set
+     * @return Builder
+     */
+
+    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfigurationInputDraft(
+            @Nullable final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft) {
+        this.skipConfigurationInputDraft = skipConfigurationInputDraft;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @param builder function to build the skipConfigurationInputDraft value
+     * @return Builder
+     */
+
+    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfigurationInputDraft(
+            Function<com.commercetools.api.models.recurring_order.SkipConfigurationDraftBuilder, Builder<? extends com.commercetools.api.models.recurring_order.SkipConfigurationDraft>> builder) {
+        this.skipConfigurationInputDraft = builder
+                .apply(com.commercetools.api.models.recurring_order.SkipConfigurationDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
+     * @param updatedExpiresAt value to be set
+     * @return Builder
+     */
+
+    public RecurringOrderSetOrderSkipConfigurationActionBuilder updatedExpiresAt(
+            @Nullable final java.time.ZonedDateTime updatedExpiresAt) {
+        this.updatedExpiresAt = updatedExpiresAt;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @return skipConfigurationInputDraft
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfigurationInputDraft() {
+        return this.skipConfigurationInputDraft;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
+     * @return updatedExpiresAt
+     */
+
+    @Nullable
+    public java.time.ZonedDateTime getUpdatedExpiresAt() {
+        return this.updatedExpiresAt;
+    }
+
+    /**
+     * builds RecurringOrderSetOrderSkipConfigurationAction with checking for non-null required values
+     * @return RecurringOrderSetOrderSkipConfigurationAction
+     */
+    public RecurringOrderSetOrderSkipConfigurationAction build() {
+        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfigurationInputDraft, updatedExpiresAt);
+    }
+
+    /**
+     * builds RecurringOrderSetOrderSkipConfigurationAction without checking for non-null required values
+     * @return RecurringOrderSetOrderSkipConfigurationAction
+     */
+    public RecurringOrderSetOrderSkipConfigurationAction buildUnchecked() {
+        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfigurationInputDraft, updatedExpiresAt);
+    }
+
+    /**
+     * factory method for an instance of RecurringOrderSetOrderSkipConfigurationActionBuilder
+     * @return builder
+     */
+    public static RecurringOrderSetOrderSkipConfigurationActionBuilder of() {
+        return new RecurringOrderSetOrderSkipConfigurationActionBuilder();
+    }
+
+    /**
+     * create builder for RecurringOrderSetOrderSkipConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static RecurringOrderSetOrderSkipConfigurationActionBuilder of(
+            final RecurringOrderSetOrderSkipConfigurationAction template) {
+        RecurringOrderSetOrderSkipConfigurationActionBuilder builder = new RecurringOrderSetOrderSkipConfigurationActionBuilder();
+        builder.skipConfigurationInputDraft = template.getSkipConfigurationInputDraft();
+        builder.updatedExpiresAt = template.getUpdatedExpiresAt();
+        return builder;
+    }
+
+}

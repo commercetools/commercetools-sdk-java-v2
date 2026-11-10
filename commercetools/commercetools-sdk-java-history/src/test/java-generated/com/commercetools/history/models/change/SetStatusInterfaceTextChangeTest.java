@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetStatusInterfaceTextChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetStatusInterfaceTextChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetStatusInterfaceTextChangeBuilder builder) {
         SetStatusInterfaceTextChange setStatusInterfaceTextChange = builder.buildUnchecked();
         Assertions.assertThat(setStatusInterfaceTextChange).isInstanceOf(SetStatusInterfaceTextChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetStatusInterfaceTextChange.builder().change("change") },
-                new Object[] { SetStatusInterfaceTextChange.builder().previousValue("previousValue") },
-                new Object[] { SetStatusInterfaceTextChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetStatusInterfaceTextChange.builder().change("change") },
+                new Object[] { "previousValue", SetStatusInterfaceTextChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetStatusInterfaceTextChange.builder().nextValue("nextValue") } };
     }
 
     @Test

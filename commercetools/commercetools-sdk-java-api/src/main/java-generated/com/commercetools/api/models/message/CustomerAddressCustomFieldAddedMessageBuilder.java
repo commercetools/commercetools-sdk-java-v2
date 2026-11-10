@@ -58,6 +58,9 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
 
     private java.lang.Object value;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -186,7 +189,7 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +201,7 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -271,13 +274,24 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      * @return Builder
      */
 
     public CustomerAddressCustomFieldAddedMessageBuilder value(final java.lang.Object value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldAddedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -347,7 +361,7 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -384,12 +398,22 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -410,7 +434,8 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
         Objects.requireNonNull(name, CustomerAddressCustomFieldAddedMessage.class + ": name is missing");
         Objects.requireNonNull(value, CustomerAddressCustomFieldAddedMessage.class + ": value is missing");
         return new CustomerAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
+            addressId);
     }
 
     /**
@@ -419,7 +444,8 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
      */
     public CustomerAddressCustomFieldAddedMessage buildUnchecked() {
         return new CustomerAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
+            addressId);
     }
 
     /**
@@ -450,6 +476,7 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.name = template.getName();
         builder.value = template.getValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

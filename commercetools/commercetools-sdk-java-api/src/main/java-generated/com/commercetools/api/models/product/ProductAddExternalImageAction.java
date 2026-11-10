@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Image;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAdded Message.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the <span>ProductImageAdded</span> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addExternalImage")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddExternalImageActionImpl.class)
 public interface ProductAddExternalImageAction extends ProductUpdateAction {
@@ -63,7 +65,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public Image getImage();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 
@@ -92,7 +94,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public void setImage(final Image image);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -119,6 +121,8 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductAddExternalImageAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAddExternalImageAction
@@ -169,8 +173,8 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddExternalImageAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddExternalImageAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductAddExternalImageAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductAddExternalImageAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductAddExternalImageAction>";

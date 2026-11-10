@@ -20,9 +20,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
+ *             .savedToLineItem(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,6 +40,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     private Boolean isRequired;
 
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
+
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
     @Nullable
@@ -46,6 +50,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private com.commercetools.api.models.product_type.TextInputHint inputHint;
 
     private Boolean isSearchable;
+
+    private Boolean savedToLineItem;
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
@@ -71,7 +77,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -117,13 +123,24 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      * @return Builder
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
         this.isRequired = isRequired;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder level(final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
         return this;
     }
 
@@ -176,7 +193,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      * @return Builder
      */
@@ -188,14 +205,26 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
-     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {
         this.isSearchable = isSearchable;
+        return this;
+    }
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder savedToLineItem(final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
         return this;
     }
 
@@ -209,7 +238,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
 
@@ -227,12 +256,21 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
 
     public Boolean getIsRequired() {
         return this.isRequired;
+    }
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
     }
 
     /**
@@ -255,7 +293,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
 
@@ -264,13 +302,23 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
-     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
+    }
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
     }
 
     /**
@@ -282,11 +330,13 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
         Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
+        Objects.requireNonNull(level, AttributeDefinition.class + ": level is missing");
         Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");
         Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");
         Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        Objects.requireNonNull(savedToLineItem, AttributeDefinition.class + ": savedToLineItem is missing");
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -294,8 +344,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -317,10 +367,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.name = template.getName();
         builder.label = template.getLabel();
         builder.isRequired = template.getIsRequired();
+        builder.level = template.getLevel();
         builder.attributeConstraint = template.getAttributeConstraint();
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.savedToLineItem = template.getSavedToLineItem();
         return builder;
     }
 

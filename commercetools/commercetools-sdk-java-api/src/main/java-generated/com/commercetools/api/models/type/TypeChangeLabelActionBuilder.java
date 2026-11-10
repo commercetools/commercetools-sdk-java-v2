@@ -28,7 +28,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
 
@@ -83,7 +83,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @return label
      */
 

@@ -73,6 +73,12 @@ public class ShippingMethodDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> active() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("active")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> isDefault() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isDefault")),
@@ -92,6 +98,27 @@ public class ShippingMethodDraftQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
             ShippingMethodDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("stores"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
+            ShippingMethodDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> carrier() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("carrier")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
     }
 
 }

@@ -28,9 +28,9 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
 
     private String change;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
-    private com.commercetools.history.models.common.Money nextValue;
+    private com.commercetools.history.models.common.TaxedItemPrice nextValue;
 
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
@@ -54,8 +54,8 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -66,8 +66,8 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPrice> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of());
         return this;
     }
 
@@ -78,7 +78,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Money previousValue) {
+            final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -90,8 +90,8 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
 
@@ -102,8 +102,8 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPrice> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of());
         return this;
     }
 
@@ -114,13 +114,13 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
-            final com.commercetools.history.models.common.Money nextValue) {
+            final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -190,12 +190,12 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.Money getNextValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
 
@@ -204,7 +204,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
 

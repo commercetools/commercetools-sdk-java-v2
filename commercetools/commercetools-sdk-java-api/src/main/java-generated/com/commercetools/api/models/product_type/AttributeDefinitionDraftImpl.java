@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Specify the Attribute to be created with the ProductTypeDraft.</p>
+ *  <p>Specify the Attribute to be created with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeDraft" rel="nofollow">ProductTypeDraft</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, ModelBase {
@@ -30,6 +31,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     private Boolean isRequired;
 
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
+
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
     private com.commercetools.api.models.common.LocalizedString inputTip;
@@ -37,6 +40,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     private com.commercetools.api.models.product_type.TextInputHint inputHint;
 
     private Boolean isSearchable;
+
+    private Boolean savedToLineItem;
 
     /**
      * create instance with all properties
@@ -47,18 +52,22 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
             @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label,
             @JsonProperty("isRequired") final Boolean isRequired,
+            @JsonProperty("level") final com.commercetools.api.models.product_type.AttributeLevelEnum level,
             @JsonProperty("attributeConstraint") final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.api.models.product_type.TextInputHint inputHint,
-            @JsonProperty("isSearchable") final Boolean isSearchable) {
+            @JsonProperty("isSearchable") final Boolean isSearchable,
+            @JsonProperty("savedToLineItem") final Boolean savedToLineItem) {
         this.type = type;
         this.name = name;
         this.label = label;
         this.isRequired = isRequired;
+        this.level = level;
         this.attributeConstraint = attributeConstraint;
         this.inputTip = inputTip;
         this.inputHint = inputHint;
         this.isSearchable = isSearchable;
+        this.savedToLineItem = savedToLineItem;
     }
 
     /**
@@ -69,7 +78,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
-     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
+     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeType getType() {
@@ -77,8 +86,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      */
 
     public String getName() {
@@ -94,7 +103,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Boolean getIsRequired() {
@@ -102,7 +111,15 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     */
+
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnum getAttributeConstraint() {
@@ -118,7 +135,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      */
 
     public com.commercetools.api.models.product_type.TextInputHint getInputHint() {
@@ -126,11 +143,21 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
+     *  <p>Which exact features are available with this flag depends on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
+    }
+
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     */
+
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
     }
 
     public void setType(final com.commercetools.api.models.product_type.AttributeType type) {
@@ -147,6 +174,10 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     public void setIsRequired(final Boolean isRequired) {
         this.isRequired = isRequired;
+    }
+
+    public void setLevel(final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
     }
 
     public void setAttributeConstraint(
@@ -166,6 +197,10 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.isSearchable = isSearchable;
     }
 
+    public void setSavedToLineItem(final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -180,18 +215,22 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(savedToLineItem, that.savedToLineItem)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(savedToLineItem, that.savedToLineItem)
                 .isEquals();
     }
 
@@ -201,10 +240,12 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(name)
                 .append(label)
                 .append(isRequired)
+                .append(level)
                 .append(attributeConstraint)
                 .append(inputTip)
                 .append(inputHint)
                 .append(isSearchable)
+                .append(savedToLineItem)
                 .toHashCode();
     }
 
@@ -214,11 +255,17 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append("name", name)
                 .append("label", label)
                 .append("isRequired", isRequired)
+                .append("level", level)
                 .append("attributeConstraint", attributeConstraint)
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)
                 .append("isSearchable", isSearchable)
+                .append("savedToLineItem", savedToLineItem)
                 .build();
     }
 
+    @Override
+    public AttributeDefinitionDraft copyDeep() {
+        return AttributeDefinitionDraft.deepCopy(this);
+    }
 }

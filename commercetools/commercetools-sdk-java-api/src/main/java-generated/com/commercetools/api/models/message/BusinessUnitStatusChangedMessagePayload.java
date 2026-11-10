@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitStatus;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Status update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeStatusAction" rel="nofollow">Change Status</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitStatusChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitStatusChangedMessagePayloadImpl.class)
 public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload {
@@ -37,7 +39,7 @@ public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload 
     String BUSINESS_UNIT_STATUS_CHANGED = "BusinessUnitStatusChanged";
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return active
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload 
     public BusinessUnitStatus getActive();
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param active value to be set
      */
 
@@ -69,6 +71,8 @@ public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload 
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public BusinessUnitStatusChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitStatusChangedMessagePayload
@@ -119,8 +123,8 @@ public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStatusChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStatusChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitStatusChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitStatusChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitStatusChangedMessagePayload>";

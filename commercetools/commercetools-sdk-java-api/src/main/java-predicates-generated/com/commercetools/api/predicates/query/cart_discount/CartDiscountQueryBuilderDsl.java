@@ -176,4 +176,22 @@ public class CartDiscountQueryBuilderDsl {
             CartDiscountQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountQueryBuilderDsl> discountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountGroup"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl.of())),
+            CartDiscountQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CartDiscountQueryBuilderDsl> recurringOrderScope(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurringOrderScope"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeQueryBuilderDsl.of())),
+            CartDiscountQueryBuilderDsl::of);
+    }
+
 }

@@ -6,16 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to a StagedQuote.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("staged-quote")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteReferenceImpl.class)
 public interface StagedQuoteReference extends Reference, com.commercetools.api.models.Identifiable<StagedQuote>,
@@ -38,7 +42,15 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     String STAGED_QUOTE = "staged-quote";
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @return obj
      */
     @Valid
@@ -46,7 +58,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     public StagedQuote getObj();
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @param obj value to be set
      */
 
@@ -71,6 +83,8 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public StagedQuoteReference copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteReference
@@ -119,8 +133,8 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteReference>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteReference>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteReference>";

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeChangeIsActiveAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeIsActive")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeChangeIsActiveActionImpl.class)
 public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateAction {
@@ -68,6 +70,8 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
         instance.setIsActive(template.getIsActive());
         return instance;
     }
+
+    public DiscountCodeChangeIsActiveAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeChangeIsActiveAction
@@ -115,8 +119,8 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeChangeIsActiveAction>";

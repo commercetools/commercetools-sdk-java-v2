@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemDistributionChannelAction" rel="nofollow">Set LineItem DistributionChannel</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLineItemDistributionChannelSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemDistributionChannelSetMessageImpl.class)
 public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage {
@@ -45,7 +47,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public String getLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @return lineItemKey
      */
 
@@ -61,7 +63,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public String getLineItemKey();
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @return distributionChannel
      */
     @Valid
@@ -69,21 +71,21 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public ChannelReference getDistributionChannel();
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @param lineItemKey value to be set
      */
 
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param distributionChannel value to be set
      */
 
@@ -120,6 +122,8 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public OrderLineItemDistributionChannelSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderLineItemDistributionChannelSetMessage
@@ -185,8 +189,8 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderLineItemDistributionChannelSetMessage>";

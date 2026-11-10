@@ -3,56 +3,55 @@ package com.commercetools.importapi.models.order_patches;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderFieldTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderFieldBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderFieldBuilder builder) {
         OrderField orderField = builder.buildUnchecked();
         Assertions.assertThat(orderField).isInstanceOf(OrderField.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderField.builder()
-                        .addReturnInfo(new com.commercetools.importapi.models.order_patches.ReturnInfoImpl()) },
-                new Object[] { OrderField.builder()
-                        .addParcelToDelivery(
-                            new com.commercetools.importapi.models.order_patches.DeliveryParcelImpl()) },
-                new Object[] { OrderField.builder()
-                        .addDeliveries(Collections.singletonList(
-                            new com.commercetools.importapi.models.order_patches.DeliveryDraftImpl())) },
-                new Object[] { OrderField.builder()
-                        .removeDelivery(
-                            new com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftImpl()) },
-                new Object[] { OrderField.builder()
+                new Object[] { "addReturnInfo",
+                        OrderField.builder()
+                                .addReturnInfo(new com.commercetools.importapi.models.order_patches.ReturnInfoImpl()) },
+                new Object[] { "addParcelToDelivery",
+                        OrderField.builder()
+                                .addParcelToDelivery(
+                                    new com.commercetools.importapi.models.order_patches.DeliveryParcelImpl()) },
+                new Object[] { "addDeliveries",
+                        OrderField.builder()
+                                .addDeliveries(Collections.singletonList(
+                                    new com.commercetools.importapi.models.order_patches.DeliveryDraftImpl())) },
+                new Object[] { "removeDelivery",
+                        OrderField.builder()
+                                .removeDelivery(
+                                    new com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftImpl()) },
+                new Object[] { "removeParcelFromDelivery", OrderField.builder()
                         .removeParcelFromDelivery(
                             new com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftImpl()) },
-                new Object[] { OrderField.builder()
-                        .setDeliveryAddress(
-                            new com.commercetools.importapi.models.order_patches.DeliveryAddressDraftImpl()) },
-                new Object[] { OrderField.builder()
+                new Object[] { "setDeliveryAddress",
+                        OrderField.builder()
+                                .setDeliveryAddress(
+                                    new com.commercetools.importapi.models.order_patches.DeliveryAddressDraftImpl()) },
+                new Object[] { "setParcelMeasurements", OrderField.builder()
                         .setParcelMeasurements(
                             new com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftImpl()) },
-                new Object[] { OrderField.builder()
-                        .setParcelTrackingData(
-                            new com.commercetools.importapi.models.order_patches.ParcelTrackingDataImpl()) },
-                new Object[] { OrderField.builder()
-                        .setParcelItems(Collections.singletonList(
-                            new com.commercetools.importapi.models.order_patches.ParcelItemsImpl())) } };
+                new Object[] { "setParcelTrackingData",
+                        OrderField.builder()
+                                .setParcelTrackingData(
+                                    new com.commercetools.importapi.models.order_patches.ParcelTrackingDataImpl()) },
+                new Object[] { "setParcelItems",
+                        OrderField.builder()
+                                .setParcelItems(Collections.singletonList(
+                                    new com.commercetools.importapi.models.order_patches.ParcelItemsImpl())) } };
     }
 
     @Test

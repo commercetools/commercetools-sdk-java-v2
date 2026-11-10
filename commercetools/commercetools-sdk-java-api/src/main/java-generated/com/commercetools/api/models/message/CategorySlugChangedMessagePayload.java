@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Slug update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CategorySlugChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySlugChangedMessagePayloadImpl.class)
 public interface CategorySlugChangedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     String CATEGORY_SLUG_CHANGED = "CategorySlugChanged";
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return slug
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return oldSlug
      */
     @Valid
@@ -55,14 +57,14 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     public LocalizedString getOldSlug();
 
     /**
-     *  <p>The slug of the Category after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The slug of the Category before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param oldSlug value to be set
      */
 
@@ -87,6 +89,8 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
         instance.setOldSlug(template.getOldSlug());
         return instance;
     }
+
+    public CategorySlugChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySlugChangedMessagePayload
@@ -136,8 +140,8 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySlugChangedMessagePayload>";

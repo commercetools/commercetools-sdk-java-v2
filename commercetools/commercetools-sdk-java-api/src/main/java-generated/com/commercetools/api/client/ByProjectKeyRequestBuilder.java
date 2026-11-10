@@ -37,6 +37,10 @@ public class ByProjectKeyRequestBuilder {
         return post(op.apply(com.commercetools.api.models.project.ProjectUpdateBuilder.of()).build());
     }
 
+    public ByProjectKeyAgentsRequestBuilder agents() {
+        return new ByProjectKeyAgentsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyAsAssociateRequestBuilder asAssociate() {
         return new ByProjectKeyAsAssociateRequestBuilder(apiHttpClient, projectKey);
     }
@@ -81,6 +85,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyDiscountGroupsRequestBuilder discountGroups() {
+        return new ByProjectKeyDiscountGroupsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyGraphqlRequestBuilder graphql() {
         return new ByProjectKeyGraphqlRequestBuilder(apiHttpClient, projectKey);
     }
@@ -99,6 +107,10 @@ public class ByProjectKeyRequestBuilder {
 
     public ByProjectKeyOrdersRequestBuilder orders() {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyPaymentMethodsRequestBuilder paymentMethods() {
+        return new ByProjectKeyPaymentMethodsRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyPaymentsRequestBuilder payments() {
@@ -141,6 +153,14 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyRecurringOrdersRequestBuilder recurringOrders() {
+        return new ByProjectKeyRecurringOrdersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies() {
+        return new ByProjectKeyRecurrencePoliciesRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyReviewsRequestBuilder reviews() {
         return new ByProjectKeyReviewsRequestBuilder(apiHttpClient, projectKey);
     }
@@ -167,6 +187,14 @@ public class ByProjectKeyRequestBuilder {
 
     public ByProjectKeyTypesRequestBuilder types() {
         return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyVariantProjectionsRequestBuilder variantProjections() {
+        return new ByProjectKeyVariantProjectionsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return new ByProjectKeyVariantsRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyZonesRequestBuilder zones() {
@@ -205,6 +233,10 @@ public class ByProjectKeyRequestBuilder {
 
     public ByProjectKeyAttributeGroupsRequestBuilder attributeGroups() {
         return new ByProjectKeyAttributeGroupsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyMcpServersRequestBuilder mcpServers() {
+        return new ByProjectKeyMcpServersRequestBuilder(apiHttpClient, projectKey);
     }
 
 }

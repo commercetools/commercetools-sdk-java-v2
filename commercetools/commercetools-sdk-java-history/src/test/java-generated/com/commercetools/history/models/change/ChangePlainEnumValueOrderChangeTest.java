@@ -3,37 +3,32 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangePlainEnumValueOrderChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangePlainEnumValueOrderChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangePlainEnumValueOrderChangeBuilder builder) {
         ChangePlainEnumValueOrderChange changePlainEnumValueOrderChange = builder.buildUnchecked();
         Assertions.assertThat(changePlainEnumValueOrderChange).isInstanceOf(ChangePlainEnumValueOrderChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangePlainEnumValueOrderChange.builder().change("change") },
-                new Object[] { ChangePlainEnumValueOrderChange.builder()
-                        .previousValue(Collections
-                                .singletonList(new com.commercetools.history.models.change_value.EnumValueImpl())) },
-                new Object[] { ChangePlainEnumValueOrderChange.builder()
-                        .nextValue(Collections
-                                .singletonList(new com.commercetools.history.models.change_value.EnumValueImpl())) },
-                new Object[] { ChangePlainEnumValueOrderChange.builder().attributeName("attributeName") } };
+        return new Object[][] { new Object[] { "change", ChangePlainEnumValueOrderChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangePlainEnumValueOrderChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.AttributePlainEnumValueImpl())) },
+                new Object[] { "nextValue",
+                        ChangePlainEnumValueOrderChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.AttributePlainEnumValueImpl())) },
+                new Object[] { "attributeName",
+                        ChangePlainEnumValueOrderChange.builder().attributeName("attributeName") } };
     }
 
     @Test
@@ -47,20 +42,20 @@ public class ChangePlainEnumValueOrderChangeTest {
     public void previousValue() {
         ChangePlainEnumValueOrderChange value = ChangePlainEnumValueOrderChange.of();
         value.setPreviousValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()));
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(
-                    Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()));
     }
 
     @Test
     public void nextValue() {
         ChangePlainEnumValueOrderChange value = ChangePlainEnumValueOrderChange.of();
         value.setNextValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()));
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(
-                    Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()));
     }
 
     @Test

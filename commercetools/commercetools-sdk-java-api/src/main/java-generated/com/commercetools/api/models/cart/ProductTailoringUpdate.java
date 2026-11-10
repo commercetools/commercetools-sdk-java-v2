@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product_tailoring.ProductTailoringUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringUpdate
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductTailoringUpdate {
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +53,7 @@ public interface ProductTailoringUpdate {
     public List<ProductTailoringUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @param version value to be set
      */
 
@@ -92,6 +93,8 @@ public interface ProductTailoringUpdate {
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public ProductTailoringUpdate copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringUpdate
@@ -144,8 +147,8 @@ public interface ProductTailoringUpdate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringUpdate>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringUpdate>";

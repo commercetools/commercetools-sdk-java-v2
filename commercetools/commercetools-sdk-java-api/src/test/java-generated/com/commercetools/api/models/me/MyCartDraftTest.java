@@ -3,61 +3,61 @@ package com.commercetools.api.models.me;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartDraftBuilder builder) {
         MyCartDraft myCartDraft = builder.buildUnchecked();
         Assertions.assertThat(myCartDraft).isInstanceOf(MyCartDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCartDraft.builder().currency("currency") },
-                new Object[] { MyCartDraft.builder().customerEmail("customerEmail") },
-                new Object[] { MyCartDraft.builder()
+        return new Object[][] { new Object[] { "currency", MyCartDraft.builder().currency("currency") },
+                new Object[] { "customerEmail", MyCartDraft.builder().customerEmail("customerEmail") },
+                new Object[] { "businessUnit", MyCartDraft.builder()
                         .businessUnit(
                             new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] { MyCartDraft.builder()
-                        .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "store",
+                        MyCartDraft.builder()
+                                .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
+                new Object[] { "lineItems",
                         MyCartDraft.builder()
                                 .lineItems(Collections
                                         .singletonList(new com.commercetools.api.models.me.MyLineItemDraftImpl())) },
-                new Object[] {
+                new Object[] { "taxMode",
                         MyCartDraft.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
-                new Object[] { MyCartDraft.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { MyCartDraft.builder()
-                        .billingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { MyCartDraft.builder()
-                        .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { MyCartDraft.builder()
+                new Object[] { "inventoryMode",
+                        MyCartDraft.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "billingAddress",
+                        MyCartDraft.builder()
+                                .billingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingAddress",
+                        MyCartDraft.builder()
+                                .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingMethod", MyCartDraft.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "itemShippingAddresses",
                         MyCartDraft.builder()
                                 .itemShippingAddresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
-                new Object[] { MyCartDraft.builder()
-                        .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
-                new Object[] { MyCartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
-                new Object[] { MyCartDraft.builder().country("country") },
-                new Object[] { MyCartDraft.builder().locale("locale") },
-                new Object[] { MyCartDraft.builder().deleteDaysAfterLastModification(3L) }, new Object[] {
+                new Object[] { "shippingMode",
+                        MyCartDraft.builder()
+                                .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
+                new Object[] { "discountCodes",
+                        MyCartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
+                new Object[] { "country", MyCartDraft.builder().country("country") },
+                new Object[] { "locale", MyCartDraft.builder().locale("locale") },
+                new Object[] { "deleteDaysAfterLastModification",
+                        MyCartDraft.builder().deleteDaysAfterLastModification(3L) },
+                new Object[] { "custom",
                         MyCartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

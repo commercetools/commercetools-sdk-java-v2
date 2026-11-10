@@ -28,7 +28,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     }
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @return id
      */
 

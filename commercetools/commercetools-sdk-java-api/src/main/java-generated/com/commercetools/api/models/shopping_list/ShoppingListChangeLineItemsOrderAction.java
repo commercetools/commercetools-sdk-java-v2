@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListChangeLineItemsOrderAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLineItemsOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeLineItemsOrderActionImpl.class)
 public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpdateAction {
@@ -77,6 +79,8 @@ public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpda
         return instance;
     }
 
+    public ShoppingListChangeLineItemsOrderAction copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListChangeLineItemsOrderAction
      * @param template instance to be copied
@@ -126,8 +130,8 @@ public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListChangeLineItemsOrderAction>";

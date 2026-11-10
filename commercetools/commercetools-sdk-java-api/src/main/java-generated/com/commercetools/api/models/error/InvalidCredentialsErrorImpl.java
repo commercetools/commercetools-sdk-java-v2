@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +16,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Authenticate a global Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on Customers.</li>
- *   <li>Authenticating Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests on My Customer Profile.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -38,7 +40,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
      */
     @JsonCreator
     InvalidCredentialsErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = INVALID_CREDENTIALS;
@@ -118,4 +120,8 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
                 .build();
     }
 
+    @Override
+    public InvalidCredentialsError copyDeep() {
+        return InvalidCredentialsError.deepCopy(this);
+    }
 }

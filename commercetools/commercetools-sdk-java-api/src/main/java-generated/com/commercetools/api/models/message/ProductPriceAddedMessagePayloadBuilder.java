@@ -31,7 +31,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was added.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     *  <p>The Embedded Price that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     *  <p>The Embedded Price that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     *  <p>The Embedded Price that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was added.</p>
      * @return variantId
      */
 
@@ -97,7 +97,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     *  <p>The Embedded Price that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return price
      */
 
@@ -106,7 +106,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

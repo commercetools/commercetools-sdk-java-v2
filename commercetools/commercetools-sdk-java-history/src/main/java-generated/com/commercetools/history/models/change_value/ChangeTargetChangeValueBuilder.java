@@ -27,6 +27,10 @@ public class ChangeTargetChangeValueBuilder {
         return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder.of();
     }
 
+    public com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueBuilder patternBuilder() {
+        return com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueBuilder.of();
+    }
+
     public com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder shippingBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder.of();
     }

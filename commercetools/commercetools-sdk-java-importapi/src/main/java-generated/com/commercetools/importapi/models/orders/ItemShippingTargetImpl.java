@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The item's shipping target.</p>
+ *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
@@ -43,7 +44,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      */
 
     public String getAddressKey() {
@@ -51,7 +52,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      */
 
     public Long getQuantity() {
@@ -95,4 +96,8 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
                 .build();
     }
 
+    @Override
+    public ItemShippingTarget copyDeep() {
+        return ItemShippingTarget.deepCopy(this);
+    }
 }

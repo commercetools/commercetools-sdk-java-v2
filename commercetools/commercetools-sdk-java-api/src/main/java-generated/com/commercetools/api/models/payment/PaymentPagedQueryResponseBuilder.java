@@ -39,7 +39,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     private java.util.List<com.commercetools.api.models.payment.Payment> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -188,7 +188,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -198,7 +198,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -207,7 +207,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     *  <p>Payments matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> matching the query.</p>
      * @return results
      */
 

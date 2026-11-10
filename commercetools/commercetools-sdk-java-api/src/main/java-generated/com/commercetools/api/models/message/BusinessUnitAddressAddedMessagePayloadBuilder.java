@@ -25,7 +25,7 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class BusinessUnitAddressAddedMessagePayloadBuilder implements Builder<Bu
     }
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
 

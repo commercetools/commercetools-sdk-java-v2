@@ -1,37 +1,30 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class UserProvidedIdentifiersTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(UserProvidedIdentifiersBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, UserProvidedIdentifiersBuilder builder) {
         UserProvidedIdentifiers userProvidedIdentifiers = builder.buildUnchecked();
         Assertions.assertThat(userProvidedIdentifiers).isInstanceOf(UserProvidedIdentifiers.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { UserProvidedIdentifiers.builder().key("key") },
-                new Object[] { UserProvidedIdentifiers.builder().externalId("externalId") },
-                new Object[] { UserProvidedIdentifiers.builder().orderNumber("orderNumber") },
-                new Object[] { UserProvidedIdentifiers.builder().customerNumber("customerNumber") },
-                new Object[] { UserProvidedIdentifiers.builder().sku("sku") },
-                new Object[] { UserProvidedIdentifiers.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { UserProvidedIdentifiers.builder()
+        return new Object[][] { new Object[] { "key", UserProvidedIdentifiers.builder().key("key") },
+                new Object[] { "externalId", UserProvidedIdentifiers.builder().externalId("externalId") },
+                new Object[] { "orderNumber", UserProvidedIdentifiers.builder().orderNumber("orderNumber") },
+                new Object[] { "customerNumber", UserProvidedIdentifiers.builder().customerNumber("customerNumber") },
+                new Object[] { "sku", UserProvidedIdentifiers.builder().sku("sku") },
+                new Object[] { "slug",
+                        UserProvidedIdentifiers.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "containerAndKey", UserProvidedIdentifiers.builder()
                         .containerAndKey(new com.commercetools.api.models.message.ContainerAndKeyImpl()) } };
     }
 

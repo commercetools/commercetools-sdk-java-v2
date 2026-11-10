@@ -98,5 +98,21 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyProductTailoringRequestBuilder productTailoring();
 
+    ByProjectKeyDiscountGroupsRequestBuilder discountGroups();
+
+    ByProjectKeyPaymentMethodsRequestBuilder paymentMethods();
+
+    ByProjectKeyRecurringOrdersRequestBuilder recurringOrders();
+
+    ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies();
+
+    ByProjectKeyMcpServersRequestBuilder mcpServers();
+
+    ByProjectKeyAgentsRequestBuilder agents();
+
     <R> R with(Function<ProjectApiRoot, R> op);
+
+    ByProjectKeyVariantProjectionsRequestBuilder variantProjections();
+
+    ByProjectKeyVariantsRequestBuilder variants();
 }

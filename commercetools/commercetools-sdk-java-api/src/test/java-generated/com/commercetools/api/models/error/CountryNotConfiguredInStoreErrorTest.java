@@ -3,33 +3,27 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CountryNotConfiguredInStoreErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CountryNotConfiguredInStoreErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CountryNotConfiguredInStoreErrorBuilder builder) {
         CountryNotConfiguredInStoreError countryNotConfiguredInStoreError = builder.buildUnchecked();
         Assertions.assertThat(countryNotConfiguredInStoreError).isInstanceOf(CountryNotConfiguredInStoreError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CountryNotConfiguredInStoreError.builder().message("message") },
-                new Object[] { CountryNotConfiguredInStoreError.builder()
-                        .storeCountries(Collections.singletonList("storeCountries")) },
-                new Object[] { CountryNotConfiguredInStoreError.builder().country("country") } };
+        return new Object[][] {
+                new Object[] { "message", CountryNotConfiguredInStoreError.builder().message("message") },
+                new Object[] { "storeCountries",
+                        CountryNotConfiguredInStoreError.builder()
+                                .storeCountries(Collections.singletonList("storeCountries")) },
+                new Object[] { "country", CountryNotConfiguredInStoreError.builder().country("country") } };
     }
 
     @Test

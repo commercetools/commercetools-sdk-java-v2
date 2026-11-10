@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Product Variant Draft for the import purpose.</p>
@@ -58,7 +59,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public String getSku() {
@@ -66,7 +67,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      */
 
     public String getKey() {
@@ -74,7 +75,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
@@ -82,7 +83,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -90,7 +91,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
@@ -98,7 +99,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
@@ -194,4 +195,8 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
                 .build();
     }
 
+    @Override
+    public ProductVariantDraftImport copyDeep() {
+        return ProductVariantDraftImport.deepCopy(this);
+    }
 }

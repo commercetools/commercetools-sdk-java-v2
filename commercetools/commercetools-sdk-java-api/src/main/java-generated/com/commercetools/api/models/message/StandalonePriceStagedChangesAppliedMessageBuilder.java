@@ -186,7 +186,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -287,7 +287,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -392,7 +392,7 @@ public class StandalonePriceStagedChangesAppliedMessageBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
 

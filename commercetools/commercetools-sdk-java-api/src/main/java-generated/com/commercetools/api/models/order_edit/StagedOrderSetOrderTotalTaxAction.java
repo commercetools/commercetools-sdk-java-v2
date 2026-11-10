@@ -7,19 +7,20 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updates the total tax amount of the Order if it has the <code>ExternalAmount</code> TaxMode.</p>
+ *  <p>Updates the total tax amount of the Order if it has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setOrderTotalTax")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetOrderTotalTaxActionImpl.class)
 public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateAction {
@@ -99,6 +101,8 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
         return instance;
     }
 
+    public StagedOrderSetOrderTotalTaxAction copyDeep();
+
     /**
      * factory method to create a deep copy of StagedOrderSetOrderTotalTaxAction
      * @param template instance to be copied
@@ -152,8 +156,8 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetOrderTotalTaxAction>";

@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateSetNameAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetNameActionImpl.class)
 public interface StateSetNameAction extends StateUpdateAction {
@@ -38,7 +40,8 @@ public interface StateSetNameAction extends StateUpdateAction {
     String SET_NAME = "setName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @return name
      */
     @NotNull
@@ -47,7 +50,8 @@ public interface StateSetNameAction extends StateUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param name value to be set
      */
 
@@ -71,6 +75,8 @@ public interface StateSetNameAction extends StateUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public StateSetNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetNameAction
@@ -118,8 +124,8 @@ public interface StateSetNameAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateSetNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateSetNameAction>() {
+    public static tools.jackson.core.type.TypeReference<StateSetNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateSetNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateSetNameAction>";

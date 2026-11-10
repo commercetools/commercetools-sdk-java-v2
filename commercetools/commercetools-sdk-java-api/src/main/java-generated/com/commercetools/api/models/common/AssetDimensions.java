@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Dimensions of the Asset source specified by the number of pixels.</p>
@@ -81,6 +82,8 @@ public interface AssetDimensions {
         return instance;
     }
 
+    public AssetDimensions copyDeep();
+
     /**
      * factory method to create a deep copy of AssetDimensions
      * @param template instance to be copied
@@ -128,8 +131,8 @@ public interface AssetDimensions {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssetDimensions> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssetDimensions>() {
+    public static tools.jackson.core.type.TypeReference<AssetDimensions> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssetDimensions>() {
             @Override
             public String toString() {
                 return "TypeReference<AssetDimensions>";

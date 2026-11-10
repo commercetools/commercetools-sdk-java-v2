@@ -187,7 +187,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param oldStatus value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -377,7 +377,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return status
      */
 
@@ -386,7 +386,7 @@ public class ApprovalRuleStatusSetMessageBuilder implements Builder<ApprovalRule
     }
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return oldStatus
      */
 

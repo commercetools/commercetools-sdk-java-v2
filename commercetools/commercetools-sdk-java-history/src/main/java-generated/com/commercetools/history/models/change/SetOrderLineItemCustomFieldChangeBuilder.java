@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,6 +40,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String variant;
+
+    private String lineItemId;
 
     /**
      * set the value to the change
@@ -74,7 +77,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -85,7 +88,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -96,7 +99,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -108,7 +111,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -120,7 +123,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -132,13 +135,25 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
         this.variant = variant;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetOrderLineItemCustomFieldChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
         return this;
     }
 
@@ -170,7 +185,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
 
@@ -179,7 +194,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -188,7 +203,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
 
@@ -197,12 +212,22 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     /**
@@ -217,8 +242,9 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
         Objects.requireNonNull(name, SetOrderLineItemCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");
         Objects.requireNonNull(variant, SetOrderLineItemCustomFieldChange.class + ": variant is missing");
+        Objects.requireNonNull(lineItemId, SetOrderLineItemCustomFieldChange.class + ": lineItemId is missing");
         return new SetOrderLineItemCustomFieldChangeImpl(change, previousValue, nextValue, customTypeId, name, lineItem,
-            variant);
+            variant, lineItemId);
     }
 
     /**
@@ -227,7 +253,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
      */
     public SetOrderLineItemCustomFieldChange buildUnchecked() {
         return new SetOrderLineItemCustomFieldChangeImpl(change, previousValue, nextValue, customTypeId, name, lineItem,
-            variant);
+            variant, lineItemId);
     }
 
     /**
@@ -252,6 +278,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
         builder.name = template.getName();
         builder.lineItem = template.getLineItem();
         builder.variant = template.getVariant();
+        builder.lineItemId = template.getLineItemId();
         return builder;
     }
 

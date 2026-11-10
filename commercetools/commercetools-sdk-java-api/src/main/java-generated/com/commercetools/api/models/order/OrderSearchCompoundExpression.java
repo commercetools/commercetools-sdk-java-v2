@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchCompoundExpression
@@ -46,6 +47,8 @@ public interface OrderSearchCompoundExpression extends OrderSearchQuery {
         return instance;
     }
 
+    public OrderSearchCompoundExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchCompoundExpression
      * @param template instance to be copied
@@ -56,21 +59,9 @@ public interface OrderSearchCompoundExpression extends OrderSearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchAndExpression) {
-            return com.commercetools.api.models.order.OrderSearchAndExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchAndExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchFilterExpression) {
-            return com.commercetools.api.models.order.OrderSearchFilterExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFilterExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchNotExpression) {
-            return com.commercetools.api.models.order.OrderSearchNotExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNotExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchOrExpression) {
-            return com.commercetools.api.models.order.OrderSearchOrExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchOrExpression) template);
+
+        if (!(template instanceof OrderSearchCompoundExpressionImpl)) {
+            return template.copyDeep();
         }
         OrderSearchCompoundExpressionImpl instance = new OrderSearchCompoundExpressionImpl();
         return instance;
@@ -107,8 +98,8 @@ public interface OrderSearchCompoundExpression extends OrderSearchQuery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSearchCompoundExpression> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSearchCompoundExpression>() {
+    public static tools.jackson.core.type.TypeReference<OrderSearchCompoundExpression> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSearchCompoundExpression>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSearchCompoundExpression>";

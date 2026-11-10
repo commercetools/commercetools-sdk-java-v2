@@ -52,40 +52,34 @@ public class CtpSecurityConfig {
     SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         ServerSecurityContextRepository securityContextRepository = new WebSessionServerSecurityContextRepository();
         return http.securityContextRepository(securityContextRepository)
-                .anonymous()
-                .and()
+                .anonymous(anonymous -> anonymous.authorities("ROLE_ANON"))
                 .addFilterBefore(new LoginWebFilter(authenticationManagerResolver, securityContextRepository),
                     SecurityWebFiltersOrder.FORM_LOGIN)
-                .logout()
-                .logoutUrl("/logout")
-                .requiresLogout(ServerWebExchangeMatchers.pathMatchers(HttpMethod.GET, "/logout"))
-                .logoutHandler(new DelegatingServerLogoutHandler(new WebSessionServerLogoutHandler(),
-                    new SecurityContextServerLogoutHandler()))
-                .logoutSuccessHandler(new RedirectServerLogoutSuccessHandler())
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
-                .authenticationManager(Mono::just)
-                .and()
-                .authorizeExchange()
-                .pathMatchers("/login")
-                .permitAll()
-                .pathMatchers("/")
-                .permitAll()
-                .pathMatchers("/resources/**")
-                .permitAll()
-                .pathMatchers("/home")
-                .permitAll()
-                .pathMatchers("/p/**")
-                .permitAll()
-                .pathMatchers("/cart/**")
-                .permitAll()
-                .pathMatchers("/me/**")
-                .authenticated()
-                .anyExchange()
-                .authenticated()
-                .and()
+                .logout(logoutSpec -> logoutSpec.logoutUrl("/logout")
+                        .requiresLogout(ServerWebExchangeMatchers.pathMatchers(HttpMethod.GET, "/logout"))
+                        .logoutHandler(new DelegatingServerLogoutHandler(new WebSessionServerLogoutHandler(),
+                                new SecurityContextServerLogoutHandler()))
+                        .logoutSuccessHandler(new RedirectServerLogoutSuccessHandler())
+                )
+                .formLogin(formLoginSpec -> formLoginSpec.loginPage("/login")
+                        .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
+                        .authenticationManager(Mono::just))
+                .authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec.pathMatchers("/login")
+                        .permitAll()
+                        .pathMatchers("/")
+                        .permitAll()
+                        .pathMatchers("/resources/**")
+                        .permitAll()
+                        .pathMatchers("/home")
+                        .permitAll()
+                        .pathMatchers("/p/**")
+                        .permitAll()
+                        .pathMatchers("/cart/**")
+                        .permitAll()
+                        .pathMatchers("/me/**")
+                        .authenticated()
+                        .anyExchange()
+                        .authenticated())
                 .build();
     }
 
@@ -93,6 +87,8 @@ public class CtpSecurityConfig {
     public static class CtpReactiveAuthenticationManagerResolver
             implements ReactiveAuthenticationManagerResolver<ServerWebExchange> {
         private final ApiHttpClient apiHttpClient;
+
+        private final ServiceRegion serviceRegion;
 
         @Value(value = "${ctp.client.id}")
         private String clientId;
@@ -108,23 +104,24 @@ public class CtpSecurityConfig {
         }
 
         @Autowired
-        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient) {
+        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient, final ServiceRegion serviceRegion) {
             this.apiHttpClient = apiHttpClient;
+            this.serviceRegion = serviceRegion;
         }
 
         @Override
         public Mono<ReactiveAuthenticationManager> resolve(final ServerWebExchange context) {
             return Mono.just(new CtpReactiveAuthenticationManager(meClient(apiHttpClient, context.getSession()),
-                credentials(), projectKey));
+                credentials(), projectKey, serviceRegion));
         }
 
         private ProjectApiRoot meClient(final ApiHttpClient client, final Mono<WebSession> session) {
             TokenStorage storage = new SessionTokenStorage(session);
 
             ApiRootBuilder builder = ApiRootBuilder.of(client)
-                    .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    .withApiBaseUrl(serviceRegion.getApiUrl())
                     .withProjectKey(projectKey)
-                    .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                    .withAnonymousRefreshFlow(credentials(), serviceRegion, storage);
 
             return builder.build(projectKey);
         }

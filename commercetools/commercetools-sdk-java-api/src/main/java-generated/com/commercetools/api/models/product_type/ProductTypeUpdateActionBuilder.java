@@ -91,6 +91,10 @@ public class ProductTypeUpdateActionBuilder {
         return com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_type.ProductTypeSetSavedToLineItemActionBuilder setSavedToLineItemBuilder() {
+        return com.commercetools.api.models.product_type.ProductTypeSetSavedToLineItemActionBuilder.of();
+    }
+
     /**
      * factory method for an instance of ProductTypeUpdateActionBuilder
      * @return builder

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateChangeTypeAction
@@ -52,6 +53,7 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.state.StateTypeEnum getType() {
@@ -91,4 +93,8 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
                 .build();
     }
 
+    @Override
+    public StateChangeTypeAction copyDeep() {
+        return StateChangeTypeAction.deepCopy(this);
+    }
 }

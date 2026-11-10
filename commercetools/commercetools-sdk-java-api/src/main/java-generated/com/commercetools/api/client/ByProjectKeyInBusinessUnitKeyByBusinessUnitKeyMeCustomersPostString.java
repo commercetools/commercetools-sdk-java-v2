@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
+ *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> can use this endpoint to create a new Customer and associate it with the Business Unit. If the required <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> is missing, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateMissingPermissionError" rel="nofollow">AssociateMissingPermission</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -66,8 +66,8 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-business-unit/key=%s/me/customers", this.projectKey,
-            this.businessUnitKey);
+        String httpRequestPath = String.format("%s/in-business-unit/key=%s/me/customers",
+            encodePathParam(this.projectKey), encodePathParam(this.businessUnitKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -59,6 +59,9 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     @Nullable
     private Boolean scopedPriceDiscounted;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.common.Price> recurrencePrices;
+
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      * @param id value to be set
@@ -71,7 +74,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -82,8 +85,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant.</p>
-     *  <p>This is different from Product <code>key</code>.</p>
+     *  <p>User-defined identifier of the ProductVariant. Unique among ProductVariants in the same Product.</p>
+     *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -94,7 +97,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -105,7 +109,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -117,7 +122,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -131,7 +137,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -146,7 +153,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -159,7 +167,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -170,7 +179,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -181,7 +191,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -193,7 +203,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -205,7 +215,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -220,7 +230,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -235,7 +245,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -248,7 +258,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -259,7 +269,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -270,7 +280,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -282,7 +292,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -294,7 +304,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -479,7 +489,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @param builder function to build the availability value
      * @return Builder
      */
@@ -492,7 +502,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @param builder function to build the availability value
      * @return Builder
      */
@@ -504,7 +514,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @param availability value to be set
      * @return Builder
      */
@@ -516,7 +526,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     *  <p>Whether the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @param isMatchingVariant value to be set
      * @return Builder
      */
@@ -527,7 +537,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -539,7 +549,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -551,7 +561,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param scopedPrice value to be set
      * @return Builder
      */
@@ -563,7 +573,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @param scopedPriceDiscounted value to be set
      * @return Builder
      */
@@ -571,6 +581,95 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {
         this.scopedPriceDiscounted = scopedPriceDiscounted;
         return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder recurrencePrices(
+            @Nullable final com.commercetools.api.models.common.Price... recurrencePrices) {
+        this.recurrencePrices = new ArrayList<>(Arrays.asList(recurrencePrices));
+        return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder recurrencePrices(
+            @Nullable final java.util.List<com.commercetools.api.models.common.Price> recurrencePrices) {
+        this.recurrencePrices = recurrencePrices;
+        return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder plusRecurrencePrices(
+            @Nullable final com.commercetools.api.models.common.Price... recurrencePrices) {
+        if (this.recurrencePrices == null) {
+            this.recurrencePrices = new ArrayList<>();
+        }
+        this.recurrencePrices.addAll(Arrays.asList(recurrencePrices));
+        return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder plusRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+        if (this.recurrencePrices == null) {
+            this.recurrencePrices = new ArrayList<>();
+        }
+        this.recurrencePrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+        this.recurrencePrices = new ArrayList<>();
+        this.recurrencePrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return plusRecurrencePrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return recurrencePrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
     }
 
     /**
@@ -583,7 +682,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -593,8 +692,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant.</p>
-     *  <p>This is different from Product <code>key</code>.</p>
+     *  <p>User-defined identifier of the ProductVariant. Unique among ProductVariants in the same Product.</p>
+     *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @return key
      */
 
@@ -604,7 +703,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
 
@@ -614,7 +714,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
 
@@ -624,7 +724,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @return price
      */
 
@@ -654,7 +754,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @return availability
      */
 
@@ -664,7 +764,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     *  <p>Whether the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @return isMatchingVariant
      */
 
@@ -674,7 +774,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @return scopedPrice
      */
 
@@ -684,7 +784,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @return scopedPriceDiscounted
      */
 
@@ -694,13 +794,23 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     * @return recurrencePrices
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.common.Price> getRecurrencePrices() {
+        return this.recurrencePrices;
+    }
+
+    /**
      * builds ProductVariant with checking for non-null required values
      * @return ProductVariant
      */
     public ProductVariant build() {
         Objects.requireNonNull(id, ProductVariant.class + ": id is missing");
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
-            isMatchingVariant, scopedPrice, scopedPriceDiscounted);
+            isMatchingVariant, scopedPrice, scopedPriceDiscounted, recurrencePrices);
     }
 
     /**
@@ -709,7 +819,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      */
     public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
-            isMatchingVariant, scopedPrice, scopedPriceDiscounted);
+            isMatchingVariant, scopedPrice, scopedPriceDiscounted, recurrencePrices);
     }
 
     /**
@@ -739,6 +849,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         builder.isMatchingVariant = template.getIsMatchingVariant();
         builder.scopedPrice = template.getScopedPrice();
         builder.scopedPriceDiscounted = template.getScopedPriceDiscounted();
+        builder.recurrencePrices = template.getRecurrencePrices();
         return builder;
     }
 

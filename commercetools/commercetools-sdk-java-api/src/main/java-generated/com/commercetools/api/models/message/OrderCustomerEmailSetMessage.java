@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Customer Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomerEmailSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends OrderMessage {
@@ -41,7 +43,7 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return email
      */
 
@@ -49,7 +51,7 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     public String getEmail();
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return oldEmail
      */
 
@@ -57,14 +59,14 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     public String getOldEmail();
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param oldEmail value to be set
      */
 
@@ -99,6 +101,8 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
         instance.setOldEmail(template.getOldEmail());
         return instance;
     }
+
+    public OrderCustomerEmailSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomerEmailSetMessage
@@ -159,8 +163,8 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomerEmailSetMessage>";

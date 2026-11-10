@@ -3,55 +3,60 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductDataBuilder builder) {
         ProductData productData = builder.buildUnchecked();
         Assertions.assertThat(productData).isInstanceOf(ProductData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "name",
                         ProductData.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductData.builder()
-                        .categories(Collections
-                                .singletonList(new com.commercetools.api.models.category.CategoryReferenceImpl())) },
-                new Object[] { ProductData.builder()
+                new Object[] { "categories",
+                        ProductData.builder()
+                                .categories(Collections.singletonList(
+                                    new com.commercetools.api.models.category.CategoryReferenceImpl())) },
+                new Object[] { "categoryOrderHints", ProductData.builder()
                         .categoryOrderHints(new com.commercetools.api.models.product.CategoryOrderHintsImpl()) },
-                new Object[] { ProductData.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "description",
+                        ProductData.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
                         ProductData.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductData.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductData.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductData.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductData.builder()
-                        .masterVariant(new com.commercetools.api.models.product.ProductVariantImpl()) },
-                new Object[] {
+                new Object[] { "metaTitle",
+                        ProductData.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductData.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductData.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "masterVariant",
+                        ProductData.builder()
+                                .masterVariant(new com.commercetools.api.models.product.ProductVariantImpl()) },
+                new Object[] { "variants",
                         ProductData.builder()
                                 .variants(Collections.singletonList(
                                     new com.commercetools.api.models.product.ProductVariantImpl())) },
-                new Object[] { ProductData.builder()
-                        .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) } };
+                new Object[] { "searchKeywords",
+                        ProductData.builder()
+                                .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
+                new Object[] { "attributes",
+                        ProductData.builder()
+                                .attributes(Collections
+                                        .singletonList(new com.commercetools.api.models.product.AttributeImpl())) },
+                new Object[] { "defaultVariant", ProductData.builder()
+                        .defaultVariant(new com.commercetools.api.models.variant.VariantReferenceImpl()) } };
     }
 
     @Test
@@ -140,5 +145,21 @@ public class ProductDataTest {
         value.setSearchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl());
         Assertions.assertThat(value.getSearchKeywords())
                 .isEqualTo(new com.commercetools.api.models.product.SearchKeywordsImpl());
+    }
+
+    @Test
+    public void attributes() {
+        ProductData value = ProductData.of();
+        value.setAttributes(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+    }
+
+    @Test
+    public void defaultVariant() {
+        ProductData value = ProductData.of();
+        value.setDefaultVariant(new com.commercetools.api.models.variant.VariantReferenceImpl());
+        Assertions.assertThat(value.getDefaultVariant())
+                .isEqualTo(new com.commercetools.api.models.variant.VariantReferenceImpl());
     }
 }

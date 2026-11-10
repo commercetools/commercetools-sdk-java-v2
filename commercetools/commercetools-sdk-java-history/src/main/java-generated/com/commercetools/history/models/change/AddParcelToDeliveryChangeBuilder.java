@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,6 +31,9 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     private com.commercetools.history.models.common.Parcel nextValue;
 
     private String deliveryId;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -77,13 +82,24 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
     public AddParcelToDeliveryChangeBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public AddParcelToDeliveryChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -106,12 +122,22 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @return deliveryId
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     /**
@@ -122,7 +148,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
         Objects.requireNonNull(change, AddParcelToDeliveryChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddParcelToDeliveryChange.class + ": nextValue is missing");
         Objects.requireNonNull(deliveryId, AddParcelToDeliveryChange.class + ": deliveryId is missing");
-        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId);
+        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId, shippingKey);
     }
 
     /**
@@ -130,7 +156,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
      * @return AddParcelToDeliveryChange
      */
     public AddParcelToDeliveryChange buildUnchecked() {
-        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId);
+        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId, shippingKey);
     }
 
     /**
@@ -151,6 +177,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
         builder.change = template.getChange();
         builder.nextValue = template.getNextValue();
         builder.deliveryId = template.getDeliveryId();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

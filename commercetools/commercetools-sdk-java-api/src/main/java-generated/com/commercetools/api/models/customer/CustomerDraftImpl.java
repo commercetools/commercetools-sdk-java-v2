@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerDraft
@@ -67,6 +68,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     private String locale;
@@ -98,6 +101,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
@@ -124,6 +128,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.billingAddresses = billingAddresses;
         this.isEmailVerified = isEmailVerified;
         this.customerGroup = customerGroup;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
@@ -139,6 +144,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the <span>Import API</span>.</p>
      */
 
     public String getKey() {
@@ -163,7 +169,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that must be <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public String getEmail() {
@@ -211,7 +217,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     *  <p>Deprecated since an anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> can be identified by its <code>id</code> or external <code>key</code>.</p>
      */
     @Deprecated
     public String getAnonymousCartId() {
@@ -219,7 +225,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
@@ -227,7 +233,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getAnonymousId() {
@@ -243,7 +250,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> provide extended functionality.</p>
      */
 
     public String getCompanyName() {
@@ -299,7 +306,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      */
 
     public Boolean getIsEmailVerified() {
@@ -307,11 +314,21 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -323,7 +340,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -339,10 +356,10 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      */
 
@@ -463,6 +480,16 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.customerGroup = customerGroup;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -520,6 +547,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
@@ -547,6 +575,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
@@ -579,6 +608,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses)
                 .append(isEmailVerified)
                 .append(customerGroup)
+                .append(customerGroupAssignments)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
@@ -611,6 +641,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append("billingAddresses", billingAddresses)
                 .append("isEmailVerified", isEmailVerified)
                 .append("customerGroup", customerGroup)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("custom", custom)
                 .append("locale", locale)
                 .append("salutation", salutation)
@@ -619,4 +650,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerDraft copyDeep() {
+        return CustomerDraft.deepCopy(this);
+    }
 }

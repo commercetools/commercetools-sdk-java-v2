@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExternalTaxRateDraft
@@ -57,7 +58,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Name of the Tax Rate.</p>
      */
 
     public String getName() {
@@ -65,7 +66,11 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
      */
 
     public Double getAmount() {
@@ -73,7 +78,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Country for which the tax applies.</p>
      */
 
     public String getCountry() {
@@ -81,7 +86,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>State within the specified country.</p>
      */
 
     public String getState() {
@@ -89,7 +94,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {
@@ -97,7 +102,10 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
      */
 
     public Boolean getIncludedInPrice() {
@@ -179,4 +187,8 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public ExternalTaxRateDraft copyDeep() {
+        return ExternalTaxRateDraft.deepCopy(this);
+    }
 }

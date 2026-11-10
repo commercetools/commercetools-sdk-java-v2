@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape (for example is missing a required field).</p>
@@ -33,7 +35,7 @@ public class GraphQLInvalidJsonInputErrorImpl implements GraphQLInvalidJsonInput
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLInvalidJsonInputErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLInvalidJsonInputErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("detailedErrorMessage") final String detailedErrorMessage) {
         this.values = values;
         this.detailedErrorMessage = detailedErrorMessage;
@@ -114,4 +116,8 @@ public class GraphQLInvalidJsonInputErrorImpl implements GraphQLInvalidJsonInput
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidJsonInputError copyDeep() {
+        return GraphQLInvalidJsonInputError.deepCopy(this);
+    }
 }

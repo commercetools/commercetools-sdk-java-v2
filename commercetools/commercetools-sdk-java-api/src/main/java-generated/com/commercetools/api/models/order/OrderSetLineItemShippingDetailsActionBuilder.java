@@ -33,7 +33,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -102,7 +102,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -112,7 +112,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @return shippingDetails
      */
 

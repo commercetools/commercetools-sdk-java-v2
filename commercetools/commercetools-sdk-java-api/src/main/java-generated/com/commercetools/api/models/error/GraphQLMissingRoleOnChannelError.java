@@ -6,26 +6,27 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when one of the following states occur:</p>
  *  <ul>
- *   <li>Channel is added or set on a Store with missing Channel <code>roles</code>.</li>
- *   <li>Standalone Price references a Channel that does not contain the <code>ProductDistribution</code> role.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> is added or set on a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with missing Channel <code>roles</code>.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> references a Channel that does not contain the <code>ProductDistribution</code> role.</li>
  *  </ul>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Add Distribution Channel, Set Distribution Channel, Add Supply Channel, and Set Supply Channel update actions.</li>
- *   <li>Create StandalonePrice request.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddDistributionChannelAction" rel="nofollow">Add Distribution Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetDistributionChannelsAction" rel="nofollow">Set Distribution Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddSupplyChannelAction" rel="nofollow">Add Supply Channel</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetSupplyChannelsAction" rel="nofollow">Set Supply Channel</a> update actions.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/standalone-prices:POST" rel="nofollow">Create StandalonePrice</a> request.</li>
  *  </ul>
  *
  * <hr>
@@ -38,6 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MissingRoleOnChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLMissingRoleOnChannelErrorImpl.class)
 public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
@@ -56,7 +58,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     public String getCode();
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channel
      */
     @Valid
@@ -65,7 +67,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
 
     /**
      *  <ul>
-     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
      * @return missingRole
@@ -75,7 +77,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     public ChannelRoleEnum getMissingRole();
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channel value to be set
      */
 
@@ -83,7 +85,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
 
     /**
      *  <ul>
-     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
      * @param missingRole value to be set
@@ -111,6 +113,8 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
         instance.setMissingRole(template.getMissingRole());
         return instance;
     }
+
+    public GraphQLMissingRoleOnChannelError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLMissingRoleOnChannelError
@@ -161,8 +165,8 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLMissingRoleOnChannelError>";

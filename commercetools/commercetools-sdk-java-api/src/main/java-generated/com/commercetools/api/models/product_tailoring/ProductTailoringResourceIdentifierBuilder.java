@@ -29,7 +29,7 @@ public class ProductTailoringResourceIdentifierBuilder implements Builder<Produc
     private String key;
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductTailoringResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductTailoringResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
 
@@ -61,7 +61,7 @@ public class ProductTailoringResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
 

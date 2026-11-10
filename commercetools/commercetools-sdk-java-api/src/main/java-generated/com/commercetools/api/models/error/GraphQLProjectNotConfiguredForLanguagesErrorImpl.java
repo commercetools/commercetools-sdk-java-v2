@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the languages set for a Store are not supported by the Project.</p>
- *  <p>The error is returned as a failed response to the Set Languages update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLProjectNotConfiguredForLanguagesErrorImpl
@@ -34,7 +36,8 @@ public class GraphQLProjectNotConfiguredForLanguagesErrorImpl
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLProjectNotConfiguredForLanguagesErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLProjectNotConfiguredForLanguagesErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("languages") final java.util.List<String> languages) {
         this.values = values;
         this.languages = languages;
@@ -119,4 +122,8 @@ public class GraphQLProjectNotConfiguredForLanguagesErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLProjectNotConfiguredForLanguagesError copyDeep() {
+        return GraphQLProjectNotConfiguredForLanguagesError.deepCopy(this);
+    }
 }

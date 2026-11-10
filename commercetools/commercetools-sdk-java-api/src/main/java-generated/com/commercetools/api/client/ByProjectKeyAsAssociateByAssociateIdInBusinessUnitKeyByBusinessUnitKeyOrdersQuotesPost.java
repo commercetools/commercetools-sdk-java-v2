@@ -7,16 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creates an Order from a Quote in a BusinessUnit. Creating an Order fails with an InvalidOperation if the Quote does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Creates an Order from a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
+ *  <p>The Quote must reference the same Business Unit as the <code>businessUnitKey</code> path parameter, must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a>, and must be valid (not past the <code>validTo</code> date). If these criteria are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -74,7 +80,7 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/orders/quotes",
-            this.projectKey, this.associateId, this.businessUnitKey);
+            encodePathParam(this.projectKey), encodePathParam(this.associateId), encodePathParam(this.businessUnitKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

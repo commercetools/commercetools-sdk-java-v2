@@ -1,4 +1,3483 @@
 
+# 20.4.0 (2026-11-02)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1157
+* fix: harden path traversal prevention by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1166
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1167
+* fix(deps): update dependency tools.jackson.core:jackson-databind to v3.2.3 [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1165
+* fix(deps): update dependency com.fasterxml.jackson.core:jackson-databind to v2.22.3 [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1163
+* fix(deps): update dependency com.fasterxml.jackson.core:jackson-core to v2.22.3 [security] - abandoned by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1162
+* Bump tools.jackson.core:jackson-core from 3.2.2 to 3.2.3 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1158
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/20.2.0...20.4.0
+
+**Api changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `Expansion`
+- :warning: removed type `QueryPredicate`
+- :warning: removed type `Sort`
+- :warning: removed type `CircularDependencyError`
+- :warning: removed type `MissingDependencyError`
+- :warning: removed type `GraphQLCircularDependencyError`
+- :warning: removed type `GraphQLMissingDependencyError`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Type(s)</summary>
+
+- marked type `FacetRange` as deprecated
+- marked type `FacetResult` as deprecated
+- marked type `FacetResults` as deprecated
+- marked type `FacetTerm` as deprecated
+- marked type `FacetTypes` as deprecated
+- marked type `FilteredFacetResult` as deprecated
+- marked type `ProductProjectionPagedSearchResponse` as deprecated
+- marked type `RangeFacetResult` as deprecated
+- marked type `Suggestion` as deprecated
+- marked type `SuggestionResult` as deprecated
+- marked type `TermFacetResult` as deprecated
+- marked type `TermFacetResultType` as deprecated
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AgentBusinessUnitAmbiguousError`
+- added type `AgentBusinessUnitLimitExceededError`
+- added type `AgentBusinessUnitUnresolvedError`
+- added type `AgentExtractionFailedError`
+- added type `AgentFeatureDisabledError`
+- added type `AgentFileNotProcessedWarning`
+- added type `AgentMissingCountryError`
+- added type `AgentMissingCustomerEmailError`
+- added type `AgentMissingEntityTypeError`
+- added type `AgentNoLineItemsExtractedError`
+- added type `AgentOutOfScopeError`
+- added type `AgentProductSearchNotEnabledError`
+- added type `AgentProductsNotFoundError`
+- added type `AgentProductsNotFoundWarning`
+- added type `AgentQuoteRequestCreationFailedError`
+- added type `AgentResponsesAuthError`
+- added type `AgentResponsesCartSuccess`
+- added type `AgentResponsesErrorResponse`
+- added type `AgentResponsesMultipartRequest`
+- added type `AgentResponsesOutputType`
+- added type `AgentResponsesPayload`
+- added type `AgentResponsesQuoteRequestSuccess`
+- added type `AgentResponsesRequest`
+- added type `AgentResponsesSuccess`
+- added type `AgentStoreAmbiguousError`
+- added type `AgentStoreDistributionChannelsUnsupportedError`
+- added type `AgentStoreUnresolvedError`
+- added type `GraphQLAgentBusinessUnitAmbiguousError`
+- added type `GraphQLAgentBusinessUnitLimitExceededError`
+- added type `GraphQLAgentBusinessUnitUnresolvedError`
+- added type `GraphQLAgentExtractionFailedError`
+- added type `GraphQLAgentFeatureDisabledError`
+- added type `GraphQLAgentMissingCountryError`
+- added type `GraphQLAgentMissingCustomerEmailError`
+- added type `GraphQLAgentMissingEntityTypeError`
+- added type `GraphQLAgentNoLineItemsExtractedError`
+- added type `GraphQLAgentOutOfScopeError`
+- added type `GraphQLAgentProductSearchNotEnabledError`
+- added type `GraphQLAgentProductsNotFoundError`
+- added type `GraphQLAgentQuoteRequestCreationFailedError`
+- added type `GraphQLAgentStoreAmbiguousError`
+- added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
+- added type `GraphQLAgentStoreUnresolvedError`
+- added type `EstimatedDelivery`
+- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `CartSetEstimatedDeliveryAction`
+- added type `ExtensionCircularDependencyError`
+- added type `UnauthorizedError`
+- added type `GraphQLExtensionCircularDependencyError`
+- added type `GraphQLUnauthorizedError`
+- added type `CommerceMcpServerConfig`
+- added type `CommerceMcpServerConfigDraft`
+- added type `McpServer`
+- added type `McpServerAuthenticationMode`
+- added type `McpServerConfig`
+- added type `McpServerConfigDraft`
+- added type `McpServerDraft`
+- added type `McpServerJsonOutputFiltering`
+- added type `McpServerJsonOutputFilteringMatcher`
+- added type `McpServerPagedQueryResponse`
+- added type `McpServerState`
+- added type `McpServerTool`
+- added type `McpServerToolOutputFormatting`
+- added type `McpServerType`
+- added type `McpServerTypeTool`
+- added type `McpServerUpdate`
+- added type `McpServerUpdateAction`
+- added type `ParameterOverride`
+- added type `RemoveToolCustomizationTarget`
+- added type `ToolCustomization`
+- added type `McpServerAddToolAction`
+- added type `McpServerAddToolCustomizationAction`
+- added type `McpServerRemoveToolAction`
+- added type `McpServerRemoveToolCustomizationAction`
+- added type `McpServerSetAuthenticationModeAction`
+- added type `McpServerSetDescriptionAction`
+- added type `McpServerSetJsonOutputFilteringAction`
+- added type `McpServerSetNameAction`
+- added type `McpServerSetStateAction`
+- added type `McpServerSetToolCustomizationsAction`
+- added type `McpServerSetToolOutputFormattingAction`
+- added type `McpServerSetToolsAction`
+- added type `CartEstimatedDeliverySetMessage`
+- added type `OrderEstimatedDeliverySetMessage`
+- added type `ProductTailoringKeySetMessage`
+- added type `StoreCheckoutUrlTemplateSetMessage`
+- added type `StoreContactUrlSetMessage`
+- added type `StoreCookiePolicyUrlSetMessage`
+- added type `StoreFaqUrlSetMessage`
+- added type `StoreImprintUrlSetMessage`
+- added type `StoreOrderUrlTemplateSetMessage`
+- added type `StorePrivacyPolicyUrlSetMessage`
+- added type `StoreRefundPolicyUrlSetMessage`
+- added type `StoreShippingPolicyUrlSetMessage`
+- added type `StoreTermsOfServiceUrlSetMessage`
+- added type `CartEstimatedDeliverySetMessagePayload`
+- added type `OrderEstimatedDeliverySetMessagePayload`
+- added type `ProductTailoringKeySetMessagePayload`
+- added type `StoreCheckoutUrlTemplateSetMessagePayload`
+- added type `StoreContactUrlSetMessagePayload`
+- added type `StoreCookiePolicyUrlSetMessagePayload`
+- added type `StoreFaqUrlSetMessagePayload`
+- added type `StoreImprintUrlSetMessagePayload`
+- added type `StoreOrderUrlTemplateSetMessagePayload`
+- added type `StorePrivacyPolicyUrlSetMessagePayload`
+- added type `StoreRefundPolicyUrlSetMessagePayload`
+- added type `StoreShippingPolicyUrlSetMessagePayload`
+- added type `StoreTermsOfServiceUrlSetMessagePayload`
+- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `OrderSetEstimatedDeliveryAction`
+- added type `ProductTailoringSetKeyAction`
+- added type `ShippingMethodSetCarrierAction`
+- added type `Storefront`
+- added type `StoreSetCheckoutUrlTemplateAction`
+- added type `StoreSetContactUrlAction`
+- added type `StoreSetCookiePolicyUrlAction`
+- added type `StoreSetFaqUrlAction`
+- added type `StoreSetImprintUrlAction`
+- added type `StoreSetOrderUrlTemplateAction`
+- added type `StoreSetPrivacyPolicyUrlAction`
+- added type `StoreSetRefundPolicyUrlAction`
+- added type `StoreSetShippingPolicyUrlAction`
+- added type `StoreSetTermsOfServiceUrlAction`
+- added type `TaxRoundingTarget`
+- added type `TypeRemoveEnumValuesAction`
+- added type `TypeRemoveLocalizedEnumValuesAction`
+- added type `VariantMoveImageToPositionAction`
+- added type `VariantSetImageLabelAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
+- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
+- added property `participateInBestDealSelection` to type `DirectDiscount`
+- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
+- added property `taxRoundingTarget` to type `ExternalTaxRateDraft`
+- added property `estimatedDelivery` to type `ShippingInfo`
+- added property `estimatedDelivery` to type `CartAddShippingMethodAction`
+- added property `estimatedDelivery` to type `CartSetCustomShippingMethodAction`
+- added property `estimatedDelivery` to type `CartSetShippingMethodAction`
+- added property `stores` to type `DiscountCode`
+- added property `product` to type `VariantCreatedMessage`
+- added property `product` to type `VariantDeletedMessage`
+- added property `product` to type `VariantImageAddedMessage`
+- added property `product` to type `VariantImagesSetMessage`
+- added property `product` to type `VariantKeySetMessage`
+- added property `product` to type `VariantPublishedMessage`
+- added property `product` to type `VariantSkuSetMessage`
+- added property `product` to type `VariantStagedChangesRemovedMessage`
+- added property `product` to type `VariantCreatedMessagePayload`
+- added property `product` to type `VariantDeletedMessagePayload`
+- added property `product` to type `VariantImageAddedMessagePayload`
+- added property `product` to type `VariantImagesSetMessagePayload`
+- added property `product` to type `VariantKeySetMessagePayload`
+- added property `product` to type `VariantPublishedMessagePayload`
+- added property `product` to type `VariantSkuSetMessagePayload`
+- added property `product` to type `VariantStagedChangesRemovedMessagePayload`
+- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
+- added property `taxedPrice` to type `CustomLineItemImportDraft`
+- added property `taxedPrice` to type `LineItemImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
+- added property `taxedPrice` to type `ShippingInfoImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
+- added property `carrier` to type `ShippingMethod`
+- added property `carrier` to type `ShippingMethodDraft`
+- added property `storefront` to type `Store`
+- added property `storefront` to type `StoreDraft`
+- added property `taxRoundingTarget` to type `TaxRate`
+- added property `taxRoundingTarget` to type `TaxRateDraft`
+- added property `restockableInDays` to type `VariantAttributesAvailability`
+- added property `restockableInDays` to type `VariantAttributesChannelAvailability`
+- added property `warnings` to type `Variant`
+- added property `categories` to type `VariantProjection`
+- added property `categoryOrderHints` to type `VariantProjection`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `FacetResult::type` as deprecated
+- marked property `FacetResults::/^[a-z].*$/` as deprecated
+- marked property `FilteredFacetResult::type` as deprecated
+- marked property `ProductProjectionPagedSearchResponse::facets` as deprecated
+- marked property `RangeFacetResult::type` as deprecated
+- marked property `TermFacetResult::type` as deprecated
+- marked property `TermFacetResult::dataType` as deprecated
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `expand` of type `ProductSearchProjectionParams` from type `Expansion[]` to `string[]`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `productId` from type `VariantCreatedMessage`
+- :warning: removed property `productId` from type `VariantCreatedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/agents`
+- added resource `/{projectKey}/mcp-servers`
+- added resource `/{projectKey}/agents/intake`
+- added resource `/{projectKey}/agents/intake/v1`
+- added resource `/{projectKey}/agents/intake/v1/responses`
+- added resource `/{projectKey}/variants/{ID}/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/{ID}`
+- added resource `/{projectKey}/mcp-servers/types`
+- added resource `/{projectKey}/mcp-servers/key={key}`
+- added resource `/{projectKey}/mcp-servers/{ID}`
+- added resource `/{projectKey}/mcp-servers/types/{mcpServerType}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `IntakeAgent` to type `AttributionSource`
+- added enum `PromotionsAgent` to type `AttributionSource`
+- added enum `ManagedCommerceMCP` to type `AttributionSource`
+- added enum `mcp-server` to type `ReferenceTypeId`
+- added enum `product` to type `ExtensionResourceTypeId`
+- added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
+- added enum `variant` to type `ChangeSubscriptionResourceTypeId`
+- added enum `variant` to type `MessageSubscriptionResourceTypeId`
+- added enum `variant` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Method(s)</summary>
+
+- marked method `post /{projectKey}/product-projections/search` as deprecated
+- marked method `get /{projectKey}/product-projections/search` as deprecated
+- marked method `get /{projectKey}/product-projections/suggest` as deprecated
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().mcpServers().get()`
+- added method `apiRoot.withProjectKey().mcpServers().post()`
+- added method `apiRoot.withProjectKey().agents().intake().v1().responses().post()`
+- added method `apiRoot.withProjectKey().variants().withId().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().head()`
+- added method `apiRoot.withProjectKey().mcpServers().types().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().types().withMcpServerType().get()`
+</details>
+
+**History changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `total` of type `RecordPagedQueryResponse` to be optional
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `userIds` to method `get /{projectKey}`
+- added query parameter `resourceIds` to method `get /{projectKey}`
+- added query parameter `withTotal` to method `get /{projectKey}`
+- added query parameter `userIds` to method `get /{projectKey}/{resourceType}`
+- added query parameter `resourceIds` to method `get /{projectKey}/{resourceType}`
+- added query parameter `withTotal` to method `get /{projectKey}/{resourceType}`
+- added query parameter `userIds` to method `get /{projectKey}/{resourceType}/{ID}`
+- added query parameter `withTotal` to method `get /{projectKey}/{resourceType}/{ID}`
+</details>
+
+
+# 20.3.0 (2026-10-12)
+
+## CHANGES
+
+The query builder methods for updating resources by`String` do urlencode path parameters too. This was an overlooked change from an earlier release.
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1157
+* fix: harden path traversal prevention by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1166
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1167
+* fix(deps): update dependency tools.jackson.core:jackson-databind to v3.2.3 [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1165
+* fix(deps): update dependency com.fasterxml.jackson.core:jackson-databind to v2.22.3 [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1163
+* fix(deps): update dependency com.fasterxml.jackson.core:jackson-core to v2.22.3 [security] - abandoned by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1162
+* Bump tools.jackson.core:jackson-core from 3.2.2 to 3.2.3 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1158
+
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/20.2.0...20.3.0
+
+# 20.2.0 (2026-10-05)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1130
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1118
+* fix(deps): update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1120
+* fix shadow version by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1133
+* revert shadow plugin version by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1134
+* chore(deps): update actions/setup-java digest to b6effb0 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1119
+* chore(deps): update github/codeql-action action to v4 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1121
+* chore(deps): update gradle/actions action to v6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1122
+* chore(deps): update gradle to v9 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/959
+* chore(deps): update stefanzweifel/git-auto-commit-action action to v7 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1123
+* fix(deps): update dependency lint-staged to v17 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1127
+* fix(deps): update dependency io.netty:netty-codec-http to v4.2.16.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1132
+* fix(deps): update dependency com.newrelic.agent.java:newrelic-api to v9 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1125
+* fix package split config by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1135
+* add CountryCode scalar to graphql module by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1136
+* Fix GraphQL package config by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1137
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1138
+* fix(deps): update dependency io.netty:netty-codec-http to v4.2.17.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1145
+* chore(deps): update actions/checkout digest to 3d3c42e by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1140
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1139
+* fix(deps): update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1141
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1146
+* Devx 874 by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1151
+* DEVX-874: exit early to avoid additional method calls by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1154
+* 1152 performance regression in 20x custom field attribute values re resolve the polymorphic type deserializer on every value jackson 3 by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1155
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1150
+
+**Api changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `Expansion`
+- :warning: removed type `QueryPredicate`
+- :warning: removed type `Sort`
+- :warning: removed type `CircularDependencyError`
+- :warning: removed type `MissingDependencyError`
+- :warning: removed type `GraphQLCircularDependencyError`
+- :warning: removed type `GraphQLMissingDependencyError`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Type(s)</summary>
+
+- marked type `FacetRange` as deprecated
+- marked type `FacetResult` as deprecated
+- marked type `FacetResults` as deprecated
+- marked type `FacetTerm` as deprecated
+- marked type `FacetTypes` as deprecated
+- marked type `FilteredFacetResult` as deprecated
+- marked type `ProductProjectionPagedSearchResponse` as deprecated
+- marked type `RangeFacetResult` as deprecated
+- marked type `Suggestion` as deprecated
+- marked type `SuggestionResult` as deprecated
+- marked type `TermFacetResult` as deprecated
+- marked type `TermFacetResultType` as deprecated
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AgentBusinessUnitAmbiguousError`
+- added type `AgentBusinessUnitLimitExceededError`
+- added type `AgentBusinessUnitUnresolvedError`
+- added type `AgentExtractionFailedError`
+- added type `AgentFeatureDisabledError`
+- added type `AgentFileNotProcessedWarning`
+- added type `AgentMissingCountryError`
+- added type `AgentMissingCustomerEmailError`
+- added type `AgentMissingEntityTypeError`
+- added type `AgentNoLineItemsExtractedError`
+- added type `AgentOutOfScopeError`
+- added type `AgentProductSearchNotEnabledError`
+- added type `AgentProductsNotFoundError`
+- added type `AgentProductsNotFoundWarning`
+- added type `AgentQuoteRequestCreationFailedError`
+- added type `AgentResponsesAuthError`
+- added type `AgentResponsesCartSuccess`
+- added type `AgentResponsesErrorResponse`
+- added type `AgentResponsesMultipartRequest`
+- added type `AgentResponsesOutputType`
+- added type `AgentResponsesPayload`
+- added type `AgentResponsesQuoteRequestSuccess`
+- added type `AgentResponsesRequest`
+- added type `AgentResponsesSuccess`
+- added type `AgentStoreAmbiguousError`
+- added type `AgentStoreDistributionChannelsUnsupportedError`
+- added type `AgentStoreUnresolvedError`
+- added type `GraphQLAgentBusinessUnitAmbiguousError`
+- added type `GraphQLAgentBusinessUnitLimitExceededError`
+- added type `GraphQLAgentBusinessUnitUnresolvedError`
+- added type `GraphQLAgentExtractionFailedError`
+- added type `GraphQLAgentFeatureDisabledError`
+- added type `GraphQLAgentMissingCountryError`
+- added type `GraphQLAgentMissingCustomerEmailError`
+- added type `GraphQLAgentMissingEntityTypeError`
+- added type `GraphQLAgentNoLineItemsExtractedError`
+- added type `GraphQLAgentOutOfScopeError`
+- added type `GraphQLAgentProductSearchNotEnabledError`
+- added type `GraphQLAgentProductsNotFoundError`
+- added type `GraphQLAgentQuoteRequestCreationFailedError`
+- added type `GraphQLAgentStoreAmbiguousError`
+- added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
+- added type `GraphQLAgentStoreUnresolvedError`
+- added type `EstimatedDelivery`
+- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `CartSetEstimatedDeliveryAction`
+- added type `ExtensionCircularDependencyError`
+- added type `UnauthorizedError`
+- added type `GraphQLExtensionCircularDependencyError`
+- added type `GraphQLUnauthorizedError`
+- added type `CommerceMcpServerConfig`
+- added type `CommerceMcpServerConfigDraft`
+- added type `McpServer`
+- added type `McpServerAuthenticationMode`
+- added type `McpServerConfig`
+- added type `McpServerConfigDraft`
+- added type `McpServerDraft`
+- added type `McpServerJsonOutputFiltering`
+- added type `McpServerJsonOutputFilteringMatcher`
+- added type `McpServerPagedQueryResponse`
+- added type `McpServerState`
+- added type `McpServerTool`
+- added type `McpServerToolOutputFormatting`
+- added type `McpServerType`
+- added type `McpServerTypeTool`
+- added type `McpServerUpdate`
+- added type `McpServerUpdateAction`
+- added type `ParameterOverride`
+- added type `RemoveToolCustomizationTarget`
+- added type `ToolCustomization`
+- added type `McpServerAddToolAction`
+- added type `McpServerAddToolCustomizationAction`
+- added type `McpServerRemoveToolAction`
+- added type `McpServerRemoveToolCustomizationAction`
+- added type `McpServerSetAuthenticationModeAction`
+- added type `McpServerSetDescriptionAction`
+- added type `McpServerSetJsonOutputFilteringAction`
+- added type `McpServerSetNameAction`
+- added type `McpServerSetStateAction`
+- added type `McpServerSetToolCustomizationsAction`
+- added type `McpServerSetToolOutputFormattingAction`
+- added type `McpServerSetToolsAction`
+- added type `CartEstimatedDeliverySetMessage`
+- added type `OrderEstimatedDeliverySetMessage`
+- added type `ProductTailoringKeySetMessage`
+- added type `StoreCheckoutUrlTemplateSetMessage`
+- added type `StoreContactUrlSetMessage`
+- added type `StoreCookiePolicyUrlSetMessage`
+- added type `StoreFaqUrlSetMessage`
+- added type `StoreImprintUrlSetMessage`
+- added type `StoreOrderUrlTemplateSetMessage`
+- added type `StorePrivacyPolicyUrlSetMessage`
+- added type `StoreRefundPolicyUrlSetMessage`
+- added type `StoreShippingPolicyUrlSetMessage`
+- added type `StoreTermsOfServiceUrlSetMessage`
+- added type `CartEstimatedDeliverySetMessagePayload`
+- added type `OrderEstimatedDeliverySetMessagePayload`
+- added type `ProductTailoringKeySetMessagePayload`
+- added type `StoreCheckoutUrlTemplateSetMessagePayload`
+- added type `StoreContactUrlSetMessagePayload`
+- added type `StoreCookiePolicyUrlSetMessagePayload`
+- added type `StoreFaqUrlSetMessagePayload`
+- added type `StoreImprintUrlSetMessagePayload`
+- added type `StoreOrderUrlTemplateSetMessagePayload`
+- added type `StorePrivacyPolicyUrlSetMessagePayload`
+- added type `StoreRefundPolicyUrlSetMessagePayload`
+- added type `StoreShippingPolicyUrlSetMessagePayload`
+- added type `StoreTermsOfServiceUrlSetMessagePayload`
+- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `OrderSetEstimatedDeliveryAction`
+- added type `ProductTailoringSetKeyAction`
+- added type `ShippingMethodSetCarrierAction`
+- added type `Storefront`
+- added type `StoreSetCheckoutUrlTemplateAction`
+- added type `StoreSetContactUrlAction`
+- added type `StoreSetCookiePolicyUrlAction`
+- added type `StoreSetFaqUrlAction`
+- added type `StoreSetImprintUrlAction`
+- added type `StoreSetOrderUrlTemplateAction`
+- added type `StoreSetPrivacyPolicyUrlAction`
+- added type `StoreSetRefundPolicyUrlAction`
+- added type `StoreSetShippingPolicyUrlAction`
+- added type `StoreSetTermsOfServiceUrlAction`
+- added type `TaxRoundingTarget`
+- added type `TypeRemoveEnumValuesAction`
+- added type `TypeRemoveLocalizedEnumValuesAction`
+- added type `VariantMoveImageToPositionAction`
+- added type `VariantSetImageLabelAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
+- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
+- added property `participateInBestDealSelection` to type `DirectDiscount`
+- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
+- added property `taxRoundingTarget` to type `ExternalTaxRateDraft`
+- added property `estimatedDelivery` to type `ShippingInfo`
+- added property `estimatedDelivery` to type `CartAddShippingMethodAction`
+- added property `estimatedDelivery` to type `CartSetCustomShippingMethodAction`
+- added property `estimatedDelivery` to type `CartSetShippingMethodAction`
+- added property `stores` to type `DiscountCode`
+- added property `product` to type `VariantCreatedMessage`
+- added property `product` to type `VariantDeletedMessage`
+- added property `product` to type `VariantImageAddedMessage`
+- added property `product` to type `VariantImagesSetMessage`
+- added property `product` to type `VariantKeySetMessage`
+- added property `product` to type `VariantPublishedMessage`
+- added property `product` to type `VariantSkuSetMessage`
+- added property `product` to type `VariantStagedChangesRemovedMessage`
+- added property `product` to type `VariantCreatedMessagePayload`
+- added property `product` to type `VariantDeletedMessagePayload`
+- added property `product` to type `VariantImageAddedMessagePayload`
+- added property `product` to type `VariantImagesSetMessagePayload`
+- added property `product` to type `VariantKeySetMessagePayload`
+- added property `product` to type `VariantPublishedMessagePayload`
+- added property `product` to type `VariantSkuSetMessagePayload`
+- added property `product` to type `VariantStagedChangesRemovedMessagePayload`
+- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
+- added property `taxedPrice` to type `CustomLineItemImportDraft`
+- added property `taxedPrice` to type `LineItemImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
+- added property `taxedPrice` to type `ShippingInfoImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
+- added property `carrier` to type `ShippingMethod`
+- added property `carrier` to type `ShippingMethodDraft`
+- added property `storefront` to type `Store`
+- added property `storefront` to type `StoreDraft`
+- added property `taxRoundingTarget` to type `TaxRate`
+- added property `taxRoundingTarget` to type `TaxRateDraft`
+- added property `restockableInDays` to type `VariantAttributesAvailability`
+- added property `restockableInDays` to type `VariantAttributesChannelAvailability`
+- added property `warnings` to type `Variant`
+- added property `categories` to type `VariantProjection`
+- added property `categoryOrderHints` to type `VariantProjection`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `FacetResult::type` as deprecated
+- marked property `FacetResults::/^[a-z].*$/` as deprecated
+- marked property `FilteredFacetResult::type` as deprecated
+- marked property `ProductProjectionPagedSearchResponse::facets` as deprecated
+- marked property `RangeFacetResult::type` as deprecated
+- marked property `TermFacetResult::type` as deprecated
+- marked property `TermFacetResult::dataType` as deprecated
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `expand` of type `ProductSearchProjectionParams` from type `Expansion[]` to `string[]`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `productId` from type `VariantCreatedMessage`
+- :warning: removed property `productId` from type `VariantCreatedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/agents`
+- added resource `/{projectKey}/mcp-servers`
+- added resource `/{projectKey}/agents/intake`
+- added resource `/{projectKey}/agents/intake/v1`
+- added resource `/{projectKey}/agents/intake/v1/responses`
+- added resource `/{projectKey}/variants/{ID}/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/{ID}`
+- added resource `/{projectKey}/mcp-servers/types`
+- added resource `/{projectKey}/mcp-servers/key={key}`
+- added resource `/{projectKey}/mcp-servers/{ID}`
+- added resource `/{projectKey}/mcp-servers/types/{mcpServerType}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `IntakeAgent` to type `AttributionSource`
+- added enum `PromotionsAgent` to type `AttributionSource`
+- added enum `ManagedCommerceMCP` to type `AttributionSource`
+- added enum `mcp-server` to type `ReferenceTypeId`
+- added enum `product` to type `ExtensionResourceTypeId`
+- added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
+- added enum `variant` to type `ChangeSubscriptionResourceTypeId`
+- added enum `variant` to type `MessageSubscriptionResourceTypeId`
+- added enum `variant` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Method(s)</summary>
+
+- marked method `post /{projectKey}/product-projections/search` as deprecated
+- marked method `get /{projectKey}/product-projections/search` as deprecated
+- marked method `get /{projectKey}/product-projections/suggest` as deprecated
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().mcpServers().get()`
+- added method `apiRoot.withProjectKey().mcpServers().post()`
+- added method `apiRoot.withProjectKey().agents().intake().v1().responses().post()`
+- added method `apiRoot.withProjectKey().variants().withId().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().head()`
+- added method `apiRoot.withProjectKey().mcpServers().types().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().types().withMcpServerType().get()`
+</details>
+
+**History changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `total` of type `RecordPagedQueryResponse` to be optional
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `userIds` to method `get /{projectKey}`
+- added query parameter `resourceIds` to method `get /{projectKey}`
+- added query parameter `withTotal` to method `get /{projectKey}`
+- added query parameter `userIds` to method `get /{projectKey}/{resourceType}`
+- added query parameter `resourceIds` to method `get /{projectKey}/{resourceType}`
+- added query parameter `withTotal` to method `get /{projectKey}/{resourceType}`
+- added query parameter `userIds` to method `get /{projectKey}/{resourceType}/{ID}`
+- added query parameter `withTotal` to method `get /{projectKey}/{resourceType}/{ID}`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/20.1.0...20.2.0
+
+# 20.1.0 (2026-08-03)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1117
+* Update docs links by @industrian in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1128
+* Remove Composable Commerce branding by @industrian in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1129
+
+## New Contributors
+* @industrian made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1128
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/20.0.0...20.1.0
+
+# 20.0.0 (2026-07-07)
+
+## Important notes
+
+The SDK has been updated to provider improved support for Spring Boot 4
+
+- SDK now requires Java 17
+- Updated Jackson JSON library to version 3
+  Please see the details for this in the [jackson migration guide](https://github.com/FasterXML/jackson/blob/main/jackson3/MIGRATING_TO_JACKSON_3.md) and the [Spring Boot documentation](https://spring.io/blog/2025/10/07/introducing-jackson-3-support-in-spring)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1073
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1072
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1074
+* Bump net.sourceforge.plantuml:plantuml from 1.2025.4 to 1.2026.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1016
+* Bump io.opentelemetry:opentelemetry-api from 1.51.0 to 1.62.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1063
+* Update dependency io.netty:netty-handler-proxy to v4.2.13.Final [SECURITY] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1076
+* Update dependency io.netty:netty-codec-http to v4.2.13.Final [SECURITY] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1075
+* Bump org.asynchttpclient:async-http-client from 2.12.4 to 2.15.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1070
+* Update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1077
+* add mapping for JsonPrimitive values by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1081
+* Devx 796 spring boot supportability version 4 by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1068
+* DEVX-796: Adding parameter for codegen by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1087
+* fix mixin.raml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1088
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1089
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1090
+* Devx 813 product search stats facet by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1092
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1093
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1096
+* Devx 640 helper method from coco product to import api product by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1099
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1101
+* fix(deps): update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1095
+* fix docs links by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1106
+* fix(deps): update dependency io.netty:netty-handler to v4.2.15.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1105
+* fix(deps): update dependency io.netty:netty-codec-http to v4.2.15.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1104
+* Drop okhttp3 by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1107
+* fix docs links by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1108
+* revert kotlin to 2.3.21 for codeql support by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1109
+* chore(deps): update codecov/codecov-action action to v7 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1103
+* chore(deps): update actions/setup-java action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1102
+* chore(deps): update actions/create-github-app-token action to v3 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1098
+* chore(deps): update actions/checkout action to v7 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1097
+* chore(deps): update actions/setup-java digest to 1bcf9fb by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1094
+* fix internal docs build and license file generation by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1110
+* bump shadow plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1111
+* bump jackson transitive dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1113
+* bump jackson transitive dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1114
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1112
+* Bump com.fasterxml.jackson.core:jackson-databind from 2.21.4 to 2.21.5 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1115
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1116
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.11.0...20.0.0
+
+# 19.11.0 (2026-05-28)
+
+## What's Changed
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1066
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1067
+* add customizable interface to business unit by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1071
+* Optimize HTTP client performance: eliminate redundant header... by @peniakoff in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1069
+
+**Api changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `ReserveOnCart` to type `InventoryMode`
+- added enum `reservation` to type `ReferenceTypeId`
+- added enum `reservation` to type `ResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ReservationReference`
+- added type `CartSetReservationExpirationInMinutesAction`
+- added type `NonStandardCurrency`
+- added type `CircularDependencyError`
+- added type `ExtensionChainTooDeepError`
+- added type `ExtensionChainTooWideError`
+- added type `ExtensionDependencyExistsError`
+- added type `LineItemQuantityAboveLimitError`
+- added type `LineItemQuantityBelowLimitError`
+- added type `MissingDependencyError`
+- added type `GraphQLCircularDependencyError`
+- added type `GraphQLExtensionChainTooDeepError`
+- added type `GraphQLExtensionChainTooWideError`
+- added type `GraphQLExtensionDependencyExistsError`
+- added type `GraphQLLineItemQuantityAboveLimitError`
+- added type `GraphQLLineItemQuantityBelowLimitError`
+- added type `GraphQLMissingDependencyError`
+- added type `ExtensionAdditionalContext`
+- added type `ExtensionAdditionalContextDraft`
+- added type `ExtensionReference`
+- added type `ExtensionResourceIdentifier`
+- added type `ExtensionSetAdditionalContextAction`
+- added type `ExtensionSetDependenciesAction`
+- added type `ExtensionSetExpansionPathsAction`
+- added type `InventoryEntryStockLevels`
+- added type `InventoryEntrySetReorderPointAction`
+- added type `InventoryEntrySetReservationExpirationInMinutesAction`
+- added type `InventoryEntrySetSafetyStockAction`
+- added type `InventoryEntryOutOfStockMessage`
+- added type `InventoryEntryReorderPointMessage`
+- added type `InventoryEntryReservationExpirationInMinutesSetMessage`
+- added type `InventoryEntrySafetyStockMessage`
+- added type `InventoryEntryOutOfStockMessagePayload`
+- added type `InventoryEntryReorderPointMessagePayload`
+- added type `InventoryEntryReservationExpirationInMinutesSetMessagePayload`
+- added type `InventoryEntrySafetyStockMessagePayload`
+- added type `InventoryConfiguration`
+- added type `ProjectSetReleaseExpiredReservationsAction`
+- added type `ProjectSetReservationExpirationInMinutesAction`
+- added type `Reservation`
+- added type `ReservationState`
+- added type `CannotChangeReservationExpiryWarning`
+- added type `CannotCreateReservationWarning`
+- added type `CannotUpdateReservationWarning`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `warnings` to type `Cart`
+- added property `reservation` to type `LineItem`
+- added property `dependencies` to type `Extension`
+- added property `expansionPaths` to type `Extension`
+- added property `additionalContext` to type `Extension`
+- added property `dependencies` to type `ExtensionDraft`
+- added property `expansionPaths` to type `ExtensionDraft`
+- added property `additionalContext` to type `ExtensionDraft`
+- added property `oldResource` to type `ExtensionInput`
+- added property `reservationExpirationInMinutes` to type `InventoryEntry`
+- added property `stockLevels` to type `InventoryEntry`
+- added property `reservationExpirationInMinutes` to type `InventoryEntryDraft`
+- added property `stockLevels` to type `InventoryEntryDraft`
+- added property `inventory` to type `Project`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/product-tailorings`
+- added resource `/{projectKey}/product-tailorings/import-containers`
+- added resource `/{projectKey}/product-tailorings/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `product-tailoring` to type `ImportResourceType`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ProductTailoringImportRequest`
+- added type `ProductVariantTailoringImport`
+- added type `ProductTailoringImport`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().productTailorings().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `reservationExpirationInMinutes` to type `InventoryImport`
+- added property `active` to type `StandalonePriceImport`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `setReservationExpirationInMinutes` to type `UpdateType`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `SetTransactionInterfaceIdChange`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `catalogData` to type `ChangeLocalizedNameChange`
+- added property `catalogData` to type `SetLocalizedDescriptionChange`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `eu-central-1.aws` to type `Region`
+- added enum `us-east-2.aws` to type `Region`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `SetConnectorDeploymentUpdateAction`
+</details>
+
+## New Contributors
+* @peniakoff made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1069
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.10.0...19.11.0
+
+# 19.10.0 (2026-05-18)
+
+## What's Changed
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1059
+* DEVX-786 don't retry delete requests on concurrent modification by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1062
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1060
+* Update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/934
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `partiallyImported` to type `ProcessingState`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `partiallyImported` to type `OperationStates`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.9.1...19.10.0
+
+# 19.9.1 (2026-04-14)
+
+## What's Changed
+* bump dgs-codegen runtime by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1058
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1056
+* DEVX-772-Spring-Boot-update-to-version-4-in-Java-SDK by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1055
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.9.0...19.9.1
+
+# 19.9.0 (2026-04-07)
+
+## What's Changed
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `partiallyImported` to type `ProcessingState`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `partiallyImported` to type `OperationStates`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
+</details>
+
+* style fix by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1043
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1044
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1045
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1046
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1047
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1048
+* chore(deps): update actions/checkout action to v6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1007
+* fix(deps): update dependency org.junit.jupiter:junit-jupiter to v6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/999
+* chore(deps): update gradle/actions action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/998
+* chore(deps): update actions/setup-java action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/975
+* chore(deps): lock file maintenance by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/960
+* chore(deps): update actions/create-github-app-token digest to 29824e6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/964
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1049
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1050
+* update dgs-codegen plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1054
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1051
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.3...19.9.0
+
+# 19.7.3 (2026-02-23)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1036
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1037
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1038
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1039
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1040
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1041
+* Fix NPE in ParcelMixin.toDraftBuilder by @ZanochkynYehor in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1042
+
+## New Contributors
+* @ZanochkynYehor made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1042
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.2...19.7.3
+
+# 19.7.2 (2026-02-11)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountSetRecurringOrderScopeAction`
+- added type `CartLock`
+- added type `FreezeStrategy`
+- added type `CartLockCartAction`
+- added type `CartSetPurchaseOrderNumberAction`
+- added type `CartUnlockCartAction`
+- added type `CartPurchaseOrderNumberSetMessage`
+- added type `CartPurchaseOrderNumberSetMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
+- added property `freezeStrategy` to type `Cart`
+- added property `lock` to type `Cart`
+- added property `purchaseOrderNumber` to type `Cart`
+- added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1029
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1030
+* update language level for graphql task by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1032
+* DEVX-741-Support-null-in-address-in-Delivery by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1034
+* fix NPE in category tree factory by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1035
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.1...19.7.2
+
+# 19.7.1 (2026-02-04)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountSetRecurringOrderScopeAction`
+- added type `CartLock`
+- added type `FreezeStrategy`
+- added type `CartLockCartAction`
+- added type `CartSetPurchaseOrderNumberAction`
+- added type `CartUnlockCartAction`
+- added type `CartPurchaseOrderNumberSetMessage`
+- added type `CartPurchaseOrderNumberSetMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
+- added property `freezeStrategy` to type `Cart`
+- added property `lock` to type `Cart`
+- added property `purchaseOrderNumber` to type `Cart`
+- added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1011
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1012
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1013
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1014
+* Devx 714 how to query all with graph ql in java sdk by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1015
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1017
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1018
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1019
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1020
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1021
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1022
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1023
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1024
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1025
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1028
+* DEVX-714: updating test example to fix javadoc parser by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1027
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.0...19.7.1
+
+# 19.7.0 (2026-01-08)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1005
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1001
+* DEVX-658: updating okhttp to v5 by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1006
+* add support policy by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1010
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1009
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `BusinessUnitAddCustomerGroupAssignmentAction`
+- added type `BusinessUnitRemoveCustomerGroupAssignmentAction`
+- added type `BusinessUnitSetCustomerGroupAssignmentsAction`
+- added type `AddressRole`
+- added type `BusinessUnitCustomerGroupAssignmentAddedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentRemovedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentsSetMessage`
+- added type `CustomerBillingAddressAddedMessage`
+- added type `CustomerBillingAddressRemovedMessage`
+- added type `CustomerExternalIdSetMessage`
+- added type `CustomerShippingAddressAddedMessage`
+- added type `CustomerShippingAddressRemovedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentAddedMessagePayload`
+- added type `BusinessUnitCustomerGroupAssignmentRemovedMessagePayload`
+- added type `BusinessUnitCustomerGroupAssignmentsSetMessagePayload`
+- added type `CustomerBillingAddressAddedMessagePayload`
+- added type `CustomerBillingAddressRemovedMessagePayload`
+- added type `CustomerExternalIdSetMessagePayload`
+- added type `CustomerShippingAddressAddedMessagePayload`
+- added type `CustomerShippingAddressRemovedMessagePayload`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Type(s)</summary>
+
+- marked type `ProductSearchProjectionParams` as deprecated
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `MyCartSetCustomLineItemRecurrenceInfoAction`
+- :warning: removed type `MyCartSetLineItemRecurrenceInfoAction`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `payment-method` to type `ResourceTypeId`
+- added enum `payment-method-info` to type `ResourceTypeId`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `ProductSearchRequest::productProjectionParameters` as deprecated
+- marked property `ProductSearchResult::productProjection` as deprecated
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `shippingAddressIds` of type `BusinessUnit` to be required
+- :warning: changed property `billingAddressIds` of type `BusinessUnit` to be required
+- :warning: changed property `shippingAddressIds` of type `Company` to be required
+- :warning: changed property `billingAddressIds` of type `Company` to be required
+- :warning: changed property `shippingAddressIds` of type `Division` to be required
+- :warning: changed property `billingAddressIds` of type `Division` to be required
+- :warning: changed property `shippingAddressIds` of type `Customer` to be required
+- :warning: changed property `billingAddressIds` of type `Customer` to be required
+- :warning: changed property `customerGroupAssignments` of type `Customer` to be required
+- :warning: changed property `customerGroupAssignments` of type `CustomerGroupAssignmentsSetMessage` to be required
+- :warning: changed property `customerGroupAssignments` of type `CustomerGroupAssignmentsSetMessagePayload` to be required
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `order` from type `RecurringOrderCreatedMessage`
+- :warning: removed property `order` from type `RecurringOrderCreatedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `customerGroupAssignments` to type `BusinessUnit`
+- added property `customerGroupAssignments` to type `BusinessUnitDraft`
+- added property `customerGroupAssignments` to type `Company`
+- added property `customerGroupAssignments` to type `CompanyDraft`
+- added property `customerGroupAssignments` to type `Division`
+- added property `customerGroupAssignments` to type `DivisionDraft`
+- added property `addressRoles` to type `BusinessUnitAddressChangedMessage`
+- added property `addressRoles` to type `BusinessUnitAddressRemovedMessage`
+- added property `addressRoles` to type `CustomerAddressChangedMessage`
+- added property `addressRoles` to type `CustomerAddressRemovedMessage`
+- added property `email` to type `CustomerDeletedMessage`
+- added property `oldEmail` to type `CustomerEmailChangedMessage`
+- added property `oldCustomerGroupAssignments` to type `CustomerGroupAssignmentsSetMessage`
+- added property `recurringOrder` to type `RecurringOrderCreatedMessage`
+- added property `addressRoles` to type `BusinessUnitAddressChangedMessagePayload`
+- added property `addressRoles` to type `BusinessUnitAddressRemovedMessagePayload`
+- added property `addressRoles` to type `CustomerAddressChangedMessagePayload`
+- added property `addressRoles` to type `CustomerAddressRemovedMessagePayload`
+- added property `email` to type `CustomerDeletedMessagePayload`
+- added property `oldEmail` to type `CustomerEmailChangedMessagePayload`
+- added property `oldCustomerGroupAssignments` to type `CustomerGroupAssignmentsSetMessagePayload`
+- added property `recurringOrder` to type `RecurringOrderCreatedMessagePayload`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DirectDiscount`
+- added type `DiscountTypeCombination`
+- added type `BestDeal`
+- added type `Stacking`
+- added type `ShippingMethodLabel`
+- added type `ChangeCustomLineItemPriceRoundingModeChange`
+- added type `ChangeLineItemPriceRoundingModeChange`
+- added type `SetDirectDiscountsChange`
+- added type `SetReferencesChange`
+- added type `SetShippingInfoDiscountedPriceChange`
+- added type `SetShippingMethodTaxCategoryChange`
+- added type `SetTaxedShippingPriceChange`
+- added type `ShippingMethodAddShippingRateChange`
+- added type `ShippingMethodAddZoneChange`
+- added type `ShippingMethodChangeActiveChange`
+- added type `ShippingMethodChangeIsDefaultChange`
+- added type `ShippingMethodChangeNameChange`
+- added type `ShippingMethodChangeTaxCategoryChange`
+- added type `ShippingMethodRemoveShippingRateChange`
+- added type `ShippingMethodRemoveZoneChange`
+- added type `ShippingMethodSetCustomFieldChange`
+- added type `ShippingMethodSetCustomTypeChange`
+- added type `ShippingMethodSetKeyChange`
+- added type `ShippingMethodSetLocalizedDescriptionChange`
+- added type `ShippingMethodSetLocalizedNameChange`
+- added type `ShippingMethodSetPredicateChange`
+- added type `ZoneResourceIdentifier`
+- added type `ChangeDiscountTypeCombinationChange`
+- added type `StandalonePriceChangeActiveChange`
+- added type `StandalonePriceChangeValueChange`
+- added type `StandalonePriceSetCustomFieldChange`
+- added type `StandalonePriceSetCustomTypeChange`
+- added type `StandalonePriceSetDiscountedPriceChange`
+- added type `StandalonePriceSetKeyChange`
+- added type `StandalonePriceSetPriceTiersChange`
+- added type `StandalonePriceSetValidFromAndUntilChange`
+- added type `StandalonePriceSetValidFromChange`
+- added type `StandalonePriceSetValidUntilChange`
+- added type `StandalonePriceLabel`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `shipping-method` to type `ChangeHistoryResourceType`
+- added enum `standalone-price` to type `ChangeHistoryResourceType`
+- added enum `addShipping` to type `UpdateType`
+- added enum `addShippingRate` to type `UpdateType`
+- added enum `addZone` to type `UpdateType`
+- added enum `changeActive` to type `UpdateType`
+- added enum `changeApprovalRuleMode` to type `UpdateType`
+- added enum `changeCustomLineItemPriceRoundingMode` to type `UpdateType`
+- added enum `changeCustomer` to type `UpdateType`
+- added enum `changeDiscountTypeCombination` to type `UpdateType`
+- added enum `changeIncludedInStatistics` to type `UpdateType`
+- added enum `changeIsDefault` to type `UpdateType`
+- added enum `changeLastVariantId` to type `UpdateType`
+- added enum `changeLineItemPriceRoundingMode` to type `UpdateType`
+- added enum `changeLineItemPublished` to type `UpdateType`
+- added enum `changePriceRoundingMode` to type `UpdateType`
+- added enum `changeTaxCategory` to type `UpdateType`
+- added enum `changeTopLevelUnit` to type `UpdateType`
+- added enum `excludeProduct` to type `UpdateType`
+- added enum `removeShipping` to type `UpdateType`
+- added enum `removeShippingRate` to type `UpdateType`
+- added enum `removeZone` to type `UpdateType`
+- added enum `replaceTaxRate` to type `UpdateType`
+- added enum `revertStagedChanges` to type `UpdateType`
+- added enum `revertStagedVariantChanges` to type `UpdateType`
+- added enum `setAncestors` to type `UpdateType`
+- added enum `setAssociates` to type `UpdateType`
+- added enum `setBillingAddressCustomField` to type `UpdateType`
+- added enum `setBillingAddressCustomType` to type `UpdateType`
+- added enum `setBusinessUnit` to type `UpdateType`
+- added enum `setCustomLineItemDiscountedPrice` to type `UpdateType`
+- added enum `setCustomLineItemDiscountedPricePerQuantity` to type `UpdateType`
+- added enum `setCustomerGroupAssignments` to type `UpdateType`
+- added enum `setDeliveryAddressCustomField` to type `UpdateType`
+- added enum `setDeliveryAddressCustomType` to type `UpdateType`
+- added enum `setDeliveryCustomField` to type `UpdateType`
+- added enum `setDeliveryCustomType` to type `UpdateType`
+- added enum `setDirectDiscounts` to type `UpdateType`
+- added enum `setDiscountOnTotalPrice` to type `UpdateType`
+- added enum `setInheritedAssociates` to type `UpdateType`
+- added enum `setInheritedStores` to type `UpdateType`
+- added enum `setItemShippingAddressCustomField` to type `UpdateType`
+- added enum `setItemShippingAddressCustomType` to type `UpdateType`
+- added enum `setLocalizedDescription` to type `UpdateType`
+- added enum `setLocalizedName` to type `UpdateType`
+- added enum `setMaxCartQuantity` to type `UpdateType`
+- added enum `setMinCartQuantity` to type `UpdateType`
+- added enum `setParcelCustomField` to type `UpdateType`
+- added enum `setParcelCustomType` to type `UpdateType`
+- added enum `setPredicate` to type `UpdateType`
+- added enum `setPriceKey` to type `UpdateType`
+- added enum `setPriceMode` to type `UpdateType`
+- added enum `setPriceTiers` to type `UpdateType`
+- added enum `setProductAttribute` to type `UpdateType`
+- added enum `setReferences` to type `UpdateType`
+- added enum `setReturnInfo` to type `UpdateType`
+- added enum `setReturnItemCustomField` to type `UpdateType`
+- added enum `setReturnItemCustomType` to type `UpdateType`
+- added enum `setShippingAddressCustomField` to type `UpdateType`
+- added enum `setShippingAddressCustomType` to type `UpdateType`
+- added enum `setShippingCustomField` to type `UpdateType`
+- added enum `setShippingCustomType` to type `UpdateType`
+- added enum `setShippingInfoDiscountedPrice` to type `UpdateType`
+- added enum `setShippingMethodTaxCategory` to type `UpdateType`
+- added enum `setTaxedShippingPrice` to type `UpdateType`
+- added enum `setTransactionCustomField` to type `UpdateType`
+- added enum `setTransactionCustomType` to type `UpdateType`
+- added enum `setUnitType` to type `UpdateType`
+- added enum `setVariantExclusion` to type `UpdateType`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExpressContainerNotFound`
+- added type `ExpressMultipleContainersFound`
+- added type `ExpressPaymentCancelled`
+- added type `ExpressPaymentCompleted`
+- added type `ExpressPaymentFailed`
+- added type `ExpressPaymentIntegrationNotAvailable`
+- added type `ExpressPaymentInterrupted`
+- added type `ExpressPaymentStarted`
+- added type `NoExpressPaymentIntegrations`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Express` to type `PaymentComponentType`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.6.2...19.7.0
+
+# 19.6.2 (2025-11-10)
+
+## What's Changed
+* fixing build.gradle by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1004
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.6.1...19.6.2
+
+
+# 19.6.1 (2025-11-07)
+
+## What's Changed
+* DEVX-657: overriding equals and hashCode for LocalizedStringEntry by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1002
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.6.0...19.6.1
+
+# 19.6.0 (2025-11-03)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/992
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/993
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/994
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/995
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/996
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/997
+* DEVX-640-helper-method-from-Coco-product-to-import-API-product by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1000
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.5.0...19.6.0
+
+# 19.5.0 (2025-09-22)
+
+## What's Changed
+
+**Api changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessage` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessage` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessagePayload` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessagePayload` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `interfaceId` to type `MyTransactionDraft`
+- added property `interfaceId` to type `Transaction`
+- added property `interfaceId` to type `TransactionDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `PaymentTransactionInterfaceIdSetMessage`
+- added type `PaymentTransactionInterfaceIdSetMessagePayload`
+- added type `PaymentSetTransactionInterfaceIdAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/980
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/981
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/982
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/984
+* Checkout sdk by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/983
+* Bump io.projectreactor.netty:reactor-netty-http from 1.2.7 to 1.2.8 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/948
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/986
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/987
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/988
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/989
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/990
+* SUPPORT-35419: making custom field not required by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/991
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.4.0...19.5.0
+
+# 19.4.0 (2025-09-01)
+
+**Api changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `isActive` to type `DiscountGroup`
+- added property `isActive` to type `DiscountGroupDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountGroupSetIsActiveAction`
+- added type `MaxDiscountGroupsReachedError`
+- added type `GraphQLMaxDiscountGroupsReachedError`
+- added type `DiscountGroupIsActiveSetMessage`
+- added type `DiscountGroupIsActiveSetMessagePayload`
+</details>
+
+
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/974
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/976
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/977
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/978
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/979
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.3.0...19.4.0
+
+# 19.3.0 (2025-08-22)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/972
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/968
+* updating dependency by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/973 Thanks to @drazenhrgar for the report
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerDefaultBillingAddressSetMessage`
+- added type `CustomerDefaultShippingAddressSetMessage`
+- added type `CustomerStoresSetMessage`
+- added type `CustomerDefaultBillingAddressSetMessagePayload`
+- added type `CustomerDefaultShippingAddressSetMessagePayload`
+- added type `CustomerStoresSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().delete()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AssociateRoleKeyReference`
+- added type `BusinessUnitKeyReference`
+- added type `BusinessUnitImportRequest`
+- added type `AssociateRoleInheritanceMode`
+- added type `BusinessUnitStatus`
+- added type `BusinessUnitAssociateMode`
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitStoreMode`
+- added type `BusinessUnitType`
+- added type `AssociateRoleAssignmentDraft`
+- added type `AssociateDraft`
+- added type `BusinessUnitImport`
+- added type `CompanyBusinessUnitImport`
+- added type `DivisionBusinessUnitImport`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().businessUnits().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/business-units`
+- added resource `/{projectKey}/business-units/import-containers`
+- added resource `/{projectKey}/business-units/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `business-unit` to type `ImportResourceType`
+- added enum `associate-role` to type `ReferenceType`
+- added enum `business-unit` to type `ReferenceType`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.2.0...19.3.0
+
+
+# 19.1.0 (2025-08-05)
+
+## What's Changed
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/940
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/941
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/942
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/943
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/944
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/945
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/946
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/947
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/949
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/950
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/951
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/952
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/953
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/954
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/955
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/957
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/961
+* Fix split packages by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/958
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `InventoryEntrySetInventoryLimitsAction`
+- added type `RecurringOrderDeletedMessage`
+- added type `RecurringOrderExpiresAtSetMessage`
+- added type `RecurringOrderDeletedMessagePayload`
+- added type `RecurringOrderExpiresAtSetMessagePayload`
+- added type `ProductSearchFacetResultStats`
+- added type `ProductSearchFacetStatsExpression`
+- added type `ProductSearchFacetStatsValue`
+- added type `RecurringOrderSetExpiresAtAction`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `RecurringOrderMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurringOrders().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `minCartQuantity` to type `InventoryEntry`
+- added property `maxCartQuantity` to type `InventoryEntry`
+- added property `minCartQuantity` to type `InventoryEntryDraft`
+- added property `maxCartQuantity` to type `InventoryEntryDraft`
+- added property `expiresAt` to type `RecurringOrderDraft`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-group` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `TooManyRequestsError`
+- added type `GraphQLTooManyRequestsError`
+- added type `GraphQLErrorObject`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `extensions` of type `GraphQLError` from type `object` to `GraphQLErrorObject`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.0.0...19.1.0
+
+# 19.0.0 (2025-07-10)
+
+## Breaking Changes
+
+The field `paymentMethodInfo` in type `PaymentDraft` and `MyPaymentDraft` has been changed from `PaymentMethodInfo` to `PaymentMethodInfoDraft`. For both types a backwards compatible Setter method `setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo)` has been added.
+
+## New Features
+
+Adds support for [Discount Groups](https://docs.commercetools.com/api/projects/discount-groups) and [Recurring Orders](https://docs.commercetools.com/api/recurring-orders-overview)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/928
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/912
+* Update DGS framework to 8.1.0 by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/930
+* chore(deps): update github/codeql-action action to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/913
+* chore(deps): update gradle/actions digest to ac638b0 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/919
+* chore(deps): update stefanzweifel/git-auto-commit-action action to v6 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/920
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/929
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/931
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/932
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/933
+* Add paymentdraft mixin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/936
+* add MyPaymentDraft mixins by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/937
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/938
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/939
+
+**Api changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `RecurringOrder` to type `CartOrigin`
+- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
+- added enum `discount-group` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `recurrence-policy` to type `ReferenceTypeId`
+- added enum `recurring-order` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ExtensionResourceTypeId`
+- added enum `RecurringOrderState` to type `StateTypeEnum`
+- added enum `recurrence-policy` to type `ChangeSubscriptionResourceTypeId`
+- added enum `recurring-order` to type `ChangeSubscriptionResourceTypeId`
+- added enum `recurring-order` to type `ResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `makeInheritedAssociatesExplicit` to type `BusinessUnitChangeAssociateModeAction`
+- added property `discountGroup` to type `CartDiscount`
+- added property `discountGroup` to type `CartDiscountDraft`
+- added property `priceRoundingMode` to type `Cart`
+- added property `priceRoundingMode` to type `CartDraft`
+- added property `recurrenceInfo` to type `CustomLineItem`
+- added property `recurrenceInfo` to type `CustomLineItemDraft`
+- added property `recurrenceInfo` to type `LineItem`
+- added property `recurrenceInfo` to type `LineItemDraft`
+- added property `recurrenceInfo` to type `CartAddCustomLineItemAction`
+- added property `recurrenceInfo` to type `CartAddLineItemAction`
+- added property `recurrencePolicy` to type `Price`
+- added property `recurrencePolicy` to type `PriceDraft`
+- added property `recurrenceInfo` to type `MyLineItemDraft`
+- added property `recurrenceInfo` to type `MyCartAddLineItemAction`
+- added property `attributes` to type `ProductTailoringCreatedMessage`
+- added property `attributes` to type `ProductTailoringCreatedMessagePayload`
+- added property `priceRoundingMode` to type `StagedOrder`
+- added property `recurringOrder` to type `StagedOrder`
+- added property `recurrenceInfo` to type `StagedOrderAddCustomLineItemAction`
+- added property `recurrenceInfo` to type `StagedOrderAddLineItemAction`
+- added property `priceRoundingMode` to type `Order`
+- added property `recurringOrder` to type `Order`
+- added property `priceRoundingMode` to type `OrderImportDraft`
+- added property `token` to type `PaymentMethodInfo`
+- added property `interfaceAccount` to type `PaymentMethodInfo`
+- added property `custom` to type `PaymentMethodInfo`
+- added property `attributes` to type `ProductTailoringData`
+- added property `attributes` to type `ProductTailoringDraft`
+- added property `attributes` to type `ProductTailoringInStoreDraft`
+- added property `level` to type `AttributeDefinition`
+- added property `level` to type `AttributeDefinitionDraft`
+- added property `attributes` to type `ProductData`
+- added property `attributes` to type `ProductDraft`
+- added property `attributes` to type `ProductProjection`
+- added property `recurrencePrices` to type `ProductVariant`
+- added property `priceRoundingMode` to type `CartsConfiguration`
+- added property `taxRoundingMode` to type `CartsConfiguration`
+- added property `priceRoundingMode` to type `QuoteRequest`
+- added property `priceRoundingMode` to type `Quote`
+- added property `recurrencePolicy` to type `StandalonePrice`
+- added property `recurrencePolicy` to type `StandalonePriceDraft`
+- added property `events` to type `SubscriptionSetEventsAction`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `paymentMethodInfo` of type `MyPaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+- :warning: changed property `paymentMethodInfo` of type `PaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `sortOrder` of type `CartDiscountDraft` to be optional
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `messages` from type `SubscriptionSetEventsAction`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().discountGroups().get()`
+- added method `apiRoot.withProjectKey().discountGroups().head()`
+- added method `apiRoot.withProjectKey().discountGroups().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().delete()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().post()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountSetDiscountGroupAction`
+- added type `CartChangePriceRoundingModeAction`
+- added type `CartSetCustomLineItemRecurrenceInfoAction`
+- added type `CartSetLineItemRecurrenceInfoAction`
+- added type `DiscountGroup`
+- added type `DiscountGroupDraft`
+- added type `DiscountGroupPagedQueryResponse`
+- added type `DiscountGroupReference`
+- added type `DiscountGroupResourceIdentifier`
+- added type `DiscountGroupUpdate`
+- added type `DiscountGroupUpdateAction`
+- added type `DiscountGroupSetDescriptionAction`
+- added type `DiscountGroupSetKeyAction`
+- added type `DiscountGroupSetNameAction`
+- added type `DiscountGroupSetSortOrderAction`
+- added type `MyCartSetCustomLineItemRecurrenceInfoAction`
+- added type `MyCartSetLineItemRecurrenceInfoAction`
+- added type `MyPaymentSetMethodInfoCustomFieldAction`
+- added type `MyPaymentSetMethodInfoCustomTypeAction`
+- added type `MyPaymentSetMethodInfoInterfaceAccountAction`
+- added type `DiscountGroupCreatedMessage`
+- added type `DiscountGroupDeletedMessage`
+- added type `DiscountGroupKeySetMessage`
+- added type `DiscountGroupSortOrderSetMessage`
+- added type `OrderCreatedFromRecurringOrderMessage`
+- added type `PaymentInterfaceIdSetMessage`
+- added type `PaymentMethodCreatedMessage`
+- added type `PaymentMethodCustomFieldAddedMessage`
+- added type `PaymentMethodCustomFieldChangedMessage`
+- added type `PaymentMethodCustomFieldRemovedMessage`
+- added type `PaymentMethodCustomTypeRemovedMessage`
+- added type `PaymentMethodCustomTypeSetMessage`
+- added type `PaymentMethodDefaultSetMessage`
+- added type `PaymentMethodDeletedMessage`
+- added type `PaymentMethodInfoCustomFieldAddedMessage`
+- added type `PaymentMethodInfoCustomFieldChangedMessage`
+- added type `PaymentMethodInfoCustomFieldRemovedMessage`
+- added type `PaymentMethodInfoCustomTypeRemovedMessage`
+- added type `PaymentMethodInfoCustomTypeSetMessage`
+- added type `PaymentMethodInfoInterfaceAccountSetMessage`
+- added type `PaymentMethodInfoInterfaceSetMessage`
+- added type `PaymentMethodInfoMethodSetMessage`
+- added type `PaymentMethodInfoNameSetMessage`
+- added type `PaymentMethodInfoTokenSetMessage`
+- added type `PaymentMethodInterfaceAccountSetMessage`
+- added type `PaymentMethodKeySetMessage`
+- added type `PaymentMethodMethodSetMessage`
+- added type `PaymentMethodNameSetMessage`
+- added type `PaymentMethodPaymentInterfaceSetMessage`
+- added type `PaymentMethodPaymentMethodStatusSetMessage`
+- added type `RecurringOrderCreatedMessage`
+- added type `RecurringOrderCustomFieldAddedMessage`
+- added type `RecurringOrderCustomFieldChangedMessage`
+- added type `RecurringOrderCustomFieldRemovedMessage`
+- added type `RecurringOrderCustomTypeRemovedMessage`
+- added type `RecurringOrderCustomTypeSetMessage`
+- added type `RecurringOrderKeySetMessage`
+- added type `RecurringOrderScheduleSetMessage`
+- added type `RecurringOrderStartsAtSetMessage`
+- added type `RecurringOrderStateChangedMessage`
+- added type `RecurringOrderStateTransitionMessage`
+- added type `DiscountGroupCreatedMessagePayload`
+- added type `DiscountGroupDeletedMessagePayload`
+- added type `DiscountGroupKeySetMessagePayload`
+- added type `DiscountGroupSortOrderSetMessagePayload`
+- added type `OrderCreatedFromRecurringOrderMessagePayload`
+- added type `PaymentInterfaceIdSetMessagePayload`
+- added type `PaymentMethodCreatedMessagePayload`
+- added type `PaymentMethodCustomFieldAddedMessagePayload`
+- added type `PaymentMethodCustomFieldChangedMessagePayload`
+- added type `PaymentMethodCustomFieldRemovedMessagePayload`
+- added type `PaymentMethodCustomTypeRemovedMessagePayload`
+- added type `PaymentMethodCustomTypeSetMessagePayload`
+- added type `PaymentMethodDefaultSetMessagePayload`
+- added type `PaymentMethodDeletedMessagePayload`
+- added type `PaymentMethodInfoCustomFieldAddedMessagePayload`
+- added type `PaymentMethodInfoCustomFieldChangedMessagePayload`
+- added type `PaymentMethodInfoCustomFieldRemovedMessagePayload`
+- added type `PaymentMethodInfoCustomTypeRemovedMessagePayload`
+- added type `PaymentMethodInfoCustomTypeSetMessagePayload`
+- added type `PaymentMethodInfoInterfaceAccountSetMessagePayload`
+- added type `PaymentMethodInfoInterfaceSetMessagePayload`
+- added type `PaymentMethodInfoMethodSetMessagePayload`
+- added type `PaymentMethodInfoNameSetMessagePayload`
+- added type `PaymentMethodInfoTokenSetMessagePayload`
+- added type `PaymentMethodInterfaceAccountSetMessagePayload`
+- added type `PaymentMethodKeySetMessagePayload`
+- added type `PaymentMethodMethodSetMessagePayload`
+- added type `PaymentMethodNameSetMessagePayload`
+- added type `PaymentMethodPaymentInterfaceSetMessagePayload`
+- added type `PaymentMethodPaymentMethodStatusSetMessagePayload`
+- added type `RecurringOrderCreatedMessagePayload`
+- added type `RecurringOrderCustomFieldAddedMessagePayload`
+- added type `RecurringOrderCustomFieldChangedMessagePayload`
+- added type `RecurringOrderCustomFieldRemovedMessagePayload`
+- added type `RecurringOrderCustomTypeRemovedMessagePayload`
+- added type `RecurringOrderCustomTypeSetMessagePayload`
+- added type `RecurringOrderKeySetMessagePayload`
+- added type `RecurringOrderMessagePayload`
+- added type `RecurringOrderScheduleSetMessagePayload`
+- added type `RecurringOrderStartsAtSetMessagePayload`
+- added type `RecurringOrderStateChangedMessagePayload`
+- added type `RecurringOrderStateTransitionMessagePayload`
+- added type `StagedOrderChangePriceRoundingModeAction`
+- added type `PaymentMethod`
+- added type `PaymentMethodDraft`
+- added type `PaymentMethodPagedQueryResponse`
+- added type `PaymentMethodReference`
+- added type `PaymentMethodStatus`
+- added type `PaymentMethodToken`
+- added type `PaymentMethodUpdate`
+- added type `PaymentMethodUpdateAction`
+- added type `PaymentMethodSetCustomFieldAction`
+- added type `PaymentMethodSetCustomTypeAction`
+- added type `PaymentMethodSetDefaultAction`
+- added type `PaymentMethodSetInterfaceAccountAction`
+- added type `PaymentMethodSetKeyAction`
+- added type `PaymentMethodSetMethodAction`
+- added type `PaymentMethodSetNameAction`
+- added type `PaymentMethodSetPaymentInterfaceAction`
+- added type `PaymentMethodSetPaymentMethodStatusAction`
+- added type `PaymentMethodInfoDraft`
+- added type `PaymentSetMethodInfoAction`
+- added type `PaymentSetMethodInfoCustomFieldAction`
+- added type `PaymentSetMethodInfoCustomTypeAction`
+- added type `PaymentSetMethodInfoInterfaceAccountAction`
+- added type `PaymentSetMethodInfoTokenAction`
+- added type `ProductTailoringSetProductAttributeAction`
+- added type `AttributeLevelEnum`
+- added type `ProductSetProductAttributeAction`
+- added type `ProjectChangePriceRoundingModeAction`
+- added type `ProjectChangeTaxRoundingModeAction`
+- added type `DayOfMonthSchedule`
+- added type `DayOfMonthScheduleDraft`
+- added type `IntervalUnit`
+- added type `RecurrencePolicy`
+- added type `RecurrencePolicyDraft`
+- added type `RecurrencePolicyPagedQueryResponse`
+- added type `RecurrencePolicyReference`
+- added type `RecurrencePolicyResourceIdentifier`
+- added type `RecurrencePolicySchedule`
+- added type `RecurrencePolicyScheduleDraft`
+- added type `RecurrencePolicyUpdate`
+- added type `RecurrencePolicyUpdateAction`
+- added type `StandardSchedule`
+- added type `StandardScheduleDraft`
+- added type `RecurrencePolicySetDescriptionAction`
+- added type `RecurrencePolicySetKeyAction`
+- added type `RecurrencePolicySetNameAction`
+- added type `RecurrencePolicySetScheduleAction`
+- added type `Counter`
+- added type `CounterDraft`
+- added type `CustomLineItemRecurrenceInfo`
+- added type `CustomLineItemRecurrenceInfoDraft`
+- added type `LineItemRecurrenceInfo`
+- added type `LineItemRecurrenceInfoDraft`
+- added type `PriceSelectionMode`
+- added type `RecurringOrder`
+- added type `RecurringOrderActive`
+- added type `RecurringOrderCanceled`
+- added type `RecurringOrderDraft`
+- added type `RecurringOrderExpired`
+- added type `RecurringOrderPagedQueryResponse`
+- added type `RecurringOrderPaused`
+- added type `RecurringOrderReference`
+- added type `RecurringOrderResourceIdentifier`
+- added type `RecurringOrderState`
+- added type `RecurringOrderStateDraft`
+- added type `RecurringOrderUpdate`
+- added type `RecurringOrderUpdateAction`
+- added type `SkipConfiguration`
+- added type `SkipConfigurationDraft`
+- added type `RecurringOrderSetCustomFieldAction`
+- added type `RecurringOrderSetCustomTypeAction`
+- added type `RecurringOrderSetKeyAction`
+- added type `RecurringOrderSetOrderSkipConfigurationAction`
+- added type `RecurringOrderSetScheduleAction`
+- added type `RecurringOrderSetStartsAtAction`
+- added type `RecurringOrderSetStateAction`
+- added type `RecurringOrderTransitionStateAction`
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/discount-groups`
+- added resource `/{projectKey}/payment-methods`
+- added resource `/{projectKey}/recurring-orders`
+- added resource `/{projectKey}/recurrence-policies`
+- added resource `/{projectKey}/discount-groups/key={key}`
+- added resource `/{projectKey}/discount-groups/{ID}`
+- added resource `/{projectKey}/payment-methods/key={key}`
+- added resource `/{projectKey}/payment-methods/{ID}`
+- added resource `/{projectKey}/recurring-orders/{ID}`
+- added resource `/{projectKey}/recurring-orders/key={key}`
+- added resource `/{projectKey}/recurrence-policies/key={key}`
+- added resource `/{projectKey}/recurrence-policies/{ID}`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `product-selection` to type `ImportResourceType`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `retentionPolicy` to type `ImportContainer`
+- added property `expiresAt` to type `ImportContainer`
+- added property `retentionPolicy` to type `ImportContainerDraft`
+- added property `attributes` to type `ProductImport`
+- added property `attributes` to type `ProductDraftImport`
+- added property `level` to type `AttributeDefinition`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `country` of type `ExternalTaxRateDraft` from type `string` to `CountryCode`
+- :warning: changed property `value` of type `MoneySetField` from type `Money[]` to `TypedMoney[]`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().productSelections().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `StrategyEnum`
+- added type `RetentionPolicy`
+- added type `TimeToLiveConfig`
+- added type `TimeToLiveRetentionPolicy`
+- added type `ProductSelectionImportRequest`
+- added type `AttributeLevel`
+- added type `VariantSelectionType`
+- added type `VariantSelection`
+- added type `VariantExclusion`
+- added type `ProductSelectionAssignment`
+- added type `ProductSelectionMode`
+- added type `ProductSelectionImport`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/product-selections`
+- added resource `/{projectKey}/product-selections/import-containers`
+- added resource `/{projectKey}/product-selections/import-containers/{importContainerKey}`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `RecurringOrderState` to type `StateTypeEnum`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.3.0...19.0.0
+
+# 18.3.0 (2025-06-20)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/910
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/904
+* chore(deps): update gradle/actions digest to 8379f6a by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/906
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/895
+* chore(deps): update actions/create-github-app-token digest to df432ce by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/892
+* fix(deps): update dependency lint-staged to v16 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/903
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/911
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/915
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/916
+* update Maven Release process by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/917
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/918
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/921
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/922
+* update service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/923
+* support custom attributes for metrics by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/924
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/925
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/926
+* Fix Logger with unwrapped CompletionExceptions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/927
+
+**Api changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/[0-9].[0-9]*[1-9]/` from type `CategoryOrderHints`
+- :warning: removed property `//` from type `ProductVariantChannelAvailabilityMap`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `CategoryOrderHints`
+- added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `ProductVariantChannelAvailabilityMap`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.2.0...18.3.0
+
+# 18.2.0 (2025-06-05)
+
+## Fixes
+
+Fixed version ranges for OkHttp and Apache clients to prevent the resolution of next major alpha versions using Maven.
+
+## What's Changed
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/908
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/909
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExpiredCustomerEmailTokenError`
+- added type `ExpiredCustomerPasswordTokenError`
+- added type `GraphQLExpiredCustomerEmailTokenError`
+- added type `GraphQLExpiredCustomerPasswordTokenError`
+- added type `CheckoutOrderCreationFailedEvent`
+- added type `CheckoutPaymentAuthorizationCancelledEvent`
+- added type `CheckoutPaymentAuthorizationFailedEvent`
+- added type `CheckoutPaymentAuthorizedEvent`
+- added type `CheckoutPaymentCancelAuthorizationFailedEvent`
+- added type `CheckoutPaymentChargeFailedEvent`
+- added type `CheckoutPaymentChargedEvent`
+- added type `CheckoutPaymentRefundFailedEvent`
+- added type `CheckoutPaymentRefundedEvent`
+- added type `CheckoutMessageOrderPayloadBaseData`
+- added type `CheckoutMessagePaymentsPayloadBaseData`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `invalidateOlderTokens` to type `CustomerCreateEmailToken`
+- added property `invalidateOlderTokens` to type `CustomerCreatePasswordResetToken`
+- added property `invalidateOlderTokens` to type `CustomerToken`
+- added property `value` to type `CustomerEmailTokenCreatedMessage`
+- added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessage`
+- added property `value` to type `CustomerPasswordTokenCreatedMessage`
+- added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessage`
+- added property `value` to type `CustomerEmailTokenCreatedMessagePayload`
+- added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessagePayload`
+- added property `value` to type `CustomerPasswordTokenCreatedMessagePayload`
+- added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `checkout` to type `EventSubscriptionResourceTypeId`
+- added enum `CheckoutOrderCreationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorized` to type `EventType`
+- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentCharged` to type `EventType`
+- added enum `CheckoutPaymentChargeFailed` to type `EventType`
+- added enum `CheckoutPaymentRefunded` to type `EventType`
+- added enum `CheckoutPaymentRefundFailed` to type `EventType`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.1.0...18.2.0
+
+# 18.1.0 (2025-06-03)
+
+## New features
+
+### Split packages
+
+Additionally to the package `commercetools-sdk-java-api` we also release packages split by domain. This allows package size optimization for deployment targets with size constrains. See also https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/SizeOptimization.html
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/891
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/894
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/897
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/898
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/899
+* Package split by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/900
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/901
+* Package split example by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/902
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/905
+
+**Import changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.0.0...18.1.0
+
+# 18.0.0 (2025-05-02)
+
+## New Features
+
+### Java 11
+
+The SDK is built with Java 11 now. We will also take advantage of different language features in future releases.
+
+### New Request Policy Middleware
+
+It's now possible to create request policies based on the requests context. E.g. different timeouts and retries for POST and GET requests:
+
+```java
+ProjectApiRoot b = ApiRootBuilder.of()
+       ...
+        .withRequestPolicies(policies -> policies
+                .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.POST),
+                    policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(10)))
+                .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.GET),
+                    policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(1)))
+                .withAllOtherRequests(policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(60))))
+        .build(projectKey);
+```
+
+## What's Changed
+* fix Delivery discriminators by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/866
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/867
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/865
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/870
+* Update java to 11 by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/844
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/871
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/872
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/873
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/877
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/879
+* DEVX-588 adding query predicate builder documentation by @barbara79 in https://github.com/commercetools/commercetools-sdk-java-v2/pull/874
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/883
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/885
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/886
+* Add request specific policies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/882
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/881
+* chore(deps): update actions/setup-java digest to c5195ef by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/875
+* chore(deps): update actions/create-github-app-token action to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/869
+* chore(deps): update github/codeql-action digest to 97a2bfd by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/868
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/858
+* revert junit-jupiter by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/887
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/888
+* remove dataprovider library by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/889
+* update junit by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/890
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.30.0...18.0.0
+
+# 17.30.0 (2025-03-31)
+
+## Important information
+
+This will be the last release for Java 8. The next released version will be built with Java 11.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/851
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/836
+* Delete .github/workflows/scorecard.yml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/852
+* update logback by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/854
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/853
+* chore(deps): update actions/setup-java digest to 3a4f6e1 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/831
+* chore(deps): update actions/create-github-app-token digest to af35eda by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/830
+* chore(deps): update plugin com.github.johnrengelman.shadow to v8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/800
+* add semgrep workflow by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/855
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/856
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/859
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/860
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/861
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/862
+* chore(deps): update gradle/actions digest to 06832c7 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/864
+* chore(deps): update actions/create-github-app-token digest to d72941d by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/863
+* chore(deps): update github/codeql-action digest to 9f45e74 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/857
+
+**Api changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `facets` of type `ProductProjectionPagedSearchResponse` to be optional
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/search`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.29.0...17.30.0
+
+# 17.29.0 (2025-03-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/846
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/847
+* fix exception with invalid date deserialization by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/849
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/850
+
+**Api changes**
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerGroupAssignment`
+- added type `CustomerGroupAssignmentDraft`
+- added type `CustomerAddCustomerGroupAssignmentAction`
+- added type `CustomerRemoveCustomerGroupAssignmentAction`
+- added type `CustomerSetCustomerGroupAssignmentsAction`
+- added type `CustomerGroupAssignmentAddedMessage`
+- added type `CustomerGroupAssignmentRemovedMessage`
+- added type `CustomerGroupAssignmentsSetMessage`
+- added type `CustomerGroupAssignmentAddedMessagePayload`
+- added type `CustomerGroupAssignmentRemovedMessagePayload`
+- added type `CustomerGroupAssignmentsSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `customerGroupAssignments` to type `Customer`
+- added property `customerGroupAssignments` to type `CustomerDraft`
+- added property `priceCustomerGroupAssignments` to type `ProductSearchProjectionParams`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.28.0...17.29.0
+
+# 17.28.0 (2025-03-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/833
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/834
+* [DEVX-495] make serviceregion configurable in examples by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/835
+* [DEVX-322] QueryAll allows different field than id to be used by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/837
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/838
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/839
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/840
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/841
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/842
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/843
+* feat: always deserialize to long for jsonutils by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/845
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.27.0...17.28.0
+
+# 17.27.0 (2025-02-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/816
+* [DEVX-468] Capture errors in telemetry middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/817
+* chore(deps): update actions/create-github-app-token digest to 67e27a7 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/815
+* Fix deserialization of time attributes/custom-fields by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/818
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/795
+* chore(deps): pin gradle/actions action to 94baf22 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/812
+* chore(deps): update codecov/codecov-action action to v5 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/796
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/819
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/820
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/821
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/822
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/823
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/824
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/826
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/827
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/828
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/829
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/832
+* Bump io.netty:netty-handler from 4.1.117.Final to 4.1.118.Final by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/825
+* chore(deps): update plugin io.github.gradle-nexus.publish-plugin to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/620
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.26.0...17.27.0
+
+# 17.26.0 (2025-02-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/811
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/814
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.25.0...17.26.0
+
+# 17.25.0 (2025-01-23)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/806
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/808
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/809
+* fix NPE when server response has no body by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/810
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.24.0...17.24.1
+
+# 17.16.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.1...17.16.2
+
+# 17.15.3 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.2...17.15.3
+
+# 17.3.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.1...17.3.2
+
+# 16.2.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.2.1...16.2.2
+
+# 17.24.0 (2025-01-22)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/802
+* Update AHC TLS config by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/803
+* [DEVX-513] configurable protocol version for HTTP clients by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/804
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/805
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `discount` of type `DiscountedTotalPricePortion` from type `CartDiscountReference` to `Reference`
+</details>
+
+### Fixes
+
+- fix deserialization issue of `DiscountedTotalPricePortion` with a direct discount reference
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.23.0...17.24.0
+
+# 17.16.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.0...17.16.1
+
+# 17.15.2 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.1...17.15.2
+
+# 17.3.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.0...17.3.1
+
+# 16.2.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.2.0...16.2.1
+
+# 9.4.2 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.4.1...9.4.2
+
+# 9.4.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.4.0...9.4.1
+
+# 17.23.0 (2025-01-21)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/790
+* Bump micromatch from 4.0.7 to 4.0.8 by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/718
+* chore(deps): update gradle/actions action to v4 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/710
+* chore(deps): update actions/setup-java digest to 7a6d8a8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/709
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/677
+* chore(deps): update actions/checkout digest to 11bd719 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/676
+* chore(deps): update actions/create-github-app-token digest to c1a2851 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/665
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/791
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/792
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/793
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/794
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/797
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/798
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/799
+* [DEVX-516] add HttpClient info to UserAgent by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/784
+
+**Api changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/{ID}`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `CartDiscountPatternTarget` to be required
+- changed property `images` of type `ProductTailoringSetExternalImagesAction` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `inheritedStores` to type `BusinessUnit`
+- added property `inheritedStores` to type `Company`
+- added property `inheritedStores` to type `Division`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().delete()`
+</details>
+
+**History changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `extensions` of type `GraphQLError` from type `GraphQLErrorObject` to `object`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `ChangeTargetPatternChangeValue` to be required
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `GraphQLErrorObject`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.22.0...17.23.0
+
+# 17.22.0 (2025-01-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/782
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/783
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/785
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/786
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/787
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/788
+* Bump cross-spawn from 7.0.3 to 7.0.6 by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/758
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/666
+
+## New Contributors
+* @dependabot made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/758
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.21.0...17.22.0
+
+# 17.21.0 (2024-12-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/767
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/768
+* DEVX-496 update spring boot version by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/765
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/769
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/770
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/771
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/774
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/775
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/776
+* DEVX-460 make metrics more precise for values below 0 ms by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/772
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/777
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/778
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/779
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/780
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/781
+* Update Apache AsyncHttpClient by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/773
+
+**Api changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/channels/key={key}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().channels().withKey().get()`
+- added method `apiRoot.withProjectKey().channels().withKey().head()`
+- added method `apiRoot.withProjectKey().channels().withKey().post()`
+- added method `apiRoot.withProjectKey().channels().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountPatternTarget`
+- added type `CountOnCustomLineItemUnits`
+- added type `CountOnLineItemUnits`
+- added type `PatternComponent`
+- added type `ShoppingListLineItemAddedMessage`
+- added type `ShoppingListLineItemRemovedMessage`
+- added type `ShoppingListMessage`
+- added type `ShoppingListLineItemAddedMessagePayload`
+- added type `ShoppingListLineItemRemovedMessagePayload`
+- added type `ShoppingListMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Canceled` to type `ShipmentState`
+- added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueFixed`
+- added property `applicationMode` to type `CartDiscountValueFixedDraft`
+- added property `custom` to type `CartSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ChangeTargetPatternChangeValue`
+- added type `PatternComponent`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.20.0...17.21.0
+
+# 17.20.0 (2024-12-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/763
+* Add option to provide custom auth and api url for spring example project by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/764
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/766
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.19.0...17.20.0
+
+# 17.19.0 (2024-11-21)
+
+## Important notice
+
+Due to a regression with regards to deserialization in Jackson 2.18.x we introduced the usage of `JsonAnySetter` at some constructors e.g. to `LocalizedString`. The usage of `JsonAnySetter` annotation is made available with Jackson 2.17.x. Any version prior to Jackson 2.17 is not compatible with the SDK.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/761
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/762
+* [SUPPORT-29621] fix regression with jackson 2.18.x by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/760
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.18.0...17.19.0
+
+# 17.18.0 (2024-11-20)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/750
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/751
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/752
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/753
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/754
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/756
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/759
+* SUPPORT-28804 add custom deserializer for attrs in import api by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/748
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.17.0...17.18.0
+
+# 17.17.0 (2024-11-07)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/739
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/740
+* optimize OkHttp3 client by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/741
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/743
+* fix exportSignatures plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/745
+* Fix deserialization if subtype discriminator is missing by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/746
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/747
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/749
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.0...17.17.0
+
+# 17.16.0 (2024-10-07)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/728
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/729
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/730
+* update service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/731
+* Create config.yml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/732
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/733
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/735
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/736
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/737
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/738
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.1...17.16.0
+
+# 17.15.1 (2024-09-17)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/719
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/720
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/721
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/722
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/723
+* Switch (de)serialization metrics to the correct meaning by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/724
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/725
+* add test for Datadog middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/726
+* Send datadog metrics in double instead of long by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/727
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.0...17.15.1
+
+# 17.15.0 (2024-09-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/704
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/705
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/706
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/707
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/708
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/711
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/713
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/714
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/715
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/716
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/717
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.14.0...17.15.0
+
+# 17.14.0 (2024-08-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/702
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/703
+
+### Fixes
+
+- fixes path traversal in requests when using unsanitized path parameters
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.13.0...17.14.0
+
+# 17.13.0 (2024-08-05)
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `customType` of type `OrderSearchAnyValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchDateRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchFullTextValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchLongRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchNumberRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchQueryExpressionValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchStringValue` from type `string` to `OrderSearchCustomType`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `approvalRuleMode` to type `BusinessUnit`
+- added property `approvalRuleMode` to type `BusinessUnitDraft`
+- added property `approvalRuleMode` to type `Company`
+- added property `approvalRuleMode` to type `CompanyDraft`
+- added property `approvalRuleMode` to type `Division`
+- added property `approvalRuleMode` to type `DivisionDraft`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessage`
+- added property `metaTitle` to type `ProductTailoringCreatedMessage`
+- added property `metaDescription` to type `ProductTailoringCreatedMessage`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
+- added property `variants` to type `ProductTailoringCreatedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessagePayload`
+- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringData`
+- added property `variants` to type `ProductTailoringDraft`
+- added property `variants` to type `ProductTailoringInStoreDraft`
+- added property `active` to type `ShippingMethod`
+- added property `active` to type `ShippingMethodDraft`
+- added property `store` to type `StagedQuote`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/customers/search`
+- added resource `/{projectKey}/customers/search/indexing-status`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
+</details>
+
+
+<details>
+<summary>Removed Resource(s)</summary>
+
+- :warning: removed resource `/{projectKey}/me/carts/key={key}`
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/{ID}`
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().customers().search().post()`
+- added method `apiRoot.withProjectKey().customers().search().head()`
+- added method `apiRoot.withProjectKey().customers().searchIndexingStatus().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().orderQuote().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductId().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductKey().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().delete()`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().head()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `shopping-list` to type `ExtensionResourceTypeId`
+- added enum `customer-group` to type `AttributeReferenceTypeId`
+- added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
+- added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
+- added enum `cart-discount` to type `CustomFieldReferenceValue`
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed Enum(s)</summary>
+
+- :warning: removed enum `product-price` from type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitChangeApprovalRuleModeAction`
+- added type `CartChangeLineItemsOrderAction`
+- added type `CustomerIndexingProgress`
+- added type `CustomerIndexingStatus`
+- added type `CustomerPagedSearchResponse`
+- added type `CustomerSearchIndexingStatusResponse`
+- added type `CustomerSearchRequest`
+- added type `CustomerSearchResult`
+- added type `MyCartChangeLineItemsOrderAction`
+- added type `BusinessUnitApprovalRuleModeChangedMessage`
+- added type `ProductPriceCustomFieldAddedMessage`
+- added type `ProductPriceCustomFieldChangedMessage`
+- added type `ProductPriceCustomFieldRemovedMessage`
+- added type `ProductPriceCustomFieldsRemovedMessage`
+- added type `ProductPriceCustomFieldsSetMessage`
+- added type `ProductTailoringImageAddedMessage`
+- added type `ProductTailoringImagesSetMessage`
+- added type `ProductVariantTailoringAddedMessage`
+- added type `ProductVariantTailoringRemovedMessage`
+- added type `BusinessUnitApprovalRuleModeChangedMessagePayload`
+- added type `ProductPriceCustomFieldAddedMessagePayload`
+- added type `ProductPriceCustomFieldChangedMessagePayload`
+- added type `ProductPriceCustomFieldRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsSetMessagePayload`
+- added type `ProductTailoringImageAddedMessagePayload`
+- added type `ProductTailoringImagesSetMessagePayload`
+- added type `ProductVariantTailoringAddedMessagePayload`
+- added type `ProductVariantTailoringRemovedMessagePayload`
+- added type `OrderSearchCustomType`
+- added type `ProductVariantTailoring`
+- added type `ProductVariantTailoringDraft`
+- added type `ProductTailoringAddAssetAction`
+- added type `ProductTailoringAddExternalImageAction`
+- added type `ProductTailoringAddVariantAction`
+- added type `ProductTailoringChangeAssetNameAction`
+- added type `ProductTailoringChangeAssetOrderAction`
+- added type `ProductTailoringMoveImageToPositionAction`
+- added type `ProductTailoringRemoveAssetAction`
+- added type `ProductTailoringRemoveImageAction`
+- added type `ProductTailoringRemoveVariantAction`
+- added type `ProductTailoringSetAssetCustomFieldAction`
+- added type `ProductTailoringSetAssetCustomTypeAction`
+- added type `ProductTailoringSetAssetDescriptionAction`
+- added type `ProductTailoringSetAssetKeyAction`
+- added type `ProductTailoringSetAssetSourcesAction`
+- added type `ProductTailoringSetAssetTagsAction`
+- added type `ProductTailoringSetExternalImagesAction`
+- added type `ProductTailoringSetImageLabelAction`
+- added type `CustomerSearchStatus`
+- added type `ProjectChangeCustomerSearchStatusAction`
+- added type `ShippingMethodChangeActiveAction`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Deprecated Property(s)</summary>
+
+- property `PriceImport::publish` is removed
+- property `ProductVariantImport::publish` is removed
+</details>
+
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/663
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/664
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/667
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/668
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/669
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/670
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/671
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/672
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/673
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/674
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/675
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/678
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/679
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/680
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/681
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/682
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/683
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/684
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/685
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/686
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/687
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/688
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/689
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/690
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/691
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/692
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/693
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/694
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/695
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/696
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/697
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/698
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/699
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/700
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/701
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.12.0...17.13.0
+
+# 17.12.0 (2024-06-07)
+
+## Important information
+
+This major release branch will be the last compatible with JDK version 8. The major release will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE. This will remove incompatibilities with newer frameworks and opens upgrade pathes.
+
+## What's Changed
+* Update datadog example app to include traces and add to cart by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/617
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/634
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/635
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/638
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/639
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/640
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/643
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/644
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/645
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/646
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/647
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/648
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/650
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/651
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/652
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/653
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/654
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/655
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/656
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/657
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/658
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/660
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/661
+* update SLF4J to 2.0 by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/662
+* chore(deps): update github/codeql-action digest to 2e230e8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/641
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/637
+* chore(deps): update actions/checkout digest to a5ac7e5 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/636
+* chore(deps): update actions/setup-java digest to 99b8673 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/612
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/642
+* chore(deps): update plugin org.jetbrains.kotlin.jvm to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/649
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.11.0...17.12.0
+
 # 17.11.0 (2024-05-03)
 
 ## What's Changed

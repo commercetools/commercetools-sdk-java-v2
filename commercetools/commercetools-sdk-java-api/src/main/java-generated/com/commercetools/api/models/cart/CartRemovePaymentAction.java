@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartRemovePaymentAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartRemovePaymentActionImpl.class)
 public interface CartRemovePaymentAction extends CartUpdateAction {
@@ -71,6 +73,8 @@ public interface CartRemovePaymentAction extends CartUpdateAction {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public CartRemovePaymentAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartRemovePaymentAction
@@ -119,8 +123,8 @@ public interface CartRemovePaymentAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartRemovePaymentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartRemovePaymentAction>() {
+    public static tools.jackson.core.type.TypeReference<CartRemovePaymentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartRemovePaymentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartRemovePaymentAction>";

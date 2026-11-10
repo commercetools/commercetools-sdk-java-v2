@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeDefinition
@@ -36,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeDefinition {
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
     @NotNull
@@ -45,7 +46,7 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     *
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -53,12 +54,7 @@ public interface AttributeDefinition {
     public String getName();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @return label
      */
     @NotNull
@@ -67,7 +63,7 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     *
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
     @NotNull
@@ -75,7 +71,7 @@ public interface AttributeDefinition {
     public Boolean getIsRequired();
 
     /**
-     *
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
 
@@ -83,12 +79,7 @@ public interface AttributeDefinition {
     public AttributeConstraintEnum getAttributeConstraint();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
      */
     @Valid
@@ -96,7 +87,7 @@ public interface AttributeDefinition {
     public LocalizedString getInputTip();
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
 
@@ -104,7 +95,7 @@ public interface AttributeDefinition {
     public TextInputHint getInputHint();
 
     /**
-     *
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets.</p>
      * @return isSearchable
      */
 
@@ -112,70 +103,75 @@ public interface AttributeDefinition {
     public Boolean getIsSearchable();
 
     /**
-     * set type
+     *
+     * @return level
+     */
+
+    @JsonProperty("level")
+    public AttributeLevel getLevel();
+
+    /**
+     *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      */
 
     public void setType(final AttributeType type);
 
     /**
-     * set name
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      */
 
     public void setLabel(final LocalizedString label);
 
     /**
-     * set isRequired
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      */
 
     public void setIsRequired(final Boolean isRequired);
 
     /**
-     * set attributeConstraint
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
 
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      */
 
     public void setInputTip(final LocalizedString inputTip);
 
     /**
-     * set inputHint
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      */
 
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     * set isSearchable
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets.</p>
      * @param isSearchable value to be set
      */
 
     public void setIsSearchable(final Boolean isSearchable);
+
+    /**
+     * set level
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevel level);
 
     /**
      * factory method
@@ -200,8 +196,11 @@ public interface AttributeDefinition {
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setLevel(template.getLevel());
         return instance;
     }
+
+    public AttributeDefinition copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeDefinition
@@ -223,6 +222,7 @@ public interface AttributeDefinition {
             com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setLevel(template.getLevel());
         return instance;
     }
 
@@ -257,8 +257,8 @@ public interface AttributeDefinition {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
+    public static tools.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeDefinition>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeDefinition>";

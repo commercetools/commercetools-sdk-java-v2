@@ -25,7 +25,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *  <p>Address that was added during the Add Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was added during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Address that was added during the Add Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was added during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Address that was added during the Add Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was added during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Address that was added during the Add Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was added during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
      * @return address
      */
 

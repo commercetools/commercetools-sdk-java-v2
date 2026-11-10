@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountValueGiftLineItem
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("giftLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueGiftLineItemImpl.class)
 public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDiscountValueGiftLineItemMixin {
@@ -50,7 +52,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public ProductReference getProduct();
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @return variantId
      */
     @NotNull
@@ -58,7 +60,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public Long getVariantId();
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -66,7 +68,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
     @Valid
@@ -82,21 +84,21 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
 
@@ -123,6 +125,8 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public CartDiscountValueGiftLineItem copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountValueGiftLineItem
@@ -175,8 +179,8 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountValueGiftLineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountValueGiftLineItem>";

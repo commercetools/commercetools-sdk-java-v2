@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generates the ProductTailoringDescriptionSet Message.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringDescriptionSetMessage" rel="nofollow">ProductTailoringDescriptionSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetDescriptionActionImpl.class)
 public interface ProductTailoringSetDescriptionAction extends ProductTailoringUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
     public LocalizedString getDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @return staged
      */
 
@@ -52,14 +54,14 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -84,6 +86,8 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetDescriptionAction
@@ -135,8 +139,8 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetDescriptionAction>";

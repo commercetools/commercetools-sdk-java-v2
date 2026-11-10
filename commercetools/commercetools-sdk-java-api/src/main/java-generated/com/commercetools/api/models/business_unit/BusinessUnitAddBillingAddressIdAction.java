@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a billing address to a Business Unit generates a BusinessUnitBillingAddressAdded Message.</p>
+ *  <p>Adding a billing address to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitBillingAddressAddedMessage" rel="nofollow">BusinessUnitBillingAddressAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addBillingAddressId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAddBillingAddressIdActionImpl.class)
 public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdateAction {
@@ -83,6 +85,8 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
         return instance;
     }
 
+    public BusinessUnitAddBillingAddressIdAction copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitAddBillingAddressIdAction
      * @param template instance to be copied
@@ -132,8 +136,8 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddBillingAddressIdAction>";

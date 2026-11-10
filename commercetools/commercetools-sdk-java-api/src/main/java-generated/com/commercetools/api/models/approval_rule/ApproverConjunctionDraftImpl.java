@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApproverConjunctionDraft
@@ -40,7 +41,7 @@ public class ApproverConjunctionDraftImpl implements ApproverConjunctionDraft, M
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.ApproverDisjunctionDraft> getAnd() {
@@ -78,4 +79,8 @@ public class ApproverConjunctionDraftImpl implements ApproverConjunctionDraft, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("and", and).build();
     }
 
+    @Override
+    public ApproverConjunctionDraft copyDeep() {
+        return ApproverConjunctionDraft.deepCopy(this);
+    }
 }

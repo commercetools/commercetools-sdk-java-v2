@@ -10,9 +10,10 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.Order;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrder
@@ -76,6 +77,7 @@ public interface StagedOrder extends Order {
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -91,6 +93,7 @@ public interface StagedOrder extends Order {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(template.getRefusedGifts());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setCountry(template.getCountry());
@@ -98,12 +101,14 @@ public interface StagedOrder extends Order {
         instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setRecurringOrder(template.getRecurringOrder());
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
         instance.setState(template.getState());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
         instance.setCompletedAt(template.getCompletedAt());
@@ -111,6 +116,8 @@ public interface StagedOrder extends Order {
         instance.setCreatedBy(template.getCreatedBy());
         return instance;
     }
+
+    public StagedOrder copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrder
@@ -147,12 +154,14 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
         instance.setDiscountOnTotalPrice(
             com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -187,6 +196,7 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
@@ -198,6 +208,8 @@ public interface StagedOrder extends Order {
         instance.setOrigin(template.getOrigin());
         instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
         instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
+        instance.setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference
+                .deepCopy(template.getRecurringOrder()));
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
@@ -212,6 +224,8 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDiscountTypeCombination(
+            com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setCompletedAt(template.getCompletedAt());
@@ -252,8 +266,8 @@ public interface StagedOrder extends Order {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrder> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrder>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrder> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrder>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrder>";

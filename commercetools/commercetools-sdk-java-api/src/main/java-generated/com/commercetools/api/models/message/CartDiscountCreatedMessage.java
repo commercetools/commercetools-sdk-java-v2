@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscount;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create CartDiscount request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartDiscountCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountCreatedMessageImpl.class)
 public interface CartDiscountCreatedMessage extends Message {
@@ -45,7 +47,7 @@ public interface CartDiscountCreatedMessage extends Message {
     String CART_DISCOUNT_CREATED = "CartDiscountCreated";
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @return cartDiscount
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface CartDiscountCreatedMessage extends Message {
     public CartDiscount getCartDiscount();
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @param cartDiscount value to be set
      */
 
@@ -88,6 +90,8 @@ public interface CartDiscountCreatedMessage extends Message {
         instance.setCartDiscount(template.getCartDiscount());
         return instance;
     }
+
+    public CartDiscountCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountCreatedMessage
@@ -148,8 +152,8 @@ public interface CartDiscountCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountCreatedMessage>";

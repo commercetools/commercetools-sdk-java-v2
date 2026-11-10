@@ -35,6 +35,10 @@ public class MyCartUpdateActionBuilder {
         return com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionBuilder.of();
     }
 
+    public com.commercetools.api.models.me.MyCartChangeLineItemsOrderActionBuilder changeLineItemsOrderBuilder() {
+        return com.commercetools.api.models.me.MyCartChangeLineItemsOrderActionBuilder.of();
+    }
+
     public com.commercetools.api.models.me.MyCartChangeTaxModeActionBuilder changeTaxModeBuilder() {
         return com.commercetools.api.models.me.MyCartChangeTaxModeActionBuilder.of();
     }

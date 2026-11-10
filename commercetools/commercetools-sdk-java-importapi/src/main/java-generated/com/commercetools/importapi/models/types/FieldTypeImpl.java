@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * FieldType
+ *  <p>Defines the data type of a Custom Field. Maps to <code>Type.FieldDefinition.type</code>. The <code>discriminator</code> is used to determine the type of the field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldTypeImpl implements FieldType, ModelBase {
@@ -39,7 +40,7 @@ public class FieldTypeImpl implements FieldType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field. This value can't be changed after you import the Type.</p>
      */
 
     public String getName() {
@@ -69,4 +70,8 @@ public class FieldTypeImpl implements FieldType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public FieldType copyDeep() {
+        return FieldType.deepCopy(this);
+    }
 }

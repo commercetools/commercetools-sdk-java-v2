@@ -6,16 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
+ *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
+ *  <p>This update is not allowed when the Cart is <span>frozen</span> with the <code>HardFreeze</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingMethodActionImpl.class)
 public interface CartSetShippingMethodAction extends CartUpdateAction {
@@ -36,8 +39,14 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @return shippingMethod
      */
     @Valid
@@ -45,7 +54,7 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -53,19 +62,40 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
+
+    /**
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param shippingMethod value to be set
      */
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
 
     /**
      * factory method
@@ -84,8 +114,11 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
         CartSetShippingMethodActionImpl instance = new CartSetShippingMethodActionImpl();
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
+
+    public CartSetShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetShippingMethodAction
@@ -102,6 +135,8 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
                 .deepCopy(template.getShippingMethod()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 
@@ -136,8 +171,8 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetShippingMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetShippingMethodAction>";

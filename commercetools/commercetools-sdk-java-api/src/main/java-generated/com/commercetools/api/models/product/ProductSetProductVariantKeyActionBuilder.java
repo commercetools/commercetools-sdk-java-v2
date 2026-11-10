@@ -57,7 +57,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -109,7 +109,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @return staged
      */
 

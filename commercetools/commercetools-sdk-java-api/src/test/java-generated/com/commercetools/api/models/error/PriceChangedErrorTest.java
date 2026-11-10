@@ -3,32 +3,25 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PriceChangedErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PriceChangedErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PriceChangedErrorBuilder builder) {
         PriceChangedError priceChangedError = builder.buildUnchecked();
         Assertions.assertThat(priceChangedError).isInstanceOf(PriceChangedError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { PriceChangedError.builder().message("message") },
-                new Object[] { PriceChangedError.builder().lineItems(Collections.singletonList("lineItems")) },
-                new Object[] { PriceChangedError.builder().shipping(true) } };
+        return new Object[][] { new Object[] { "message", PriceChangedError.builder().message("message") },
+                new Object[] { "lineItems",
+                        PriceChangedError.builder().lineItems(Collections.singletonList("lineItems")) },
+                new Object[] { "shipping", PriceChangedError.builder().shipping(true) } };
     }
 
     @Test

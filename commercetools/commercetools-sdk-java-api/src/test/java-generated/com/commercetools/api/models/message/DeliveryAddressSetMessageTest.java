@@ -1,35 +1,30 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DeliveryAddressSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DeliveryAddressSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DeliveryAddressSetMessageBuilder builder) {
         DeliveryAddressSetMessage deliveryAddressSetMessage = builder.buildUnchecked();
         Assertions.assertThat(deliveryAddressSetMessage).isInstanceOf(DeliveryAddressSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DeliveryAddressSetMessage.builder().deliveryId("deliveryId") },
-                new Object[] { DeliveryAddressSetMessage.builder()
-                        .address(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { DeliveryAddressSetMessage.builder()
-                        .oldAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { DeliveryAddressSetMessage.builder().shippingKey("shippingKey") } };
+        return new Object[][] {
+                new Object[] { "deliveryId", DeliveryAddressSetMessage.builder().deliveryId("deliveryId") },
+                new Object[] { "address",
+                        DeliveryAddressSetMessage.builder()
+                                .address(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "oldAddress",
+                        DeliveryAddressSetMessage.builder()
+                                .oldAddress(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "shippingKey", DeliveryAddressSetMessage.builder().shippingKey("shippingKey") } };
     }
 
     @Test

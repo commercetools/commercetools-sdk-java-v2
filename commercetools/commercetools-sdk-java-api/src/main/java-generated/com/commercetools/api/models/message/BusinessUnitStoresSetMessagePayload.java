@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Stores update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitStoresSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitStoresSetMessagePayloadImpl.class)
 public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
@@ -39,7 +41,7 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     String BUSINESS_UNIT_STORES_SET = "BusinessUnitStoresSet";
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return stores
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     public List<StoreKeyReference> getStores();
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores values to be set
      */
 
@@ -56,7 +58,7 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores values to be set
      */
 
@@ -80,6 +82,8 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public BusinessUnitStoresSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitStoresSetMessagePayload
@@ -133,8 +137,8 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoresSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoresSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitStoresSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitStoresSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitStoresSetMessagePayload>";

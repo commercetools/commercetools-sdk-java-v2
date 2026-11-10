@@ -7,20 +7,22 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CustomLineItemPriceMode;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Custom Line Items contain generic user-defined items that are not linked to Products.</p>
@@ -54,7 +56,7 @@ public interface CustomLineItemImportDraft
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @return key
      */
 
@@ -70,7 +72,7 @@ public interface CustomLineItemImportDraft
     public String getSlug();
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @return quantity
      */
     @NotNull
@@ -79,6 +81,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
     @NotNull
@@ -87,12 +90,21 @@ public interface CustomLineItemImportDraft
     public Money getMoney();
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
      * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
+
+    /**
+     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @return taxedPrice
+     */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedPriceDraft getTaxedPrice();
 
     /**
      *  <p>Include a value to associate a Tax Category with the Custom Line Item.</p>
@@ -104,7 +116,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode
@@ -130,7 +142,7 @@ public interface CustomLineItemImportDraft
     public List<ItemState> getState();
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @return custom
      */
     @Valid
@@ -145,7 +157,7 @@ public interface CustomLineItemImportDraft
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @param key value to be set
      */
 
@@ -159,7 +171,7 @@ public interface CustomLineItemImportDraft
     public void setSlug(final String slug);
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @param quantity value to be set
      */
 
@@ -167,17 +179,26 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      */
 
     public void setMoney(final Money money);
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @param taxedPrice value to be set
+     */
+
+    public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
      *  <p>Include a value to associate a Tax Category with the Custom Line Item.</p>
@@ -188,7 +209,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
@@ -219,7 +240,7 @@ public interface CustomLineItemImportDraft
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param custom value to be set
      */
 
@@ -246,6 +267,7 @@ public interface CustomLineItemImportDraft
         instance.setQuantity(template.getQuantity());
         instance.setMoney(template.getMoney());
         instance.setTaxRate(template.getTaxRate());
+        instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setPriceMode(template.getPriceMode());
         instance.setShippingDetails(template.getShippingDetails());
@@ -253,6 +275,8 @@ public interface CustomLineItemImportDraft
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public CustomLineItemImportDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItemImportDraft
@@ -271,6 +295,7 @@ public interface CustomLineItemImportDraft
         instance.setQuantity(template.getQuantity());
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
                 .deepCopy(template.getTaxCategory()));
         instance.setPriceMode(template.getPriceMode());
@@ -316,8 +341,8 @@ public interface CustomLineItemImportDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemImportDraft>";

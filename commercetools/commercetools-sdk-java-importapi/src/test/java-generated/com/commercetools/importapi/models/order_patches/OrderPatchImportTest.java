@@ -1,31 +1,23 @@
 
 package com.commercetools.importapi.models.order_patches;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderPatchImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderPatchImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderPatchImportBuilder builder) {
         OrderPatchImport orderPatchImport = builder.buildUnchecked();
         Assertions.assertThat(orderPatchImport).isInstanceOf(OrderPatchImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderPatchImport.builder().orderNumber("orderNumber") },
-                new Object[] { OrderPatchImport.builder()
+        return new Object[][] { new Object[] { "orderNumber", OrderPatchImport.builder().orderNumber("orderNumber") },
+                new Object[] { "fields", OrderPatchImport.builder()
                         .fields(new com.commercetools.importapi.models.order_patches.OrderFieldImpl()) } };
     }
 

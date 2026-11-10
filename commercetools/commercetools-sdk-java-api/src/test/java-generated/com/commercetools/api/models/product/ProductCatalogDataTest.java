@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductCatalogDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductCatalogDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductCatalogDataBuilder builder) {
         ProductCatalogData productCatalogData = builder.buildUnchecked();
         Assertions.assertThat(productCatalogData).isInstanceOf(ProductCatalogData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductCatalogData.builder().published(true) },
-                new Object[] { ProductCatalogData.builder()
-                        .current(new com.commercetools.api.models.product.ProductDataImpl()) },
-                new Object[] { ProductCatalogData.builder()
-                        .staged(new com.commercetools.api.models.product.ProductDataImpl()) },
-                new Object[] { ProductCatalogData.builder().hasStagedChanges(true) } };
+        return new Object[][] { new Object[] { "published", ProductCatalogData.builder().published(true) },
+                new Object[] { "current",
+                        ProductCatalogData.builder()
+                                .current(new com.commercetools.api.models.product.ProductDataImpl()) },
+                new Object[] { "staged",
+                        ProductCatalogData.builder()
+                                .staged(new com.commercetools.api.models.product.ProductDataImpl()) },
+                new Object[] { "hasStagedChanges", ProductCatalogData.builder().hasStagedChanges(true) } };
     }
 
     @Test

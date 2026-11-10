@@ -12,15 +12,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
+ *  <p>Creates a ShoppingList for the authenticated Customer or anonymous user in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The <code>customer</code> or <code>anonymousId</code> field on the ShoppingList is automatically set based on the given <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
  *  <p>When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</p>
  *
  * <hr>
@@ -74,7 +75,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/shopping-lists", this.projectKey, this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/shopping-lists", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

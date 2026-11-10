@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +33,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     private com.commercetools.history.models.common.Price nextValue;
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String lineItemId;
 
     /**
      * set the value to the change
@@ -116,7 +119,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -128,7 +131,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -140,7 +143,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -148,6 +151,17 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     public SetLineItemPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetLineItemPriceChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
         return this;
     }
 
@@ -179,12 +193,21 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     /**
@@ -196,7 +219,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
         Objects.requireNonNull(previousValue, SetLineItemPriceChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLineItemPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemPriceChange.class + ": lineItem is missing");
-        return new SetLineItemPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        Objects.requireNonNull(lineItemId, SetLineItemPriceChange.class + ": lineItemId is missing");
+        return new SetLineItemPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
     }
 
     /**
@@ -204,7 +228,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
      * @return SetLineItemPriceChange
      */
     public SetLineItemPriceChange buildUnchecked() {
-        return new SetLineItemPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        return new SetLineItemPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
     }
 
     /**
@@ -226,6 +250,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
+        builder.lineItemId = template.getLineItemId();
         return builder;
     }
 

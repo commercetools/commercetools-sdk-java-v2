@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductChangeNameAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeNameActionImpl.class)
 public interface ProductChangeNameAction extends ProductUpdateAction {
@@ -47,7 +49,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @return staged
      */
 
@@ -62,7 +64,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -87,6 +89,8 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductChangeNameAction
@@ -135,8 +139,8 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangeNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangeNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangeNameAction>";

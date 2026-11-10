@@ -2,48 +2,9 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.22",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-core"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.17.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
             "moduleLicenses": [
                 {
@@ -79,38 +40,11 @@
             ]
         },
         {
-            "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "4.12.0",
-            "moduleUrls": [
-                "https://square.github.io/okhttp/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.6.0"
-        },
-        {
-            "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.6.0",
-            "moduleUrls": [
-                "https://github.com/square/okio/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -133,6 +67,36 @@
                 {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
+                }
+            ]
+        },
+        {
+            "moduleName": "jakarta.validation:jakarta.validation-api",
+            "moduleVersion": "3.1.1",
+            "moduleUrls": [
+                "https://beanvalidation.org",
+                "https://www.eclipse.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "Eclipse Public License - v 2.0",
+                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -159,31 +123,8 @@
             ]
         },
         {
-            "moduleName": "javax.validation:validation-api",
-            "moduleVersion": "2.0.1.Final",
-            "moduleUrls": [
-                "http://beanvalidation.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "net.bytebuddy:byte-buddy",
-            "moduleVersion": "1.14.9",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.14.0",
+            "moduleVersion": "3.20.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -196,7 +137,7 @@
         },
         {
             "moduleName": "org.javamoney.moneta:moneta-core",
-            "moduleVersion": "1.4.4",
+            "moduleVersion": "1.4.5",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"
@@ -209,82 +150,92 @@
             ]
         },
         {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.9.10",
+            "moduleName": "org.javassist:javassist",
+            "moduleVersion": "3.28.0-GA",
             "moduleUrls": [
-                "https://kotlinlang.org/"
+                "http://www.javassist.org/"
             ],
             "moduleLicenses": [
                 {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html"
+                },
+                {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/lgpl-2.1"
+                },
+                {
+                    "moduleLicense": "Mozilla Public License Version 1.1",
+                    "moduleLicenseUrl": "https://www.mozilla.org/en-US/MPL/1.1"
                 }
             ]
         },
         {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.9.10",
+            "moduleName": "org.reflections:reflections",
+            "moduleVersion": "0.10.2",
             "moduleUrls": [
-                "https://kotlinlang.org/"
+                "http://github.com/ronmamo/reflections"
             ],
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.9.10",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
+                },
                 {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.9.10",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains:annotations",
-            "moduleVersion": "13.0",
-            "moduleUrls": [
-                "http://www.jetbrains.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                    "moduleLicense": "WTFPL",
+                    "moduleLicenseUrl": "http://www.wtfpl.net/"
                 }
             ]
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.36",
+            "moduleVersion": "2.0.18",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],
             "moduleLicenses": [
                 {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "https://opensource.org/license/mit"
+                },
+                {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
                 }
             ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-core",
+            "moduleVersion": "3.2.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-core"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-databind",
+            "moduleVersion": "3.2.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

@@ -3,41 +3,35 @@ package com.commercetools.api.models.order;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderTransitionCustomLineItemStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderTransitionCustomLineItemStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderTransitionCustomLineItemStateActionBuilder builder) {
         OrderTransitionCustomLineItemStateAction orderTransitionCustomLineItemStateAction = builder.buildUnchecked();
         Assertions.assertThat(orderTransitionCustomLineItemStateAction)
                 .isInstanceOf(OrderTransitionCustomLineItemStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "customLineItemId",
                         OrderTransitionCustomLineItemStateAction.builder().customLineItemId("customLineItemId") },
-                new Object[] {
+                new Object[] { "customLineItemKey",
                         OrderTransitionCustomLineItemStateAction.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { OrderTransitionCustomLineItemStateAction.builder().quantity(8L) },
-                new Object[] { OrderTransitionCustomLineItemStateAction.builder()
-                        .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { OrderTransitionCustomLineItemStateAction.builder()
-                        .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { OrderTransitionCustomLineItemStateAction.builder()
+                new Object[] { "quantity", OrderTransitionCustomLineItemStateAction.builder().quantity(8L) },
+                new Object[] { "fromState",
+                        OrderTransitionCustomLineItemStateAction.builder()
+                                .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "toState",
+                        OrderTransitionCustomLineItemStateAction.builder()
+                                .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "actualTransitionDate", OrderTransitionCustomLineItemStateAction.builder()
                         .actualTransitionDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

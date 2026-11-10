@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TypeChangeLabelAction
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
 public interface TypeChangeLabelAction extends TypeUpdateAction {
@@ -39,7 +41,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     String CHANGE_LABEL = "changeLabel";
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     public String getFieldName();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @return label
      */
     @NotNull
@@ -56,14 +58,14 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      * @param label value to be set
      */
 
@@ -88,6 +90,8 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public TypeChangeLabelAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeChangeLabelAction
@@ -136,8 +140,8 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeChangeLabelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeChangeLabelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeChangeLabelAction>";

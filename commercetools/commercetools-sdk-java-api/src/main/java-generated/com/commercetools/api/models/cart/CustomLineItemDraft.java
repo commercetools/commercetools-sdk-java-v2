@@ -6,17 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomLineItemDraft
@@ -48,7 +50,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @return key
      */
 
@@ -65,6 +67,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
     @NotNull
@@ -81,7 +84,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public String getSlug();
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -89,7 +92,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -114,7 +117,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode
@@ -124,6 +127,14 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public CustomLineItemPriceMode getPriceMode();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public CustomLineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
      *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      */
@@ -131,7 +142,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @param key value to be set
      */
 
@@ -146,6 +157,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      */
 
@@ -159,14 +171,14 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public void setSlug(final String slug);
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This field is required for <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -188,13 +200,20 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
      */
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final CustomLineItemRecurrenceInfoDraft recurrenceInfo);
 
     /**
      * factory method
@@ -221,8 +240,11 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
+
+    public CustomLineItemDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItemDraft
@@ -248,6 +270,8 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 
@@ -282,8 +306,8 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemDraft>";

@@ -79,7 +79,7 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @param isMatching value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @return isMatching
      */
 

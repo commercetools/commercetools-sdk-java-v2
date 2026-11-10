@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListSetDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListSetDescriptionActionImpl.class)
 public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ShoppingListSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListSetDescriptionAction
@@ -116,8 +120,8 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListSetDescriptionAction>";

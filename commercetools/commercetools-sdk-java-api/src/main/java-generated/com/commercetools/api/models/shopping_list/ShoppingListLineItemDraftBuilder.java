@@ -45,7 +45,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     private Long quantity;
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -67,7 +67,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -78,7 +79,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -89,7 +90,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      * @return Builder
      */
@@ -100,7 +101,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -112,7 +113,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -124,7 +125,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -147,7 +148,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -157,7 +158,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -167,7 +168,8 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @return variantId
      */
 
@@ -177,7 +179,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -187,7 +189,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -197,7 +199,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @return custom
      */
 

@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Address;
 import com.commercetools.history.models.common.DeliveryItem;
 import com.commercetools.history.models.common.Parcel;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryChangeValue
@@ -38,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryChangeValue {
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return items
      */
     @NotNull
@@ -56,7 +57,7 @@ public interface DeliveryChangeValue {
     public Address getAddress();
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcels
      */
     @NotNull
@@ -65,7 +66,7 @@ public interface DeliveryChangeValue {
     public List<Parcel> getParcels();
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items values to be set
      */
 
@@ -73,7 +74,7 @@ public interface DeliveryChangeValue {
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items values to be set
      */
 
@@ -87,7 +88,7 @@ public interface DeliveryChangeValue {
     public void setAddress(final Address address);
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels values to be set
      */
 
@@ -95,7 +96,7 @@ public interface DeliveryChangeValue {
     public void setParcels(final Parcel... parcels);
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels values to be set
      */
 
@@ -121,6 +122,8 @@ public interface DeliveryChangeValue {
         instance.setParcels(template.getParcels());
         return instance;
     }
+
+    public DeliveryChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of DeliveryChangeValue
@@ -178,8 +181,8 @@ public interface DeliveryChangeValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryChangeValue>";

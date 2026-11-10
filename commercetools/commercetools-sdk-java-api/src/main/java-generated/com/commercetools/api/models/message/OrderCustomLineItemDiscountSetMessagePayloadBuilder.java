@@ -37,7 +37,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     *  <p>Unique identifier for the Custom Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -165,7 +165,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier for the Custom Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -198,7 +198,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -208,7 +208,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
 
@@ -217,7 +217,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> after the Discount recalculation.</p>
      * @return taxedPrice
      */
 

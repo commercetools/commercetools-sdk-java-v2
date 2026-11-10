@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a Shipping Method for a specified shipping address to a Cart with <code>Multiple</code> ShippingMode.</p>
+ *  <p>Adds a Shipping Method for a specified shipping address to a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAction, ModelBase {
@@ -38,6 +39,8 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      * create instance with all properties
      */
@@ -48,7 +51,8 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("estimatedDelivery") final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
         this.shippingKey = shippingKey;
         this.shippingMethod = shippingMethod;
         this.shippingAddress = shippingAddress;
@@ -56,6 +60,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
         this.externalTaxRate = externalTaxRate;
         this.deliveries = deliveries;
         this.custom = custom;
+        this.estimatedDelivery = estimatedDelivery;
         this.action = ADD_SHIPPING_METHOD;
     }
 
@@ -75,7 +80,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
     }
 
     /**
-     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {
@@ -83,7 +88,13 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -99,10 +110,10 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      */
@@ -112,7 +123,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -133,6 +144,14 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     */
+
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
     }
 
     public void setShippingKey(final String shippingKey) {
@@ -168,6 +187,10 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
         this.custom = custom;
     }
 
+    public void setEstimatedDelivery(final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -186,6 +209,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .append(action, that.action)
                 .append(shippingKey, that.shippingKey)
                 .append(shippingMethod, that.shippingMethod)
@@ -194,6 +218,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .isEquals();
     }
 
@@ -207,6 +232,7 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
                 .append(externalTaxRate)
                 .append(deliveries)
                 .append(custom)
+                .append(estimatedDelivery)
                 .toHashCode();
     }
 
@@ -220,7 +246,12 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
                 .append("externalTaxRate", externalTaxRate)
                 .append("deliveries", deliveries)
                 .append("custom", custom)
+                .append("estimatedDelivery", estimatedDelivery)
                 .build();
     }
 
+    @Override
+    public CartAddShippingMethodAction copyDeep() {
+        return CartAddShippingMethodAction.deepCopy(this);
+    }
 }

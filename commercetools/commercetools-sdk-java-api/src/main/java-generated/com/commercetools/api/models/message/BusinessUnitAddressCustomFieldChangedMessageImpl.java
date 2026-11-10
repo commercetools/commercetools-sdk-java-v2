@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after changing an existing Custom Field on an address of a Business Unit using the Set Address CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on an address of a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address CustomField</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressCustomFieldChangedMessageImpl
@@ -51,6 +52,8 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
 
     private java.lang.Object oldValue;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -66,7 +69,8 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value,
-            @JsonProperty("oldValue") final java.lang.Object oldValue) {
+            @JsonProperty("oldValue") final java.lang.Object oldValue,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +84,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
         this.name = name;
         this.value = value;
         this.oldValue = oldValue;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_CHANGED;
     }
 
@@ -147,7 +152,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -163,7 +168,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -187,7 +192,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      */
 
     public java.lang.Object getValue() {
@@ -195,11 +200,19 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      */
 
     public java.lang.Object getOldValue() {
         return this.oldValue;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     public void setId(final String id) {
@@ -255,6 +268,10 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
         this.oldValue = oldValue;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -279,6 +296,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(oldValue, that.oldValue)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -293,6 +311,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(oldValue, that.oldValue)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -312,6 +331,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name)
                 .append(value)
                 .append(oldValue)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -331,7 +351,12 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append("name", name)
                 .append("value", value)
                 .append("oldValue", oldValue)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomFieldChangedMessage copyDeep() {
+        return BusinessUnitAddressCustomFieldChangedMessage.deepCopy(this);
+    }
 }

@@ -5,10 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ApiRoot;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -19,28 +15,26 @@ import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mockito;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyProductTailoringTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
     private final static ApiRoot apiRoot = ApiRoot.of();
     private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
-    @TestTemplate
-    @UseDataProvider("requestWithMethodParameters")
+    @ParameterizedTest
+    @MethodSource("requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
         Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
         Assertions.assertThat(uri).isEqualTo(request.getUri().toString());
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -50,8 +44,8 @@ public class ByProjectKeyProductTailoringTest {
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -61,9 +55,13 @@ public class ByProjectKeyProductTailoringTest {
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
-    @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTailoring()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "test_projectKey/product-tailoring?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .get()
@@ -87,11 +85,6 @@ public class ByProjectKeyProductTailoringTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .get()
-                        .withWithTotal(true)
-                        .createHttpRequest(), "get", "test_projectKey/product-tailoring?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productTailoring()
-                        .get()
                         .withWhere("where")
                         .createHttpRequest(), "get", "test_projectKey/product-tailoring?where=where", },
                 new Object[] {
@@ -105,6 +98,13 @@ public class ByProjectKeyProductTailoringTest {
                         "get", "test_projectKey/product-tailoring", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-tailoring?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().head().createHttpRequest(),
+                        "head", "test_projectKey/product-tailoring", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTailoring()
                         .post(com.commercetools.api.models.product_tailoring.ProductTailoringDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/product-tailoring?expand=expand", },
@@ -114,22 +114,24 @@ public class ByProjectKeyProductTailoringTest {
                         .createHttpRequest(), "post", "test_projectKey/product-tailoring", } };
     }
 
-    @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWithTotal(true), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").productTailoring().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withOffset(3), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productTailoring().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .post(com.commercetools.api.models.product_tailoring.ProductTailoringDraft.of())

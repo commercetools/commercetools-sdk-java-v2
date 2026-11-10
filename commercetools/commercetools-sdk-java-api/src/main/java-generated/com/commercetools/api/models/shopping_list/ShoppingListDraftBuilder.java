@@ -54,6 +54,9 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -127,7 +130,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -140,7 +143,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -152,7 +155,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -211,7 +214,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -222,7 +225,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -419,7 +422,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -431,7 +434,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -443,7 +446,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -451,6 +454,45 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     public ShoppingListDraftBuilder store(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param businessUnit value to be set
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
         return this;
     }
 
@@ -509,7 +551,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @return customer
      */
 
@@ -539,7 +581,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @return anonymousId
      */
 
@@ -549,7 +591,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -579,13 +621,23 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return store
      */
 
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @return businessUnit
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -605,7 +657,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     public ShoppingListDraft build() {
         Objects.requireNonNull(name, ShoppingListDraft.class + ": name is missing");
         return new ShoppingListDraftImpl(name, slug, customer, key, description, anonymousId,
-            deleteDaysAfterLastModification, lineItems, textLineItems, store, custom);
+            deleteDaysAfterLastModification, lineItems, textLineItems, store, businessUnit, custom);
     }
 
     /**
@@ -614,7 +666,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
      */
     public ShoppingListDraft buildUnchecked() {
         return new ShoppingListDraftImpl(name, slug, customer, key, description, anonymousId,
-            deleteDaysAfterLastModification, lineItems, textLineItems, store, custom);
+            deleteDaysAfterLastModification, lineItems, textLineItems, store, businessUnit, custom);
     }
 
     /**
@@ -642,6 +694,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         builder.lineItems = template.getLineItems();
         builder.textLineItems = template.getTextLineItems();
         builder.store = template.getStore();
+        builder.businessUnit = template.getBusinessUnit();
         builder.custom = template.getCustom();
         return builder;
     }

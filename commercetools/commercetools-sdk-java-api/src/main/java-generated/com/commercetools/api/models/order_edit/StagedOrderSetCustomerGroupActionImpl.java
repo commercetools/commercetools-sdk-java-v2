@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart has the same Customer Group as the assigned Customer.</p>
- *  <p>Setting the Customer Group also updates the LineItem <code>prices</code> according to the Customer Group.</p>
+ *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>
+ *  <p>To reflect the new Customer Group, this update action can result in <span>updates to the Cart</span>. When this occurs, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCustomerGroupAction, ModelBase {
@@ -53,7 +54,7 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -94,4 +95,8 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomerGroupAction copyDeep() {
+        return StagedOrderSetCustomerGroupAction.deepCopy(this);
+    }
 }

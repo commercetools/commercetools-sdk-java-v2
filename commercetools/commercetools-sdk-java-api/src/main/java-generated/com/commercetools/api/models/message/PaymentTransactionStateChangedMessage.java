@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.TransactionState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change TransactionState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change TransactionState</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentTransactionStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentTransactionStateChangedMessageImpl.class)
 public interface PaymentTransactionStateChangedMessage extends Message {
@@ -45,7 +47,7 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @return transactionId
      */
     @NotNull
@@ -53,7 +55,7 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     public String getTransactionId();
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @return state
      */
     @NotNull
@@ -61,14 +63,14 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     public TransactionState getState();
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @param transactionId value to be set
      */
 
     public void setTransactionId(final String transactionId);
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @param state value to be set
      */
 
@@ -103,6 +105,8 @@ public interface PaymentTransactionStateChangedMessage extends Message {
         instance.setState(template.getState());
         return instance;
     }
+
+    public PaymentTransactionStateChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentTransactionStateChangedMessage
@@ -165,8 +169,8 @@ public interface PaymentTransactionStateChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentTransactionStateChangedMessage>";

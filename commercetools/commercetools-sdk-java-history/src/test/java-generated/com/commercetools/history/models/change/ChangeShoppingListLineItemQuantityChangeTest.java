@@ -1,34 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeShoppingListLineItemQuantityChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeShoppingListLineItemQuantityChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeShoppingListLineItemQuantityChangeBuilder builder) {
         ChangeShoppingListLineItemQuantityChange changeShoppingListLineItemQuantityChange = builder.buildUnchecked();
         Assertions.assertThat(changeShoppingListLineItemQuantityChange)
                 .isInstanceOf(ChangeShoppingListLineItemQuantityChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeShoppingListLineItemQuantityChange.builder().change("change") },
-                new Object[] { ChangeShoppingListLineItemQuantityChange.builder().previousValue(8) },
-                new Object[] { ChangeShoppingListLineItemQuantityChange.builder().nextValue(7) },
-                new Object[] { ChangeShoppingListLineItemQuantityChange.builder()
+        return new Object[][] {
+                new Object[] { "change", ChangeShoppingListLineItemQuantityChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeShoppingListLineItemQuantityChange.builder().previousValue(8) },
+                new Object[] { "nextValue", ChangeShoppingListLineItemQuantityChange.builder().nextValue(7) },
+                new Object[] { "lineItem", ChangeShoppingListLineItemQuantityChange.builder()
                         .lineItem(
                             new com.commercetools.history.models.change_value.ShoppingListLineItemValueImpl()) } };
     }

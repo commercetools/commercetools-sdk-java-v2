@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Used when the ShippingRate maps to the sum of LineItem Prices. The value of the Cart is used to select a tier. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the Cart.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to the value of the Cart and is used to select a tier. The value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is the sum of all Line Item totals and Custom Line Item totals (via the <code>totalPrice</code> field) after any Product Discounts and Cart Discounts have been applied. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartValueTypeImpl.class)
 public interface CartValueType extends ShippingRateInputType {
@@ -50,6 +52,8 @@ public interface CartValueType extends ShippingRateInputType {
         CartValueTypeImpl instance = new CartValueTypeImpl();
         return instance;
     }
+
+    public CartValueType copyDeep();
 
     /**
      * factory method to create a deep copy of CartValueType
@@ -96,8 +100,8 @@ public interface CartValueType extends ShippingRateInputType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartValueType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartValueType>() {
+    public static tools.jackson.core.type.TypeReference<CartValueType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartValueType>() {
             @Override
             public String toString() {
                 return "TypeReference<CartValueType>";

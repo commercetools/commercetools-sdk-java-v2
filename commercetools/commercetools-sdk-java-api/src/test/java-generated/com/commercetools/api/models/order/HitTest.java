@@ -1,31 +1,24 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class HitTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(HitBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, HitBuilder builder) {
         Hit hit = builder.buildUnchecked();
         Assertions.assertThat(hit).isInstanceOf(Hit.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Hit.builder().id("id") }, new Object[] { Hit.builder().version(2L) },
-                new Object[] { Hit.builder().relevance(0.5586561) } };
+        return new Object[][] { new Object[] { "id", Hit.builder().id("id") },
+                new Object[] { "version", Hit.builder().version(2L) },
+                new Object[] { "relevance", Hit.builder().relevance(0.5586561) } };
     }
 
     @Test

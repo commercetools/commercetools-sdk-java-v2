@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
- *  <p>The error is returned as a failed response to the Remove EnumValues from AttributeDefinition update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeRemoveEnumValuesAction" rel="nofollow">Remove EnumValues from AttributeDefinition</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EnumValueIsUsed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLEnumValueIsUsedErrorImpl.class)
 public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
@@ -61,6 +63,8 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLEnumValueIsUsedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLEnumValueIsUsedError
@@ -108,8 +112,8 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLEnumValueIsUsedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLEnumValueIsUsedError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLEnumValueIsUsedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLEnumValueIsUsedError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLEnumValueIsUsedError>";

@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customTypeId("{customTypeId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,6 +37,8 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
     private String customLineItemId;
+
+    private String customTypeId;
 
     /**
      * set the value to the change
@@ -71,7 +74,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -82,7 +85,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -95,7 +98,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -107,7 +110,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -119,13 +122,24 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
         return this;
     }
 
@@ -157,7 +171,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -166,7 +180,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
 
@@ -175,12 +189,21 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
     }
 
     /**
@@ -196,8 +219,9 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
             SetCustomLineItemCustomFieldChange.class + ": customLineItem is missing");
         Objects.requireNonNull(customLineItemId,
             SetCustomLineItemCustomFieldChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customTypeId, SetCustomLineItemCustomFieldChange.class + ": customTypeId is missing");
         return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
-            customLineItemId);
+            customLineItemId, customTypeId);
     }
 
     /**
@@ -206,7 +230,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
      */
     public SetCustomLineItemCustomFieldChange buildUnchecked() {
         return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
-            customLineItemId);
+            customLineItemId, customTypeId);
     }
 
     /**
@@ -230,6 +254,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
         builder.name = template.getName();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customTypeId = template.getCustomTypeId();
         return builder;
     }
 

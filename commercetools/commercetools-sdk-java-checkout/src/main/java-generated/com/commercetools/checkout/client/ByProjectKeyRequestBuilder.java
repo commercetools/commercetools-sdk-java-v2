@@ -1,0 +1,42 @@
+
+package com.commercetools.checkout.client;
+
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyRequestBuilder {
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+
+    public ByProjectKeyRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyPaymentIntentsRequestBuilder paymentIntents() {
+        return new ByProjectKeyPaymentIntentsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyTransactionsRequestBuilder transactions() {
+        return new ByProjectKeyTransactionsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyRecurringPaymentJobsRequestBuilder recurringPaymentJobs() {
+        return new ByProjectKeyRecurringPaymentJobsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyRecurringPaymentsRequestBuilder recurringPayments() {
+        return new ByProjectKeyRecurringPaymentsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations() {
+        return new ByProjectKeyPaymentIntegrationsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyApplicationsRequestBuilder applications() {
+        return new ByProjectKeyApplicationsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+}

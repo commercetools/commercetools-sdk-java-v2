@@ -22,6 +22,18 @@ public interface AttributionSource extends JsonEnum {
     /**
     <p>Resource was created or updated during export.</p> */
     AttributionSource EXPORT = AttributionSourceEnum.EXPORT;
+    /**
+    <p>Resource was created or updated by Intake.</p> */
+    AttributionSource INTAKE_AGENT = AttributionSourceEnum.INTAKE_AGENT;
+    /**
+    <p>Resource was created or updated by Promotions Agent.</p> */
+    AttributionSource PROMOTIONS_AGENT = AttributionSourceEnum.PROMOTIONS_AGENT;
+    /**
+    <p>Resource was created or updated through the Managed Commerce MCP.</p> */
+    AttributionSource MANAGED_COMMERCE_MCP = AttributionSourceEnum.MANAGED_COMMERCE_MCP;
+    /**
+    <p>Resource was created or updated by Product Enrichment Agent.</p> */
+    AttributionSource PRODUCT_ENRICHMENT_AGENT = AttributionSourceEnum.PRODUCT_ENRICHMENT_AGENT;
 
     /**
      * possible values of AttributionSource
@@ -35,7 +47,27 @@ public interface AttributionSource extends JsonEnum {
         /**
          * Export
          */
-        EXPORT("Export");
+        EXPORT("Export"),
+
+        /**
+         * IntakeAgent
+         */
+        INTAKE_AGENT("IntakeAgent"),
+
+        /**
+         * PromotionsAgent
+         */
+        PROMOTIONS_AGENT("PromotionsAgent"),
+
+        /**
+         * ManagedCommerceMCP
+         */
+        MANAGED_COMMERCE_MCP("ManagedCommerceMCP"),
+
+        /**
+         * ProductEnrichmentAgent
+         */
+        PRODUCT_ENRICHMENT_AGENT("ProductEnrichmentAgent");
         private final String jsonName;
 
         private AttributionSourceEnum(final String jsonName) {

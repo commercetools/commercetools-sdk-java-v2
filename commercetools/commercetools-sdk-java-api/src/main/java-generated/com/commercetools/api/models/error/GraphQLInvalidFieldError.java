@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a field has an invalid value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidFieldErrorImpl.class)
 public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
@@ -118,6 +120,8 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
         return instance;
     }
 
+    public GraphQLInvalidFieldError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLInvalidFieldError
      * @param template instance to be copied
@@ -167,8 +171,8 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLInvalidFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLInvalidFieldError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLInvalidFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLInvalidFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLInvalidFieldError>";

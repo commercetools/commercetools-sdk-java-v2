@@ -1,35 +1,27 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderExcerptTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderExcerptBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderExcerptBuilder builder) {
         OrderExcerpt orderExcerpt = builder.buildUnchecked();
         Assertions.assertThat(orderExcerpt).isInstanceOf(OrderExcerpt.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "totalPrice",
                         OrderExcerpt.builder().totalPrice(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] {
+                new Object[] { "taxedPrice",
                         OrderExcerpt.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
-                new Object[] { OrderExcerpt.builder().version(2L) } };
+                new Object[] { "version", OrderExcerpt.builder().version(2L) } };
     }
 
     @Test

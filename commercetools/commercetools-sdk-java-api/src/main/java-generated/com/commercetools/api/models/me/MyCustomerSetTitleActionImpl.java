@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
+ *  <p>Setting the title of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerTitleSetMessage" rel="nofollow">CustomerTitleSetMessage</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, ModelBase {
@@ -51,7 +52,7 @@ public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, M
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public String getTitle() {
@@ -91,4 +92,8 @@ public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, M
                 .build();
     }
 
+    @Override
+    public MyCustomerSetTitleAction copyDeep() {
+        return MyCustomerSetTitleAction.deepCopy(this);
+    }
 }

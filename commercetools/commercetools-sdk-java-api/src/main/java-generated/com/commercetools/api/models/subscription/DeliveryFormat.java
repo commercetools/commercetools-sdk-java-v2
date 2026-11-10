@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryFormat
@@ -26,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.CloudEventsFormatImpl.class, name = CloudEventsFormat.CLOUD_EVENTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.PlatformFormatImpl.class, name = PlatformFormat.PLATFORM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DeliveryFormatImpl.class, visible = true)
 @JsonDeserialize(as = DeliveryFormatImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface DeliveryFormat {
     @JsonProperty("type")
     public String getType();
 
+    public DeliveryFormat copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryFormat
      * @param template instance to be copied
@@ -52,13 +52,9 @@ public interface DeliveryFormat {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.CloudEventsFormat) {
-            return com.commercetools.api.models.subscription.CloudEventsFormat
-                    .deepCopy((com.commercetools.api.models.subscription.CloudEventsFormat) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.PlatformFormat) {
-            return com.commercetools.api.models.subscription.PlatformFormat
-                    .deepCopy((com.commercetools.api.models.subscription.PlatformFormat) template);
+
+        if (!(template instanceof DeliveryFormatImpl)) {
+            return template.copyDeep();
         }
         DeliveryFormatImpl instance = new DeliveryFormatImpl();
         return instance;
@@ -94,8 +90,8 @@ public interface DeliveryFormat {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryFormat> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryFormat>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryFormat>";

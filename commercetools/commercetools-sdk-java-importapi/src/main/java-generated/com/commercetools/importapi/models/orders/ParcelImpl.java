@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Parcel
@@ -58,7 +59,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getId() {
@@ -66,7 +67,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -74,7 +75,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -82,7 +83,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
@@ -90,7 +91,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -98,7 +99,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -180,4 +181,8 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .build();
     }
 
+    @Override
+    public Parcel copyDeep() {
+        return Parcel.deepCopy(this);
+    }
 }

@@ -184,7 +184,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -346,7 +346,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -374,7 +374,7 @@ public class BusinessUnitCreatedMessageBuilder implements Builder<BusinessUnitCr
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @return businessUnit
      */
 

@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartChangeLineItemQuantityActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartChangeLineItemQuantityActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartChangeLineItemQuantityActionBuilder builder) {
         CartChangeLineItemQuantityAction cartChangeLineItemQuantityAction = builder.buildUnchecked();
         Assertions.assertThat(cartChangeLineItemQuantityAction).isInstanceOf(CartChangeLineItemQuantityAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
-                new Object[] { CartChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { CartChangeLineItemQuantityAction.builder().quantity(8L) },
-                new Object[] { CartChangeLineItemQuantityAction.builder()
-                        .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CartChangeLineItemQuantityAction.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", CartChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", CartChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", CartChangeLineItemQuantityAction.builder().quantity(8L) },
+                new Object[] { "externalPrice",
+                        CartChangeLineItemQuantityAction.builder()
+                                .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTotalPrice", CartChangeLineItemQuantityAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) } };
     }
 

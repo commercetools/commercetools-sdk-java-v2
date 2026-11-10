@@ -24,7 +24,7 @@ public class ProductDiscountKeyReferenceBuilder implements Builder<ProductDiscou
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced ProductDiscount.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ProductDiscountKeyReferenceBuilder implements Builder<ProductDiscou
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced ProductDiscount.</p>
      * @return key
      */
 

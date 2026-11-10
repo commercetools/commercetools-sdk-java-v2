@@ -4,51 +4,45 @@ package com.commercetools.api.models.me;
 import java.time.LocalDate;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCustomerDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCustomerDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCustomerDraftBuilder builder) {
         MyCustomerDraft myCustomerDraft = builder.buildUnchecked();
         Assertions.assertThat(myCustomerDraft).isInstanceOf(MyCustomerDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCustomerDraft.builder().email("email") },
-                new Object[] { MyCustomerDraft.builder().password("password") },
-                new Object[] { MyCustomerDraft.builder().firstName("firstName") },
-                new Object[] { MyCustomerDraft.builder().lastName("lastName") },
-                new Object[] { MyCustomerDraft.builder().middleName("middleName") },
-                new Object[] { MyCustomerDraft.builder().title("title") },
-                new Object[] { MyCustomerDraft.builder().salutation("salutation") },
-                new Object[] { MyCustomerDraft.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
-                new Object[] { MyCustomerDraft.builder().companyName("companyName") },
-                new Object[] { MyCustomerDraft.builder().vatId("vatId") },
-                new Object[] {
+        return new Object[][] { new Object[] { "email", MyCustomerDraft.builder().email("email") },
+                new Object[] { "password", MyCustomerDraft.builder().password("password") },
+                new Object[] { "firstName", MyCustomerDraft.builder().firstName("firstName") },
+                new Object[] { "lastName", MyCustomerDraft.builder().lastName("lastName") },
+                new Object[] { "middleName", MyCustomerDraft.builder().middleName("middleName") },
+                new Object[] { "title", MyCustomerDraft.builder().title("title") },
+                new Object[] { "salutation", MyCustomerDraft.builder().salutation("salutation") },
+                new Object[] { "dateOfBirth", MyCustomerDraft.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
+                new Object[] { "companyName", MyCustomerDraft.builder().companyName("companyName") },
+                new Object[] { "vatId", MyCustomerDraft.builder().vatId("vatId") },
+                new Object[] { "addresses",
                         MyCustomerDraft.builder()
                                 .addresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
-                new Object[] { MyCustomerDraft.builder().defaultShippingAddress(4L) },
-                new Object[] { MyCustomerDraft.builder().defaultBillingAddress(3L) },
-                new Object[] { MyCustomerDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { MyCustomerDraft.builder().locale("locale") },
-                new Object[] { MyCustomerDraft.builder()
-                        .stores(Collections.singletonList(
-                            new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) } };
+                new Object[] { "defaultShippingAddress", MyCustomerDraft.builder().defaultShippingAddress(4L) },
+                new Object[] { "defaultBillingAddress", MyCustomerDraft.builder().defaultBillingAddress(3L) },
+                new Object[] { "custom",
+                        MyCustomerDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "locale", MyCustomerDraft.builder().locale("locale") },
+                new Object[] { "stores",
+                        MyCustomerDraft.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) } };
     }
 
     @Test

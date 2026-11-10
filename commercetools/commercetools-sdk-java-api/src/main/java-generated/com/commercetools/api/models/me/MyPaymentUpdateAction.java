@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPaymentUpdateAction
@@ -26,14 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentAddTransactionActionImpl.class, name = MyPaymentAddTransactionAction.ADD_TRANSACTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentChangeAmountPlannedActionImpl.class, name = MyPaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentSetCustomFieldActionImpl.class, name = MyPaymentSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionImpl.class, name = MyPaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionImpl.class, name = MyPaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentSetMethodInfoNameActionImpl.class, name = MyPaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionImpl.class, name = MyPaymentSetTransactionCustomFieldAction.SET_TRANSACTION_CUSTOM_FIELD) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyPaymentUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyPaymentUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -48,6 +41,8 @@ public interface MyPaymentUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public MyPaymentUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyPaymentUpdateAction
      * @param template instance to be copied
@@ -58,33 +53,9 @@ public interface MyPaymentUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentAddTransactionAction) {
-            return com.commercetools.api.models.me.MyPaymentAddTransactionAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentAddTransactionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction) {
-            return com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentSetCustomFieldAction) {
-            return com.commercetools.api.models.me.MyPaymentSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction) {
-            return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction) {
-            return com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction) {
-            return com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction) {
-            return com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction) template);
+
+        if (!(template instanceof MyPaymentUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyPaymentUpdateActionImpl instance = new MyPaymentUpdateActionImpl();
         return instance;
@@ -112,6 +83,30 @@ public interface MyPaymentUpdateAction
      */
     public static com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder setMethodInfoCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder setMethodInfoCustomTypeBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoInterfaceAccount subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder setMethodInfoInterfaceAccountBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder.of();
     }
 
     /**
@@ -160,8 +155,8 @@ public interface MyPaymentUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentUpdateAction>";

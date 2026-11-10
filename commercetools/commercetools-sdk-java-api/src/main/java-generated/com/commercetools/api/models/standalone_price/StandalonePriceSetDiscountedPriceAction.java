@@ -6,16 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.DiscountedPriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Discounts a Standalone Price. The referenced ProductDiscount in the discounted field must be of type external, active, and its predicate must match the referenced Price. Produces the StandalonePriceExternalDiscountSet Message.</p>
+ *  <p>Discounts a Standalone Price of a Product Variant on a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product Variant does not exist or if it exists only in the staged representation of a Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperationError</a> error is returned.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceExternalDiscountSetMessage" rel="nofollow">StandalonePriceExternalDiscountSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDiscountedPrice")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceSetDiscountedPriceActionImpl.class)
 public interface StandalonePriceSetDiscountedPriceAction extends StandalonePriceUpdateAction {
@@ -36,7 +39,8 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p>
      * @return discounted
      */
     @Valid
@@ -44,7 +48,8 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      */
 
@@ -68,6 +73,8 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public StandalonePriceSetDiscountedPriceAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceSetDiscountedPriceAction
@@ -119,8 +126,8 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetDiscountedPriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetDiscountedPriceAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceSetDiscountedPriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceSetDiscountedPriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceSetDiscountedPriceAction>";

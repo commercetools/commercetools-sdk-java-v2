@@ -6,20 +6,21 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Shipping Address on Orders.</li>
- *   <li>Set Shipping Address on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetShippingAddressChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetShippingAddressChangeImpl.class)
 public interface SetShippingAddressChange extends Change {
@@ -119,6 +121,8 @@ public interface SetShippingAddressChange extends Change {
         return instance;
     }
 
+    public SetShippingAddressChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetShippingAddressChange
      * @param template instance to be copied
@@ -168,8 +172,8 @@ public interface SetShippingAddressChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingAddressChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingAddressChange>() {
+    public static tools.jackson.core.type.TypeReference<SetShippingAddressChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetShippingAddressChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetShippingAddressChange>";

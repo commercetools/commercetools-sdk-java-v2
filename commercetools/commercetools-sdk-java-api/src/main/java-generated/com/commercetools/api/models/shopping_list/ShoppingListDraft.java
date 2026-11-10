@@ -7,17 +7,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListDraft
@@ -55,7 +57,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getSlug();
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @return customer
      */
     @Valid
@@ -79,7 +81,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getDescription();
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @return anonymousId
      */
 
@@ -87,7 +89,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public String getAnonymousId();
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -111,12 +113,20 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public List<TextLineItemDraft> getTextLineItems();
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return store
      */
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
@@ -141,7 +151,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @param customer value to be set
      */
 
@@ -162,14 +172,14 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
@@ -206,11 +216,18 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreResourceIdentifier store);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
@@ -244,9 +261,12 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         instance.setLineItems(template.getLineItems());
         instance.setTextLineItems(template.getTextLineItems());
         instance.setStore(template.getStore());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public ShoppingListDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListDraft
@@ -279,6 +299,8 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
@@ -314,8 +336,8 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListDraft>";

@@ -48,4 +48,24 @@ public class ByProjectKeyBusinessUnitsRequestBuilder {
         return new ByProjectKeyBusinessUnitsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder keyWithKeyValueAssociatesWithAssociateIdValue(
+            String key, String associateId) {
+        return new ByProjectKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder(apiHttpClient, projectKey,
+            key, associateId);
+    }
+
+    public ByProjectKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder withBusinessUnitIdValueAssociatesWithAssociateIdValue(
+            String businessUnitId, String associateId) {
+        return new ByProjectKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder(apiHttpClient,
+            projectKey, businessUnitId, associateId);
+    }
+
+    public ByProjectKeyBusinessUnitsSearchRequestBuilder search() {
+        return new ByProjectKeyBusinessUnitsSearchRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder searchIndexingStatus() {
+        return new ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

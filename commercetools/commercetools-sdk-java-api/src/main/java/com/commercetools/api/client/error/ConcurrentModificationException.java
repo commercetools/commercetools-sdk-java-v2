@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client.error;
 
+import java.util.Optional;
+
 import com.commercetools.api.models.error.ConcurrentModificationError;
 import com.commercetools.api.models.error.ErrorResponse;
 
@@ -57,11 +59,12 @@ public class ConcurrentModificationException extends io.vrap.rmf.base.client.err
     }
 
     public static Long retrieveCurrentVersion(final ErrorResponse errorResponse) {
-        return errorResponse.getErrors()
-                .stream()
-                .filter(errorObject -> errorObject instanceof ConcurrentModificationError)
-                .findFirst()
-                .map(errorObject -> ((ConcurrentModificationError) errorObject).getCurrentVersion())
+        return Optional.ofNullable(errorResponse)
+                .flatMap(response -> response.getErrors()
+                        .stream()
+                        .filter(errorObject -> errorObject instanceof ConcurrentModificationError)
+                        .findFirst()
+                        .map(errorObject -> ((ConcurrentModificationError) errorObject).getCurrentVersion()))
                 .orElse(null);
     }
 }

@@ -63,8 +63,16 @@ public class CartDiscountUpdateActionBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart_discount.CartDiscountSetDiscountGroupActionBuilder setDiscountGroupBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetDiscountGroupActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder setRecurringOrderScopeBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder setStoresBuilder() {

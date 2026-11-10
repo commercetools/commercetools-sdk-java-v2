@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.quote;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteTransitionStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteTransitionStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteTransitionStateActionBuilder builder) {
         QuoteTransitionStateAction quoteTransitionStateAction = builder.buildUnchecked();
         Assertions.assertThat(quoteTransitionStateAction).isInstanceOf(QuoteTransitionStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { QuoteTransitionStateAction.builder()
-                        .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { QuoteTransitionStateAction.builder().force(true) } };
+                new Object[] { "state",
+                        QuoteTransitionStateAction.builder()
+                                .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "force", QuoteTransitionStateAction.builder().force(true) } };
     }
 
     @Test

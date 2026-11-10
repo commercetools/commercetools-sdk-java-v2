@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelRemoveRolesAction
@@ -53,6 +54,8 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
@@ -96,4 +99,8 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
                 .build();
     }
 
+    @Override
+    public ChannelRemoveRolesAction copyDeep() {
+        return ChannelRemoveRolesAction.deepCopy(this);
+    }
 }

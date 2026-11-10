@@ -10,9 +10,6 @@ import java.util.function.Function;
 
 import io.vrap.rmf.base.client.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import dev.failsafe.*;
 import dev.failsafe.spi.Scheduler;
 
@@ -20,6 +17,8 @@ import dev.failsafe.spi.Scheduler;
  * <h2>PolicyBuilder</h2>
  *
  * <p>The PolicyBuilder allows the combination of different policies for failing requests.</p>
+ *
+ * <p>In case you need different policies based on the request use the {@link RequestPolicyBuilder} instead</p>
  *
  * <p>The order of policies matters. For example applying a {@link #withTimeout(Duration) timeout} before
  * {@link #withRetry(RetryPolicyBuilder)} retry} will time out across all requests whereas applying a timeout after the retry count
@@ -47,11 +46,6 @@ import dev.failsafe.spi.Scheduler;
  */
 public class PolicyBuilder {
 
-    static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry";
-
-    private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
-    private static final Logger classLogger = LoggerFactory.getLogger(PolicyMiddleware.class);
-
     private final List<Policy<ApiHttpResponse<byte[]>>> policies;
 
     private final Scheduler scheduler;
@@ -59,6 +53,10 @@ public class PolicyBuilder {
     public PolicyBuilder() {
         this.policies = new ArrayList<>();
         this.scheduler = Scheduler.DEFAULT;
+    }
+
+    List<Policy<ApiHttpResponse<byte[]>>> getPolicies() {
+        return policies;
     }
 
     public PolicyBuilder(List<Policy<ApiHttpResponse<byte[]>>> policies) {

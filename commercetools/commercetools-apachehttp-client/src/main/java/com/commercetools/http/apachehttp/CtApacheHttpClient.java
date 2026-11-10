@@ -9,7 +9,6 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 
 import io.vrap.rmf.base.client.*;
@@ -19,6 +18,7 @@ import org.apache.commons.io.input.AutoCloseInputStream;
 import org.apache.hc.client5.http.async.methods.SimpleBody;
 import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
+import org.apache.hc.client5.http.config.TlsConfig;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
@@ -32,7 +32,6 @@ import org.apache.hc.core5.http.nio.ssl.TlsStrategy;
 import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
 import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
-import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
 public class CtApacheHttpClient extends HttpClientBase {
     public static final int MAX_REQUESTS = 64;
@@ -46,19 +45,22 @@ public class CtApacheHttpClient extends HttpClientBase {
     }
 
     public static HttpAsyncClientBuilder createClientBuilder(AsyncClientConnectionManager cm) {
-        return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
+        return HttpAsyncClientBuilder.create().setConnectionManager(cm);
     }
 
     public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal,
             final int maxConnPerRoute) {
-        final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create()
-                .useSystemProperties()
-                .setTlsDetailsFactory(
-                    sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
-                .build();
+        return createConnectionManager(HttpVersionPolicy.NEGOTIATE, maxConnTotal, maxConnPerRoute);
+    }
+
+    public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(
+            final HttpVersionPolicy httpVersionPolicy, final int maxConnTotal, final int maxConnPerRoute) {
+        final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create().useSystemProperties().build();
+        final TlsConfig tlsConfig = TlsConfig.copy(TlsConfig.DEFAULT).setVersionPolicy(httpVersionPolicy).build();
         return PoolingAsyncClientConnectionManagerBuilder.create()
                 .setMaxConnPerRoute(maxConnPerRoute)
                 .setMaxConnTotal(maxConnTotal)
+                .setDefaultTlsConfig(tlsConfig)
                 .setTlsStrategy(tlsStrategy);
     }
 
@@ -74,9 +76,24 @@ public class CtApacheHttpClient extends HttpClientBase {
         init();
     }
 
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy) {
+        super();
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, MAX_REQUESTS, MAX_REQUESTS).build()).build();
+        init();
+    }
+
     public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
         super();
         apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy, final int maxConnTotal,
+            final int maxConnPerRoute) {
+        super();
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()).build();
         init();
     }
 
@@ -90,6 +107,16 @@ public class CtApacheHttpClient extends HttpClientBase {
         super();
         apacheHttpClient = options
                 .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
+        init();
+    }
+
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy, final int maxConnTotal, final int maxConnPerRoute,
+            final BuilderOptions options) {
+        super();
+        apacheHttpClient = options
+                .plus(
+                    createClientBuilder(createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()))
                 .build();
         init();
     }
@@ -112,6 +139,14 @@ public class CtApacheHttpClient extends HttpClientBase {
         init();
     }
 
+    public CtApacheHttpClient(final ExecutorService executor, final HttpVersionPolicy versionPolicy,
+            final int maxConnTotal, final int maxConnPerRoute) {
+        super(executor);
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
     public CtApacheHttpClient(final ExecutorService executor, final BuilderOptions options) {
         super(executor);
         apacheHttpClient = options.plus(clientBuilder.get()).build();
@@ -123,6 +158,16 @@ public class CtApacheHttpClient extends HttpClientBase {
         super(executor);
         apacheHttpClient = options
                 .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final HttpVersionPolicy versionPolicy,
+            final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
+        super(executor);
+        apacheHttpClient = options
+                .plus(
+                    createClientBuilder(createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()))
                 .build();
         init();
     }
@@ -142,12 +187,9 @@ public class CtApacheHttpClient extends HttpClientBase {
         if (httpRequest.getBody() != null) {
             //default media type is JSON, if other media type is set as a header, use it
             ContentType mediaType = ContentType.APPLICATION_JSON.withCharset(StandardCharsets.UTF_8);
-            if (httpRequest.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = ContentType
-                        .parse(Objects.requireNonNull(httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = ContentType.parse(contentTypeValue);
             }
 
             builder.setEntity(httpRequest.getBody(), mediaType);
@@ -164,14 +206,12 @@ public class CtApacheHttpClient extends HttpClientBase {
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final SimpleHttpResponse response) {
-        final Map<String, List<Header>> apacheHeaders = Arrays.stream(response.getHeaders())
-                .collect(Collectors.groupingBy(Header::getName));
-
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(apacheHeaders.entrySet()
-                .stream()
-                .flatMap(
-                    e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value.getValue())))
-                .collect(Collectors.toList()));
+        final Header[] responseHeaders = response.getHeaders();
+        final List<Map.Entry<String, String>> headerList = new ArrayList<>(responseHeaders.length);
+        for (Header header : responseHeaders) {
+            headerList.add(ApiHttpHeaders.headerEntry(header.getName(), header.getValue()));
+        }
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(headerList);
 
         final byte[] bodyNullable = Optional.ofNullable(response.getBody()).map((SimpleBody entity) -> {
             try {

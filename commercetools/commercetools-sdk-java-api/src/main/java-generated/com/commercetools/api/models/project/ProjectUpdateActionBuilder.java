@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectUpdateActionBuilder {
 
+    public com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder changeBusinessUnitSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder changeMyBusinessUnitStatusOnCreationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder.of();
     }
@@ -31,6 +35,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder changeCustomerSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder changeLanguagesBuilder() {
         return com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder.of();
     }
@@ -47,6 +55,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder changeProductSearchIndexingEnabledBuilder() {
         return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
     }
@@ -55,12 +67,32 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder changeTaxRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder setMyBusinessUnitAssociateRoleOnCreationBuilder() {
         return com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectSetDiscountsConfigurationActionBuilder setDiscountsConfigurationBuilder() {
+        return com.commercetools.api.models.project.ProjectSetDiscountsConfigurationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder setExternalOAuthBuilder() {
         return com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder setProductCatalogModelBuilder() {
+        return com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder setReleaseExpiredReservationsBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder.of();
     }
 
     public com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder setShippingRateInputTypeBuilder() {

@@ -22,6 +22,10 @@
         },
         {
             "moduleLicense": null,
+            "moduleName": "com.squareup.okhttp3:okhttp"
+        },
+        {
+            "moduleLicense": null,
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform"
         },
         {

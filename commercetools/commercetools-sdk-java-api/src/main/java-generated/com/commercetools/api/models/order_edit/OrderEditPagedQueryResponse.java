@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of OrderEdit.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface OrderEditPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<OrderEdit> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -45,7 +46,7 @@ public interface OrderEditPagedQueryResponse
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -61,7 +62,7 @@ public interface OrderEditPagedQueryResponse
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -69,7 +70,7 @@ public interface OrderEditPagedQueryResponse
     public Long getTotal();
 
     /**
-     *  <p>OrderEdits matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdits</a> matching the query.</p>
      * @return results
      */
     @NotNull
@@ -78,14 +79,14 @@ public interface OrderEditPagedQueryResponse
     public List<OrderEdit> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -99,14 +100,14 @@ public interface OrderEditPagedQueryResponse
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Long total);
 
     /**
-     *  <p>OrderEdits matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdits</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -114,7 +115,7 @@ public interface OrderEditPagedQueryResponse
     public void setResults(final OrderEdit... results);
 
     /**
-     *  <p>OrderEdits matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdits</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -142,6 +143,8 @@ public interface OrderEditPagedQueryResponse
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public OrderEditPagedQueryResponse copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditPagedQueryResponse
@@ -197,8 +200,8 @@ public interface OrderEditPagedQueryResponse
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditPagedQueryResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditPagedQueryResponse>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditPagedQueryResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditPagedQueryResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditPagedQueryResponse>";

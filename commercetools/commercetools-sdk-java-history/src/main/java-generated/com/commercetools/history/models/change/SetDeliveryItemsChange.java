@@ -7,20 +7,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.DeliveryItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Delivery Items on Orders.</li>
- *   <li>Set Delivery Items on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -36,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetDeliveryItemsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetDeliveryItemsChangeImpl.class)
 public interface SetDeliveryItemsChange extends Change {
@@ -80,12 +82,20 @@ public interface SetDeliveryItemsChange extends Change {
     public List<DeliveryItem> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated Delivery.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     /**
      * set change
@@ -125,11 +135,18 @@ public interface SetDeliveryItemsChange extends Change {
     public void setNextValue(final List<DeliveryItem> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated Delivery.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      * factory method
@@ -150,8 +167,11 @@ public interface SetDeliveryItemsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public SetDeliveryItemsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetDeliveryItemsChange
@@ -176,6 +196,7 @@ public interface SetDeliveryItemsChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -210,8 +231,8 @@ public interface SetDeliveryItemsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetDeliveryItemsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetDeliveryItemsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetDeliveryItemsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetDeliveryItemsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetDeliveryItemsChange>";

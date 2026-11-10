@@ -8,14 +8,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Parcel
@@ -36,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Parcel {
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      * @return id
      */
     @NotNull
@@ -44,7 +45,7 @@ public interface Parcel {
     public String getId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
     @NotNull
@@ -52,7 +53,7 @@ public interface Parcel {
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -60,7 +61,7 @@ public interface Parcel {
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -68,7 +69,7 @@ public interface Parcel {
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -76,7 +77,7 @@ public interface Parcel {
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @return custom
      */
     @Valid
@@ -84,35 +85,35 @@ public interface Parcel {
     public Custom getCustom();
 
     /**
-     * set id
+     *  <p>Unique identifier of the Parcel.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -120,14 +121,14 @@ public interface Parcel {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @param custom value to be set
      */
 
@@ -156,6 +157,8 @@ public interface Parcel {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public Parcel copyDeep();
 
     /**
      * factory method to create a deep copy of Parcel
@@ -214,8 +217,8 @@ public interface Parcel {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Parcel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Parcel>() {
+    public static tools.jackson.core.type.TypeReference<Parcel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Parcel>() {
             @Override
             public String toString() {
                 return "TypeReference<Parcel>";

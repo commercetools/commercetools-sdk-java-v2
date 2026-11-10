@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.standalone_price.StandalonePrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create StandalonePrice request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/standalone-prices:POST" rel="nofollow">Create StandalonePrice</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceCreatedMessagePayloadImpl.class)
 public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     String STANDALONE_PRICE_CREATED = "StandalonePriceCreated";
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @return standalonePrice
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     public StandalonePrice getStandalonePrice();
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @param standalonePrice value to be set
      */
 
@@ -71,6 +73,8 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
         instance.setStandalonePrice(template.getStandalonePrice());
         return instance;
     }
+
+    public StandalonePriceCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceCreatedMessagePayload
@@ -121,8 +125,8 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceCreatedMessagePayload>";

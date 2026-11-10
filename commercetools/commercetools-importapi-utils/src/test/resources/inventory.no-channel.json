@@ -1,0 +1,11 @@
+{
+    "id": "inv-id-001",
+    "version": 1,
+    "key": "inventory-key",
+    "sku": "sku-001",
+    "quantityOnStock": 100,
+    "restockableInDays": 3,
+    "expectedDelivery": "2026-07-01T00:00:00.000Z",
+    "createdAt": "1970-01-01T00:00:00.001Z",
+    "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}

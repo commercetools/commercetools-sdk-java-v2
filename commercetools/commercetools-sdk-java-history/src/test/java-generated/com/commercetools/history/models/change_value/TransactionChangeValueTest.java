@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TransactionChangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TransactionChangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TransactionChangeValueBuilder builder) {
         TransactionChangeValue transactionChangeValue = builder.buildUnchecked();
         Assertions.assertThat(transactionChangeValue).isInstanceOf(TransactionChangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TransactionChangeValue.builder().id("id") },
-                new Object[] { TransactionChangeValue.builder().interactionId("interactionId") },
-                new Object[] { TransactionChangeValue.builder().timestamp("timestamp") } };
+        return new Object[][] { new Object[] { "id", TransactionChangeValue.builder().id("id") },
+                new Object[] { "interactionId", TransactionChangeValue.builder().interactionId("interactionId") },
+                new Object[] { "timestamp", TransactionChangeValue.builder().timestamp("timestamp") } };
     }
 
     @Test

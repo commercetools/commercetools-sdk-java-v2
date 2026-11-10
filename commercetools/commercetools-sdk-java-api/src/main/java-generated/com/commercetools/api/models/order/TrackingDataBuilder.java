@@ -82,10 +82,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @param isReturn value to be set
      * @return Builder
      */
@@ -136,10 +133,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @return isReturn
      */
 

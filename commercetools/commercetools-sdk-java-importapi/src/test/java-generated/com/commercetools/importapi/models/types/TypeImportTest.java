@@ -3,40 +3,36 @@ package com.commercetools.importapi.models.types;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypeImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypeImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypeImportBuilder builder) {
         TypeImport typeImport = builder.buildUnchecked();
         Assertions.assertThat(typeImport).isInstanceOf(TypeImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TypeImport.builder().key("key") },
-                new Object[] { TypeImport.builder()
-                        .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { TypeImport.builder()
-                        .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { TypeImport.builder()
-                        .resourceTypeIds(Collections.singletonList(
-                            com.commercetools.importapi.models.types.ResourceTypeId.findEnum("address"))) },
-                new Object[] { TypeImport.builder()
-                        .fieldDefinitions(Collections
-                                .singletonList(new com.commercetools.importapi.models.types.FieldDefinitionImpl())) } };
+        return new Object[][] { new Object[] { "key", TypeImport.builder().key("key") },
+                new Object[] { "name",
+                        TypeImport.builder()
+                                .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        TypeImport.builder()
+                                .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "resourceTypeIds",
+                        TypeImport.builder()
+                                .resourceTypeIds(Collections.singletonList(
+                                    com.commercetools.importapi.models.types.ResourceTypeId.findEnum("address"))) },
+                new Object[] { "fieldDefinitions",
+                        TypeImport.builder()
+                                .fieldDefinitions(Collections.singletonList(
+                                    new com.commercetools.importapi.models.types.FieldDefinitionImpl())) } };
     }
 
     @Test

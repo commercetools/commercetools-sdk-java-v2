@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedPriceDraft
@@ -67,6 +68,8 @@ public interface StagedPriceDraft extends io.vrap.rmf.base.client.Draft<StagedPr
         return instance;
     }
 
+    public StagedPriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StagedPriceDraft
      * @param template instance to be copied
@@ -113,8 +116,8 @@ public interface StagedPriceDraft extends io.vrap.rmf.base.client.Draft<StagedPr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedPriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedPriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<StagedPriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedPriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedPriceDraft>";

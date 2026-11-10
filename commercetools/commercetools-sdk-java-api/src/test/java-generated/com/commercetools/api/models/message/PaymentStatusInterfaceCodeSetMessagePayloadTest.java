@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentStatusInterfaceCodeSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder) {
         PaymentStatusInterfaceCodeSetMessagePayload paymentStatusInterfaceCodeSetMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(paymentStatusInterfaceCodeSetMessagePayload)
                 .isInstanceOf(PaymentStatusInterfaceCodeSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
-                new Object[] { PaymentStatusInterfaceCodeSetMessagePayload.builder().interfaceCode("interfaceCode") } };
+        return new Object[][] { new Object[] { "interfaceCode",
+                PaymentStatusInterfaceCodeSetMessagePayload.builder().interfaceCode("interfaceCode") } };
     }
 
     @Test

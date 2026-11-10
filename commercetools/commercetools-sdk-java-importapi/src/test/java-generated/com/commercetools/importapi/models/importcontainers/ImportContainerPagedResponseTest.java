@@ -3,36 +3,29 @@ package com.commercetools.importapi.models.importcontainers;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportContainerPagedResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportContainerPagedResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportContainerPagedResponseBuilder builder) {
         ImportContainerPagedResponse importContainerPagedResponse = builder.buildUnchecked();
         Assertions.assertThat(importContainerPagedResponse).isInstanceOf(ImportContainerPagedResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportContainerPagedResponse.builder().limit(7) },
-                new Object[] { ImportContainerPagedResponse.builder().offset(3L) },
-                new Object[] { ImportContainerPagedResponse.builder().count(2L) },
-                new Object[] { ImportContainerPagedResponse.builder().total(1L) },
-                new Object[] { ImportContainerPagedResponse.builder()
-                        .results(Collections.singletonList(
-                            new com.commercetools.importapi.models.importcontainers.ImportContainerImpl())) } };
+        return new Object[][] { new Object[] { "limit", ImportContainerPagedResponse.builder().limit(7) },
+                new Object[] { "offset", ImportContainerPagedResponse.builder().offset(3L) },
+                new Object[] { "count", ImportContainerPagedResponse.builder().count(2L) },
+                new Object[] { "total", ImportContainerPagedResponse.builder().total(1L) },
+                new Object[] { "results",
+                        ImportContainerPagedResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.importapi.models.importcontainers.ImportContainerImpl())) } };
     }
 
     @Test

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the product price by a percentage, defined by the <code>permyriad</code> field.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("relative")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeImpl.class)
 public interface ProductDiscountValueRelative extends ProductDiscountValue {
@@ -68,6 +70,8 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
+
+    public ProductDiscountValueRelative copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueRelative
@@ -115,8 +119,8 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueRelative> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueRelative>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueRelative>";

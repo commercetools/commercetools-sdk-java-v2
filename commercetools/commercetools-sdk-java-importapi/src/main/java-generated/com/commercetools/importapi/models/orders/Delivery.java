@@ -8,14 +8,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Delivery
@@ -38,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery {
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      * @return id
      */
     @NotNull
@@ -46,7 +47,7 @@ public interface Delivery {
     public String getId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @return createdAt
      */
     @NotNull
@@ -54,7 +55,7 @@ public interface Delivery {
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @return items
      */
     @NotNull
@@ -63,7 +64,7 @@ public interface Delivery {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @return parcels
      */
     @NotNull
@@ -72,7 +73,7 @@ public interface Delivery {
     public List<Parcel> getParcels();
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -80,21 +81,21 @@ public interface Delivery {
     public Address getAddress();
 
     /**
-     * set id
+     *  <p>Unique identifier of the Delivery.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
@@ -102,14 +103,14 @@ public interface Delivery {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
@@ -117,14 +118,14 @@ public interface Delivery {
     public void setParcels(final Parcel... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
     public void setParcels(final List<Parcel> parcels);
 
     /**
-     * set address
+     *  <p>Address to which Parcels are delivered.</p>
      * @param address value to be set
      */
 
@@ -152,6 +153,8 @@ public interface Delivery {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public Delivery copyDeep();
 
     /**
      * factory method to create a deep copy of Delivery
@@ -211,8 +214,8 @@ public interface Delivery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Delivery> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Delivery>() {
+    public static tools.jackson.core.type.TypeReference<Delivery> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Delivery>() {
             @Override
             public String toString() {
                 return "TypeReference<Delivery>";

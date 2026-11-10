@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetMethodInfoMethodAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoMethodSetMessage" rel="nofollow">PaymentMethodInfoMethodSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetMethodInfoMethodActionImpl.class)
 public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
@@ -34,7 +36,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return method
      */
 
@@ -42,7 +44,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     public String getMethod();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param method value to be set
      */
 
@@ -66,6 +68,8 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
         instance.setMethod(template.getMethod());
         return instance;
     }
+
+    public PaymentSetMethodInfoMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetMethodInfoMethodAction
@@ -113,8 +117,8 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetMethodInfoMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetMethodInfoMethodAction>";

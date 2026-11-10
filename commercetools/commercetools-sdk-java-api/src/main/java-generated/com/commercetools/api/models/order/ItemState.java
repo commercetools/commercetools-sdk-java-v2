@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.state.StateReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ItemState
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemState {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in this State.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
     @NotNull
@@ -51,7 +52,7 @@ public interface ItemState {
     public StateReference getState();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in this State.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      */
 
@@ -83,6 +84,8 @@ public interface ItemState {
         instance.setState(template.getState());
         return instance;
     }
+
+    public ItemState copyDeep();
 
     /**
      * factory method to create a deep copy of ItemState
@@ -131,8 +134,8 @@ public interface ItemState {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemState> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemState>() {
+    public static tools.jackson.core.type.TypeReference<ItemState> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemState>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemState>";

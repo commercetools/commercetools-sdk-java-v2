@@ -3,33 +3,26 @@ package com.commercetools.api.models.shopping_list;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListUpdateBuilder builder) {
         ShoppingListUpdate shoppingListUpdate = builder.buildUnchecked();
         Assertions.assertThat(shoppingListUpdate).isInstanceOf(ShoppingListUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShoppingListUpdate.builder().version(2L) },
-                new Object[] { ShoppingListUpdate.builder()
-                        .actions(Collections.singletonList(
-                            new com.commercetools.api.models.shopping_list.ShoppingListUpdateActionImpl())) } };
+        return new Object[][] { new Object[] { "version", ShoppingListUpdate.builder().version(2L) },
+                new Object[] { "actions",
+                        ShoppingListUpdate.builder()
+                                .actions(Collections.singletonList(
+                                    new com.commercetools.api.models.shopping_list.ShoppingListUpdateActionImpl())) } };
     }
 
     @Test

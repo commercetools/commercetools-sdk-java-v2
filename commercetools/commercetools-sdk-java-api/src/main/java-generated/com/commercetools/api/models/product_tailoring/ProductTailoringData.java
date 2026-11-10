@@ -4,18 +4,20 @@ package com.commercetools.api.models.product_tailoring;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains all the tailored data of a Product.</p>
+ *  <p>Contains all the tailored information of a Product.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +49,7 @@ public interface ProductTailoringData {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -55,7 +57,7 @@ public interface ProductTailoringData {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -63,7 +65,7 @@ public interface ProductTailoringData {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @return metaKeywords
      */
     @Valid
@@ -77,6 +79,22 @@ public interface ProductTailoringData {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+    @Valid
+    @JsonProperty("variants")
+    public List<ProductVariantTailoring> getVariants();
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<ProductTailoringAttribute> getAttributes();
 
     /**
      *  <p>Tailored name of the Product.</p>
@@ -93,21 +111,21 @@ public interface ProductTailoringData {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param metaKeywords value to be set
      */
 
@@ -119,6 +137,36 @@ public interface ProductTailoringData {
      */
 
     public void setSlug(final LocalizedString slug);
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    @JsonIgnore
+    public void setVariants(final ProductVariantTailoring... variants);
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    public void setVariants(final List<ProductVariantTailoring> variants);
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final ProductTailoringAttribute... attributes);
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<ProductTailoringAttribute> attributes);
 
     /**
      * factory method
@@ -141,8 +189,12 @@ public interface ProductTailoringData {
         instance.setMetaDescription(template.getMetaDescription());
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setSlug(template.getSlug());
+        instance.setVariants(template.getVariants());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public ProductTailoringData copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringData
@@ -164,6 +216,16 @@ public interface ProductTailoringData {
         instance.setMetaKeywords(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoring::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductTailoringAttribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -198,8 +260,8 @@ public interface ProductTailoringData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringData>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringData>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringData>";

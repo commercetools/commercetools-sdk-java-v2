@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a string value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("String")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StringFieldImpl.class)
 public interface StringField extends CustomField {
@@ -36,7 +38,7 @@ public interface StringField extends CustomField {
     String STRING = "String";
 
     /**
-     *
+     *  <p>A text value.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface StringField extends CustomField {
     public String getValue();
 
     /**
-     * set value
+     *  <p>A text value.</p>
      * @param value value to be set
      */
 
@@ -68,6 +70,8 @@ public interface StringField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public StringField copyDeep();
 
     /**
      * factory method to create a deep copy of StringField
@@ -115,8 +119,8 @@ public interface StringField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StringField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StringField>() {
+    public static tools.jackson.core.type.TypeReference<StringField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StringField>() {
             @Override
             public String toString() {
                 return "TypeReference<StringField>";

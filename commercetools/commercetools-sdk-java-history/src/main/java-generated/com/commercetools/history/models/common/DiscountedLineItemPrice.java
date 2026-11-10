@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPrice
@@ -34,16 +35,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPrice {
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @return value
      */
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @return includedDiscounts
      */
     @NotNull
@@ -52,14 +53,14 @@ public interface DiscountedLineItemPrice {
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
     /**
-     * set value
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @param value value to be set
      */
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     /**
-     * set includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -67,7 +68,7 @@ public interface DiscountedLineItemPrice {
     public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
 
     /**
-     * set includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -93,6 +94,8 @@ public interface DiscountedLineItemPrice {
         return instance;
     }
 
+    public DiscountedLineItemPrice copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedLineItemPrice
      * @param template instance to be copied
@@ -104,7 +107,7 @@ public interface DiscountedLineItemPrice {
             return null;
         }
         DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
-        instance.setValue(com.commercetools.history.models.common.Money.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.history.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DiscountedLineItemPortion::deepCopy)
@@ -144,8 +147,8 @@ public interface DiscountedLineItemPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPrice>";

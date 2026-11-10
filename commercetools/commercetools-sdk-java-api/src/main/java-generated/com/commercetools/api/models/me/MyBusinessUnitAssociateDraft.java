@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyBusinessUnitAssociateDraft
@@ -36,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Draft<MyBusinessUnitAssociateDraft> {
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -44,7 +45,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public Long getVersion();
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @return customer
      */
     @NotNull
@@ -53,7 +54,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public MyCustomerDraft getCustomer();
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -62,21 +63,21 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final MyCustomerDraft customer);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -84,7 +85,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -110,6 +111,8 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
         return instance;
     }
+
+    public MyBusinessUnitAssociateDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MyBusinessUnitAssociateDraft
@@ -163,8 +166,8 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitAssociateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitAssociateDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitAssociateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitAssociateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitAssociateDraft>";

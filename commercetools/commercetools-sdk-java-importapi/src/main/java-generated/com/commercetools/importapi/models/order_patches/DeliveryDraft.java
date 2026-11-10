@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryDraft
@@ -36,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
     @NotNull
@@ -45,7 +46,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -53,7 +54,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public Address getAddress();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @return parcels
      */
     @NotNull
@@ -62,7 +63,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryParcelDraft> getParcels();
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -70,21 +71,21 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set address
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 
@@ -92,7 +93,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setParcels(final DeliveryParcelDraft... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 
@@ -118,6 +119,8 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
         instance.setParcels(template.getParcels());
         return instance;
     }
+
+    public DeliveryDraft copyDeep();
 
     /**
      * factory method to create a deep copy of DeliveryDraft
@@ -175,8 +178,8 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryDraft>";

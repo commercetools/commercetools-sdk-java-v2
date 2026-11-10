@@ -47,7 +47,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @return key
      */
 

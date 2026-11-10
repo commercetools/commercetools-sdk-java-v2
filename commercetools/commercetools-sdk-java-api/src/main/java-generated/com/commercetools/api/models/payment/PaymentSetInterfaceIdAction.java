@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * PaymentSetInterfaceIdAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInterfaceIdSetMessage" rel="nofollow">PaymentInterfaceIdSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setInterfaceId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetInterfaceIdActionImpl.class)
 public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
@@ -36,7 +38,8 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
     String SET_INTERFACE_ID = "setInterfaceId";
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      * @return interfaceId
      */
     @NotNull
@@ -44,7 +47,8 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
     public String getInterfaceId();
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      * @param interfaceId value to be set
      */
 
@@ -68,6 +72,8 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
         instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
+
+    public PaymentSetInterfaceIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetInterfaceIdAction
@@ -115,8 +121,8 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetInterfaceIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetInterfaceIdAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetInterfaceIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetInterfaceIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetInterfaceIdAction>";

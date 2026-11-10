@@ -9,7 +9,7 @@ on:
 name: CI
 
 # Declare default permissions as read only.
-permissions: read-all
+permissions: {}
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,7 +24,7 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -38,16 +38,16 @@ jobs:
           echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
           # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
           # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
           token: ${{ steps.generate_github_token.outputs.token }}
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/actions/wrapper-validation@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
 
       - name: Setup Java
-        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -59,7 +59,7 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
 
-      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
+      - uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         id: commit_style_fix
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -71,9 +71,11 @@ jobs:
 
       - name: "Run if style changes have been detected"
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
-        run: echo "${{steps.commit_style_fix.outputs.commit_hash}}" >> .git-blame-ignore-revs
+        run: echo "$HASH" >> .git-blame-ignore-revs
+        env:
+            HASH: ${{steps.commit_style_fix.outputs.commit_hash}}
 
-      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
+      - uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         id: commit_rev_ignore
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -92,7 +94,7 @@ jobs:
         if: ${{ failure() }}
         run: cat licenses/dependencies-without-allowed-license.json
 
-      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
+      - uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         id: commit_license_change
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -109,8 +111,9 @@ jobs:
         run: git push origin
 
       - name: Run integration tests for PR
+#       ignore renovate branches as they are retriggered with every new commit to main branch
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
+        run: ./gradlew clean build publishToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -120,24 +123,43 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request' && github.event_name != 'merge_group'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
+        run: ./gradlew clean build publishToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
             CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
             SOURCE_TAG: ${{ github.ref_name }}
             CTP_JVM_SDK_LOG_LEVEL: OFF
-
+      - name: Debug Jackson classpath
+        run: mvn dependency:tree -f examples/maven-okhttp4/pom.xml | grep -i jackson
       - name: Test examples
         run: |
-          cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
-          cd ../maven-okhttp4 && mvn verify --no-transfer-progress
+          cd examples/maven-okhttp4 && mvn verify --no-transfer-progress
+          cd ../split-packages && mvn verify --no-transfer-progress
+        env:
+            CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
+            CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
+            CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
+
+      -  name: Setup Java 21 for Spring examples
+         uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+         with:
+            distribution: 'temurin'
+            java-version: '21'
+      -   name: Test Spring examples
+          run: |
+            cd examples/spring && ./gradlew test
+            cd ../spring-datadog && ./gradlew test
+            cd ../spring-datadog-statsd && ./gradlew test
+            cd ../spring-dynatrace-oneagent && ./gradlew test
+            cd ../spring-newrelic && ./gradlew test
+            cd ../spring-otel && ./gradlew test
 
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport
 
       - name: Send code coverage report to Codecov.io
-        uses: codecov/codecov-action@5ecb98a3c6b747ed38dc09f787459979aebb39be # v4.3.1
+        uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
         with:
             token: ${{ secrets.CODECOV_TOKEN }}
   docs:
@@ -149,20 +171,20 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
 
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/actions/wrapper-validation@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
 
       - name: Setup Java
-        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -179,14 +201,14 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
       - name: Checkout sources
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: Generate and submit dependency graph
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: gradle/actions/dependency-submission@db19848a5fa7950289d3668fb053140cf3028d43 # v3.3.2
+        uses: gradle/actions/dependency-submission@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
         with:
           github-token: ${{ steps.generate_github_token.outputs.token }}

@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Authenticate a global Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on Customers.</li>
- *   <li>Authenticating Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> requests on My Customer Profile.</li>
  *  </ul>
  *
  * <hr>
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidCredentials")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidCredentialsErrorImpl.class)
 public interface InvalidCredentialsError extends ErrorObject {
@@ -83,6 +85,8 @@ public interface InvalidCredentialsError extends ErrorObject {
         return instance;
     }
 
+    public InvalidCredentialsError copyDeep();
+
     /**
      * factory method to create a deep copy of InvalidCredentialsError
      * @param template instance to be copied
@@ -130,8 +134,8 @@ public interface InvalidCredentialsError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InvalidCredentialsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InvalidCredentialsError>() {
+    public static tools.jackson.core.type.TypeReference<InvalidCredentialsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InvalidCredentialsError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidCredentialsError>";

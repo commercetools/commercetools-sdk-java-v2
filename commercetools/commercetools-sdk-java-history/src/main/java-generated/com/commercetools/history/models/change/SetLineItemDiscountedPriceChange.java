@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.DiscountedLineItemPrice;
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetLineItemDiscountedPriceChange
@@ -29,10 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemDiscountedPriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemDiscountedPriceChangeImpl.class)
 public interface SetLineItemDiscountedPriceChange extends Change {
@@ -77,7 +80,7 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public DiscountedLineItemPrice getNextValue();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -86,12 +89,21 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
 
     /**
      * set change
@@ -115,18 +127,26 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public void setNextValue(final DiscountedLineItemPrice nextValue);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final String variant);
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
 
     /**
      * factory method
@@ -148,8 +168,11 @@ public interface SetLineItemDiscountedPriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setVariant(template.getVariant());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
+
+    public SetLineItemDiscountedPriceChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemDiscountedPriceChange
@@ -169,6 +192,7 @@ public interface SetLineItemDiscountedPriceChange extends Change {
             com.commercetools.history.models.common.DiscountedLineItemPrice.deepCopy(template.getNextValue()));
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 
@@ -203,8 +227,8 @@ public interface SetLineItemDiscountedPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemDiscountedPriceChange>";

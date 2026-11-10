@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MethodTaxRate
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MethodTaxRate {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingMethodKey
      */
     @NotNull
@@ -49,7 +50,7 @@ public interface MethodTaxRate {
     public TaxRate getTaxRate();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingMethodKey value to be set
      */
 
@@ -81,6 +82,8 @@ public interface MethodTaxRate {
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public MethodTaxRate copyDeep();
 
     /**
      * factory method to create a deep copy of MethodTaxRate
@@ -129,8 +132,8 @@ public interface MethodTaxRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate>() {
+    public static tools.jackson.core.type.TypeReference<MethodTaxRate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MethodTaxRate>() {
             @Override
             public String toString() {
                 return "TypeReference<MethodTaxRate>";

@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This payload is sent for a ChangeSubscription when a resource is updated. This includes updates by a background process, like a change in product availability.</p>
+ *  <p>This payload is sent for a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> when a resource is updated. This includes updates by a background process, like a change in product availability.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceUpdated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceUpdatedDeliveryPayloadImpl.class)
 public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
@@ -109,6 +111,8 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
         return instance;
     }
 
+    public ResourceUpdatedDeliveryPayload copyDeep();
+
     /**
      * factory method to create a deep copy of ResourceUpdatedDeliveryPayload
      * @param template instance to be copied
@@ -161,8 +165,8 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ResourceUpdatedDeliveryPayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ResourceUpdatedDeliveryPayload>() {
+    public static tools.jackson.core.type.TypeReference<ResourceUpdatedDeliveryPayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ResourceUpdatedDeliveryPayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ResourceUpdatedDeliveryPayload>";

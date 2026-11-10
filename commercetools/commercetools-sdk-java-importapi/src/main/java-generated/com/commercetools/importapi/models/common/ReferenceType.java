@@ -11,11 +11,17 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The type of the referenced resource.</p>
+ *  <p>Type of referenced resource.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceType extends JsonEnum {
 
+    /**
+    <p>References an associate role.</p> */
+    ReferenceType ASSOCIATE_ROLE = ReferenceTypeEnum.ASSOCIATE_ROLE;
+    /**
+    <p>References a business unit.</p> */
+    ReferenceType BUSINESS_UNIT = ReferenceTypeEnum.BUSINESS_UNIT;
     /**
     <p>References a cart.</p> */
     ReferenceType CART = ReferenceTypeEnum.CART;
@@ -38,6 +44,9 @@ public interface ReferenceType extends JsonEnum {
     <p>References a discount code.</p> */
     ReferenceType DISCOUNT_CODE = ReferenceTypeEnum.DISCOUNT_CODE;
     /**
+    <p>References a custom object</p> */
+    ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
+    /**
     <p>References an order.</p> */
     ReferenceType ORDER = ReferenceTypeEnum.ORDER;
     /**
@@ -59,6 +68,9 @@ public interface ReferenceType extends JsonEnum {
     <p>References a product variant.</p> */
     ReferenceType PRODUCT_VARIANT = ReferenceTypeEnum.PRODUCT_VARIANT;
     /**
+    <p>References a variant.</p> */
+    ReferenceType VARIANT = ReferenceTypeEnum.VARIANT;
+    /**
     <p>References a shipping method.</p> */
     ReferenceType SHIPPING_METHOD = ReferenceTypeEnum.SHIPPING_METHOD;
     /**
@@ -73,14 +85,21 @@ public interface ReferenceType extends JsonEnum {
     /**
     <p>References a type.</p> */
     ReferenceType TYPE = ReferenceTypeEnum.TYPE;
-    /**
-    <p>References a custom object</p> */
-    ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
 
     /**
      * possible values of ReferenceType
      */
     enum ReferenceTypeEnum implements ReferenceType {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart
          */
@@ -115,6 +134,11 @@ public interface ReferenceType extends JsonEnum {
          * discount-code
          */
         DISCOUNT_CODE("discount-code"),
+
+        /**
+         * key-value-document
+         */
+        KEY_VALUE_DOCUMENT("key-value-document"),
 
         /**
          * order
@@ -152,6 +176,11 @@ public interface ReferenceType extends JsonEnum {
         PRODUCT_VARIANT("product-variant"),
 
         /**
+         * variant
+         */
+        VARIANT("variant"),
+
+        /**
          * shipping-method
          */
         SHIPPING_METHOD("shipping-method"),
@@ -174,12 +203,7 @@ public interface ReferenceType extends JsonEnum {
         /**
          * type
          */
-        TYPE("type"),
-
-        /**
-         * key-value-document
-         */
-        KEY_VALUE_DOCUMENT("key-value-document");
+        TYPE("type");
         private final String jsonName;
 
         private ReferenceTypeEnum(final String jsonName) {

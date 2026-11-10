@@ -28,7 +28,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     private String interfaceCode;
 
     /**
-     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     *  <p>The <code>interfaceCode</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
      * @param interfaceCode value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     *  <p>The <code>interfaceCode</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
      * @return interfaceCode
      */
 

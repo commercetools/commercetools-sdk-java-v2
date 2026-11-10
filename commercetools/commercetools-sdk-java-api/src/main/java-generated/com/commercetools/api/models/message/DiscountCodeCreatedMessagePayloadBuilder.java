@@ -25,7 +25,7 @@ public class DiscountCodeCreatedMessagePayloadBuilder implements Builder<Discoun
     private com.commercetools.api.models.discount_code.DiscountCode discountCode;
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class DiscountCodeCreatedMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class DiscountCodeCreatedMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class DiscountCodeCreatedMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @return discountCode
      */
 

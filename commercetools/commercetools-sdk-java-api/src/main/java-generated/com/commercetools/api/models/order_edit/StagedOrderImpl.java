@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrder
@@ -50,13 +51,15 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
 
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
     private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
+
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
@@ -88,6 +91,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
@@ -102,6 +107,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private com.commercetools.api.models.quote.QuoteReference quote;
 
+    private com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder;
+
     private com.commercetools.api.models.order.OrderState orderState;
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
@@ -113,6 +120,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     private java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo;
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
+
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
     @Deprecated
     private Long lastMessageSequenceNumber;
@@ -142,10 +151,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems,
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
@@ -161,18 +171,21 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts,
             @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
             @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteReference quote,
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder,
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("syncInfo") final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo,
             @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo,
+            @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
             @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt,
@@ -196,6 +209,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
         this.discountOnTotalPrice = discountOnTotalPrice;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
@@ -211,6 +225,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
         this.directDiscounts = directDiscounts;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.refusedGifts = refusedGifts;
         this.paymentInfo = paymentInfo;
         this.country = country;
@@ -218,12 +233,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.origin = origin;
         this.cart = cart;
         this.quote = quote;
+        this.recurringOrder = recurringOrder;
         this.orderState = orderState;
         this.shipmentState = shipmentState;
         this.paymentState = paymentState;
         this.state = state;
         this.syncInfo = syncInfo;
         this.returnInfo = returnInfo;
+        this.discountTypeCombination = discountTypeCombination;
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         this.custom = custom;
         this.completedAt = completedAt;
@@ -279,7 +296,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -287,7 +304,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      */
 
     public String getCustomerId() {
@@ -303,7 +320,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -311,7 +328,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      */
 
     public String getAnonymousId() {
@@ -319,7 +336,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -327,7 +344,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -335,7 +352,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
@@ -343,7 +360,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
@@ -351,20 +368,20 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -372,7 +389,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
@@ -385,6 +403,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
         return this.discountOnTotalPrice;
+    }
+
+    /**
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -428,7 +454,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -444,7 +470,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {
@@ -452,7 +478,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -460,10 +486,10 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      */
@@ -473,7 +499,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
@@ -481,7 +507,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
@@ -489,7 +515,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
@@ -497,7 +523,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
@@ -505,7 +532,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
@@ -513,7 +541,18 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
@@ -529,7 +568,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      */
 
     public String getCountry() {
@@ -537,7 +576,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -553,7 +592,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -561,11 +600,19 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteReference getQuote() {
         return this.quote;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderReference getRecurringOrder() {
+        return this.recurringOrder;
     }
 
     /**
@@ -593,7 +640,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -601,7 +648,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
@@ -614,6 +661,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
+    }
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
     }
 
     /**
@@ -633,7 +688,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      */
 
     public java.time.ZonedDateTime getCompletedAt() {
@@ -723,7 +778,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.customLineItems = customLineItems;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -738,6 +793,10 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     public void setDiscountOnTotalPrice(
             final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
         this.discountOnTotalPrice = discountOnTotalPrice;
+    }
+
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
     }
 
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -819,6 +878,10 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.directDiscounts = directDiscounts;
     }
 
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+    }
+
     public void setRefusedGifts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
         this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
@@ -853,6 +916,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.quote = quote;
     }
 
+    public void setRecurringOrder(
+            final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder) {
+        this.recurringOrder = recurringOrder;
+    }
+
     public void setOrderState(final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
     }
@@ -883,6 +951,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public void setReturnInfo(final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
+    }
+
+    public void setDiscountTypeCombination(
+            final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
     }
 
     @Deprecated
@@ -934,6 +1007,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -949,6 +1023,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts, that.refusedGifts)
                 .append(paymentInfo, that.paymentInfo)
                 .append(country, that.country)
@@ -956,12 +1031,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin, that.origin)
                 .append(cart, that.cart)
                 .append(quote, that.quote)
+                .append(recurringOrder, that.recurringOrder)
                 .append(orderState, that.orderState)
                 .append(shipmentState, that.shipmentState)
                 .append(paymentState, that.paymentState)
                 .append(state, that.state)
                 .append(syncInfo, that.syncInfo)
                 .append(returnInfo, that.returnInfo)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(custom, that.custom)
                 .append(completedAt, that.completedAt)
@@ -985,6 +1062,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -1000,6 +1078,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts, that.refusedGifts)
                 .append(paymentInfo, that.paymentInfo)
                 .append(country, that.country)
@@ -1007,12 +1086,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin, that.origin)
                 .append(cart, that.cart)
                 .append(quote, that.quote)
+                .append(recurringOrder, that.recurringOrder)
                 .append(orderState, that.orderState)
                 .append(shipmentState, that.shipmentState)
                 .append(paymentState, that.paymentState)
                 .append(state, that.state)
                 .append(syncInfo, that.syncInfo)
                 .append(returnInfo, that.returnInfo)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(custom, that.custom)
                 .append(completedAt, that.completedAt)
@@ -1041,6 +1122,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
                 .append(discountOnTotalPrice)
+                .append(priceRoundingMode)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
@@ -1056,6 +1138,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(itemShippingAddresses)
                 .append(discountCodes)
                 .append(directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts)
                 .append(paymentInfo)
                 .append(country)
@@ -1063,12 +1146,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin)
                 .append(cart)
                 .append(quote)
+                .append(recurringOrder)
                 .append(orderState)
                 .append(shipmentState)
                 .append(paymentState)
                 .append(state)
                 .append(syncInfo)
                 .append(returnInfo)
+                .append(discountTypeCombination)
                 .append(lastMessageSequenceNumber)
                 .append(custom)
                 .append(completedAt)
@@ -1097,6 +1182,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append("taxedPrice", taxedPrice)
                 .append("taxedShippingPrice", taxedShippingPrice)
                 .append("discountOnTotalPrice", discountOnTotalPrice)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxMode", taxMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
@@ -1112,6 +1198,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("discountCodes", discountCodes)
                 .append("directDiscounts", directDiscounts)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("refusedGifts", refusedGifts)
                 .append("paymentInfo", paymentInfo)
                 .append("country", country)
@@ -1119,12 +1206,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append("origin", origin)
                 .append("cart", cart)
                 .append("quote", quote)
+                .append("recurringOrder", recurringOrder)
                 .append("orderState", orderState)
                 .append("shipmentState", shipmentState)
                 .append("paymentState", paymentState)
                 .append("state", state)
                 .append("syncInfo", syncInfo)
                 .append("returnInfo", returnInfo)
+                .append("discountTypeCombination", discountTypeCombination)
                 .append("lastMessageSequenceNumber", lastMessageSequenceNumber)
                 .append("custom", custom)
                 .append("completedAt", completedAt)
@@ -1133,4 +1222,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedOrder copyDeep() {
+        return StagedOrder.deepCopy(this);
+    }
 }

@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.approval_rule.ApprovalRuleStatus;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Status update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleStatusSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleStatusSetMessagePayloadImpl.class)
 public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_STATUS_SET = "ApprovalRuleStatusSet";
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +48,7 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     public ApprovalRuleStatus getStatus();
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return oldStatus
      */
     @NotNull
@@ -54,14 +56,14 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     public ApprovalRuleStatus getOldStatus();
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalRuleStatus status);
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param oldStatus value to be set
      */
 
@@ -86,6 +88,8 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
         instance.setOldStatus(template.getOldStatus());
         return instance;
     }
+
+    public ApprovalRuleStatusSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleStatusSetMessagePayload
@@ -136,8 +140,8 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleStatusSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleStatusSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleStatusSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleStatusSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleStatusSetMessagePayload>";

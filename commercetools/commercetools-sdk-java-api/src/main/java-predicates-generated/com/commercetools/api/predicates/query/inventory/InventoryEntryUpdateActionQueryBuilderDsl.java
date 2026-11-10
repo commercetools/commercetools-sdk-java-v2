@@ -64,10 +64,33 @@ public class InventoryEntryUpdateActionQueryBuilderDsl {
             InventoryEntryUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetInventoryLimits(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl
+                    .of()),
+            InventoryEntryUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.inventory.InventoryEntrySetKeyActionQueryBuilderDsl.of()),
+            InventoryEntryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetReorderPoint(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetReorderPointActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetReorderPointActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.inventory.InventoryEntrySetReorderPointActionQueryBuilderDsl.of()),
+            InventoryEntryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetReservationExpirationInMinutes(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.inventory.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl
+                    .of()),
             InventoryEntryUpdateActionQueryBuilderDsl::of);
     }
 
@@ -76,6 +99,13 @@ public class InventoryEntryUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.inventory.InventoryEntrySetRestockableInDaysActionQueryBuilderDsl
                     .of()),
+            InventoryEntryUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetSafetyStock(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetSafetyStockActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetSafetyStockActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.inventory.InventoryEntrySetSafetyStockActionQueryBuilderDsl.of()),
             InventoryEntryUpdateActionQueryBuilderDsl::of);
     }
 

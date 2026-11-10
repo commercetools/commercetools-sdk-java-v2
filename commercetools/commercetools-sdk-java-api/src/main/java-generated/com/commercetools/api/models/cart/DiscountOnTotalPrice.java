@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountOnTotalPrice
@@ -53,7 +54,8 @@ public interface DiscountOnTotalPrice {
     public List<DiscountedTotalPricePortion> getIncludedDiscounts();
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedNetAmount
      */
     @Valid
@@ -61,7 +63,8 @@ public interface DiscountOnTotalPrice {
     public TypedMoney getDiscountedNetAmount();
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedGrossAmount
      */
     @Valid
@@ -91,14 +94,16 @@ public interface DiscountOnTotalPrice {
     public void setIncludedDiscounts(final List<DiscountedTotalPricePortion> includedDiscounts);
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedNetAmount value to be set
      */
 
     public void setDiscountedNetAmount(final TypedMoney discountedNetAmount);
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedGrossAmount value to be set
      */
 
@@ -125,6 +130,8 @@ public interface DiscountOnTotalPrice {
         instance.setDiscountedGrossAmount(template.getDiscountedGrossAmount());
         return instance;
     }
+
+    public DiscountOnTotalPrice copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountOnTotalPrice
@@ -182,8 +189,8 @@ public interface DiscountOnTotalPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountOnTotalPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountOnTotalPrice>() {
+    public static tools.jackson.core.type.TypeReference<DiscountOnTotalPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountOnTotalPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountOnTotalPrice>";

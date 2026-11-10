@@ -41,6 +41,12 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      *  <p>Tailored name of the Product.</p>
      * @param builder function to build the name value
@@ -113,7 +119,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -125,7 +131,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -137,7 +143,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -149,7 +155,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -161,7 +167,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -173,7 +179,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -185,7 +191,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -197,7 +203,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -209,7 +215,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -256,6 +262,194 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder variants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder variants(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusVariants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder withVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder addVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder setVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return variants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
      *  <p>Tailored name of the Product.</p>
      * @return name
      */
@@ -276,7 +470,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @return metaTitle
      */
 
@@ -286,7 +480,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @return metaDescription
      */
 
@@ -296,7 +490,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @return metaKeywords
      */
 
@@ -316,11 +510,32 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductTailoringData with checking for non-null required values
      * @return ProductTailoringData
      */
     public ProductTailoringData build() {
-        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug);
+        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug, variants,
+            attributes);
     }
 
     /**
@@ -328,7 +543,8 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
      * @return ProductTailoringData
      */
     public ProductTailoringData buildUnchecked() {
-        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug);
+        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug, variants,
+            attributes);
     }
 
     /**
@@ -352,6 +568,8 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
         builder.metaDescription = template.getMetaDescription();
         builder.metaKeywords = template.getMetaKeywords();
         builder.slug = template.getSlug();
+        builder.variants = template.getVariants();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

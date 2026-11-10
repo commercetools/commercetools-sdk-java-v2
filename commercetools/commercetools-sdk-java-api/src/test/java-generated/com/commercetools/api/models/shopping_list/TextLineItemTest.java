@@ -3,39 +3,33 @@ package com.commercetools.api.models.shopping_list;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TextLineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TextLineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TextLineItemBuilder builder) {
         TextLineItem textLineItem = builder.buildUnchecked();
         Assertions.assertThat(textLineItem).isInstanceOf(TextLineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { TextLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+                new Object[] { "addedAt", TextLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
                         TextLineItem.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { TextLineItem.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().id("id") }, new Object[] { TextLineItem.builder().key("key") },
-                new Object[] {
+                new Object[] { "description",
+                        TextLineItem.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "id", TextLineItem.builder().id("id") },
+                new Object[] { "key", TextLineItem.builder().key("key") },
+                new Object[] { "name",
                         TextLineItem.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().quantity(8L) } };
+                new Object[] { "quantity", TextLineItem.builder().quantity(8L) } };
     }
 
     @Test

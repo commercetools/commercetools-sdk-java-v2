@@ -3,37 +3,37 @@ package com.commercetools.importapi.models.importcontainers;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportContainerTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportContainerBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportContainerBuilder builder) {
         ImportContainer importContainer = builder.buildUnchecked();
         Assertions.assertThat(importContainer).isInstanceOf(ImportContainer.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportContainer.builder().key("key") },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", ImportContainer.builder().key("key") },
+                new Object[] { "resourceType",
                         ImportContainer.builder()
                                 .resourceType(com.commercetools.importapi.models.common.ImportResourceType
-                                        .findEnum("category")) },
-                new Object[] { ImportContainer.builder().version(2L) },
-                new Object[] { ImportContainer.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ImportContainer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                                        .findEnum("business-unit")) },
+                new Object[] { "version", ImportContainer.builder().version(2L) },
+                new Object[] { "retentionPolicy",
+                        ImportContainer.builder()
+                                .retentionPolicy(
+                                    new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl()) },
+                new Object[] { "createdAt",
+                        ImportContainer.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ImportContainer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "expiresAt",
+                        ImportContainer.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
@@ -46,9 +46,9 @@ public class ImportContainerTest {
     @Test
     public void resourceType() {
         ImportContainer value = ImportContainer.of();
-        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
         Assertions.assertThat(value.getResourceType())
-                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
     }
 
     @Test
@@ -56,6 +56,14 @@ public class ImportContainerTest {
         ImportContainer value = ImportContainer.of();
         value.setVersion(2L);
         Assertions.assertThat(value.getVersion()).isEqualTo(2L);
+    }
+
+    @Test
+    public void retentionPolicy() {
+        ImportContainer value = ImportContainer.of();
+        value.setRetentionPolicy(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
+        Assertions.assertThat(value.getRetentionPolicy())
+                .isEqualTo(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
     }
 
     @Test
@@ -70,5 +78,12 @@ public class ImportContainerTest {
         ImportContainer value = ImportContainer.of();
         value.setLastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getLastModifiedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void expiresAt() {
+        ImportContainer value = ImportContainer.of();
+        value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 }

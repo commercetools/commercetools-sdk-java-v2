@@ -49,7 +49,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      * @return Builder
      */
@@ -71,7 +71,11 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @param accessTokenValiditySeconds value to be set
      * @return Builder
      */
@@ -102,7 +106,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
 
@@ -121,7 +125,11 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @return accessTokenValiditySeconds
      */
 

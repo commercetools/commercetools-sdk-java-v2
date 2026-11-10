@@ -52,6 +52,13 @@ public class SearchQueryExpressionValueQueryBuilderDsl {
             SearchQueryExpressionValueQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchExactValue(
+            Function<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl.of()),
+            SearchQueryExpressionValueQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchExistsValue(
             Function<com.commercetools.api.predicates.query.search.SearchExistsValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchExistsValueQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -70,6 +77,13 @@ public class SearchQueryExpressionValueQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.search.SearchFullTextValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchFullTextValueQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.search.SearchFullTextValueQueryBuilderDsl.of()),
+            SearchQueryExpressionValueQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchFuzzyValue(
+            Function<com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl.of()),
             SearchQueryExpressionValueQueryBuilderDsl::of);
     }
 

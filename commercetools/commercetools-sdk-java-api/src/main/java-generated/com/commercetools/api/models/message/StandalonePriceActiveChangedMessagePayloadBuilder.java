@@ -28,7 +28,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
     private Boolean oldActive;
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param oldActive value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return active
      */
 
@@ -59,7 +59,7 @@ public class StandalonePriceActiveChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return oldActive
      */
 

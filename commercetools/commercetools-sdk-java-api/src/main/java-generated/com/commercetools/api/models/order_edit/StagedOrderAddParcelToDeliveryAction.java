@@ -7,7 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelMeasurements;
@@ -15,13 +14,15 @@ import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order.TrackingData;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To add a Parcel, at least one Delivery must exist.</p>
- *  <p>Produces the Parcel Added To Delivery Message.</p>
+ *  <p>To add a Parcel, at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> must exist.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addParcelToDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddParcelToDeliveryActionImpl.class)
 public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateAction {
@@ -42,7 +44,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     String ADD_PARCEL_TO_DELIVERY = "addParcelToDelivery";
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -51,7 +53,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public String getDeliveryId();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -60,7 +62,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public String getDeliveryKey();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelKey
      */
 
@@ -100,7 +102,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
@@ -108,7 +110,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
@@ -116,7 +118,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelKey value to be set
      */
 
@@ -183,6 +185,8 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         return instance;
     }
 
+    public StagedOrderAddParcelToDeliveryAction copyDeep();
+
     /**
      * factory method to create a deep copy of StagedOrderAddParcelToDeliveryAction
      * @param template instance to be copied
@@ -242,8 +246,8 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddParcelToDeliveryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddParcelToDeliveryAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddParcelToDeliveryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddParcelToDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddParcelToDeliveryAction>";

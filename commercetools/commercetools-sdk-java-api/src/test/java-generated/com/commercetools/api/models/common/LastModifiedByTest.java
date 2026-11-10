@@ -1,37 +1,31 @@
 
 package com.commercetools.api.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LastModifiedByTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LastModifiedByBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LastModifiedByBuilder builder) {
         LastModifiedBy lastModifiedBy = builder.buildUnchecked();
         Assertions.assertThat(lastModifiedBy).isInstanceOf(LastModifiedBy.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LastModifiedBy.builder().clientId("clientId") },
-                new Object[] { LastModifiedBy.builder().externalUserId("externalUserId") },
-                new Object[] { LastModifiedBy.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { LastModifiedBy.builder().anonymousId("anonymousId") },
-                new Object[] { LastModifiedBy.builder()
-                        .attributedTo(new com.commercetools.api.models.common.AttributionImpl()) },
-                new Object[] { LastModifiedBy.builder()
+        return new Object[][] { new Object[] { "clientId", LastModifiedBy.builder().clientId("clientId") },
+                new Object[] { "externalUserId", LastModifiedBy.builder().externalUserId("externalUserId") },
+                new Object[] { "customer",
+                        LastModifiedBy.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "anonymousId", LastModifiedBy.builder().anonymousId("anonymousId") },
+                new Object[] { "attributedTo",
+                        LastModifiedBy.builder()
+                                .attributedTo(new com.commercetools.api.models.common.AttributionImpl()) },
+                new Object[] { "associate", LastModifiedBy.builder()
                         .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
     }
 

@@ -42,7 +42,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     private Long quantity;
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -191,7 +191,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 

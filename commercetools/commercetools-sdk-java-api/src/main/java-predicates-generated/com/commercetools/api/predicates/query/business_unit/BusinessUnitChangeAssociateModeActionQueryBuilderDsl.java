@@ -23,4 +23,10 @@ public class BusinessUnitChangeAssociateModeActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, BusinessUnitChangeAssociateModeActionQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<BusinessUnitChangeAssociateModeActionQueryBuilderDsl> makeInheritedAssociatesExplicit() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("makeInheritedAssociatesExplicit")),
+            p -> new CombinationQueryPredicate<>(p, BusinessUnitChangeAssociateModeActionQueryBuilderDsl::of));
+    }
+
 }

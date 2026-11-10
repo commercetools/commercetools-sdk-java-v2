@@ -24,7 +24,7 @@ public class AssociateRoleKeyReferenceBuilder implements Builder<AssociateRoleKe
     private String key;
 
     /**
-     *  <p>Unique and immutable key of the referenced AssociateRole.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class AssociateRoleKeyReferenceBuilder implements Builder<AssociateRoleKe
     }
 
     /**
-     *  <p>Unique and immutable key of the referenced AssociateRole.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return key
      */
 

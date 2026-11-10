@@ -1,43 +1,57 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringCreatedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringCreatedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringCreatedMessagePayloadBuilder builder) {
         ProductTailoringCreatedMessagePayload productTailoringCreatedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(productTailoringCreatedMessagePayload)
                 .isInstanceOf(ProductTailoringCreatedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringCreatedMessagePayload.builder().key("key") },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder().productKey("productKey") },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessagePayload.builder().published(true) } };
+        return new Object[][] { new Object[] { "key", ProductTailoringCreatedMessagePayload.builder().key("key") },
+                new Object[] { "store",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey", ProductTailoringCreatedMessagePayload.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "description",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "name",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaTitle",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductTailoringCreatedMessagePayload.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "variants", ProductTailoringCreatedMessagePayload.builder()
+                        .variants(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
+                new Object[] { "attributes", ProductTailoringCreatedMessagePayload.builder()
+                        .attributes(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) },
+                new Object[] { "published", ProductTailoringCreatedMessagePayload.builder().published(true) } };
     }
 
     @Test
@@ -90,6 +104,50 @@ public class ProductTailoringCreatedMessagePayloadTest {
         ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
         value.setSlug(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getSlug()).isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaTitle() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaTitle(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaTitle())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaDescription() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaDescription(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaDescription())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaKeywords() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaKeywords())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void variants() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setVariants(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+        Assertions.assertThat(value.getVariants())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setAttributes(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
     }
 
     @Test

@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Asset
@@ -53,12 +54,7 @@ public interface Asset {
     public List<AssetSource> getSources();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @return name
      */
     @NotNull
@@ -67,12 +63,7 @@ public interface Asset {
     public LocalizedString getName();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @return description
      */
     @Valid
@@ -80,7 +71,7 @@ public interface Asset {
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @return tags
      */
 
@@ -88,7 +79,7 @@ public interface Asset {
     public List<String> getTags();
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
      */
     @Valid
@@ -118,31 +109,21 @@ public interface Asset {
     public void setSources(final List<AssetSource> sources);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     * set tags
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
 
@@ -150,14 +131,14 @@ public interface Asset {
     public void setTags(final String... tags);
 
     /**
-     * set tags
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
 
     public void setTags(final List<String> tags);
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      */
 
@@ -186,6 +167,8 @@ public interface Asset {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public Asset copyDeep();
 
     /**
      * factory method to create a deep copy of Asset
@@ -243,8 +226,8 @@ public interface Asset {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Asset> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Asset>() {
+    public static tools.jackson.core.type.TypeReference<Asset> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Asset>() {
             @Override
             public String toString() {
                 return "TypeReference<Asset>";

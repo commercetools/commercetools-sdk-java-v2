@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchMatchingVariants
@@ -34,7 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchMatchingVariants {
 
     /**
-     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether all Variants of the returned Product match the search query, or if search query does not specify any expression for a <span>Product Variant field</span>.</p>
+     *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+     *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      * @return allMatched
      */
     @NotNull
@@ -42,7 +45,8 @@ public interface ProductSearchMatchingVariants {
     public Boolean getAllMatched();
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @return matchedVariants
      */
     @NotNull
@@ -51,14 +55,17 @@ public interface ProductSearchMatchingVariants {
     public List<ProductSearchMatchingVariantEntry> getMatchedVariants();
 
     /**
-     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether all Variants of the returned Product match the search query, or if search query does not specify any expression for a <span>Product Variant field</span>.</p>
+     *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+     *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      * @param allMatched value to be set
      */
 
     public void setAllMatched(final Boolean allMatched);
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @param matchedVariants values to be set
      */
 
@@ -66,7 +73,8 @@ public interface ProductSearchMatchingVariants {
     public void setMatchedVariants(final ProductSearchMatchingVariantEntry... matchedVariants);
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @param matchedVariants values to be set
      */
 
@@ -91,6 +99,8 @@ public interface ProductSearchMatchingVariants {
         instance.setMatchedVariants(template.getMatchedVariants());
         return instance;
     }
+
+    public ProductSearchMatchingVariants copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSearchMatchingVariants
@@ -143,8 +153,8 @@ public interface ProductSearchMatchingVariants {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchMatchingVariants> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchMatchingVariants>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchMatchingVariants> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchMatchingVariants>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchMatchingVariants>";

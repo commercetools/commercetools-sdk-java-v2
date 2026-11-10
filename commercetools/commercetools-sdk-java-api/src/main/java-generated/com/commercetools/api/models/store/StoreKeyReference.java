@@ -6,16 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>KeyReference to a Store.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("store")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreKeyReferenceImpl.class)
 public interface StoreKeyReference extends KeyReference {
@@ -37,7 +40,15 @@ public interface StoreKeyReference extends KeyReference {
     String STORE = "store";
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return key
      */
     @NotNull
@@ -45,7 +56,7 @@ public interface StoreKeyReference extends KeyReference {
     public String getKey();
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param key value to be set
      */
 
@@ -69,6 +80,8 @@ public interface StoreKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public StoreKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of StoreKeyReference
@@ -116,8 +129,8 @@ public interface StoreKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<StoreKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreKeyReference>";

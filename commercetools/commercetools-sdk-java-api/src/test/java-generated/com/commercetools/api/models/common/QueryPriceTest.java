@@ -4,44 +4,41 @@ package com.commercetools.api.models.common;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QueryPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QueryPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QueryPriceBuilder builder) {
         QueryPrice queryPrice = builder.buildUnchecked();
         Assertions.assertThat(queryPrice).isInstanceOf(QueryPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { QueryPrice.builder().id("id") },
-                new Object[] { QueryPrice.builder().value(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { QueryPrice.builder().country("country") },
-                new Object[] { QueryPrice.builder()
+        return new Object[][] { new Object[] { "id", QueryPrice.builder().id("id") },
+                new Object[] { "value",
+                        QueryPrice.builder().value(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "country", QueryPrice.builder().country("country") },
+                new Object[] { "customerGroup", QueryPrice.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] {
+                new Object[] { "channel",
                         QueryPrice.builder().channel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
-                new Object[] { QueryPrice.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { QueryPrice.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { QueryPrice.builder()
-                        .discounted(new com.commercetools.api.models.common.DiscountedPriceDraftImpl()) },
-                new Object[] { QueryPrice.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { QueryPrice.builder()
-                        .tiers(Collections
-                                .singletonList(new com.commercetools.api.models.common.PriceTierDraftImpl())) } };
+                new Object[] { "validFrom", QueryPrice.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        QueryPrice.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "discounted",
+                        QueryPrice.builder()
+                                .discounted(new com.commercetools.api.models.common.DiscountedPriceDraftImpl()) },
+                new Object[] { "custom",
+                        QueryPrice.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "tiers",
+                        QueryPrice.builder()
+                                .tiers(Collections.singletonList(
+                                    new com.commercetools.api.models.common.PriceTierDraftImpl())) } };
     }
 
     @Test

@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ItemShippingDetails
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingDetails {
 
     /**
-     *
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @return targets
      */
     @NotNull
@@ -43,7 +44,7 @@ public interface ItemShippingDetails {
     public List<ItemShippingTarget> getTargets();
 
     /**
-     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     *  <p>Whether the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</p>
      * @return valid
      */
     @NotNull
@@ -51,7 +52,7 @@ public interface ItemShippingDetails {
     public Boolean getValid();
 
     /**
-     * set targets
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 
@@ -59,14 +60,14 @@ public interface ItemShippingDetails {
     public void setTargets(final ItemShippingTarget... targets);
 
     /**
-     * set targets
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 
     public void setTargets(final List<ItemShippingTarget> targets);
 
     /**
-     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     *  <p>Whether the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</p>
      * @param valid value to be set
      */
 
@@ -91,6 +92,8 @@ public interface ItemShippingDetails {
         instance.setValid(template.getValid());
         return instance;
     }
+
+    public ItemShippingDetails copyDeep();
 
     /**
      * factory method to create a deep copy of ItemShippingDetails
@@ -143,8 +146,8 @@ public interface ItemShippingDetails {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetails> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetails>() {
+    public static tools.jackson.core.type.TypeReference<ItemShippingDetails> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemShippingDetails>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemShippingDetails>";

@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AuthenticationMode extends JsonEnum {
 
     /**
-    <p>This is the default value. If set, the <code>password</code> field is required on CustomerDraft and is present on Customer.</p> */
+    <p>This is the default value. If set, the <code>password</code> field is required on <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDraft" rel="nofollow">CustomerDraft</a> and is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p> */
     AuthenticationMode PASSWORD = AuthenticationModeEnum.PASSWORD;
     /**
-    <p>If set, the <code>password</code> field is optional on CustomerDraft and is not present on Customer.</p> */
+    <p>If set, the <code>password</code> field is optional on <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDraft" rel="nofollow">CustomerDraft</a> and is not present on <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p> */
     AuthenticationMode EXTERNAL_AUTH = AuthenticationModeEnum.EXTERNAL_AUTH;
 
     /**

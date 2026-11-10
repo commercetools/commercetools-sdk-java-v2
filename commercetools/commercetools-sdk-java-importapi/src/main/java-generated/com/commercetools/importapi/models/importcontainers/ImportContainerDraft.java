@@ -6,16 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The representation sent to the server when creating an ImportContainer.</p>
+ *  <p>The representation sent to the server to create an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
+ *  <p>If you <strong>omit</strong> <code>retentionPolicy</code>, the new ImportContainer uses the default <strong>72-hour</strong> time to live. Set a <a href="https://docs.commercetools.com/apis/ctp:import:type:TimeToLiveRetentionPolicy" rel="nofollow">TimeToLiveRetentionPolicy</a> to use a custom duration (within the allowed minimum and maximum).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<ImportContainerDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
     @NotNull
@@ -40,7 +43,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public String getKey();
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 
@@ -48,18 +51,33 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public ImportResourceType getResourceType();
 
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
+     * @return retentionPolicy
+     */
+    @Valid
+    @JsonProperty("retentionPolicy")
+    public RetentionPolicy getRetentionPolicy();
+
+    /**
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
 
     public void setResourceType(final ImportResourceType resourceType);
+
+    /**
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
+     * @param retentionPolicy value to be set
+     */
+
+    public void setRetentionPolicy(final RetentionPolicy retentionPolicy);
 
     /**
      * factory method
@@ -78,8 +96,11 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
         ImportContainerDraftImpl instance = new ImportContainerDraftImpl();
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
+        instance.setRetentionPolicy(template.getRetentionPolicy());
         return instance;
     }
+
+    public ImportContainerDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ImportContainerDraft
@@ -94,6 +115,8 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
         ImportContainerDraftImpl instance = new ImportContainerDraftImpl();
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
+        instance.setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy
+                .deepCopy(template.getRetentionPolicy()));
         return instance;
     }
 
@@ -128,8 +151,8 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerDraft>() {
+    public static tools.jackson.core.type.TypeReference<ImportContainerDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportContainerDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportContainerDraft>";

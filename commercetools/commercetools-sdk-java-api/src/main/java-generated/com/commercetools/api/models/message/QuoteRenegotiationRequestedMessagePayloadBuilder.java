@@ -27,7 +27,7 @@ public class QuoteRenegotiationRequestedMessagePayloadBuilder
     private String buyerComment;
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class QuoteRenegotiationRequestedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
 

@@ -4,13 +4,18 @@ package com.commercetools.api.models.custom_object;
 import java.time.ZonedDateTime;
 import java.util.function.Function;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.Referencable;
-import com.commercetools.api.models.common.*;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * entity to implement a type safe generic custom object
@@ -120,5 +125,29 @@ public interface GenericCustomObject<TValue>
     @Override
     default Reference toReference() {
         return CustomObjectReference.builder().id(getId()).build();
+    }
+
+    /**
+    * factory method to create a deep copy of CustomObject
+    * @param template instance to be copied
+    * @return copy instance
+    */
+    @Nullable
+    public static <TValue> GenericCustomObject<TValue> deepCopy(@Nullable final GenericCustomObject<TValue> template) {
+        if (template == null) {
+            return null;
+        }
+        GenericCustomObjectImpl<TValue> instance = new GenericCustomObjectImpl<>();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setContainer(template.getContainer());
+        instance.setKey(template.getKey());
+        instance.setValue(template.getValue());
+        return instance;
     }
 }

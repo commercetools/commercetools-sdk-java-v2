@@ -25,6 +25,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -36,6 +37,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -48,6 +50,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -62,6 +65,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ZoneRemoveLocationAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeLocation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneRemoveLocationActionImpl.class)
 public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
@@ -70,6 +72,8 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
         instance.setLocation(template.getLocation());
         return instance;
     }
+
+    public ZoneRemoveLocationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneRemoveLocationAction
@@ -117,8 +121,8 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction>() {
+    public static tools.jackson.core.type.TypeReference<ZoneRemoveLocationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ZoneRemoveLocationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ZoneRemoveLocationAction>";

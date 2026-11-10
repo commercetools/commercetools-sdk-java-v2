@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.review;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewRatingStatisticsTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewRatingStatisticsBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewRatingStatisticsBuilder builder) {
         ReviewRatingStatistics reviewRatingStatistics = builder.buildUnchecked();
         Assertions.assertThat(reviewRatingStatistics).isInstanceOf(ReviewRatingStatistics.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReviewRatingStatistics.builder().averageRating(0.99762577) },
-                new Object[] { ReviewRatingStatistics.builder().highestRating(0.8229182) },
-                new Object[] { ReviewRatingStatistics.builder().lowestRating(0.9610451) },
-                new Object[] { ReviewRatingStatistics.builder().count(2) },
-                new Object[] { ReviewRatingStatistics.builder().ratingsDistribution("ratingsDistribution") } };
+        return new Object[][] {
+                new Object[] { "averageRating", ReviewRatingStatistics.builder().averageRating(0.99762577) },
+                new Object[] { "highestRating", ReviewRatingStatistics.builder().highestRating(0.8229182) },
+                new Object[] { "lowestRating", ReviewRatingStatistics.builder().lowestRating(0.9610451) },
+                new Object[] { "count", ReviewRatingStatistics.builder().count(2) },
+                new Object[] { "ratingsDistribution",
+                        ReviewRatingStatistics.builder().ratingsDistribution("ratingsDistribution") } };
     }
 
     @Test

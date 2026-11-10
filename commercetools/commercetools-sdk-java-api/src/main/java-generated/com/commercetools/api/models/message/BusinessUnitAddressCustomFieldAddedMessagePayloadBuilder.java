@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +28,9 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
 
     private java.lang.Object value;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
@@ -38,13 +43,24 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      * @return Builder
      */
 
     public BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder value(final java.lang.Object value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -58,12 +74,22 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
 
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -73,7 +99,7 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
     public BusinessUnitAddressCustomFieldAddedMessagePayload build() {
         Objects.requireNonNull(name, BusinessUnitAddressCustomFieldAddedMessagePayload.class + ": name is missing");
         Objects.requireNonNull(value, BusinessUnitAddressCustomFieldAddedMessagePayload.class + ": value is missing");
-        return new BusinessUnitAddressCustomFieldAddedMessagePayloadImpl(name, value);
+        return new BusinessUnitAddressCustomFieldAddedMessagePayloadImpl(name, value, addressId);
     }
 
     /**
@@ -81,7 +107,7 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
      * @return BusinessUnitAddressCustomFieldAddedMessagePayload
      */
     public BusinessUnitAddressCustomFieldAddedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressCustomFieldAddedMessagePayloadImpl(name, value);
+        return new BusinessUnitAddressCustomFieldAddedMessagePayloadImpl(name, value, addressId);
     }
 
     /**
@@ -102,6 +128,7 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder
         BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder builder = new BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder();
         builder.name = template.getName();
         builder.value = template.getValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

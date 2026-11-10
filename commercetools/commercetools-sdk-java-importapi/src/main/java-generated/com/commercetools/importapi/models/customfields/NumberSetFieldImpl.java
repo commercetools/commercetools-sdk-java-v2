@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a number value.</p>
@@ -51,7 +52,7 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<Double> getValue() {
@@ -95,4 +96,8 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public NumberSetField copyDeep() {
+        return NumberSetField.deepCopy(this);
+    }
 }

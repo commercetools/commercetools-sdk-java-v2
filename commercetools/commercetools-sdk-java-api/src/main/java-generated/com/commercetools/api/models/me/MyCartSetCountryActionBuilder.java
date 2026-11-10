@@ -26,8 +26,8 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
     private String country;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -38,8 +38,8 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @return country
      */
 

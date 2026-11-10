@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeTransactionTimestampChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeTransactionTimestampChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeTransactionTimestampChangeBuilder builder) {
         ChangeTransactionTimestampChange changeTransactionTimestampChange = builder.buildUnchecked();
         Assertions.assertThat(changeTransactionTimestampChange).isInstanceOf(ChangeTransactionTimestampChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeTransactionTimestampChange.builder().change("change") },
-                new Object[] { ChangeTransactionTimestampChange.builder().previousValue("previousValue") },
-                new Object[] { ChangeTransactionTimestampChange.builder().nextValue("nextValue") },
-                new Object[] { ChangeTransactionTimestampChange.builder()
-                        .transaction(
-                            new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
+        return new Object[][] { new Object[] { "change", ChangeTransactionTimestampChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeTransactionTimestampChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", ChangeTransactionTimestampChange.builder().nextValue("nextValue") },
+                new Object[] { "transaction",
+                        ChangeTransactionTimestampChange.builder()
+                                .transaction(
+                                    new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
     }
 
     @Test

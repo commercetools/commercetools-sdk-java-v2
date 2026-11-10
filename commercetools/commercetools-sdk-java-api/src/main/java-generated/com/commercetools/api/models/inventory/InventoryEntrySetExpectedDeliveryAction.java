@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * InventoryEntrySetExpectedDeliveryAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExpectedDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
@@ -35,7 +37,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     String SET_EXPECTED_DELIVERY = "setExpectedDelivery";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return expectedDelivery
      */
 
@@ -43,7 +45,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param expectedDelivery value to be set
      */
 
@@ -67,6 +69,8 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
         instance.setExpectedDelivery(template.getExpectedDelivery());
         return instance;
     }
+
+    public InventoryEntrySetExpectedDeliveryAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntrySetExpectedDeliveryAction
@@ -117,8 +121,8 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntrySetExpectedDeliveryAction>";

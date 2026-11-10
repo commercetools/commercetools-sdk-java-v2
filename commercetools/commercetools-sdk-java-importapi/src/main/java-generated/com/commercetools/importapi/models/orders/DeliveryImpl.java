@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Delivery
@@ -55,7 +56,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getId() {
@@ -63,7 +64,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -71,7 +72,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -79,7 +80,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Parcel> getParcels() {
@@ -87,7 +88,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -165,4 +166,8 @@ public class DeliveryImpl implements Delivery, ModelBase {
                 .build();
     }
 
+    @Override
+    public Delivery copyDeep() {
+        return Delivery.deepCopy(this);
+    }
 }

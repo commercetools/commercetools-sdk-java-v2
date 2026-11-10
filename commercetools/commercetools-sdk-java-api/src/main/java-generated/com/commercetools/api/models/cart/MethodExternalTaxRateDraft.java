@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MethodExternalTaxRateDraft
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<MethodExternalTaxRateDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingMethodKey
      */
     @NotNull
@@ -40,7 +41,7 @@ public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draf
     public String getShippingMethodKey();
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxRate
      */
     @Valid
@@ -48,14 +49,14 @@ public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draf
     public ExternalTaxRateDraft getTaxRate();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingMethodKey value to be set
      */
 
     public void setShippingMethodKey(final String shippingMethodKey);
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxRate value to be set
      */
 
@@ -80,6 +81,8 @@ public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draf
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public MethodExternalTaxRateDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MethodExternalTaxRateDraft
@@ -128,8 +131,8 @@ public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draf
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MethodExternalTaxRateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MethodExternalTaxRateDraft>() {
+    public static tools.jackson.core.type.TypeReference<MethodExternalTaxRateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MethodExternalTaxRateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MethodExternalTaxRateDraft>";

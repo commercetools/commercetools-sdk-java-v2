@@ -25,7 +25,7 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
     private Boolean countryTaxRateFallbackEnabled;
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param countryTaxRateFallbackEnabled value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionBuilder
     }
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return countryTaxRateFallbackEnabled
      */
 

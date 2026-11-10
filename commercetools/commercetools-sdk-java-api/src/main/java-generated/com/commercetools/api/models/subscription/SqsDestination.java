@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
- *  <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws-cn:iam::417094354346:user/subscriptions</code> if the Project is hosted in the China (AWS, Ningxia) Region; <code>arn:aws:iam::362576667341:user/subscriptions</code> for all other Regions. Otherwise, a test message will not be sent.</p>
- *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
+ *  <p><span>AWS SQS</span> is a pull-queue on AWS. The queue must be a <span>Standard</span> queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
+ *  <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws:iam::362576667341:user/subscriptions</code>. Otherwise, a test message will not be sent.</p>
+ *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend <span>creating an IAM user</span> with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
  *  <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
  *
  * <hr>
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SQS")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SqsDestinationImpl.class)
 public interface SqsDestination extends Destination {
@@ -64,7 +66,7 @@ public interface SqsDestination extends Destination {
     public String getQueueUrl();
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @return region
      */
     @NotNull
@@ -101,7 +103,7 @@ public interface SqsDestination extends Destination {
     public void setQueueUrl(final String queueUrl);
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @param region value to be set
      */
 
@@ -136,6 +138,8 @@ public interface SqsDestination extends Destination {
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
+
+    public SqsDestination copyDeep();
 
     /**
      * factory method to create a deep copy of SqsDestination
@@ -187,8 +191,8 @@ public interface SqsDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SqsDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SqsDestination>() {
+    public static tools.jackson.core.type.TypeReference<SqsDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SqsDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<SqsDestination>";

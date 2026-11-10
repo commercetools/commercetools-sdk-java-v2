@@ -107,7 +107,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param builder function to build the taxPortions value
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param builder function to build the taxPortions value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param builder function to build the taxPortions value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param builder function to build the taxPortions value
      * @return Builder
      */
@@ -255,7 +255,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @return taxPortions
      */
 

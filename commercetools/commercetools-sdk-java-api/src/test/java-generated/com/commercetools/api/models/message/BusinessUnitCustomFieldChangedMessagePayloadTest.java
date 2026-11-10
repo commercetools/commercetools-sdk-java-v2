@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitCustomFieldChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitCustomFieldChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitCustomFieldChangedMessagePayloadBuilder builder) {
         BusinessUnitCustomFieldChangedMessagePayload businessUnitCustomFieldChangedMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(businessUnitCustomFieldChangedMessagePayload)
                 .isInstanceOf(BusinessUnitCustomFieldChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitCustomFieldChangedMessagePayload.builder().name("name") },
-                new Object[] { BusinessUnitCustomFieldChangedMessagePayload.builder().value("value") },
-                new Object[] { BusinessUnitCustomFieldChangedMessagePayload.builder().oldValue("oldValue") } };
+        return new Object[][] {
+                new Object[] { "name", BusinessUnitCustomFieldChangedMessagePayload.builder().name("name") },
+                new Object[] { "value", BusinessUnitCustomFieldChangedMessagePayload.builder().value("value") },
+                new Object[] { "oldValue",
+                        BusinessUnitCustomFieldChangedMessagePayload.builder().oldValue("oldValue") } };
     }
 
     @Test

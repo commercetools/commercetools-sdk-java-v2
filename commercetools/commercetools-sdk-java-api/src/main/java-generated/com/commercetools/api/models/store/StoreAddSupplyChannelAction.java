@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
- *  <p>Adding a supply channel produces the StoreSupplyChannelsChanged Message.</p>
- *  <p>Adding a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
+ *  <p>Adding a supply channel produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSupplyChannelsChangedMessage" rel="nofollow">StoreSupplyChannelsChanged</a> Message.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> without the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addSupplyChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreAddSupplyChannelActionImpl.class)
 public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
@@ -73,6 +75,8 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public StoreAddSupplyChannelAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreAddSupplyChannelAction
@@ -121,8 +125,8 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreAddSupplyChannelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreAddSupplyChannelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreAddSupplyChannelAction>";

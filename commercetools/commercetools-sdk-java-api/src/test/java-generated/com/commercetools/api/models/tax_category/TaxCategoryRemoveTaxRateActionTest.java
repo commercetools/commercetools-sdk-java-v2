@@ -1,31 +1,24 @@
 
 package com.commercetools.api.models.tax_category;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxCategoryRemoveTaxRateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxCategoryRemoveTaxRateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxCategoryRemoveTaxRateActionBuilder builder) {
         TaxCategoryRemoveTaxRateAction taxCategoryRemoveTaxRateAction = builder.buildUnchecked();
         Assertions.assertThat(taxCategoryRemoveTaxRateAction).isInstanceOf(TaxCategoryRemoveTaxRateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TaxCategoryRemoveTaxRateAction.builder().taxRateId("taxRateId") },
-                new Object[] { TaxCategoryRemoveTaxRateAction.builder().taxRateKey("taxRateKey") } };
+        return new Object[][] {
+                new Object[] { "taxRateId", TaxCategoryRemoveTaxRateAction.builder().taxRateId("taxRateId") },
+                new Object[] { "taxRateKey", TaxCategoryRemoveTaxRateAction.builder().taxRateKey("taxRateKey") } };
     }
 
     @Test

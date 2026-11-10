@@ -7,8 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.CategoryKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
@@ -18,10 +16,14 @@ import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.products.SearchKeywords;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Product Draft for the import purpose.</p>
@@ -44,7 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductDraftImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -52,7 +54,7 @@ public interface ProductDraftImport extends ImportResource {
     public String getKey();
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @return productType
      */
     @NotNull
@@ -61,7 +63,7 @@ public interface ProductDraftImport extends ImportResource {
     public ProductTypeKeyReference getProductType();
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @return name
      */
     @NotNull
@@ -70,7 +72,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @return slug
      */
     @NotNull
@@ -79,7 +81,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @return description
      */
     @Valid
@@ -87,7 +89,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @return categories
      */
     @Valid
@@ -95,12 +97,15 @@ public interface ProductDraftImport extends ImportResource {
     public List<CategoryKeyReference> getCategories();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+
+    /**
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @return metaTitle
      */
     @Valid
@@ -108,12 +113,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @return metaDescription
      */
     @Valid
@@ -121,12 +121,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @return metaKeywords
      */
     @Valid
@@ -134,7 +129,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     *  <p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p>
      * @return masterVariant
      */
     @Valid
@@ -142,7 +137,7 @@ public interface ProductDraftImport extends ImportResource {
     public ProductVariantDraftImport getMasterVariant();
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @return variants
      */
     @Valid
@@ -150,7 +145,7 @@ public interface ProductDraftImport extends ImportResource {
     public List<ProductVariantDraftImport> getVariants();
 
     /**
-     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -158,23 +153,7 @@ public interface ProductDraftImport extends ImportResource {
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @return searchKeywords
      */
     @Valid
@@ -182,7 +161,7 @@ public interface ProductDraftImport extends ImportResource {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @Valid
@@ -190,7 +169,7 @@ public interface ProductDraftImport extends ImportResource {
     public StateKeyReference getState();
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @return publish
      */
 
@@ -198,7 +177,7 @@ public interface ProductDraftImport extends ImportResource {
     public Boolean getPublish();
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @return priceMode
      */
 
@@ -206,42 +185,42 @@ public interface ProductDraftImport extends ImportResource {
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param productType value to be set
      */
 
     public void setProductType(final ProductTypeKeyReference productType);
 
     /**
-     * set name
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
@@ -249,57 +228,57 @@ public interface ProductDraftImport extends ImportResource {
     public void setCategories(final CategoryKeyReference... categories);
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
     public void setCategories(final List<CategoryKeyReference> categories);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     * set attributes
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     * set attributes
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     *  <p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p>
      * @param masterVariant value to be set
      */
 
     public void setMasterVariant(final ProductVariantDraftImport masterVariant);
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @param variants values to be set
      */
 
@@ -307,58 +286,42 @@ public interface ProductDraftImport extends ImportResource {
     public void setVariants(final ProductVariantDraftImport... variants);
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @param variants values to be set
      */
 
     public void setVariants(final List<ProductVariantDraftImport> variants);
 
     /**
-     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @param searchKeywords value to be set
      */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 
     public void setState(final StateKeyReference state);
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @param publish value to be set
      */
 
     public void setPublish(final Boolean publish);
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @param priceMode value to be set
      */
 
@@ -385,6 +348,7 @@ public interface ProductDraftImport extends ImportResource {
         instance.setSlug(template.getSlug());
         instance.setDescription(template.getDescription());
         instance.setCategories(template.getCategories());
+        instance.setAttributes(template.getAttributes());
         instance.setMetaTitle(template.getMetaTitle());
         instance.setMetaDescription(template.getMetaDescription());
         instance.setMetaKeywords(template.getMetaKeywords());
@@ -397,6 +361,8 @@ public interface ProductDraftImport extends ImportResource {
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
+
+    public ProductDraftImport copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDraftImport
@@ -419,6 +385,11 @@ public interface ProductDraftImport extends ImportResource {
         instance.setCategories(Optional.ofNullable(template.getCategories())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setMetaTitle(
@@ -475,8 +446,8 @@ public interface ProductDraftImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport>() {
+    public static tools.jackson.core.type.TypeReference<ProductDraftImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDraftImport>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDraftImport>";

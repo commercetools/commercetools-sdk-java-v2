@@ -8,6 +8,7 @@ import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_50
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.net.http.HttpClient;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
@@ -27,6 +28,7 @@ import com.commercetools.api.models.common.AddressDraft;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.customer.*;
 import com.commercetools.api.models.customer_group.*;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
 import com.commercetools.api.models.product.AttributesAccessor;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductVariant;
@@ -34,7 +36,14 @@ import com.commercetools.api.models.product.ProductVariantBuilder;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.graphql.CommercetoolsTestUtils;
+import com.commercetools.graphql.api.GraphQL;
+import com.commercetools.graphql.api.GraphQLData;
+import com.commercetools.graphql.api.GraphQLRequestBuilder;
+import com.commercetools.graphql.api.types.OrderQueryResult;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
+import com.commercetools.http.javanet.CtJavaNetHttpClient;
+import com.commercetools.http.netty.CtNettyHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.*;
@@ -43,13 +52,13 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.event.Level;
 
-import dev.failsafe.Failsafe;
-import dev.failsafe.FailsafeExecutor;
+import reactor.netty.http.HttpProtocol;
 
 public class ExamplesTest {
 
@@ -116,18 +125,14 @@ public class ExamplesTest {
     }
 
     public void timeoutMiddleware() {
-        dev.failsafe.Timeout<ApiHttpResponse<byte[]>> timeout = dev.failsafe.Timeout
-                .<ApiHttpResponse<byte[]>> builder(Duration.ofSeconds(10))
-                .build();
-        FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor = Failsafe.with(timeout);
-
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
                         .withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware((request, next) -> failsafeExecutor.getStageAsync(() -> next.apply(request)))
+                .withRequestPolicies(
+                    policies -> policies.withAllOtherRequests(request -> request.withTimeout(Duration.ofSeconds(10))))
                 .build("my-project");
     }
 
@@ -380,6 +385,41 @@ public class ExamplesTest {
                 .join();
     }
 
+    public void graphQLAllOrders() {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        boolean limitNotReached = true;
+        int limit = 10, total_length = 0;
+        String lastId = null;
+        while (limitNotReached) {
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
+                    .query("query Orders($where: String, $limit: Int!) {\n"
+                            + "orders(where: $where, sort: \"id asc\", limit: $limit) {\n" + "results {\n" + "id\n"
+                            + "version\n" + "}\n" + "}\n" + "}")
+                    .dataMapper(GraphQLData::getOrders);
+
+            var variables = GraphQLVariablesMap.builder().addValue("limit", limit);
+            if (lastId != null) {
+                String whereQuery = "id > \"%s\"".formatted(lastId);
+                variables.addValue("where", whereQuery);
+            }
+            orderBuilder.variables(variables.build());
+
+            var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
+            var orders = result.getBody().getData().getResults();
+
+            orders.forEach(order -> {
+                Assertions.assertThat(order.getId()).isNotNull();
+                Assertions.assertThat(order.getVersion()).isNotNull();
+            });
+
+            var length = orders.size();
+            total_length += length;
+            lastId = result.getBody().getData().getResults().get(length - 1).getId();
+
+            limitNotReached = length == limit;
+        }
+    }
+
     public void middleware() {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
@@ -396,8 +436,12 @@ public class ExamplesTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withPolicies(policies -> policies.withRetry(builder -> builder.maxRetries(5)
-                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
+                .withRequestPolicies(
+                    policies -> policies
+                            .withAllOtherRequests(
+                                request -> request.withRetry(builder -> builder.maxRetries(5)
+                                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503,
+                                            GATEWAY_TIMEOUT_504)))))
                 .build("my-project");
     }
 
@@ -585,7 +629,8 @@ public class ExamplesTest {
     public void queueConcurrentLimitation() {
         ApiRootBuilder.of()
                 // ...
-                .withPolicies(policies -> policies.withBulkhead(64, Duration.ofSeconds(10)))
+                .withRequestPolicies(policies -> policies
+                        .withAllOtherRequests(request -> request.withBulkhead(64, Duration.ofSeconds(10))))
                 .build();
     }
 
@@ -622,5 +667,11 @@ public class ExamplesTest {
     public void mdcProjectApiRoot() {
         ProjectApiRoot globalRoot = ProjectApiRoot.of("test");
         ProjectApiRoot apiRoot = ProjectApiRoot.withContext(globalRoot, new MDCContext());
+    }
+
+    public void httpVersion() {
+        CtApacheHttpClient apacheHttpClient = new CtApacheHttpClient(HttpVersionPolicy.FORCE_HTTP_1);
+        CtNettyHttpClient nettyHttpClient = new CtNettyHttpClient(HttpProtocol.HTTP11);
+        CtJavaNetHttpClient javaNetHttpClient = new CtJavaNetHttpClient(HttpClient.Version.HTTP_1_1);
     }
 }

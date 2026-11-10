@@ -6,20 +6,22 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.ItemShippingDetails;
+import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItem ShippingDetails on Orders.</li>
- *   <li>Set LineItem ShippingDetails on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -31,10 +33,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemShippingDetailsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemShippingDetailsChangeImpl.class)
 public interface SetLineItemShippingDetailsChange extends Change {
@@ -79,12 +84,30 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public ItemShippingDetails getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
      * set change
@@ -108,11 +131,26 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public void setNextValue(final ItemShippingDetails nextValue);
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -133,8 +171,12 @@ public interface SetLineItemShippingDetailsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItem(template.getLineItem());
+        instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetLineItemShippingDetailsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemShippingDetailsChange
@@ -153,6 +195,8 @@ public interface SetLineItemShippingDetailsChange extends Change {
         instance.setNextValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -187,8 +231,8 @@ public interface SetLineItemShippingDetailsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemShippingDetailsChange>";

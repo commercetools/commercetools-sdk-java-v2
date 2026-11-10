@@ -4,46 +4,44 @@ package com.commercetools.importapi.models.discount_codes;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountCodeImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountCodeImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountCodeImportBuilder builder) {
         DiscountCodeImport discountCodeImport = builder.buildUnchecked();
         Assertions.assertThat(discountCodeImport).isInstanceOf(DiscountCodeImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DiscountCodeImport.builder().key("key") },
-                new Object[] { DiscountCodeImport.builder()
-                        .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCodeImport.builder()
-                        .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCodeImport.builder().code("code") },
-                new Object[] { DiscountCodeImport.builder()
-                        .cartDiscounts(Collections.singletonList(
-                            new com.commercetools.importapi.models.common.CartDiscountKeyReferenceImpl())) },
-                new Object[] { DiscountCodeImport.builder().cartPredicate("cartPredicate") },
-                new Object[] { DiscountCodeImport.builder().isActive(true) },
-                new Object[] { DiscountCodeImport.builder().maxApplications(9L) },
-                new Object[] { DiscountCodeImport.builder().maxApplicationsPerCustomer(5L) },
-                new Object[] { DiscountCodeImport.builder().groups(Collections.singletonList("groups")) },
-                new Object[] { DiscountCodeImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCodeImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCodeImport.builder()
+        return new Object[][] { new Object[] { "key", DiscountCodeImport.builder().key("key") },
+                new Object[] { "name",
+                        DiscountCodeImport.builder()
+                                .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        DiscountCodeImport.builder()
+                                .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "code", DiscountCodeImport.builder().code("code") },
+                new Object[] { "cartDiscounts",
+                        DiscountCodeImport.builder()
+                                .cartDiscounts(Collections.singletonList(
+                                    new com.commercetools.importapi.models.common.CartDiscountKeyReferenceImpl())) },
+                new Object[] { "cartPredicate", DiscountCodeImport.builder().cartPredicate("cartPredicate") },
+                new Object[] { "isActive", DiscountCodeImport.builder().isActive(true) },
+                new Object[] { "maxApplications", DiscountCodeImport.builder().maxApplications(9L) },
+                new Object[] { "maxApplicationsPerCustomer",
+                        DiscountCodeImport.builder().maxApplicationsPerCustomer(5L) },
+                new Object[] { "groups", DiscountCodeImport.builder().groups(Collections.singletonList("groups")) },
+                new Object[] { "validFrom",
+                        DiscountCodeImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        DiscountCodeImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom", DiscountCodeImport.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
     }
 

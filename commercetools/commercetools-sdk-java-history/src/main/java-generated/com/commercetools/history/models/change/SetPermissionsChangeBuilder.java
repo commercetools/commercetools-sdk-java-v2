@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +30,10 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
     private java.util.List<com.commercetools.history.models.common.Permission> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Permission> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.Permission> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Permission> removedItems;
 
     /**
      * set the value to the change
@@ -119,6 +125,84 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder addedItems(
+            final com.commercetools.history.models.common.Permission... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.Permission> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.Permission... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder removedItems(
+            final com.commercetools.history.models.common.Permission... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.Permission> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPermissionsChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.Permission... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -146,6 +230,24 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Permission> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Permission> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetPermissionsChange with checking for non-null required values
      * @return SetPermissionsChange
      */
@@ -153,7 +255,9 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
         Objects.requireNonNull(change, SetPermissionsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetPermissionsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetPermissionsChange.class + ": nextValue is missing");
-        return new SetPermissionsChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetPermissionsChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetPermissionsChange.class + ": removedItems is missing");
+        return new SetPermissionsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -161,7 +265,7 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
      * @return SetPermissionsChange
      */
     public SetPermissionsChange buildUnchecked() {
-        return new SetPermissionsChangeImpl(change, previousValue, nextValue);
+        return new SetPermissionsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -182,6 +286,8 @@ public class SetPermissionsChangeBuilder implements Builder<SetPermissionsChange
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

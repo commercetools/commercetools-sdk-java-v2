@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SubscriptionUpdateAction
@@ -26,11 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionImpl.class, name = SubscriptionChangeDestinationAction.CHANGE_DESTINATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetChangesActionImpl.class, name = SubscriptionSetChangesAction.SET_CHANGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetKeyActionImpl.class, name = SubscriptionSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetMessagesActionImpl.class, name = SubscriptionSetMessagesAction.SET_MESSAGES) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = SubscriptionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = SubscriptionUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,6 +41,8 @@ public interface SubscriptionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public SubscriptionUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionUpdateAction
      * @param template instance to be copied
@@ -55,21 +53,9 @@ public interface SubscriptionUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) {
-            return com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetChangesAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetChangesAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetChangesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetKeyAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetKeyAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetMessagesAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) template);
+
+        if (!(template instanceof SubscriptionUpdateActionImpl)) {
+            return template.copyDeep();
         }
         SubscriptionUpdateActionImpl instance = new SubscriptionUpdateActionImpl();
         return instance;
@@ -89,6 +75,14 @@ public interface SubscriptionUpdateAction
      */
     public static com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder setChangesBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder.of();
+    }
+
+    /**
+     * builder for setEvents subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder setEventsBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder.of();
     }
 
     /**
@@ -121,8 +115,8 @@ public interface SubscriptionUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<SubscriptionUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubscriptionUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<SubscriptionUpdateAction>";

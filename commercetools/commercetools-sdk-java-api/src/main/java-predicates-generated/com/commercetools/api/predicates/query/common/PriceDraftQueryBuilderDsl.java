@@ -98,4 +98,14 @@ public class PriceDraftQueryBuilderDsl {
             PriceDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<PriceDraftQueryBuilderDsl> recurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrencePolicy"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl
+                            .of())),
+            PriceDraftQueryBuilderDsl::of);
+    }
+
 }

@@ -37,10 +37,6 @@ public class ByProjectKeyMeCartsRequestBuilder {
         return post(op.apply(com.commercetools.api.models.me.MyCartDraftBuilder.of()).build());
     }
 
-    public ByProjectKeyMeCartsKeyByKeyRequestBuilder withKey(String key) {
-        return new ByProjectKeyMeCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
-    }
-
     public ByProjectKeyMeCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMeCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

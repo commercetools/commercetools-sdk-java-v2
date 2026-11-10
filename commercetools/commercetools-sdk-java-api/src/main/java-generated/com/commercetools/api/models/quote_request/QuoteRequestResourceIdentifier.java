@@ -7,14 +7,16 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ResourceIdentifier to a QuoteRequest.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("quote-request")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestResourceIdentifierImpl.class)
 public interface QuoteRequestResourceIdentifier
@@ -34,6 +37,14 @@ public interface QuoteRequestResourceIdentifier
      * discriminator value for QuoteRequestResourceIdentifier
      */
     String QUOTE_REQUEST = "quote-request";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      * factory method
@@ -54,6 +65,8 @@ public interface QuoteRequestResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public QuoteRequestResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestResourceIdentifier
@@ -102,8 +115,8 @@ public interface QuoteRequestResourceIdentifier
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestResourceIdentifier>";

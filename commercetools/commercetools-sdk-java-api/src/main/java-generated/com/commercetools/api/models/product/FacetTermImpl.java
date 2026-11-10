@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * FacetTerm
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetTermImpl implements FacetTerm, ModelBase {
 
     private java.lang.Object term;
@@ -46,7 +48,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      */
 
     public java.lang.Object getTerm() {
@@ -54,7 +56,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      */
 
     public Long getCount() {
@@ -62,7 +64,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      */
 
     public Long getProductCount() {
@@ -113,4 +115,8 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
                 .build();
     }
 
+    @Override
+    public FacetTerm copyDeep() {
+        return FacetTerm.deepCopy(this);
+    }
 }

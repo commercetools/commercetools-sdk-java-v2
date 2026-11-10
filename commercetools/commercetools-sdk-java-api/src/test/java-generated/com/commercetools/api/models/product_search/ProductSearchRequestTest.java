@@ -3,44 +3,39 @@ package com.commercetools.api.models.product_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchRequestTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchRequestBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchRequestBuilder builder) {
         ProductSearchRequest productSearchRequest = builder.buildUnchecked();
         Assertions.assertThat(productSearchRequest).isInstanceOf(ProductSearchRequest.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSearchRequest.builder()
-                        .query(new com.commercetools.api.models.search.SearchQueryImpl()) },
-                new Object[] { ProductSearchRequest.builder()
-                        .sort(Collections.singletonList(new com.commercetools.api.models.search.SearchSortingImpl())) },
-                new Object[] { ProductSearchRequest.builder().limit(7) },
-                new Object[] { ProductSearchRequest.builder().offset(3) },
-                new Object[] { ProductSearchRequest.builder().markMatchingVariants(true) },
-                new Object[] { ProductSearchRequest.builder()
+                new Object[] { "query",
+                        ProductSearchRequest.builder()
+                                .query(new com.commercetools.api.models.search.SearchQueryImpl()) },
+                new Object[] { "sort",
+                        ProductSearchRequest.builder()
+                                .sort(Collections
+                                        .singletonList(new com.commercetools.api.models.search.SearchSortingImpl())) },
+                new Object[] { "limit", ProductSearchRequest.builder().limit(7) },
+                new Object[] { "offset", ProductSearchRequest.builder().offset(3) },
+                new Object[] { "markMatchingVariants", ProductSearchRequest.builder().markMatchingVariants(true) },
+                new Object[] { "productProjectionParameters", ProductSearchRequest.builder()
                         .productProjectionParameters(
                             new com.commercetools.api.models.product_search.ProductSearchProjectionParamsImpl()) },
-                new Object[] { ProductSearchRequest.builder()
+                new Object[] { "facets", ProductSearchRequest.builder()
                         .facets(Collections.singletonList(
                             new com.commercetools.api.models.product_search.ProductSearchFacetExpressionImpl())) },
-                new Object[] { ProductSearchRequest.builder()
+                new Object[] { "postFilter", ProductSearchRequest.builder()
                         .postFilter(new com.commercetools.api.models.search.SearchQueryImpl()) } };
     }
 

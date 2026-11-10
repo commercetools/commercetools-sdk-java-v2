@@ -3,50 +3,47 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingInfoImportDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingInfoImportDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingInfoImportDraftBuilder builder) {
         ShippingInfoImportDraft shippingInfoImportDraft = builder.buildUnchecked();
         Assertions.assertThat(shippingInfoImportDraft).isInstanceOf(ShippingInfoImportDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShippingInfoImportDraft.builder().shippingMethodName("shippingMethodName") },
-                new Object[] {
+                new Object[] { "shippingMethodName",
+                        ShippingInfoImportDraft.builder().shippingMethodName("shippingMethodName") },
+                new Object[] { "price",
                         ShippingInfoImportDraft.builder().price(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { ShippingInfoImportDraft.builder()
+                new Object[] { "shippingRate", ShippingInfoImportDraft.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) },
-                new Object[] { ShippingInfoImportDraft.builder()
-                        .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { ShippingInfoImportDraft.builder()
+                new Object[] { "taxRate",
+                        ShippingInfoImportDraft.builder()
+                                .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
+                new Object[] { "taxedPrice",
+                        ShippingInfoImportDraft.builder()
+                                .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
+                new Object[] { "taxCategory", ShippingInfoImportDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { ShippingInfoImportDraft.builder()
+                new Object[] { "shippingMethod", ShippingInfoImportDraft.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "deliveries",
                         ShippingInfoImportDraft.builder()
                                 .deliveries(Collections
                                         .singletonList(new com.commercetools.api.models.order.DeliveryDraftImpl())) },
-                new Object[] { ShippingInfoImportDraft.builder()
+                new Object[] { "discountedPrice", ShippingInfoImportDraft.builder()
                         .discountedPrice(new com.commercetools.api.models.order.DiscountedLineItemPriceDraftImpl()) },
-                new Object[] { ShippingInfoImportDraft.builder()
+                new Object[] { "shippingMethodState", ShippingInfoImportDraft.builder()
                         .shippingMethodState(
                             com.commercetools.api.models.cart.ShippingMethodState.findEnum("DoesNotMatchCart")) } };
     }
@@ -79,6 +76,14 @@ public class ShippingInfoImportDraftTest {
         value.setTaxRate(new com.commercetools.api.models.tax_category.TaxRateImpl());
         Assertions.assertThat(value.getTaxRate())
                 .isEqualTo(new com.commercetools.api.models.tax_category.TaxRateImpl());
+    }
+
+    @Test
+    public void taxedPrice() {
+        ShippingInfoImportDraft value = ShippingInfoImportDraft.of();
+        value.setTaxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
+        Assertions.assertThat(value.getTaxedPrice())
+                .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
     }
 
     @Test

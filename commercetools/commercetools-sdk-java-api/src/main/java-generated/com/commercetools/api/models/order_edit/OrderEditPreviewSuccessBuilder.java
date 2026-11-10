@@ -28,7 +28,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @param builder function to build the preview value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @param builder function to build the preview value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @param preview value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @return preview
      */
 

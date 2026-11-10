@@ -3,36 +3,38 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCountriesChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCountriesChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCountriesChangeBuilder builder) {
         SetCountriesChange setCountriesChange = builder.buildUnchecked();
         Assertions.assertThat(setCountriesChange).isInstanceOf(SetCountriesChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCountriesChange.builder().change("change") },
-                new Object[] { SetCountriesChange.builder()
-                        .previousValue(Collections
-                                .singletonList(new com.commercetools.history.models.common.StoreCountryImpl())) },
-                new Object[] { SetCountriesChange.builder()
-                        .nextValue(Collections
-                                .singletonList(new com.commercetools.history.models.common.StoreCountryImpl())) } };
+        return new Object[][] { new Object[] { "change", SetCountriesChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetCountriesChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) },
+                new Object[] { "nextValue",
+                        SetCountriesChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) },
+                new Object[] { "addedItems",
+                        SetCountriesChange.builder()
+                                .addedItems(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) },
+                new Object[] { "removedItems",
+                        SetCountriesChange.builder()
+                                .removedItems(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) } };
     }
 
     @Test
@@ -56,6 +58,23 @@ public class SetCountriesChangeTest {
         SetCountriesChange value = SetCountriesChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetCountriesChange value = SetCountriesChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetCountriesChange value = SetCountriesChange.of();
+        value.setRemovedItems(
+            Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
     }
 }

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Change EnumValue Label update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeEnumValueLabelAction" rel="nofollow">Change EnumValue Label</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,10 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .fieldName("{fieldName}")
  *             .valueKey("{valueKey}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeEnumValueLabelChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeEnumValueLabelChangeImpl.class)
 public interface ChangeEnumValueLabelChange extends Change {
@@ -72,7 +75,7 @@ public interface ChangeEnumValueLabelChange extends Change {
     public String getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return fieldName
      */
     @NotNull
@@ -86,6 +89,14 @@ public interface ChangeEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
 
     /**
      * set change
@@ -109,7 +120,7 @@ public interface ChangeEnumValueLabelChange extends Change {
     public void setNextValue(final String nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param fieldName value to be set
      */
 
@@ -121,6 +132,13 @@ public interface ChangeEnumValueLabelChange extends Change {
      */
 
     public void setValueKey(final String valueKey);
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -142,8 +160,11 @@ public interface ChangeEnumValueLabelChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setValueKey(template.getValueKey());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
+
+    public ChangeEnumValueLabelChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeEnumValueLabelChange
@@ -161,6 +182,7 @@ public interface ChangeEnumValueLabelChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setValueKey(template.getValueKey());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -195,8 +217,8 @@ public interface ChangeEnumValueLabelChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeEnumValueLabelChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeEnumValueLabelChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeEnumValueLabelChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeEnumValueLabelChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeEnumValueLabelChange>";

@@ -1,36 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderCustomLineItemRemovedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderCustomLineItemRemovedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderCustomLineItemRemovedMessagePayloadBuilder builder) {
         OrderCustomLineItemRemovedMessagePayload orderCustomLineItemRemovedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(orderCustomLineItemRemovedMessagePayload)
                 .isInstanceOf(OrderCustomLineItemRemovedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "customLineItemId",
                         OrderCustomLineItemRemovedMessagePayload.builder().customLineItemId("customLineItemId") },
-                new Object[] {
+                new Object[] { "customLineItemKey",
                         OrderCustomLineItemRemovedMessagePayload.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { OrderCustomLineItemRemovedMessagePayload.builder()
+                new Object[] { "customLineItem", OrderCustomLineItemRemovedMessagePayload.builder()
                         .customLineItem(new com.commercetools.api.models.cart.CustomLineItemImpl()) } };
     }
 

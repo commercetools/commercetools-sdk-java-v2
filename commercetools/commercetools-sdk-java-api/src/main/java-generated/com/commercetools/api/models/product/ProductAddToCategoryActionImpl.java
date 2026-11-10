@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ProductAddedToCategory Message.</p>
+ *  <p>Produces the <span>ProductAddedToCategory</span> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddToCategoryActionImpl implements ProductAddToCategoryAction, ModelBase {
@@ -67,7 +68,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      */
 
     public String getOrderHint() {
@@ -75,7 +76,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -133,4 +134,8 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
                 .build();
     }
 
+    @Override
+    public ProductAddToCategoryAction copyDeep() {
+        return ProductAddToCategoryAction.deepCopy(this);
+    }
 }

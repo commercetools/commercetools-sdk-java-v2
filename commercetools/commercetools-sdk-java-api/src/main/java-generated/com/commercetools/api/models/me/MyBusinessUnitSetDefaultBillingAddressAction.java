@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the default billing address on a Business Unit generates the BusinessUnitDefaultBillingAddressSet Message.</p>
+ *  <p>Setting the default billing address on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDefaultBillingAddressSetMessage" rel="nofollow">BusinessUnitDefaultBillingAddressSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDefaultBillingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyBusinessUnitSetDefaultBillingAddressActionImpl.class)
 public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusinessUnitUpdateAction {
@@ -84,6 +86,8 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
         return instance;
     }
 
+    public MyBusinessUnitSetDefaultBillingAddressAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyBusinessUnitSetDefaultBillingAddressAction
      * @param template instance to be copied
@@ -134,8 +138,8 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetDefaultBillingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetDefaultBillingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitSetDefaultBillingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitSetDefaultBillingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitSetDefaultBillingAddressAction>";

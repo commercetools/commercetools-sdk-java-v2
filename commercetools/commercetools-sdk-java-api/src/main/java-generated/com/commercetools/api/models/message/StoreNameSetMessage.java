@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreNameSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreNameSetMessageImpl.class)
 public interface StoreNameSetMessage extends Message {
@@ -44,7 +46,7 @@ public interface StoreNameSetMessage extends Message {
     String STORE_NAME_SET = "StoreNameSet";
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @Valid
@@ -52,7 +54,7 @@ public interface StoreNameSetMessage extends Message {
     public LocalizedString getName();
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @return nameAllLocales
      */
     @Valid
@@ -60,14 +62,14 @@ public interface StoreNameSetMessage extends Message {
     public List<LocalizedString> getNameAllLocales();
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales values to be set
      */
 
@@ -75,7 +77,7 @@ public interface StoreNameSetMessage extends Message {
     public void setNameAllLocales(final LocalizedString... nameAllLocales);
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales values to be set
      */
 
@@ -110,6 +112,8 @@ public interface StoreNameSetMessage extends Message {
         instance.setNameAllLocales(template.getNameAllLocales());
         return instance;
     }
+
+    public StoreNameSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StoreNameSetMessage
@@ -174,8 +178,8 @@ public interface StoreNameSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<StoreNameSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreNameSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreNameSetMessage>";

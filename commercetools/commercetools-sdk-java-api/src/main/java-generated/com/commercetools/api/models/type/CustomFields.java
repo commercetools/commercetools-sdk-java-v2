@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+ *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFields extends CustomFieldsMixin {
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @return type
      */
     @NotNull
@@ -42,7 +43,7 @@ public interface CustomFields extends CustomFieldsMixin {
     public TypeReference getType();
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @return fields
      */
     @NotNull
@@ -51,14 +52,14 @@ public interface CustomFields extends CustomFieldsMixin {
     public FieldContainer getFields();
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeReference type);
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      */
 
@@ -83,6 +84,8 @@ public interface CustomFields extends CustomFieldsMixin {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public CustomFields copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFields
@@ -131,8 +134,8 @@ public interface CustomFields extends CustomFieldsMixin {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomFields> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomFields>() {
+    public static tools.jackson.core.type.TypeReference<CustomFields> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomFields>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFields>";

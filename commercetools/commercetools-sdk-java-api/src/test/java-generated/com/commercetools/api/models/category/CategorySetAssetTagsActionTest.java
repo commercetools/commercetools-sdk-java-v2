@@ -3,32 +3,24 @@ package com.commercetools.api.models.category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategorySetAssetTagsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategorySetAssetTagsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategorySetAssetTagsActionBuilder builder) {
         CategorySetAssetTagsAction categorySetAssetTagsAction = builder.buildUnchecked();
         Assertions.assertThat(categorySetAssetTagsAction).isInstanceOf(CategorySetAssetTagsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CategorySetAssetTagsAction.builder().assetId("assetId") },
-                new Object[] { CategorySetAssetTagsAction.builder().assetKey("assetKey") },
-                new Object[] { CategorySetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
+        return new Object[][] { new Object[] { "assetId", CategorySetAssetTagsAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", CategorySetAssetTagsAction.builder().assetKey("assetKey") },
+                new Object[] { "tags", CategorySetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
     }
 
     @Test

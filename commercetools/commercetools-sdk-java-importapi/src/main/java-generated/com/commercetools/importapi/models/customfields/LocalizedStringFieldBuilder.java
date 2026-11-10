@@ -25,12 +25,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
     private com.commercetools.importapi.models.common.LocalizedString value;
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -42,12 +37,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -59,12 +49,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -75,12 +60,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @return value
      */
 

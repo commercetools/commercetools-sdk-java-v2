@@ -49,10 +49,6 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     @Nullable
     private com.commercetools.importapi.models.common.DiscountedPrice discounted;
 
-    @Deprecated
-    @Nullable
-    private Boolean publish;
-
     @Nullable
     private Boolean staged;
 
@@ -67,7 +63,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -134,7 +130,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -148,7 +144,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -161,7 +157,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -173,7 +169,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -185,7 +181,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -197,7 +193,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -245,19 +241,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @param publish value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public PriceImportBuilder publish(@Nullable final Boolean publish) {
-        this.publish = publish;
-        return this;
-    }
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @param staged value to be set
@@ -357,7 +342,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -369,7 +354,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -381,7 +366,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -392,7 +377,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -406,7 +391,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -419,7 +404,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -431,7 +416,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -443,7 +428,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -455,7 +440,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -466,7 +451,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -514,7 +499,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -524,7 +509,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 
@@ -544,18 +529,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @return publish
-     */
-    @Deprecated
-    @Nullable
-    public Boolean getPublish() {
-        return this.publish;
-    }
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @return staged
@@ -577,7 +552,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @return custom
      */
 
@@ -587,7 +562,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
 
@@ -596,7 +571,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
 
@@ -614,7 +589,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");
         Objects.requireNonNull(product, PriceImport.class + ": product is missing");
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
-            publish, staged, tiers, custom, productVariant, product);
+            staged, tiers, custom, productVariant, product);
     }
 
     /**
@@ -623,7 +598,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
      */
     public PriceImport buildUnchecked() {
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
-            publish, staged, tiers, custom, productVariant, product);
+            staged, tiers, custom, productVariant, product);
     }
 
     /**
@@ -649,7 +624,6 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         builder.customerGroup = template.getCustomerGroup();
         builder.channel = template.getChannel();
         builder.discounted = template.getDiscounted();
-        builder.publish = template.getPublish();
         builder.staged = template.getStaged();
         builder.tiers = template.getTiers();
         builder.custom = template.getCustom();

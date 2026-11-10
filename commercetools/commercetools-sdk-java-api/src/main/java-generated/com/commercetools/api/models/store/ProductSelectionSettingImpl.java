@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelectionSetting
@@ -52,7 +53,7 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
     }
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {
@@ -97,4 +98,8 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetting copyDeep() {
+        return ProductSelectionSetting.deepCopy(this);
+    }
 }

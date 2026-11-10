@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListSetStoreAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStore")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListSetStoreActionImpl.class)
 public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If omitted, any existing value is removed.</p>
      * @return store
      */
     @Valid
@@ -44,7 +46,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If omitted, any existing value is removed.</p>
      * @param store value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public ShoppingListSetStoreAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListSetStoreAction
@@ -115,8 +119,8 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListSetStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListSetStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListSetStoreAction>";

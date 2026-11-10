@@ -25,7 +25,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
     private com.commercetools.api.models.payment.Payment payment;
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
     }
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
     }
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
     }
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @return payment
      */
 

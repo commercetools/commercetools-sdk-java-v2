@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.AssociateDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updating the Associate on a Business Unit generates the BusinessUnitAssociateChanged Message.</p>
+ *  <p>Updating the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateChangedMessage" rel="nofollow">BusinessUnitAssociateChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAssociate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyBusinessUnitChangeAssociateActionImpl.class)
 public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdateAction {
@@ -71,6 +73,8 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
         instance.setAssociate(template.getAssociate());
         return instance;
     }
+
+    public MyBusinessUnitChangeAssociateAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyBusinessUnitChangeAssociateAction
@@ -121,8 +125,8 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitChangeAssociateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitChangeAssociateAction>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitChangeAssociateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitChangeAssociateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitChangeAssociateAction>";

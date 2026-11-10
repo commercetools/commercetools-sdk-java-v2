@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountSetValidFromAndUntilAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFromAndUntil")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetValidFromAndUntilActionImpl.class)
 public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpdateAction {
@@ -35,7 +37,7 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -43,7 +45,7 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -51,14 +53,14 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 
@@ -83,6 +85,8 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public CartDiscountSetValidFromAndUntilAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountSetValidFromAndUntilAction
@@ -134,8 +138,8 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAndUntilAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAndUntilAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountSetValidFromAndUntilAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountSetValidFromAndUntilAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountSetValidFromAndUntilAction>";

@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddVariantChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddVariantChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddVariantChangeBuilder builder) {
         AddVariantChange addVariantChange = builder.buildUnchecked();
         Assertions.assertThat(addVariantChange).isInstanceOf(AddVariantChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddVariantChange.builder().change("change") },
-                new Object[] { AddVariantChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.VariantImpl()) },
-                new Object[] { AddVariantChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.VariantImpl()) },
-                new Object[] { AddVariantChange.builder().catalogData("catalogData") } };
+        return new Object[][] { new Object[] { "change", AddVariantChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        AddVariantChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.VariantImpl()) },
+                new Object[] { "nextValue",
+                        AddVariantChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.VariantImpl()) },
+                new Object[] { "catalogData", AddVariantChange.builder().catalogData("catalogData") } };
     }
 
     @Test

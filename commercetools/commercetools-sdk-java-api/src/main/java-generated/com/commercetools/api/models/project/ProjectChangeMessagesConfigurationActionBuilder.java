@@ -26,7 +26,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messagesConfiguration value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messagesConfiguration value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @param messagesConfiguration value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @return messagesConfiguration
      */
 

@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a field has an invalid value.</p>
@@ -36,7 +38,7 @@ public class GraphQLInvalidFieldErrorImpl implements GraphQLInvalidFieldError, M
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLInvalidFieldErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLInvalidFieldErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("field") final String field,
             @JsonProperty("invalidValue") final java.lang.Object invalidValue,
             @JsonProperty("allowedValues") final java.util.List<java.lang.Object> allowedValues) {
@@ -160,4 +162,8 @@ public class GraphQLInvalidFieldErrorImpl implements GraphQLInvalidFieldError, M
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidFieldError copyDeep() {
+        return GraphQLInvalidFieldError.deepCopy(this);
+    }
 }

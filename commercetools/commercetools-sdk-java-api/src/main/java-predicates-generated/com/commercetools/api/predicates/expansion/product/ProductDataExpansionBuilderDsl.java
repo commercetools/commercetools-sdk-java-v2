@@ -54,4 +54,19 @@ public class ProductDataExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.product.ProductVariantExpansionBuilderDsl
                 .of(appendOne(path, "variants[" + index + "]"));
     }
+
+    public com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl attributes() {
+        return com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl
+                .of(appendOne(path, "attributes[*]"));
+    }
+
+    public com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl attributes(long index) {
+        return com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl
+                .of(appendOne(path, "attributes[" + index + "]"));
+    }
+
+    public com.commercetools.api.predicates.expansion.variant.VariantReferenceExpansionBuilderDsl defaultVariant() {
+        return com.commercetools.api.predicates.expansion.variant.VariantReferenceExpansionBuilderDsl
+                .of(appendOne(path, "defaultVariant"));
+    }
 }

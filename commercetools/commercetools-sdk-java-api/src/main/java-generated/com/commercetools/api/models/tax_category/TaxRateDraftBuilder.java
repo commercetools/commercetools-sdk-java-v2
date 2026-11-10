@@ -44,6 +44,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     @Nullable
     private String key;
 
+    @Nullable
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
@@ -56,7 +59,8 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param amount value to be set
      * @return Builder
      */
@@ -67,7 +71,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @param includedInPrice value to be set
      * @return Builder
      */
@@ -78,7 +82,8 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -89,7 +94,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -100,7 +107,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -111,7 +118,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -123,7 +130,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -138,7 +145,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -153,7 +160,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -166,7 +173,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -177,7 +184,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -188,13 +195,26 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
 
     public TaxRateDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder taxRoundingTarget(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
         return this;
     }
 
@@ -208,7 +228,8 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return amount
      */
 
@@ -218,7 +239,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @return includedInPrice
      */
 
@@ -227,7 +248,8 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return country
      */
 
@@ -236,7 +258,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return state
      */
 
@@ -246,7 +270,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the <code>taxPortions</code> field in a Cart or Order or (Custom) Line Items. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
 
@@ -256,13 +280,24 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
     @Nullable
     public String getKey() {
         return this.key;
+    }
+
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @Nullable
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
     }
 
     /**
@@ -273,7 +308,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -281,7 +316,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
      * @return TaxRateDraft
      */
     public TaxRateDraft buildUnchecked() {
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -306,6 +341,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
         builder.key = template.getKey();
+        builder.taxRoundingTarget = template.getTaxRoundingTarget();
         return builder;
     }
 

@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.message.MessagePayload;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related Order, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
+ *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PreviewSuccess")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditPreviewSuccessImpl.class)
 public interface OrderEditPreviewSuccess extends OrderEditResult {
@@ -40,7 +42,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     String PREVIEW_SUCCESS = "PreviewSuccess";
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @return preview
      */
     @NotNull
@@ -58,7 +60,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public List<MessagePayload> getMessagePayloads();
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @param preview value to be set
      */
 
@@ -98,6 +100,8 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
         instance.setMessagePayloads(template.getMessagePayloads());
         return instance;
     }
+
+    public OrderEditPreviewSuccess copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditPreviewSuccess
@@ -150,8 +154,8 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewSuccess> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewSuccess>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditPreviewSuccess> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditPreviewSuccess>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditPreviewSuccess>";

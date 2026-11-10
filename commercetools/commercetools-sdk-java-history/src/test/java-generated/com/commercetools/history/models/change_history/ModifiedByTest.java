@@ -1,38 +1,37 @@
 
 package com.commercetools.history.models.change_history;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ModifiedByTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ModifiedByBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ModifiedByBuilder builder) {
         ModifiedBy modifiedBy = builder.buildUnchecked();
         Assertions.assertThat(modifiedBy).isInstanceOf(ModifiedBy.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ModifiedBy.builder().id("id") },
-                new Object[] { ModifiedBy.builder().type("type") },
-                new Object[] { ModifiedBy.builder().clientId("clientId") },
-                new Object[] { ModifiedBy.builder().anonymousId("anonymousId") },
-                new Object[] {
+        return new Object[][] { new Object[] { "isPlatformClient", ModifiedBy.builder().isPlatformClient(true) },
+                new Object[] { "id", ModifiedBy.builder().id("id") },
+                new Object[] { "type", ModifiedBy.builder().type("type") },
+                new Object[] { "clientId", ModifiedBy.builder().clientId("clientId") },
+                new Object[] { "anonymousId", ModifiedBy.builder().anonymousId("anonymousId") },
+                new Object[] { "customer",
                         ModifiedBy.builder().customer(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] {
-                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { ModifiedBy.builder().isPlatformClient(true) } };
+                new Object[] { "associate",
+                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) } };
+    }
+
+    @Test
+    public void isPlatformClient() {
+        ModifiedBy value = ModifiedBy.of();
+        value.setIsPlatformClient(true);
+        Assertions.assertThat(value.getIsPlatformClient()).isEqualTo(true);
     }
 
     @Test
@@ -77,12 +76,5 @@ public class ModifiedByTest {
         value.setAssociate(new com.commercetools.history.models.common.ReferenceImpl());
         Assertions.assertThat(value.getAssociate())
                 .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
-    }
-
-    @Test
-    public void isPlatformClient() {
-        ModifiedBy value = ModifiedBy.of();
-        value.setIsPlatformClient(true);
-        Assertions.assertThat(value.getIsPlatformClient()).isEqualTo(true);
     }
 }

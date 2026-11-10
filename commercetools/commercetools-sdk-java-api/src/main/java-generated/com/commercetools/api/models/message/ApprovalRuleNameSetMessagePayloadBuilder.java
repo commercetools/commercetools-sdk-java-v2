@@ -27,7 +27,7 @@ public class ApprovalRuleNameSetMessagePayloadBuilder implements Builder<Approva
     private String oldName;
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ApprovalRuleNameSetMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ApprovalRuleNameSetMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
 
@@ -58,7 +58,7 @@ public class ApprovalRuleNameSetMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
 

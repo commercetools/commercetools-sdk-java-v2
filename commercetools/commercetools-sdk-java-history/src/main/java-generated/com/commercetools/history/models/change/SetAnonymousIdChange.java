@@ -6,19 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set AnonymousId on Payments.</li>
- *   <li>Set AnonymousId on Shopping Lists.</li>
- *  </ul>
+ * SetAnonymousIdChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetAnonymousIdChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAnonymousIdChangeImpl.class)
 public interface SetAnonymousIdChange extends Change {
@@ -115,6 +113,8 @@ public interface SetAnonymousIdChange extends Change {
         return instance;
     }
 
+    public SetAnonymousIdChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetAnonymousIdChange
      * @param template instance to be copied
@@ -163,8 +163,8 @@ public interface SetAnonymousIdChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetAnonymousIdChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetAnonymousIdChange>() {
+    public static tools.jackson.core.type.TypeReference<SetAnonymousIdChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetAnonymousIdChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetAnonymousIdChange>";

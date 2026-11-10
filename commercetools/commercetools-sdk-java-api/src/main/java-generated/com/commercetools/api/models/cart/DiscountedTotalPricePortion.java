@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart_discount.CartDiscountReference;
+import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedTotalPricePortion
@@ -35,13 +36,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedTotalPricePortion {
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @return discount
      */
     @NotNull
     @Valid
     @JsonProperty("discount")
-    public CartDiscountReference getDiscount();
+    public Reference getDiscount();
 
     /**
      *  <p>Money value of the discount.</p>
@@ -53,11 +54,11 @@ public interface DiscountedTotalPricePortion {
     public TypedMoney getDiscountedAmount();
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @param discount value to be set
      */
 
-    public void setDiscount(final CartDiscountReference discount);
+    public void setDiscount(final Reference discount);
 
     /**
      *  <p>Money value of the discount.</p>
@@ -86,6 +87,8 @@ public interface DiscountedTotalPricePortion {
         return instance;
     }
 
+    public DiscountedTotalPricePortion copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedTotalPricePortion
      * @param template instance to be copied
@@ -97,8 +100,7 @@ public interface DiscountedTotalPricePortion {
             return null;
         }
         DiscountedTotalPricePortionImpl instance = new DiscountedTotalPricePortionImpl();
-        instance.setDiscount(
-            com.commercetools.api.models.cart_discount.CartDiscountReference.deepCopy(template.getDiscount()));
+        instance.setDiscount(com.commercetools.api.models.common.Reference.deepCopy(template.getDiscount()));
         instance.setDiscountedAmount(
             com.commercetools.api.models.common.TypedMoney.deepCopy(template.getDiscountedAmount()));
         return instance;
@@ -135,8 +137,8 @@ public interface DiscountedTotalPricePortion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedTotalPricePortion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedTotalPricePortion>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedTotalPricePortion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedTotalPricePortion>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedTotalPricePortion>";

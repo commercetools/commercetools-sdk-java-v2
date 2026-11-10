@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxCategorySetDescriptionAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategorySetDescriptionActionImpl.class)
 public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction {
@@ -34,7 +36,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
 
@@ -42,7 +44,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     public String getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -66,6 +68,8 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public TaxCategorySetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategorySetDescriptionAction
@@ -113,8 +117,8 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategorySetDescriptionAction>";

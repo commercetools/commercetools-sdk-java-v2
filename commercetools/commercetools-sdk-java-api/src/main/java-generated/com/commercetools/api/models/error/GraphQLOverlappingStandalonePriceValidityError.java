@@ -7,20 +7,21 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.standalone_price.StandalonePriceReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a given Price validity period conflicts with an existing one. Every Standalone Price associated with the same SKU and with the same combination of currency, country, Customer Group, and Channel, must have non-overlapping validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
- *  <p>The error is returned as a failed response to the Create StandalonePrice request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/standalone-prices:POST" rel="nofollow">Create StandalonePrice</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OverlappingStandalonePriceValidity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLOverlappingStandalonePriceValidityErrorImpl.class)
 public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLErrorObject {
@@ -61,7 +63,7 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
     public StandalonePriceReference getConflictingStandalonePrice();
 
     /**
-     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the conflicting Standalone Price is associated.</p>
      * @return sku
      */
     @NotNull
@@ -85,7 +87,7 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
     public String getCountry();
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @return customerGroup
      */
     @Valid
@@ -93,7 +95,7 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @return channel
      */
     @Valid
@@ -140,7 +142,7 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
     public void setConflictingStandalonePrice(final StandalonePriceReference conflictingStandalonePrice);
 
     /**
-     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the conflicting Standalone Price is associated.</p>
      * @param sku value to be set
      */
 
@@ -161,14 +163,14 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
     public void setCountry(final String country);
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @param channel value to be set
      */
 
@@ -232,6 +234,8 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
         return instance;
     }
 
+    public GraphQLOverlappingStandalonePriceValidityError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLOverlappingStandalonePriceValidityError
      * @param template instance to be copied
@@ -294,8 +298,8 @@ public interface GraphQLOverlappingStandalonePriceValidityError extends GraphQLE
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLOverlappingStandalonePriceValidityError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLOverlappingStandalonePriceValidityError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLOverlappingStandalonePriceValidityError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLOverlappingStandalonePriceValidityError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLOverlappingStandalonePriceValidityError>";

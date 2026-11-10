@@ -25,12 +25,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -42,12 +39,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -59,12 +53,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -79,12 +70,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -99,12 +87,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -117,12 +102,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -133,12 +115,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -149,12 +128,9 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @return stores
      */
 

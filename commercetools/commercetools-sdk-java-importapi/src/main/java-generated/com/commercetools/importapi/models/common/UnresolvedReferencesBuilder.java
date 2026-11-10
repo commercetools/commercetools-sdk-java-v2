@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     UnresolvedReferences unresolvedReferences = UnresolvedReferences.builder()
  *             .key("{key}")
- *             .typeId(ReferenceType.CART)
+ *             .typeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,7 +27,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
     /**
-     * set the value to the key
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @param typeId value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     }
 
     /**
-     * value of key}
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @return typeId
      */
 

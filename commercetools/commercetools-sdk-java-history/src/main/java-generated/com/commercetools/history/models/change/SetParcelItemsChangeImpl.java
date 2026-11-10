@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Parcel Items on Orders.</li>
- *   <li>Set Parcel Items on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -36,6 +37,8 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
 
     private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +46,13 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     SetParcelItemsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue,
-            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
+            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = SET_PARCEL_ITEMS_CHANGE;
     }
 
@@ -98,6 +103,14 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
         return this.parcel;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -123,6 +136,10 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
         this.parcel = parcel;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -138,11 +155,13 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -153,6 +172,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
                 .append(previousValue)
                 .append(nextValue)
                 .append(parcel)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -163,7 +183,12 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("parcel", parcel)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 
+    @Override
+    public SetParcelItemsChange copyDeep() {
+        return SetParcelItemsChange.deepCopy(this);
+    }
 }

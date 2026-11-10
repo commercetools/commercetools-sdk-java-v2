@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetTermBuilder implements Builder<FacetTerm> {
 
     private java.lang.Object term;
@@ -31,7 +32,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     private Long productCount;
 
     /**
-     * set the value to the term
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      * @param term value to be set
      * @return Builder
      */
@@ -42,7 +43,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * set the value to the count
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -53,7 +54,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * set the value to the productCount
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      * @return Builder
      */
@@ -64,7 +65,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of term}
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      * @return term
      */
 
@@ -73,7 +74,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of count}
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @return count
      */
 
@@ -82,7 +83,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of productCount}
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 

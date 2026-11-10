@@ -3,36 +3,30 @@ package com.commercetools.api.models.project;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchIndexingConfigurationValuesTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchIndexingConfigurationValuesBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchIndexingConfigurationValuesBuilder builder) {
         SearchIndexingConfigurationValues searchIndexingConfigurationValues = builder.buildUnchecked();
         Assertions.assertThat(searchIndexingConfigurationValues).isInstanceOf(SearchIndexingConfigurationValues.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { SearchIndexingConfigurationValues.builder()
-                        .status(com.commercetools.api.models.project.SearchIndexingConfigurationStatus
-                                .findEnum("Activated")) },
-                new Object[] { SearchIndexingConfigurationValues.builder()
-                        .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { SearchIndexingConfigurationValues.builder()
+                new Object[] { "status",
+                        SearchIndexingConfigurationValues.builder()
+                                .status(com.commercetools.api.models.project.SearchIndexingConfigurationStatus
+                                        .findEnum("Activated")) },
+                new Object[] { "lastModifiedAt",
+                        SearchIndexingConfigurationValues.builder()
+                                .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy", SearchIndexingConfigurationValues.builder()
                         .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) } };
     }
 

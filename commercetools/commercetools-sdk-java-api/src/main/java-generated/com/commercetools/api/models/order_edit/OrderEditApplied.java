@@ -7,16 +7,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Result of a succesful application of <code>stagedActions</code> to the Order.</p>
+ *  <p>Result of a successful application of <code>stagedActions</code> to the Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Applied")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
@@ -115,6 +117,8 @@ public interface OrderEditApplied extends OrderEditResult {
         return instance;
     }
 
+    public OrderEditApplied copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditApplied
      * @param template instance to be copied
@@ -165,8 +169,8 @@ public interface OrderEditApplied extends OrderEditResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditApplied> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditApplied>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditApplied> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditApplied>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditApplied>";

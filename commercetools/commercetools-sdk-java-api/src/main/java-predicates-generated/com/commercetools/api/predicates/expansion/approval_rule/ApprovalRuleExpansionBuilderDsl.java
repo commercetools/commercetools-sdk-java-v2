@@ -38,4 +38,9 @@ public class ApprovalRuleExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.common.LastModifiedByExpansionBuilderDsl
                 .of(appendOne(path, "lastModifiedBy"));
     }
+
+    public com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl custom() {
+        return com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl
+                .of(appendOne(path, "custom"));
+    }
 }

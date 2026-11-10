@@ -25,10 +25,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +60,9 @@ public class DivisionBuilder implements Builder<Division> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores;
+
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
     private String name;
@@ -67,15 +73,16 @@ public class DivisionBuilder implements Builder<Division> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     @Nullable
@@ -91,6 +98,8 @@ public class DivisionBuilder implements Builder<Division> {
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit;
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
@@ -219,7 +228,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -230,9 +239,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -243,9 +252,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -257,9 +266,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -273,9 +282,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -290,9 +299,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -305,9 +314,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -318,9 +327,9 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -328,6 +337,97 @@ public class DivisionBuilder implements Builder<Division> {
     public DivisionBuilder setStores(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
         return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder inheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        this.inheritedStores = new ArrayList<>(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder inheritedStores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores) {
+        this.inheritedStores = inheritedStores;
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder plusInheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores.addAll(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder plusInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder withInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.inheritedStores = new ArrayList<>();
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder addInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusInheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder setInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return inheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**
@@ -364,7 +464,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -376,7 +476,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -388,7 +488,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -396,6 +496,106 @@ public class DivisionBuilder implements Builder<Division> {
     public DivisionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
     }
 
     /**
@@ -490,7 +690,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -501,7 +701,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -512,7 +712,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -537,7 +737,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -548,7 +748,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -559,7 +759,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -591,7 +791,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -602,7 +802,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -614,7 +814,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -628,7 +828,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -643,7 +843,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -656,7 +856,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -667,7 +867,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -678,7 +878,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -690,7 +890,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -702,7 +902,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -717,7 +917,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -733,7 +933,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -747,7 +947,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -759,7 +959,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -848,6 +1048,18 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder approvalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Business Unit.</p>
      * @return id
      */
@@ -913,7 +1125,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @return status
      */
 
@@ -922,15 +1134,25 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @return stores
      */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @return inheritedStores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
+        return this.inheritedStores;
     }
 
     /**
@@ -962,13 +1184,24 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @return custom
      */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -985,7 +1218,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -1005,7 +1237,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
@@ -1030,7 +1261,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @return associates
      */
 
@@ -1039,7 +1270,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @return inheritedAssociates
      */
 
@@ -1067,6 +1298,15 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
+    /**
      * builds Division with checking for non-null required values
      * @return Division
      */
@@ -1080,14 +1320,17 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(storeMode, Division.class + ": storeMode is missing");
         Objects.requireNonNull(name, Division.class + ": name is missing");
         Objects.requireNonNull(addresses, Division.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Division.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Division.class + ": billingAddressIds is missing");
         Objects.requireNonNull(associateMode, Division.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Division.class + ": associates is missing");
         Objects.requireNonNull(parentUnit, Division.class + ": parentUnit is missing");
         Objects.requireNonNull(topLevelUnit, Division.class + ": topLevelUnit is missing");
+        Objects.requireNonNull(approvalRuleMode, Division.class + ": approvalRuleMode is missing");
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            inheritedStores, storeMode, name, contactEmail, custom, customerGroupAssignments, addresses,
+            shippingAddressIds, defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode,
+            associates, inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1096,9 +1339,9 @@ public class DivisionBuilder implements Builder<Division> {
      */
     public Division buildUnchecked() {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            inheritedStores, storeMode, name, contactEmail, custom, customerGroupAssignments, addresses,
+            shippingAddressIds, defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode,
+            associates, inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1125,10 +1368,12 @@ public class DivisionBuilder implements Builder<Division> {
         builder.key = template.getKey();
         builder.status = template.getStatus();
         builder.stores = template.getStores();
+        builder.inheritedStores = template.getInheritedStores();
         builder.storeMode = template.getStoreMode();
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();
         builder.custom = template.getCustom();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         builder.addresses = template.getAddresses();
         builder.shippingAddressIds = template.getShippingAddressIds();
         builder.defaultShippingAddressId = template.getDefaultShippingAddressId();
@@ -1139,6 +1384,7 @@ public class DivisionBuilder implements Builder<Division> {
         builder.inheritedAssociates = template.getInheritedAssociates();
         builder.parentUnit = template.getParentUnit();
         builder.topLevelUnit = template.getTopLevelUnit();
+        builder.approvalRuleMode = template.getApprovalRuleMode();
         return builder;
     }
 

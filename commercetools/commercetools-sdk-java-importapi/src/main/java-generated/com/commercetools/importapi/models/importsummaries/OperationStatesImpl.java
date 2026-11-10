@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The number of resources in each Processing State.</p>
+ *  <p>The number of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in each <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingState</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OperationStatesImpl implements OperationStates, ModelBase {
@@ -36,6 +37,8 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
 
     private Long canceled;
 
+    private Long partiallyImported;
+
     /**
      * create instance with all properties
      */
@@ -45,7 +48,8 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
             @JsonProperty("unresolved") final Long unresolved,
             @JsonProperty("waitForMasterVariant") final Long waitForMasterVariant,
             @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected,
-            @JsonProperty("canceled") final Long canceled) {
+            @JsonProperty("canceled") final Long canceled,
+            @JsonProperty("partiallyImported") final Long partiallyImported) {
         this.processing = processing;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
@@ -53,6 +57,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         this.imported = imported;
         this.rejected = rejected;
         this.canceled = canceled;
+        this.partiallyImported = partiallyImported;
     }
 
     /**
@@ -62,7 +67,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      */
 
     public Long getProcessing() {
@@ -70,7 +75,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      */
 
     public Long getValidationFailed() {
@@ -78,7 +83,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      */
 
     public Long getUnresolved() {
@@ -86,7 +91,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      */
 
     public Long getWaitForMasterVariant() {
@@ -94,7 +99,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      */
 
     public Long getImported() {
@@ -102,7 +107,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      */
 
     public Long getRejected() {
@@ -110,11 +115,19 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      */
 
     public Long getCanceled() {
         return this.canceled;
+    }
+
+    /**
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     */
+
+    public Long getPartiallyImported() {
+        return this.partiallyImported;
     }
 
     public void setProcessing(final Long processing) {
@@ -145,6 +158,10 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         this.canceled = canceled;
     }
 
+    public void setPartiallyImported(final Long partiallyImported) {
+        this.partiallyImported = partiallyImported;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -162,6 +179,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(imported, that.imported)
                 .append(rejected, that.rejected)
                 .append(canceled, that.canceled)
+                .append(partiallyImported, that.partiallyImported)
                 .append(processing, that.processing)
                 .append(validationFailed, that.validationFailed)
                 .append(unresolved, that.unresolved)
@@ -169,6 +187,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(imported, that.imported)
                 .append(rejected, that.rejected)
                 .append(canceled, that.canceled)
+                .append(partiallyImported, that.partiallyImported)
                 .isEquals();
     }
 
@@ -181,6 +200,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(imported)
                 .append(rejected)
                 .append(canceled)
+                .append(partiallyImported)
                 .toHashCode();
     }
 
@@ -193,7 +213,12 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append("imported", imported)
                 .append("rejected", rejected)
                 .append("canceled", canceled)
+                .append("partiallyImported", partiallyImported)
                 .build();
     }
 
+    @Override
+    public OperationStates copyDeep() {
+        return OperationStates.deepCopy(this);
+    }
 }

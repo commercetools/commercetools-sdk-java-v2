@@ -42,7 +42,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -216,7 +216,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -262,7 +262,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -321,7 +321,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryKey
      */
 
@@ -331,7 +331,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -362,7 +362,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @return parcels
      */
 

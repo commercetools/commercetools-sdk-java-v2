@@ -126,6 +126,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asChangePriceRoundingMode(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl
+                    .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asChangeShipmentState(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderChangeShipmentStateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderChangeShipmentStateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -247,6 +255,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.order_edit.StagedOrderSetBillingAddressCustomTypeActionQueryBuilderDsl
                     .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetBusinessUnit(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl.of()),
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
@@ -393,6 +409,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl.of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetDirectDiscountsIgnoreCartDiscounts(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl
+                    .of()),
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 

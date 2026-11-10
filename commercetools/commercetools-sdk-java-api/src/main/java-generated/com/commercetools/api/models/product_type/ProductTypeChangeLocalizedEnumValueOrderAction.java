@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updates the order of localized enum <code>values</code> in an AttributeLocalizedEnumType AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>Updates the order of localized enum <code>values</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeLocalizedEnumType AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLocalizedEnumValueOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueOrderActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductTypeUpdateAction {
@@ -47,7 +49,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public String getAttributeName();
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @return values
      */
     @NotNull
@@ -63,7 +65,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values values to be set
      */
 
@@ -71,7 +73,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public void setValues(final AttributeLocalizedEnumValue... values);
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values values to be set
      */
 
@@ -97,6 +99,8 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public ProductTypeChangeLocalizedEnumValueOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeLocalizedEnumValueOrderAction
@@ -152,8 +156,8 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeLocalizedEnumValueOrderAction>";

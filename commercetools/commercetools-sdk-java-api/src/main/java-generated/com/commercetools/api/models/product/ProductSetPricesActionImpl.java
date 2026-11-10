@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -78,7 +79,10 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The Embedded Prices to set.</p>
+     *  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -86,7 +90,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -156,4 +160,8 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
                 .build();
     }
 
+    @Override
+    public ProductSetPricesAction copyDeep() {
+        return ProductSetPricesAction.deepCopy(this);
+    }
 }

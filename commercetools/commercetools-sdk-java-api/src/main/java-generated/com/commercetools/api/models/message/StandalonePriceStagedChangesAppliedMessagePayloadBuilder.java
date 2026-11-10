@@ -26,7 +26,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges;
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param builder function to build the stagedChanges value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
 

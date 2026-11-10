@@ -3,33 +3,25 @@ package com.commercetools.api.models.search;
 
 import java.time.LocalTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchTimeRangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchTimeRangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchTimeRangeValueBuilder builder) {
         SearchTimeRangeValue searchTimeRangeValue = builder.buildUnchecked();
         Assertions.assertThat(searchTimeRangeValue).isInstanceOf(SearchTimeRangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchTimeRangeValue.builder().gte(LocalTime.parse("12:00")) },
-                new Object[] { SearchTimeRangeValue.builder().gt(LocalTime.parse("12:00")) },
-                new Object[] { SearchTimeRangeValue.builder().lte(LocalTime.parse("12:00")) },
-                new Object[] { SearchTimeRangeValue.builder().lt(LocalTime.parse("12:00")) } };
+        return new Object[][] { new Object[] { "gte", SearchTimeRangeValue.builder().gte(LocalTime.parse("12:00")) },
+                new Object[] { "gt", SearchTimeRangeValue.builder().gt(LocalTime.parse("12:00")) },
+                new Object[] { "lte", SearchTimeRangeValue.builder().lte(LocalTime.parse("12:00")) },
+                new Object[] { "lt", SearchTimeRangeValue.builder().lt(LocalTime.parse("12:00")) } };
     }
 
     @Test

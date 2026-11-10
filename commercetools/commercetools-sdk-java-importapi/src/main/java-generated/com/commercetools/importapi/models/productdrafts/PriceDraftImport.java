@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
@@ -18,9 +16,12 @@ import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Price Draft for the import purpose.</p>
@@ -41,7 +42,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceDraftImport {
 
     /**
-     *
+     *  <p>Money value of this Price.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +51,7 @@ public interface PriceDraftImport {
     public TypedMoney getValue();
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @return country
      */
 
@@ -58,7 +59,7 @@ public interface PriceDraftImport {
     public String getCountry();
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
     @Valid
@@ -66,7 +67,7 @@ public interface PriceDraftImport {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
     @Valid
@@ -74,7 +75,7 @@ public interface PriceDraftImport {
     public ChannelKeyReference getChannel();
 
     /**
-     *
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @return validFrom
      */
 
@@ -82,7 +83,7 @@ public interface PriceDraftImport {
     public ZonedDateTime getValidFrom();
 
     /**
-     *
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      * @return validUntil
      */
 
@@ -90,7 +91,7 @@ public interface PriceDraftImport {
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @return custom
      */
     @Valid
@@ -98,7 +99,7 @@ public interface PriceDraftImport {
     public Custom getCustom();
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @return discounted
      */
     @Valid
@@ -122,56 +123,56 @@ public interface PriceDraftImport {
     public String getKey();
 
     /**
-     * set value
+     *  <p>Money value of this Price.</p>
      * @param value value to be set
      */
 
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      */
 
     public void setChannel(final ChannelKeyReference channel);
 
     /**
-     * set validFrom
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     * set validUntil
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      * @param validUntil value to be set
      */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final Custom custom);
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @param discounted value to be set
      */
 
@@ -226,6 +227,8 @@ public interface PriceDraftImport {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public PriceDraftImport copyDeep();
 
     /**
      * factory method to create a deep copy of PriceDraftImport
@@ -289,8 +292,8 @@ public interface PriceDraftImport {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport>() {
+    public static tools.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PriceDraftImport>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceDraftImport>";

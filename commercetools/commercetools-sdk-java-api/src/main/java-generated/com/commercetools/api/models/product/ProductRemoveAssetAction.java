@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeAsset")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveAssetActionImpl.class)
 public interface ProductRemoveAssetAction extends ProductUpdateAction {
@@ -50,7 +52,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @return staged
      */
 
@@ -88,7 +90,7 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @param staged value to be set
      */
 
@@ -130,6 +132,8 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public ProductRemoveAssetAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemoveAssetAction
@@ -181,8 +185,8 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveAssetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveAssetAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductRemoveAssetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRemoveAssetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRemoveAssetAction>";

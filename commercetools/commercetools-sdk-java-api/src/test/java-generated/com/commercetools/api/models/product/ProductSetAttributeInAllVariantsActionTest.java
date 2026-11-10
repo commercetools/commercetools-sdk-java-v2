@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAttributeInAllVariantsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAttributeInAllVariantsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAttributeInAllVariantsActionBuilder builder) {
         ProductSetAttributeInAllVariantsAction productSetAttributeInAllVariantsAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAttributeInAllVariantsAction)
                 .isInstanceOf(ProductSetAttributeInAllVariantsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAttributeInAllVariantsAction.builder().name("name") },
-                new Object[] { ProductSetAttributeInAllVariantsAction.builder().value("value") },
-                new Object[] { ProductSetAttributeInAllVariantsAction.builder().staged(true) } };
+        return new Object[][] { new Object[] { "name", ProductSetAttributeInAllVariantsAction.builder().name("name") },
+                new Object[] { "value", ProductSetAttributeInAllVariantsAction.builder().value("value") },
+                new Object[] { "staged", ProductSetAttributeInAllVariantsAction.builder().staged(true) } };
     }
 
     @Test

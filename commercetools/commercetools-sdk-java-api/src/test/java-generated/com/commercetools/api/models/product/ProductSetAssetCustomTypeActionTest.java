@@ -1,37 +1,30 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAssetCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAssetCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAssetCustomTypeActionBuilder builder) {
         ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAssetCustomTypeAction).isInstanceOf(ProductSetAssetCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAssetCustomTypeAction.builder().variantId(5L) },
-                new Object[] { ProductSetAssetCustomTypeAction.builder().sku("sku") },
-                new Object[] { ProductSetAssetCustomTypeAction.builder().staged(true) },
-                new Object[] { ProductSetAssetCustomTypeAction.builder().assetId("assetId") },
-                new Object[] { ProductSetAssetCustomTypeAction.builder().assetKey("assetKey") },
-                new Object[] { ProductSetAssetCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { ProductSetAssetCustomTypeAction.builder()
+        return new Object[][] { new Object[] { "variantId", ProductSetAssetCustomTypeAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductSetAssetCustomTypeAction.builder().sku("sku") },
+                new Object[] { "staged", ProductSetAssetCustomTypeAction.builder().staged(true) },
+                new Object[] { "assetId", ProductSetAssetCustomTypeAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductSetAssetCustomTypeAction.builder().assetKey("assetKey") },
+                new Object[] { "type",
+                        ProductSetAssetCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", ProductSetAssetCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

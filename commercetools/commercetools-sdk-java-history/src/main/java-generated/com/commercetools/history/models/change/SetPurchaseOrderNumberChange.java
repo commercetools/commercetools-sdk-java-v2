@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Purchase Order Number on Orders.</li>
- *   <li>Set Purchase Order Number on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetPurchaseOrderNumberChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetPurchaseOrderNumberChangeImpl.class)
 public interface SetPurchaseOrderNumberChange extends Change {
@@ -115,6 +117,8 @@ public interface SetPurchaseOrderNumberChange extends Change {
         return instance;
     }
 
+    public SetPurchaseOrderNumberChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetPurchaseOrderNumberChange
      * @param template instance to be copied
@@ -163,8 +167,8 @@ public interface SetPurchaseOrderNumberChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetPurchaseOrderNumberChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetPurchaseOrderNumberChange>() {
+    public static tools.jackson.core.type.TypeReference<SetPurchaseOrderNumberChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetPurchaseOrderNumberChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetPurchaseOrderNumberChange>";

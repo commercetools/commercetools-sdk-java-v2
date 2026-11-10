@@ -24,7 +24,7 @@ public class StringFieldBuilder implements Builder<StringField> {
     private String value;
 
     /**
-     * set the value to the value
+     *  <p>A text value.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StringFieldBuilder implements Builder<StringField> {
     }
 
     /**
-     * value of value}
+     *  <p>A text value.</p>
      * @return value
      */
 

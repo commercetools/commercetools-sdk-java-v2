@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change_value.ShoppingListLineItemValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Change ShoppingListLineItems Order update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListChangeLineItemsOrderAction" rel="nofollow">Change ShoppingListLineItems Order</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeShoppingListLineItemsOrderChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeShoppingListLineItemsOrderChangeImpl.class)
 public interface ChangeShoppingListLineItemsOrderChange extends Change {
@@ -132,6 +134,8 @@ public interface ChangeShoppingListLineItemsOrderChange extends Change {
         return instance;
     }
 
+    public ChangeShoppingListLineItemsOrderChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeShoppingListLineItemsOrderChange
      * @param template instance to be copied
@@ -191,8 +195,8 @@ public interface ChangeShoppingListLineItemsOrderChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeShoppingListLineItemsOrderChange>";

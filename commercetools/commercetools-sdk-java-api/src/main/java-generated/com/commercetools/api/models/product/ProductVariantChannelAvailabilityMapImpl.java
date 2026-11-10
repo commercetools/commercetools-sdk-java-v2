@@ -4,9 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</p>
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap, ModelBase {
@@ -29,7 +31,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
      */
     @JsonCreator
     ProductVariantChannelAvailabilityMapImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
         this.values = values;
     }
 
@@ -40,7 +42,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
     }
 
     /**
-     *
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      */
 
     public Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
@@ -77,4 +79,8 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public ProductVariantChannelAvailabilityMap copyDeep() {
+        return ProductVariantChannelAvailabilityMap.deepCopy(this);
+    }
 }

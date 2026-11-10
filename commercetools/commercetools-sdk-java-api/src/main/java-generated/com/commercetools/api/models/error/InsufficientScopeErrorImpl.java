@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * InsufficientScopeError
+ *  <p>This error occurs when your <span>API Client</span> does not have the <span>OAuth scope</span> required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InsufficientScopeErrorImpl implements InsufficientScopeError, ModelBase {
@@ -33,7 +35,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
      */
     @JsonCreator
     InsufficientScopeErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = INSUFFICIENT_SCOPE;
@@ -47,7 +49,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     *  <p>Error identifier.</p>
+     *
      */
 
     public String getCode() {
@@ -55,7 +57,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     *  <p>Plain text description of the cause of the error.</p>
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
      */
 
     public String getMessage() {
@@ -113,4 +115,8 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
                 .build();
     }
 
+    @Override
+    public InsufficientScopeError copyDeep() {
+        return InsufficientScopeError.deepCopy(this);
+    }
 }

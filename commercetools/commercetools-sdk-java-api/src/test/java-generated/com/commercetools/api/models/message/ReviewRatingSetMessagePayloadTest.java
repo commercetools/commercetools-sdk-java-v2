@@ -1,33 +1,27 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewRatingSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewRatingSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewRatingSetMessagePayloadBuilder builder) {
         ReviewRatingSetMessagePayload reviewRatingSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(reviewRatingSetMessagePayload).isInstanceOf(ReviewRatingSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReviewRatingSetMessagePayload.builder().oldRating(0.9492049) },
-                new Object[] { ReviewRatingSetMessagePayload.builder().newRating(0.33994043) },
-                new Object[] { ReviewRatingSetMessagePayload.builder().includedInStatistics(true) },
-                new Object[] { ReviewRatingSetMessagePayload.builder()
+        return new Object[][] {
+                new Object[] { "oldRating", ReviewRatingSetMessagePayload.builder().oldRating(0.9492049) },
+                new Object[] { "newRating", ReviewRatingSetMessagePayload.builder().newRating(0.33994043) },
+                new Object[] { "includedInStatistics",
+                        ReviewRatingSetMessagePayload.builder().includedInStatistics(true) },
+                new Object[] { "target", ReviewRatingSetMessagePayload.builder()
                         .target(new com.commercetools.api.models.common.ReferenceImpl()) } };
     }
 

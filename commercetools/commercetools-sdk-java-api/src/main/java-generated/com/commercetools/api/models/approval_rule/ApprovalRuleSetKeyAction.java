@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the key for an Approval Rule generates an ApprovalRuleKeySet Message.</p>
+ *  <p>Setting the key for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleKeySetMessage" rel="nofollow">ApprovalRuleKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleSetKeyActionImpl.class)
 public interface ApprovalRuleSetKeyAction extends ApprovalRuleUpdateAction {
@@ -34,7 +36,7 @@ public interface ApprovalRuleSetKeyAction extends ApprovalRuleUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. Must be unique within a Business Unit. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique within a Business Unit. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -42,7 +44,7 @@ public interface ApprovalRuleSetKeyAction extends ApprovalRuleUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. Must be unique within a Business Unit. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique within a Business Unit. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 
@@ -66,6 +68,8 @@ public interface ApprovalRuleSetKeyAction extends ApprovalRuleUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ApprovalRuleSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleSetKeyAction
@@ -113,8 +117,8 @@ public interface ApprovalRuleSetKeyAction extends ApprovalRuleUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleSetKeyAction>";

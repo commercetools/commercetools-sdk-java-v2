@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * GraphQLVariablesMap
+ *  <p>The variables that the GraphQL query uses.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLVariablesMap {
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -38,7 +39,7 @@ public interface GraphQLVariablesMap {
     public Map<String, Object> values();
 
     /**
-     * set pattern property
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param key property name
      * @param value property value
      */
@@ -64,6 +65,8 @@ public interface GraphQLVariablesMap {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLVariablesMap copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLVariablesMap
@@ -111,8 +114,8 @@ public interface GraphQLVariablesMap {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLVariablesMap> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLVariablesMap>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLVariablesMap>";

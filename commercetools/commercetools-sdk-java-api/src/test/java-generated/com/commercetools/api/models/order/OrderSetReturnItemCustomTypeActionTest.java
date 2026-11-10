@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetReturnItemCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetReturnItemCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetReturnItemCustomTypeActionBuilder builder) {
         OrderSetReturnItemCustomTypeAction orderSetReturnItemCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetReturnItemCustomTypeAction)
                 .isInstanceOf(OrderSetReturnItemCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderSetReturnItemCustomTypeAction.builder().returnItemId("returnItemId") },
-                new Object[] { OrderSetReturnItemCustomTypeAction.builder().returnItemKey("returnItemKey") },
-                new Object[] { OrderSetReturnItemCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { OrderSetReturnItemCustomTypeAction.builder()
+                new Object[] { "returnItemId",
+                        OrderSetReturnItemCustomTypeAction.builder().returnItemId("returnItemId") },
+                new Object[] { "returnItemKey",
+                        OrderSetReturnItemCustomTypeAction.builder().returnItemKey("returnItemKey") },
+                new Object[] { "type",
+                        OrderSetReturnItemCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", OrderSetReturnItemCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

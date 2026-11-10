@@ -47,8 +47,11 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     @Nullable
     private Boolean isSearchable;
 
+    @Nullable
+    private com.commercetools.importapi.models.producttypes.AttributeLevel level;
+
     /**
-     * set the value to the type
+     *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -59,7 +62,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Describes the Type of the Attribute.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -71,7 +74,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the name
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -82,12 +85,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -99,12 +97,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -116,12 +109,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -132,7 +120,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the isRequired
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      * @return Builder
      */
@@ -143,7 +131,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the attributeConstraint
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -155,12 +143,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param builder function to build the inputTip value
      * @return Builder
      */
@@ -172,12 +155,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param builder function to build the inputTip value
      * @return Builder
      */
@@ -189,12 +167,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      * @return Builder
      */
@@ -206,7 +179,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the inputHint
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      * @return Builder
      */
@@ -218,7 +191,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the isSearchable
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -229,7 +202,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of type}
+     * set the value to the level
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder level(
+            @Nullable final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
+        this.level = level;
+        return this;
+    }
+
+    /**
+     *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
 
@@ -238,7 +223,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of name}
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
 
@@ -247,12 +232,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @return label
      */
 
@@ -261,7 +241,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of isRequired}
+     *  <p>Whether the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
 
@@ -270,7 +250,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of attributeConstraint}
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
 
@@ -280,12 +260,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
      */
 
@@ -295,7 +270,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of inputHint}
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
 
@@ -305,13 +280,23 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of isSearchable}
+     *  <p>Whether the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets.</p>
      * @return isSearchable
      */
 
     @Nullable
     public Boolean getIsSearchable() {
         return this.isSearchable;
+    }
+
+    /**
+     * value of level}
+     * @return level
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.producttypes.AttributeLevel getLevel() {
+        return this.level;
     }
 
     /**
@@ -324,7 +309,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+            isSearchable, level);
     }
 
     /**
@@ -333,7 +318,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+            isSearchable, level);
     }
 
     /**
@@ -359,6 +344,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.level = template.getLevel();
         return builder;
     }
 

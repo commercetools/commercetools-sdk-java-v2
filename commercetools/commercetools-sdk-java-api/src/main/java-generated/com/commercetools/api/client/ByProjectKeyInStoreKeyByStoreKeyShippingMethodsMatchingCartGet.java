@@ -11,16 +11,20 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Retrieves all the ShippingMethods that can ship to the shipping address of the given Cart in a given Store. Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is added to the Cart.</p>
+ *  <p>Retrieves the active ShippingMethods that can ship to the shipping address of the provided Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>The Cart must belong to the Store specified in the path. If no Cart exists for the given <code>cartId</code> in the specified Store, either because the Cart does not exist in the Project or because it exists but does not belong to that Store, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>The results include globally scoped ShippingMethods (those with an empty <code>stores</code> field) and ShippingMethods scoped to the Store specified in the path.</p>
+ *  <p>Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">added to the Cart</a>.</p>
+ *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -70,8 +74,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/shipping-methods/matching-cart", this.projectKey,
-            this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/shipping-methods/matching-cart",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

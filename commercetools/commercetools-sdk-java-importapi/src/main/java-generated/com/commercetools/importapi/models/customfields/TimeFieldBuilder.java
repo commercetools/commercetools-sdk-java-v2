@@ -24,7 +24,7 @@ public class TimeFieldBuilder implements Builder<TimeField> {
     private java.time.LocalTime value;
 
     /**
-     * set the value to the value
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class TimeFieldBuilder implements Builder<TimeField> {
     }
 
     /**
-     * value of value}
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
 

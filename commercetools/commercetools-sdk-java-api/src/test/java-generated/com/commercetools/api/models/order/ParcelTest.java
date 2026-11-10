@@ -4,39 +4,35 @@ package com.commercetools.api.models.order;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ParcelTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ParcelBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ParcelBuilder builder) {
         Parcel parcel = builder.buildUnchecked();
         Assertions.assertThat(parcel).isInstanceOf(Parcel.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Parcel.builder().id("id") },
-                new Object[] { Parcel.builder().key("key") },
-                new Object[] { Parcel.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Parcel.builder()
-                        .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Parcel.builder().id("id") },
+                new Object[] { "key", Parcel.builder().key("key") },
+                new Object[] { "createdAt", Parcel.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "measurements",
+                        Parcel.builder()
+                                .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
+                new Object[] { "trackingData",
                         Parcel.builder().trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
-                new Object[] { Parcel.builder()
-                        .items(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
-                new Object[] { Parcel.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "items",
+                        Parcel.builder()
+                                .items(Collections
+                                        .singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
+                new Object[] { "custom",
+                        Parcel.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test

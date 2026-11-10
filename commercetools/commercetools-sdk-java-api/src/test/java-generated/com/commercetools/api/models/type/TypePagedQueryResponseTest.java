@@ -3,34 +3,26 @@ package com.commercetools.api.models.type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypePagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypePagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypePagedQueryResponseBuilder builder) {
         TypePagedQueryResponse typePagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(typePagedQueryResponse).isInstanceOf(TypePagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TypePagedQueryResponse.builder().limit(7L) },
-                new Object[] { TypePagedQueryResponse.builder().offset(3L) },
-                new Object[] { TypePagedQueryResponse.builder().count(2L) },
-                new Object[] { TypePagedQueryResponse.builder().total(1L) },
-                new Object[] { TypePagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", TypePagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", TypePagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", TypePagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", TypePagedQueryResponse.builder().total(1L) },
+                new Object[] { "results", TypePagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.type.TypeImpl())) } };
     }
 

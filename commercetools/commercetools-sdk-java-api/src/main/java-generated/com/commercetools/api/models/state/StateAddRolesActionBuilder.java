@@ -25,6 +25,8 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -36,6 +38,8 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -48,6 +52,8 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -62,6 +68,8 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 

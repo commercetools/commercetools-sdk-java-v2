@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     private com.commercetools.history.models.common.Money nextValue;
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String lineItemId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -116,7 +122,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -128,7 +134,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -140,7 +146,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -148,6 +154,29 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     public SetLineItemTotalPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -179,12 +208,31 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     /**
@@ -196,7 +244,9 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
         Objects.requireNonNull(previousValue, SetLineItemTotalPriceChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLineItemTotalPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemTotalPriceChange.class + ": lineItem is missing");
-        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        Objects.requireNonNull(lineItemId, SetLineItemTotalPriceChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(variant, SetLineItemTotalPriceChange.class + ": variant is missing");
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -204,7 +254,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
      * @return SetLineItemTotalPriceChange
      */
     public SetLineItemTotalPriceChange buildUnchecked() {
-        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -226,6 +276,8 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
+        builder.lineItemId = template.getLineItemId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

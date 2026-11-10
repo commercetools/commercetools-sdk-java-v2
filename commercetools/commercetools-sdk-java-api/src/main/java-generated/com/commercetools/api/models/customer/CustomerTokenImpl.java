@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerToken
@@ -30,6 +31,8 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
     private java.time.ZonedDateTime expiresAt;
 
+    private Boolean invalidateOlderTokens;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
@@ -41,12 +44,14 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     CustomerTokenImpl(@JsonProperty("id") final String id, @JsonProperty("customerId") final String customerId,
             @JsonProperty("value") final String value,
             @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
         this.customerId = customerId;
         this.value = value;
         this.expiresAt = expiresAt;
+        this.invalidateOlderTokens = invalidateOlderTokens;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
     }
@@ -90,6 +95,14 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
+    /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      */
 
@@ -121,6 +134,10 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
         this.expiresAt = expiresAt;
     }
 
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
@@ -143,12 +160,14 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
                 .append(customerId, that.customerId)
                 .append(value, that.value)
                 .append(expiresAt, that.expiresAt)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(id, that.id)
                 .append(customerId, that.customerId)
                 .append(value, that.value)
                 .append(expiresAt, that.expiresAt)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
@@ -160,6 +179,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
                 .append(customerId)
                 .append(value)
                 .append(expiresAt)
+                .append(invalidateOlderTokens)
                 .append(createdAt)
                 .append(lastModifiedAt)
                 .toHashCode();
@@ -171,9 +191,14 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
                 .append("customerId", customerId)
                 .append("value", value)
                 .append("expiresAt", expiresAt)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .append("createdAt", createdAt)
                 .append("lastModifiedAt", lastModifiedAt)
                 .build();
     }
 
+    @Override
+    public CustomerToken copyDeep() {
+        return CustomerToken.deepCopy(this);
+    }
 }

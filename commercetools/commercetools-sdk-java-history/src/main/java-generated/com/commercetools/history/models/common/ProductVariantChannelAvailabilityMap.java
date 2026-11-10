@@ -6,23 +6,24 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ProductVariantChannelAvailabilityMap
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailabilityMap productVariantChannelAvailabilityMap = ProductVariantChannelAvailabilityMap.builder()
- *             .//(//Builder -> //Builder)
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/(/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder -> /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantChannelAvailabilityMap {
 
     /**
-     *
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -41,7 +42,7 @@ public interface ProductVariantChannelAvailabilityMap {
     public Map<String, ProductVariantChannelAvailability> values();
 
     /**
-     * set pattern property
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param key property name
      * @param value property value
      */
@@ -67,6 +68,8 @@ public interface ProductVariantChannelAvailabilityMap {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public ProductVariantChannelAvailabilityMap copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantChannelAvailabilityMap
@@ -116,8 +119,8 @@ public interface ProductVariantChannelAvailabilityMap {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantChannelAvailabilityMap>";

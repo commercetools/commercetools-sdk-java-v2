@@ -8,15 +8,16 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Base polymorphic money type containing common fields for Money and HighPrecisionMoneyDraft.</p>
+ *  <p>Base polymorphic money type containing common fields for <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
  *  <ul>
- *   <li>To set money in cent precision, use Money.</li>
- *   <li>To set money in high precision, use HighPrecisionMoneyDraft.</li>
+ *   <li>To set money in cent precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</li>
+ *   <li>To set money in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</li>
  *  </ul>
  *
  * <hr>
@@ -29,9 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -75,6 +73,8 @@ public interface TypedMoneyDraft extends Money {
 
     public void setCentAmount(final Long centAmount);
 
+    public TypedMoneyDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TypedMoneyDraft
      * @param template instance to be copied
@@ -85,13 +85,9 @@ public interface TypedMoneyDraft extends Money {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.CentPrecisionMoneyDraft) {
-            return com.commercetools.api.models.common.CentPrecisionMoneyDraft
-                    .deepCopy((com.commercetools.api.models.common.CentPrecisionMoneyDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoneyDraft) {
-            return com.commercetools.api.models.common.HighPrecisionMoneyDraft
-                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoneyDraft) template);
+
+        if (!(template instanceof TypedMoneyDraftImpl)) {
+            return template.copyDeep();
         }
         TypedMoneyDraftImpl instance = new TypedMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -135,8 +131,8 @@ public interface TypedMoneyDraft extends Money {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft>() {
+    public static tools.jackson.core.type.TypeReference<TypedMoneyDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypedMoneyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TypedMoneyDraft>";

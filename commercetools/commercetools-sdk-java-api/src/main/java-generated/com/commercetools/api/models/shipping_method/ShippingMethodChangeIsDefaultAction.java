@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodChangeIsDefaultAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeIsDefault")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
@@ -36,7 +38,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     String CHANGE_IS_DEFAULT = "changeIsDefault";
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return isDefault
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     public Boolean getIsDefault();
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param isDefault value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
         instance.setIsDefault(template.getIsDefault());
         return instance;
     }
+
+    public ShippingMethodChangeIsDefaultAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodChangeIsDefaultAction
@@ -117,8 +121,8 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodChangeIsDefaultAction>";

@@ -9,13 +9,13 @@ package com.commercetools.docs.meta;
  *
  * <h3 id="compat-sphere-client">Creating a SphereClient with the v2 SDK</h3>
  *
- * <p>The {@link com.commercetools.compat.CompatSphereClient} acts as a replacement {@link io.sphere.sdk.client.SphereClient} for applications using the JVM SDK (v1).</p>
+ * <p>The com.commercetools.compat.CompatSphereClient acts as a replacement io.sphere.sdk.client.SphereClient for applications using the JVM SDK (v1).</p>
  *
  * {@include.example com.commercetools.compat.CompatSphereClientUsageTest}
  *
  * <h3 id="reuse-requests">Using Requests from the JVM SDK (v1)</h3>
  *
- * <p>The {@link com.commercetools.compat.CompatClient} can be used to execute a {@link io.sphere.sdk.client.SphereRequest}
+ * <p>The com.commercetools.compat.CompatClient can be used to execute a io.sphere.sdk.client.SphereRequest
  * with an {@link io.vrap.rmf.base.client.ApiHttpClient}</p>
  *
  * {@include.example com.commercetools.compat.CompatClientUsageTest}

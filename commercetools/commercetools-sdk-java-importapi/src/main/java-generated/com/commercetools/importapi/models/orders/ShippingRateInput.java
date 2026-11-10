@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingRateInput
@@ -27,9 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ClassificationShippingRateInputImpl.class, name = ClassificationShippingRateInput.CLASSIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ScoreShippingRateInputImpl.class, name = ScoreShippingRateInput.SCORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRateInputImpl.class, visible = true)
 @JsonDeserialize(as = ShippingRateInputImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +41,8 @@ public interface ShippingRateInput {
     @JsonProperty("type")
     public ShippingRateInputType getType();
 
+    public ShippingRateInput copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingRateInput
      * @param template instance to be copied
@@ -53,13 +53,9 @@ public interface ShippingRateInput {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.orders.ClassificationShippingRateInput) {
-            return com.commercetools.importapi.models.orders.ClassificationShippingRateInput
-                    .deepCopy((com.commercetools.importapi.models.orders.ClassificationShippingRateInput) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.orders.ScoreShippingRateInput) {
-            return com.commercetools.importapi.models.orders.ScoreShippingRateInput
-                    .deepCopy((com.commercetools.importapi.models.orders.ScoreShippingRateInput) template);
+
+        if (!(template instanceof ShippingRateInputImpl)) {
+            return template.copyDeep();
         }
         ShippingRateInputImpl instance = new ShippingRateInputImpl();
         return instance;
@@ -95,8 +91,8 @@ public interface ShippingRateInput {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRateInput> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRateInput>() {
+    public static tools.jackson.core.type.TypeReference<ShippingRateInput> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingRateInput>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingRateInput>";

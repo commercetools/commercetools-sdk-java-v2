@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email-token:POST" rel="nofollow">Create email token for Customer</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email-token:POST" rel="nofollow">Create email token for Customer in Store</a> request. The <code>resource</code> property of the Message is a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailTokenReference" rel="nofollow">CustomerEmailTokenReference</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmailTokenCreatedMessagePayload, ModelBase {
@@ -28,14 +29,22 @@ public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmai
 
     private java.time.ZonedDateTime expiresAt;
 
+    private String value;
+
+    private Boolean invalidateOlderTokens;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerEmailTokenCreatedMessagePayloadImpl(@JsonProperty("customerId") final String customerId,
-            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
+            @JsonProperty("value") final String value,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens) {
         this.customerId = customerId;
         this.expiresAt = expiresAt;
+        this.value = value;
+        this.invalidateOlderTokens = invalidateOlderTokens;
         this.type = CUSTOMER_EMAIL_TOKEN_CREATED;
     }
 
@@ -70,12 +79,36 @@ public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmai
         return this.expiresAt;
     }
 
+    /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
     public void setCustomerId(final String customerId) {
         this.customerId = customerId;
     }
 
     public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
+    }
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     @Override
@@ -91,15 +124,24 @@ public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmai
         return new EqualsBuilder().append(type, that.type)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(type, that.type)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customerId).append(expiresAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customerId)
+                .append(expiresAt)
+                .append(value)
+                .append(invalidateOlderTokens)
+                .toHashCode();
     }
 
     @Override
@@ -107,7 +149,13 @@ public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmai
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("customerId", customerId)
                 .append("expiresAt", expiresAt)
+                .append("value", value)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .build();
     }
 
+    @Override
+    public CustomerEmailTokenCreatedMessagePayload copyDeep() {
+        return CustomerEmailTokenCreatedMessagePayload.deepCopy(this);
+    }
 }

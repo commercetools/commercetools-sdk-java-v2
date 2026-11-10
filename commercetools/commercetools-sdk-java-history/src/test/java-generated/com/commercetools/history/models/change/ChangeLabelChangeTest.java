@@ -1,36 +1,30 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeLabelChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeLabelChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeLabelChangeBuilder builder) {
         ChangeLabelChange changeLabelChange = builder.buildUnchecked();
         Assertions.assertThat(changeLabelChange).isInstanceOf(ChangeLabelChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeLabelChange.builder().change("change") },
-                new Object[] { ChangeLabelChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeLabelChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeLabelChange.builder().fieldName("fieldName") },
-                new Object[] { ChangeLabelChange.builder().attributeName("attributeName") } };
+        return new Object[][] { new Object[] { "change", ChangeLabelChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeLabelChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "nextValue",
+                        ChangeLabelChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "fieldName", ChangeLabelChange.builder().fieldName("fieldName") },
+                new Object[] { "attributeName", ChangeLabelChange.builder().attributeName("attributeName") } };
     }
 
     @Test

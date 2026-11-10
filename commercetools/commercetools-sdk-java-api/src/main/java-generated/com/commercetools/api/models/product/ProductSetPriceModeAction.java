@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Controls whether the Prices of a Product Variant are embedded into the Product or standalone.</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPriceMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetPriceModeActionImpl.class)
 public interface ProductSetPriceModeAction extends ProductUpdateAction {
@@ -66,6 +68,8 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
+
+    public ProductSetPriceModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetPriceModeAction
@@ -113,8 +117,8 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceModeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetPriceModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetPriceModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetPriceModeAction>";

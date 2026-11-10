@@ -1,0 +1,42 @@
+# Name of this GitHub Actions workflow.
+name: Semgrep Scan for CodeQL
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 5 * * 1'
+
+permissions:
+    # required for all workflows
+    security-events: write
+    # only required for workflows in private repositories
+    actions: read
+    contents: read
+
+jobs:
+    semgrep:
+        # User definable name of this GitHub Actions job.
+        name: semgrep
+        # If you are self-hosting, change the following `runs-on` value:
+        runs-on: ubuntu-latest
+
+        container:
+            # A Docker image with Semgrep installed. Do not change this.
+            image: returntocorp/semgrep
+
+        # Skip any PR created by dependabot to avoid permission issues:
+        if: (github.actor != 'dependabot[bot]')
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            - name: Run Semgrep
+              run: semgrep scan --sarif --output=semgrep.sarif --config=p/auto --config=p/dockerfile --config=p/typescript --config=p/javascript --config=p/java --metrics=off --verbose
+            - name: Upload SARIF file for GitHub Advanced Security Dashboard
+              uses: github/codeql-action/upload-sarif@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28 # v4.37.8
+              with:
+                  sarif_file: semgrep.sarif
+              if: always()

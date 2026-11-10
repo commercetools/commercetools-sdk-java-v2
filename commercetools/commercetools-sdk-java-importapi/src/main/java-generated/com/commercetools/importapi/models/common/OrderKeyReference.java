@@ -8,9 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>References an order by key.</p>
@@ -25,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("order")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderKeyReferenceImpl.class)
 public interface OrderKeyReference extends KeyReference {
@@ -33,6 +36,14 @@ public interface OrderKeyReference extends KeyReference {
      * discriminator value for OrderKeyReference
      */
     String ORDER = "order";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
 
     /**
      * factory method
@@ -52,6 +63,8 @@ public interface OrderKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public OrderKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of OrderKeyReference
@@ -99,8 +112,8 @@ public interface OrderKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<OrderKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderKeyReference>";

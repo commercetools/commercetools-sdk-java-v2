@@ -7,4 +7,6 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyGet get();
 
     ByProjectKeyByResourceTypeRequestBuilder withResourceTypeValue(String resourceType);
+
+    ByProjectKeyGraphqlRequestBuilder graphql();
 }

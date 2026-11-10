@@ -41,7 +41,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with <span>Reference Expansion</span> for QuoteRequest.</p>
      * @return obj
      */
 

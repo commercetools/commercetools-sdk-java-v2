@@ -1,31 +1,24 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class FacetTermTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(FacetTermBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, FacetTermBuilder builder) {
         FacetTerm facetTerm = builder.buildUnchecked();
         Assertions.assertThat(facetTerm).isInstanceOf(FacetTerm.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { FacetTerm.builder().term("term") },
-                new Object[] { FacetTerm.builder().count(2L) }, new Object[] { FacetTerm.builder().productCount(1L) } };
+        return new Object[][] { new Object[] { "term", FacetTerm.builder().term("term") },
+                new Object[] { "count", FacetTerm.builder().count(2L) },
+                new Object[] { "productCount", FacetTerm.builder().productCount(1L) } };
     }
 
     @Test

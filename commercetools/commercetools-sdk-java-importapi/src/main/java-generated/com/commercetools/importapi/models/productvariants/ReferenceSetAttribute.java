@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of references.</p>
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("reference-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceSetAttributeImpl.class)
 public interface ReferenceSetAttribute extends Attribute {
@@ -39,7 +41,7 @@ public interface ReferenceSetAttribute extends Attribute {
     String REFERENCE_SET = "reference-set";
 
     /**
-     *
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @return value
      */
     @NotNull
@@ -48,7 +50,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public List<KeyReference> getValue();
 
     /**
-     * set value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value values to be set
      */
 
@@ -56,7 +58,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public void setValue(final KeyReference... value);
 
     /**
-     * set value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value values to be set
      */
 
@@ -81,6 +83,8 @@ public interface ReferenceSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceSetAttribute
@@ -133,8 +137,8 @@ public interface ReferenceSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<ReferenceSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReferenceSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<ReferenceSetAttribute>";

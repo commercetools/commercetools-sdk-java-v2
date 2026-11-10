@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of dates.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("date-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateSetAttributeImpl.class)
 public interface DateSetAttribute extends Attribute {
@@ -37,7 +39,7 @@ public interface DateSetAttribute extends Attribute {
     String DATE_SET = "date-set";
 
     /**
-     *
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface DateSetAttribute extends Attribute {
     public List<LocalDate> getValue();
 
     /**
-     * set value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value values to be set
      */
 
@@ -53,7 +55,7 @@ public interface DateSetAttribute extends Attribute {
     public void setValue(final LocalDate... value);
 
     /**
-     * set value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value values to be set
      */
 
@@ -78,6 +80,8 @@ public interface DateSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of DateSetAttribute
@@ -126,8 +130,8 @@ public interface DateSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DateSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DateSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<DateSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DateSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<DateSetAttribute>";

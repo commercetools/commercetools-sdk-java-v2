@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetProductPriceCustomTypeAction
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setProductPriceCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
@@ -47,7 +49,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @return staged
      */
 
@@ -55,7 +57,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public Boolean getStaged();
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @return type
      */
     @Valid
@@ -63,7 +65,8 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Embedded Price.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -78,21 +81,22 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Embedded Price.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -119,6 +123,8 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public ProductSetProductPriceCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetProductPriceCustomTypeAction
@@ -172,8 +178,8 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetProductPriceCustomTypeAction>";

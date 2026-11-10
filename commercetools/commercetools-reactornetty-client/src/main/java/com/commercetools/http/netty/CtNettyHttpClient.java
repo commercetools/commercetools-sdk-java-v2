@@ -1,14 +1,11 @@
 
 package com.commercetools.http.netty;
 
-import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import javax.validation.constraints.NotNull;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelOption;
@@ -23,9 +20,11 @@ import io.vrap.rmf.base.client.HttpClientBase;
 
 import org.reactivestreams.Publisher;
 
+import jakarta.validation.constraints.NotNull;
 import reactor.core.publisher.Mono;
 import reactor.netty.ByteBufMono;
 import reactor.netty.NettyOutbound;
+import reactor.netty.http.HttpProtocol;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.http.client.HttpClientRequest;
 import reactor.netty.http.client.HttpClientResponse;
@@ -42,9 +41,19 @@ public class CtNettyHttpClient extends HttpClientBase {
         this(MAX_REQUESTS);
     }
 
-    public CtNettyHttpClient(int maxConnections) {
+    public CtNettyHttpClient(HttpProtocol protocol) {
+        this(protocol, MAX_REQUESTS);
+    }
+
+    public CtNettyHttpClient(final int maxConnections) {
         super();
         this.nettyClient = createDefaultClient(maxConnections);
+        this.nettyClient.warmup();
+    }
+
+    public CtNettyHttpClient(final HttpProtocol protocol, final int maxConnections) {
+        super();
+        this.nettyClient = createDefaultClient(protocol, maxConnections);
         this.nettyClient.warmup();
     }
 
@@ -74,6 +83,12 @@ public class CtNettyHttpClient extends HttpClientBase {
         this.nettyClient.warmup();
     }
 
+    public CtNettyHttpClient(final ExecutorService executor, final HttpProtocol protocol, final int maxConnections) {
+        super(executor);
+        this.nettyClient = createDefaultClient(protocol, maxConnections);
+        this.nettyClient.warmup();
+    }
+
     public CtNettyHttpClient(final ExecutorService executor, final BuilderOptions options) {
         this(executor, MAX_REQUESTS, options);
     }
@@ -81,6 +96,13 @@ public class CtNettyHttpClient extends HttpClientBase {
     public CtNettyHttpClient(final ExecutorService executor, final int maxConnections, final BuilderOptions options) {
         super(executor);
         this.nettyClient = options.plus(createDefaultClient(maxConnections));
+        this.nettyClient.warmup();
+    }
+
+    public CtNettyHttpClient(final ExecutorService executor, final HttpProtocol protocol, final int maxConnections,
+            final BuilderOptions options) {
+        super(executor);
+        this.nettyClient = options.plus(createDefaultClient(protocol, maxConnections));
         this.nettyClient.warmup();
     }
 
@@ -96,6 +118,10 @@ public class CtNettyHttpClient extends HttpClientBase {
                 .compress(true)
                 .resolver(DefaultAddressResolverGroup.INSTANCE)
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
+    }
+
+    public static HttpClient createDefaultClient(final HttpProtocol httpProtocol, final int maxConnections) {
+        return createDefaultClient(maxConnections).protocol(httpProtocol);
     }
 
     @Override
@@ -117,12 +143,9 @@ public class CtNettyHttpClient extends HttpClientBase {
             });
 
             AsciiString mediaType = HttpHeaderValues.APPLICATION_JSON;
-            if (httpRequest.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = AsciiString
-                        .of(Objects.requireNonNull(httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = AsciiString.of(contentTypeValue);
             }
             nettyRequest.requestHeaders().set(ApiHttpHeaders.CONTENT_TYPE, mediaType);
 

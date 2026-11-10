@@ -6,21 +6,22 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change_value.ParcelChangeValue;
 import com.commercetools.history.models.common.ParcelMeasurements;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>SetParcelMeasurements on Orders.</li>
- *   <li>SetParcelMeasurements on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelMeasurementsAction" rel="nofollow">SetParcelMeasurements</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetParcelMeasurementsAction" rel="nofollow">SetParcelMeasurements</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -36,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetParcelMeasurementsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetParcelMeasurementsChangeImpl.class)
 public interface SetParcelMeasurementsChange extends Change {
@@ -89,6 +91,14 @@ public interface SetParcelMeasurementsChange extends Change {
     public ParcelChangeValue getParcel();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -117,6 +127,13 @@ public interface SetParcelMeasurementsChange extends Change {
     public void setParcel(final ParcelChangeValue parcel);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of SetParcelMeasurementsChange
      */
@@ -135,8 +152,11 @@ public interface SetParcelMeasurementsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public SetParcelMeasurementsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetParcelMeasurementsChange
@@ -156,6 +176,7 @@ public interface SetParcelMeasurementsChange extends Change {
             com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getNextValue()));
         instance.setParcel(
             com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -190,8 +211,8 @@ public interface SetParcelMeasurementsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetParcelMeasurementsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetParcelMeasurementsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetParcelMeasurementsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetParcelMeasurementsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetParcelMeasurementsChange>";

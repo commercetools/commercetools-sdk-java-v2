@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set the Cart's Shipping Method, the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
+ *  <p>To set the Cart's Shipping Method, the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAction {
@@ -38,7 +40,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return shippingMethod
      */
     @Valid
@@ -46,7 +48,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -54,14 +56,14 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param shippingMethod value to be set
      */
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -86,6 +88,8 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public StagedOrderSetShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetShippingMethodAction
@@ -137,8 +141,8 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingMethodAction>";

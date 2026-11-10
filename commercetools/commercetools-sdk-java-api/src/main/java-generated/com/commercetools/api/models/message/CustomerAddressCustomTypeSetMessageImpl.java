@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Type to an Address of a Customer using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after adding a Custom Type to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressCustomTypeSetMessage, ModelBase {
@@ -48,6 +49,8 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +66,8 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
-            @JsonProperty("previousTypeId") final String previousTypeId) {
+            @JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +80,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customFields = customFields;
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_SET;
     }
 
@@ -143,7 +148,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +164,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -183,11 +188,19 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
         return this.previousTypeId;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     public void setId(final String id) {
@@ -239,6 +252,10 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
         this.previousTypeId = previousTypeId;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +279,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +293,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -293,6 +312,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers)
                 .append(customFields)
                 .append(previousTypeId)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -311,7 +331,12 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("customFields", customFields)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeSetMessage copyDeep() {
+        return CustomerAddressCustomTypeSetMessage.deepCopy(this);
+    }
 }

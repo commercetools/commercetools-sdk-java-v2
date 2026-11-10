@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchQuery
@@ -46,6 +47,8 @@ public interface OrderSearchQuery {
         return instance;
     }
 
+    public OrderSearchQuery copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchQuery
      * @param template instance to be copied
@@ -56,13 +59,9 @@ public interface OrderSearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchCompoundExpression) {
-            return com.commercetools.api.models.order.OrderSearchCompoundExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchCompoundExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchQueryExpression) {
-            return com.commercetools.api.models.order.OrderSearchQueryExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchQueryExpression) template);
+
+        if (!(template instanceof OrderSearchQueryImpl)) {
+            return template.copyDeep();
         }
         OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
         return instance;
@@ -99,8 +98,8 @@ public interface OrderSearchQuery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSearchQuery> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSearchQuery>() {
+    public static tools.jackson.core.type.TypeReference<OrderSearchQuery> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSearchQuery>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSearchQuery>";

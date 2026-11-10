@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change_value.ShoppingListLineItemValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Change ShoppingListLineItem Quantity update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListChangeLineItemQuantityAction" rel="nofollow">Change ShoppingListLineItem Quantity</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeShoppingListLineItemQuantityChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeShoppingListLineItemQuantityChangeImpl.class)
 public interface ChangeShoppingListLineItemQuantityChange extends Change {
@@ -131,6 +133,8 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
         return instance;
     }
 
+    public ChangeShoppingListLineItemQuantityChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeShoppingListLineItemQuantityChange
      * @param template instance to be copied
@@ -184,8 +188,8 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeShoppingListLineItemQuantityChange>";

@@ -7,14 +7,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderUpdateSyncInfoAction
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("updateSyncInfo")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderUpdateSyncInfoActionImpl.class)
 public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
@@ -47,7 +49,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public String getExternalId();
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @return channel
      */
     @NotNull
@@ -71,7 +73,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @param channel value to be set
      */
 
@@ -104,6 +106,8 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public OrderUpdateSyncInfoAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderUpdateSyncInfoAction
@@ -154,8 +158,8 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderUpdateSyncInfoAction>";

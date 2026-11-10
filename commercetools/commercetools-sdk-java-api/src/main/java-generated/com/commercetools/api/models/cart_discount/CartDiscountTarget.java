@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountTarget
@@ -26,13 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetImpl.class, name = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetImpl.class, name = CartDiscountLineItemsTarget.LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetImpl.class, name = CartDiscountShippingCostTarget.SHIPPING),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTargetImpl.class, name = CartDiscountTotalPriceTarget.TOTAL_PRICE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetImpl.class, name = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetImpl.class, name = MultiBuyLineItemsTarget.MULTI_BUY_LINE_ITEMS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = CartDiscountTargetImpl.class, visible = true)
 @JsonDeserialize(as = CartDiscountTargetImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -46,6 +40,8 @@ public interface CartDiscountTarget {
     @JsonProperty("type")
     public String getType();
 
+    public CartDiscountTarget copyDeep();
+
     /**
      * factory method to create a deep copy of CartDiscountTarget
      * @param template instance to be copied
@@ -56,29 +52,9 @@ public interface CartDiscountTarget {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) template);
+
+        if (!(template instanceof CartDiscountTargetImpl)) {
+            return template.copyDeep();
         }
         CartDiscountTargetImpl instance = new CartDiscountTargetImpl();
         return instance;
@@ -98,6 +74,14 @@ public interface CartDiscountTarget {
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder lineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
+    }
+
+    /**
+     * builder for pattern subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder patternBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder.of();
     }
 
     /**
@@ -146,8 +130,8 @@ public interface CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountTarget>";

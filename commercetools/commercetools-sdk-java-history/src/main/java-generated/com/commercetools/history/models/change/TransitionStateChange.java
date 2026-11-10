@@ -6,28 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Transition State on Orders.</li>
- *   <li>Transition State on Staged Orders.</li>
- *   <li>Transition State on Payments.</li>
- *   <li>Transition State on Products.</li>
- *   <li>Transition State on Quotes.</li>
- *   <li>Transition State on Staged Quotes.</li>
- *   <li>Transition State on Quote Requests.</li>
- *   <li>Transition State on Reviews.</li>
- *   <li>Transition State on States.</li>
- *  </ul>
+ * TransitionStateChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("TransitionStateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TransitionStateChangeImpl.class)
 public interface TransitionStateChange extends Change {
@@ -126,6 +117,8 @@ public interface TransitionStateChange extends Change {
         return instance;
     }
 
+    public TransitionStateChange copyDeep();
+
     /**
      * factory method to create a deep copy of TransitionStateChange
      * @param template instance to be copied
@@ -175,8 +168,8 @@ public interface TransitionStateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange>() {
+    public static tools.jackson.core.type.TypeReference<TransitionStateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransitionStateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<TransitionStateChange>";

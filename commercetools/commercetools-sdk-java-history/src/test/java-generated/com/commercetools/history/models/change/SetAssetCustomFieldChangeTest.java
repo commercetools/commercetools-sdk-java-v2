@@ -1,36 +1,31 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAssetCustomFieldChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAssetCustomFieldChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAssetCustomFieldChangeBuilder builder) {
         SetAssetCustomFieldChange setAssetCustomFieldChange = builder.buildUnchecked();
         Assertions.assertThat(setAssetCustomFieldChange).isInstanceOf(SetAssetCustomFieldChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAssetCustomFieldChange.builder().change("change") },
-                new Object[] { SetAssetCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { SetAssetCustomFieldChange.builder().nextValue("nextValue") },
-                new Object[] { SetAssetCustomFieldChange.builder().name("name") },
-                new Object[] { SetAssetCustomFieldChange.builder().customTypeId("customTypeId") },
-                new Object[] { SetAssetCustomFieldChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+        return new Object[][] { new Object[] { "change", SetAssetCustomFieldChange.builder().change("change") },
+                new Object[] { "previousValue", SetAssetCustomFieldChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetAssetCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "name", SetAssetCustomFieldChange.builder().name("name") },
+                new Object[] { "customTypeId", SetAssetCustomFieldChange.builder().customTypeId("customTypeId") },
+                new Object[] { "asset",
+                        SetAssetCustomFieldChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", SetAssetCustomFieldChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAssetCustomFieldChange.builder().variant("variant") } };
     }
 
     @Test
@@ -74,5 +69,19 @@ public class SetAssetCustomFieldChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetAssetCustomFieldChange value = SetAssetCustomFieldChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAssetCustomFieldChange value = SetAssetCustomFieldChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

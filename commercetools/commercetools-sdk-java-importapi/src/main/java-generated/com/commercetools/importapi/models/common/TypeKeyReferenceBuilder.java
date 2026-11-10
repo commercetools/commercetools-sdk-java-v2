@@ -24,7 +24,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Type.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Type.</p>
      * @return key
      */
 

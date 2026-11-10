@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewSetAuthorNameAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAuthorName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
@@ -34,7 +36,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     String SET_AUTHOR_NAME = "setAuthorName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return authorName
      */
 
@@ -42,7 +44,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     public String getAuthorName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param authorName value to be set
      */
 
@@ -66,6 +68,8 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
         instance.setAuthorName(template.getAuthorName());
         return instance;
     }
+
+    public ReviewSetAuthorNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetAuthorNameAction
@@ -113,8 +117,8 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetAuthorNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetAuthorNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ReviewSetAuthorNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewSetAuthorNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewSetAuthorNameAction>";

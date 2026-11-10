@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxedPrice
@@ -55,7 +56,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @return taxPortions
      */
     @NotNull
@@ -88,7 +89,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 
@@ -97,7 +98,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 
@@ -132,6 +133,8 @@ public interface TaxedPrice {
         instance.setTotalTax(template.getTotalTax());
         return instance;
     }
+
+    public TaxedPrice copyDeep();
 
     /**
      * factory method to create a deep copy of TaxedPrice
@@ -187,8 +190,8 @@ public interface TaxedPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxedPrice>() {
+    public static tools.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxedPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxedPrice>";

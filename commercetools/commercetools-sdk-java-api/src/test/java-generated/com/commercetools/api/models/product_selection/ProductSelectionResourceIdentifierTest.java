@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.product_selection;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSelectionResourceIdentifierTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSelectionResourceIdentifierBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSelectionResourceIdentifierBuilder builder) {
         ProductSelectionResourceIdentifier productSelectionResourceIdentifier = builder.buildUnchecked();
         Assertions.assertThat(productSelectionResourceIdentifier)
                 .isInstanceOf(ProductSelectionResourceIdentifier.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSelectionResourceIdentifier.builder().id("id") },
-                new Object[] { ProductSelectionResourceIdentifier.builder().key("key") } };
+        return new Object[][] { new Object[] { "id", ProductSelectionResourceIdentifier.builder().id("id") },
+                new Object[] { "key", ProductSelectionResourceIdentifier.builder().key("key") } };
     }
 
     @Test

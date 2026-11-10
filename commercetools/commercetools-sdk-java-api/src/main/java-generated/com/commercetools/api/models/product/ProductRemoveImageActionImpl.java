@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been <span>uploaded to our CDN</span>. External images will not be deleted. The API deletes the removed image from the CDN in an <span>eventual consistent</span> way. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, ModelBase {
@@ -85,7 +86,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current image and staged image are removed.</p>
      */
 
     public Boolean getStaged() {
@@ -151,4 +152,8 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
                 .build();
     }
 
+    @Override
+    public ProductRemoveImageAction copyDeep() {
+        return ProductRemoveImageAction.deepCopy(this);
+    }
 }

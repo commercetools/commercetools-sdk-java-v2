@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * TrackingData
@@ -29,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TrackingData {
 
     /**
-     *
+     *  <p>Identifier to track the Parcel.</p>
      * @return trackingId
      */
 
@@ -37,7 +38,7 @@ public interface TrackingData {
     public String getTrackingId();
 
     /**
-     *
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @return carrier
      */
 
@@ -45,7 +46,7 @@ public interface TrackingData {
     public String getCarrier();
 
     /**
-     *
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @return provider
      */
 
@@ -53,7 +54,7 @@ public interface TrackingData {
     public String getProvider();
 
     /**
-     *
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @return providerTransaction
      */
 
@@ -61,7 +62,7 @@ public interface TrackingData {
     public String getProviderTransaction();
 
     /**
-     *
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @return isReturn
      */
 
@@ -69,35 +70,35 @@ public interface TrackingData {
     public Boolean getIsReturn();
 
     /**
-     * set trackingId
+     *  <p>Identifier to track the Parcel.</p>
      * @param trackingId value to be set
      */
 
     public void setTrackingId(final String trackingId);
 
     /**
-     * set carrier
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @param carrier value to be set
      */
 
     public void setCarrier(final String carrier);
 
     /**
-     * set provider
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @param provider value to be set
      */
 
     public void setProvider(final String provider);
 
     /**
-     * set providerTransaction
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @param providerTransaction value to be set
      */
 
     public void setProviderTransaction(final String providerTransaction);
 
     /**
-     * set isReturn
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      * @param isReturn value to be set
      */
 
@@ -125,6 +126,8 @@ public interface TrackingData {
         instance.setIsReturn(template.getIsReturn());
         return instance;
     }
+
+    public TrackingData copyDeep();
 
     /**
      * factory method to create a deep copy of TrackingData
@@ -176,8 +179,8 @@ public interface TrackingData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TrackingData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TrackingData>() {
+    public static tools.jackson.core.type.TypeReference<TrackingData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TrackingData>() {
             @Override
             public String toString() {
                 return "TypeReference<TrackingData>";

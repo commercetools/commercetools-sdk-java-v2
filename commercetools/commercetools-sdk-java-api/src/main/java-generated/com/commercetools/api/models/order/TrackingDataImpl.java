@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information that helps track a Parcel.</p>
@@ -86,10 +87,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      */
 
     public Boolean getIsReturn() {
@@ -159,4 +157,8 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .build();
     }
 
+    @Override
+    public TrackingData copyDeep() {
+        return TrackingData.deepCopy(this);
+    }
 }

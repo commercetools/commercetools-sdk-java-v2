@@ -24,7 +24,7 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced CustomerGroup.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced CustomerGroup.</p>
      * @return key
      */
 

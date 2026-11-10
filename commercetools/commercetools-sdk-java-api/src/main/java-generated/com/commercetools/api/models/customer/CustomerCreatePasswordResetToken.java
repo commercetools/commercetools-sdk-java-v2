@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerCreatePasswordResetToken
@@ -31,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerCreatePasswordResetToken {
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @return email
      */
     @NotNull
@@ -47,7 +48,15 @@ public interface CustomerCreatePasswordResetToken {
     public Long getTtlMinutes();
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Whether all password tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @param email value to be set
      */
 
@@ -59,6 +68,13 @@ public interface CustomerCreatePasswordResetToken {
      */
 
     public void setTtlMinutes(final Long ttlMinutes);
+
+    /**
+     *  <p>Whether all password tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
 
     /**
      * factory method
@@ -77,8 +93,11 @@ public interface CustomerCreatePasswordResetToken {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
+
+    public CustomerCreatePasswordResetToken copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerCreatePasswordResetToken
@@ -93,6 +112,7 @@ public interface CustomerCreatePasswordResetToken {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -127,8 +147,8 @@ public interface CustomerCreatePasswordResetToken {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken>() {
+    public static tools.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerCreatePasswordResetToken>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerCreatePasswordResetToken>";

@@ -30,7 +30,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     private com.commercetools.api.models.order_edit.OrderEdit obj;
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @return obj
      */
 

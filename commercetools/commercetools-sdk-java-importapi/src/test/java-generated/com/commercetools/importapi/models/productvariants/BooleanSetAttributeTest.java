@@ -3,30 +3,23 @@ package com.commercetools.importapi.models.productvariants;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BooleanSetAttributeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BooleanSetAttributeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BooleanSetAttributeBuilder builder) {
         BooleanSetAttribute booleanSetAttribute = builder.buildUnchecked();
         Assertions.assertThat(booleanSetAttribute).isInstanceOf(BooleanSetAttribute.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BooleanSetAttribute.builder().value(Collections.singletonList(true)) } };
+        return new Object[][] {
+                new Object[] { "value", BooleanSetAttribute.builder().value(Collections.singletonList(true)) } };
     }
 
     @Test

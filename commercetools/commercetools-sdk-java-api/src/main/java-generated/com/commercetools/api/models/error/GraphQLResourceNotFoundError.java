@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the resource addressed by the request URL does not exist.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLResourceNotFoundErrorImpl.class)
 public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLResourceNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLResourceNotFoundError
@@ -107,8 +111,8 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResourceNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResourceNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLResourceNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLResourceNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLResourceNotFoundError>";

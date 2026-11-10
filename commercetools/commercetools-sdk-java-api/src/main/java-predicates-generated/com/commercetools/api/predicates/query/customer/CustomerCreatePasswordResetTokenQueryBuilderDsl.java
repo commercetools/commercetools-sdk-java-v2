@@ -23,4 +23,10 @@ public class CustomerCreatePasswordResetTokenQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerCreatePasswordResetTokenQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CustomerCreatePasswordResetTokenQueryBuilderDsl> invalidateOlderTokens() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p -> new CombinationQueryPredicate<>(p, CustomerCreatePasswordResetTokenQueryBuilderDsl::of));
+    }
+
 }

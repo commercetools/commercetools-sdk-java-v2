@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetKeyActionImpl.class)
 public interface ProductSetAssetKeyAction extends ProductUpdateAction {
@@ -52,7 +54,7 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -68,7 +70,7 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     public String getAssetId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return assetKey
      */
 
@@ -90,7 +92,7 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 
@@ -104,7 +106,7 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     public void setAssetId(final String assetId);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param assetKey value to be set
      */
 
@@ -132,6 +134,8 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public ProductSetAssetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetAssetKeyAction
@@ -183,8 +187,8 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetAssetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetAssetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetAssetKeyAction>";

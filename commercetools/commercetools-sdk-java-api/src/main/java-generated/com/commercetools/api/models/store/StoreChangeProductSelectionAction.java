@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> in a Store can be activated or deactivated using this update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeProductSelectionActive")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreChangeProductSelectionActionImpl.class)
 public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
@@ -47,7 +49,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
 
@@ -62,7 +64,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      */
 
@@ -87,6 +89,8 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public StoreChangeProductSelectionAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreChangeProductSelectionAction
@@ -137,8 +141,8 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreChangeProductSelectionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreChangeProductSelectionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreChangeProductSelectionAction>";

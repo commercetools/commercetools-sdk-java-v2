@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeCartsConfigurationAction
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCartsConfiguration")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCartsConfigurationActionImpl.class)
 public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateAction {
@@ -37,7 +39,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     String CHANGE_CARTS_CONFIGURATION = "changeCartsConfiguration";
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @return cartsConfiguration
      */
     @NotNull
@@ -46,7 +48,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     public CartsConfiguration getCartsConfiguration();
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @param cartsConfiguration value to be set
      */
 
@@ -70,6 +72,8 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
         instance.setCartsConfiguration(template.getCartsConfiguration());
         return instance;
     }
+
+    public ProjectChangeCartsConfigurationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCartsConfigurationAction
@@ -120,8 +124,8 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeCartsConfigurationAction>";

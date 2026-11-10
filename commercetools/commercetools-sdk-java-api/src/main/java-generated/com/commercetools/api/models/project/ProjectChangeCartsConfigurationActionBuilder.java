@@ -25,7 +25,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the cartsConfiguration value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the cartsConfiguration value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @param cartsConfiguration value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @return cartsConfiguration
      */
 

@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a set of times.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("time-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeSetAttributeImpl.class)
 public interface TimeSetAttribute extends Attribute {
@@ -37,7 +39,7 @@ public interface TimeSetAttribute extends Attribute {
     String TIME_SET = "time-set";
 
     /**
-     *
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface TimeSetAttribute extends Attribute {
     public List<LocalTime> getValue();
 
     /**
-     * set value
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 
@@ -53,7 +55,7 @@ public interface TimeSetAttribute extends Attribute {
     public void setValue(final LocalTime... value);
 
     /**
-     * set value
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 
@@ -78,6 +80,8 @@ public interface TimeSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of TimeSetAttribute
@@ -126,8 +130,8 @@ public interface TimeSetAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TimeSetAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TimeSetAttribute>() {
+    public static tools.jackson.core.type.TypeReference<TimeSetAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TimeSetAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<TimeSetAttribute>";

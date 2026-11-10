@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Base representation of an error response containing common fields to all errors.</p>
@@ -110,6 +111,8 @@ public interface ErrorResponse {
         return instance;
     }
 
+    public ErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ErrorResponse
      * @param template instance to be copied
@@ -120,13 +123,9 @@ public interface ErrorResponse {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.error.AuthErrorResponse) {
-            return com.commercetools.api.models.error.AuthErrorResponse
-                    .deepCopy((com.commercetools.api.models.error.AuthErrorResponse) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchErrorResponse) {
-            return com.commercetools.api.models.product_search.ProductSearchErrorResponse
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchErrorResponse) template);
+
+        if (!(template instanceof ErrorResponseImpl)) {
+            return template.copyDeep();
         }
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
@@ -170,8 +169,8 @@ public interface ErrorResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ErrorResponse>() {
+    public static tools.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ErrorResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ErrorResponse>";

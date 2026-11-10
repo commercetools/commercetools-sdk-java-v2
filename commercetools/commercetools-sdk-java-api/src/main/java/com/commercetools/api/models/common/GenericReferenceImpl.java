@@ -40,4 +40,9 @@ public class GenericReferenceImpl<T> implements GenericReference<T> {
     public T getObj() {
         return obj;
     }
+
+    @Override
+    public GenericReference<T> copyDeep() {
+        return GenericReference.deepCopy(this);
+    }
 }

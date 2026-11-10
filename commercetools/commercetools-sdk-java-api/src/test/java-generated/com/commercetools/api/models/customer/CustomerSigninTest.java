@@ -1,39 +1,33 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerSigninTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerSigninBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerSigninBuilder builder) {
         CustomerSignin customerSignin = builder.buildUnchecked();
         Assertions.assertThat(customerSignin).isInstanceOf(CustomerSignin.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerSignin.builder().email("email") },
-                new Object[] { CustomerSignin.builder().password("password") },
-                new Object[] { CustomerSignin.builder().anonymousCartId("anonymousCartId") },
-                new Object[] { CustomerSignin.builder()
-                        .anonymousCart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
-                new Object[] { CustomerSignin.builder()
-                        .anonymousCartSignInMode(com.commercetools.api.models.customer.AnonymousCartSignInMode
-                                .findEnum("MergeWithExistingCustomerCart")) },
-                new Object[] { CustomerSignin.builder().anonymousId("anonymousId") },
-                new Object[] { CustomerSignin.builder().updateProductData(true) } };
+        return new Object[][] { new Object[] { "email", CustomerSignin.builder().email("email") },
+                new Object[] { "password", CustomerSignin.builder().password("password") },
+                new Object[] { "anonymousCartId", CustomerSignin.builder().anonymousCartId("anonymousCartId") },
+                new Object[] { "anonymousCart",
+                        CustomerSignin.builder()
+                                .anonymousCart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
+                new Object[] { "anonymousCartSignInMode",
+                        CustomerSignin.builder()
+                                .anonymousCartSignInMode(com.commercetools.api.models.customer.AnonymousCartSignInMode
+                                        .findEnum("MergeWithExistingCustomerCart")) },
+                new Object[] { "anonymousId", CustomerSignin.builder().anonymousId("anonymousId") },
+                new Object[] { "updateProductData", CustomerSignin.builder().updateProductData(true) } };
     }
 
     @Test

@@ -7,20 +7,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
+ *  <p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -55,7 +56,10 @@ public interface ProductVariantImport extends ImportResource {
     public String getSku();
 
     /**
-     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     *  <ul>
+     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
+     *   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
+     *  </ul>
      * @return isMasterVariant
      */
     @NotNull
@@ -63,7 +67,7 @@ public interface ProductVariantImport extends ImportResource {
     public Boolean getIsMasterVariant();
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @return attributes
      */
     @Valid
@@ -87,16 +91,8 @@ public interface ProductVariantImport extends ImportResource {
     public List<Asset> getAssets();
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-     * @return publish
-     */
-    @Deprecated
-    @JsonProperty("publish")
-    public Boolean getPublish();
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @return staged
@@ -106,7 +102,7 @@ public interface ProductVariantImport extends ImportResource {
     public Boolean getStaged();
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
     @NotNull
@@ -115,7 +111,7 @@ public interface ProductVariantImport extends ImportResource {
     public ProductKeyReference getProduct();
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -129,14 +125,17 @@ public interface ProductVariantImport extends ImportResource {
     public void setSku(final String sku);
 
     /**
-     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     *  <ul>
+     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
+     *   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
+     *  </ul>
      * @param isMasterVariant value to be set
      */
 
     public void setIsMasterVariant(final Boolean isMasterVariant);
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param attributes values to be set
      */
 
@@ -144,7 +143,7 @@ public interface ProductVariantImport extends ImportResource {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param attributes values to be set
      */
 
@@ -181,15 +180,8 @@ public interface ProductVariantImport extends ImportResource {
     public void setAssets(final List<Asset> assets);
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-     * @param publish value to be set
-     */
-    @Deprecated
-    public void setPublish(final Boolean publish);
-
-    /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @param staged value to be set
@@ -198,7 +190,7 @@ public interface ProductVariantImport extends ImportResource {
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      */
 
@@ -225,11 +217,12 @@ public interface ProductVariantImport extends ImportResource {
         instance.setAttributes(template.getAttributes());
         instance.setImages(template.getImages());
         instance.setAssets(template.getAssets());
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public ProductVariantImport copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantImport
@@ -260,7 +253,6 @@ public interface ProductVariantImport extends ImportResource {
                         .map(com.commercetools.importapi.models.common.Asset::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setProduct(
             com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
@@ -298,8 +290,8 @@ public interface ProductVariantImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantImport>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantImport>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantImport>";

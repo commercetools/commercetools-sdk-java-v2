@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelectionSetting
@@ -33,16 +34,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionSetting {
 
     /**
-     *
+     *  <p>Reference to a ProductSelection.</p>
      * @return productSelection
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public Reference getProductSelection();
+    public ProductSelectionReference getProductSelection();
 
     /**
-     *
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
     @NotNull
@@ -50,14 +51,14 @@ public interface ProductSelectionSetting {
     public Boolean getActive();
 
     /**
-     * set productSelection
+     *  <p>Reference to a ProductSelection.</p>
      * @param productSelection value to be set
      */
 
-    public void setProductSelection(final Reference productSelection);
+    public void setProductSelection(final ProductSelectionReference productSelection);
 
     /**
-     * set active
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      */
 
@@ -83,6 +84,8 @@ public interface ProductSelectionSetting {
         return instance;
     }
 
+    public ProductSelectionSetting copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionSetting
      * @param template instance to be copied
@@ -95,7 +98,7 @@ public interface ProductSelectionSetting {
         }
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
         instance.setProductSelection(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
+            com.commercetools.history.models.common.ProductSelectionReference.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }
@@ -131,8 +134,8 @@ public interface ProductSelectionSetting {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionSetting> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionSetting>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetting>";

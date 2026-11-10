@@ -11,16 +11,22 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Deletes the Cart for a given <code>id</code> in a Store. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Cart exists in the Store for the given <code>id</code>.</li>
+ *   <li>If the Cart exists in the Project but does not belong to a Store, or the Cart's <code>store</code> field references a different Store.</li>
+ *   <li>If the Cart exists in the Project but does not have either a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -74,8 +80,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/carts/%s", this.projectKey, this.storeKey,
-            this.ID);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/carts/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey), encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

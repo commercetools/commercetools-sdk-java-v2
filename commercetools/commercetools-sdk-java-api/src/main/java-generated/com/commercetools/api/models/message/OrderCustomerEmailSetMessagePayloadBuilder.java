@@ -29,7 +29,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     private String oldEmail;
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param oldEmail value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return email
      */
 
@@ -61,7 +61,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return oldEmail
      */
 

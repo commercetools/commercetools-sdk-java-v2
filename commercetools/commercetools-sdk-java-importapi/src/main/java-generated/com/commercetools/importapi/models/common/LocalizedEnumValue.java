@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * LocalizedEnumValue
@@ -41,7 +42,7 @@ public interface LocalizedEnumValue {
     public String getKey();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
      *    "en": "dog food"
@@ -62,7 +63,7 @@ public interface LocalizedEnumValue {
     public void setKey(final String key);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
      *    "en": "dog food"
@@ -92,6 +93,8 @@ public interface LocalizedEnumValue {
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public LocalizedEnumValue copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizedEnumValue
@@ -140,8 +143,8 @@ public interface LocalizedEnumValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumValue>() {
+    public static tools.jackson.core.type.TypeReference<LocalizedEnumValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizedEnumValue>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizedEnumValue>";

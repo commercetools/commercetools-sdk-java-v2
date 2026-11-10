@@ -25,7 +25,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
     private com.commercetools.api.models.order.Order order;
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
     }
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
     }
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
     }
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @return order
      */
 

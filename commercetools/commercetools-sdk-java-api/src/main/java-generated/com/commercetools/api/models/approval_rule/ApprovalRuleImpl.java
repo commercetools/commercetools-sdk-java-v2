@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalRule
@@ -50,6 +51,8 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      * create instance with all properties
      */
@@ -65,7 +68,8 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
             @JsonProperty("predicate") final String predicate,
             @JsonProperty("approvers") final com.commercetools.api.models.approval_rule.ApproverHierarchy approvers,
             @JsonProperty("requesters") final java.util.List<com.commercetools.api.models.approval_rule.RuleRequester> requesters,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +84,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
         this.approvers = approvers;
         this.requesters = requesters;
         this.businessUnit = businessUnit;
+        this.custom = custom;
     }
 
     /**
@@ -137,7 +142,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public String getKey() {
@@ -161,7 +166,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRuleStatus getStatus() {
@@ -169,7 +174,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
     }
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      */
 
     public String getPredicate() {
@@ -185,7 +190,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.RuleRequester> getRequesters() {
@@ -193,11 +198,19 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
     }
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
     }
 
     public void setId(final String id) {
@@ -262,6 +275,10 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
         this.businessUnit = businessUnit;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -286,6 +303,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers, that.approvers)
                 .append(requesters, that.requesters)
                 .append(businessUnit, that.businessUnit)
+                .append(custom, that.custom)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -300,6 +318,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers, that.approvers)
                 .append(requesters, that.requesters)
                 .append(businessUnit, that.businessUnit)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -319,6 +338,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers)
                 .append(requesters)
                 .append(businessUnit)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -338,7 +358,12 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append("approvers", approvers)
                 .append("requesters", requesters)
                 .append("businessUnit", businessUnit)
+                .append("custom", custom)
                 .build();
     }
 
+    @Override
+    public ApprovalRule copyDeep() {
+        return ApprovalRule.deepCopy(this);
+    }
 }

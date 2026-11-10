@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced Cart from which the Order is created.</p>
- *  <p>Produces the Order Billing Address Set Message.</p>
+ *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderBillingAddressSetMessage" rel="nofollow">Order Billing Address Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBillingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetBillingAddressActionImpl.class)
 public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAction {
@@ -38,7 +40,8 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -46,7 +49,8 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     public BaseAddress getAddress();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 
@@ -70,6 +74,8 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public StagedOrderSetBillingAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetBillingAddressAction
@@ -118,8 +124,8 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetBillingAddressAction>";

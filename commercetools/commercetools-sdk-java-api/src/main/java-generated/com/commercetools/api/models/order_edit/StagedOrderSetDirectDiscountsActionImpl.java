@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Order. Either a Discount Code or a Direct Discount can exist on a Order at the same time.</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> to the Order.</p>
+ *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, Direct Discounts can only be added when no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDirectDiscountsAction, ModelBase {
@@ -54,7 +56,7 @@ public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDi
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Order are recalculated.</li>
+     *   <li>If set to an empty array, all existing Direct Discounts are removed and all affected prices on the Order are recalculated.</li>
      *  </ul>
      */
 
@@ -99,4 +101,8 @@ public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDi
                 .build();
     }
 
+    @Override
+    public StagedOrderSetDirectDiscountsAction copyDeep() {
+        return StagedOrderSetDirectDiscountsAction.deepCopy(this);
+    }
 }

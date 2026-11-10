@@ -32,7 +32,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param categoryId value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return categoryId
      */
 
@@ -74,7 +74,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @return orderHint
      */
 
@@ -84,7 +84,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 

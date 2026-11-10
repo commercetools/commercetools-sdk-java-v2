@@ -5,10 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.history.client.ApiRoot;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -19,28 +15,26 @@ import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mockito;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyByResourceTypeTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
     private final static ApiRoot apiRoot = ApiRoot.of();
     private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
-    @TestTemplate
-    @UseDataProvider("requestWithMethodParameters")
+    @ParameterizedTest
+    @MethodSource("requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
         Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
         Assertions.assertThat(uri).isEqualTo(request.getUri().toString());
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -50,8 +44,8 @@ public class ByProjectKeyByResourceTypeTest {
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -61,7 +55,6 @@ public class ByProjectKeyByResourceTypeTest {
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
-    @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -89,6 +82,18 @@ public class ByProjectKeyByResourceTypeTest {
                         .get()
                         .withUserId("userId")
                         .createHttpRequest(), "get", "test_projectKey/test_resourceType?userId=userId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withUserIds("userIds")
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?userIds=userIds", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .withResourceTypeValue("test_resourceType")
+                                .get()
+                                .withResourceIds("resourceIds")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/test_resourceType?resourceIds=resourceIds", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
@@ -130,7 +135,7 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withSource("source")
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source"))
                         .createHttpRequest(), "get", "test_projectKey/test_resourceType?source=source", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
@@ -160,10 +165,14 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?withTotal=true", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
                         .createHttpRequest(), "get", "test_projectKey/test_resourceType", } };
     }
 
-    @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -186,6 +195,14 @@ public class ByProjectKeyByResourceTypeTest {
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withUserId("userId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withUserIds("userIds"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withResourceIds("resourceIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
@@ -213,7 +230,7 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withSource("source"), },
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
@@ -232,6 +249,10 @@ public class ByProjectKeyByResourceTypeTest {
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withExpand(true), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get(), } };

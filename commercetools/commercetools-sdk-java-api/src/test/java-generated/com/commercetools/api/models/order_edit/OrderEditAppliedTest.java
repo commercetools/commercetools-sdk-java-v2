@@ -3,34 +3,28 @@ package com.commercetools.api.models.order_edit;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderEditAppliedTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderEditAppliedBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderEditAppliedBuilder builder) {
         OrderEditApplied orderEditApplied = builder.buildUnchecked();
         Assertions.assertThat(orderEditApplied).isInstanceOf(OrderEditApplied.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderEditApplied.builder().appliedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OrderEditApplied.builder()
-                        .excerptBeforeEdit(new com.commercetools.api.models.order_edit.OrderExcerptImpl()) },
-                new Object[] { OrderEditApplied.builder()
+                new Object[] { "appliedAt",
+                        OrderEditApplied.builder().appliedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "excerptBeforeEdit",
+                        OrderEditApplied.builder()
+                                .excerptBeforeEdit(new com.commercetools.api.models.order_edit.OrderExcerptImpl()) },
+                new Object[] { "excerptAfterEdit", OrderEditApplied.builder()
                         .excerptAfterEdit(new com.commercetools.api.models.order_edit.OrderExcerptImpl()) } };
     }
 

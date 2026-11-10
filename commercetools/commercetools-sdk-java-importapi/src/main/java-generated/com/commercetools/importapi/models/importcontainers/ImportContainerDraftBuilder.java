@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importcontainers;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -28,8 +29,11 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    @Nullable
+    private com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy;
+
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -40,7 +44,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      * @return Builder
      */
@@ -52,7 +56,33 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
+     * @param retentionPolicy value to be set
+     * @return Builder
+     */
+
+    public ImportContainerDraftBuilder retentionPolicy(
+            @Nullable final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
+        this.retentionPolicy = retentionPolicy;
+        return this;
+    }
+
+    /**
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
+     * @param builder function to build the retentionPolicy value
+     * @return Builder
+     */
+
+    public ImportContainerDraftBuilder retentionPolicy(
+            Function<com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder, Builder<? extends com.commercetools.importapi.models.importcontainers.RetentionPolicy>> builder) {
+        this.retentionPolicy = builder
+                .apply(com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
 
@@ -61,7 +91,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 
@@ -71,12 +101,22 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
+     * @return retentionPolicy
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
+        return this.retentionPolicy;
+    }
+
+    /**
      * builds ImportContainerDraft with checking for non-null required values
      * @return ImportContainerDraft
      */
     public ImportContainerDraft build() {
         Objects.requireNonNull(key, ImportContainerDraft.class + ": key is missing");
-        return new ImportContainerDraftImpl(key, resourceType);
+        return new ImportContainerDraftImpl(key, resourceType, retentionPolicy);
     }
 
     /**
@@ -84,7 +124,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
      * @return ImportContainerDraft
      */
     public ImportContainerDraft buildUnchecked() {
-        return new ImportContainerDraftImpl(key, resourceType);
+        return new ImportContainerDraftImpl(key, resourceType, retentionPolicy);
     }
 
     /**
@@ -104,6 +144,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
         ImportContainerDraftBuilder builder = new ImportContainerDraftBuilder();
         builder.key = template.getKey();
         builder.resourceType = template.getResourceType();
+        builder.retentionPolicy = template.getRetentionPolicy();
         return builder;
     }
 

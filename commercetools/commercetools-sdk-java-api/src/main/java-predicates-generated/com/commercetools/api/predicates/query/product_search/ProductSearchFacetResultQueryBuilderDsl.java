@@ -32,4 +32,11 @@ public class ProductSearchFacetResultQueryBuilderDsl {
             com.commercetools.api.predicates.query.product_search.ProductSearchFacetResultCountQueryBuilderDsl.of()),
             ProductSearchFacetResultQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<ProductSearchFacetResultQueryBuilderDsl> asProductSearchFacetResultStats(
+            Function<com.commercetools.api.predicates.query.product_search.ProductSearchFacetResultStatsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_search.ProductSearchFacetResultStatsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_search.ProductSearchFacetResultStatsQueryBuilderDsl.of()),
+            ProductSearchFacetResultQueryBuilderDsl::of);
+    }
 }

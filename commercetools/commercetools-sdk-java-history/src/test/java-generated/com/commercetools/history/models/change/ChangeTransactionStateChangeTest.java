@@ -1,37 +1,30 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeTransactionStateChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeTransactionStateChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeTransactionStateChangeBuilder builder) {
         ChangeTransactionStateChange changeTransactionStateChange = builder.buildUnchecked();
         Assertions.assertThat(changeTransactionStateChange).isInstanceOf(ChangeTransactionStateChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeTransactionStateChange.builder().change("change") },
-                new Object[] { ChangeTransactionStateChange.builder()
+        return new Object[][] { new Object[] { "change", ChangeTransactionStateChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeTransactionStateChange.builder()
                         .previousValue(com.commercetools.history.models.common.TransactionState.findEnum("Initial")) },
-                new Object[] { ChangeTransactionStateChange.builder()
+                new Object[] { "nextValue", ChangeTransactionStateChange.builder()
                         .nextValue(com.commercetools.history.models.common.TransactionState.findEnum("Initial")) },
-                new Object[] { ChangeTransactionStateChange.builder()
-                        .transaction(
-                            new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
+                new Object[] { "transaction",
+                        ChangeTransactionStateChange.builder()
+                                .transaction(
+                                    new com.commercetools.history.models.change_value.TransactionChangeValueImpl()) } };
     }
 
     @Test

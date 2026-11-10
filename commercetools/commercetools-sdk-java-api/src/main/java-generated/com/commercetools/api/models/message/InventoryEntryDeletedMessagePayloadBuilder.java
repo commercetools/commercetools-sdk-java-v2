@@ -30,7 +30,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
-     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was deleted.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was deleted.</p>
      * @return sku
      */
 
@@ -86,7 +86,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @return supplyChannel
      */
 

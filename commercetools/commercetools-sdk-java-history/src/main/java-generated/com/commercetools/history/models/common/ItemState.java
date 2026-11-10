@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ItemState
@@ -22,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ItemState itemState = ItemState.builder()
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -33,35 +34,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemState {
 
     /**
-     *
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     *
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @return state
      */
     @NotNull
     @Valid
     @JsonProperty("state")
-    public Reference getState();
+    public StateReference getState();
 
     /**
-     * set quantity
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @param state value to be set
      */
 
-    public void setState(final Reference state);
+    public void setState(final StateReference state);
 
     /**
      * factory method
@@ -83,6 +84,8 @@ public interface ItemState {
         return instance;
     }
 
+    public ItemState copyDeep();
+
     /**
      * factory method to create a deep copy of ItemState
      * @param template instance to be copied
@@ -95,7 +98,7 @@ public interface ItemState {
         }
         ItemStateImpl instance = new ItemStateImpl();
         instance.setQuantity(template.getQuantity());
-        instance.setState(com.commercetools.history.models.common.Reference.deepCopy(template.getState()));
+        instance.setState(com.commercetools.history.models.common.StateReference.deepCopy(template.getState()));
         return instance;
     }
 
@@ -130,8 +133,8 @@ public interface ItemState {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemState> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemState>() {
+    public static tools.jackson.core.type.TypeReference<ItemState> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemState>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemState>";

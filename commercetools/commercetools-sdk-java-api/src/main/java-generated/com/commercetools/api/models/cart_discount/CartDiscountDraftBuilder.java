@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .value(valueBuilder -> valueBuilder)
  *             .cartPredicate("{cartPredicate}")
- *             .sortOrder("{sortOrder}")
  *             .build()
  * </code></pre>
  * </div>
@@ -42,6 +41,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     @Nullable
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    @Nullable
     private String sortOrder;
 
     @Nullable
@@ -64,6 +64,12 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    @Nullable
+    private com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup;
+
+    @Nullable
+    private com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope;
 
     /**
      *  <p>Name of the CartDiscount.</p>
@@ -102,6 +108,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -173,7 +180,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @param cartPredicate value to be set
      * @return Builder
      */
@@ -210,23 +217,25 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
 
-    public CartDiscountDraftBuilder sortOrder(final String sortOrder) {
+    public CartDiscountDraftBuilder sortOrder(@Nullable final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -239,11 +248,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -256,11 +265,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -276,11 +285,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -296,11 +305,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -314,11 +323,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -330,11 +339,11 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -345,7 +354,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>Only active Discounts can be applied to the Cart. If the <span>limit</span> for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @param isActive value to be set
      * @return Builder
      */
@@ -378,7 +387,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     *  <p>States whether the Discount can only be used in a connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      * @return Builder
      */
@@ -401,7 +410,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -413,7 +422,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -425,13 +434,83 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param custom value to be set
      * @return Builder
      */
 
     public CartDiscountDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder discountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder, com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withDiscountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder, com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     * @param discountGroup value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder discountGroup(
+            @Nullable final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
+        this.discountGroup = discountGroup;
+        return this;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @param recurringOrderScope value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder recurringOrderScope(
+            @Nullable final com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+        return this;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @param builder function to build the recurringOrderScope value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder recurringOrderScope(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderScopeDraftBuilder, Builder<? extends com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft>> builder) {
+        this.recurringOrderScope = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderScopeDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -446,6 +525,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -474,7 +554,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @return cartPredicate
      */
 
@@ -494,21 +574,24 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
 
+    @Nullable
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @return stores
      */
 
@@ -518,7 +601,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>Only active Discounts can be applied to the Cart. If the <span>limit</span> for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @return isActive
      */
 
@@ -548,7 +631,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     *  <p>States whether the Discount can only be used in a connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
 
@@ -568,13 +651,35 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @return custom
      */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     * @return discountGroup
+     */
+
+    @Nullable
+    public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @return recurringOrderScope
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft getRecurringOrderScope() {
+        return this.recurringOrderScope;
     }
 
     /**
@@ -585,9 +690,9 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         Objects.requireNonNull(name, CartDiscountDraft.class + ": name is missing");
         Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
         Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
-        Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
-            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom, discountGroup,
+            recurringOrderScope);
     }
 
     /**
@@ -596,7 +701,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
      */
     public CartDiscountDraft buildUnchecked() {
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
-            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom, discountGroup,
+            recurringOrderScope);
     }
 
     /**
@@ -628,6 +734,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         builder.requiresDiscountCode = template.getRequiresDiscountCode();
         builder.stackingMode = template.getStackingMode();
         builder.custom = template.getCustom();
+        builder.discountGroup = template.getDiscountGroup();
+        builder.recurringOrderScope = template.getRecurringOrderScope();
         return builder;
     }
 

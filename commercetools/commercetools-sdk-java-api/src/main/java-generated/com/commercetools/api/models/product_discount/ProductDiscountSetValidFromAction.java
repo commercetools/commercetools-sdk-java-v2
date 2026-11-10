@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountSetValidFromAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFrom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountSetValidFromActionImpl.class)
 public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdateAction {
@@ -35,7 +37,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @return validFrom
      */
 
@@ -43,7 +45,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @param validFrom value to be set
      */
 
@@ -67,6 +69,8 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public ProductDiscountSetValidFromAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountSetValidFromAction
@@ -115,8 +119,8 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountSetValidFromAction>";

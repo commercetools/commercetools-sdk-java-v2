@@ -187,7 +187,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -401,7 +401,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
 
@@ -410,7 +410,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @return force
      */
 

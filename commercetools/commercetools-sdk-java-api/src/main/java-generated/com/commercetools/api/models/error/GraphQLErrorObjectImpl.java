@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a single error.</p>
@@ -31,7 +33,7 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
      */
     @JsonCreator
     GraphQLErrorObjectImpl(@JsonProperty("code") final String code,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.code = code;
         this.values = values;
     }
@@ -43,7 +45,7 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
     }
 
     /**
-     *  <p>Error identifier.</p>
+     *  <p>One of the error codes that is listed on the <span>Errors</span> page.</p>
      */
 
     public String getCode() {
@@ -94,4 +96,8 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLErrorObject copyDeep() {
+        return GraphQLErrorObject.deepCopy(this);
+    }
 }

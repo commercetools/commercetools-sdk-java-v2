@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ChannelSetAddressCustomTypeAction
+ *  <p>To set a Custom Type for a Channel, <code>Channel.address</code> must be set; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAddressCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetAddressCustomTypeActionImpl.class)
 public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
@@ -37,7 +39,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
      */
     @Valid
@@ -45,7 +47,8 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>address</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -53,14 +56,15 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>address</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -85,6 +89,8 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public ChannelSetAddressCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetAddressCustomTypeAction
@@ -134,8 +140,8 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelSetAddressCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelSetAddressCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelSetAddressCustomTypeAction>";

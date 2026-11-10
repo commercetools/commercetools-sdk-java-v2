@@ -3,36 +3,29 @@ package com.commercetools.api.models.associate_role;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateRolePagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateRolePagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateRolePagedQueryResponseBuilder builder) {
         AssociateRolePagedQueryResponse associateRolePagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(associateRolePagedQueryResponse).isInstanceOf(AssociateRolePagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AssociateRolePagedQueryResponse.builder().limit(7L) },
-                new Object[] { AssociateRolePagedQueryResponse.builder().offset(3L) },
-                new Object[] { AssociateRolePagedQueryResponse.builder().count(2L) },
-                new Object[] { AssociateRolePagedQueryResponse.builder().total(1L) },
-                new Object[] { AssociateRolePagedQueryResponse.builder()
-                        .results(Collections.singletonList(
-                            new com.commercetools.api.models.associate_role.AssociateRoleImpl())) } };
+        return new Object[][] { new Object[] { "limit", AssociateRolePagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", AssociateRolePagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", AssociateRolePagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", AssociateRolePagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        AssociateRolePagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.associate_role.AssociateRoleImpl())) } };
     }
 
     @Test

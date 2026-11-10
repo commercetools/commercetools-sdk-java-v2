@@ -1,33 +1,25 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeIsSearchableChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeIsSearchableChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeIsSearchableChangeBuilder builder) {
         ChangeIsSearchableChange changeIsSearchableChange = builder.buildUnchecked();
         Assertions.assertThat(changeIsSearchableChange).isInstanceOf(ChangeIsSearchableChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeIsSearchableChange.builder().change("change") },
-                new Object[] { ChangeIsSearchableChange.builder().previousValue(true) },
-                new Object[] { ChangeIsSearchableChange.builder().nextValue(true) },
-                new Object[] { ChangeIsSearchableChange.builder().attributeName("attributeName") } };
+        return new Object[][] { new Object[] { "change", ChangeIsSearchableChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeIsSearchableChange.builder().previousValue(true) },
+                new Object[] { "nextValue", ChangeIsSearchableChange.builder().nextValue(true) },
+                new Object[] { "attributeName", ChangeIsSearchableChange.builder().attributeName("attributeName") } };
     }
 
     @Test

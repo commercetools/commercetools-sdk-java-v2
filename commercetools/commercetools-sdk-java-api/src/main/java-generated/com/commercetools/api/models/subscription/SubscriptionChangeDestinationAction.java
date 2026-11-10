@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A test message is sent to ensure the correct configuration of the Destination. If the message cannot be delivered, the update will fail. The payload of the test message is a notification of type ResourceCreated for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to Healthy, if it isn't already.</p>
+ *  <p>A test notification is sent to ensure the correct configuration of the Destination. If the notification cannot be delivered, the update will fail. The payload of the test notification is of type <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">ResourceCreated</a> for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a>, if it isn't already.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeDestination")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionChangeDestinationActionImpl.class)
 public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateAction {
@@ -70,6 +72,8 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
         instance.setDestination(template.getDestination());
         return instance;
     }
+
+    public SubscriptionChangeDestinationAction copyDeep();
 
     /**
      * factory method to create a deep copy of SubscriptionChangeDestinationAction
@@ -120,8 +124,8 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction>() {
+    public static tools.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<SubscriptionChangeDestinationAction>";

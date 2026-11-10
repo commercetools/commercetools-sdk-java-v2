@@ -8,19 +8,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.DiscountedPriceDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.PriceTierDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StandalonePriceDraft
@@ -43,6 +45,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -50,7 +53,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public String getKey();
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Specifies to which <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the API associates this Price. It is not validated to exist in product variants.</p>
      * @return sku
      */
     @NotNull
@@ -59,6 +62,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
     @NotNull
@@ -75,7 +79,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public String getCountry();
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @return customerGroup
      */
     @Valid
@@ -83,7 +87,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return channel
      */
     @Valid
@@ -99,7 +104,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @return validUntil
      */
 
@@ -132,6 +137,14 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyResourceIdentifier getRecurrencePolicy();
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      * @return staged
      */
@@ -140,7 +153,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public StagedPriceDraft getStaged();
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during <span>Product price selection</span>.</p>
      * @return active
      */
 
@@ -149,13 +162,14 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Specifies to which <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the API associates this Price. It is not validated to exist in product variants.</p>
      * @param sku value to be set
      */
 
@@ -163,6 +177,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      */
 
@@ -176,14 +191,15 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setCountry(final String country);
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param channel value to be set
      */
 
@@ -197,7 +213,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @param validUntil value to be set
      */
 
@@ -235,6 +251,13 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyResourceIdentifier recurrencePolicy);
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      * @param staged value to be set
      */
@@ -242,7 +265,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setStaged(final StagedPriceDraft staged);
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during <span>Product price selection</span>.</p>
      * @param active value to be set
      */
 
@@ -274,10 +297,13 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         instance.setStaged(template.getStaged());
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public StandalonePriceDraft copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceDraft
@@ -308,6 +334,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setDiscounted(
             com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier
+                .deepCopy(template.getRecurrencePolicy()));
         instance.setStaged(
             com.commercetools.api.models.standalone_price.StagedPriceDraft.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
@@ -345,8 +373,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceDraft>";

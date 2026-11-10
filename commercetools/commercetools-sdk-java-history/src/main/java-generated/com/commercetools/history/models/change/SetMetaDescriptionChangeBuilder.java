@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +30,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
+
+    private String catalogData;
 
     /**
      * set the value to the change
@@ -114,6 +117,21 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetMetaDescriptionChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -141,6 +159,19 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetMetaDescriptionChange with checking for non-null required values
      * @return SetMetaDescriptionChange
      */
@@ -148,7 +179,8 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
         Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetMetaDescriptionChange.class + ": nextValue is missing");
-        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetMetaDescriptionChange.class + ": catalogData is missing");
+        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -156,7 +188,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
      * @return SetMetaDescriptionChange
      */
     public SetMetaDescriptionChange buildUnchecked() {
-        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);
+        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -177,6 +209,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

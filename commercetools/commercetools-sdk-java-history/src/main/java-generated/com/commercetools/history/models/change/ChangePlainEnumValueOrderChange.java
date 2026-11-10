@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.common.AttributePlainEnumValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Change the order of EnumValues update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangePlainEnumValueOrderAction" rel="nofollow">Change the order of EnumValues</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangePlainEnumValueOrderChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangePlainEnumValueOrderChangeImpl.class)
 public interface ChangePlainEnumValueOrderChange extends Change {
@@ -64,7 +66,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public List<EnumValue> getPreviousValue();
+    public List<AttributePlainEnumValue> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -73,10 +75,10 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public List<EnumValue> getNextValue();
+    public List<AttributePlainEnumValue> getNextValue();
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributeName
      */
     @NotNull
@@ -96,14 +98,14 @@ public interface ChangePlainEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final EnumValue... previousValue);
+    public void setPreviousValue(final AttributePlainEnumValue... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<EnumValue> previousValue);
+    public void setPreviousValue(final List<AttributePlainEnumValue> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -111,17 +113,17 @@ public interface ChangePlainEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
+    public void setNextValue(final AttributePlainEnumValue... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<EnumValue> nextValue);
+    public void setNextValue(final List<AttributePlainEnumValue> nextValue);
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributeName value to be set
      */
 
@@ -149,6 +151,8 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         return instance;
     }
 
+    public ChangePlainEnumValueOrderChange copyDeep();
+
     /**
      * factory method to create a deep copy of ChangePlainEnumValueOrderChange
      * @param template instance to be copied
@@ -163,12 +167,12 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributePlainEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributePlainEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setAttributeName(template.getAttributeName());
@@ -206,8 +210,8 @@ public interface ChangePlainEnumValueOrderChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangePlainEnumValueOrderChange>";

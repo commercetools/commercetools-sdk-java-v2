@@ -25,7 +25,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return distributionChannel
      */
 

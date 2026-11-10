@@ -6,18 +6,21 @@ import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
 import com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.ResponseSerializer;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
+
 public class ImportSerializerTest {
     @Test
     public void importSerializer() {
-        ObjectMapper mapper = JsonUtils.createObjectMapper().setSerializationInclusion(JsonInclude.Include.ALWAYS);
+        ObjectMapper mapper = JsonMapper.builder()
+                .changeDefaultPropertyInclusion(incl -> incl.withValueInclusion(JsonInclude.Include.ALWAYS))
+                .build();
 
         ProjectApiRoot apiRoot = ImportApiRootBuilder.of()
                 .defaultClient("")

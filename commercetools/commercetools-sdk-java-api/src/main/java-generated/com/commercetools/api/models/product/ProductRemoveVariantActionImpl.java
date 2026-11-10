@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message. If the Product Variant to remove is part of a ProductSelectionAssignment its SKU will be automatically removed from the respective ProductVariantSelection.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantDeletedMessage" rel="nofollow">ProductVariantDeleted</a> Message. If the Product Variant to remove is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">ProductSelectionAssignment</a> its SKU will be automatically removed from the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveVariantActionImpl implements ProductRemoveVariantAction, ModelBase {
@@ -74,7 +75,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      */
 
     public Boolean getStaged() {
@@ -128,4 +129,8 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
                 .build();
     }
 
+    @Override
+    public ProductRemoveVariantAction copyDeep() {
+        return ProductRemoveVariantAction.deepCopy(this);
+    }
 }

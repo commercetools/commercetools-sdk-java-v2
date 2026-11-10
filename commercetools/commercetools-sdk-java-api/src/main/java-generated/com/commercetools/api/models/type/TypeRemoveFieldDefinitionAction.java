@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TypeRemoveFieldDefinitionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeFieldDefinition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
 public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
@@ -36,7 +38,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to remove. The removal of a FieldDefinition deletes <span>asynchronously</span> all Custom Fields using the FieldDefinition as well.</p>
      * @return fieldName
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     public String getFieldName();
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to remove. The removal of a FieldDefinition deletes <span>asynchronously</span> all Custom Fields using the FieldDefinition as well.</p>
      * @param fieldName value to be set
      */
 
@@ -68,6 +70,8 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
         instance.setFieldName(template.getFieldName());
         return instance;
     }
+
+    public TypeRemoveFieldDefinitionAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeRemoveFieldDefinitionAction
@@ -115,8 +119,8 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeRemoveFieldDefinitionAction>";

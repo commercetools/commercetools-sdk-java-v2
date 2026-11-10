@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the <code>CombinationUnique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
+ *  <p>Returned when the <code>CombinationUnique</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">AttributeConstraint</a> criteria are not met during an <span>Update Product</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLDuplicateAttributeValuesErrorImpl implements GraphQLDuplicateAttributeValuesError, ModelBase {
@@ -32,7 +34,8 @@ public class GraphQLDuplicateAttributeValuesErrorImpl implements GraphQLDuplicat
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLDuplicateAttributeValuesErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLDuplicateAttributeValuesErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.values = values;
         this.attributes = attributes;
@@ -117,4 +120,8 @@ public class GraphQLDuplicateAttributeValuesErrorImpl implements GraphQLDuplicat
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateAttributeValuesError copyDeep() {
+        return GraphQLDuplicateAttributeValuesError.deepCopy(this);
+    }
 }

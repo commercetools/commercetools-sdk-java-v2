@@ -8,23 +8,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creates an Order from a Quote. The referenced Quote must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a> and must be valid (not past the <code>validTo</code> date); otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCreatedMessage" rel="nofollow">OrderCreated</a> Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>InvalidOperation</li>
- *   <li>CountryNotConfiguredInStore</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Store referenced by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> does not belong to a Store.</li>
+ *    </ul></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
  *  </ul>
  *
  * <hr>
@@ -70,7 +75,7 @@ public class ByProjectKeyOrdersQuotesPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/orders/quotes", this.projectKey);
+        String httpRequestPath = String.format("%s/orders/quotes", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

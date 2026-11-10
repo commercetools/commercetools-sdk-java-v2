@@ -25,12 +25,9 @@ public class CartDiscountAddStoreActionBuilder implements Builder<CartDiscountAd
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *  <p>Store to add.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -42,12 +39,9 @@ public class CartDiscountAddStoreActionBuilder implements Builder<CartDiscountAd
     }
 
     /**
-     *  <p>Store to add.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -59,12 +53,9 @@ public class CartDiscountAddStoreActionBuilder implements Builder<CartDiscountAd
     }
 
     /**
-     *  <p>Store to add.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -76,12 +67,9 @@ public class CartDiscountAddStoreActionBuilder implements Builder<CartDiscountAd
     }
 
     /**
-     *  <p>Store to add.</p>
-     *  <p>A failed update can return the following errors:</p>
-     *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
-     *  </ul>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @return store
      */
 

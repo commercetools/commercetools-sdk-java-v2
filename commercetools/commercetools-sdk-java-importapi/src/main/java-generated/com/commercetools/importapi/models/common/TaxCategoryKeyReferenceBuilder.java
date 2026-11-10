@@ -24,7 +24,7 @@ public class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategoryKeyRef
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced TaxCategory.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategoryKeyRef
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced TaxCategory.</p>
      * @return key
      */
 

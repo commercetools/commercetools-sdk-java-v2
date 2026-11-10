@@ -3,38 +3,36 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxRateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxRateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxRateBuilder builder) {
         TaxRate taxRate = builder.buildUnchecked();
         Assertions.assertThat(taxRate).isInstanceOf(TaxRate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TaxRate.builder().id("id") },
-                new Object[] { TaxRate.builder().key("key") }, new Object[] { TaxRate.builder().name("name") },
-                new Object[] { TaxRate.builder().amount(0.43789625) },
-                new Object[] { TaxRate.builder().includedInPrice(true) },
-                new Object[] { TaxRate.builder().country("country") },
-                new Object[] { TaxRate.builder().state("state") },
-                new Object[] { TaxRate.builder()
-                        .subRates(
-                            Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) } };
+        return new Object[][] { new Object[] { "id", TaxRate.builder().id("id") },
+                new Object[] { "key", TaxRate.builder().key("key") },
+                new Object[] { "name", TaxRate.builder().name("name") },
+                new Object[] { "amount", TaxRate.builder().amount(0.43789625) },
+                new Object[] { "includedInPrice", TaxRate.builder().includedInPrice(true) },
+                new Object[] { "country", TaxRate.builder().country("country") },
+                new Object[] { "state", TaxRate.builder().state("state") },
+                new Object[] { "subRates",
+                        TaxRate.builder()
+                                .subRates(Collections
+                                        .singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) },
+                new Object[] { "taxRoundingTarget",
+                        TaxRate.builder()
+                                .taxRoundingTarget(
+                                    com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net")) } };
     }
 
     @Test
@@ -92,5 +90,13 @@ public class TaxRateTest {
         value.setSubRates(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
         Assertions.assertThat(value.getSubRates())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
+    }
+
+    @Test
+    public void taxRoundingTarget() {
+        TaxRate value = TaxRate.of();
+        value.setTaxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
+        Assertions.assertThat(value.getTaxRoundingTarget())
+                .isEqualTo(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
     }
 }

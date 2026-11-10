@@ -155,4 +155,14 @@ public class StandalonePriceQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StandalonePriceQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<StandalonePriceQueryBuilderDsl> recurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrencePolicy"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl
+                            .of())),
+            StandalonePriceQueryBuilderDsl::of);
+    }
+
 }

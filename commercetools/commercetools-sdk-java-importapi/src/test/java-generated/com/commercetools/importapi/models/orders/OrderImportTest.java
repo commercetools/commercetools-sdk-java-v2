@@ -4,78 +4,82 @@ package com.commercetools.importapi.models.orders;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderImportBuilder builder) {
         OrderImport orderImport = builder.buildUnchecked();
         Assertions.assertThat(orderImport).isInstanceOf(OrderImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderImport.builder().orderNumber("orderNumber") },
-                new Object[] { OrderImport.builder()
-                        .customer(new com.commercetools.importapi.models.common.CustomerKeyReferenceImpl()) },
-                new Object[] { OrderImport.builder().customerEmail("customerEmail") },
-                new Object[] { OrderImport.builder()
-                        .lineItems(Collections.singletonList(
-                            new com.commercetools.importapi.models.orders.LineItemImportDraftImpl())) },
-                new Object[] { OrderImport.builder()
-                        .customLineItems(Collections.singletonList(
-                            new com.commercetools.importapi.models.orders.CustomLineItemDraftImpl())) },
-                new Object[] { OrderImport.builder()
-                        .totalPrice(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { OrderImport.builder()
-                        .taxedPrice(new com.commercetools.importapi.models.orders.TaxedPriceImpl()) },
-                new Object[] { OrderImport.builder()
-                        .shippingAddress(new com.commercetools.importapi.models.common.AddressImpl()) },
-                new Object[] { OrderImport.builder()
-                        .billingAddress(new com.commercetools.importapi.models.common.AddressImpl()) },
-                new Object[] { OrderImport.builder()
+        return new Object[][] { new Object[] { "orderNumber", OrderImport.builder().orderNumber("orderNumber") },
+                new Object[] { "customer",
+                        OrderImport.builder()
+                                .customer(new com.commercetools.importapi.models.common.CustomerKeyReferenceImpl()) },
+                new Object[] { "customerEmail", OrderImport.builder().customerEmail("customerEmail") },
+                new Object[] { "lineItems",
+                        OrderImport.builder()
+                                .lineItems(Collections.singletonList(
+                                    new com.commercetools.importapi.models.orders.LineItemImportDraftImpl())) },
+                new Object[] { "customLineItems",
+                        OrderImport.builder()
+                                .customLineItems(Collections.singletonList(
+                                    new com.commercetools.importapi.models.orders.CustomLineItemDraftImpl())) },
+                new Object[] { "totalPrice",
+                        OrderImport.builder()
+                                .totalPrice(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
+                new Object[] { "taxedPrice",
+                        OrderImport.builder()
+                                .taxedPrice(new com.commercetools.importapi.models.orders.TaxedPriceImpl()) },
+                new Object[] { "shippingAddress",
+                        OrderImport.builder()
+                                .shippingAddress(new com.commercetools.importapi.models.common.AddressImpl()) },
+                new Object[] { "billingAddress",
+                        OrderImport.builder()
+                                .billingAddress(new com.commercetools.importapi.models.common.AddressImpl()) },
+                new Object[] { "customerGroup", OrderImport.builder()
                         .customerGroup(new com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl()) },
-                new Object[] { OrderImport.builder().country("country") },
-                new Object[] { OrderImport.builder()
-                        .orderState(com.commercetools.importapi.models.orders.OrderState.findEnum("Open")) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "country", OrderImport.builder().country("country") },
+                new Object[] { "orderState",
+                        OrderImport.builder()
+                                .orderState(com.commercetools.importapi.models.orders.OrderState.findEnum("Open")) },
+                new Object[] { "shipmentState", OrderImport.builder()
                         .shipmentState(com.commercetools.importapi.models.orders.ShipmentState.findEnum("Shipped")) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "paymentState", OrderImport.builder()
                         .paymentState(com.commercetools.importapi.models.orders.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "shippingInfo", OrderImport.builder()
                         .shippingInfo(new com.commercetools.importapi.models.orders.ShippingInfoImportDraftImpl()) },
-                new Object[] { OrderImport.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OrderImport.builder()
-                        .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "completedAt",
+                        OrderImport.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
+                        OrderImport.builder()
+                                .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
+                new Object[] { "inventoryMode", OrderImport.builder()
                         .inventoryMode(com.commercetools.importapi.models.orders.InventoryMode.findEnum("TrackOnly")) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "taxRoundingMode", OrderImport.builder()
                         .taxRoundingMode(com.commercetools.importapi.models.orders.RoundingMode.findEnum("HalfEven")) },
-                new Object[] {
+                new Object[] { "taxCalculationMode",
                         OrderImport.builder()
                                 .taxCalculationMode(com.commercetools.importapi.models.orders.TaxCalculationMode
                                         .findEnum("LineItemLevel")) },
-                new Object[] { OrderImport.builder()
-                        .origin(com.commercetools.importapi.models.orders.CartOrigin.findEnum("Customer")) },
-                new Object[] {
+                new Object[] { "origin",
+                        OrderImport.builder()
+                                .origin(com.commercetools.importapi.models.orders.CartOrigin.findEnum("Customer")) },
+                new Object[] { "itemShippingAddresses",
                         OrderImport.builder()
                                 .itemShippingAddresses(Collections
                                         .singletonList(new com.commercetools.importapi.models.common.AddressImpl())) },
-                new Object[] { OrderImport.builder()
-                        .store(new com.commercetools.importapi.models.common.StoreKeyReferenceImpl()) },
-                new Object[] { OrderImport.builder()
+                new Object[] { "store",
+                        OrderImport.builder()
+                                .store(new com.commercetools.importapi.models.common.StoreKeyReferenceImpl()) },
+                new Object[] { "state", OrderImport.builder()
                         .state(new com.commercetools.importapi.models.common.StateKeyReferenceImpl()) } };
     }
 

@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Discounts the Product Price by allowing the client to explicitly set a discounted value. Used when setting discounts using an external service.</p>
+ *  <p>Discounts the Product Price by allowing the client to explicitly <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">set a discounted value</a>. Used when setting discounts using an external service.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("external")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueExternalImpl.class)
 public interface ProductDiscountValueExternal extends ProductDiscountValue {
@@ -50,6 +52,8 @@ public interface ProductDiscountValueExternal extends ProductDiscountValue {
         ProductDiscountValueExternalImpl instance = new ProductDiscountValueExternalImpl();
         return instance;
     }
+
+    public ProductDiscountValueExternal copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueExternal
@@ -96,8 +100,8 @@ public interface ProductDiscountValueExternal extends ProductDiscountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternal> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternal>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueExternal> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueExternal>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueExternal>";

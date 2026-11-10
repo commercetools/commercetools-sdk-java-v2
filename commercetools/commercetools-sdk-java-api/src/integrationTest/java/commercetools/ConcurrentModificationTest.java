@@ -195,6 +195,9 @@ public class ConcurrentModificationTest {
                             .build())
                     .executeBlocking()
                     .getBody();
+
+            Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
             return modCart;
         });
     }
@@ -230,7 +233,42 @@ public class ConcurrentModificationTest {
                             .build())
                     .executeBlocking()
                     .getBody();
+
+            Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(deCart.getBody().getVersion());
+
             return modCart;
+        });
+    }
+
+    @Test
+    public void concurrentModMiddlewareDelete() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addConcurrentModificationMiddleware(3)
+                .build(projectKey);
+
+        CartsFixtures.withUpdateableCart(cart -> {
+
+            final ApiHttpResponse<Cart> deCart = projectApiRoot.carts()
+                    .withId(cart.getId())
+                    .post(CartUpdateBuilder.of()
+                            .version(cart.getVersion())
+                            .actions(CartSetCountryActionBuilder.of().country("DE").build())
+                            .build())
+                    .executeBlocking();
+
+            Assertions.assertThatExceptionOfType(ConcurrentModificationException.class)
+                    .isThrownBy(() -> projectApiRoot.carts().delete(cart).executeBlocking());
+
+            return deCart.getBody();
         });
     }
 

@@ -6,15 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- * ErrorObject
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
+ *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in <span>DuplicateAttributeValueError</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -26,36 +28,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ContentionErrorImpl.class, name = ContentionError.CONTENTION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.GenericErrorImpl.class, name = GenericError.GENERIC),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidInputImpl.class, name = InvalidInput.INVALID_INPUT),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidJsonInputImpl.class, name = InvalidJsonInput.INVALID_JSON_INPUT),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidOperationImpl.class, name = InvalidOperation.INVALID_OPERATION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidScopeErrorImpl.class, name = InvalidScopeError.INVALID_SCOPE),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidStateTransitionErrorImpl.class, name = InvalidStateTransitionError.INVALID_TRANSITION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceCreationErrorImpl.class, name = ResourceCreationError.RESOURCE_CREATION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceDeletionErrorImpl.class, name = ResourceDeletionError.RESOURCE_DELETION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceUpdateErrorImpl.class, name = ResourceUpdateError.RESOURCE_UPDATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = ErrorObjectImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ErrorObject {
 
     /**
-     *
+     *  <p>An error identifier.</p>
      * @return code
      */
     @NotNull
@@ -63,7 +42,7 @@ public interface ErrorObject {
     public String getCode();
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
     @NotNull
@@ -71,11 +50,13 @@ public interface ErrorObject {
     public String getMessage();
 
     /**
-     * set message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      */
 
     public void setMessage(final String message);
+
+    public ErrorObject copyDeep();
 
     /**
      * factory method to create a deep copy of ErrorObject
@@ -87,93 +68,9 @@ public interface ErrorObject {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.errors.AccessDeniedError) {
-            return com.commercetools.importapi.models.errors.AccessDeniedError
-                    .deepCopy((com.commercetools.importapi.models.errors.AccessDeniedError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ConcurrentModificationError) {
-            return com.commercetools.importapi.models.errors.ConcurrentModificationError
-                    .deepCopy((com.commercetools.importapi.models.errors.ConcurrentModificationError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ContentionError) {
-            return com.commercetools.importapi.models.errors.ContentionError
-                    .deepCopy((com.commercetools.importapi.models.errors.ContentionError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.DuplicateAttributeValueError) {
-            return com.commercetools.importapi.models.errors.DuplicateAttributeValueError
-                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateAttributeValueError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.DuplicateAttributeValuesError) {
-            return com.commercetools.importapi.models.errors.DuplicateAttributeValuesError
-                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateAttributeValuesError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.DuplicateFieldError) {
-            return com.commercetools.importapi.models.errors.DuplicateFieldError
-                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateFieldError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.DuplicateVariantValuesError) {
-            return com.commercetools.importapi.models.errors.DuplicateVariantValuesError
-                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateVariantValuesError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.GenericError) {
-            return com.commercetools.importapi.models.errors.GenericError
-                    .deepCopy((com.commercetools.importapi.models.errors.GenericError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InsufficientScopeError) {
-            return com.commercetools.importapi.models.errors.InsufficientScopeError
-                    .deepCopy((com.commercetools.importapi.models.errors.InsufficientScopeError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidCredentialsError) {
-            return com.commercetools.importapi.models.errors.InvalidCredentialsError
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidCredentialsError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidFieldError) {
-            return com.commercetools.importapi.models.errors.InvalidFieldError
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidFieldError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidInput) {
-            return com.commercetools.importapi.models.errors.InvalidInput
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidInput) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidJsonInput) {
-            return com.commercetools.importapi.models.errors.InvalidJsonInput
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidJsonInput) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidOperation) {
-            return com.commercetools.importapi.models.errors.InvalidOperation
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidOperation) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidScopeError) {
-            return com.commercetools.importapi.models.errors.InvalidScopeError
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidScopeError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidStateTransitionError) {
-            return com.commercetools.importapi.models.errors.InvalidStateTransitionError
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidStateTransitionError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.InvalidTokenError) {
-            return com.commercetools.importapi.models.errors.InvalidTokenError
-                    .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.RequiredFieldError) {
-            return com.commercetools.importapi.models.errors.RequiredFieldError
-                    .deepCopy((com.commercetools.importapi.models.errors.RequiredFieldError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ResourceCreationError) {
-            return com.commercetools.importapi.models.errors.ResourceCreationError
-                    .deepCopy((com.commercetools.importapi.models.errors.ResourceCreationError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ResourceDeletionError) {
-            return com.commercetools.importapi.models.errors.ResourceDeletionError
-                    .deepCopy((com.commercetools.importapi.models.errors.ResourceDeletionError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ResourceNotFoundError) {
-            return com.commercetools.importapi.models.errors.ResourceNotFoundError
-                    .deepCopy((com.commercetools.importapi.models.errors.ResourceNotFoundError) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.errors.ResourceUpdateError) {
-            return com.commercetools.importapi.models.errors.ResourceUpdateError
-                    .deepCopy((com.commercetools.importapi.models.errors.ResourceUpdateError) template);
+
+        if (!(template instanceof ErrorObjectImpl)) {
+            return template.copyDeep();
         }
         ErrorObjectImpl instance = new ErrorObjectImpl();
         instance.setMessage(template.getMessage());
@@ -269,6 +166,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for invalidFieldUpdate subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder invalidFieldUpdateBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder.of();
+    }
+
+    /**
      * builder for invalidInput subtype
      * @return builder
      */
@@ -314,6 +219,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder invalidTokenBuilder() {
         return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
+    }
+
+    /**
+     * builder for newMasterVariantAdditionNotAllowed subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder newMasterVariantAdditionNotAllowedBuilder() {
+        return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder.of();
     }
 
     /**
@@ -370,8 +283,8 @@ public interface ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ErrorObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ErrorObject>() {
+    public static tools.jackson.core.type.TypeReference<ErrorObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ErrorObject>() {
             @Override
             public String toString() {
                 return "TypeReference<ErrorObject>";

@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListLineItemValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListLineItemValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListLineItemValueBuilder builder) {
         ShoppingListLineItemValue shoppingListLineItemValue = builder.buildUnchecked();
         Assertions.assertThat(shoppingListLineItemValue).isInstanceOf(ShoppingListLineItemValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShoppingListLineItemValue.builder().id("id") },
-                new Object[] { ShoppingListLineItemValue.builder()
-                        .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingListLineItemValue.builder().variantId(5) } };
+        return new Object[][] { new Object[] { "id", ShoppingListLineItemValue.builder().id("id") },
+                new Object[] { "name",
+                        ShoppingListLineItemValue.builder()
+                                .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variantId", ShoppingListLineItemValue.builder().variantId(5) } };
     }
 
     @Test

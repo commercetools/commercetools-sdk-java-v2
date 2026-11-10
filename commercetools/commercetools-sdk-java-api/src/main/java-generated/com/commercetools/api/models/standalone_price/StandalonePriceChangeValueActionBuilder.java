@@ -31,6 +31,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -43,6 +44,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -55,6 +57,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -65,7 +68,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     *  <p>Whether the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -77,6 +80,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
 
@@ -85,7 +89,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     *  <p>Whether the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return staged
      */
 

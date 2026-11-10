@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a Permission to an AssociateRole generates an AssociateRolePermissionAdded Message.</p>
+ *  <p>Adding a Permission to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRolePermissionAddedMessage" rel="nofollow">AssociateRolePermissionAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addPermission")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleAddPermissionActionImpl.class)
 public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAction {
@@ -68,6 +70,8 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
         instance.setPermission(template.getPermission());
         return instance;
     }
+
+    public AssociateRoleAddPermissionAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleAddPermissionAction
@@ -115,8 +119,8 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleAddPermissionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleAddPermissionAction>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleAddPermissionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleAddPermissionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleAddPermissionAction>";

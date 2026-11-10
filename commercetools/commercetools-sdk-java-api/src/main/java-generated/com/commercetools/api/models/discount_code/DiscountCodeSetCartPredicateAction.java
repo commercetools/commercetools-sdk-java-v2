@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetCartPredicateAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCartPredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetCartPredicateActionImpl.class)
 public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAction {
@@ -34,7 +36,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     String SET_CART_PREDICATE = "setCartPredicate";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return cartPredicate
      */
 
@@ -42,7 +44,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     public String getCartPredicate();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param cartPredicate value to be set
      */
 
@@ -66,6 +68,8 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
+
+    public DiscountCodeSetCartPredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetCartPredicateAction
@@ -114,8 +118,8 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetCartPredicateAction>";

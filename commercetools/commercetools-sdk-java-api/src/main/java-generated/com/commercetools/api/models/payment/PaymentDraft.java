@@ -7,16 +7,17 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentDraft
@@ -33,11 +34,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentDraftImpl.class)
-public interface PaymentDraft extends com.commercetools.api.models.CustomizableDraft<PaymentDraft>,
+public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.models.CustomizableDraft<PaymentDraft>,
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PaymentDraft> {
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @return customer
      */
     @Valid
@@ -45,7 +46,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @return anonymousId
      */
 
@@ -53,7 +54,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public String getAnonymousId();
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique. Once set, it cannot be changed.</p>
      * @return interfaceId
      */
 
@@ -61,7 +62,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public String getInterfaceId();
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
     @NotNull
@@ -75,7 +76,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
-    public PaymentMethodInfo getPaymentMethodInfo();
+    public PaymentMethodInfoDraft getPaymentMethodInfo();
 
     /**
      *  <p>Current status of the Payment.</p>
@@ -86,7 +87,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public PaymentStatusDraft getPaymentStatus();
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @return transactions
      */
     @Valid
@@ -118,28 +119,28 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public String getKey();
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique. Once set, it cannot be changed.</p>
      * @param interfaceId value to be set
      */
 
     public void setInterfaceId(final String interfaceId);
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      */
 
@@ -150,7 +151,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      * @param paymentMethodInfo value to be set
      */
 
-    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
+    public void setPaymentMethodInfo(final PaymentMethodInfoDraft paymentMethodInfo);
 
     /**
      *  <p>Current status of the Payment.</p>
@@ -160,7 +161,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public void setPaymentStatus(final PaymentStatusDraft paymentStatus);
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions values to be set
      */
 
@@ -168,7 +169,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public void setTransactions(final TransactionDraft... transactions);
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions values to be set
      */
 
@@ -231,6 +232,8 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         return instance;
     }
 
+    public PaymentDraft copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentDraft
      * @param template instance to be copied
@@ -248,7 +251,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
         instance.setPaymentMethodInfo(
-            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+            com.commercetools.api.models.payment.PaymentMethodInfoDraft.deepCopy(template.getPaymentMethodInfo()));
         instance.setPaymentStatus(
             com.commercetools.api.models.payment.PaymentStatusDraft.deepCopy(template.getPaymentStatus()));
         instance.setTransactions(Optional.ofNullable(template.getTransactions())
@@ -297,8 +300,8 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentDraft>() {
+    public static tools.jackson.core.type.TypeReference<PaymentDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentDraft>";

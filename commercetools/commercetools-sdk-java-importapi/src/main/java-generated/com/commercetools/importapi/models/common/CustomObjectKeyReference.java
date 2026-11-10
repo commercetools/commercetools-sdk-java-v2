@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>References a key value document by key.</p>
+ *  <p>Used by the <span>Import API</span> to identify a CustomObject.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("key-value-document")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectKeyReferenceImpl.class)
 public interface CustomObjectKeyReference extends KeyReference {
@@ -38,6 +40,22 @@ public interface CustomObjectKeyReference extends KeyReference {
 
     /**
      *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @return container
      */
     @NotNull
@@ -45,7 +63,14 @@ public interface CustomObjectKeyReference extends KeyReference {
     public String getContainer();
 
     /**
-     * set container
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @param container value to be set
      */
 
@@ -70,6 +95,8 @@ public interface CustomObjectKeyReference extends KeyReference {
         instance.setContainer(template.getContainer());
         return instance;
     }
+
+    public CustomObjectKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of CustomObjectKeyReference
@@ -118,8 +145,8 @@ public interface CustomObjectKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<CustomObjectKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomObjectKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomObjectKeyReference>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The data representation for a Product to be imported that is persisted as a Product in the Project.</p>
- *  <p>This is the minimal representation required for creating a Product in commercetools.</p>
+ *  <p>Represents the data used to import a Product. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in the Project.</p>
+ *  <p>This is the minimal representation required for creating a Product in Composable Commerce.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImportImpl implements ProductImport, ModelBase {
@@ -34,6 +35,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     private com.commercetools.importapi.models.common.LocalizedString description;
 
     private java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories;
+
+    private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     private com.commercetools.importapi.models.common.LocalizedString metaTitle;
 
@@ -61,6 +64,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
             @JsonProperty("slug") final com.commercetools.importapi.models.common.LocalizedString slug,
             @JsonProperty("description") final com.commercetools.importapi.models.common.LocalizedString description,
             @JsonProperty("categories") final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes,
             @JsonProperty("metaTitle") final com.commercetools.importapi.models.common.LocalizedString metaTitle,
             @JsonProperty("metaDescription") final com.commercetools.importapi.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.importapi.models.common.LocalizedString metaKeywords,
@@ -75,6 +79,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         this.slug = slug;
         this.description = description;
         this.categories = categories;
+        this.attributes = attributes;
         this.metaTitle = metaTitle;
         this.metaDescription = metaDescription;
         this.metaKeywords = metaKeywords;
@@ -92,7 +97,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -100,7 +105,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Product.name</code>.</p>
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -108,7 +113,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {
@@ -116,7 +121,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
@@ -124,7 +129,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
@@ -132,7 +137,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
@@ -140,12 +145,15 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *
+     */
+
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
@@ -153,12 +161,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
@@ -166,12 +169,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
@@ -179,7 +177,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -187,23 +185,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      */
 
     public com.commercetools.importapi.models.products.SearchKeywords getSearchKeywords() {
@@ -211,7 +193,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      */
 
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
@@ -219,7 +201,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      */
 
     public Boolean getPublish() {
@@ -227,7 +209,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {
@@ -261,6 +243,15 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     public void setCategories(
             final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
         this.categories = categories;
+    }
+
+    public void setAttributes(final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+        this.attributes = attributes;
     }
 
     public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
@@ -311,6 +302,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug, that.slug)
                 .append(description, that.description)
                 .append(categories, that.categories)
+                .append(attributes, that.attributes)
                 .append(metaTitle, that.metaTitle)
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
@@ -325,6 +317,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug, that.slug)
                 .append(description, that.description)
                 .append(categories, that.categories)
+                .append(attributes, that.attributes)
                 .append(metaTitle, that.metaTitle)
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
@@ -344,6 +337,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug)
                 .append(description)
                 .append(categories)
+                .append(attributes)
                 .append(metaTitle)
                 .append(metaDescription)
                 .append(metaKeywords)
@@ -363,6 +357,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append("slug", slug)
                 .append("description", description)
                 .append("categories", categories)
+                .append("attributes", attributes)
                 .append("metaTitle", metaTitle)
                 .append("metaDescription", metaDescription)
                 .append("metaKeywords", metaKeywords)
@@ -374,4 +369,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductImport copyDeep() {
+        return ProductImport.deepCopy(this);
+    }
 }

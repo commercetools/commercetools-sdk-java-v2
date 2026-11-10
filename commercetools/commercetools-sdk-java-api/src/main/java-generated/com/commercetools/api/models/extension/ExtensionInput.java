@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExtensionInput
@@ -51,6 +52,14 @@ public interface ExtensionInput {
     public Reference getResource();
 
     /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @return oldResource
+     */
+    @Valid
+    @JsonProperty("oldResource")
+    public Reference getOldResource();
+
+    /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
      * @param action value to be set
      */
@@ -63,6 +72,13 @@ public interface ExtensionInput {
      */
 
     public void setResource(final Reference resource);
+
+    /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @param oldResource value to be set
+     */
+
+    public void setOldResource(final Reference oldResource);
 
     /**
      * factory method
@@ -81,8 +97,11 @@ public interface ExtensionInput {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(template.getResource());
+        instance.setOldResource(template.getOldResource());
         return instance;
     }
+
+    public ExtensionInput copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionInput
@@ -97,6 +116,7 @@ public interface ExtensionInput {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setOldResource(com.commercetools.api.models.common.Reference.deepCopy(template.getOldResource()));
         return instance;
     }
 
@@ -131,8 +151,8 @@ public interface ExtensionInput {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionInput> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionInput>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionInput> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionInput>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionInput>";

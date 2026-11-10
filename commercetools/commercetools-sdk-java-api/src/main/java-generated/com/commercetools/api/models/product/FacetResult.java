@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FacetResult
@@ -26,13 +27,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.FilteredFacetResultImpl.class, name = FilteredFacetResult.FILTER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.RangeFacetResultImpl.class, name = RangeFacetResult.RANGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.TermFacetResultImpl.class, name = TermFacetResult.TERMS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = FacetResultImpl.class, visible = true)
 @JsonDeserialize(as = FacetResultImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public interface FacetResult {
 
     /**
@@ -40,8 +38,11 @@ public interface FacetResult {
      * @return type
      */
     @NotNull
+    @Deprecated
     @JsonProperty("type")
     public FacetTypes getType();
+
+    public FacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of FacetResult
@@ -53,17 +54,9 @@ public interface FacetResult {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product.FilteredFacetResult) {
-            return com.commercetools.api.models.product.FilteredFacetResult
-                    .deepCopy((com.commercetools.api.models.product.FilteredFacetResult) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.RangeFacetResult) {
-            return com.commercetools.api.models.product.RangeFacetResult
-                    .deepCopy((com.commercetools.api.models.product.RangeFacetResult) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.TermFacetResult) {
-            return com.commercetools.api.models.product.TermFacetResult
-                    .deepCopy((com.commercetools.api.models.product.TermFacetResult) template);
+
+        if (!(template instanceof FacetResultImpl)) {
+            return template.copyDeep();
         }
         FacetResultImpl instance = new FacetResultImpl();
         return instance;
@@ -107,8 +100,8 @@ public interface FacetResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FacetResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FacetResult>() {
+    public static tools.jackson.core.type.TypeReference<FacetResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FacetResult>() {
             @Override
             public String toString() {
                 return "TypeReference<FacetResult>";

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
+ *  <p>Updates the <code>inputHint</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeInputHint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeInputHintActionImpl.class)
 public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateAction {
@@ -86,6 +88,8 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
         return instance;
     }
 
+    public ProductTypeChangeInputHintAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeChangeInputHintAction
      * @param template instance to be copied
@@ -133,8 +137,8 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeInputHintAction>";

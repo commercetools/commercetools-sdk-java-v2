@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.ChannelRoleEnum;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Roles update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetRolesAction" rel="nofollow">Set Roles</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +26,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetChannelRolesChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetChannelRolesChangeImpl.class)
 public interface SetChannelRolesChange extends Change {
@@ -71,6 +75,22 @@ public interface SetChannelRolesChange extends Change {
     public List<ChannelRoleEnum> getNextValue();
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @JsonProperty("addedItems")
+    public List<ChannelRoleEnum> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @JsonProperty("removedItems")
+    public List<ChannelRoleEnum> getRemovedItems();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -108,6 +128,36 @@ public interface SetChannelRolesChange extends Change {
     public void setNextValue(final List<ChannelRoleEnum> nextValue);
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final ChannelRoleEnum... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<ChannelRoleEnum> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final ChannelRoleEnum... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<ChannelRoleEnum> removedItems);
+
+    /**
      * factory method
      * @return instance of SetChannelRolesChange
      */
@@ -125,8 +175,12 @@ public interface SetChannelRolesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
+
+    public SetChannelRolesChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetChannelRolesChange
@@ -142,6 +196,8 @@ public interface SetChannelRolesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems()).map(ArrayList::new).orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems()).map(ArrayList::new).orElse(null));
         return instance;
     }
 
@@ -176,8 +232,8 @@ public interface SetChannelRolesChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetChannelRolesChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetChannelRolesChange>() {
+    public static tools.jackson.core.type.TypeReference<SetChannelRolesChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetChannelRolesChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetChannelRolesChange>";

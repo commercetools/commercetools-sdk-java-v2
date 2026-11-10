@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Draft type to model divisions that are part of the Company or a higher-order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:MyBusinessUnitDraft" rel="nofollow">MyBusinessUnitDraft</a> that are used specifically for creating a Division.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Division")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyDivisionDraftImpl.class)
 public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyDivisionDraft> {
@@ -83,6 +85,8 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
+
+    public MyDivisionDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MyDivisionDraft
@@ -146,8 +150,8 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyDivisionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyDivisionDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyDivisionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyDivisionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyDivisionDraft>";

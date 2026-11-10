@@ -19,6 +19,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyGraphqlRequestBuilder graphql() {
+        return new ByProjectKeyGraphqlRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyByResourceTypeRequestBuilder withResourceTypeValue(String resourceType) {
         return new ByProjectKeyByResourceTypeRequestBuilder(apiHttpClient, projectKey, resourceType);
     }

@@ -211,7 +211,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
@@ -222,7 +222,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
@@ -233,7 +233,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
@@ -392,7 +392,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return shippingAddresses
      */
 
@@ -412,7 +412,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return billingAddresses
      */
 

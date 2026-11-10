@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FacetTerm
@@ -28,10 +29,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FacetTermImpl.class)
+@Deprecated
 public interface FacetTerm {
 
     /**
-     *
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      * @return term
      */
     @NotNull
@@ -39,7 +41,7 @@ public interface FacetTerm {
     public Object getTerm();
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @return count
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface FacetTerm {
     public Long getCount();
 
     /**
-     *
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 
@@ -55,21 +57,21 @@ public interface FacetTerm {
     public Long getProductCount();
 
     /**
-     * set term
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      * @param term value to be set
      */
 
     public void setTerm(final Object term);
 
     /**
-     * set count
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     * set productCount
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      */
 
@@ -95,6 +97,8 @@ public interface FacetTerm {
         instance.setProductCount(template.getProductCount());
         return instance;
     }
+
+    public FacetTerm copyDeep();
 
     /**
      * factory method to create a deep copy of FacetTerm
@@ -144,8 +148,8 @@ public interface FacetTerm {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FacetTerm> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FacetTerm>() {
+    public static tools.jackson.core.type.TypeReference<FacetTerm> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FacetTerm>() {
             @Override
             public String toString() {
                 return "TypeReference<FacetTerm>";

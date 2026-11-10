@@ -7,15 +7,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the Return Info Set Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfoSetMessage" rel="nofollow">Return Info Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setReturnInfo")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetReturnInfoActionImpl.class)
 public interface OrderSetReturnInfoAction extends OrderUpdateAction {
@@ -36,7 +38,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return items
      */
     @Valid
@@ -44,7 +46,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public List<ReturnInfoDraft> getItems();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param items values to be set
      */
 
@@ -52,7 +54,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public void setItems(final ReturnInfoDraft... items);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param items values to be set
      */
 
@@ -76,6 +78,8 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public OrderSetReturnInfoAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetReturnInfoAction
@@ -127,8 +131,8 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnInfoAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnInfoAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetReturnInfoAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetReturnInfoAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetReturnInfoAction>";

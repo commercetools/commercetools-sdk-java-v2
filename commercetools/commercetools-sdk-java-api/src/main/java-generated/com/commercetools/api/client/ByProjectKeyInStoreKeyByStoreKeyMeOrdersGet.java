@@ -11,16 +11,21 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Retrieves Orders in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the authenticated Customer or anonymous user.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Orders exist that match the provided query predicate.</li>
+ *   <li>If an Order exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -70,7 +75,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/orders", this.projectKey, this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/orders", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

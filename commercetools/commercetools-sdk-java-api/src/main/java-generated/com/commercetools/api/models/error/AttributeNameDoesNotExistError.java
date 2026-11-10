@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
- *  <p>The error is returned as a failed response to the Change AttributeDefinition Name update action.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> does not exist for an Attribute <code>name</code>.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeAttributeNameAction" rel="nofollow">Change AttributeDefinition Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeNameDoesNotExist")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeNameDoesNotExistErrorImpl.class)
 public interface AttributeNameDoesNotExistError extends ErrorObject {
@@ -96,6 +98,8 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
         return instance;
     }
 
+    public AttributeNameDoesNotExistError copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeNameDoesNotExistError
      * @param template instance to be copied
@@ -144,8 +148,8 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeNameDoesNotExistError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeNameDoesNotExistError>() {
+    public static tools.jackson.core.type.TypeReference<AttributeNameDoesNotExistError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeNameDoesNotExistError>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeNameDoesNotExistError>";

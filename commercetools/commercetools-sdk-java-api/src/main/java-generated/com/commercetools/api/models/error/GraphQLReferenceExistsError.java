@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferenceExists")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLReferenceExistsErrorImpl.class)
 public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
@@ -78,6 +80,8 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
         return instance;
     }
 
+    public GraphQLReferenceExistsError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLReferenceExistsError
      * @param template instance to be copied
@@ -125,8 +129,8 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLReferenceExistsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLReferenceExistsError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLReferenceExistsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLReferenceExistsError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLReferenceExistsError>";

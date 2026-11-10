@@ -26,7 +26,7 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
     private String email;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 

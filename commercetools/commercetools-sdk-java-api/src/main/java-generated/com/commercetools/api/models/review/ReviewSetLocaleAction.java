@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewSetLocaleAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocale")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetLocaleActionImpl.class)
 public interface ReviewSetLocaleAction extends ReviewUpdateAction {
@@ -34,7 +36,7 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return locale
      */
 
@@ -42,7 +44,7 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
     public String getLocale();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param locale value to be set
      */
 
@@ -66,6 +68,8 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public ReviewSetLocaleAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetLocaleAction
@@ -113,8 +117,8 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetLocaleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetLocaleAction>() {
+    public static tools.jackson.core.type.TypeReference<ReviewSetLocaleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewSetLocaleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewSetLocaleAction>";

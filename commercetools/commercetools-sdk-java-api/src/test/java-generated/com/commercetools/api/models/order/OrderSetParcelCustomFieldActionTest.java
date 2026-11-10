@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetParcelCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetParcelCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetParcelCustomFieldActionBuilder builder) {
         OrderSetParcelCustomFieldAction orderSetParcelCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetParcelCustomFieldAction).isInstanceOf(OrderSetParcelCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSetParcelCustomFieldAction.builder().parcelId("parcelId") },
-                new Object[] { OrderSetParcelCustomFieldAction.builder().parcelKey("parcelKey") },
-                new Object[] { OrderSetParcelCustomFieldAction.builder().name("name") },
-                new Object[] { OrderSetParcelCustomFieldAction.builder().value("value") } };
+        return new Object[][] {
+                new Object[] { "parcelId", OrderSetParcelCustomFieldAction.builder().parcelId("parcelId") },
+                new Object[] { "parcelKey", OrderSetParcelCustomFieldAction.builder().parcelKey("parcelKey") },
+                new Object[] { "name", OrderSetParcelCustomFieldAction.builder().name("name") },
+                new Object[] { "value", OrderSetParcelCustomFieldAction.builder().value("value") } };
     }
 
     @Test

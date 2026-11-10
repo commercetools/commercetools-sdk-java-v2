@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
- *  <p>The error is returned as a failed response to the Create ProductType request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-types:POST" rel="nofollow">Create ProductType</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLAttributeDefinitionTypeConflictErrorImpl
@@ -38,7 +40,8 @@ public class GraphQLAttributeDefinitionTypeConflictErrorImpl
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLAttributeDefinitionTypeConflictErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLAttributeDefinitionTypeConflictErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingProductTypeId") final String conflictingProductTypeId,
             @JsonProperty("conflictingProductTypeName") final String conflictingProductTypeName,
             @JsonProperty("conflictingAttributeName") final String conflictingAttributeName) {
@@ -158,4 +161,8 @@ public class GraphQLAttributeDefinitionTypeConflictErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLAttributeDefinitionTypeConflictError copyDeep() {
+        return GraphQLAttributeDefinitionTypeConflictError.deepCopy(this);
+    }
 }

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removing a language used by a Store returns a LanguageUsedInStores error.</p>
+ * ProjectChangeLanguagesAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLanguages")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
@@ -36,7 +38,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     String CHANGE_LANGUAGES = "changeLanguages";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @return languages
      */
     @NotNull
@@ -44,7 +48,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public List<String> getLanguages();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -52,7 +58,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public void setLanguages(final String... languages);
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -76,6 +84,8 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public ProjectChangeLanguagesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeLanguagesAction
@@ -123,8 +133,8 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeLanguagesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeLanguagesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeLanguagesAction>";

@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.shopping_list;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListSetLineItemCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListSetLineItemCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListSetLineItemCustomFieldActionBuilder builder) {
         ShoppingListSetLineItemCustomFieldAction shoppingListSetLineItemCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(shoppingListSetLineItemCustomFieldAction)
                 .isInstanceOf(ShoppingListSetLineItemCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShoppingListSetLineItemCustomFieldAction.builder().lineItemId("lineItemId") },
-                new Object[] { ShoppingListSetLineItemCustomFieldAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { ShoppingListSetLineItemCustomFieldAction.builder().name("name") },
-                new Object[] { ShoppingListSetLineItemCustomFieldAction.builder().value("value") } };
+                new Object[] { "lineItemId",
+                        ShoppingListSetLineItemCustomFieldAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        ShoppingListSetLineItemCustomFieldAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "name", ShoppingListSetLineItemCustomFieldAction.builder().name("name") },
+                new Object[] { "value", ShoppingListSetLineItemCustomFieldAction.builder().value("value") } };
     }
 
     @Test

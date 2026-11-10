@@ -7,23 +7,15 @@ import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.*;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(DataProviderExtension.class)
-@ExtendWith(UseDataProviderExtension.class)
 public class ErrorMiddlewareTest {
 
-    @DataProvider
     public static Object[][] exceptions() {
         return new Object[][] { { 400, BadRequestException.class }, { 401, UnauthorizedException.class },
                 { 403, ForbiddenException.class }, { 404, NotFoundException.class },
@@ -33,8 +25,8 @@ public class ErrorMiddlewareTest {
                 { 599, ApiServerException.class }, };
     }
 
-    @TestTemplate
-    @UseDataProvider("exceptions")
+    @ParameterizedTest
+    @MethodSource("exceptions")
     public void testError(int statusCode, Class<ApiHttpException> exceptionClass) {
         ErrorMiddleware middleware = ErrorMiddleware.of(HttpExceptionFactory.of(ResponseSerializer.of()));
 
@@ -46,6 +38,21 @@ public class ErrorMiddlewareTest {
                 middleware.invoke(request,
                     request1 -> CompletableFuture
                             .completedFuture(new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
+                Duration.ofSeconds(1));
+        }).matches(e -> e.getStatusCode() == statusCode);
+    }
+
+    @ParameterizedTest
+    @MethodSource("exceptions")
+    public void testErrorInvalidResponse(int statusCode, Class<ApiHttpException> exceptionClass) {
+        ErrorMiddleware middleware = ErrorMiddleware.of(HttpExceptionFactory.of(ResponseSerializer.of()));
+
+        final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
+            "".getBytes());
+        final ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(statusCode, null, null);
+
+        Assertions.assertThatExceptionOfType(exceptionClass).isThrownBy(() -> {
+            blockingWait(middleware.invoke(request, request1 -> CompletableFuture.completedFuture(response)),
                 Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == statusCode);
     }

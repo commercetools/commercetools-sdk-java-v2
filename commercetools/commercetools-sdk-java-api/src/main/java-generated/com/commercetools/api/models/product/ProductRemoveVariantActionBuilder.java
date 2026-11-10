@@ -54,7 +54,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @return staged
      */
 

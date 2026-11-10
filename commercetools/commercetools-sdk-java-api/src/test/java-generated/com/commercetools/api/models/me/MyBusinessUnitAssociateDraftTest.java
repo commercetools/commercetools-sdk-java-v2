@@ -3,33 +3,26 @@ package com.commercetools.api.models.me;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyBusinessUnitAssociateDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyBusinessUnitAssociateDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyBusinessUnitAssociateDraftBuilder builder) {
         MyBusinessUnitAssociateDraft myBusinessUnitAssociateDraft = builder.buildUnchecked();
         Assertions.assertThat(myBusinessUnitAssociateDraft).isInstanceOf(MyBusinessUnitAssociateDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyBusinessUnitAssociateDraft.builder().version(2L) },
-                new Object[] { MyBusinessUnitAssociateDraft.builder()
-                        .customer(new com.commercetools.api.models.me.MyCustomerDraftImpl()) },
-                new Object[] { MyBusinessUnitAssociateDraft.builder()
+        return new Object[][] { new Object[] { "version", MyBusinessUnitAssociateDraft.builder().version(2L) },
+                new Object[] { "customer",
+                        MyBusinessUnitAssociateDraft.builder()
+                                .customer(new com.commercetools.api.models.me.MyCustomerDraftImpl()) },
+                new Object[] { "associateRoleAssignments", MyBusinessUnitAssociateDraft.builder()
                         .associateRoleAssignments(Collections.singletonList(
                             new com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftImpl())) } };
     }

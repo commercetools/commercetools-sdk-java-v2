@@ -69,7 +69,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     }
 
     /**
-     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     *  <p>Whether to make all Products assigned to the referenced Product Selection available in the Store.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     }
 
     /**
-     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     *  <p>Whether to make all Products assigned to the referenced Product Selection available in the Store.</p>
      * @return active
      */
 

@@ -7,14 +7,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalFlowApproval
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApprovalFlowApproval {
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return approver
      */
     @NotNull
@@ -44,7 +45,7 @@ public interface ApprovalFlowApproval {
     public Associate getApprover();
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @return approvedAt
      */
     @NotNull
@@ -52,14 +53,14 @@ public interface ApprovalFlowApproval {
     public ZonedDateTime getApprovedAt();
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param approver value to be set
      */
 
     public void setApprover(final Associate approver);
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @param approvedAt value to be set
      */
 
@@ -84,6 +85,8 @@ public interface ApprovalFlowApproval {
         instance.setApprovedAt(template.getApprovedAt());
         return instance;
     }
+
+    public ApprovalFlowApproval copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalFlowApproval
@@ -132,8 +135,8 @@ public interface ApprovalFlowApproval {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowApproval> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowApproval>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowApproval> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowApproval>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowApproval>";

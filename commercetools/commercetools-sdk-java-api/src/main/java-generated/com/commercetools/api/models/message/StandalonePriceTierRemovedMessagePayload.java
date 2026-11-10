@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceTier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove Price Tier update action</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemovePriceTierAction" rel="nofollow">Remove Price Tier</a> update action</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceTierRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceTierRemovedMessagePayloadImpl.class)
 public interface StandalonePriceTierRemovedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface StandalonePriceTierRemovedMessagePayload extends MessagePayload
     String STANDALONE_PRICE_TIER_REMOVED = "StandalonePriceTierRemoved";
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return removedTier
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface StandalonePriceTierRemovedMessagePayload extends MessagePayload
     public PriceTier getRemovedTier();
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param removedTier value to be set
      */
 
@@ -71,6 +73,8 @@ public interface StandalonePriceTierRemovedMessagePayload extends MessagePayload
         instance.setRemovedTier(template.getRemovedTier());
         return instance;
     }
+
+    public StandalonePriceTierRemovedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceTierRemovedMessagePayload
@@ -121,8 +125,8 @@ public interface StandalonePriceTierRemovedMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTierRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTierRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceTierRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceTierRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceTierRemovedMessagePayload>";

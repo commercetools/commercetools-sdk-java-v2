@@ -8,12 +8,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApiClient
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClient extends com.commercetools.api.models.Identifiable<ApiClient> {
 
     /**
-     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     *  <p>The OAuth2 <code>client_id</code> that can be used to <span>obtain an access token</span>.</p>
      * @return id
      */
     @NotNull
@@ -51,7 +52,7 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public String getName();
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
     @NotNull
@@ -59,7 +60,7 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public String getScope();
 
     /**
-     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to <span>obtain an access token</span>.</p>
      * @return secret
      */
 
@@ -67,7 +68,7 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public String getSecret();
 
     /**
-     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     *  <p>Date of the last day this APIClient was used to <span>obtain an access token</span>.</p>
      * @return lastUsedAt
      */
 
@@ -91,7 +92,11 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @return accessTokenValiditySeconds
      */
 
@@ -99,7 +104,7 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public Integer getAccessTokenValiditySeconds();
 
     /**
-     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @return refreshTokenValiditySeconds
      */
 
@@ -107,7 +112,7 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public Integer getRefreshTokenValiditySeconds();
 
     /**
-     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     *  <p>The OAuth2 <code>client_id</code> that can be used to <span>obtain an access token</span>.</p>
      * @param id value to be set
      */
 
@@ -121,21 +126,21 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public void setName(final String name);
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      */
 
     public void setScope(final String scope);
 
     /**
-     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to <span>obtain an access token</span>.</p>
      * @param secret value to be set
      */
 
     public void setSecret(final String secret);
 
     /**
-     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     *  <p>Date of the last day this APIClient was used to <span>obtain an access token</span>.</p>
      * @param lastUsedAt value to be set
      */
 
@@ -156,14 +161,18 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @param accessTokenValiditySeconds value to be set
      */
 
     public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds);
 
     /**
-     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @param refreshTokenValiditySeconds value to be set
      */
 
@@ -195,6 +204,8 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
         instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
         return instance;
     }
+
+    public ApiClient copyDeep();
 
     /**
      * factory method to create a deep copy of ApiClient
@@ -250,8 +261,8 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApiClient> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApiClient>() {
+    public static tools.jackson.core.type.TypeReference<ApiClient> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApiClient>() {
             @Override
             public String toString() {
                 return "TypeReference<ApiClient>";

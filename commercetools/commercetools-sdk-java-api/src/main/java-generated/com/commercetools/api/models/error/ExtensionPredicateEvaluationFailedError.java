@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
+ *  <p>Returned when the predicate defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionTrigger" rel="nofollow">ExtensionTrigger</a> could not be evaluated due to a missing field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionPredicateEvaluationFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionPredicateEvaluationFailedErrorImpl.class)
 public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
@@ -97,6 +99,8 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
         return instance;
     }
 
+    public ExtensionPredicateEvaluationFailedError copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionPredicateEvaluationFailedError
      * @param template instance to be copied
@@ -149,8 +153,8 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionPredicateEvaluationFailedError>";

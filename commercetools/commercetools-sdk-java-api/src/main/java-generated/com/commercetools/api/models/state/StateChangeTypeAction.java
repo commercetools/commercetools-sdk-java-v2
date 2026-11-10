@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateChangeTypeAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
@@ -37,6 +39,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return type
      */
     @NotNull
@@ -45,6 +48,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param type value to be set
      */
 
@@ -68,6 +72,8 @@ public interface StateChangeTypeAction extends StateUpdateAction {
         instance.setType(template.getType());
         return instance;
     }
+
+    public StateChangeTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateChangeTypeAction
@@ -115,8 +121,8 @@ public interface StateChangeTypeAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateChangeTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateChangeTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<StateChangeTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateChangeTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateChangeTypeAction>";

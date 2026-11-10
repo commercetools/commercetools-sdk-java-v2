@@ -24,7 +24,8 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
     private String name;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -35,7 +36,8 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return name
      */
 

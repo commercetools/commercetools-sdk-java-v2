@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importcontainers;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,12 +34,18 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     private Long version;
 
+    @Nullable
+    private com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    @Nullable
+    private java.time.ZonedDateTime expiresAt;
+
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -49,7 +56,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @param resourceType value to be set
      * @return Builder
      */
@@ -61,7 +68,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -72,7 +79,33 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     * @param retentionPolicy value to be set
+     * @return Builder
+     */
+
+    public ImportContainerBuilder retentionPolicy(
+            @Nullable final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
+        this.retentionPolicy = retentionPolicy;
+        return this;
+    }
+
+    /**
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     * @param builder function to build the retentionPolicy value
+     * @return Builder
+     */
+
+    public ImportContainerBuilder retentionPolicy(
+            Function<com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder, Builder<? extends com.commercetools.importapi.models.importcontainers.RetentionPolicy>> builder) {
+        this.retentionPolicy = builder
+                .apply(com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -83,7 +116,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -94,7 +127,18 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
+     * @param expiresAt value to be set
+     * @return Builder
+     */
+
+    public ImportContainerBuilder expiresAt(@Nullable final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
 
@@ -103,7 +147,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @return resourceType
      */
 
@@ -113,7 +157,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @return version
      */
 
@@ -122,7 +166,17 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
+     * @return retentionPolicy
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
+        return this.retentionPolicy;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @return createdAt
      */
 
@@ -131,12 +185,22 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @return lastModifiedAt
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
+     * @return expiresAt
+     */
+
+    @Nullable
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -148,7 +212,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         Objects.requireNonNull(version, ImportContainer.class + ": version is missing");
         Objects.requireNonNull(createdAt, ImportContainer.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, ImportContainer.class + ": lastModifiedAt is missing");
-        return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);
+        return new ImportContainerImpl(key, resourceType, version, retentionPolicy, createdAt, lastModifiedAt,
+            expiresAt);
     }
 
     /**
@@ -156,7 +221,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
      * @return ImportContainer
      */
     public ImportContainer buildUnchecked() {
-        return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);
+        return new ImportContainerImpl(key, resourceType, version, retentionPolicy, createdAt, lastModifiedAt,
+            expiresAt);
     }
 
     /**
@@ -177,8 +243,10 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         builder.key = template.getKey();
         builder.resourceType = template.getResourceType();
         builder.version = template.getVersion();
+        builder.retentionPolicy = template.getRetentionPolicy();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.expiresAt = template.getExpiresAt();
         return builder;
     }
 

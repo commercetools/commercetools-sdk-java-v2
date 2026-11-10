@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeInputHintChange changeInputHintChange = ChangeInputHintChange.builder()
  *             .change("{change}")
- *             .previousValue(TextInputHint.SINGLE_LINE)
- *             .nextValue(TextInputHint.SINGLE_LINE)
+ *             .previousValue(TypeTextInputHint.SINGLE_LINE)
+ *             .nextValue(TypeTextInputHint.SINGLE_LINE)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
  *             .build()
@@ -27,9 +27,9 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     private String change;
 
-    private com.commercetools.history.models.common.TextInputHint previousValue;
+    private com.commercetools.history.models.common.TypeTextInputHint previousValue;
 
-    private com.commercetools.history.models.common.TextInputHint nextValue;
+    private com.commercetools.history.models.common.TypeTextInputHint nextValue;
 
     private String fieldName;
 
@@ -53,7 +53,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
      */
 
     public ChangeInputHintChangeBuilder previousValue(
-            final com.commercetools.history.models.common.TextInputHint previousValue) {
+            final com.commercetools.history.models.common.TypeTextInputHint previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -65,13 +65,13 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
      */
 
     public ChangeInputHintChangeBuilder nextValue(
-            final com.commercetools.history.models.common.TextInputHint nextValue) {
+            final com.commercetools.history.models.common.TypeTextInputHint nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.TextInputHint getPreviousValue() {
+    public com.commercetools.history.models.common.TypeTextInputHint getPreviousValue() {
         return this.previousValue;
     }
 
@@ -115,12 +115,12 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.TextInputHint getNextValue() {
+    public com.commercetools.history.models.common.TypeTextInputHint getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @return fieldName
      */
 
@@ -129,7 +129,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @return attributeName
      */
 

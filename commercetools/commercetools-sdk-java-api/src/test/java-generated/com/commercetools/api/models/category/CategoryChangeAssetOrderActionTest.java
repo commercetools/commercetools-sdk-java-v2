@@ -3,30 +3,22 @@ package com.commercetools.api.models.category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategoryChangeAssetOrderActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategoryChangeAssetOrderActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategoryChangeAssetOrderActionBuilder builder) {
         CategoryChangeAssetOrderAction categoryChangeAssetOrderAction = builder.buildUnchecked();
         Assertions.assertThat(categoryChangeAssetOrderAction).isInstanceOf(CategoryChangeAssetOrderAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] {
+        return new Object[][] { new Object[] { "assetOrder",
                 CategoryChangeAssetOrderAction.builder().assetOrder(Collections.singletonList("assetOrder")) } };
     }
 

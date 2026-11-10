@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchIndexingInProgress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingInProgressErrorImpl.class)
 public interface SearchIndexingInProgressError extends ErrorObject {
@@ -78,6 +80,8 @@ public interface SearchIndexingInProgressError extends ErrorObject {
         return instance;
     }
 
+    public SearchIndexingInProgressError copyDeep();
+
     /**
      * factory method to create a deep copy of SearchIndexingInProgressError
      * @param template instance to be copied
@@ -125,8 +129,8 @@ public interface SearchIndexingInProgressError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError>() {
+    public static tools.jackson.core.type.TypeReference<SearchIndexingInProgressError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchIndexingInProgressError>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchIndexingInProgressError>";

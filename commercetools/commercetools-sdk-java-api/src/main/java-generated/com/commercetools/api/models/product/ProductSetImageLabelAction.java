@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setImageLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
 public interface ProductSetImageLabelAction extends ProductUpdateAction {
@@ -60,7 +62,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public String getImageUrl();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return label
      */
 
@@ -68,7 +70,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public String getLabel();
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @return staged
      */
 
@@ -97,14 +99,14 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public void setImageUrl(final String imageUrl);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param label value to be set
      */
 
     public void setLabel(final String label);
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @param staged value to be set
      */
 
@@ -132,6 +134,8 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetImageLabelAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetImageLabelAction
@@ -192,8 +196,8 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetImageLabelAction>";

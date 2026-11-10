@@ -184,7 +184,7 @@ public class StagedQuoteSellerCommentSetMessageBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class StagedQuoteSellerCommentSetMessageBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class StagedQuoteSellerCommentSetMessageBuilder implements Builder<Staged
     }
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
@@ -334,7 +334,7 @@ public class StagedQuoteSellerCommentSetMessageBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -362,7 +362,7 @@ public class StagedQuoteSellerCommentSetMessageBuilder implements Builder<Staged
     }
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @return sellerComment
      */
 

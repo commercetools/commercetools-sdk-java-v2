@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionDraftBuilder implements Builder<Discounted
     private com.commercetools.api.models.common.TypedMoneyDraft discountedAmount;
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class DiscountedLineItemPortionDraftBuilder implements Builder<Discounted
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class DiscountedLineItemPortionDraftBuilder implements Builder<Discounted
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @return discount
      */
 

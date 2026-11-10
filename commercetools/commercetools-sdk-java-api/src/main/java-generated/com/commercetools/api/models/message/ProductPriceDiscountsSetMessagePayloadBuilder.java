@@ -25,7 +25,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @return updatedPrices
      */
 

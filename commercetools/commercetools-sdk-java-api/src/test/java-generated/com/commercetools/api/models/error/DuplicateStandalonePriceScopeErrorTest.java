@@ -3,45 +3,41 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DuplicateStandalonePriceScopeErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DuplicateStandalonePriceScopeErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DuplicateStandalonePriceScopeErrorBuilder builder) {
         DuplicateStandalonePriceScopeError duplicateStandalonePriceScopeError = builder.buildUnchecked();
         Assertions.assertThat(duplicateStandalonePriceScopeError)
                 .isInstanceOf(DuplicateStandalonePriceScopeError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DuplicateStandalonePriceScopeError.builder().message("message") },
-                new Object[] { DuplicateStandalonePriceScopeError.builder()
-                        .conflictingStandalonePrice(
-                            new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
-                new Object[] { DuplicateStandalonePriceScopeError.builder().sku("sku") },
-                new Object[] { DuplicateStandalonePriceScopeError.builder().currency("currency") },
-                new Object[] { DuplicateStandalonePriceScopeError.builder().country("country") },
-                new Object[] { DuplicateStandalonePriceScopeError.builder()
+        return new Object[][] {
+                new Object[] { "message", DuplicateStandalonePriceScopeError.builder().message("message") },
+                new Object[] { "conflictingStandalonePrice",
+                        DuplicateStandalonePriceScopeError.builder()
+                                .conflictingStandalonePrice(
+                                    new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
+                new Object[] { "sku", DuplicateStandalonePriceScopeError.builder().sku("sku") },
+                new Object[] { "currency", DuplicateStandalonePriceScopeError.builder().currency("currency") },
+                new Object[] { "country", DuplicateStandalonePriceScopeError.builder().country("country") },
+                new Object[] { "customerGroup", DuplicateStandalonePriceScopeError.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { DuplicateStandalonePriceScopeError.builder()
-                        .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { DuplicateStandalonePriceScopeError.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DuplicateStandalonePriceScopeError.builder()
+                new Object[] { "channel",
+                        DuplicateStandalonePriceScopeError.builder()
+                                .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "validFrom",
+                        DuplicateStandalonePriceScopeError.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil", DuplicateStandalonePriceScopeError.builder()
                         .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

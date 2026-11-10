@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.SelectionMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeTargetMultiBuyCustomLineItemsChangeValue
@@ -31,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("multiBuyCustomLineItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTargetChangeValue {
@@ -49,7 +51,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public String getType();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -89,7 +91,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -147,6 +149,8 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
         return instance;
     }
 
+    public ChangeTargetMultiBuyCustomLineItemsChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeTargetMultiBuyCustomLineItemsChangeValue
      * @param template instance to be copied
@@ -200,8 +204,8 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>";

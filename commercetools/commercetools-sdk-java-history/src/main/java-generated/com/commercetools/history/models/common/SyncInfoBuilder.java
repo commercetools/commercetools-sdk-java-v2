@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,8 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SyncInfo syncInfo = SyncInfo.builder()
  *             .channel(channelBuilder -> channelBuilder)
- *             .externalId("{externalId}")
- *             .syncedAt("{syncedAt}")
+ *             .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -24,93 +25,95 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoBuilder implements Builder<SyncInfo> {
 
-    private com.commercetools.history.models.common.Reference channel;
+    private com.commercetools.history.models.common.ChannelReference channel;
 
+    @Nullable
     private String externalId;
 
-    private String syncedAt;
+    private java.time.ZonedDateTime syncedAt;
 
     /**
-     * set the value to the channel using the builder function
+     *  <p>Connection to a synchronization destination.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
 
     public SyncInfoBuilder channel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ChannelReferenceBuilder, com.commercetools.history.models.common.ChannelReferenceBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.history.models.common.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the channel using the builder function
+     *  <p>Connection to a synchronization destination.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
 
     public SyncInfoBuilder withChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.ChannelReferenceBuilder, com.commercetools.history.models.common.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.history.models.common.ChannelReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the channel
+     *  <p>Connection to a synchronization destination.</p>
      * @param channel value to be set
      * @return Builder
      */
 
-    public SyncInfoBuilder channel(final com.commercetools.history.models.common.Reference channel) {
+    public SyncInfoBuilder channel(final com.commercetools.history.models.common.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      * @return Builder
      */
 
-    public SyncInfoBuilder externalId(final String externalId) {
+    public SyncInfoBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
 
     /**
-     * set the value to the syncedAt
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @param syncedAt value to be set
      * @return Builder
      */
 
-    public SyncInfoBuilder syncedAt(final String syncedAt) {
+    public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;
         return this;
     }
 
     /**
-     * value of channel}
+     *  <p>Connection to a synchronization destination.</p>
      * @return channel
      */
 
-    public com.commercetools.history.models.common.Reference getChannel() {
+    public com.commercetools.history.models.common.ChannelReference getChannel() {
         return this.channel;
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @return externalId
      */
 
+    @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
     /**
-     * value of syncedAt}
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @return syncedAt
      */
 
-    public String getSyncedAt() {
+    public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;
     }
 
@@ -120,7 +123,6 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
      */
     public SyncInfo build() {
         Objects.requireNonNull(channel, SyncInfo.class + ": channel is missing");
-        Objects.requireNonNull(externalId, SyncInfo.class + ": externalId is missing");
         Objects.requireNonNull(syncedAt, SyncInfo.class + ": syncedAt is missing");
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }

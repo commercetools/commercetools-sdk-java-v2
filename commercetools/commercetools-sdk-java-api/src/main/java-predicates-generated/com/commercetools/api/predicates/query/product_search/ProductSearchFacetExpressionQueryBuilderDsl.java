@@ -36,4 +36,12 @@ public class ProductSearchFacetExpressionQueryBuilderDsl {
                     .of()),
             ProductSearchFacetExpressionQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<ProductSearchFacetExpressionQueryBuilderDsl> asProductSearchFacetStatsExpression(
+            Function<com.commercetools.api.predicates.query.product_search.ProductSearchFacetStatsExpressionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_search.ProductSearchFacetStatsExpressionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_search.ProductSearchFacetStatsExpressionQueryBuilderDsl
+                    .of()),
+            ProductSearchFacetExpressionQueryBuilderDsl::of);
+    }
 }

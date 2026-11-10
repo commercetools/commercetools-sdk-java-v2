@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPaymentSetMethodInfoNameAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentSetMethodInfoNameActionImpl.class)
 public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction {
@@ -36,7 +38,7 @@ public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction 
     String SET_METHOD_INFO_NAME = "setMethodInfoName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return name
      */
     @Valid
@@ -44,7 +46,7 @@ public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction 
     public LocalizedString getName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param name value to be set
      */
 
@@ -68,6 +70,8 @@ public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction 
         instance.setName(template.getName());
         return instance;
     }
+
+    public MyPaymentSetMethodInfoNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyPaymentSetMethodInfoNameAction
@@ -115,8 +119,8 @@ public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoNameAction>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentSetMethodInfoNameAction>";

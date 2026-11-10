@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetBillingAddressCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetBillingAddressCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetBillingAddressCustomFieldActionBuilder builder) {
         CartSetBillingAddressCustomFieldAction cartSetBillingAddressCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetBillingAddressCustomFieldAction)
                 .isInstanceOf(CartSetBillingAddressCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartSetBillingAddressCustomFieldAction.builder().name("name") },
-                new Object[] { CartSetBillingAddressCustomFieldAction.builder().value("value") } };
+        return new Object[][] { new Object[] { "name", CartSetBillingAddressCustomFieldAction.builder().name("name") },
+                new Object[] { "value", CartSetBillingAddressCustomFieldAction.builder().value("value") } };
     }
 
     @Test

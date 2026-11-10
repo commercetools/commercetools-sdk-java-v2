@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountDraft
@@ -50,6 +51,10 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup;
+
+    private com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope;
+
     /**
      * create instance with all properties
      */
@@ -67,7 +72,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup,
+            @JsonProperty("recurringOrderScope") final com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope) {
         this.name = name;
         this.key = key;
         this.description = description;
@@ -82,6 +89,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.requiresDiscountCode = requiresDiscountCode;
         this.stackingMode = stackingMode;
         this.custom = custom;
+        this.discountGroup = discountGroup;
+        this.recurringOrderScope = recurringOrderScope;
     }
 
     /**
@@ -100,6 +109,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -123,7 +133,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      */
 
     public String getCartPredicate() {
@@ -140,7 +150,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      */
 
     public String getSortOrder() {
@@ -149,11 +161,11 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -161,7 +173,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>Only active Discounts can be applied to the Cart. If the <span>limit</span> for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      */
 
     public Boolean getIsActive() {
@@ -185,7 +197,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     *  <p>States whether the Discount can only be used in a connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      */
 
     public Boolean getRequiresDiscountCode() {
@@ -201,11 +213,29 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     */
+
+    public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft getRecurringOrderScope() {
+        return this.recurringOrderScope;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -268,6 +298,16 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setDiscountGroup(
+            final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
+        this.discountGroup = discountGroup;
+    }
+
+    public void setRecurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -292,6 +332,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode, that.requiresDiscountCode)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(description, that.description)
@@ -306,6 +348,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode, that.requiresDiscountCode)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .isEquals();
     }
 
@@ -325,6 +369,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode)
                 .append(stackingMode)
                 .append(custom)
+                .append(discountGroup)
+                .append(recurringOrderScope)
                 .toHashCode();
     }
 
@@ -344,7 +390,13 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append("requiresDiscountCode", requiresDiscountCode)
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
+                .append("discountGroup", discountGroup)
+                .append("recurringOrderScope", recurringOrderScope)
                 .build();
     }
 
+    @Override
+    public CartDiscountDraft copyDeep() {
+        return CartDiscountDraft.deepCopy(this);
+    }
 }

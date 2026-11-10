@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyQuoteUpdateAction
@@ -26,8 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionImpl.class, name = MyQuoteChangeMyQuoteStateAction.CHANGE_MY_QUOTE_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyQuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyQuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -41,6 +40,8 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public MyQuoteUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyQuoteUpdateAction
      * @param template instance to be copied
@@ -51,9 +52,9 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) {
-            return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction
-                    .deepCopy((com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) template);
+
+        if (!(template instanceof MyQuoteUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyQuoteUpdateActionImpl instance = new MyQuoteUpdateActionImpl();
         return instance;
@@ -81,8 +82,8 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyQuoteUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyQuoteUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<MyQuoteUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyQuoteUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyQuoteUpdateAction>";

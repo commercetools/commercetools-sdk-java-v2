@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * CartSetAnonymousIdAction
+ *  <p>If the Cart is already associated with a Customer, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAnonymousId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
@@ -34,7 +36,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return anonymousId
      */
 
@@ -42,7 +44,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     public String getAnonymousId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param anonymousId value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public CartSetAnonymousIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetAnonymousIdAction
@@ -113,8 +117,8 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetAnonymousIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetAnonymousIdAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetAnonymousIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetAnonymousIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetAnonymousIdAction>";

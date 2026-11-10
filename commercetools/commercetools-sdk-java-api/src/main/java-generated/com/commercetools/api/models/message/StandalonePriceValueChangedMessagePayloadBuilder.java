@@ -34,7 +34,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     private com.commercetools.api.models.common.TypedMoney oldValue;
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @param oldValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @param builder function to build the oldValue value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return value
      */
 
@@ -102,7 +102,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>.</p>
      * @return staged
      */
 
@@ -111,7 +111,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @return oldValue
      */
 

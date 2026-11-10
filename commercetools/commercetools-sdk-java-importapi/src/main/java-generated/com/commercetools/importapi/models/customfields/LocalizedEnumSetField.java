@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a localized enum set value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LocalizedEnumSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizedEnumSetFieldImpl.class)
 public interface LocalizedEnumSetField extends CustomField {
@@ -36,7 +38,7 @@ public interface LocalizedEnumSetField extends CustomField {
     String LOCALIZED_ENUM_SET = "LocalizedEnumSet";
 
     /**
-     *
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface LocalizedEnumSetField extends CustomField {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -52,7 +54,7 @@ public interface LocalizedEnumSetField extends CustomField {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -76,6 +78,8 @@ public interface LocalizedEnumSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizedEnumSetField copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizedEnumSetField
@@ -123,8 +127,8 @@ public interface LocalizedEnumSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField>() {
+    public static tools.jackson.core.type.TypeReference<LocalizedEnumSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizedEnumSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizedEnumSetField>";

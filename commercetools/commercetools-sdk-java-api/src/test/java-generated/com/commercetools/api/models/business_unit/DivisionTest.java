@@ -1,38 +1,34 @@
 
 package com.commercetools.api.models.business_unit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DivisionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DivisionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DivisionBuilder builder) {
         Division division = builder.buildUnchecked();
         Assertions.assertThat(division).isInstanceOf(Division.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { Division.builder()
+                new Object[] { "parentUnit", Division.builder()
                         .parentUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] {
+                new Object[] { "storeMode",
                         Division.builder()
                                 .storeMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode
                                         .findEnum("Explicit")) },
-                new Object[] { Division.builder()
-                        .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                new Object[] { "associateMode",
+                        Division.builder()
+                                .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                        .findEnum("Explicit")) },
+                new Object[] { "approvalRuleMode", Division.builder()
+                        .approvalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode
                                 .findEnum("Explicit")) } };
     }
 
@@ -59,5 +55,15 @@ public class DivisionTest {
             com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
         Assertions.assertThat(value.getAssociateMode())
                 .isEqualTo(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
+    }
+
+    @Test
+    public void approvalRuleMode() {
+        Division value = Division.of();
+        value.setApprovalRuleMode(
+            com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode.findEnum("Explicit"));
+        Assertions.assertThat(value.getApprovalRuleMode())
+                .isEqualTo(
+                    com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode.findEnum("Explicit"));
     }
 }

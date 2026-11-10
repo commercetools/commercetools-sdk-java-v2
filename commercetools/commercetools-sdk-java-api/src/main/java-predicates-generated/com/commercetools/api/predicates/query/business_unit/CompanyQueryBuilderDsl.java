@@ -78,6 +78,20 @@ public class CompanyQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CompanyQueryBuilderDsl> inheritedStores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("inheritedStores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            CompanyQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CompanyQueryBuilderDsl> inheritedStores() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inheritedStores")),
+            p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CompanyQueryBuilderDsl> storeMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("storeMode")),
@@ -109,6 +123,22 @@ public class CompanyQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
             CompanyQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CompanyQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl.of())),
+            CompanyQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CompanyQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<CompanyQueryBuilderDsl> addresses(
@@ -201,6 +231,12 @@ public class CompanyQueryBuilderDsl {
                 .inner(fn.apply(
                     com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl.of())),
             CompanyQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<CompanyQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
     }
 
 }

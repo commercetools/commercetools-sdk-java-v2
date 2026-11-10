@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a time.</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("time")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
@@ -37,7 +39,7 @@ public interface TimeAttribute extends Attribute {
     String TIME = "time";
 
     /**
-     *
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface TimeAttribute extends Attribute {
     public LocalTime getValue();
 
     /**
-     * set value
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      */
 
@@ -70,6 +72,8 @@ public interface TimeAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of TimeAttribute
@@ -118,8 +122,8 @@ public interface TimeAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TimeAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TimeAttribute>() {
+    public static tools.jackson.core.type.TypeReference<TimeAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TimeAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<TimeAttribute>";

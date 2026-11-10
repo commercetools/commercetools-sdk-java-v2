@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * InvalidTokenError
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("invalid_token")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidTokenErrorImpl.class)
 public interface InvalidTokenError extends ErrorObject {
@@ -52,6 +54,8 @@ public interface InvalidTokenError extends ErrorObject {
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public InvalidTokenError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidTokenError
@@ -99,8 +103,8 @@ public interface InvalidTokenError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InvalidTokenError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InvalidTokenError>() {
+    public static tools.jackson.core.type.TypeReference<InvalidTokenError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InvalidTokenError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidTokenError>";

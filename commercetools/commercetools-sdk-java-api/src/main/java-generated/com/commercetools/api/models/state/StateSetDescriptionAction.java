@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateSetDescriptionAction
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
@@ -38,7 +40,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @return description
      */
     @NotNull
@@ -47,7 +50,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param description value to be set
      */
 
@@ -71,6 +75,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public StateSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetDescriptionAction
@@ -119,8 +125,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateSetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateSetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<StateSetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateSetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateSetDescriptionAction>";

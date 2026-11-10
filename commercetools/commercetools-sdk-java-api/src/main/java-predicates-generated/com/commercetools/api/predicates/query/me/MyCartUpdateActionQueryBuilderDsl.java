@@ -62,6 +62,13 @@ public class MyCartUpdateActionQueryBuilderDsl {
             MyCartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asChangeLineItemsOrder(
+            Function<com.commercetools.api.predicates.query.me.MyCartChangeLineItemsOrderActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartChangeLineItemsOrderActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.me.MyCartChangeLineItemsOrderActionQueryBuilderDsl.of()),
+            MyCartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asChangeTaxMode(
             Function<com.commercetools.api.predicates.query.me.MyCartChangeTaxModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartChangeTaxModeActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -7,21 +7,22 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
- *  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
+ *  <p>ShoppingListLineItems are Line Items that contain references to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+ *  <p>In addition to standard <span>Reference Expansion</span>, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .productId("{productId}")
  *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .published(true)
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -59,8 +61,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public CustomFields getCustom();
 
     /**
-     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     *  <p>If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p>
      * @return deactivatedAt
      */
 
@@ -76,7 +78,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public String getId();
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -85,7 +87,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @return name
      */
     @NotNull
@@ -94,7 +96,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public LocalizedString getName();
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
     @NotNull
@@ -102,13 +104,22 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public String getProductId();
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productType
      */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public ProductTypeReference getProductType();
+
+    /**
+     *  <p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p>
+     * @return published
+     */
+    @NotNull
+    @JsonProperty("published")
+    public Boolean getPublished();
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
@@ -119,7 +130,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public Long getQuantity();
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @return variantId
      */
 
@@ -127,7 +139,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public Long getVariantId();
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @return variant
      */
@@ -136,7 +148,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public ProductVariant getVariant();
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @return productSlug
      */
@@ -159,8 +171,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     *  <p>If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p>
      * @param deactivatedAt value to be set
      */
 
@@ -174,7 +186,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setId(final String id);
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
@@ -182,25 +194,33 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productType value to be set
      */
 
     public void setProductType(final ProductTypeReference productType);
+
+    /**
+     *  <p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p>
+     * @param published value to be set
+     */
+
+    public void setPublished(final Boolean published);
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
@@ -210,14 +230,15 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @param variant value to be set
      */
@@ -225,7 +246,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setVariant(final ProductVariant variant);
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      * @param productSlug value to be set
      */
@@ -255,12 +276,15 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setName(template.getName());
         instance.setProductId(template.getProductId());
         instance.setProductType(template.getProductType());
+        instance.setPublished(template.getPublished());
         instance.setQuantity(template.getQuantity());
         instance.setVariantId(template.getVariantId());
         instance.setVariant(template.getVariant());
         instance.setProductSlug(template.getProductSlug());
         return instance;
     }
+
+    public ShoppingListLineItem copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListLineItem
@@ -282,6 +306,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setProductId(template.getProductId());
         instance.setProductType(
             com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getProductType()));
+        instance.setPublished(template.getPublished());
         instance.setQuantity(template.getQuantity());
         instance.setVariantId(template.getVariantId());
         instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
@@ -321,8 +346,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListLineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListLineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListLineItem>";

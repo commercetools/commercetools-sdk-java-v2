@@ -91,4 +91,14 @@ public class CustomLineItemDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomLineItemDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CustomLineItemDraftQueryBuilderDsl> recurrenceInfo(
+            Function<com.commercetools.api.predicates.query.recurring_order.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrenceInfo"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl
+                            .of())),
+            CustomLineItemDraftQueryBuilderDsl::of);
+    }
+
 }

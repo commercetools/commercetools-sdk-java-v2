@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the resource exceeds the maximum allowed size of 16 MB.</p>
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceSizeLimitExceeded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLResourceSizeLimitExceededErrorImpl.class)
 public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLResourceSizeLimitExceededError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLResourceSizeLimitExceededError
@@ -109,8 +113,8 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResourceSizeLimitExceededError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResourceSizeLimitExceededError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLResourceSizeLimitExceededError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLResourceSizeLimitExceededError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLResourceSizeLimitExceededError>";

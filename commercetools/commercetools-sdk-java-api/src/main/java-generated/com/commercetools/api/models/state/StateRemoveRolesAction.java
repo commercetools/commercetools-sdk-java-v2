@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateRemoveRolesAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateRemoveRolesActionImpl.class)
 public interface StateRemoveRolesAction extends StateUpdateAction {
@@ -37,6 +39,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
 
     /**
      *  <p>Roles to remove from the State.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -45,6 +48,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
 
     /**
      *  <p>Roles to remove from the State.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -53,6 +57,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
 
     /**
      *  <p>Roles to remove from the State.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -76,6 +81,8 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public StateRemoveRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateRemoveRolesAction
@@ -123,8 +130,8 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction>() {
+    public static tools.jackson.core.type.TypeReference<StateRemoveRolesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateRemoveRolesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StateRemoveRolesAction>";

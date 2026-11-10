@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Money
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("centPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money extends TypedMoney {
@@ -55,6 +57,8 @@ public interface Money extends TypedMoney {
         instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
+
+    public Money copyDeep();
 
     /**
      * factory method to create a deep copy of Money
@@ -104,8 +108,8 @@ public interface Money extends TypedMoney {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Money> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Money>() {
+    public static tools.jackson.core.type.TypeReference<Money> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Money>() {
             @Override
             public String toString() {
                 return "TypeReference<Money>";

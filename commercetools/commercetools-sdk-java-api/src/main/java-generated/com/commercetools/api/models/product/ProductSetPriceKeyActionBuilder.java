@@ -32,7 +32,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     private String key;
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -54,7 +54,8 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -65,7 +66,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @return priceId
      */
 
@@ -74,7 +75,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -84,7 +85,8 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @return key
      */
 

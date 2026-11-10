@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Customer ID update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomerSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerSetMessageImpl.class)
 public interface OrderCustomerSetMessage extends OrderMessage {
@@ -44,7 +46,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-     *  <p>Customer on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @return customer
      */
     @Valid
@@ -52,7 +54,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @return customerGroup
      */
     @Valid
@@ -60,7 +62,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Customer on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @return oldCustomer
      */
     @Valid
@@ -68,7 +70,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     public CustomerReference getOldCustomer();
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @return oldCustomerGroup
      */
     @Valid
@@ -76,28 +78,28 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     public CustomerGroupReference getOldCustomerGroup();
 
     /**
-     *  <p>Customer on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>Customer on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @param oldCustomer value to be set
      */
 
     public void setOldCustomer(final CustomerReference oldCustomer);
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      * @param oldCustomerGroup value to be set
      */
 
@@ -134,6 +136,8 @@ public interface OrderCustomerSetMessage extends OrderMessage {
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
         return instance;
     }
+
+    public OrderCustomerSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomerSetMessage
@@ -199,8 +203,8 @@ public interface OrderCustomerSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomerSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomerSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomerSetMessage>";

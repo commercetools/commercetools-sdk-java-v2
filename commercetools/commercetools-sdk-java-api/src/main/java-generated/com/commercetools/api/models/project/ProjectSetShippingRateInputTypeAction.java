@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectSetShippingRateInputTypeAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingRateInputType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
@@ -35,7 +37,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     String SET_SHIPPING_RATE_INPUT_TYPE = "setShippingRateInputType";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return shippingRateInputType
      */
     @Valid
@@ -43,7 +45,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param shippingRateInputType value to be set
      */
 
@@ -67,6 +69,8 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         instance.setShippingRateInputType(template.getShippingRateInputType());
         return instance;
     }
+
+    public ProjectSetShippingRateInputTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectSetShippingRateInputTypeAction
@@ -121,8 +125,8 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectSetShippingRateInputTypeAction>";

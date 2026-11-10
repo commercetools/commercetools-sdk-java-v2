@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartOrigin;
@@ -24,9 +22,12 @@ import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A snapshot of an Order at the time it was imported.</p>
@@ -63,7 +64,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the Order belongs to.</p>
      * @return customerId
      */
 
@@ -71,7 +72,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public String getCustomerId();
 
     /**
-     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> is required.</p>
      * @return customerEmail
      */
 
@@ -87,7 +88,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -95,8 +96,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @return store
      */
     @Valid
@@ -104,7 +105,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @return lineItems
      */
@@ -113,7 +114,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public List<LineItemImportDraft> getLineItems();
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @return customLineItems
      */
@@ -137,6 +138,14 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPriceDraft getTaxedPrice();
+
+    /**
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
 
     /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
@@ -281,14 +290,14 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the Order belongs to.</p>
      * @param customerId value to be set
      */
 
     public void setCustomerId(final String customerId);
 
     /**
-     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> is required.</p>
      * @param customerEmail value to be set
      */
 
@@ -302,22 +311,22 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreResourceIdentifier store);
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems values to be set
      */
@@ -326,7 +335,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setLineItems(final LineItemImportDraft... lineItems);
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems values to be set
      */
@@ -334,7 +343,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setLineItems(final List<LineItemImportDraft> lineItems);
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems values to be set
      */
@@ -343,7 +352,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setCustomLineItems(final CustomLineItemImportDraft... customLineItems);
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems values to be set
      */
@@ -363,6 +372,13 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
      */
 
     public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
+
+    /**
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
 
     /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
@@ -510,6 +526,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
@@ -528,6 +545,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public OrderImportDraft copyDeep();
 
     /**
      * factory method to create a deep copy of OrderImportDraft
@@ -561,6 +580,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
                 .orElse(null));
         instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
@@ -618,8 +638,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<OrderImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderImportDraft>";

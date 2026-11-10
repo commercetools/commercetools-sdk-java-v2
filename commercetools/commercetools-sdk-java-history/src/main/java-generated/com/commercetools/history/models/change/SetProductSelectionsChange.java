@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.ProductSelectionSetting;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Product Selections update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetProductSelectionsAction" rel="nofollow">Set Product Selections</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,10 +28,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetProductSelectionsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetProductSelectionsChangeImpl.class)
 public interface SetProductSelectionsChange extends Change {
@@ -75,6 +79,24 @@ public interface SetProductSelectionsChange extends Change {
     public List<ProductSelectionSetting> getNextValue();
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("addedItems")
+    public List<ProductSelectionSetting> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("removedItems")
+    public List<ProductSelectionSetting> getRemovedItems();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -112,6 +134,36 @@ public interface SetProductSelectionsChange extends Change {
     public void setNextValue(final List<ProductSelectionSetting> nextValue);
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final ProductSelectionSetting... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<ProductSelectionSetting> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final ProductSelectionSetting... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<ProductSelectionSetting> removedItems);
+
+    /**
      * factory method
      * @return instance of SetProductSelectionsChange
      */
@@ -129,8 +181,12 @@ public interface SetProductSelectionsChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
+
+    public SetProductSelectionsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetProductSelectionsChange
@@ -150,6 +206,16 @@ public interface SetProductSelectionsChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.ProductSelectionSetting::deepCopy)
                         .collect(Collectors.toList()))
@@ -188,8 +254,8 @@ public interface SetProductSelectionsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetProductSelectionsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetProductSelectionsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetProductSelectionsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetProductSelectionsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetProductSelectionsChange>";

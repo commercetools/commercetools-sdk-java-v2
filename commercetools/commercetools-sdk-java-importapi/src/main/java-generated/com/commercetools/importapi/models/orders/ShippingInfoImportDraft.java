@@ -7,20 +7,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ShippingMethodKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+ *  <p>Maps to an Order's <code>shippingInfo</code> property. This field is usually populated by the Cart associated with the Order, but when importing Orders you must provide a draft representation as a part of the OrderImport.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<ShippingInfoImportDraft> {
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.shippingMethodName</code>.</p>
      * @return shippingMethodName
      */
     @NotNull
@@ -47,7 +48,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public String getShippingMethodName();
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.price</code>.</p>
      * @return price
      */
     @NotNull
@@ -56,7 +57,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TypedMoney getPrice();
 
     /**
-     *
+     *  <p>Used to determine the price.</p>
      * @return shippingRate
      */
     @NotNull
@@ -65,7 +66,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingRateDraft getShippingRate();
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.taxRate</code>.</p>
      * @return taxRate
      */
     @Valid
@@ -73,7 +74,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxRate getTaxRate();
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -81,7 +82,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *  <p>References a shipping method by key.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      * @return shippingMethod
      */
     @Valid
@@ -89,7 +90,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingMethodKeyReference getShippingMethod();
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     *  <p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
      * @return deliveries
      */
     @Valid
@@ -97,7 +98,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public List<Delivery> getDeliveries();
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.discountedPrice</code>.</p>
      * @return discountedPrice
      */
     @Valid
@@ -105,7 +106,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.shippingMethodState</code>.</p>
      * @return shippingMethodState
      */
 
@@ -113,49 +114,49 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingMethodState getShippingMethodState();
 
     /**
-     * set shippingMethodName
+     *  <p>Maps to <code>shippingInfo.shippingMethodName</code>.</p>
      * @param shippingMethodName value to be set
      */
 
     public void setShippingMethodName(final String shippingMethodName);
 
     /**
-     * set price
+     *  <p>Maps to <code>shippingInfo.price</code>.</p>
      * @param price value to be set
      */
 
     public void setPrice(final TypedMoney price);
 
     /**
-     * set shippingRate
+     *  <p>Used to determine the price.</p>
      * @param shippingRate value to be set
      */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     * set taxRate
+     *  <p>Maps to <code>shippingInfo.taxRate</code>.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     *  <p>References a shipping method by key.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      * @param shippingMethod value to be set
      */
 
     public void setShippingMethod(final ShippingMethodKeyReference shippingMethod);
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     *  <p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
      * @param deliveries values to be set
      */
 
@@ -163,21 +164,21 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setDeliveries(final Delivery... deliveries);
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     *  <p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
      * @param deliveries values to be set
      */
 
     public void setDeliveries(final List<Delivery> deliveries);
 
     /**
-     * set discountedPrice
+     *  <p>Maps to <code>shippingInfo.discountedPrice</code>.</p>
      * @param discountedPrice value to be set
      */
 
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
     /**
-     * set shippingMethodState
+     *  <p>Maps to <code>shippingInfo.shippingMethodState</code>.</p>
      * @param shippingMethodState value to be set
      */
 
@@ -209,6 +210,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }
+
+    public ShippingInfoImportDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingInfoImportDraft
@@ -272,8 +275,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingInfoImportDraft>";

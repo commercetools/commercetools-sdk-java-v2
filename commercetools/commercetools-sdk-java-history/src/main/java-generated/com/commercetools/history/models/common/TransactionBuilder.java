@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Transaction transaction = Transaction.builder()
  *             .id("{id}")
- *             .timestamp("{timestamp}")
  *             .type(TransactionType.AUTHORIZATION)
  *             .amount(amountBuilder -> amountBuilder)
- *             .interactionId("{interactionId}")
  *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
@@ -29,15 +29,20 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     private String id;
 
-    private String timestamp;
+    @Nullable
+    private java.time.ZonedDateTime timestamp;
 
     private com.commercetools.history.models.common.TransactionType type;
 
-    private com.commercetools.history.models.common.Money amount;
+    private com.commercetools.history.models.common.CentPrecisionMoney amount;
 
+    @Nullable
     private String interactionId;
 
     private com.commercetools.history.models.common.TransactionState state;
+
+    @Nullable
+    private com.commercetools.history.models.common.CustomFields custom;
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
@@ -51,18 +56,18 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      * @return Builder
      */
 
-    public TransactionBuilder timestamp(final String timestamp) {
+    public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
 
     /**
-     * set the value to the type
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -73,59 +78,94 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     * set the value to the amount using the builder function
+     *  <p>Money value of the Transaction.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
 
     public TransactionBuilder amount(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.amount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the amount using the builder function
+     *  <p>Money value of the Transaction.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
 
     public TransactionBuilder withAmount(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.amount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.amount = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the amount
+     *  <p>Money value of the Transaction.</p>
      * @param amount value to be set
      * @return Builder
      */
 
-    public TransactionBuilder amount(final com.commercetools.history.models.common.Money amount) {
+    public TransactionBuilder amount(final com.commercetools.history.models.common.CentPrecisionMoney amount) {
         this.amount = amount;
         return this;
     }
 
     /**
-     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @param interactionId value to be set
      * @return Builder
      */
 
-    public TransactionBuilder interactionId(final String interactionId) {
+    public TransactionBuilder interactionId(@Nullable final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
 
     /**
-     * set the value to the state
+     *  <p>State of the Transaction.</p>
      * @param state value to be set
      * @return Builder
      */
 
     public TransactionBuilder state(final com.commercetools.history.models.common.TransactionState state) {
         this.state = state;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public TransactionBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public TransactionBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public TransactionBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -139,16 +179,17 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
 
-    public String getTimestamp() {
+    @Nullable
+    public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
     /**
-     * value of type}
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @return type
      */
 
@@ -157,25 +198,26 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     * value of amount}
+     *  <p>Money value of the Transaction.</p>
      * @return amount
      */
 
-    public com.commercetools.history.models.common.Money getAmount() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 
     /**
-     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @return interactionId
      */
 
+    @Nullable
     public String getInteractionId() {
         return this.interactionId;
     }
 
     /**
-     * value of state}
+     *  <p>State of the Transaction.</p>
      * @return state
      */
 
@@ -184,17 +226,25 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds Transaction with checking for non-null required values
      * @return Transaction
      */
     public Transaction build() {
         Objects.requireNonNull(id, Transaction.class + ": id is missing");
-        Objects.requireNonNull(timestamp, Transaction.class + ": timestamp is missing");
         Objects.requireNonNull(type, Transaction.class + ": type is missing");
         Objects.requireNonNull(amount, Transaction.class + ": amount is missing");
-        Objects.requireNonNull(interactionId, Transaction.class + ": interactionId is missing");
         Objects.requireNonNull(state, Transaction.class + ": state is missing");
-        return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
     }
 
     /**
@@ -202,7 +252,7 @@ public class TransactionBuilder implements Builder<Transaction> {
      * @return Transaction
      */
     public Transaction buildUnchecked() {
-        return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
     }
 
     /**
@@ -226,6 +276,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         builder.amount = template.getAmount();
         builder.interactionId = template.getInteractionId();
         builder.state = template.getState();
+        builder.custom = template.getCustom();
         return builder;
     }
 

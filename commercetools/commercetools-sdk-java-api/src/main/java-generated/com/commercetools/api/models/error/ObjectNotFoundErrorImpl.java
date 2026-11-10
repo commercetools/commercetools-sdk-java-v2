@@ -4,9 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the requested resource was not found.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is <span>inactive</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
@@ -33,7 +35,7 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
      */
     @JsonCreator
     ObjectNotFoundErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = OBJECT_NOT_FOUND;
@@ -55,7 +57,8 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
     }
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      */
 
     public String getMessage() {
@@ -113,4 +116,8 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
                 .build();
     }
 
+    @Override
+    public ObjectNotFoundError copyDeep() {
+        return ObjectNotFoundError.deepCopy(this);
+    }
 }

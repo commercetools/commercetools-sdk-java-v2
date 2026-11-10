@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportRequestBuilder {
 
+    public com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder.of();
+    }
+
     public com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder categoryBuilder() {
         return com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder.of();
     }
@@ -47,6 +51,14 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder.of();
     }
 
+    public com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder productSelectionBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder.of();
+    }
+
+    public com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder productTailoringBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder.of();
+    }
+
     public com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder productTypeBuilder() {
         return com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder.of();
     }
@@ -65,6 +77,10 @@ public class ImportRequestBuilder {
 
     public com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder typeBuilder() {
         return com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder.of();
+    }
+
+    public com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder variantBuilder() {
+        return com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder.of();
     }
 
     /**

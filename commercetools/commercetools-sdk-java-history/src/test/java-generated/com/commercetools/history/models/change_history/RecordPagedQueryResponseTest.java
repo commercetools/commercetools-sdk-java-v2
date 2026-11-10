@@ -3,36 +3,29 @@ package com.commercetools.history.models.change_history;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RecordPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RecordPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RecordPagedQueryResponseBuilder builder) {
         RecordPagedQueryResponse recordPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(recordPagedQueryResponse).isInstanceOf(RecordPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { RecordPagedQueryResponse.builder().limit(7) },
-                new Object[] { RecordPagedQueryResponse.builder().count(2) },
-                new Object[] { RecordPagedQueryResponse.builder().total(1) },
-                new Object[] { RecordPagedQueryResponse.builder().offset(3) },
-                new Object[] { RecordPagedQueryResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.history.models.change_history.RecordImpl())) } };
+        return new Object[][] { new Object[] { "limit", RecordPagedQueryResponse.builder().limit(7) },
+                new Object[] { "count", RecordPagedQueryResponse.builder().count(2) },
+                new Object[] { "total", RecordPagedQueryResponse.builder().total(1) },
+                new Object[] { "offset", RecordPagedQueryResponse.builder().offset(3) },
+                new Object[] { "results",
+                        RecordPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.history.models.change_history.RecordImpl())) } };
     }
 
     @Test

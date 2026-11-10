@@ -24,7 +24,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
     private String name;
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
     }
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @return name
      */
 

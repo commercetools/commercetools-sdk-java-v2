@@ -24,7 +24,7 @@ public class ChannelKeyReferenceBuilder implements Builder<ChannelKeyReference> 
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Channel.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ChannelKeyReferenceBuilder implements Builder<ChannelKeyReference> 
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Channel.</p>
      * @return key
      */
 

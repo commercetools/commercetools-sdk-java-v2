@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated when a Custom Field has been removed from the Order using the Set CustomField action.</p>
+ *  <p>Generated when a Custom Field has been removed from the Order using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomFieldRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomFieldRemovedMessageImpl.class)
 public interface OrderCustomFieldRemovedMessage extends OrderMessage {
@@ -85,6 +87,8 @@ public interface OrderCustomFieldRemovedMessage extends OrderMessage {
         instance.setName(template.getName());
         return instance;
     }
+
+    public OrderCustomFieldRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomFieldRemovedMessage
@@ -144,8 +148,8 @@ public interface OrderCustomFieldRemovedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomFieldRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomFieldRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomFieldRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomFieldRemovedMessage>";

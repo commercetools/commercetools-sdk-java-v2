@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CategorySetKeyAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetKeyActionImpl.class)
 public interface CategorySetKeyAction extends CategoryUpdateAction {
@@ -34,7 +36,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -42,7 +44,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CategorySetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetKeyAction
@@ -117,8 +121,8 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<CategorySetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategorySetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySetKeyAction>";

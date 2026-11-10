@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the Order State Changed Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderStateChangedMessage" rel="nofollow">Order State Changed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeOrderState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeOrderStateActionImpl.class)
 public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateAction {
@@ -70,6 +72,8 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
         instance.setOrderState(template.getOrderState());
         return instance;
     }
+
+    public StagedOrderChangeOrderStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderChangeOrderStateAction
@@ -118,8 +122,8 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderChangeOrderStateAction>";

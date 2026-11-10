@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .taxMode(TaxMode.PLATFORM)
+ *             .priceRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .build()
@@ -85,6 +86,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -106,6 +109,9 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
+
+    @Nullable
+    private Boolean directDiscountsIgnoreCartDiscounts;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
@@ -272,7 +278,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -284,7 +290,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -296,7 +302,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -346,7 +352,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -358,7 +364,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -370,7 +376,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -614,7 +620,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -626,7 +632,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -638,7 +644,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -686,7 +692,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param inventoryMode value to be set
      * @return Builder
      */
@@ -698,13 +704,25 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param taxMode value to be set
      * @return Builder
      */
 
     public QuoteRequestBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder priceRoundingMode(
+            final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
         return this;
     }
 
@@ -743,7 +761,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -755,7 +773,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -767,7 +785,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -814,7 +832,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
@@ -826,7 +844,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
@@ -1016,6 +1034,21 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder directDiscountsIgnoreCartDiscounts(
+            @Nullable final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -1051,7 +1084,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1063,7 +1096,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1075,7 +1108,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -1086,7 +1119,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -1097,7 +1130,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1109,7 +1142,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1121,7 +1154,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -1132,7 +1165,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1146,7 +1179,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1159,7 +1192,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -1256,7 +1289,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @return customer
      */
 
@@ -1275,7 +1308,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @return store
      */
 
@@ -1322,7 +1355,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @return shippingAddress
      */
 
@@ -1342,7 +1375,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return inventoryMode
      */
 
@@ -1352,12 +1385,21 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return taxMode
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
+    }
+
+    /**
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
+     * @return priceRoundingMode
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -1389,7 +1431,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @return shippingInfo
      */
 
@@ -1409,7 +1451,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @return shippingRateInput
      */
 
@@ -1439,6 +1481,19 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @Nullable
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @return custom
      */
@@ -1449,7 +1504,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 
@@ -1459,7 +1514,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -1469,7 +1524,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @return cart
      */
 
@@ -1479,7 +1534,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 
@@ -1503,13 +1558,15 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         Objects.requireNonNull(customLineItems, QuoteRequest.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, QuoteRequest.class + ": totalPrice is missing");
         Objects.requireNonNull(taxMode, QuoteRequest.class + ": taxMode is missing");
+        Objects.requireNonNull(priceRoundingMode, QuoteRequest.class + ": priceRoundingMode is missing");
         Objects.requireNonNull(taxRoundingMode, QuoteRequest.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, QuoteRequest.class + ": taxCalculationMode is missing");
         return new QuoteRequestImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, cart, businessUnit);
+            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
+            taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
+            directDiscounts, directDiscountsIgnoreCartDiscounts, custom, state, purchaseOrderNumber, cart,
+            businessUnit);
     }
 
     /**
@@ -1519,9 +1576,10 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequest buildUnchecked() {
         return new QuoteRequestImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, cart, businessUnit);
+            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
+            taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
+            directDiscounts, directDiscountsIgnoreCartDiscounts, custom, state, purchaseOrderNumber, cart,
+            businessUnit);
     }
 
     /**
@@ -1559,6 +1617,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.billingAddress = template.getBillingAddress();
         builder.inventoryMode = template.getInventoryMode();
         builder.taxMode = template.getTaxMode();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.country = template.getCountry();
@@ -1567,6 +1626,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.directDiscounts = template.getDirectDiscounts();
+        builder.directDiscountsIgnoreCartDiscounts = template.getDirectDiscountsIgnoreCartDiscounts();
         builder.custom = template.getCustom();
         builder.state = template.getState();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();

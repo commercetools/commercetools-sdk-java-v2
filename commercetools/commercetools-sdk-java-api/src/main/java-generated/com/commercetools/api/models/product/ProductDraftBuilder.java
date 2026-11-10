@@ -74,6 +74,9 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @param builder function to build the productType value
@@ -149,7 +152,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -161,7 +164,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -173,7 +176,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -185,7 +188,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -324,7 +327,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -337,7 +340,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -349,7 +352,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param categoryOrderHints value to be set
      * @return Builder
      */
@@ -361,7 +364,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -373,7 +376,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -385,7 +388,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -397,7 +400,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -409,7 +412,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -421,7 +424,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -469,7 +472,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -482,7 +486,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -494,7 +499,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
@@ -507,6 +513,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -519,6 +526,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -531,6 +539,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -546,6 +555,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -561,6 +571,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -574,6 +585,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -585,6 +597,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -634,7 +647,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -646,7 +659,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -658,7 +671,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -705,7 +718,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>Whether the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @param publish value to be set
      * @return Builder
      */
@@ -728,6 +741,95 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder attributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder plusAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @return productType
      */
@@ -746,7 +848,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
 
@@ -756,7 +858,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -786,7 +888,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return categoryOrderHints
      */
 
@@ -796,7 +898,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @return metaTitle
      */
 
@@ -806,7 +908,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @return metaDescription
      */
 
@@ -826,7 +928,8 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @return masterVariant
      */
 
@@ -837,6 +940,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @return variants
      */
 
@@ -856,7 +960,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
 
@@ -876,7 +980,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>Whether the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @return publish
      */
 
@@ -896,6 +1000,16 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductDraft with checking for non-null required values
      * @return ProductDraft
      */
@@ -905,7 +1019,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         Objects.requireNonNull(slug, ProductDraft.class + ": slug is missing");
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish, priceMode);
+            publish, priceMode, attributes);
     }
 
     /**
@@ -915,7 +1029,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraft buildUnchecked() {
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish, priceMode);
+            publish, priceMode, attributes);
     }
 
     /**
@@ -950,6 +1064,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         builder.state = template.getState();
         builder.publish = template.getPublish();
         builder.priceMode = template.getPriceMode();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

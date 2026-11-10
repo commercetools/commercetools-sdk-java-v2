@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ScoreShippingRateInput
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Score")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ScoreShippingRateInputImpl.class)
 public interface ScoreShippingRateInput extends ShippingRateInput {
@@ -68,6 +70,8 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
         instance.setScore(template.getScore());
         return instance;
     }
+
+    public ScoreShippingRateInput copyDeep();
 
     /**
      * factory method to create a deep copy of ScoreShippingRateInput
@@ -115,8 +119,8 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput>() {
+    public static tools.jackson.core.type.TypeReference<ScoreShippingRateInput> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ScoreShippingRateInput>() {
             @Override
             public String toString() {
                 return "TypeReference<ScoreShippingRateInput>";

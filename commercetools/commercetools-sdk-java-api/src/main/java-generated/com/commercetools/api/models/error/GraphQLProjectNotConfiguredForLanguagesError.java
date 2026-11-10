@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when the languages set for a Store are not supported by the Project.</p>
- *  <p>The error is returned as a failed response to the Set Languages update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProjectNotConfiguredForLanguages")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLProjectNotConfiguredForLanguagesErrorImpl.class)
 public interface GraphQLProjectNotConfiguredForLanguagesError extends GraphQLErrorObject {
@@ -87,6 +89,8 @@ public interface GraphQLProjectNotConfiguredForLanguagesError extends GraphQLErr
         return instance;
     }
 
+    public GraphQLProjectNotConfiguredForLanguagesError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLProjectNotConfiguredForLanguagesError
      * @param template instance to be copied
@@ -137,8 +141,8 @@ public interface GraphQLProjectNotConfiguredForLanguagesError extends GraphQLErr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLProjectNotConfiguredForLanguagesError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLProjectNotConfiguredForLanguagesError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLProjectNotConfiguredForLanguagesError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLProjectNotConfiguredForLanguagesError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLProjectNotConfiguredForLanguagesError>";

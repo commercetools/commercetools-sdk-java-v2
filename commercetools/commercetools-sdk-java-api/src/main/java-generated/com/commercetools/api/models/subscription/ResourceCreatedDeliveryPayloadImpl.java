@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,15 +15,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This payload is sent for a ChangeSubscription when a resource is created.</p>
+ *  <p>This payload is sent for a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> when a resource is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDeliveryPayload, ModelBase {
 
-    private String projectKey;
-
     private String notificationType;
+
+    private String projectKey;
 
     private com.commercetools.api.models.common.Reference resource;
 
@@ -59,14 +60,6 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
-     */
-
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    /**
      *  <p>Identifies the payload.</p>
      */
 
@@ -75,7 +68,15 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     */
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    /**
+     *  <p>Reference to the resource that triggered the notification.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -137,14 +138,14 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
         ResourceCreatedDeliveryPayloadImpl that = (ResourceCreatedDeliveryPayloadImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey)
-                .append(notificationType, that.notificationType)
+        return new EqualsBuilder().append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
-                .append(projectKey, that.projectKey)
                 .append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
@@ -154,8 +155,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey)
-                .append(notificationType)
+        return new HashCodeBuilder(17, 37).append(notificationType)
+                .append(projectKey)
                 .append(resource)
                 .append(resourceUserProvidedIdentifiers)
                 .append(version)
@@ -165,8 +166,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
-                .append("notificationType", notificationType)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("notificationType", notificationType)
+                .append("projectKey", projectKey)
                 .append("resource", resource)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("version", version)
@@ -174,4 +175,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
                 .build();
     }
 
+    @Override
+    public ResourceCreatedDeliveryPayload copyDeep() {
+        return ResourceCreatedDeliveryPayload.deepCopy(this);
+    }
 }

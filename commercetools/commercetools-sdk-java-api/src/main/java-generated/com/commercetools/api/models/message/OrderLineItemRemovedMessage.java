@@ -7,8 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ItemShippingDetails;
 import com.commercetools.api.models.cart.TaxedItemPrice;
@@ -16,12 +14,15 @@ import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.order.ItemState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove LineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,6 +45,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLineItemRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemRemovedMessageImpl.class)
 public interface OrderLineItemRemovedMessage extends OrderMessage {
@@ -54,7 +56,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     String ORDER_LINE_ITEM_REMOVED = "OrderLineItemRemoved";
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -62,7 +64,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public String getLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @return lineItemKey
      */
 
@@ -70,7 +72,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public String getLineItemKey();
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return removedQuantity
      */
     @NotNull
@@ -78,7 +80,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Long getRemovedQuantity();
 
     /**
-     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newQuantity
      */
     @NotNull
@@ -86,7 +88,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Long getNewQuantity();
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemState" rel="nofollow">ItemStates</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newState
      */
     @NotNull
@@ -95,7 +97,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public List<ItemState> getNewState();
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     *  <p><code>totalPrice</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newTotalPrice
      */
     @NotNull
@@ -104,7 +106,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public CentPrecisionMoney getNewTotalPrice();
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newTaxedPrice
      */
     @Valid
@@ -112,7 +114,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public TaxedItemPrice getNewTaxedPrice();
 
     /**
-     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newPrice
      */
     @Valid
@@ -120,7 +122,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Price getNewPrice();
 
     /**
-     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">Shipping Details</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @return newShippingDetail
      */
     @Valid
@@ -128,35 +130,35 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public ItemShippingDetails getNewShippingDetail();
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @param lineItemKey value to be set
      */
 
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param removedQuantity value to be set
      */
 
     public void setRemovedQuantity(final Long removedQuantity);
 
     /**
-     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newQuantity value to be set
      */
 
     public void setNewQuantity(final Long newQuantity);
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemState" rel="nofollow">ItemStates</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newState values to be set
      */
 
@@ -164,35 +166,35 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public void setNewState(final ItemState... newState);
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemState" rel="nofollow">ItemStates</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newState values to be set
      */
 
     public void setNewState(final List<ItemState> newState);
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     *  <p><code>totalPrice</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newTotalPrice value to be set
      */
 
     public void setNewTotalPrice(final CentPrecisionMoney newTotalPrice);
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newTaxedPrice value to be set
      */
 
     public void setNewTaxedPrice(final TaxedItemPrice newTaxedPrice);
 
     /**
-     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newPrice value to be set
      */
 
     public void setNewPrice(final Price newPrice);
 
     /**
-     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">Shipping Details</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      * @param newShippingDetail value to be set
      */
 
@@ -234,6 +236,8 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
         instance.setNewShippingDetail(template.getNewShippingDetail());
         return instance;
     }
+
+    public OrderLineItemRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderLineItemRemovedMessage
@@ -308,8 +312,8 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderLineItemRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderLineItemRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderLineItemRemovedMessage>";

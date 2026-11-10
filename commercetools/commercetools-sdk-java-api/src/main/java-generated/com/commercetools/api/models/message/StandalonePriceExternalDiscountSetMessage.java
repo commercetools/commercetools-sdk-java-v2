@@ -6,16 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Discounted Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceExternalDiscountSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceExternalDiscountSetMessageImpl.class)
 public interface StandalonePriceExternalDiscountSetMessage extends Message {
@@ -43,7 +45,7 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
     String STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET = "StandalonePriceExternalDiscountSet";
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @return discounted
      */
     @Valid
@@ -51,7 +53,7 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param discounted value to be set
      */
 
@@ -86,6 +88,8 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public StandalonePriceExternalDiscountSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceExternalDiscountSetMessage
@@ -148,8 +152,8 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceExternalDiscountSetMessage>";

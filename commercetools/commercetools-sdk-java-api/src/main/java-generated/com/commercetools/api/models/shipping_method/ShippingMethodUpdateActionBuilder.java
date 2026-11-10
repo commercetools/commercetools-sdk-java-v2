@@ -15,8 +15,16 @@ public class ShippingMethodUpdateActionBuilder {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder.of();
+    }
+
     public com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder addZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder.of();
     }
 
     public com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder changeIsDefaultBuilder() {
@@ -35,8 +43,16 @@ public class ShippingMethodUpdateActionBuilder {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder.of();
+    }
+
     public com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder removeZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder setCarrierBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder.of();
     }
 
     public com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder setCustomFieldBuilder() {
@@ -65,6 +81,10 @@ public class ShippingMethodUpdateActionBuilder {
 
     public com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder setPredicateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder.of();
     }
 
     /**

@@ -37,7 +37,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     private Long resourceIndex;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * set the value to the resourceIndex
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @param resourceIndex value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 
@@ -154,7 +154,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * value of resourceIndex}
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @return resourceIndex
      */
 

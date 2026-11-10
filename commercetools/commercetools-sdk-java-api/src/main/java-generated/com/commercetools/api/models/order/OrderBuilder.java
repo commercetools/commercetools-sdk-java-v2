@@ -72,7 +72,7 @@ public class OrderBuilder implements Builder<Order> {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
 
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
@@ -82,6 +82,9 @@ public class OrderBuilder implements Builder<Order> {
 
     @Nullable
     private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
+
+    @Nullable
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxMode taxMode;
@@ -126,6 +129,9 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
+    @Nullable
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     @Nullable
@@ -145,6 +151,9 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     private com.commercetools.api.models.quote.QuoteReference quote;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder;
+
     private com.commercetools.api.models.order.OrderState orderState;
 
     @Nullable
@@ -160,6 +169,9 @@ public class OrderBuilder implements Builder<Order> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
+
+    @Nullable
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
     @Deprecated
     @Nullable
@@ -234,7 +246,7 @@ public class OrderBuilder implements Builder<Order> {
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -245,7 +257,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -267,7 +279,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -281,7 +293,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -294,7 +306,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -306,7 +318,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -317,7 +329,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -331,7 +343,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -344,7 +356,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -356,7 +368,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -368,7 +380,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -380,7 +392,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -391,7 +403,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -402,7 +414,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -413,7 +425,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -427,7 +439,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -442,7 +454,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -455,7 +467,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -466,7 +478,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -477,7 +489,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -488,7 +500,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -500,7 +512,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -514,7 +526,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -529,7 +541,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -542,7 +554,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -553,7 +565,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -564,36 +576,49 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
-     * @param totalPrice value to be set
-     * @return Builder
-     */
-
-    public OrderBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
-        this.totalPrice = totalPrice;
-        return this;
-    }
-
-    /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
 
     public OrderBuilder totalPrice(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public OrderBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param totalPrice value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder totalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
+        this.totalPrice = totalPrice;
         return this;
     }
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -606,10 +631,10 @@ public class OrderBuilder implements Builder<Order> {
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -622,10 +647,10 @@ public class OrderBuilder implements Builder<Order> {
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -636,7 +661,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedShippingPrice value
      * @return Builder
      */
@@ -648,7 +674,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedShippingPrice value
      * @return Builder
      */
@@ -660,7 +687,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedShippingPrice value to be set
      * @return Builder
      */
@@ -705,6 +733,18 @@ public class OrderBuilder implements Builder<Order> {
     public OrderBuilder discountOnTotalPrice(
             @Nullable final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
         this.discountOnTotalPrice = discountOnTotalPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder priceRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
         return this;
     }
 
@@ -790,7 +830,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -802,7 +842,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -814,7 +854,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -836,7 +876,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -847,7 +887,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -859,7 +899,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -871,7 +911,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -882,10 +922,10 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -899,10 +939,10 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param builder function to build the shippingRateInput value
@@ -916,7 +956,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
@@ -928,7 +968,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
@@ -940,7 +980,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingCustomFields value to be set
      * @return Builder
      */
@@ -952,7 +992,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -963,7 +1003,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -974,7 +1014,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -988,7 +1028,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1003,7 +1043,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1016,7 +1056,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1027,7 +1067,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1038,7 +1078,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1050,7 +1090,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1062,7 +1102,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1077,7 +1117,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1092,7 +1132,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1105,7 +1145,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1116,7 +1156,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1127,7 +1167,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1139,7 +1180,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1151,7 +1193,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1166,7 +1209,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1181,7 +1225,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1194,7 +1239,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1205,7 +1251,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1216,7 +1263,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1228,7 +1276,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1240,7 +1289,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1255,7 +1305,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1270,7 +1321,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1283,7 +1335,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1294,7 +1347,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1305,7 +1359,21 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder directDiscountsIgnoreCartDiscounts(@Nullable final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+        return this;
+    }
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1317,7 +1385,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1329,7 +1397,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1344,7 +1412,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1360,7 +1428,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1374,7 +1442,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1386,7 +1454,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1433,7 +1501,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -1444,7 +1512,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -1466,7 +1534,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1478,7 +1546,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1490,7 +1558,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -1501,7 +1569,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @param builder function to build the quote value
      * @return Builder
      */
@@ -1513,7 +1581,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @param builder function to build the quote value
      * @return Builder
      */
@@ -1525,13 +1593,52 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @param quote value to be set
      * @return Builder
      */
 
     public OrderBuilder quote(@Nullable final com.commercetools.api.models.quote.QuoteReference quote) {
         this.quote = quote;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @param builder function to build the recurringOrder value
+     * @return Builder
+     */
+
+    public OrderBuilder recurringOrder(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder, com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder> builder) {
+        this.recurringOrder = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @param builder function to build the recurringOrder value
+     * @return Builder
+     */
+
+    public OrderBuilder withRecurringOrder(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder, com.commercetools.api.models.recurring_order.RecurringOrderReference> builder) {
+        this.recurringOrder = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @param recurringOrder value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder recurringOrder(
+            @Nullable final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder) {
+        this.recurringOrder = recurringOrder;
         return this;
     }
 
@@ -1569,7 +1676,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1581,7 +1688,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1593,7 +1700,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -1604,7 +1711,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -1615,7 +1722,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -1626,7 +1733,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -1640,7 +1747,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -1655,7 +1762,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -1668,7 +1775,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -1679,7 +1786,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -1777,6 +1884,32 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param discountTypeCombination value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder discountTypeCombination(
+            @Nullable final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param builder function to build the discountTypeCombination value
+     * @return Builder
+     */
+
+    public OrderBuilder discountTypeCombination(
+            Function<com.commercetools.api.models.cart.DiscountTypeCombinationBuilder, Builder<? extends com.commercetools.api.models.cart.DiscountTypeCombination>> builder) {
+        this.discountTypeCombination = builder
+                .apply(com.commercetools.api.models.cart.DiscountTypeCombinationBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
      *  <p>Internal-only field.</p>
      * @param lastMessageSequenceNumber value to be set
      * @return Builder
@@ -1823,7 +1956,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      * @param completedAt value to be set
      * @return Builder
      */
@@ -1952,7 +2085,7 @@ public class OrderBuilder implements Builder<Order> {
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -1962,7 +2095,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      * @return customerId
      */
 
@@ -1982,7 +2115,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      * @return customerGroup
      */
 
@@ -1992,7 +2125,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      * @return anonymousId
      */
 
@@ -2002,7 +2135,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 
@@ -2012,7 +2145,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      * @return store
      */
 
@@ -2022,7 +2155,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      * @return lineItems
      */
 
@@ -2031,7 +2164,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      * @return customLineItems
      */
 
@@ -2040,21 +2173,21 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
 
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedPrice
      */
 
@@ -2064,7 +2197,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedShippingPrice
      */
 
@@ -2081,6 +2215,16 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
         return this.discountOnTotalPrice;
+    }
+
+    /**
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -2134,7 +2278,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
 
@@ -2153,7 +2297,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -2163,7 +2307,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @return shippingInfo
      */
 
@@ -2173,10 +2317,10 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @return shippingRateInput
@@ -2188,7 +2332,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingCustomFields
      */
 
@@ -2198,7 +2342,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @return shipping
      */
 
@@ -2207,7 +2351,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
 
@@ -2217,7 +2361,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @return discountCodes
      */
 
@@ -2227,7 +2372,8 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @return directDiscounts
      */
 
@@ -2237,7 +2383,20 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @Nullable
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      * @return refusedGifts
      */
 
@@ -2256,7 +2415,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return country
      */
 
@@ -2266,7 +2425,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -2285,7 +2444,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      * @return cart
      */
 
@@ -2295,13 +2454,23 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      * @return quote
      */
 
     @Nullable
     public com.commercetools.api.models.quote.QuoteReference getQuote() {
         return this.quote;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
+     * @return recurringOrder
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.RecurringOrderReference getRecurringOrder() {
+        return this.recurringOrder;
     }
 
     /**
@@ -2334,7 +2503,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 
@@ -2344,7 +2513,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      * @return syncInfo
      */
 
@@ -2360,6 +2529,16 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
+    }
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @return discountTypeCombination
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
     }
 
     /**
@@ -2383,7 +2562,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      * @return completedAt
      */
 
@@ -2432,11 +2611,12 @@ public class OrderBuilder implements Builder<Order> {
         Objects.requireNonNull(syncInfo, Order.class + ": syncInfo is missing");
         return new OrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
+            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            directDiscountsIgnoreCartDiscounts, refusedGifts, paymentInfo, country, locale, origin, cart, quote,
+            recurringOrder, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
+            discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2446,11 +2626,12 @@ public class OrderBuilder implements Builder<Order> {
     public Order buildUnchecked() {
         return new OrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
+            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            directDiscountsIgnoreCartDiscounts, refusedGifts, paymentInfo, country, locale, origin, cart, quote,
+            recurringOrder, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
+            discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2486,6 +2667,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.taxedPrice = template.getTaxedPrice();
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
         builder.discountOnTotalPrice = template.getDiscountOnTotalPrice();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
@@ -2501,6 +2683,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();
         builder.directDiscounts = template.getDirectDiscounts();
+        builder.directDiscountsIgnoreCartDiscounts = template.getDirectDiscountsIgnoreCartDiscounts();
         builder.refusedGifts = template.getRefusedGifts();
         builder.paymentInfo = template.getPaymentInfo();
         builder.country = template.getCountry();
@@ -2508,12 +2691,14 @@ public class OrderBuilder implements Builder<Order> {
         builder.origin = template.getOrigin();
         builder.cart = template.getCart();
         builder.quote = template.getQuote();
+        builder.recurringOrder = template.getRecurringOrder();
         builder.orderState = template.getOrderState();
         builder.shipmentState = template.getShipmentState();
         builder.paymentState = template.getPaymentState();
         builder.state = template.getState();
         builder.syncInfo = template.getSyncInfo();
         builder.returnInfo = template.getReturnInfo();
+        builder.discountTypeCombination = template.getDiscountTypeCombination();
         builder.lastMessageSequenceNumber = template.getLastMessageSequenceNumber();
         builder.custom = template.getCustom();
         builder.completedAt = template.getCompletedAt();

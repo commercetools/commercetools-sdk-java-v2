@@ -4,43 +4,50 @@ package com.commercetools.api.models.extension;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionBuilder builder) {
         Extension extension = builder.buildUnchecked();
         Assertions.assertThat(extension).isInstanceOf(Extension.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Extension.builder().id("id") },
-                new Object[] { Extension.builder().version(2L) },
-                new Object[] { Extension.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Extension.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Extension.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Extension.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Extension.builder().key("key") },
-                new Object[] { Extension.builder()
-                        .destination(new com.commercetools.api.models.extension.ExtensionDestinationImpl()) },
-                new Object[] { Extension.builder()
-                        .triggers(Collections
-                                .singletonList(new com.commercetools.api.models.extension.ExtensionTriggerImpl())) },
-                new Object[] { Extension.builder().timeoutInMs(6) } };
+        return new Object[][] { new Object[] { "id", Extension.builder().id("id") },
+                new Object[] { "version", Extension.builder().version(2L) },
+                new Object[] { "createdAt", Extension.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Extension.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Extension.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Extension.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Extension.builder().key("key") },
+                new Object[] { "destination",
+                        Extension.builder()
+                                .destination(new com.commercetools.api.models.extension.ExtensionDestinationImpl()) },
+                new Object[] { "triggers",
+                        Extension.builder()
+                                .triggers(Collections.singletonList(
+                                    new com.commercetools.api.models.extension.ExtensionTriggerImpl())) },
+                new Object[] { "timeoutInMs", Extension.builder().timeoutInMs(6) },
+                new Object[] { "dependencies",
+                        Extension.builder()
+                                .dependencies(Collections.singletonList(
+                                    new com.commercetools.api.models.extension.ExtensionReferenceImpl())) },
+                new Object[] { "expansionPaths",
+                        Extension.builder().expansionPaths(Collections.singletonList("expansionPaths")) },
+                new Object[] { "additionalContext",
+                        Extension.builder()
+                                .additionalContext(
+                                    new com.commercetools.api.models.extension.ExtensionAdditionalContextImpl()) } };
     }
 
     @Test
@@ -115,5 +122,30 @@ public class ExtensionTest {
         Extension value = Extension.of();
         value.setTimeoutInMs(6);
         Assertions.assertThat(value.getTimeoutInMs()).isEqualTo(6);
+    }
+
+    @Test
+    public void dependencies() {
+        Extension value = Extension.of();
+        value.setDependencies(
+            Collections.singletonList(new com.commercetools.api.models.extension.ExtensionReferenceImpl()));
+        Assertions.assertThat(value.getDependencies())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.extension.ExtensionReferenceImpl()));
+    }
+
+    @Test
+    public void expansionPaths() {
+        Extension value = Extension.of();
+        value.setExpansionPaths(Collections.singletonList("expansionPaths"));
+        Assertions.assertThat(value.getExpansionPaths()).isEqualTo(Collections.singletonList("expansionPaths"));
+    }
+
+    @Test
+    public void additionalContext() {
+        Extension value = Extension.of();
+        value.setAdditionalContext(new com.commercetools.api.models.extension.ExtensionAdditionalContextImpl());
+        Assertions.assertThat(value.getAdditionalContext())
+                .isEqualTo(new com.commercetools.api.models.extension.ExtensionAdditionalContextImpl());
     }
 }

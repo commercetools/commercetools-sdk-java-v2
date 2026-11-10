@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.category.CategoryResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ProductAddedToCategory Message.</p>
+ *  <p>Produces the <span>ProductAddedToCategory</span> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addToCategory")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddToCategoryActionImpl.class)
 public interface ProductAddToCategoryAction extends ProductUpdateAction {
@@ -47,7 +49,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     public CategoryResourceIdentifier getCategory();
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @return orderHint
      */
 
@@ -55,7 +57,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     public String getOrderHint();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 
@@ -70,14 +72,14 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     public void setCategory(final CategoryResourceIdentifier category);
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @param orderHint value to be set
      */
 
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      */
 
@@ -103,6 +105,8 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductAddToCategoryAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAddToCategoryAction
@@ -153,8 +157,8 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductAddToCategoryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductAddToCategoryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductAddToCategoryAction>";

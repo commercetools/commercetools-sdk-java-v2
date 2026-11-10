@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetInterfaceIdChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetInterfaceIdChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetInterfaceIdChangeBuilder builder) {
         SetInterfaceIdChange setInterfaceIdChange = builder.buildUnchecked();
         Assertions.assertThat(setInterfaceIdChange).isInstanceOf(SetInterfaceIdChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetInterfaceIdChange.builder().change("change") },
-                new Object[] { SetInterfaceIdChange.builder().previousValue("previousValue") },
-                new Object[] { SetInterfaceIdChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetInterfaceIdChange.builder().change("change") },
+                new Object[] { "previousValue", SetInterfaceIdChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetInterfaceIdChange.builder().nextValue("nextValue") } };
     }
 
     @Test

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
@@ -70,6 +72,8 @@ public interface CustomFieldSetType extends FieldType {
         instance.setElementType(template.getElementType());
         return instance;
     }
+
+    public CustomFieldSetType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldSetType
@@ -117,8 +121,8 @@ public interface CustomFieldSetType extends FieldType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType>() {
+    public static tools.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomFieldSetType>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFieldSetType>";

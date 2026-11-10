@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
+ *  <p>Returned when an <span>external OAuth Introspection endpoint</span> does not return a response within the <span>time limit</span>, or the response isn't compliant with <span>RFC 7662</span> (for example, an HTTP status code like <code>500</code>).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExternalOAuthFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLExternalOAuthFailedErrorImpl.class)
 public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
@@ -60,6 +62,8 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLExternalOAuthFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLExternalOAuthFailedError
@@ -107,8 +111,8 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLExternalOAuthFailedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLExternalOAuthFailedError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLExternalOAuthFailedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLExternalOAuthFailedError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLExternalOAuthFailedError>";

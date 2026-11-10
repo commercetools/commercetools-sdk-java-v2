@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * ItemShippingDetailsDraft
+ *  <p>The sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, ModelBase {
@@ -40,7 +41,7 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets() {
@@ -78,4 +79,8 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("targets", targets).build();
     }
 
+    @Override
+    public ItemShippingDetailsDraft copyDeep() {
+        return ItemShippingDetailsDraft.deepCopy(this);
+    }
 }

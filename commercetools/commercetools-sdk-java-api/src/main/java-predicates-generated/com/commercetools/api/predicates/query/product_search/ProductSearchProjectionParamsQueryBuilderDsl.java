@@ -3,6 +3,7 @@ package com.commercetools.api.predicates.query.product_search;
 
 import com.commercetools.api.predicates.query.*;
 
+@Deprecated
 public class ProductSearchProjectionParamsQueryBuilderDsl {
     public ProductSearchProjectionParamsQueryBuilderDsl() {
     }
@@ -38,6 +39,12 @@ public class ProductSearchProjectionParamsQueryBuilderDsl {
     public StringComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> priceCustomerGroup() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceCustomerGroup")),
+            p -> new CombinationQueryPredicate<>(p, ProductSearchProjectionParamsQueryBuilderDsl::of));
+    }
+
+    public StringCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> priceCustomerGroupAssignments() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceCustomerGroupAssignments")),
             p -> new CombinationQueryPredicate<>(p, ProductSearchProjectionParamsQueryBuilderDsl::of));
     }
 

@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a Custom Field to a Business Unit generates the BusinessUnitCustomFieldAdded Message, removing one generates the BusinessUnitCustomFieldRemoved Message, and updating an existing one generates the BusinessUnitCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldAddedMessage" rel="nofollow">BusinessUnitCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldRemovedMessage" rel="nofollow">BusinessUnitCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldChangedMessage" rel="nofollow">BusinessUnitCustomFieldChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitSetCustomFieldActionImpl.class)
 public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateAction {
@@ -36,7 +38,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-     *  <p>Name of the Custom Field to add, update, or remove.</p>
+     *  <p>Name of the <span>Custom Field</span> to add, update, or remove.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -52,14 +54,14 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field to add, update, or remove.</p>
+     *  <p>Name of the <span>Custom Field</span> to add, update, or remove.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -84,6 +86,8 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public BusinessUnitSetCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitSetCustomFieldAction
@@ -136,8 +140,8 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetCustomFieldAction>";

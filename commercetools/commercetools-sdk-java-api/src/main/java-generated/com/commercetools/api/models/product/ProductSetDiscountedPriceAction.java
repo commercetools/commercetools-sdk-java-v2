@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.DiscountedPriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceExternalDiscountSetMessage" rel="nofollow">ProductPriceExternalDiscountSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDiscountedPrice")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetDiscountedPriceActionImpl.class)
 public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
@@ -38,7 +40,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @return priceId
      */
     @NotNull
@@ -46,7 +48,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -54,7 +56,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @return discounted
      */
     @Valid
@@ -62,21 +64,21 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      */
 
@@ -102,6 +104,8 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public ProductSetDiscountedPriceAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetDiscountedPriceAction
@@ -152,8 +156,8 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetDiscountedPriceAction>";

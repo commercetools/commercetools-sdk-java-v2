@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCustomerSigninTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCustomerSigninBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCustomerSigninBuilder builder) {
         MyCustomerSignin myCustomerSignin = builder.buildUnchecked();
         Assertions.assertThat(myCustomerSignin).isInstanceOf(MyCustomerSignin.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCustomerSignin.builder().email("email") },
-                new Object[] { MyCustomerSignin.builder().password("password") },
-                new Object[] { MyCustomerSignin.builder()
-                        .activeCartSignInMode(com.commercetools.api.models.customer.AnonymousCartSignInMode
-                                .findEnum("MergeWithExistingCustomerCart")) },
-                new Object[] { MyCustomerSignin.builder().updateProductData(true) } };
+        return new Object[][] { new Object[] { "email", MyCustomerSignin.builder().email("email") },
+                new Object[] { "password", MyCustomerSignin.builder().password("password") },
+                new Object[] { "activeCartSignInMode",
+                        MyCustomerSignin.builder()
+                                .activeCartSignInMode(com.commercetools.api.models.customer.AnonymousCartSignInMode
+                                        .findEnum("MergeWithExistingCustomerCart")) },
+                new Object[] { "updateProductData", MyCustomerSignin.builder().updateProductData(true) } };
     }
 
     @Test

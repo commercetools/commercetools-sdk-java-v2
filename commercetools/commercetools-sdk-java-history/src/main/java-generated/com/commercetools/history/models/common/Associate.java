@@ -7,13 +7,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Associate
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Associate {
 
     /**
-     *
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -43,16 +44,24 @@ public interface Associate {
     public List<AssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @return roles
+     */
+
+    @JsonProperty("roles")
+    public List<AssociateRoleDeprecated> getRoles();
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
     @Valid
     @JsonProperty("customer")
-    public Reference getCustomer();
+    public CustomerReference getCustomer();
 
     /**
-     * set associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -60,18 +69,33 @@ public interface Associate {
     public void setAssociateRoleAssignments(final AssociateRoleAssignment... associateRoleAssignments);
 
     /**
-     * set associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     * set customer
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles values to be set
+     */
+
+    @JsonIgnore
+    public void setRoles(final AssociateRoleDeprecated... roles);
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles values to be set
+     */
+
+    public void setRoles(final List<AssociateRoleDeprecated> roles);
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
-    public void setCustomer(final Reference customer);
+    public void setCustomer(final CustomerReference customer);
 
     /**
      * factory method
@@ -89,9 +113,12 @@ public interface Associate {
     public static Associate of(final Associate template) {
         AssociateImpl instance = new AssociateImpl();
         instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
+        instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public Associate copyDeep();
 
     /**
      * factory method to create a deep copy of Associate
@@ -109,7 +136,9 @@ public interface Associate {
                         .map(com.commercetools.history.models.common.AssociateRoleAssignment::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setCustomer(
+            com.commercetools.history.models.common.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
 
@@ -144,8 +173,8 @@ public interface Associate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Associate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Associate>() {
+    public static tools.jackson.core.type.TypeReference<Associate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Associate>() {
             @Override
             public String toString() {
                 return "TypeReference<Associate>";

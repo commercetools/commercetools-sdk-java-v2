@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchExactExpression
@@ -38,14 +39,14 @@ public interface SearchExactExpression extends SearchQueryExpression {
     @NotNull
     @Valid
     @JsonProperty("exact")
-    public SearchAnyValue getExact();
+    public SearchExactValue getExact();
 
     /**
      * set exact
      * @param exact value to be set
      */
 
-    public void setExact(final SearchAnyValue exact);
+    public void setExact(final SearchExactValue exact);
 
     /**
      * factory method
@@ -66,6 +67,8 @@ public interface SearchExactExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchExactExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchExactExpression
      * @param template instance to be copied
@@ -77,7 +80,7 @@ public interface SearchExactExpression extends SearchQueryExpression {
             return null;
         }
         SearchExactExpressionImpl instance = new SearchExactExpressionImpl();
-        instance.setExact(com.commercetools.api.models.search.SearchAnyValue.deepCopy(template.getExact()));
+        instance.setExact(com.commercetools.api.models.search.SearchExactValue.deepCopy(template.getExact()));
         return instance;
     }
 
@@ -112,8 +115,8 @@ public interface SearchExactExpression extends SearchQueryExpression {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchExactExpression> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchExactExpression>() {
+    public static tools.jackson.core.type.TypeReference<SearchExactExpression> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchExactExpression>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchExactExpression>";

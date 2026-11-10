@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteUpdateAction
@@ -26,13 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeCustomerActionImpl.class, name = QuoteChangeCustomerAction.CHANGE_CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeQuoteStateActionImpl.class, name = QuoteChangeQuoteStateAction.CHANGE_QUOTE_STATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionImpl.class, name = QuoteRequestQuoteRenegotiationAction.REQUEST_QUOTE_RENEGOTIATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomFieldActionImpl.class, name = QuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl.class, name = QuoteSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteTransitionStateActionImpl.class, name = QuoteTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = QuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = QuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -46,6 +40,8 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public QuoteUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteUpdateAction
      * @param template instance to be copied
@@ -56,29 +52,9 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.quote.QuoteChangeCustomerAction) {
-            return com.commercetools.api.models.quote.QuoteChangeCustomerAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteChangeCustomerAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) {
-            return com.commercetools.api.models.quote.QuoteChangeQuoteStateAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction) {
-            return com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteSetCustomFieldAction) {
-            return com.commercetools.api.models.quote.QuoteSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteSetCustomTypeAction) {
-            return com.commercetools.api.models.quote.QuoteSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteTransitionStateAction) {
-            return com.commercetools.api.models.quote.QuoteTransitionStateAction
-                    .deepCopy((com.commercetools.api.models.quote.QuoteTransitionStateAction) template);
+
+        if (!(template instanceof QuoteUpdateActionImpl)) {
+            return template.copyDeep();
         }
         QuoteUpdateActionImpl instance = new QuoteUpdateActionImpl();
         return instance;
@@ -146,8 +122,8 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<QuoteUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteUpdateAction>";

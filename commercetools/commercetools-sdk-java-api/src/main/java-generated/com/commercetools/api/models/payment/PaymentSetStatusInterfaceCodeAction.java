@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the PaymentStatusInterfaceCodeSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentStatusInterfaceCodeSetMessage" rel="nofollow">PaymentStatusInterfaceCodeSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStatusInterfaceCode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetStatusInterfaceCodeActionImpl.class)
 public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction {
@@ -34,7 +36,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_CODE = "setStatusInterfaceCode";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return interfaceCode
      */
 
@@ -42,7 +44,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     public String getInterfaceCode();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param interfaceCode value to be set
      */
 
@@ -66,6 +68,8 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }
+
+    public PaymentSetStatusInterfaceCodeAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetStatusInterfaceCodeAction
@@ -115,8 +119,8 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceCodeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceCodeAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetStatusInterfaceCodeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetStatusInterfaceCodeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetStatusInterfaceCodeAction>";

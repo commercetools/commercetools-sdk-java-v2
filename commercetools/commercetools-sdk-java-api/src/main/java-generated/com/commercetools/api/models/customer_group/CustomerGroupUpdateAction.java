@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerGroupUpdateAction
@@ -26,11 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionImpl.class, name = CustomerGroupChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionImpl.class, name = CustomerGroupSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionImpl.class, name = CustomerGroupSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionImpl.class, name = CustomerGroupSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CustomerGroupUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = CustomerGroupUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,6 +41,8 @@ public interface CustomerGroupUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public CustomerGroupUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupUpdateAction
      * @param template instance to be copied
@@ -55,21 +53,9 @@ public interface CustomerGroupUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupChangeNameAction) {
-            return com.commercetools.api.models.customer_group.CustomerGroupChangeNameAction
-                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction) {
-            return com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeAction) {
-            return com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction) {
-            return com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction
-                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction) template);
+
+        if (!(template instanceof CustomerGroupUpdateActionImpl)) {
+            return template.copyDeep();
         }
         CustomerGroupUpdateActionImpl instance = new CustomerGroupUpdateActionImpl();
         return instance;
@@ -121,8 +107,8 @@ public interface CustomerGroupUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupUpdateAction>";

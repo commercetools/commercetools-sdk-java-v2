@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updates the Product Variant Selection of an existing Product Selection Assignment. A ProductVariantSelection can only be set if the Product has already been included in the Product Selection with <code>Individual</code> ProductSelectionMode.</p>
- *  <p>If the specified Product is not assigned to the Product Selection, a ProductAssignmentMissing error is returned.</p>
+ *  <p>Updates the Product Variant Selection of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">Product Selection Assignment</a>. A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a> can only be set if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> has already been included in the Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
+ *  <p>If the specified Product is not assigned to the Product Selection, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAssignmentMissingError" rel="nofollow">ProductAssignmentMissing</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setVariantSelection")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSetVariantSelectionActionImpl.class)
 public interface ProductSelectionSetVariantSelectionAction extends ProductSelectionUpdateAction {
@@ -90,6 +92,8 @@ public interface ProductSelectionSetVariantSelectionAction extends ProductSelect
         return instance;
     }
 
+    public ProductSelectionSetVariantSelectionAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionSetVariantSelectionAction
      * @param template instance to be copied
@@ -142,8 +146,8 @@ public interface ProductSelectionSetVariantSelectionAction extends ProductSelect
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantSelectionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantSelectionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionSetVariantSelectionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionSetVariantSelectionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetVariantSelectionAction>";

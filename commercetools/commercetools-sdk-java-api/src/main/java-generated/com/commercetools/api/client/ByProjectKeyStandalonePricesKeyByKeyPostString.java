@@ -12,16 +12,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>If a modification is already in progress for the exact combination of SKU and price scope fields, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ExactLockConflictError" rel="nofollow">ExactLockConflict</a> error is returned.</p>
+ *  <p>If a modification is already in progress for the combination of SKU and price scope fields (but potentially different validity period), a <a href="https://docs.commercetools.com/apis/ctp:api:type:ValidityLockConflictError" rel="nofollow">ValidityLockConflict</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -72,7 +73,8 @@ public class ByProjectKeyStandalonePricesKeyByKeyPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/standalone-prices/key=%s", this.projectKey, this.key);
+        String httpRequestPath = String.format("%s/standalone-prices/key=%s", encodePathParam(this.projectKey),
+            encodePathParam(this.key));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

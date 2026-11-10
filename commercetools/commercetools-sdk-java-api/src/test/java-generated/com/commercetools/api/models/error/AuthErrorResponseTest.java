@@ -3,32 +3,25 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AuthErrorResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AuthErrorResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AuthErrorResponseBuilder builder) {
         AuthErrorResponse authErrorResponse = builder.buildUnchecked();
         Assertions.assertThat(authErrorResponse).isInstanceOf(AuthErrorResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AuthErrorResponse.builder().error("error") },
-                new Object[] { AuthErrorResponse.builder().error_description("error_description") },
-                new Object[] { AuthErrorResponse.builder()
+        return new Object[][] { new Object[] { "error", AuthErrorResponse.builder().error("error") },
+                new Object[] { "error_description",
+                        AuthErrorResponse.builder().error_description("error_description") },
+                new Object[] { "errors", AuthErrorResponse.builder()
                         .errors(
                             Collections.singletonList(new com.commercetools.api.models.error.ErrorObjectImpl())) } };
     }

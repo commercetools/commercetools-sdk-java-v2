@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when the requested resource was not found.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is <span>inactive</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ObjectNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ObjectNotFoundErrorImpl.class)
 public interface ObjectNotFoundError extends ErrorObject {
@@ -44,7 +46,8 @@ public interface ObjectNotFoundError extends ErrorObject {
     public String getCode();
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @return message
      */
     @NotNull
@@ -52,7 +55,8 @@ public interface ObjectNotFoundError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @param message value to be set
      */
 
@@ -77,6 +81,8 @@ public interface ObjectNotFoundError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public ObjectNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of ObjectNotFoundError
@@ -125,8 +131,8 @@ public interface ObjectNotFoundError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ObjectNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ObjectNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<ObjectNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ObjectNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<ObjectNotFoundError>";

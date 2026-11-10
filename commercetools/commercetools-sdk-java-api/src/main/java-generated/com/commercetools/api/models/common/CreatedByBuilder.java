@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CreatedByBuilder implements Builder<CreatedBy> {
 
     @Nullable
+    private Boolean isPlatformClient;
+
+    @Nullable
     private String clientId;
 
     @Nullable
@@ -42,7 +45,18 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     private com.commercetools.api.models.common.Attribution attributedTo;
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @param isPlatformClient value to be set
+     * @return Builder
+     */
+
+    public CreatedByBuilder isPlatformClient(@Nullable final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -53,7 +67,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -64,7 +78,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -76,7 +90,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -88,7 +102,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -99,7 +113,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was created.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -110,7 +124,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -122,7 +136,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -134,7 +148,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -181,7 +195,17 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @return isPlatformClient
+     */
+
+    @Nullable
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
 
@@ -191,7 +215,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @return externalUserId
      */
 
@@ -201,7 +225,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
 
@@ -211,7 +235,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was created.</p>
      * @return anonymousId
      */
 
@@ -221,7 +245,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
 
@@ -245,7 +269,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
      * @return CreatedBy
      */
     public CreatedBy build() {
-        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
+        return new CreatedByImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate,
+            attributedTo);
     }
 
     /**
@@ -253,7 +278,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
      * @return CreatedBy
      */
     public CreatedBy buildUnchecked() {
-        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
+        return new CreatedByImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate,
+            attributedTo);
     }
 
     /**
@@ -271,6 +297,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
      */
     public static CreatedByBuilder of(final CreatedBy template) {
         CreatedByBuilder builder = new CreatedByBuilder();
+        builder.isPlatformClient = template.getIsPlatformClient();
         builder.clientId = template.getClientId();
         builder.externalUserId = template.getExternalUserId();
         builder.customer = template.getCustomer();

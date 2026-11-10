@@ -7,12 +7,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerToken
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customerId("{customerId}")
  *             .value("{value}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
@@ -66,6 +68,14 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
+
+    /**
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+    @NotNull
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
@@ -112,6 +122,13 @@ public interface CustomerToken {
     public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
+
+    /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @param createdAt value to be set
      */
@@ -144,10 +161,13 @@ public interface CustomerToken {
         instance.setCustomerId(template.getCustomerId());
         instance.setValue(template.getValue());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
     }
+
+    public CustomerToken copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerToken
@@ -164,6 +184,7 @@ public interface CustomerToken {
         instance.setCustomerId(template.getCustomerId());
         instance.setValue(template.getValue());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
@@ -200,8 +221,8 @@ public interface CustomerToken {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerToken> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerToken>() {
+    public static tools.jackson.core.type.TypeReference<CustomerToken> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerToken>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerToken>";

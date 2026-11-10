@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
+ *  <p>Notification about changes to a resource. The payload format differs for resource <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">creation</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceUpdatedDeliveryPayload" rel="nofollow">update</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">deletion</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
@@ -40,7 +41,7 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      */
 
     public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {
@@ -78,4 +79,8 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeSubscription copyDeep() {
+        return ChangeSubscription.deepCopy(this);
+    }
 }

@@ -45,6 +45,11 @@ public class ByProjectKeyCartsRequestBuilder implements ByProjectKeyCartsRequest
         return new ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder(apiHttpClient, projectKey, customerId);
     }
 
+    public ByProjectKeyCartsCustomerIdByCustomerIdMergeRequestBuilder customerIdWithCustomerIdValueMerge(
+            String customerId) {
+        return new ByProjectKeyCartsCustomerIdByCustomerIdMergeRequestBuilder(apiHttpClient, projectKey, customerId);
+    }
+
     public ByProjectKeyCartsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }

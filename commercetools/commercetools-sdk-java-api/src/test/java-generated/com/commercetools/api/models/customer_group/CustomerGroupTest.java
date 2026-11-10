@@ -3,39 +3,34 @@ package com.commercetools.api.models.customer_group;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerGroupTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerGroupBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerGroupBuilder builder) {
         CustomerGroup customerGroup = builder.buildUnchecked();
         Assertions.assertThat(customerGroup).isInstanceOf(CustomerGroup.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerGroup.builder().id("id") },
-                new Object[] { CustomerGroup.builder().version(2L) },
-                new Object[] { CustomerGroup.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerGroup.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerGroup.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", CustomerGroup.builder().id("id") },
+                new Object[] { "version", CustomerGroup.builder().version(2L) },
+                new Object[] { "createdAt",
+                        CustomerGroup.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        CustomerGroup.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        CustomerGroup.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         CustomerGroup.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { CustomerGroup.builder().key("key") },
-                new Object[] { CustomerGroup.builder().name("name") }, new Object[] {
+                new Object[] { "key", CustomerGroup.builder().key("key") },
+                new Object[] { "name", CustomerGroup.builder().name("name") }, new Object[] { "custom",
                         CustomerGroup.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

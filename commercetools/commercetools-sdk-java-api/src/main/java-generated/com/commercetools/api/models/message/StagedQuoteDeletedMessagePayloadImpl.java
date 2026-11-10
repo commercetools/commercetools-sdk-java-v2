@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,8 +14,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete StagedQuote request.</p>
+ *  <p>Generated after a successful <span>Delete StagedQuote</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedMessagePayload, ModelBase {
@@ -62,4 +63,8 @@ public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedM
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public StagedQuoteDeletedMessagePayload copyDeep() {
+        return StagedQuoteDeletedMessagePayload.deepCopy(this);
+    }
 }

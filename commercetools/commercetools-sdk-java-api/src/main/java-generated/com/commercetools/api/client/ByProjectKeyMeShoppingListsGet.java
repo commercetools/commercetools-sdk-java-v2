@@ -11,16 +11,21 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *
+ *  <p>Retrieves ShoppingLists for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no ShoppingList exists for the provided query predicate.</li>
+ *   <li>If a ShoppingList exists but does not contain either an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope, or a <code>customer</code> with <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -65,7 +70,7 @@ public class ByProjectKeyMeShoppingListsGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/me/shopping-lists", this.projectKey);
+        String httpRequestPath = String.format("%s/me/shopping-lists", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

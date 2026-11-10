@@ -6,14 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.search.SearchQuery;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetCountValue
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchFacetCountValue {
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      * @return name
      */
     @NotNull
@@ -49,7 +50,7 @@ public interface ProductSearchFacetCountValue {
     public ProductSearchFacetScopeEnum getScope();
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @return filter
      */
     @Valid
@@ -65,7 +66,7 @@ public interface ProductSearchFacetCountValue {
     public ProductSearchFacetCountLevelEnum getLevel();
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      * @param name value to be set
      */
 
@@ -79,7 +80,7 @@ public interface ProductSearchFacetCountValue {
     public void setScope(final ProductSearchFacetScopeEnum scope);
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param filter value to be set
      */
 
@@ -113,6 +114,8 @@ public interface ProductSearchFacetCountValue {
         instance.setLevel(template.getLevel());
         return instance;
     }
+
+    public ProductSearchFacetCountValue copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSearchFacetCountValue
@@ -163,8 +166,8 @@ public interface ProductSearchFacetCountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetCountValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetCountValue>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetCountValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetCountValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetCountValue>";

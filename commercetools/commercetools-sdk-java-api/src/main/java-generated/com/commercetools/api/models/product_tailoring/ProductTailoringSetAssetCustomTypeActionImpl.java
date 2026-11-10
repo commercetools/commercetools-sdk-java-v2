@@ -1,0 +1,221 @@
+
+package com.commercetools.api.models.product_tailoring;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ProductTailoringSetAssetCustomTypeActionImpl
+        implements ProductTailoringSetAssetCustomTypeAction, ModelBase {
+
+    private String action;
+
+    private Long variantId;
+
+    private String sku;
+
+    private Boolean staged;
+
+    private String assetId;
+
+    private String assetKey;
+
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+
+    private com.commercetools.api.models.type.FieldContainer fields;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    ProductTailoringSetAssetCustomTypeActionImpl(@JsonProperty("variantId") final Long variantId,
+            @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey,
+            @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.variantId = variantId;
+        this.sku = sku;
+        this.staged = staged;
+        this.assetId = assetId;
+        this.assetKey = assetKey;
+        this.type = type;
+        this.fields = fields;
+        this.action = SET_ASSET_CUSTOM_TYPE;
+    }
+
+    /**
+     * create empty instance
+     */
+    public ProductTailoringSetAssetCustomTypeActionImpl() {
+        this.action = SET_ASSET_CUSTOM_TYPE;
+    }
+
+    /**
+     *
+     */
+
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     */
+
+    public Long getVariantId() {
+        return this.variantId;
+    }
+
+    /**
+     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     */
+
+    public String getAssetId() {
+        return this.assetId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     */
+
+    public String getAssetKey() {
+        return this.assetKey;
+    }
+
+    /**
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Asset with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     */
+
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+        return this.type;
+    }
+
+    /**
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Asset.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     */
+
+    public com.commercetools.api.models.type.FieldContainer getFields() {
+        return this.fields;
+    }
+
+    public void setVariantId(final Long variantId) {
+        this.variantId = variantId;
+    }
+
+    public void setSku(final String sku) {
+        this.sku = sku;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
+    public void setAssetId(final String assetId) {
+        this.assetId = assetId;
+    }
+
+    public void setAssetKey(final String assetKey) {
+        this.assetKey = assetKey;
+    }
+
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+        this.type = type;
+    }
+
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
+        this.fields = fields;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ProductTailoringSetAssetCustomTypeActionImpl that = (ProductTailoringSetAssetCustomTypeActionImpl) o;
+
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(assetId)
+                .append(assetKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("staged", staged)
+                .append("assetId", assetId)
+                .append("assetKey", assetKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
+    }
+
+    @Override
+    public ProductTailoringSetAssetCustomTypeAction copyDeep() {
+        return ProductTailoringSetAssetCustomTypeAction.deepCopy(this);
+    }
+}

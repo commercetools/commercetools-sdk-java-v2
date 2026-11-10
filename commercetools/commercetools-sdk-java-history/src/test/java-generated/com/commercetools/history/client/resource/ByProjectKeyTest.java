@@ -5,10 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.history.client.ApiRoot;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -19,28 +15,26 @@ import io.vrap.rmf.base.client.error.ApiServerException;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mockito;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
     private final static ApiRoot apiRoot = ApiRoot.of();
     private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
-    @TestTemplate
-    @UseDataProvider("requestWithMethodParameters")
+    @ParameterizedTest
+    @MethodSource("requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
         Assertions.assertThat(httpMethod).isEqualTo(request.getMethod().name().toLowerCase());
         Assertions.assertThat(uri).isEqualTo(request.getUri().toString());
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -50,8 +44,8 @@ public class ByProjectKeyTest {
                 .hasCauseInstanceOf(ApiServerException.class);
     }
 
-    @TestTemplate
-    @UseDataProvider("executeMethodParameters")
+    @ParameterizedTest
+    @MethodSource("executeMethodParameters")
     public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
@@ -61,7 +55,6 @@ public class ByProjectKeyTest {
                 .hasCauseInstanceOf(ApiClientException.class);
     }
 
-    @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -83,6 +76,9 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId").createHttpRequest(),
                         "get", "test_projectKey?userId=userId", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withUserIds("userIds").createHttpRequest(),
+                        "get", "test_projectKey?userIds=userIds", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withClientId("clientId")
@@ -108,11 +104,16 @@ public class ByProjectKeyTest {
                         .createHttpRequest(), "get", "test_projectKey?resourceId=resourceId", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
+                        .withResourceIds("resourceIds")
+                        .createHttpRequest(), "get", "test_projectKey?resourceIds=resourceIds", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
                         .withResourceKey("resourceKey")
                         .createHttpRequest(), "get", "test_projectKey?resourceKey=resourceKey", },
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source").createHttpRequest(),
-                        "get", "test_projectKey?source=source", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source"))
+                        .createHttpRequest(), "get", "test_projectKey?source=source", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes").createHttpRequest(),
                         "get", "test_projectKey?changes=changes", },
@@ -130,11 +131,13 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true).createHttpRequest(),
                         "get", "test_projectKey?expand=true", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withWithTotal(true).createHttpRequest(),
+                        "get", "test_projectKey?withTotal=true", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().createHttpRequest(), "get",
                         "test_projectKey", } };
     }
 
-    @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -146,14 +149,18 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withUserIds("userIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withClientId("clientId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withAssociateId("associateId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withBusinessUnit("businessUnit"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceIds("resourceIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceKey("resourceKey"), },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
@@ -162,6 +169,7 @@ public class ByProjectKeyTest {
                             com.commercetools.history.models.change_history.PlatformInitiatedChange
                                     .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get(), } };
     }
 }

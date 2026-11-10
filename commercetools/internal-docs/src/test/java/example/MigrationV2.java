@@ -47,8 +47,9 @@ public class MigrationV2 {
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
                     ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                .withPolicies(policies -> policies.withRetry(builder -> builder
-                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
+                .withRequestPolicies(policies -> policies
+                        .withAllOtherRequests(request -> request.withRetry(builder -> builder.statusCodes(
+                            Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504)))))
                 .build("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();

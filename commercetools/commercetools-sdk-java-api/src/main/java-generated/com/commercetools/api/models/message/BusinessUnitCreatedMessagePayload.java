@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnit;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create BusinessUnit request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/business-units:POST" rel="nofollow">Create BusinessUnit</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitCreatedMessagePayloadImpl.class)
 public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
@@ -38,7 +40,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     String BUSINESS_UNIT_CREATED = "BusinessUnitCreated";
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @return businessUnit
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     public BusinessUnit getBusinessUnit();
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param businessUnit value to be set
      */
 
@@ -71,6 +73,8 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
+
+    public BusinessUnitCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitCreatedMessagePayload
@@ -120,8 +124,8 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCreatedMessagePayload>";

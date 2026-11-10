@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
+ *  <p><span>AWS EventBridge</span> can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EventBridgeDestinationImpl implements EventBridgeDestination, ModelBase {
@@ -28,14 +29,17 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
 
     private String accountId;
 
+    private String source;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     EventBridgeDestinationImpl(@JsonProperty("region") final String region,
-            @JsonProperty("accountId") final String accountId) {
+            @JsonProperty("accountId") final String accountId, @JsonProperty("source") final String source) {
         this.region = region;
         this.accountId = accountId;
+        this.source = source;
         this.type = EVENT_BRIDGE;
     }
 
@@ -70,12 +74,24 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return this.accountId;
     }
 
+    /**
+     *  <p>URN for the EventBridge destination.</p>
+     */
+
+    public String getSource() {
+        return this.source;
+    }
+
     public void setRegion(final String region) {
         this.region = region;
     }
 
     public void setAccountId(final String accountId) {
         this.accountId = accountId;
+    }
+
+    public void setSource(final String source) {
+        this.source = source;
     }
 
     @Override
@@ -91,15 +107,17 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return new EqualsBuilder().append(type, that.type)
                 .append(region, that.region)
                 .append(accountId, that.accountId)
+                .append(source, that.source)
                 .append(type, that.type)
                 .append(region, that.region)
                 .append(accountId, that.accountId)
+                .append(source, that.source)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(region).append(accountId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(region).append(accountId).append(source).toHashCode();
     }
 
     @Override
@@ -107,7 +125,12 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("region", region)
                 .append("accountId", accountId)
+                .append("source", source)
                 .build();
     }
 
+    @Override
+    public EventBridgeDestination copyDeep() {
+        return EventBridgeDestination.deepCopy(this);
+    }
 }

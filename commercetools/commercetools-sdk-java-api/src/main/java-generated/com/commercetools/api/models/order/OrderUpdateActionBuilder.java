@@ -79,6 +79,10 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder.of();
     }
@@ -129,6 +133,10 @@ public class OrderUpdateActionBuilder {
 
     public com.commercetools.api.models.order.OrderSetDeliveryItemsActionBuilder setDeliveryItemsBuilder() {
         return com.commercetools.api.models.order.OrderSetDeliveryItemsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder.of();
     }
 
     public com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {

@@ -28,7 +28,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     *  <p>Category the Product was added to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was added to.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Category the Product was added to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was added to.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Category the Product was added to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was added to.</p>
      * @param category value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Category the Product was added to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was added to.</p>
      * @return category
      */
 
@@ -84,7 +84,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

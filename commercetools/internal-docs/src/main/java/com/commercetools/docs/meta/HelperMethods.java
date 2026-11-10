@@ -12,7 +12,8 @@ import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.ByIdVariantIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
-import com.fasterxml.jackson.databind.JsonNode;
+
+import tools.jackson.databind.JsonNode;
 
 /**
  * <p>The helper methods simplify the use of our SDK.</p>

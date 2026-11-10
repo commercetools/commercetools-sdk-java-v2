@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodSetPredicateAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetPredicateActionImpl.class)
 public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAction {
@@ -34,7 +36,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     String SET_PREDICATE = "setPredicate";
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @return predicate
      */
 
@@ -42,7 +44,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     public String getPredicate();
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @param predicate value to be set
      */
 
@@ -66,6 +68,8 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public ShippingMethodSetPredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetPredicateAction
@@ -113,8 +117,8 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodSetPredicateAction>";

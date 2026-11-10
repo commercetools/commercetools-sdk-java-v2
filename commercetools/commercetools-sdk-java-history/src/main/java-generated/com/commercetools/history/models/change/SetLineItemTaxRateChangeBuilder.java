@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
  *             .taxMode(TaxMode.PLATFORM)
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,6 +39,8 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     private String variant;
 
     private com.commercetools.history.models.common.TaxMode taxMode;
+
+    private String lineItemId;
 
     /**
      * set the value to the change
@@ -122,7 +125,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -134,7 +137,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -146,7 +149,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -158,7 +161,8 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -176,6 +180,17 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
 
     public SetLineItemTaxRateChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
         this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTaxRateChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
         return this;
     }
 
@@ -207,7 +222,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
 
@@ -216,7 +231,8 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
 
@@ -234,6 +250,15 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
      * builds SetLineItemTaxRateChange with checking for non-null required values
      * @return SetLineItemTaxRateChange
      */
@@ -244,7 +269,9 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
         Objects.requireNonNull(lineItem, SetLineItemTaxRateChange.class + ": lineItem is missing");
         Objects.requireNonNull(variant, SetLineItemTaxRateChange.class + ": variant is missing");
         Objects.requireNonNull(taxMode, SetLineItemTaxRateChange.class + ": taxMode is missing");
-        return new SetLineItemTaxRateChangeImpl(change, previousValue, nextValue, lineItem, variant, taxMode);
+        Objects.requireNonNull(lineItemId, SetLineItemTaxRateChange.class + ": lineItemId is missing");
+        return new SetLineItemTaxRateChangeImpl(change, previousValue, nextValue, lineItem, variant, taxMode,
+            lineItemId);
     }
 
     /**
@@ -252,7 +279,8 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
      * @return SetLineItemTaxRateChange
      */
     public SetLineItemTaxRateChange buildUnchecked() {
-        return new SetLineItemTaxRateChangeImpl(change, previousValue, nextValue, lineItem, variant, taxMode);
+        return new SetLineItemTaxRateChangeImpl(change, previousValue, nextValue, lineItem, variant, taxMode,
+            lineItemId);
     }
 
     /**
@@ -276,6 +304,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
         builder.lineItem = template.getLineItem();
         builder.variant = template.getVariant();
         builder.taxMode = template.getTaxMode();
+        builder.lineItemId = template.getLineItemId();
         return builder;
     }
 

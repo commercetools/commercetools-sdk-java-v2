@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with a boolean set value.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BooleanSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BooleanSetFieldImpl.class)
 public interface BooleanSetField extends CustomField {
@@ -36,7 +38,7 @@ public interface BooleanSetField extends CustomField {
     String BOOLEAN_SET = "BooleanSet";
 
     /**
-     *
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface BooleanSetField extends CustomField {
     public List<Boolean> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -52,7 +54,7 @@ public interface BooleanSetField extends CustomField {
     public void setValue(final Boolean... value);
 
     /**
-     * set value
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -76,6 +78,8 @@ public interface BooleanSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public BooleanSetField copyDeep();
 
     /**
      * factory method to create a deep copy of BooleanSetField
@@ -123,8 +127,8 @@ public interface BooleanSetField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BooleanSetField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BooleanSetField>() {
+    public static tools.jackson.core.type.TypeReference<BooleanSetField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BooleanSetField>() {
             @Override
             public String toString() {
                 return "TypeReference<BooleanSetField>";

@@ -4,56 +4,54 @@ package com.commercetools.api.models.payment;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentBuilder builder) {
         Payment payment = builder.buildUnchecked();
         Assertions.assertThat(payment).isInstanceOf(Payment.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Payment.builder().id("id") },
-                new Object[] { Payment.builder().version(2L) },
-                new Object[] { Payment.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Payment.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Payment.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Payment.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Payment.builder().id("id") },
+                new Object[] { "version", Payment.builder().version(2L) },
+                new Object[] { "createdAt", Payment.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Payment.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Payment.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Payment.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "customer",
                         Payment.builder().customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { Payment.builder().anonymousId("anonymousId") },
-                new Object[] { Payment.builder().interfaceId("interfaceId") },
-                new Object[] { Payment.builder()
-                        .amountPlanned(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { Payment.builder()
-                        .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
-                new Object[] {
+                new Object[] { "anonymousId", Payment.builder().anonymousId("anonymousId") },
+                new Object[] { "interfaceId", Payment.builder().interfaceId("interfaceId") },
+                new Object[] { "amountPlanned",
+                        Payment.builder()
+                                .amountPlanned(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "paymentMethodInfo",
+                        Payment.builder()
+                                .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
+                new Object[] { "paymentStatus",
                         Payment.builder().paymentStatus(new com.commercetools.api.models.payment.PaymentStatusImpl()) },
-                new Object[] {
+                new Object[] { "transactions",
                         Payment.builder()
                                 .transactions(Collections
                                         .singletonList(new com.commercetools.api.models.payment.TransactionImpl())) },
-                new Object[] {
+                new Object[] { "interfaceInteractions",
                         Payment.builder()
                                 .interfaceInteractions(Collections
                                         .singletonList(new com.commercetools.api.models.type.CustomFieldsImpl())) },
-                new Object[] { Payment.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Payment.builder().key("key") } };
+                new Object[] { "custom",
+                        Payment.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "key", Payment.builder().key("key") } };
     }
 
     @Test

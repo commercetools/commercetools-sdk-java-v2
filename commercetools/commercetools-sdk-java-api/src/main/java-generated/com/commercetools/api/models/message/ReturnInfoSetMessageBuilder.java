@@ -184,7 +184,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -296,7 +296,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -311,7 +311,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -324,7 +324,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -411,7 +411,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -439,7 +439,7 @@ public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @return returnInfo
      */
 

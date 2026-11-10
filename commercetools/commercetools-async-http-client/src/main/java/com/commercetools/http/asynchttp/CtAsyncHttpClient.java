@@ -1,7 +1,6 @@
 
 package com.commercetools.http.asynchttp;
 
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -22,7 +21,7 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
     private final Supplier<DefaultAsyncHttpClientConfig.Builder> clientBuilder = CtAsyncHttpClient::createClientBuilder;
 
     public static DefaultAsyncHttpClientConfig.Builder createClientBuilder() {
-        return new DefaultAsyncHttpClientConfig.Builder().setEnabledProtocols(new String[] { "TLSv1.1", "TLSv1.2" })
+        return new DefaultAsyncHttpClientConfig.Builder().setEnabledProtocols(new String[] { "TLSv1.3", "TLSv1.2" })
                 .setReadTimeout(121000)
                 .setRequestTimeout(121000);
     }
@@ -161,12 +160,9 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
         Optional.ofNullable(request.getBody()).ifPresent(body -> {
             builder.setBody(body);
             AsciiString mediaType = HttpHeaderValues.APPLICATION_JSON;
-            if (request.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = AsciiString
-                        .of(Objects.requireNonNull(request.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = request.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = AsciiString.of(contentTypeValue);
             }
             builder.setHeader(ApiHttpHeaders.CONTENT_TYPE, mediaType);
         });

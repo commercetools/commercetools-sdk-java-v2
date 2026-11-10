@@ -4,7 +4,6 @@ package com.commercetools.api.models.order;
 import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * OrderResourceIdentifierBuilder
@@ -17,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIdentifier> {
 

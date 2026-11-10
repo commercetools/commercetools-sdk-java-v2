@@ -33,7 +33,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -217,7 +217,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -227,7 +227,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return prices
      */
 
@@ -236,7 +236,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return attributes
      */
 

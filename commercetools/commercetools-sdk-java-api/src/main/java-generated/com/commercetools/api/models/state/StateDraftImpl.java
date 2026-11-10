@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateDraft
@@ -64,6 +65,8 @@ public class StateDraftImpl implements StateDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the State.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another State in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -103,7 +106,7 @@ public class StateDraftImpl implements StateDraft, ModelBase {
     }
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
@@ -113,7 +116,7 @@ public class StateDraftImpl implements StateDraft, ModelBase {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -211,4 +214,8 @@ public class StateDraftImpl implements StateDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateDraft copyDeep() {
+        return StateDraft.deepCopy(this);
+    }
 }

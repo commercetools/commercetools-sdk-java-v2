@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Draft type to model divisions that are part of a Company or a higher-order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">BusinessUnitDraft</a> that are used specifically for creating a Division.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DivisionDraftImpl implements DivisionDraft, ModelBase {
@@ -40,6 +41,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     private java.util.List<Integer> shippingAddresses;
@@ -51,6 +54,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     private Integer defaultBillingAddress;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
 
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
@@ -65,12 +70,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
             @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.key = key;
         this.status = status;
@@ -80,12 +87,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.contactEmail = contactEmail;
         this.associateMode = associateMode;
         this.associates = associates;
+        this.approvalRuleMode = approvalRuleMode;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
         this.defaultShippingAddress = defaultShippingAddress;
         this.billingAddresses = billingAddresses;
         this.defaultBillingAddress = defaultBillingAddress;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.parentUnit = parentUnit;
         this.unitType = BusinessUnitType.findEnum("Division");
     }
@@ -106,7 +115,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
@@ -114,9 +123,9 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -124,7 +133,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -164,11 +173,19 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     *  <p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
         return this.associates;
+    }
+
+    /**
+     *  <p>Determines whether the Division can inherit Approval Rules from a parent.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
     }
 
     /**
@@ -180,7 +197,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getShippingAddresses() {
@@ -196,7 +213,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getBillingAddresses() {
@@ -217,6 +234,15 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -269,6 +295,11 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.associates = associates;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
     }
@@ -305,6 +336,16 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setParentUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.parentUnit = parentUnit;
@@ -329,12 +370,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(contactEmail, that.contactEmail)
                 .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
                 .append(defaultShippingAddress, that.defaultShippingAddress)
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(parentUnit, that.parentUnit)
                 .append(key, that.key)
                 .append(status, that.status)
@@ -345,12 +388,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(contactEmail, that.contactEmail)
                 .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
                 .append(defaultShippingAddress, that.defaultShippingAddress)
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(parentUnit, that.parentUnit)
                 .isEquals();
     }
@@ -366,12 +411,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(contactEmail)
                 .append(associateMode)
                 .append(associates)
+                .append(approvalRuleMode)
                 .append(addresses)
                 .append(shippingAddresses)
                 .append(defaultShippingAddress)
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .append(parentUnit)
                 .toHashCode();
     }
@@ -387,14 +434,20 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append("contactEmail", contactEmail)
                 .append("associateMode", associateMode)
                 .append("associates", associates)
+                .append("approvalRuleMode", approvalRuleMode)
                 .append("addresses", addresses)
                 .append("shippingAddresses", shippingAddresses)
                 .append("defaultShippingAddress", defaultShippingAddress)
                 .append("billingAddresses", billingAddresses)
                 .append("defaultBillingAddress", defaultBillingAddress)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("parentUnit", parentUnit)
                 .build();
     }
 
+    @Override
+    public DivisionDraft copyDeep() {
+        return DivisionDraft.deepCopy(this);
+    }
 }

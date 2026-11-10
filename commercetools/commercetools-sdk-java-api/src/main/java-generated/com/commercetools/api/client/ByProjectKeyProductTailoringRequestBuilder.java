@@ -21,6 +21,10 @@ public class ByProjectKeyProductTailoringRequestBuilder {
         return new ByProjectKeyProductTailoringGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductTailoringHead head() {
+        return new ByProjectKeyProductTailoringHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductTailoringPost post(
             com.commercetools.api.models.product_tailoring.ProductTailoringDraft productTailoringDraft) {
         return new ByProjectKeyProductTailoringPost(apiHttpClient, projectKey, productTailoringDraft);

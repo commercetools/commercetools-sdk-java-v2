@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removes all staged changes from the StandalonePrice. Removing staged changes successfully produces the StandalonePriceStagedChangesRemoved Message.</p>
+ *  <p>Removes all staged changes from the StandalonePrice. Removing staged changes successfully produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceStagedChangesRemovedMessage" rel="nofollow">StandalonePriceStagedChangesRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeStagedChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceRemoveStagedChangesActionImpl.class)
 public interface StandalonePriceRemoveStagedChangesAction extends StandalonePriceUpdateAction {
@@ -50,6 +52,8 @@ public interface StandalonePriceRemoveStagedChangesAction extends StandalonePric
         StandalonePriceRemoveStagedChangesActionImpl instance = new StandalonePriceRemoveStagedChangesActionImpl();
         return instance;
     }
+
+    public StandalonePriceRemoveStagedChangesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceRemoveStagedChangesAction
@@ -99,8 +103,8 @@ public interface StandalonePriceRemoveStagedChangesAction extends StandalonePric
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceRemoveStagedChangesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceRemoveStagedChangesAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceRemoveStagedChangesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceRemoveStagedChangesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceRemoveStagedChangesAction>";

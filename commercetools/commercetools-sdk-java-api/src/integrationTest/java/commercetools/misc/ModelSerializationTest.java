@@ -132,6 +132,7 @@ public class ModelSerializationTest {
                 .name(localizedString)
                 .orderHint(testString)
                 .parent(reference)
+                .stores()
                 .slug(localizedString)
                 .createdAt(
                     ZonedDateTime.of(2019, 12, 12, 12, 12, 12, 12, ZoneId.ofOffset("UTC", ZoneOffset.ofHours(1))))

@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountChangePredicateAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changePredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
@@ -36,7 +38,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     String CHANGE_PREDICATE = "changePredicate";
 
     /**
-     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     *  <p>New value to set. Must be a valid <span>ProductDiscount predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     public String getPredicate();
 
     /**
-     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     *  <p>New value to set. Must be a valid <span>ProductDiscount predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -68,6 +70,8 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public ProductDiscountChangePredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountChangePredicateAction
@@ -117,8 +121,8 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountChangePredicateAction>";

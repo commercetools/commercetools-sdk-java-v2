@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Default Shipping Address update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDefaultShippingAddressAction" rel="nofollow">Set Default Shipping Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetDefaultShippingAddressChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetDefaultShippingAddressChangeImpl.class)
 public interface SetDefaultShippingAddressChange extends Change {
@@ -115,6 +117,8 @@ public interface SetDefaultShippingAddressChange extends Change {
         return instance;
     }
 
+    public SetDefaultShippingAddressChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetDefaultShippingAddressChange
      * @param template instance to be copied
@@ -164,8 +168,8 @@ public interface SetDefaultShippingAddressChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetDefaultShippingAddressChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetDefaultShippingAddressChange>() {
+    public static tools.jackson.core.type.TypeReference<SetDefaultShippingAddressChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetDefaultShippingAddressChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetDefaultShippingAddressChange>";

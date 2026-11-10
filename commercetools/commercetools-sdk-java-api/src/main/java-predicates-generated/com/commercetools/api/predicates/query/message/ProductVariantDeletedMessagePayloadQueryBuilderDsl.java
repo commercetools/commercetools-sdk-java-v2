@@ -34,4 +34,10 @@ public class ProductVariantDeletedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductVariantDeletedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<ProductVariantDeletedMessagePayloadQueryBuilderDsl> staged() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("staged")),
+            p -> new CombinationQueryPredicate<>(p, ProductVariantDeletedMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

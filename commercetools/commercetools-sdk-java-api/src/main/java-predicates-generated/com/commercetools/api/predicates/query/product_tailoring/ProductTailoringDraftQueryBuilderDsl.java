@@ -98,4 +98,35 @@ public class ProductTailoringDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductTailoringDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductTailoringDraftQueryBuilderDsl> variants(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("variants"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringDraftQueryBuilderDsl
+                            .of())),
+            ProductTailoringDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringDraftQueryBuilderDsl> variants() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("variants")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<ProductTailoringDraftQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("attributes"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl
+                            .of())),
+            ProductTailoringDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringDraftQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringDraftQueryBuilderDsl::of));
+    }
+
 }

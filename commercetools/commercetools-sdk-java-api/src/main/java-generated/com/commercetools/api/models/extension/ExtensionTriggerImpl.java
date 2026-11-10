@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExtensionTrigger
@@ -48,7 +49,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
@@ -64,7 +65,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      */
 
     public String getCondition() {
@@ -119,4 +120,8 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionTrigger copyDeep() {
+        return ExtensionTrigger.deepCopy(this);
+    }
 }

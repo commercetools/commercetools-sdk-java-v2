@@ -120,7 +120,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
 
@@ -204,7 +204,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
 

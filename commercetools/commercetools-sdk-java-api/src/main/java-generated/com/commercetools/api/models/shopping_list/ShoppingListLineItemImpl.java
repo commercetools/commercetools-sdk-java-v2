@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
- *  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
+ *  <p>ShoppingListLineItems are Line Items that contain references to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+ *  <p>In addition to standard <span>Reference Expansion</span>, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase {
@@ -39,6 +40,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
 
+    private Boolean published;
+
     private Long quantity;
 
     private Long variantId;
@@ -58,7 +61,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productId") final String productId,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
-            @JsonProperty("quantity") final Long quantity, @JsonProperty("variantId") final Long variantId,
+            @JsonProperty("published") final Boolean published, @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("variantId") final Long variantId,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
             @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.addedAt = addedAt;
@@ -69,6 +73,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.name = name;
         this.productId = productId;
         this.productType = productType;
+        this.published = published;
         this.quantity = quantity;
         this.variantId = variantId;
         this.variant = variant;
@@ -98,8 +103,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     *  <p>If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p>
      */
 
     public java.time.ZonedDateTime getDeactivatedAt() {
@@ -115,7 +120,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getKey() {
@@ -124,7 +129,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     /**
      *  <p>Name of the Product.</p>
-     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -132,7 +137,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getProductId() {
@@ -140,11 +145,20 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>The Product Type defining the Attributes of the Product.</p>
+     *  <p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
+    }
+
+    /**
+     *  <p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+     *  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p>
+     */
+
+    public Boolean getPublished() {
+        return this.published;
     }
 
     /**
@@ -156,7 +170,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p>For a Project with <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> set to <code>Modular</code>, when <code>variantId</code> is not set, the ShoppingListLineItem refers to the Product's default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<code>defaultVariant</code>) instead of the Master Variant. If no default Variant is set, the ShoppingListLineItem refers to the Variant with the lowest <code>variantId</code>.</p>
      */
 
     public Long getVariantId() {
@@ -164,7 +179,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
+     *  <p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      */
 
@@ -173,7 +188,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
+     *  <p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      */
 
@@ -213,6 +228,10 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.productType = productType;
     }
 
+    public void setPublished(final Boolean published) {
+        this.published = published;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -247,6 +266,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
+                .append(published, that.published)
                 .append(quantity, that.quantity)
                 .append(variantId, that.variantId)
                 .append(variant, that.variant)
@@ -259,6 +279,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
+                .append(published, that.published)
                 .append(quantity, that.quantity)
                 .append(variantId, that.variantId)
                 .append(variant, that.variant)
@@ -276,6 +297,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name)
                 .append(productId)
                 .append(productType)
+                .append(published)
                 .append(quantity)
                 .append(variantId)
                 .append(variant)
@@ -293,6 +315,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append("name", name)
                 .append("productId", productId)
                 .append("productType", productType)
+                .append("published", published)
                 .append("quantity", quantity)
                 .append("variantId", variantId)
                 .append("variant", variant)
@@ -300,4 +323,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItem copyDeep() {
+        return ShoppingListLineItem.deepCopy(this);
+    }
 }

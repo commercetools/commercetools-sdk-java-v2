@@ -7,15 +7,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TransactionDraft
@@ -78,12 +79,20 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public TransactionState getState();
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @return custom
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @JsonProperty("interfaceId")
+    public String getInterfaceId();
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
@@ -121,11 +130,18 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public void setState(final TransactionState state);
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     */
+
+    public void setInterfaceId(final String interfaceId);
 
     /**
      * factory method
@@ -148,8 +164,11 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
+
+    public TransactionDraft copyDeep();
 
     /**
      * factory method to create a deep copy of TransactionDraft
@@ -168,6 +187,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 
@@ -202,8 +222,8 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransactionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransactionDraft>() {
+    public static tools.jackson.core.type.TypeReference<TransactionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransactionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TransactionDraft>";

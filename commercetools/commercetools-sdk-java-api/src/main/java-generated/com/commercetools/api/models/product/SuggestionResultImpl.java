@@ -4,9 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +16,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * SuggestionResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class SuggestionResultImpl implements SuggestionResult, ModelBase {
 
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
@@ -29,7 +32,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
      */
     @JsonCreator
     SuggestionResultImpl(
-            @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
         this.values = values;
     }
 
@@ -40,7 +43,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values() {
@@ -77,4 +80,8 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public SuggestionResult copyDeep() {
+        return SuggestionResult.deepCopy(this);
+    }
 }

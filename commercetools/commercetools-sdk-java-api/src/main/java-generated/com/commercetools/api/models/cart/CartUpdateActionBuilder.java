@@ -35,6 +35,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartAddPaymentActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder addRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder addShippingMethodBuilder() {
         return com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder.of();
     }
@@ -67,6 +71,14 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartChangeLineItemQuantityActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder changeLineItemsOrderBuilder() {
+        return com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.cart.CartChangePriceRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionBuilder changeTaxCalculationModeBuilder() {
         return com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionBuilder.of();
     }
@@ -81,6 +93,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartFreezeCartActionBuilder freezeCartBuilder() {
         return com.commercetools.api.models.cart.CartFreezeCartActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartLockCartActionBuilder lockCartBuilder() {
+        return com.commercetools.api.models.cart.CartLockCartActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartRecalculateActionBuilder recalculateBuilder() {
@@ -105,6 +121,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartRemovePaymentActionBuilder removePaymentBuilder() {
         return com.commercetools.api.models.cart.CartRemovePaymentActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder removeRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder removeShippingMethodBuilder() {
@@ -151,6 +171,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetCustomLineItemCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder setCustomLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsActionBuilder setCustomLineItemShippingDetailsBuilder() {
         return com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsActionBuilder.of();
     }
@@ -191,6 +215,14 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
+        return com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
         return com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionBuilder.of();
     }
@@ -223,6 +255,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder setLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionBuilder setLineItemShippingDetailsBuilder() {
         return com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionBuilder.of();
     }
@@ -245,6 +281,22 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartSetLocaleActionBuilder setLocaleBuilder() {
         return com.commercetools.api.models.cart.CartSetLocaleActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder setRecurringPaymentConfigurationBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder setRecurringPaymentStrategyBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartSetShippingAddressActionBuilder setShippingAddressBuilder() {
@@ -285,6 +337,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder unfreezeCartBuilder() {
         return com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartUnlockCartActionBuilder unlockCartBuilder() {
+        return com.commercetools.api.models.cart.CartUnlockCartActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionBuilder updateItemShippingAddressBuilder() {

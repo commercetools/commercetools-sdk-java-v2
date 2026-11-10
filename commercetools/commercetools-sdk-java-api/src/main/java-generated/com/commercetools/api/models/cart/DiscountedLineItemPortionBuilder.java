@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -52,6 +52,11 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      * @param discountedAmount value to be set
      * @return Builder
      */
@@ -64,6 +69,11 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
@@ -75,7 +85,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @return discount
      */
 
@@ -85,6 +95,11 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      * @return discountedAmount
      */
 

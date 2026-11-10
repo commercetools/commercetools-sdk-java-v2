@@ -26,7 +26,7 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
     private String locale;
 
     /**
-     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     *  <p>Value to set. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
     }
 
     /**
-     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     *  <p>Value to set. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 

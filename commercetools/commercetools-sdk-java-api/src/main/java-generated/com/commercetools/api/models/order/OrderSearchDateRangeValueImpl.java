@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchDateRangeValue
@@ -26,7 +27,7 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
 
     private Integer boost;
 
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     private java.time.ZonedDateTime gte;
 
@@ -37,7 +38,8 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
      */
     @JsonCreator
     OrderSearchDateRangeValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost,
-            @JsonProperty("customType") final String customType, @JsonProperty("gte") final java.time.ZonedDateTime gte,
+            @JsonProperty("customType") final com.commercetools.api.models.order.OrderSearchCustomType customType,
+            @JsonProperty("gte") final java.time.ZonedDateTime gte,
             @JsonProperty("lte") final java.time.ZonedDateTime lte) {
         this.field = field;
         this.boost = boost;
@@ -69,10 +71,10 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
     }
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      */
 
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 
@@ -100,7 +102,7 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
         this.boost = boost;
     }
 
-    public void setCustomType(final String customType) {
+    public void setCustomType(final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
     }
 
@@ -155,4 +157,8 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
                 .build();
     }
 
+    @Override
+    public OrderSearchDateRangeValue copyDeep() {
+        return OrderSearchDateRangeValue.deepCopy(this);
+    }
 }

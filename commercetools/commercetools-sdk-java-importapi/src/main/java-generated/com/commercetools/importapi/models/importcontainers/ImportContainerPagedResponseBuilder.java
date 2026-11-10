@@ -37,7 +37,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     private java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The actual number of results returned.</p>
+     *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The total number of results matching the query.</p>
+     *  <p>Total number of results matching the query.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -182,7 +182,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -191,7 +191,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The actual number of results returned.</p>
+     *  <p>Actual number of results returned.</p>
      * @return count
      */
 
@@ -200,7 +200,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The total number of results matching the query.</p>
+     *  <p>Total number of results matching the query.</p>
      * @return total
      */
 
@@ -209,7 +209,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @return results
      */
 

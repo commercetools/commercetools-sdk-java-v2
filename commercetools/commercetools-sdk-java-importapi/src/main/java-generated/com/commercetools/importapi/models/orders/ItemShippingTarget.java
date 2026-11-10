@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The item's shipping target.</p>
+ *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingTarget {
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @return addressKey
      */
     @NotNull
@@ -40,7 +41,7 @@ public interface ItemShippingTarget {
     public String getAddressKey();
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      * @return quantity
      */
     @NotNull
@@ -48,14 +49,14 @@ public interface ItemShippingTarget {
     public Long getQuantity();
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      */
 
     public void setAddressKey(final String addressKey);
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      * @param quantity value to be set
      */
 
@@ -80,6 +81,8 @@ public interface ItemShippingTarget {
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public ItemShippingTarget copyDeep();
 
     /**
      * factory method to create a deep copy of ItemShippingTarget
@@ -128,8 +131,8 @@ public interface ItemShippingTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget>() {
+    public static tools.jackson.core.type.TypeReference<ItemShippingTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemShippingTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemShippingTarget>";

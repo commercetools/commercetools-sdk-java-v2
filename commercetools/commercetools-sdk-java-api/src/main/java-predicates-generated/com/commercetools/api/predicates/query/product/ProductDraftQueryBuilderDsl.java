@@ -173,4 +173,19 @@ public class ProductDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductDraftQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("attributes"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl.of())),
+            ProductDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductDraftQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductDraftQueryBuilderDsl::of));
+    }
+
 }

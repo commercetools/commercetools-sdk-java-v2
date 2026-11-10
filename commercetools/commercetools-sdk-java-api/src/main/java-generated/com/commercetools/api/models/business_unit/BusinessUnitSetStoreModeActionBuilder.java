@@ -42,7 +42,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @return stores
      */
 

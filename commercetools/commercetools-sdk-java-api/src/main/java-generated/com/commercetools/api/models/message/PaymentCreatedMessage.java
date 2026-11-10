@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.Payment;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Payment request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/payments:POST" rel="nofollow">Create Payment</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentCreatedMessageImpl.class)
 public interface PaymentCreatedMessage extends Message {
@@ -45,7 +47,7 @@ public interface PaymentCreatedMessage extends Message {
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @return payment
      */
     @NotNull
@@ -54,7 +56,7 @@ public interface PaymentCreatedMessage extends Message {
     public Payment getPayment();
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @param payment value to be set
      */
 
@@ -88,6 +90,8 @@ public interface PaymentCreatedMessage extends Message {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public PaymentCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentCreatedMessage
@@ -147,8 +151,8 @@ public interface PaymentCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<PaymentCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentCreatedMessage>";

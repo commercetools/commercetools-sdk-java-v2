@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ReferenceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AttributeReferenceType
@@ -22,11 +23,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
- *             .referenceTypeId(ReferenceType.CART)
+ *             .referenceTypeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
 public interface AttributeReferenceType extends AttributeType {
@@ -37,7 +39,7 @@ public interface AttributeReferenceType extends AttributeType {
     String REFERENCE = "reference";
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @return referenceTypeId
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface AttributeReferenceType extends AttributeType {
     public ReferenceType getReferenceTypeId();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @param referenceTypeId value to be set
      */
 
@@ -69,6 +71,8 @@ public interface AttributeReferenceType extends AttributeType {
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;
     }
+
+    public AttributeReferenceType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeReferenceType
@@ -116,8 +120,8 @@ public interface AttributeReferenceType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeReferenceType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeReferenceType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeReferenceType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeReferenceType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeReferenceType>";

@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountSetValidUntilAction
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidUntil")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountSetValidUntilActionImpl.class)
 public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdateAction {
@@ -35,7 +37,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 
@@ -43,7 +45,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
 
@@ -67,6 +69,8 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public ProductDiscountSetValidUntilAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountSetValidUntilAction
@@ -115,8 +119,8 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountSetValidUntilAction>";

@@ -7,14 +7,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPriceDraft
@@ -35,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPriceDraft> {
 
     /**
-     *
+     *  <p>Discounted money value.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +45,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public Money getValue();
 
     /**
-     *
+     *  <p>Discounts to be applied.</p>
      * @return includedDiscounts
      */
     @NotNull
@@ -53,14 +54,14 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
     /**
-     * set value
+     *  <p>Discounted money value.</p>
      * @param value value to be set
      */
 
     public void setValue(final Money value);
 
     /**
-     * set includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -68,7 +69,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
 
     /**
-     * set includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -93,6 +94,8 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         instance.setIncludedDiscounts(template.getIncludedDiscounts());
         return instance;
     }
+
+    public DiscountedLineItemPriceDraft copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountedLineItemPriceDraft
@@ -145,8 +148,8 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPriceDraft>";

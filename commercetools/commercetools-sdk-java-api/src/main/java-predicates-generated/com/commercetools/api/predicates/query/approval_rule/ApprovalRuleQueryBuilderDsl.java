@@ -118,4 +118,13 @@ public class ApprovalRuleQueryBuilderDsl {
             ApprovalRuleQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ApprovalRuleQueryBuilderDsl> custom(
+            Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("custom"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
+            ApprovalRuleQueryBuilderDsl::of);
+    }
+
 }

@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCartSetCustomerEmailAction
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetCustomerEmailActionImpl.class)
 public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 
@@ -42,7 +44,7 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
     public String getEmail();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      */
 
@@ -66,6 +68,8 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public MyCartSetCustomerEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartSetCustomerEmailAction
@@ -113,8 +117,8 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetCustomerEmailAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetCustomerEmailAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetCustomerEmailAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetCustomerEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetCustomerEmailAction>";

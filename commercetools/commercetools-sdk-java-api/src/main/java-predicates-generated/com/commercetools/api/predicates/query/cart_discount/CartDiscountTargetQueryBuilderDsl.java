@@ -34,6 +34,14 @@ public class CartDiscountTargetQueryBuilderDsl {
             CartDiscountTargetQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> asPattern(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountPatternTargetQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountPatternTargetQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.cart_discount.CartDiscountPatternTargetQueryBuilderDsl.of()),
+            CartDiscountTargetQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> asShipping(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountShippingCostTargetQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountShippingCostTargetQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

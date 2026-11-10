@@ -1,38 +1,30 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderPaymentAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderPaymentAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderPaymentAddedMessageBuilder builder) {
         OrderPaymentAddedMessage orderPaymentAddedMessage = builder.buildUnchecked();
         Assertions.assertThat(orderPaymentAddedMessage).isInstanceOf(OrderPaymentAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderPaymentAddedMessage.builder()
-                .payment(new com.commercetools.api.models.payment.PaymentReferenceImpl()) } };
+        return new Object[][] { new Object[] { "paymentRef", OrderPaymentAddedMessage.builder()
+                .paymentRef(new com.commercetools.api.models.payment.PaymentReferenceImpl()) } };
     }
 
     @Test
-    public void payment() {
+    public void paymentRef() {
         OrderPaymentAddedMessage value = OrderPaymentAddedMessage.of();
-        value.setPayment(new com.commercetools.api.models.payment.PaymentReferenceImpl());
-        Assertions.assertThat(value.getPayment())
+        value.setPaymentRef(new com.commercetools.api.models.payment.PaymentReferenceImpl());
+        Assertions.assertThat(value.getPaymentRef())
                 .isEqualTo(new com.commercetools.api.models.payment.PaymentReferenceImpl());
     }
 }

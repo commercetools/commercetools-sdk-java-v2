@@ -33,7 +33,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     private Boolean force;
 
     /**
-     *  <p>OrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
 
@@ -125,7 +125,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>OrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
 
@@ -135,7 +135,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
 

@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeRequiresDiscountCodeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeRequiresDiscountCodeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeRequiresDiscountCodeChangeBuilder builder) {
         ChangeRequiresDiscountCodeChange changeRequiresDiscountCodeChange = builder.buildUnchecked();
         Assertions.assertThat(changeRequiresDiscountCodeChange).isInstanceOf(ChangeRequiresDiscountCodeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeRequiresDiscountCodeChange.builder().change("change") },
-                new Object[] { ChangeRequiresDiscountCodeChange.builder().previousValue(true) },
-                new Object[] { ChangeRequiresDiscountCodeChange.builder().nextValue(true) } };
+        return new Object[][] { new Object[] { "change", ChangeRequiresDiscountCodeChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeRequiresDiscountCodeChange.builder().previousValue(true) },
+                new Object[] { "nextValue", ChangeRequiresDiscountCodeChange.builder().nextValue(true) } };
     }
 
     @Test

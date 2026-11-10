@@ -6,15 +6,17 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+ *  <p>Incrementally updates the <code>quantityOnStock</code> by the specified amount. This changes the <code>availableQuantity</code>, based on the number of active reservations.</p>
+ *  <p>To set an absolute quantity value instead, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">InventoryEntryChangeQuantityAction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addQuantity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryAddQuantityActionImpl.class)
 public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAction {
@@ -68,6 +71,8 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public InventoryEntryAddQuantityAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntryAddQuantityAction
@@ -115,8 +120,8 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryAddQuantityAction>";

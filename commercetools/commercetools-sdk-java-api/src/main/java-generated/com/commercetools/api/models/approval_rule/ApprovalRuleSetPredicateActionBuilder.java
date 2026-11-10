@@ -24,7 +24,7 @@ public class ApprovalRuleSetPredicateActionBuilder implements Builder<ApprovalRu
     private String predicate;
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ApprovalRuleSetPredicateActionBuilder implements Builder<ApprovalRu
     }
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @return predicate
      */
 

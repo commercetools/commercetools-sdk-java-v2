@@ -25,7 +25,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
 

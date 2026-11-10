@@ -6,17 +6,18 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.order.ParcelMeasurements;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ParcelMeasurementsUpdated Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurementsUpdatedMessage" rel="nofollow">ParcelMeasurementsUpdated</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setParcelMeasurements")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetParcelMeasurementsActionImpl.class)
 public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdateAction {
@@ -37,7 +39,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     String SET_PARCEL_MEASUREMENTS = "setParcelMeasurements";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -46,7 +48,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -55,7 +57,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public String getParcelKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return measurements
      */
     @Valid
@@ -63,7 +65,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public ParcelMeasurements getMeasurements();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -71,7 +73,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
@@ -79,7 +81,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param measurements value to be set
      */
 
@@ -105,6 +107,8 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
+
+    public StagedOrderSetParcelMeasurementsAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetParcelMeasurementsAction
@@ -158,8 +162,8 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetParcelMeasurementsAction>";

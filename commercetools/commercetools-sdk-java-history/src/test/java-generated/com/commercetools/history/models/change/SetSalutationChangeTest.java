@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetSalutationChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetSalutationChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetSalutationChangeBuilder builder) {
         SetSalutationChange setSalutationChange = builder.buildUnchecked();
         Assertions.assertThat(setSalutationChange).isInstanceOf(SetSalutationChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetSalutationChange.builder().change("change") },
-                new Object[] { SetSalutationChange.builder().previousValue("previousValue") },
-                new Object[] { SetSalutationChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetSalutationChange.builder().change("change") },
+                new Object[] { "previousValue", SetSalutationChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetSalutationChange.builder().nextValue("nextValue") } };
     }
 
     @Test

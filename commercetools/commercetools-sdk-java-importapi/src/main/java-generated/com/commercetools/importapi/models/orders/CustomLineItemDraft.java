@@ -7,17 +7,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomLineItemDraft
@@ -41,12 +42,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<CustomLineItemDraft> {
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @return name
      */
     @NotNull
@@ -55,7 +51,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @return money
      */
     @NotNull
@@ -64,7 +60,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TypedMoney getMoney();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @return taxedPrice
      */
     @Valid
@@ -72,7 +68,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public CustomLineItemTaxedPrice getTaxedPrice();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @return totalPrice
      */
     @NotNull
@@ -81,7 +77,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TypedMoney getTotalPrice();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @return slug
      */
     @NotNull
@@ -89,7 +85,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public String getSlug();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @return quantity
      */
     @NotNull
@@ -97,7 +93,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @return state
      */
     @Valid
@@ -105,7 +101,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public List<ItemState> getState();
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -113,7 +109,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @return taxRate
      */
     @Valid
@@ -121,7 +117,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TaxRate getTaxRate();
 
     /**
-     *
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -129,7 +125,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @return discountedPricePerQuantity
      */
     @Valid
@@ -137,7 +133,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public List<DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @return shippingDetails
      */
     @Valid
@@ -145,54 +141,49 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set money
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @param money value to be set
      */
 
     public void setMoney(final TypedMoney money);
 
     /**
-     * set taxedPrice
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final CustomLineItemTaxedPrice taxedPrice);
 
     /**
-     * set totalPrice
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @param totalPrice value to be set
      */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
     /**
-     * set slug
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final String slug);
 
     /**
-     * set quantity
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state values to be set
      */
 
@@ -200,35 +191,35 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state values to be set
      */
 
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     * set taxRate
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     * set externalTaxRate
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
-     * set discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -236,14 +227,14 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceDraft... discountedPricePerQuantity);
 
     /**
-     * set discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
     public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceDraft> discountedPricePerQuantity);
 
     /**
-     * set shippingDetails
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @param shippingDetails value to be set
      */
 
@@ -278,6 +269,8 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public CustomLineItemDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItemDraft
@@ -348,8 +341,8 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemDraft>";

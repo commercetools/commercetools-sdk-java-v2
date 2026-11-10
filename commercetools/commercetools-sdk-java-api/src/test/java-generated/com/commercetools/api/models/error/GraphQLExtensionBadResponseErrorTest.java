@@ -3,41 +3,38 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLExtensionBadResponseErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLExtensionBadResponseErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLExtensionBadResponseErrorBuilder builder) {
         GraphQLExtensionBadResponseError graphQLExtensionBadResponseError = builder.buildUnchecked();
         Assertions.assertThat(graphQLExtensionBadResponseError).isInstanceOf(GraphQLExtensionBadResponseError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLExtensionBadResponseError.builder()
-                        .localizedMessage(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { GraphQLExtensionBadResponseError.builder().extensionExtraInfo("extensionExtraInfo") },
-                new Object[] {
+                new Object[] { "localizedMessage",
+                        GraphQLExtensionBadResponseError.builder()
+                                .localizedMessage(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "extensionExtraInfo",
+                        GraphQLExtensionBadResponseError.builder().extensionExtraInfo("extensionExtraInfo") },
+                new Object[] { "extensionErrors",
                         GraphQLExtensionBadResponseError.builder()
                                 .extensionErrors(Collections
                                         .singletonList(new com.commercetools.api.models.error.ExtensionErrorImpl())) },
-                new Object[] { GraphQLExtensionBadResponseError.builder().extensionBody("extensionBody") },
-                new Object[] { GraphQLExtensionBadResponseError.builder().extensionStatusCode(3) },
-                new Object[] { GraphQLExtensionBadResponseError.builder().extensionId("extensionId") },
-                new Object[] { GraphQLExtensionBadResponseError.builder().extensionKey("extensionKey") } };
+                new Object[] { "extensionBody",
+                        GraphQLExtensionBadResponseError.builder().extensionBody("extensionBody") },
+                new Object[] { "extensionStatusCode",
+                        GraphQLExtensionBadResponseError.builder().extensionStatusCode(3) },
+                new Object[] { "extensionId", GraphQLExtensionBadResponseError.builder().extensionId("extensionId") },
+                new Object[] { "extensionKey",
+                        GraphQLExtensionBadResponseError.builder().extensionKey("extensionKey") } };
     }
 
     @Test

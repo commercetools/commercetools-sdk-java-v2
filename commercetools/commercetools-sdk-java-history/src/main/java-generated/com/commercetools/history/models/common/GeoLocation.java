@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * GeoLocation
@@ -21,15 +22,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     GeoLocation geoLocation = GeoLocation.builder()
- *             .type("{type}")
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Point")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoLocationImpl.class)
-public interface GeoLocation {
+public interface GeoLocation extends GeoJson {
+
+    /**
+     * discriminator value for GeoLocation
+     */
+    String POINT = "Point";
 
     /**
      *
@@ -46,13 +52,6 @@ public interface GeoLocation {
     @NotNull
     @JsonProperty("coordinates")
     public List<Integer> getCoordinates();
-
-    /**
-     * set type
-     * @param type value to be set
-     */
-
-    public void setType(final String type);
 
     /**
      * set coordinates
@@ -84,10 +83,11 @@ public interface GeoLocation {
      */
     public static GeoLocation of(final GeoLocation template) {
         GeoLocationImpl instance = new GeoLocationImpl();
-        instance.setType(template.getType());
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
+
+    public GeoLocation copyDeep();
 
     /**
      * factory method to create a deep copy of GeoLocation
@@ -100,7 +100,6 @@ public interface GeoLocation {
             return null;
         }
         GeoLocationImpl instance = new GeoLocationImpl();
-        instance.setType(template.getType());
         instance.setCoordinates(Optional.ofNullable(template.getCoordinates()).map(ArrayList::new).orElse(null));
         return instance;
     }
@@ -136,8 +135,8 @@ public interface GeoLocation {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GeoLocation> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GeoLocation>() {
+    public static tools.jackson.core.type.TypeReference<GeoLocation> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GeoLocation>() {
             @Override
             public String toString() {
                 return "TypeReference<GeoLocation>";

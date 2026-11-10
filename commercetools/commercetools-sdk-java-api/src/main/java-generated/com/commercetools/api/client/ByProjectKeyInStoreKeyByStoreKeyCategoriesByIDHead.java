@@ -1,0 +1,137 @@
+
+package com.commercetools.api.client;
+
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+
+/**
+ *  <p>Checks if a Category exists with the provided <code>id</code> in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Returns a <code>200</code> status if the Category exists in the Store or is global, or a <code>404</code> status otherwise.</p>
+ *  <p>For global Categories, use the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/categories/{id}:HEAD" rel="nofollow">Check if Category exists by ID</a> endpoint.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .categories()
+ *            .withId("{ID}")
+ *            .head()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead
+        extends TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead, tools.jackson.databind.JsonNode>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead>,
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead> {
+
+    @Override
+    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<tools.jackson.databind.JsonNode>() {
+        };
+    }
+
+    private String projectKey;
+    private String storeKey;
+    private String ID;
+
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead(final ApiHttpClient apiHttpClient, String projectKey,
+            String storeKey, String ID) {
+        super(apiHttpClient);
+        this.projectKey = projectKey;
+        this.storeKey = storeKey;
+        this.ID = ID;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead(ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.ID = t.ID;
+    }
+
+    @Override
+    protected ApiHttpRequest buildHttpRequest() {
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
+        String httpRequestPath = String.format("%s/in-store/key=%s/categories/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey), encodePathParam(this.ID));
+        if (!params.isEmpty()) {
+            httpRequestPath += "?" + String.join("&", params);
+        }
+        return new ApiHttpRequest(ApiHttpMethod.HEAD, URI.create(httpRequestPath), getHeaders(), null);
+    }
+
+    @Override
+    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+            final Duration timeout) {
+        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
+        return execute(client, tools.jackson.databind.JsonNode.class);
+    }
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getStoreKey() {
+        return this.storeKey;
+    }
+
+    public String getID() {
+        return this.ID;
+    }
+
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    public void setStoreKey(final String storeKey) {
+        this.storeKey = storeKey;
+    }
+
+    public void setID(final String ID) {
+        this.ID = ID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead that = (ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(ID, that.ID)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(ID).toHashCode();
+    }
+
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead copy() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCategoriesByIDHead(this);
+    }
+}

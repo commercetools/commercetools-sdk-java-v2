@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExternalId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetExternalIdActionImpl.class)
 public interface CategorySetExternalIdAction extends CategoryUpdateAction {
@@ -34,7 +36,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     String SET_EXTERNAL_ID = "setExternalId";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalId
      */
 
@@ -42,7 +44,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     public String getExternalId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalId value to be set
      */
 
@@ -66,6 +68,8 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public CategorySetExternalIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetExternalIdAction
@@ -113,8 +117,8 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction>() {
+    public static tools.jackson.core.type.TypeReference<CategorySetExternalIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CategorySetExternalIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySetExternalIdAction>";

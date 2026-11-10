@@ -7,8 +7,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CartReference;
@@ -18,11 +16,15 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.quote_request.QuoteRequestReference;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedQuote
@@ -112,7 +114,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public StagedQuoteState getStagedQuoteState();
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @return customer
      */
     @Valid
@@ -129,7 +131,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public QuoteRequestReference getQuoteRequest();
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items.</p>
      * @return quotationCart
      */
     @NotNull
@@ -138,7 +140,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public CartReference getQuotationCart();
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @return validTo
      */
 
@@ -146,7 +148,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @return sellerComment
      */
 
@@ -162,7 +164,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public CustomFields getCustom();
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -170,7 +172,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public StateReference getState();
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The purchase order number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -178,12 +180,20 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")
     public BusinessUnitKeyReference getBusinessUnit();
+
+    /**
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
+     * @return store
+     */
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>
@@ -242,7 +252,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param customer value to be set
      */
 
@@ -256,21 +266,21 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setQuoteRequest(final QuoteRequestReference quoteRequest);
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items.</p>
      * @param quotationCart value to be set
      */
 
     public void setQuotationCart(final CartReference quotationCart);
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @param validTo value to be set
      */
 
     public void setValidTo(final ZonedDateTime validTo);
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @param sellerComment value to be set
      */
 
@@ -284,25 +294,32 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The purchase order number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
+    /**
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
+     * @param store value to be set
+     */
+
+    public void setStore(final StoreKeyReference store);
 
     /**
      * factory method
@@ -336,8 +353,11 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
+        instance.setStore(template.getStore());
         return instance;
     }
+
+    public StagedQuote copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuote
@@ -371,6 +391,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
 
@@ -405,8 +426,8 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuote> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuote>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuote> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuote>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuote>";

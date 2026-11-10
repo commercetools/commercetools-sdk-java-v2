@@ -4,44 +4,39 @@ package com.commercetools.api.models.associate_role;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateRoleTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateRoleBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateRoleBuilder builder) {
         AssociateRole associateRole = builder.buildUnchecked();
         Assertions.assertThat(associateRole).isInstanceOf(AssociateRole.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AssociateRole.builder().id("id") },
-                new Object[] { AssociateRole.builder().version(2L) },
-                new Object[] { AssociateRole.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { AssociateRole.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { AssociateRole.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", AssociateRole.builder().id("id") },
+                new Object[] { "version", AssociateRole.builder().version(2L) },
+                new Object[] { "createdAt",
+                        AssociateRole.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        AssociateRole.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        AssociateRole.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         AssociateRole.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { AssociateRole.builder().key("key") },
-                new Object[] { AssociateRole.builder().buyerAssignable(true) },
-                new Object[] { AssociateRole.builder().name("name") },
-                new Object[] { AssociateRole.builder()
+                new Object[] { "key", AssociateRole.builder().key("key") },
+                new Object[] { "buyerAssignable", AssociateRole.builder().buyerAssignable(true) },
+                new Object[] { "name", AssociateRole.builder().name("name") },
+                new Object[] { "permissions", AssociateRole.builder()
                         .permissions(Collections.singletonList(
                             com.commercetools.api.models.associate_role.Permission.findEnum("AddChildUnits"))) },
-                new Object[] {
+                new Object[] { "custom",
                         AssociateRole.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListSetTextLineItemDescriptionAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTextLineItemDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListSetTextLineItemDescriptionActionImpl.class)
 public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppingListUpdateAction {
@@ -36,7 +38,7 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
@@ -44,7 +46,7 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     public String getTextLineItemId();
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemKey
      */
 
@@ -52,7 +54,7 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     public String getTextLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -60,21 +62,21 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     public LocalizedString getDescription();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
 
     /**
-     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemKey value to be set
      */
 
     public void setTextLineItemKey(final String textLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 
@@ -101,6 +103,8 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public MyShoppingListSetTextLineItemDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListSetTextLineItemDescriptionAction
@@ -154,8 +158,8 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListSetTextLineItemDescriptionAction>";

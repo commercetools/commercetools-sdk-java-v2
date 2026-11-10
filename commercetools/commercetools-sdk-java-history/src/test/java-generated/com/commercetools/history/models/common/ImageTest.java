@@ -1,33 +1,25 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImageBuilder builder) {
         Image image = builder.buildUnchecked();
         Assertions.assertThat(image).isInstanceOf(Image.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Image.builder().url("url") },
-                new Object[] {
+        return new Object[][] { new Object[] { "url", Image.builder().url("url") },
+                new Object[] { "dimensions",
                         Image.builder().dimensions(new com.commercetools.history.models.common.ImageDimensionsImpl()) },
-                new Object[] { Image.builder().label("label") } };
+                new Object[] { "label", Image.builder().label("label") } };
     }
 
     @Test

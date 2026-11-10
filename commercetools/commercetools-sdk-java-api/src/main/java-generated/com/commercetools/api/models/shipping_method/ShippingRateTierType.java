@@ -16,10 +16,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShippingRateTierType extends JsonEnum {
 
+    /**
+    <p><span>CartValueTier</span> based on the total value of the cart.</p> */
     ShippingRateTierType CART_VALUE = ShippingRateTierTypeEnum.CART_VALUE;
-
+    /**
+    <p><span>CartClassificationTier</span> based on classifications assigned to the cart.</p> */
     ShippingRateTierType CART_CLASSIFICATION = ShippingRateTierTypeEnum.CART_CLASSIFICATION;
-
+    /**
+    <p><span>CartScoreTier</span> based on a scoring system applied to the cart.</p> */
     ShippingRateTierType CART_SCORE = ShippingRateTierTypeEnum.CART_SCORE;
 
     /**

@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DuplicateAttributeValueErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DuplicateAttributeValueErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DuplicateAttributeValueErrorBuilder builder) {
         DuplicateAttributeValueError duplicateAttributeValueError = builder.buildUnchecked();
         Assertions.assertThat(duplicateAttributeValueError).isInstanceOf(DuplicateAttributeValueError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DuplicateAttributeValueError.builder().message("message") },
-                new Object[] { DuplicateAttributeValueError.builder()
+        return new Object[][] { new Object[] { "message", DuplicateAttributeValueError.builder().message("message") },
+                new Object[] { "attribute", DuplicateAttributeValueError.builder()
                         .attribute(new com.commercetools.api.models.product.AttributeImpl()) } };
     }
 

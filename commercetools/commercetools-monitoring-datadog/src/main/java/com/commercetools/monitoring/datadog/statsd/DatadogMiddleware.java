@@ -6,13 +6,14 @@ import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.timgroup.statsd.StatsDClient;
 
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
@@ -40,8 +41,18 @@ public class DatadogMiddleware implements TelemetryMiddleware {
 
     private final StatsDClient statsDClient;
 
+    private final Collection<String> tags;
+
     public DatadogMiddleware(final StatsDClient datadogStatsDClient) {
+        this(datadogStatsDClient, Collections.emptyMap());
+    }
+
+    public DatadogMiddleware(final StatsDClient datadogStatsDClient, final Map<String, String> tags) {
         this.statsDClient = datadogStatsDClient;
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -49,11 +60,22 @@ public class DatadogMiddleware implements TelemetryMiddleware {
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         final Instant start = Instant.now();
 
-        return next.apply(request).thenApply(response -> {
+        return next.apply(request).handle((response, throwable) -> {
             final List<String> tags = new ArrayList<>(4);
-            tags.add(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, response.getStatusCode()));
+            final int statusCode;
+            if (response != null) {
+                statusCode = response.getStatusCode();
+            }
+            else if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                statusCode = ((ApiHttpException) throwable).getResponse().getStatusCode();
+            }
+            else {
+                statusCode = 0;
+            }
+            tags.add(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, statusCode));
             tags.add(format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()));
             tags.add(format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
+            tags.addAll(this.tags);
             if (request.getUri().getPort() > 0) {
                 tags.add(format("%s:%s", SERVER_PORT, request.getUri().getPort()));
             }
@@ -62,7 +84,7 @@ public class DatadogMiddleware implements TelemetryMiddleware {
                 Duration.between(start, Instant.now()).toMillis(), tags.toArray(new String[0]));
 
             this.statsDClient.incrementCounter(PREFIX + "." + CLIENT_REQUEST_TOTAL, tags.toArray(new String[0]));
-            if (response.getStatusCode() >= 400) {
+            if (statusCode >= 400 || throwable != null) {
                 this.statsDClient.incrementCounter(PREFIX + "." + CLIENT_REQUEST_ERROR, tags.toArray(new String[0]));
             }
             return response;

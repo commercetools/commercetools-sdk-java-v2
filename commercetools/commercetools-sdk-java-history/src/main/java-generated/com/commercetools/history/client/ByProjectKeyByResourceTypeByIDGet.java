@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import com.commercetools.history.models.change_history.PlatformInitiatedChange;
-import com.fasterxml.jackson.core.type.TypeReference;
+import com.commercetools.history.models.change_history.Source;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,8 +20,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the resource type queried, their respective scopes must be granted.</p>
+ *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the <a href="https://docs.commercetools.com/apis/ctp:history:type:ChangeHistoryResourceType" rel="nofollow">resource type</a> queried, their respective scopes must be granted.</p>
+ *  <p>If the request exceeds the rate limit, a <a href="https://docs.commercetools.com/apis/ctp:history:type:TooManyRequestsError" rel="nofollow">TooManyRequests</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -67,7 +70,8 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/%s/%s", this.projectKey, this.resourceType, this.ID);
+        String httpRequestPath = String.format("%s/%s/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.resourceType), encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
@@ -119,6 +123,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
         return this.getQueryParam("userId");
     }
 
+    public List<String> getUserIds() {
+        return this.getQueryParam("userIds");
+    }
+
     public List<String> getClientId() {
         return this.getQueryParam("clientId");
     }
@@ -157,6 +165,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
+    }
+
+    public List<String> getWithTotal() {
+        return this.getQueryParam("withTotal");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -565,6 +577,85 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public <TValue> ByProjectKeyByResourceTypeByIDGet addUserId(final Collection<TValue> userId) {
         return copy().addQueryParams(
             userId.stream().map(s -> new ParamEntry<>("userId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set userIds with the specified value
+     * @param userIds value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withUserIds(final TValue userIds) {
+        return copy().withQueryParam("userIds", userIds);
+    }
+
+    /**
+     * add additional userIds query parameter
+     * @param userIds value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addUserIds(final TValue userIds) {
+        return copy().addQueryParam("userIds", userIds);
+    }
+
+    /**
+     * set userIds with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withUserIds(final Supplier<String> supplier) {
+        return copy().withQueryParam("userIds", supplier.get());
+    }
+
+    /**
+     * add additional userIds query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addUserIds(final Supplier<String> supplier) {
+        return copy().addQueryParam("userIds", supplier.get());
+    }
+
+    /**
+     * set userIds with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withUserIds(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("userIds", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional userIds query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addUserIds(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("userIds", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set userIds with the specified values
+     * @param userIds values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withUserIds(final Collection<TValue> userIds) {
+        return copy().withoutQueryParam("userIds")
+                .addQueryParams(
+                    userIds.stream().map(s -> new ParamEntry<>("userIds", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional userIds query parameters
+     * @param userIds values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addUserIds(final Collection<TValue> userIds) {
+        return copy().addQueryParams(
+            userIds.stream().map(s -> new ParamEntry<>("userIds", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -992,7 +1083,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyByResourceTypeByIDGet
      */
-    public ByProjectKeyByResourceTypeByIDGet withSource(final Supplier<String> supplier) {
+    public ByProjectKeyByResourceTypeByIDGet withSource(final Supplier<Source> supplier) {
         return copy().withQueryParam("source", supplier.get());
     }
 
@@ -1001,7 +1092,7 @@ public class ByProjectKeyByResourceTypeByIDGet extends
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyByResourceTypeByIDGet
      */
-    public ByProjectKeyByResourceTypeByIDGet addSource(final Supplier<String> supplier) {
+    public ByProjectKeyByResourceTypeByIDGet addSource(final Supplier<Source> supplier) {
         return copy().addQueryParam("source", supplier.get());
     }
 
@@ -1370,6 +1461,86 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public <TValue> ByProjectKeyByResourceTypeByIDGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withWithTotal(final TValue withTotal) {
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addWithTotal(final TValue withTotal) {
+        return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withWithTotal(final Collection<TValue> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addWithTotal(final Collection<TValue> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

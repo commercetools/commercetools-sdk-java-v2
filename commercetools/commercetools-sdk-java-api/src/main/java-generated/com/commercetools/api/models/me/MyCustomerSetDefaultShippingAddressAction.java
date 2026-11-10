@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. If the address is not currently a shipping address, it is added to <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDefaultShippingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetDefaultShippingAddressActionImpl.class)
 public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpdateAction {
@@ -34,7 +36,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressId
      */
 
@@ -42,7 +44,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressKey
      */
 
@@ -50,14 +52,14 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressKey value to be set
      */
 
@@ -83,6 +85,8 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public MyCustomerSetDefaultShippingAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetDefaultShippingAddressAction
@@ -134,8 +138,8 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetDefaultShippingAddressAction>";

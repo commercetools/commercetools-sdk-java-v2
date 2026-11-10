@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Revert Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductRevertedStagedChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
@@ -43,7 +45,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -51,7 +53,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -59,7 +61,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -93,6 +95,8 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public ProductRevertedStagedChangesMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRevertedStagedChangesMessage
@@ -155,8 +159,8 @@ public interface ProductRevertedStagedChangesMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRevertedStagedChangesMessage>";

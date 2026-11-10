@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * GeoJsonPoint
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Point")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
@@ -36,7 +38,7 @@ public interface GeoJsonPoint extends GeoJson {
     String POINT = "Point";
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @return coordinates
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface GeoJsonPoint extends GeoJson {
     public List<Double> getCoordinates();
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @param coordinates values to be set
      */
 
@@ -52,7 +54,7 @@ public interface GeoJsonPoint extends GeoJson {
     public void setCoordinates(final Double... coordinates);
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @param coordinates values to be set
      */
 
@@ -76,6 +78,8 @@ public interface GeoJsonPoint extends GeoJson {
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
+
+    public GeoJsonPoint copyDeep();
 
     /**
      * factory method to create a deep copy of GeoJsonPoint
@@ -123,8 +127,8 @@ public interface GeoJsonPoint extends GeoJson {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint>() {
+    public static tools.jackson.core.type.TypeReference<GeoJsonPoint> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GeoJsonPoint>() {
             @Override
             public String toString() {
                 return "TypeReference<GeoJsonPoint>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> in a Store can be activated or deactivated using this update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreChangeProductSelectionActionImpl implements StoreChangeProductSelectionAction, ModelBase {
@@ -64,7 +65,7 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
     }
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {
@@ -112,4 +113,8 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
                 .build();
     }
 
+    @Override
+    public StoreChangeProductSelectionAction copyDeep() {
+        return StoreChangeProductSelectionAction.deepCopy(this);
+    }
 }

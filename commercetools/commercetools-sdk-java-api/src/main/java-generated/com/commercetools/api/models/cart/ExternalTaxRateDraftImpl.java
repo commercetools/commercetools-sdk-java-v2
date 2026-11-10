@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+ *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartTaxCalculation" rel="nofollow">Cart tax calculation</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase {
@@ -34,6 +35,8 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      * create instance with all properties
      */
@@ -41,13 +44,15 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     ExternalTaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("taxRoundingTarget") final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
         this.name = name;
         this.amount = amount;
         this.includedInPrice = includedInPrice;
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.taxRoundingTarget = taxRoundingTarget;
     }
 
     /**
@@ -104,11 +109,19 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
+    }
+
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when <code>includedInPrice</code> is <code>true</code>. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
     }
 
     public void setName(final String name) {
@@ -139,6 +152,11 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         this.subRates = subRates;
     }
 
+    public void setTaxRoundingTarget(
+            final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -155,12 +173,14 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .append(name, that.name)
                 .append(amount, that.amount)
                 .append(includedInPrice, that.includedInPrice)
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .isEquals();
     }
 
@@ -172,6 +192,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(taxRoundingTarget)
                 .toHashCode();
     }
 
@@ -183,7 +204,12 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append("country", country)
                 .append("state", state)
                 .append("subRates", subRates)
+                .append("taxRoundingTarget", taxRoundingTarget)
                 .build();
     }
 
+    @Override
+    public ExternalTaxRateDraft copyDeep() {
+        return ExternalTaxRateDraft.deepCopy(this);
+    }
 }

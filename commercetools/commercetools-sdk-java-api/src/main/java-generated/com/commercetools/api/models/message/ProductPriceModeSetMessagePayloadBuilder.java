@@ -24,7 +24,7 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
     private com.commercetools.api.models.product.ProductPriceModeEnum to;
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @param to value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @return to
      */
 

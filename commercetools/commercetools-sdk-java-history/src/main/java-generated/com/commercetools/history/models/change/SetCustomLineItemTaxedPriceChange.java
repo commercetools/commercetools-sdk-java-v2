@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.LocalizedString;
-import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetCustomLineItemTaxedPriceChange
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetCustomLineItemTaxedPriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomLineItemTaxedPriceChangeImpl.class)
 public interface SetCustomLineItemTaxedPriceChange extends Change {
@@ -65,7 +67,7 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Money getPreviousValue();
+    public TaxedItemPrice getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -74,10 +76,10 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Money getNextValue();
+    public TaxedItemPrice getNextValue();
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -86,7 +88,7 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -105,24 +107,24 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Money previousValue);
+    public void setPreviousValue(final TaxedItemPrice previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final Money nextValue);
+    public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      */
 
     public void setCustomLineItem(final LocalizedString customLineItem);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
@@ -151,6 +153,8 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
         return instance;
     }
 
+    public SetCustomLineItemTaxedPriceChange copyDeep();
+
     /**
      * factory method to create a deep copy of SetCustomLineItemTaxedPriceChange
      * @param template instance to be copied
@@ -164,8 +168,9 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
         }
         SetCustomLineItemTaxedPriceChangeImpl instance = new SetCustomLineItemTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -203,8 +208,8 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTaxedPriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTaxedPriceChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCustomLineItemTaxedPriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCustomLineItemTaxedPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCustomLineItemTaxedPriceChange>";

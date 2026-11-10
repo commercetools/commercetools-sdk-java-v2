@@ -3,33 +3,25 @@ package com.commercetools.api.models.subscription;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ResourceDeletedDeliveryPayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ResourceDeletedDeliveryPayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ResourceDeletedDeliveryPayloadBuilder builder) {
         ResourceDeletedDeliveryPayload resourceDeletedDeliveryPayload = builder.buildUnchecked();
         Assertions.assertThat(resourceDeletedDeliveryPayload).isInstanceOf(ResourceDeletedDeliveryPayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ResourceDeletedDeliveryPayload.builder().version(2L) },
-                new Object[] {
+        return new Object[][] { new Object[] { "version", ResourceDeletedDeliveryPayload.builder().version(2L) },
+                new Object[] { "modifiedAt",
                         ResourceDeletedDeliveryPayload.builder().modifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ResourceDeletedDeliveryPayload.builder().dataErasure(true) } };
+                new Object[] { "dataErasure", ResourceDeletedDeliveryPayload.builder().dataErasure(true) } };
     }
 
     @Test

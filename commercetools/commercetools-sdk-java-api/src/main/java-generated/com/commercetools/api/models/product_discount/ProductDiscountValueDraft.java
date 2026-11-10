@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountValueDraft
@@ -26,10 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftImpl.class, name = ProductDiscountValueAbsoluteDraft.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraftImpl.class, name = ProductDiscountValueExternalDraft.EXTERNAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftImpl.class, name = ProductDiscountValueRelativeDraft.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductDiscountValueDraftImpl.class, visible = true)
 @JsonDeserialize(as = ProductDiscountValueDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface ProductDiscountValueDraft {
     @JsonProperty("type")
     public String getType();
 
+    public ProductDiscountValueDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountValueDraft
      * @param template instance to be copied
@@ -53,17 +52,9 @@ public interface ProductDiscountValueDraft {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft.deepCopy(
-                (com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft.deepCopy(
-                (com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft.deepCopy(
-                (com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft) template);
+
+        if (!(template instanceof ProductDiscountValueDraftImpl)) {
+            return template.copyDeep();
         }
         ProductDiscountValueDraftImpl instance = new ProductDiscountValueDraftImpl();
         return instance;
@@ -107,8 +98,8 @@ public interface ProductDiscountValueDraft {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueDraft>";

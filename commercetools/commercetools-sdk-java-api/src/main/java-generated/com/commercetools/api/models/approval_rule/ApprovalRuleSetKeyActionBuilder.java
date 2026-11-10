@@ -26,7 +26,7 @@ public class ApprovalRuleSetKeyActionBuilder implements Builder<ApprovalRuleSetK
     private String key;
 
     /**
-     *  <p>Value to set. Must be unique within a Business Unit. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique within a Business Unit. If omitted, any existing value is removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ApprovalRuleSetKeyActionBuilder implements Builder<ApprovalRuleSetK
     }
 
     /**
-     *  <p>Value to set. Must be unique within a Business Unit. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique within a Business Unit. If omitted, any existing value is removed.</p>
      * @return key
      */
 

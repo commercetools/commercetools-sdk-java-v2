@@ -31,7 +31,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference newParentUnit;
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the oldParentUnit value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the oldParentUnit value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param oldParentUnit value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the newParentUnit value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the newParentUnit value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param newParentUnit value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return oldParentUnit
      */
 
@@ -119,7 +119,7 @@ public class BusinessUnitParentChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return newParentUnit
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove ProductVariant update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove ProductVariant</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload, ModelBase {
@@ -28,15 +29,19 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
 
     private java.util.List<String> removedImageUrls;
 
+    private Boolean staged;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ProductVariantDeletedMessagePayloadImpl(
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
-            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
+            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls,
+            @JsonProperty("staged") final Boolean staged) {
         this.variant = variant;
         this.removedImageUrls = removedImageUrls;
+        this.staged = staged;
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
@@ -56,7 +61,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -64,11 +69,19 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
+    }
+
+    /**
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     public void setVariant(final com.commercetools.api.models.product.ProductVariant variant) {
@@ -81,6 +94,10 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
 
     public void setRemovedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
     }
 
     @Override
@@ -96,15 +113,21 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
         return new EqualsBuilder().append(type, that.type)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .append(type, that.type)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(variant).append(removedImageUrls).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(variant)
+                .append(removedImageUrls)
+                .append(staged)
+                .toHashCode();
     }
 
     @Override
@@ -112,7 +135,12 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("variant", variant)
                 .append("removedImageUrls", removedImageUrls)
+                .append("staged", staged)
                 .build();
     }
 
+    @Override
+    public ProductVariantDeletedMessagePayload copyDeep() {
+        return ProductVariantDeletedMessagePayload.deepCopy(this);
+    }
 }

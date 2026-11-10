@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
@@ -19,9 +17,12 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Store
@@ -153,10 +154,10 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @return productSelections
      */
@@ -172,6 +173,14 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+    @Valid
+    @JsonProperty("storefront")
+    public Storefront getStorefront();
 
     /**
      *  <p>Unique ID of the Store.</p>
@@ -292,10 +301,10 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param productSelections values to be set
      */
@@ -306,10 +315,10 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param productSelections values to be set
      */
@@ -322,6 +331,13 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      */
 
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     */
+
+    public void setStorefront(final Storefront storefront);
 
     /**
      * factory method
@@ -352,8 +368,11 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
+        instance.setStorefront(template.getStorefront());
         return instance;
     }
+
+    public Store copyDeep();
 
     /**
      * factory method to create a deep copy of Store
@@ -397,6 +416,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStorefront(com.commercetools.api.models.store.Storefront.deepCopy(template.getStorefront()));
         return instance;
     }
 
@@ -435,8 +455,8 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Store> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Store>() {
+    public static tools.jackson.core.type.TypeReference<Store> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Store>() {
             @Override
             public String toString() {
                 return "TypeReference<Store>";

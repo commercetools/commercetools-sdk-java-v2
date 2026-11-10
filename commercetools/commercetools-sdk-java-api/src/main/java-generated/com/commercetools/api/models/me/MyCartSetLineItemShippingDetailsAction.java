@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCartSetLineItemShippingDetailsAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLineItemShippingDetails")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetLineItemShippingDetailsActionImpl.class)
 public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateAction {
@@ -36,7 +38,7 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -44,7 +46,7 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     public String getLineItemId();
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -52,7 +54,7 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     public String getLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @return shippingDetails
      */
     @Valid
@@ -60,21 +62,21 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param shippingDetails value to be set
      */
 
@@ -100,6 +102,8 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public MyCartSetLineItemShippingDetailsAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartSetLineItemShippingDetailsAction
@@ -153,8 +157,8 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemShippingDetailsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemShippingDetailsAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetLineItemShippingDetailsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetLineItemShippingDetailsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetLineItemShippingDetailsAction>";

@@ -27,7 +27,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
     private Integer deleteDaysAfterCreation;
 
     /**
-     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     *  <p>Setting to <code>true</code> activates the <span>Messages Query</span> feature.</p>
      * @param enabled value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
     }
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @param deleteDaysAfterCreation value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
     }
 
     /**
-     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     *  <p>Setting to <code>true</code> activates the <span>Messages Query</span> feature.</p>
      * @return enabled
      */
 
@@ -58,7 +58,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
     }
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @return deleteDaysAfterCreation
      */
 

@@ -6,13 +6,14 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * InvalidStateTransitionError
@@ -29,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
@@ -39,7 +41,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @return currentState
      */
     @NotNull
@@ -47,7 +49,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public ProcessingState getCurrentState();
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @return newState
      */
     @NotNull
@@ -55,14 +57,14 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public ProcessingState getNewState();
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @param currentState value to be set
      */
 
     public void setCurrentState(final ProcessingState currentState);
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @param newState value to be set
      */
 
@@ -88,6 +90,8 @@ public interface InvalidStateTransitionError extends ErrorObject {
         instance.setNewState(template.getNewState());
         return instance;
     }
+
+    public InvalidStateTransitionError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidStateTransitionError
@@ -137,8 +141,8 @@ public interface InvalidStateTransitionError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError>() {
+    public static tools.jackson.core.type.TypeReference<InvalidStateTransitionError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InvalidStateTransitionError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidStateTransitionError>";

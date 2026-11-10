@@ -62,6 +62,9 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     @Nullable
     private java.lang.Object previousValue;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -191,7 +194,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -203,7 +206,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -276,7 +279,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -287,7 +290,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Customer Address before, a Customer Address Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Customer Address before, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldAddedMessage" rel="nofollow">Customer Address Custom Field Added</a> Message is generated instead.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -295,6 +298,17 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     public CustomerAddressCustomFieldChangedMessageBuilder previousValue(
             @Nullable final java.lang.Object previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldChangedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -364,7 +378,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -401,7 +415,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
 
@@ -410,13 +424,23 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Customer Address before, a Customer Address Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Customer Address before, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldAddedMessage" rel="nofollow">Customer Address Custom Field Added</a> Message is generated instead.</p>
      * @return previousValue
      */
 
     @Nullable
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
+    }
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -438,7 +462,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
         Objects.requireNonNull(value, CustomerAddressCustomFieldChangedMessage.class + ": value is missing");
         return new CustomerAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
-            previousValue);
+            previousValue, addressId);
     }
 
     /**
@@ -448,7 +472,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     public CustomerAddressCustomFieldChangedMessage buildUnchecked() {
         return new CustomerAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
-            previousValue);
+            previousValue, addressId);
     }
 
     /**
@@ -480,6 +504,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
         builder.name = template.getName();
         builder.value = template.getValue();
         builder.previousValue = template.getPreviousValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

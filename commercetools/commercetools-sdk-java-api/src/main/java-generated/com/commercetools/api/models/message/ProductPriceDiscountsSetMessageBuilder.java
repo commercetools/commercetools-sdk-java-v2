@@ -184,7 +184,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -314,7 +314,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -329,7 +329,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param builder function to build the updatedPrices value
      * @return Builder
      */
@@ -418,7 +418,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -446,7 +446,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @return updatedPrices
      */
 

@@ -184,7 +184,7 @@ public class BusinessUnitStatusChangedMessageBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class BusinessUnitStatusChangedMessageBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class BusinessUnitStatusChangedMessageBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class BusinessUnitStatusChangedMessageBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -363,7 +363,7 @@ public class BusinessUnitStatusChangedMessageBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return active
      */
 

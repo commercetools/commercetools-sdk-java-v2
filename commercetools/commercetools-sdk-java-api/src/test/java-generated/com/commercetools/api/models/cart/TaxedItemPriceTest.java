@@ -3,39 +3,33 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxedItemPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxedItemPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxedItemPriceBuilder builder) {
         TaxedItemPrice taxedItemPrice = builder.buildUnchecked();
         Assertions.assertThat(taxedItemPrice).isInstanceOf(TaxedItemPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { TaxedItemPrice.builder()
-                        .totalNet(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { TaxedItemPrice.builder()
-                        .totalGross(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] {
+                new Object[] { "totalNet",
+                        TaxedItemPrice.builder()
+                                .totalNet(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "totalGross",
+                        TaxedItemPrice.builder()
+                                .totalGross(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "taxPortions",
                         TaxedItemPrice.builder()
                                 .taxPortions(Collections
                                         .singletonList(new com.commercetools.api.models.cart.TaxPortionImpl())) },
-                new Object[] { TaxedItemPrice.builder()
+                new Object[] { "totalTax", TaxedItemPrice.builder()
                         .totalTax(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) } };
     }
 

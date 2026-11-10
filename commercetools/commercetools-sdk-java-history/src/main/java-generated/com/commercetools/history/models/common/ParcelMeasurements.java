@@ -6,12 +6,12 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelMeasurements
@@ -21,10 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
- *             .heightInMillimeter(1)
- *             .lengthInMillimeter(1)
- *             .widthInMillimeter(1)
- *             .weightInGram(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,60 +30,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelMeasurements {
 
     /**
-     *
+     *  <p>Height of the Parcel.</p>
      * @return heightInMillimeter
      */
-    @NotNull
+
     @JsonProperty("heightInMillimeter")
     public Integer getHeightInMillimeter();
 
     /**
-     *
+     *  <p>Length of the Parcel.</p>
      * @return lengthInMillimeter
      */
-    @NotNull
+
     @JsonProperty("lengthInMillimeter")
     public Integer getLengthInMillimeter();
 
     /**
-     *
+     *  <p>Width of the Parcel.</p>
      * @return widthInMillimeter
      */
-    @NotNull
+
     @JsonProperty("widthInMillimeter")
     public Integer getWidthInMillimeter();
 
     /**
-     *
+     *  <p>Weight of the Parcel.</p>
      * @return weightInGram
      */
-    @NotNull
+
     @JsonProperty("weightInGram")
     public Integer getWeightInGram();
 
     /**
-     * set heightInMillimeter
+     *  <p>Height of the Parcel.</p>
      * @param heightInMillimeter value to be set
      */
 
     public void setHeightInMillimeter(final Integer heightInMillimeter);
 
     /**
-     * set lengthInMillimeter
+     *  <p>Length of the Parcel.</p>
      * @param lengthInMillimeter value to be set
      */
 
     public void setLengthInMillimeter(final Integer lengthInMillimeter);
 
     /**
-     * set widthInMillimeter
+     *  <p>Width of the Parcel.</p>
      * @param widthInMillimeter value to be set
      */
 
     public void setWidthInMillimeter(final Integer widthInMillimeter);
 
     /**
-     * set weightInGram
+     *  <p>Weight of the Parcel.</p>
      * @param weightInGram value to be set
      */
 
@@ -114,6 +110,8 @@ public interface ParcelMeasurements {
         instance.setWeightInGram(template.getWeightInGram());
         return instance;
     }
+
+    public ParcelMeasurements copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelMeasurements
@@ -164,8 +162,8 @@ public interface ParcelMeasurements {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurements> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurements>() {
+    public static tools.jackson.core.type.TypeReference<ParcelMeasurements> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelMeasurements>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelMeasurements>";

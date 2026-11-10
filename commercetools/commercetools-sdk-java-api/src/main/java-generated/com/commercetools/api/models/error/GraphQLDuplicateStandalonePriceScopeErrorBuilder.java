@@ -116,7 +116,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the conflicting Standalone Price is associated.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -267,7 +267,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the conflicting Standalone Price is associated.</p>
      * @return sku
      */
 
@@ -295,7 +295,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the Standalone Price is valid.</p>
      * @return customerGroup
      */
 
@@ -305,7 +305,7 @@ public class GraphQLDuplicateStandalonePriceScopeErrorBuilder
     }
 
     /**
-     *  <p>Channel for which the Standalone Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the Standalone Price is valid.</p>
      * @return channel
      */
 

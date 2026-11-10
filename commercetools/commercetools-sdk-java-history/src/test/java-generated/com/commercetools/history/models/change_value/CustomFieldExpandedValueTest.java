@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomFieldExpandedValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomFieldExpandedValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomFieldExpandedValueBuilder builder) {
         CustomFieldExpandedValue customFieldExpandedValue = builder.buildUnchecked();
         Assertions.assertThat(customFieldExpandedValue).isInstanceOf(CustomFieldExpandedValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomFieldExpandedValue.builder().name("name") },
-                new Object[] { CustomFieldExpandedValue.builder().value("value") },
-                new Object[] { CustomFieldExpandedValue.builder()
+        return new Object[][] { new Object[] { "name", CustomFieldExpandedValue.builder().name("name") },
+                new Object[] { "value", CustomFieldExpandedValue.builder().value("value") },
+                new Object[] { "label", CustomFieldExpandedValue.builder()
                         .label(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
     }
 

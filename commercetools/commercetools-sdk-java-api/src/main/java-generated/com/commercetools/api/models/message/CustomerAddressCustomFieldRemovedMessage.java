@@ -6,15 +6,16 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Field from an Address of a Customer using the Set CustomField in Address update action.</p>
+ *  <p>Generated after removing a Custom Field from an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerAddressCustomFieldRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerAddressCustomFieldRemovedMessageImpl.class)
 public interface CustomerAddressCustomFieldRemovedMessage extends Message {
@@ -51,11 +53,26 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
     public String getName();
 
     /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -83,8 +100,11 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setName(template.getName());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public CustomerAddressCustomFieldRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerAddressCustomFieldRemovedMessage
@@ -111,6 +131,7 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setName(template.getName());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -147,8 +168,8 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerAddressCustomFieldRemovedMessage>";

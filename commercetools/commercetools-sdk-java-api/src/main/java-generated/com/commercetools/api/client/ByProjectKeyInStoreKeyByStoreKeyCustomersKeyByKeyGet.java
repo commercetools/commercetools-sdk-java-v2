@@ -11,16 +11,16 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -71,8 +71,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/customers/key=%s", this.projectKey, this.storeKey,
-            this.key);
+        String httpRequestPath = String.format("%s/in-store/key=%s/customers/key=%s", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey), encodePathParam(this.key));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

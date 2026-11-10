@@ -6,19 +6,20 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> is missing a <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> on a <span>B2B resource</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateMissingPermission")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAssociateMissingPermissionErrorImpl.class)
 public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObject {
@@ -50,7 +52,7 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public String getCode();
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @return associate
      */
     @NotNull
@@ -59,7 +61,7 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public CustomerResourceIdentifier getAssociate();
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return businessUnit
      */
     @NotNull
@@ -68,7 +70,7 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @return associateOnBehalf
      */
     @Valid
@@ -76,7 +78,7 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public CustomerResourceIdentifier getAssociateOnBehalf();
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @return permissions
      */
     @NotNull
@@ -84,28 +86,28 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public List<Permission> getPermissions();
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @param associate value to be set
      */
 
     public void setAssociate(final CustomerResourceIdentifier associate);
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @param associateOnBehalf value to be set
      */
 
     public void setAssociateOnBehalf(final CustomerResourceIdentifier associateOnBehalf);
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
 
@@ -113,7 +115,7 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public void setPermissions(final Permission... permissions);
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
 
@@ -141,6 +143,8 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
         instance.setPermissions(template.getPermissions());
         return instance;
     }
+
+    public GraphQLAssociateMissingPermissionError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAssociateMissingPermissionError
@@ -198,8 +202,8 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLAssociateMissingPermissionError>";

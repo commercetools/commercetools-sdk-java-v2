@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentSetCustomerAction
@@ -52,7 +53,7 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
     }
 
     /**
-     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     *  <p>Value to set. If omitted, any existing reference is removed.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -92,4 +93,8 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
                 .build();
     }
 
+    @Override
+    public PaymentSetCustomerAction copyDeep() {
+        return PaymentSetCustomerAction.deepCopy(this);
+    }
 }

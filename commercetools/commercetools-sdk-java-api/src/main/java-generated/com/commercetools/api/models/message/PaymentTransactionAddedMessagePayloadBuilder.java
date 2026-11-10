@@ -25,7 +25,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     private com.commercetools.api.models.payment.Transaction transaction;
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param transaction value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return transaction
      */
 

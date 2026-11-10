@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountCodeSetValidFromAndUntilAction
@@ -55,7 +56,7 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
     }
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If omitted, any existing value is removed.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -63,7 +64,7 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
     }
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If omitted, any existing value is removed.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -110,4 +111,8 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetValidFromAndUntilAction copyDeep() {
+        return DiscountCodeSetValidFromAndUntilAction.deepCopy(this);
+    }
 }

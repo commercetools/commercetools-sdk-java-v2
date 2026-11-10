@@ -6,18 +6,19 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Product Tailoring Publish update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringPublishAction" rel="nofollow">Product Tailoring Publish</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductTailoringPublished")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringPublishedMessagePayloadImpl.class)
 public interface ProductTailoringPublishedMessagePayload extends MessagePayload {
@@ -107,6 +109,8 @@ public interface ProductTailoringPublishedMessagePayload extends MessagePayload 
         return instance;
     }
 
+    public ProductTailoringPublishedMessagePayload copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringPublishedMessagePayload
      * @param template instance to be copied
@@ -158,8 +162,8 @@ public interface ProductTailoringPublishedMessagePayload extends MessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringPublishedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringPublishedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringPublishedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringPublishedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringPublishedMessagePayload>";

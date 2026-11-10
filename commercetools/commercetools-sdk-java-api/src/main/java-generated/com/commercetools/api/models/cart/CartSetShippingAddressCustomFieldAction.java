@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartSetShippingAddressCustomFieldAction
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingAddressCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingAddressCustomFieldActionImpl.class)
 public interface CartSetShippingAddressCustomFieldAction extends CartUpdateAction {
@@ -36,7 +38,7 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
     String SET_SHIPPING_ADDRESS_CUSTOM_FIELD = "setShippingAddressCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -44,7 +46,7 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -52,14 +54,14 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -84,6 +86,8 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public CartSetShippingAddressCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetShippingAddressCustomFieldAction
@@ -139,8 +143,8 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingAddressCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingAddressCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetShippingAddressCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetShippingAddressCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetShippingAddressCustomFieldAction>";

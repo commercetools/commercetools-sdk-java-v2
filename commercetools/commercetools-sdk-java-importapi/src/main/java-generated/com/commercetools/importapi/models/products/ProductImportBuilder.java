@@ -42,6 +42,9 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     private java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories;
 
     @Nullable
+    private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
+
+    @Nullable
     private com.commercetools.importapi.models.common.LocalizedString metaTitle;
 
     @Nullable
@@ -66,7 +69,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -77,7 +80,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.name</code>.</p>
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -89,7 +92,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.name</code>.</p>
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -101,7 +104,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.name</code>.</p>
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -112,7 +115,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -125,7 +128,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -137,7 +140,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -149,7 +152,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -161,7 +164,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -173,7 +176,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -184,7 +187,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -196,7 +199,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -208,7 +211,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -220,7 +223,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -232,7 +235,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -244,7 +247,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -259,7 +262,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -275,7 +278,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -289,7 +292,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -301,7 +304,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -312,12 +315,76 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     * set values to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductImportBuilder attributes(
+            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     * set value to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductImportBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     * add values to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductImportBuilder plusAttributes(
+            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     * add a value to the attributes using the builder function
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductImportBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     * set the value to the attributes using the builder function
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductImportBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -329,12 +396,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -346,12 +408,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -363,12 +420,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -381,12 +433,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -398,12 +445,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -415,12 +457,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -433,12 +470,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -450,12 +482,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -467,7 +494,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -480,7 +507,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -492,7 +519,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -504,23 +531,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -533,23 +544,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -561,23 +556,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -589,7 +568,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -601,7 +580,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -613,7 +592,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -625,7 +604,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @param publish value to be set
      * @return Builder
      */
@@ -636,7 +615,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>.</p>
      * @param priceMode value to be set
      * @return Builder
      */
@@ -648,7 +627,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -657,7 +636,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.name</code>.</p>
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @return name
      */
 
@@ -666,7 +645,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @return productType
      */
 
@@ -675,7 +654,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @return slug
      */
 
@@ -684,7 +663,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @return description
      */
 
@@ -694,7 +673,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @return categories
      */
 
@@ -704,12 +683,17 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     * value of attributes}
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @return metaTitle
      */
 
@@ -719,12 +703,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @return metaDescription
      */
 
@@ -734,12 +713,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @return metaKeywords
      */
 
@@ -749,7 +723,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
 
@@ -759,23 +733,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @return searchKeywords
      */
 
@@ -785,7 +743,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
 
@@ -795,7 +753,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @return publish
      */
 
@@ -805,7 +763,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>.</p>
      * @return priceMode
      */
 
@@ -823,8 +781,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         Objects.requireNonNull(name, ProductImport.class + ": name is missing");
         Objects.requireNonNull(productType, ProductImport.class + ": productType is missing");
         Objects.requireNonNull(slug, ProductImport.class + ": slug is missing");
-        return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,
-            metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
+        return new ProductImportImpl(key, name, productType, slug, description, categories, attributes, metaTitle,
+            metaDescription, metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
     }
 
     /**
@@ -832,8 +790,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      * @return ProductImport
      */
     public ProductImport buildUnchecked() {
-        return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,
-            metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
+        return new ProductImportImpl(key, name, productType, slug, description, categories, attributes, metaTitle,
+            metaDescription, metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
     }
 
     /**
@@ -857,6 +815,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         builder.slug = template.getSlug();
         builder.description = template.getDescription();
         builder.categories = template.getCategories();
+        builder.attributes = template.getAttributes();
         builder.metaTitle = template.getMetaTitle();
         builder.metaDescription = template.getMetaDescription();
         builder.metaKeywords = template.getMetaKeywords();

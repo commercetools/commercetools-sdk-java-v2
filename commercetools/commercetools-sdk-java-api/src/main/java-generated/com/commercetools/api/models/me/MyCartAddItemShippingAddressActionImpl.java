@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds an address to a Cart when shipping to multiple addresses is desired.</p>
+ *  <p>Adds an address to the <code>itemShippingAddresses</code> of a Cart. Use this action when shipping is defined per item. For example, when shipping items to multiple addresses or when using different Shipping Methods, even if all items share the same address.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShippingAddressAction, ModelBase {
@@ -53,7 +54,7 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new address must have a key that is unique accross this Cart.</p>
+     *  <p>The new address must have a key that is unique across this Cart.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -93,4 +94,8 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
                 .build();
     }
 
+    @Override
+    public MyCartAddItemShippingAddressAction copyDeep() {
+        return MyCartAddItemShippingAddressAction.deepCopy(this);
+    }
 }

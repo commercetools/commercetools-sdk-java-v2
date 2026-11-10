@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Define arbitrary tokens that are used to match the input.</p>
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("custom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomTokenizerImpl.class)
 public interface CustomTokenizer extends SuggestTokenizer {
@@ -77,6 +79,8 @@ public interface CustomTokenizer extends SuggestTokenizer {
         return instance;
     }
 
+    public CustomTokenizer copyDeep();
+
     /**
      * factory method to create a deep copy of CustomTokenizer
      * @param template instance to be copied
@@ -123,8 +127,8 @@ public interface CustomTokenizer extends SuggestTokenizer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomTokenizer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomTokenizer>() {
+    public static tools.jackson.core.type.TypeReference<CustomTokenizer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomTokenizer>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomTokenizer>";

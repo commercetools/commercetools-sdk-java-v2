@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</p>
@@ -28,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AWSLambda")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AWSLambdaDestinationImpl.class)
 public interface AWSLambdaDestination extends ExtensionDestination {
@@ -103,6 +105,8 @@ public interface AWSLambdaDestination extends ExtensionDestination {
         return instance;
     }
 
+    public AWSLambdaDestination copyDeep();
+
     /**
      * factory method to create a deep copy of AWSLambdaDestination
      * @param template instance to be copied
@@ -151,8 +155,8 @@ public interface AWSLambdaDestination extends ExtensionDestination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AWSLambdaDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AWSLambdaDestination>() {
+    public static tools.jackson.core.type.TypeReference<AWSLambdaDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AWSLambdaDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<AWSLambdaDestination>";

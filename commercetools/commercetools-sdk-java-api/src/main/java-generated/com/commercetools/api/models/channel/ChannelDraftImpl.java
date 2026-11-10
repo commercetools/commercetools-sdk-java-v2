@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChannelDraft
@@ -64,6 +65,8 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -71,7 +74,8 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
@@ -111,7 +115,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      */
 
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
@@ -201,4 +205,8 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChannelDraft copyDeep() {
+        return ChannelDraft.deepCopy(this);
+    }
 }

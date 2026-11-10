@@ -3,41 +3,38 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderAddParcelToDeliveryActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderAddParcelToDeliveryActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderAddParcelToDeliveryActionBuilder builder) {
         StagedOrderAddParcelToDeliveryAction stagedOrderAddParcelToDeliveryAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderAddParcelToDeliveryAction)
                 .isInstanceOf(StagedOrderAddParcelToDeliveryAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder().deliveryId("deliveryId") },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder().deliveryKey("deliveryKey") },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder().parcelKey("parcelKey") },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
-                        .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
-                        .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
-                        .items(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
-                new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
+                new Object[] { "deliveryId", StagedOrderAddParcelToDeliveryAction.builder().deliveryId("deliveryId") },
+                new Object[] { "deliveryKey",
+                        StagedOrderAddParcelToDeliveryAction.builder().deliveryKey("deliveryKey") },
+                new Object[] { "parcelKey", StagedOrderAddParcelToDeliveryAction.builder().parcelKey("parcelKey") },
+                new Object[] { "measurements",
+                        StagedOrderAddParcelToDeliveryAction.builder()
+                                .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
+                new Object[] { "trackingData",
+                        StagedOrderAddParcelToDeliveryAction.builder()
+                                .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
+                new Object[] { "items",
+                        StagedOrderAddParcelToDeliveryAction.builder()
+                                .items(Collections
+                                        .singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
+                new Object[] { "custom", StagedOrderAddParcelToDeliveryAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

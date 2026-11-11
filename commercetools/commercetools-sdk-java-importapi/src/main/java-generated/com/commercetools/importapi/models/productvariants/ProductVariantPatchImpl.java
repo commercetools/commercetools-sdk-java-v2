@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to update a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+ *  <p>ProductVariantPatch only changes the Attributes it contains. All other Attributes, images, Assets, and Prices of the ProductVariant remain unchanged. To change images or Assets, use <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a> with the complete set of values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {

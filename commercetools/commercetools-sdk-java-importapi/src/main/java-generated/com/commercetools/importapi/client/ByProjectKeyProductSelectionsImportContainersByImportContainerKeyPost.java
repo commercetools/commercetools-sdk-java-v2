@@ -17,6 +17,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Product Selections.</p>
+ *  <p>When updating existing Product Selections, an <code>assignments</code> list in a <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductSelectionImport" rel="nofollow">ProductSelectionImport</a> becomes the complete set of assignments, and Products omitted from the list are removed from the Product Selection.</p>
  *
  * <hr>
  * <div class=code-example>

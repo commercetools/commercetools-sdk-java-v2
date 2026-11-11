@@ -20,6 +20,7 @@ import tools.jackson.databind.annotation.*;
 /**
  *  <p>Represents the data used to import a Variant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> in the Project.</p>
  *  <p>This import resource is only available for Projects with <code>productCatalogModel</code> set to <code>Modular</code>.</p>
+ *  <p>When updating an existing Variant, <code>images</code>, <code>attributes</code>, and <code>assets</code> omitted from the import are removed from the Variant. Include all existing values you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantImportImpl implements VariantImport, ModelBase {

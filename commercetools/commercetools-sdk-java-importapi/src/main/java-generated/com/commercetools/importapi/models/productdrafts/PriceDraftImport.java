@@ -25,6 +25,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Price Draft for the import purpose.</p>
+ *  <p>When updating an existing Embedded Price, optional values omitted from the import, such as <code>country</code>, <code>channel</code>, <code>customerGroup</code>, <code>validFrom</code>, <code>validUntil</code>, <code>tiers</code>, <code>discounted</code>, and <code>custom</code>, are removed from the Price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

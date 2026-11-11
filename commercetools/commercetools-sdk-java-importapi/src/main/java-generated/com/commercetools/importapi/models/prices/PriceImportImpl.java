@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import an <span>Embedded Price</span> . Once imported, this data is persisted as a <span>Price</span> in a Product Variant.</p>
+ *  <p>When updating an existing Embedded Price, the import replaces the Price with the imported data. Optional values omitted from the import, such as <code>country</code>, <code>channel</code>, <code>customerGroup</code>, <code>validFrom</code>, <code>validUntil</code>, <code>tiers</code>, <code>discounted</code>, and <code>custom</code>, are removed from the Price. Include all existing values you want to keep. Other Prices of the ProductVariant are not changed. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImportImpl implements PriceImport, ModelBase {

@@ -17,6 +17,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for ProductTypes.</p>
+ *  <p>When updating existing ProductTypes, AttributeDefinitions omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductTypeImport" rel="nofollow">ProductTypeImport</a> are removed, and the corresponding Attribute values are deleted from all Products with this ProductType. Omitting the <code>attributes</code> field removes all AttributeDefinitions. This data cannot be recovered.</p>
  *
  * <hr>
  * <div class=code-example>

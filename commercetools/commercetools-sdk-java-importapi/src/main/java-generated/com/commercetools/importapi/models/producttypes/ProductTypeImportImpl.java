@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> in the Project.</p>
+ *  <p>When updating an existing ProductType, AttributeDefinitions omitted from <code>attributes</code> are removed from the ProductType, and the corresponding Attribute values are deleted from all Products with this ProductType. This data cannot be recovered. Omitting the entire <code>attributes</code> field removes all AttributeDefinitions. Always include every AttributeDefinition you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
@@ -76,6 +77,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {

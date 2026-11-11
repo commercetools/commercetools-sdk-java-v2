@@ -17,6 +17,8 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Standalone Prices.</p>
+ *  <p>When updating existing Standalone Prices, optional values omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:StandalonePriceImport" rel="nofollow">StandalonePriceImport</a>, such as <code>validFrom</code>, <code>validUntil</code>, <code>tiers</code>, <code>discounted</code>, and <code>custom</code>, are removed. Include all existing values you want to keep.</p>
+ *  <p>StandalonePriceImport has no <code>staged</code> field. If the existing StandalonePrice has staged changes, every update through the Import API discards them, even if the imported <code>value</code> is the same. To keep the staged changes, first apply them with the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  *
  * <hr>
  * <div class=code-example>

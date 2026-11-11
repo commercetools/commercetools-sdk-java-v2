@@ -26,6 +26,8 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import a StandalonePrice. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) in the Project.</p>
+ *  <p>When updating an existing StandalonePrice, optional values omitted from the import, such as <code>validFrom</code>, <code>validUntil</code>, <code>tiers</code>, <code>discounted</code>, and <code>custom</code>, are removed from the StandalonePrice. Include all existing values you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
+ *  <p>StandalonePriceImport has no <code>staged</code> field. If the existing StandalonePrice has staged changes, every update through the Import API discards them, even if the imported <code>value</code> is the same. To keep the staged changes, first apply them with the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

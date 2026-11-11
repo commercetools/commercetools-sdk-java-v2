@@ -27,6 +27,7 @@ import tools.jackson.databind.annotation.*;
 /**
  *  <p>Represents the data used to import a Product. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in the Project.</p>
  *  <p>This is the minimal representation required for creating a Product in Composable Commerce.</p>
+ *  <p>When updating an existing Product, <code>categories</code>, <code>taxCategory</code>, and product-level <code>attributes</code> omitted from the import are removed from the Product. Omitting <code>attributes</code> removes all product-level Attributes, and a partial list removes every Attribute that is not in the list. Include all existing values you want to keep. ProductImport does not change ProductVariants or Prices. For more information, see <span>Omitted values are removed on update</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -90,6 +91,7 @@ public interface ProductImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @return categories
      */
     @Valid
@@ -97,7 +99,8 @@ public interface ProductImport extends ImportResource {
     public List<CategoryKeyReference> getCategories();
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @return attributes
      */
     @Valid
@@ -130,6 +133,7 @@ public interface ProductImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @return taxCategory
      */
     @Valid
@@ -205,6 +209,7 @@ public interface ProductImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories values to be set
      */
 
@@ -213,13 +218,15 @@ public interface ProductImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories values to be set
      */
 
     public void setCategories(final List<CategoryKeyReference> categories);
 
     /**
-     * set attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes values to be set
      */
 
@@ -227,7 +234,8 @@ public interface ProductImport extends ImportResource {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     * set attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes values to be set
      */
 
@@ -256,6 +264,7 @@ public interface ProductImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @param taxCategory value to be set
      */
 

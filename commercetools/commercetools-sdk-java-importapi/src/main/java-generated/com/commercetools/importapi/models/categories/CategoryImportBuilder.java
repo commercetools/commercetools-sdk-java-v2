@@ -346,6 +346,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -357,6 +358,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -369,6 +371,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -383,6 +386,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -398,6 +402,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -411,6 +416,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -422,6 +428,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -433,6 +440,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.custom</code>.</p>
+     *  <p>When updating an existing Category, omitting this field removes the Custom Fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -445,6 +453,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.custom</code>.</p>
+     *  <p>When updating an existing Category, omitting this field removes the Custom Fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -457,6 +466,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.custom</code>.</p>
+     *  <p>When updating an existing Category, omitting this field removes the Custom Fields.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -565,6 +575,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      * @return assets
      */
 
@@ -575,6 +586,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.custom</code>.</p>
+     *  <p>When updating an existing Category, omitting this field removes the Custom Fields.</p>
      * @return custom
      */
 

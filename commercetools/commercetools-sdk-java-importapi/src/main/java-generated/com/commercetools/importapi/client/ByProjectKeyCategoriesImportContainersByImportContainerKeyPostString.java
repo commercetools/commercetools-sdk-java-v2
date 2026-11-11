@@ -18,6 +18,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Categories.</p>
+ *  <p>When updating existing Categories, <code>assets</code> and <code>custom</code> omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:CategoryImport" rel="nofollow">CategoryImport</a> are removed. Include all existing values you want to keep.</p>
  *
  * <hr>
  * <div class=code-example>

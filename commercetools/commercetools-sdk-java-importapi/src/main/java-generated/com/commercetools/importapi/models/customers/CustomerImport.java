@@ -23,6 +23,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import a Customer. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> in the Project.</p>
+ *  <p>When updating an existing Customer, <code>addresses</code>, <code>customerGroup</code>, and <code>custom</code> omitted from the import are removed from the Customer. Include all existing values you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

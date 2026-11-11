@@ -19,6 +19,7 @@ import tools.jackson.core.type.TypeReference;
 /**
  *  <p>Creates an Import Request for Variants.</p>
  *  <p>This endpoint is only available for Projects with <code>productCatalogModel</code> set to <code>Modular</code>.</p>
+ *  <p>When updating existing Variants, <code>images</code>, <code>attributes</code>, and <code>assets</code> omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:VariantImport" rel="nofollow">VariantImport</a> are removed. Include all existing values you want to keep.</p>
  *
  * <hr>
  * <div class=code-example>

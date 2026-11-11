@@ -224,6 +224,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -236,6 +237,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -248,6 +250,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -263,6 +266,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -279,6 +283,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -293,6 +298,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -305,6 +311,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -315,7 +322,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * set values to the attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -327,7 +335,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * set value to the attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -339,7 +348,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * add values to the attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -354,7 +364,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * add a value to the attributes using the builder function
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -370,7 +381,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * set the value to the attributes using the builder function
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -495,6 +507,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -508,6 +521,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -520,6 +534,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -674,6 +689,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @return categories
      */
 
@@ -683,7 +699,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     * value of attributes}
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @return attributes
      */
 
@@ -724,6 +741,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @return taxCategory
      */
 

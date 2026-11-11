@@ -26,7 +26,7 @@ import tools.jackson.databind.annotation.*;
  *             .averageRating(0.3)
  *             .highestRating(0.3)
  *             .lowestRating(0.3)
- *             .count(1)
+ *             .count(0.3)
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
  * </code></pre>
@@ -50,7 +50,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("highestRating")
-    public Double getHighestRating();
+    public Integer getHighestRating();
 
     /**
      *  <p>Lowest rating of one target</p>
@@ -58,7 +58,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("lowestRating")
-    public Double getLowestRating();
+    public Integer getLowestRating();
 
     /**
      *  <p>Number of ratings taken into account</p>
@@ -66,7 +66,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("count")
-    public Integer getCount();
+    public Long getCount();
 
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
@@ -89,21 +89,21 @@ public interface ReviewRatingStatistics {
      * @param highestRating value to be set
      */
 
-    public void setHighestRating(final Double highestRating);
+    public void setHighestRating(final Integer highestRating);
 
     /**
      *  <p>Lowest rating of one target</p>
      * @param lowestRating value to be set
      */
 
-    public void setLowestRating(final Double lowestRating);
+    public void setLowestRating(final Integer lowestRating);
 
     /**
      *  <p>Number of ratings taken into account</p>
      * @param count value to be set
      */
 
-    public void setCount(final Integer count);
+    public void setCount(final Long count);
 
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>

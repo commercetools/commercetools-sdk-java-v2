@@ -25,11 +25,11 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
 
     private Double averageRating;
 
-    private Double highestRating;
+    private Integer highestRating;
 
-    private Double lowestRating;
+    private Integer lowestRating;
 
-    private Integer count;
+    private Long count;
 
     private java.lang.Object ratingsDistribution;
 
@@ -38,8 +38,8 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
      */
     @JsonCreator
     ReviewRatingStatisticsImpl(@JsonProperty("averageRating") final Double averageRating,
-            @JsonProperty("highestRating") final Double highestRating,
-            @JsonProperty("lowestRating") final Double lowestRating, @JsonProperty("count") final Integer count,
+            @JsonProperty("highestRating") final Integer highestRating,
+            @JsonProperty("lowestRating") final Integer lowestRating, @JsonProperty("count") final Long count,
             @JsonProperty("ratingsDistribution") final java.lang.Object ratingsDistribution) {
         this.averageRating = averageRating;
         this.highestRating = highestRating;
@@ -66,7 +66,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
      *  <p>Highest rating of one target</p>
      */
 
-    public Double getHighestRating() {
+    public Integer getHighestRating() {
         return this.highestRating;
     }
 
@@ -74,7 +74,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
      *  <p>Lowest rating of one target</p>
      */
 
-    public Double getLowestRating() {
+    public Integer getLowestRating() {
         return this.lowestRating;
     }
 
@@ -82,7 +82,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
      *  <p>Number of ratings taken into account</p>
      */
 
-    public Integer getCount() {
+    public Long getCount() {
         return this.count;
     }
 
@@ -98,15 +98,15 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
         this.averageRating = averageRating;
     }
 
-    public void setHighestRating(final Double highestRating) {
+    public void setHighestRating(final Integer highestRating) {
         this.highestRating = highestRating;
     }
 
-    public void setLowestRating(final Double lowestRating) {
+    public void setLowestRating(final Integer lowestRating) {
         this.lowestRating = lowestRating;
     }
 
-    public void setCount(final Integer count) {
+    public void setCount(final Long count) {
         this.count = count;
     }
 

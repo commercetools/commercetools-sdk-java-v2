@@ -20,11 +20,14 @@ public class ModifiedByTest {
                 new Object[] { "id", ModifiedBy.builder().id("id") },
                 new Object[] { "type", ModifiedBy.builder().type("type") },
                 new Object[] { "clientId", ModifiedBy.builder().clientId("clientId") },
+                new Object[] { "externalUserId", ModifiedBy.builder().externalUserId("externalUserId") },
                 new Object[] { "anonymousId", ModifiedBy.builder().anonymousId("anonymousId") },
                 new Object[] { "customer",
                         ModifiedBy.builder().customer(new com.commercetools.history.models.common.ReferenceImpl()) },
                 new Object[] { "associate",
-                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "attributedTo", ModifiedBy.builder()
+                        .attributedTo(new com.commercetools.history.models.change_history.AttributionImpl()) } };
     }
 
     @Test
@@ -56,6 +59,13 @@ public class ModifiedByTest {
     }
 
     @Test
+    public void externalUserId() {
+        ModifiedBy value = ModifiedBy.of();
+        value.setExternalUserId("externalUserId");
+        Assertions.assertThat(value.getExternalUserId()).isEqualTo("externalUserId");
+    }
+
+    @Test
     public void anonymousId() {
         ModifiedBy value = ModifiedBy.of();
         value.setAnonymousId("anonymousId");
@@ -76,5 +86,13 @@ public class ModifiedByTest {
         value.setAssociate(new com.commercetools.history.models.common.ReferenceImpl());
         Assertions.assertThat(value.getAssociate())
                 .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+    }
+
+    @Test
+    public void attributedTo() {
+        ModifiedBy value = ModifiedBy.of();
+        value.setAttributedTo(new com.commercetools.history.models.change_history.AttributionImpl());
+        Assertions.assertThat(value.getAttributedTo())
+                .isEqualTo(new com.commercetools.history.models.change_history.AttributionImpl());
     }
 }

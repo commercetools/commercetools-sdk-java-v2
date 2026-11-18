@@ -31,3 +31,32 @@
 - :warning: changed property `count` of type `ReviewRatingStatistics` from type `integer` to `number`
 </details>
 
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `Attribution`
+- added type `AttributionSource`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Import` to type `Source`
+- added enum `Export` to type `Source`
+- added enum `IntakeAgent` to type `Source`
+- added enum `PromotionsAgent` to type `Source`
+- added enum `ManagedCommerceMCP` to type `Source`
+- added enum `ProductEnrichmentAgent` to type `Source`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `externalUserId` to type `ModifiedBy`
+- added property `attributedTo` to type `ModifiedBy`
+</details>
+

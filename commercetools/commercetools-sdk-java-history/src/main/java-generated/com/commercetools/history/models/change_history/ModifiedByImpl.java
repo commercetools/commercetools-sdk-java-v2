@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Information about the user or API Client who performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>
+ *  <p>Information about the user, API Client, or source that performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>
+ *  <p><code>attributedTo</code> is only set for changes made after 22 October 2026.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ModifiedByImpl implements ModifiedBy, ModelBase {
@@ -31,11 +32,15 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
 
     private String clientId;
 
+    private String externalUserId;
+
     private String anonymousId;
 
     private com.commercetools.history.models.common.Reference customer;
 
     private com.commercetools.history.models.common.Reference associate;
+
+    private com.commercetools.history.models.change_history.Attribution attributedTo;
 
     /**
      * create instance with all properties
@@ -43,16 +48,21 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     @JsonCreator
     ModifiedByImpl(@JsonProperty("isPlatformClient") final Boolean isPlatformClient,
             @JsonProperty("id") final String id, @JsonProperty("type") final String type,
-            @JsonProperty("clientId") final String clientId, @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("clientId") final String clientId,
+            @JsonProperty("externalUserId") final String externalUserId,
+            @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer,
-            @JsonProperty("associate") final com.commercetools.history.models.common.Reference associate) {
+            @JsonProperty("associate") final com.commercetools.history.models.common.Reference associate,
+            @JsonProperty("attributedTo") final com.commercetools.history.models.change_history.Attribution attributedTo) {
         this.isPlatformClient = isPlatformClient;
         this.id = id;
         this.type = type;
         this.clientId = clientId;
+        this.externalUserId = externalUserId;
         this.anonymousId = anonymousId;
         this.customer = customer;
         this.associate = associate;
+        this.attributedTo = attributedTo;
     }
 
     /**
@@ -101,6 +111,15 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
+     *  <p><span>External user ID</span> of the user who made the change.</p>
+     *  <p>Present only if the change was made by an API Client with an external user ID.</p>
+     */
+
+    public String getExternalUserId() {
+        return this.externalUserId;
+    }
+
+    /**
      *  <p>Present only if the change was made using a token from an <span>anonymous session</span>.</p>
      */
 
@@ -125,6 +144,15 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
         return this.associate;
     }
 
+    /**
+     *  <p>Indicates if the change was made indirectly, for example by an agent acting on behalf of a user.</p>
+     *  <p>Present only for changes made after 22 October 2026.</p>
+     */
+
+    public com.commercetools.history.models.change_history.Attribution getAttributedTo() {
+        return this.attributedTo;
+    }
+
     public void setIsPlatformClient(final Boolean isPlatformClient) {
         this.isPlatformClient = isPlatformClient;
     }
@@ -141,6 +169,10 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
         this.clientId = clientId;
     }
 
+    public void setExternalUserId(final String externalUserId) {
+        this.externalUserId = externalUserId;
+    }
+
     public void setAnonymousId(final String anonymousId) {
         this.anonymousId = anonymousId;
     }
@@ -151,6 +183,10 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
 
     public void setAssociate(final com.commercetools.history.models.common.Reference associate) {
         this.associate = associate;
+    }
+
+    public void setAttributedTo(final com.commercetools.history.models.change_history.Attribution attributedTo) {
+        this.attributedTo = attributedTo;
     }
 
     @Override
@@ -167,16 +203,20 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .append(id, that.id)
                 .append(type, that.type)
                 .append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
                 .append(anonymousId, that.anonymousId)
                 .append(customer, that.customer)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .append(isPlatformClient, that.isPlatformClient)
                 .append(id, that.id)
                 .append(type, that.type)
                 .append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
                 .append(anonymousId, that.anonymousId)
                 .append(customer, that.customer)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .isEquals();
     }
 
@@ -186,9 +226,11 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .append(id)
                 .append(type)
                 .append(clientId)
+                .append(externalUserId)
                 .append(anonymousId)
                 .append(customer)
                 .append(associate)
+                .append(attributedTo)
                 .toHashCode();
     }
 
@@ -198,9 +240,11 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .append("id", id)
                 .append("type", type)
                 .append("clientId", clientId)
+                .append("externalUserId", externalUserId)
                 .append("anonymousId", anonymousId)
                 .append("customer", customer)
                 .append("associate", associate)
+                .append("attributedTo", attributedTo)
                 .build();
     }
 

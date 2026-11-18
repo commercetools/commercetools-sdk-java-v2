@@ -24,8 +24,12 @@ public class AgentResponsesRequestTest {
                 new Object[] { "businessUnit", AgentResponsesRequest.builder()
                         .businessUnit(
                             new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] { "store", AgentResponsesRequest.builder()
-                        .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) } };
+                new Object[] { "store",
+                        AgentResponsesRequest.builder()
+                                .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
+                new Object[] { "shoppingList", AgentResponsesRequest.builder()
+                        .shoppingList(
+                            new com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl()) } };
     }
 
     @Test
@@ -64,5 +68,13 @@ public class AgentResponsesRequestTest {
         value.setStore(new com.commercetools.api.models.store.StoreResourceIdentifierImpl());
         Assertions.assertThat(value.getStore())
                 .isEqualTo(new com.commercetools.api.models.store.StoreResourceIdentifierImpl());
+    }
+
+    @Test
+    public void shoppingList() {
+        AgentResponsesRequest value = AgentResponsesRequest.of();
+        value.setShoppingList(new com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl());
+        Assertions.assertThat(value.getShoppingList())
+                .isEqualTo(new com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl());
     }
 }

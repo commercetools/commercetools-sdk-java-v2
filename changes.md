@@ -3,35 +3,32 @@
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `CategoryAddStoreWithDescendantsAction`
-- added type `CategoryRemoveStoreWithDescendantsAction`
-- added type `CategorySetStoresWithDescendantsAction`
-- added type `TooManyRequestsError`
-- added type `GraphQLTooManyRequestsError`
-- added type `RecurringOrderNowRequestedMessage`
-- added type `RecurringOrderNowRequestedMessagePayload`
-- added type `RecurrencePolicySetMinDaysBetweenOrdersAction`
-- added type `RecurringOrderRequestOrderNowAction`
-- added type `StoreSettingOngoingWarning`
+- added type `AgentMissingCurrencyError`
+- added type `AgentShoppingListUnresolvedError`
+- added type `GraphQLAgentMissingCurrencyError`
+- added type `GraphQLAgentShoppingListUnresolvedError`
 </details>
 
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added enum `ProductEnrichmentAgent` to type `AttributionSource`
+- changed property `prompt` of type `AgentResponsesRequest` to be optional
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `warnings` to type `Category`
-- added property `isPlatformClient` to type `ClientLogging`
-- added property `isPlatformClient` to type `CreatedBy`
-- added property `isPlatformClient` to type `LastModifiedBy`
-- added property `minDaysBetweenOrders` to type `RecurrencePolicy`
-- added property `minDaysBetweenOrders` to type `RecurrencePolicyDraft`
+- added property `shoppingList` to type `AgentResponsesPayload`
+- added property `shoppingList` to type `AgentResponsesRequest`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `count` of type `ReviewRatingStatistics` from type `integer` to `number`
 </details>
 
 **History changes**
@@ -39,31 +36,27 @@
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `ChangeSavedToLineItemChange`
-- added type `SetMethodInfoCustomFieldChange`
-- added type `SetMethodInfoCustomTypeChange`
-- added type `SetMethodInfoInterfaceAccountChange`
-- added type `SetMethodInfoTokenChange`
+- added type `Attribution`
+- added type `AttributionSource`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Import` to type `Source`
+- added enum `Export` to type `Source`
+- added enum `IntakeAgent` to type `Source`
+- added enum `PromotionsAgent` to type `Source`
+- added enum `ManagedCommerceMCP` to type `Source`
+- added enum `ProductEnrichmentAgent` to type `Source`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `shippingKey` to type `AddDeliveryChange`
-- added property `shippingKey` to type `AddParcelToDeliveryChange`
-- added property `shippingKey` to type `RemoveDeliveryItemsChange`
-- added property `shippingKey` to type `RemoveParcelFromDeliveryChange`
-- added property `shippingKey` to type `SetDeliveryAddressChange`
-- added property `shippingKey` to type `SetDeliveryItemsChange`
-- added property `shippingKey` to type `SetParcelItemsChange`
-- added property `shippingKey` to type `SetParcelMeasurementsChange`
-- added property `shippingKey` to type `SetParcelTrackingDataChange`
-- added property `shippingKey` to type `SetDeliveryAddressCustomFieldChange`
-- added property `shippingKey` to type `SetDeliveryAddressCustomTypeChange`
-- added property `shippingKey` to type `SetDeliveryCustomFieldChange`
-- added property `shippingKey` to type `SetDeliveryCustomTypeChange`
-- added property `shippingKey` to type `SetParcelCustomFieldChange`
-- added property `shippingKey` to type `SetParcelCustomTypeChange`
+- added property `externalUserId` to type `ModifiedBy`
+- added property `attributedTo` to type `ModifiedBy`
 </details>
 

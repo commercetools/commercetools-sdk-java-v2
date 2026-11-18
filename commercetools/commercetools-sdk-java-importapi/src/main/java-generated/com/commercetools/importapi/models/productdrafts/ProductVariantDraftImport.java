@@ -54,6 +54,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @return prices
      */
     @Valid
@@ -62,6 +63,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @return attributes
      */
     @Valid
@@ -70,6 +72,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @return images
      */
     @Valid
@@ -78,6 +81,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @return assets
      */
     @Valid
@@ -100,6 +104,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param prices values to be set
      */
 
@@ -108,6 +113,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param prices values to be set
      */
 
@@ -115,6 +121,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param attributes values to be set
      */
 
@@ -123,6 +130,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param attributes values to be set
      */
 
@@ -130,6 +138,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param images values to be set
      */
 
@@ -138,6 +147,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param images values to be set
      */
 
@@ -145,6 +155,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param assets values to be set
      */
 
@@ -153,6 +164,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param assets values to be set
      */
 

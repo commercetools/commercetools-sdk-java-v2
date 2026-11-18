@@ -68,6 +68,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingCurrency(
+            Function<com.commercetools.api.predicates.query.agent.AgentMissingCurrencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingCurrencyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentMissingCurrencyErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingCustomerEmail(
             Function<com.commercetools.api.predicates.query.agent.AgentMissingCustomerEmailErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingCustomerEmailErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -132,6 +139,13 @@ public class ErrorObjectQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.agent.AgentShoppingListCreationFailedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asShoppingListUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.AgentShoppingListUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentShoppingListUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentShoppingListUnresolvedErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 

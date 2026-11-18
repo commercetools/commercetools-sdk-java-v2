@@ -63,6 +63,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingCurrency(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCurrencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCurrencyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCurrencyErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingCustomerEmail(
             Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -129,6 +136,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl
                     .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asShoppingListUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListUnresolvedErrorQueryBuilderDsl.of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 

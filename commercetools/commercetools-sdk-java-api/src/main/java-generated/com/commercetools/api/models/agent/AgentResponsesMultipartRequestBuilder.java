@@ -30,7 +30,7 @@ public class AgentResponsesMultipartRequestBuilder implements Builder<AgentRespo
     private java.util.List<java.io.File> files;
 
     /**
-     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code> or <code>files</code> must be provided.</p>
+     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code>, <code>files</code>, or <code>shoppingList</code> must be provided.</p>
      * @param builder function to build the payload value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class AgentResponsesMultipartRequestBuilder implements Builder<AgentRespo
     }
 
     /**
-     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code> or <code>files</code> must be provided.</p>
+     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code>, <code>files</code>, or <code>shoppingList</code> must be provided.</p>
      * @param builder function to build the payload value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class AgentResponsesMultipartRequestBuilder implements Builder<AgentRespo
     }
 
     /**
-     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code> or <code>files</code> must be provided.</p>
+     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code>, <code>files</code>, or <code>shoppingList</code> must be provided.</p>
      * @param payload value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class AgentResponsesMultipartRequestBuilder implements Builder<AgentRespo
     }
 
     /**
-     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code> or <code>files</code> must be provided.</p>
+     *  <p>JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>. Must include <code>outputType</code> and <code>locale</code>. At least one of <code>prompt</code>, <code>files</code>, or <code>shoppingList</code> must be provided.</p>
      * @return payload
      */
 

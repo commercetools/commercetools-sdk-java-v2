@@ -17,7 +17,8 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Information about the user or API Client who performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>
+ *  <p>Information about the user, API Client, or source that performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>
+ *  <p><code>attributedTo</code> is only set for changes made after 22 October 2026.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -74,6 +75,15 @@ public interface ModifiedBy {
     public String getClientId();
 
     /**
+     *  <p><span>External user ID</span> of the user who made the change.</p>
+     *  <p>Present only if the change was made by an API Client with an external user ID.</p>
+     * @return externalUserId
+     */
+
+    @JsonProperty("externalUserId")
+    public String getExternalUserId();
+
+    /**
      *  <p>Present only if the change was made using a token from an <span>anonymous session</span>.</p>
      * @return anonymousId
      */
@@ -97,6 +107,15 @@ public interface ModifiedBy {
     @Valid
     @JsonProperty("associate")
     public Reference getAssociate();
+
+    /**
+     *  <p>Indicates if the change was made indirectly, for example by an agent acting on behalf of a user.</p>
+     *  <p>Present only for changes made after 22 October 2026.</p>
+     * @return attributedTo
+     */
+    @Valid
+    @JsonProperty("attributedTo")
+    public Attribution getAttributedTo();
 
     /**
      *  <p>Whether the change was made using the Merchant Center.</p>
@@ -134,6 +153,14 @@ public interface ModifiedBy {
     public void setClientId(final String clientId);
 
     /**
+     *  <p><span>External user ID</span> of the user who made the change.</p>
+     *  <p>Present only if the change was made by an API Client with an external user ID.</p>
+     * @param externalUserId value to be set
+     */
+
+    public void setExternalUserId(final String externalUserId);
+
+    /**
      *  <p>Present only if the change was made using a token from an <span>anonymous session</span>.</p>
      * @param anonymousId value to be set
      */
@@ -156,6 +183,14 @@ public interface ModifiedBy {
     public void setAssociate(final Reference associate);
 
     /**
+     *  <p>Indicates if the change was made indirectly, for example by an agent acting on behalf of a user.</p>
+     *  <p>Present only for changes made after 22 October 2026.</p>
+     * @param attributedTo value to be set
+     */
+
+    public void setAttributedTo(final Attribution attributedTo);
+
+    /**
      * factory method
      * @return instance of ModifiedBy
      */
@@ -174,9 +209,11 @@ public interface ModifiedBy {
         instance.setId(template.getId());
         instance.setType(template.getType());
         instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setCustomer(template.getCustomer());
         instance.setAssociate(template.getAssociate());
+        instance.setAttributedTo(template.getAttributedTo());
         return instance;
     }
 
@@ -197,9 +234,12 @@ public interface ModifiedBy {
         instance.setId(template.getId());
         instance.setType(template.getType());
         instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         instance.setAssociate(com.commercetools.history.models.common.Reference.deepCopy(template.getAssociate()));
+        instance.setAttributedTo(
+            com.commercetools.history.models.change_history.Attribution.deepCopy(template.getAttributedTo()));
         return instance;
     }
 

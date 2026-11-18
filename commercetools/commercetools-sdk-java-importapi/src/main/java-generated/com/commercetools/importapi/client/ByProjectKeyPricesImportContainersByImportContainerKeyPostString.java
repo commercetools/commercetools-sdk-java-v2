@@ -18,6 +18,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Embedded Prices.</p>
+ *  <p>When updating an existing Embedded Price, optional values omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:PriceImport" rel="nofollow">PriceImport</a>, such as <code>country</code>, <code>channel</code>, <code>customerGroup</code>, <code>validFrom</code>, <code>validUntil</code>, <code>tiers</code>, <code>discounted</code>, and <code>custom</code>, are removed. Include all existing values you want to keep. Other Prices of the ProductVariant are not changed.</p>
  *
  * <hr>
  * <div class=code-example>

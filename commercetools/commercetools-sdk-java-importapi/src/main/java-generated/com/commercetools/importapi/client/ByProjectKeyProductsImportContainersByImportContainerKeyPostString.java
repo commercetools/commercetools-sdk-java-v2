@@ -18,6 +18,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Products.</p>
+ *  <p>When updating existing Products, <code>categories</code>, <code>taxCategory</code>, and product-level <code>attributes</code> omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">ProductImport</a> are removed. Omitting <code>attributes</code> removes all product-level Attributes, and a partial list removes every Attribute that is not in the list. Include all existing values you want to keep. ProductVariants and Prices are not changed.</p>
  *
  * <hr>
  * <div class=code-example>

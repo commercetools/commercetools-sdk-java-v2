@@ -35,6 +35,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.agent.AgentMissingCurrencyErrorBuilder missingCurrencyBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCurrencyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
         return com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder.of();
     }
@@ -69,6 +73,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
         return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentShoppingListUnresolvedErrorBuilder shoppingListUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListUnresolvedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {

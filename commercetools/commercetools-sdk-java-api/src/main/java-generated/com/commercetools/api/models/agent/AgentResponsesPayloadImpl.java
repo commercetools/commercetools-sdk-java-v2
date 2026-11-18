@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Structured fields for the <code>payload</code> part of a <code>multipart/form-data</code> <span>/responses</span> request to Intake. <code>prompt</code> is optional when files are attached.</p>
+ *  <p>Structured fields for the <code>payload</code> part of a <code>multipart/form-data</code> <span>/responses</span> request to Intake. <code>prompt</code> is optional when files are attached or <code>shoppingList</code> is set.</p>
  *  <p>For an <code>application/json</code> request, use <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesRequest" rel="nofollow">AgentResponsesRequest</a> instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -34,6 +34,8 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
+
     /**
      * create instance with all properties
      */
@@ -42,12 +44,14 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
             @JsonProperty("outputType") final com.commercetools.api.models.agent.AgentResponsesOutputType outputType,
             @JsonProperty("locale") final String locale, @JsonProperty("prompt") final String prompt,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
-            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
+            @JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
         this.outputType = outputType;
         this.locale = locale;
         this.prompt = prompt;
         this.businessUnit = businessUnit;
         this.store = store;
+        this.shoppingList = shoppingList;
     }
 
     /**
@@ -73,7 +77,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
     }
 
     /**
-     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached and <code>shoppingList</code> is not set. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      */
 
     public String getPrompt() {
@@ -81,7 +85,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. Takes precedence over the Business Unit of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -89,11 +93,22 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. Takes precedence over the Store of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to create the Cart or Quote Request from. Intake reads the list once and uses its Line Items as the Products of the request. The ShoppingList must exist and be accessible to the caller.</p>
+     *  <p>If the Shopping List can't be read, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentShoppingListUnresolvedError" rel="nofollow">ShoppingListUnresolved</a> error is returned.</p>
+     *  <p>If files are attached, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>If <code>outputType</code> is <code>ShoppingList</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     */
+
+    public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
+        return this.shoppingList;
     }
 
     public void setOutputType(final com.commercetools.api.models.agent.AgentResponsesOutputType outputType) {
@@ -117,6 +132,11 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
         this.store = store;
     }
 
+    public void setShoppingList(
+            final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
+        this.shoppingList = shoppingList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -132,11 +152,13 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
                 .append(prompt, that.prompt)
                 .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
+                .append(shoppingList, that.shoppingList)
                 .append(outputType, that.outputType)
                 .append(locale, that.locale)
                 .append(prompt, that.prompt)
                 .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
+                .append(shoppingList, that.shoppingList)
                 .isEquals();
     }
 
@@ -147,6 +169,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
                 .append(prompt)
                 .append(businessUnit)
                 .append(store)
+                .append(shoppingList)
                 .toHashCode();
     }
 
@@ -157,6 +180,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
                 .append("prompt", prompt)
                 .append("businessUnit", businessUnit)
                 .append("store", store)
+                .append("shoppingList", shoppingList)
                 .build();
     }
 

@@ -57,7 +57,7 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     @Nullable
-    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit;
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -300,13 +300,13 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @param builder function to build the oldbusinessUnit value
+     * @param builder function to build the oldBusinessUnit value
      * @return Builder
      */
 
-    public OrderBusinessUnitSetMessageBuilder oldbusinessUnit(
+    public OrderBusinessUnitSetMessageBuilder oldBusinessUnit(
             Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
-        this.oldbusinessUnit = builder
+        this.oldBusinessUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
                 .build();
         return this;
@@ -314,26 +314,26 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @param builder function to build the oldbusinessUnit value
+     * @param builder function to build the oldBusinessUnit value
      * @return Builder
      */
 
-    public OrderBusinessUnitSetMessageBuilder withOldbusinessUnit(
+    public OrderBusinessUnitSetMessageBuilder withOldBusinessUnit(
             Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
-        this.oldbusinessUnit = builder
+        this.oldBusinessUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @param oldbusinessUnit value to be set
+     * @param oldBusinessUnit value to be set
      * @return Builder
      */
 
-    public OrderBusinessUnitSetMessageBuilder oldbusinessUnit(
-            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit) {
-        this.oldbusinessUnit = oldbusinessUnit;
+    public OrderBusinessUnitSetMessageBuilder oldBusinessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit) {
+        this.oldBusinessUnit = oldBusinessUnit;
         return this;
     }
 
@@ -442,12 +442,12 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @return oldbusinessUnit
+     * @return oldBusinessUnit
      */
 
     @Nullable
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldbusinessUnit() {
-        return this.oldbusinessUnit;
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldBusinessUnit() {
+        return this.oldBusinessUnit;
     }
 
     /**
@@ -463,7 +463,7 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
         Objects.requireNonNull(resource, OrderBusinessUnitSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, OrderBusinessUnitSetMessage.class + ": resourceVersion is missing");
         return new OrderBusinessUnitSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, businessUnit, oldbusinessUnit);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, businessUnit, oldBusinessUnit);
     }
 
     /**
@@ -472,7 +472,7 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
      */
     public OrderBusinessUnitSetMessage buildUnchecked() {
         return new OrderBusinessUnitSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, businessUnit, oldbusinessUnit);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, businessUnit, oldBusinessUnit);
     }
 
     /**
@@ -501,7 +501,7 @@ public class OrderBusinessUnitSetMessageBuilder implements Builder<OrderBusiness
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.businessUnit = template.getBusinessUnit();
-        builder.oldbusinessUnit = template.getOldbusinessUnit();
+        builder.oldBusinessUnit = template.getOldBusinessUnit();
         return builder;
     }
 

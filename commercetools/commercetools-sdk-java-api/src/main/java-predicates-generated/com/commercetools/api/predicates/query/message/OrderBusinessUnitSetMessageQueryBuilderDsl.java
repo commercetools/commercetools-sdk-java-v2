@@ -100,10 +100,10 @@ public class OrderBusinessUnitSetMessageQueryBuilderDsl {
             OrderBusinessUnitSetMessageQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<OrderBusinessUnitSetMessageQueryBuilderDsl> oldbusinessUnit(
+    public CombinationQueryPredicate<OrderBusinessUnitSetMessageQueryBuilderDsl> oldBusinessUnit(
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("oldbusinessUnit"))
+                .parent(ConstantQueryPredicate.of().constant("oldBusinessUnit"))
                 .inner(fn.apply(
                     com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl.of())),
             OrderBusinessUnitSetMessageQueryBuilderDsl::of);

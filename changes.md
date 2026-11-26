@@ -18,10 +18,20 @@
 
 
 <details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `oldbusinessUnit` from type `OrderBusinessUnitSetMessage`
+- :warning: removed property `oldbusinessUnit` from type `OrderBusinessUnitSetMessagePayload`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `shoppingList` to type `AgentResponsesPayload`
 - added property `shoppingList` to type `AgentResponsesRequest`
+- added property `oldBusinessUnit` to type `OrderBusinessUnitSetMessage`
+- added property `oldBusinessUnit` to type `OrderBusinessUnitSetMessagePayload`
 </details>
 
 

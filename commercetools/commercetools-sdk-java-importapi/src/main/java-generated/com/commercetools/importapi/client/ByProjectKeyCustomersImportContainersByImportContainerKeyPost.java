@@ -17,6 +17,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for Customers.</p>
+ *  <p>When updating existing Customers, <code>addresses</code>, <code>customerGroup</code>, and <code>custom</code> omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:CustomerImport" rel="nofollow">CustomerImport</a> are removed. Include all existing values you want to keep.</p>
  *
  * <hr>
  * <div class=code-example>

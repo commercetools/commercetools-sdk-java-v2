@@ -17,14 +17,14 @@ public class ReviewRatingStatisticsQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ReviewRatingStatisticsQueryBuilderDsl::of));
     }
 
-    public DoubleComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl> highestRating() {
-        return new DoubleComparisonPredicateBuilder<>(
+    public LongComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl> highestRating() {
+        return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("highestRating")),
             p -> new CombinationQueryPredicate<>(p, ReviewRatingStatisticsQueryBuilderDsl::of));
     }
 
-    public DoubleComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl> lowestRating() {
-        return new DoubleComparisonPredicateBuilder<>(
+    public LongComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl> lowestRating() {
+        return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lowestRating")),
             p -> new CombinationQueryPredicate<>(p, ReviewRatingStatisticsQueryBuilderDsl::of));
     }

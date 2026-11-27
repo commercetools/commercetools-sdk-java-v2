@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the <span>Messages Query HTTP API</span>.</p>
+ *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the <span>Messages API</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PlatformFormatImpl implements PlatformFormat, ModelBase {

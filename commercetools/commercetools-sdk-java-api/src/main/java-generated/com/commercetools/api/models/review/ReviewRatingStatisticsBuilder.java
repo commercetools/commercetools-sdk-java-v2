@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .averageRating(0.3)
  *             .highestRating(0.3)
  *             .lowestRating(0.3)
- *             .count(1)
+ *             .count(0.3)
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
  * </code></pre>
@@ -27,11 +27,11 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     private Double averageRating;
 
-    private Double highestRating;
+    private Integer highestRating;
 
-    private Double lowestRating;
+    private Integer lowestRating;
 
-    private Integer count;
+    private Long count;
 
     private java.lang.Object ratingsDistribution;
 
@@ -52,7 +52,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder highestRating(final Double highestRating) {
+    public ReviewRatingStatisticsBuilder highestRating(final Integer highestRating) {
         this.highestRating = highestRating;
         return this;
     }
@@ -63,7 +63,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder lowestRating(final Double lowestRating) {
+    public ReviewRatingStatisticsBuilder lowestRating(final Integer lowestRating) {
         this.lowestRating = lowestRating;
         return this;
     }
@@ -74,7 +74,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return Builder
      */
 
-    public ReviewRatingStatisticsBuilder count(final Integer count) {
+    public ReviewRatingStatisticsBuilder count(final Long count) {
         this.count = count;
         return this;
     }
@@ -104,7 +104,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return highestRating
      */
 
-    public Double getHighestRating() {
+    public Integer getHighestRating() {
         return this.highestRating;
     }
 
@@ -113,7 +113,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return lowestRating
      */
 
-    public Double getLowestRating() {
+    public Integer getLowestRating() {
         return this.lowestRating;
     }
 
@@ -122,7 +122,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
      * @return count
      */
 
-    public Integer getCount() {
+    public Long getCount() {
         return this.count;
     }
 

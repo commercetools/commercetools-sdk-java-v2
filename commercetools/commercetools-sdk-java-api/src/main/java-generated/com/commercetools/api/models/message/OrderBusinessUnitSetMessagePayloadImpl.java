@@ -27,7 +27,7 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
-    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit;
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit;
 
     /**
      * create instance with all properties
@@ -35,9 +35,9 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
     @JsonCreator
     OrderBusinessUnitSetMessagePayloadImpl(
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
-            @JsonProperty("oldbusinessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit) {
+            @JsonProperty("oldBusinessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit) {
         this.businessUnit = businessUnit;
-        this.oldbusinessUnit = oldbusinessUnit;
+        this.oldBusinessUnit = oldBusinessUnit;
         this.type = ORDER_BUSINESS_UNIT_SET;
     }
 
@@ -68,8 +68,8 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      */
 
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldbusinessUnit() {
-        return this.oldbusinessUnit;
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldBusinessUnit() {
+        return this.oldBusinessUnit;
     }
 
     public void setBusinessUnit(
@@ -77,9 +77,9 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
         this.businessUnit = businessUnit;
     }
 
-    public void setOldbusinessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit) {
-        this.oldbusinessUnit = oldbusinessUnit;
+    public void setOldBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit) {
+        this.oldBusinessUnit = oldBusinessUnit;
     }
 
     @Override
@@ -94,23 +94,23 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
 
         return new EqualsBuilder().append(type, that.type)
                 .append(businessUnit, that.businessUnit)
-                .append(oldbusinessUnit, that.oldbusinessUnit)
+                .append(oldBusinessUnit, that.oldBusinessUnit)
                 .append(type, that.type)
                 .append(businessUnit, that.businessUnit)
-                .append(oldbusinessUnit, that.oldbusinessUnit)
+                .append(oldBusinessUnit, that.oldBusinessUnit)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(businessUnit).append(oldbusinessUnit).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(businessUnit).append(oldBusinessUnit).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("businessUnit", businessUnit)
-                .append("oldbusinessUnit", oldbusinessUnit)
+                .append("oldBusinessUnit", oldBusinessUnit)
                 .build();
     }
 

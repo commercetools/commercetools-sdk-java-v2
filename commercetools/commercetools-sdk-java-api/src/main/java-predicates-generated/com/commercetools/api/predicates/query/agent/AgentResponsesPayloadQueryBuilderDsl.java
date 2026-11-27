@@ -51,4 +51,14 @@ public class AgentResponsesPayloadQueryBuilderDsl {
             AgentResponsesPayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<AgentResponsesPayloadQueryBuilderDsl> shoppingList(
+            Function<com.commercetools.api.predicates.query.shopping_list.ShoppingListResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shopping_list.ShoppingListResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("shoppingList"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.shopping_list.ShoppingListResourceIdentifierQueryBuilderDsl
+                            .of())),
+            AgentResponsesPayloadQueryBuilderDsl::of);
+    }
+
 }

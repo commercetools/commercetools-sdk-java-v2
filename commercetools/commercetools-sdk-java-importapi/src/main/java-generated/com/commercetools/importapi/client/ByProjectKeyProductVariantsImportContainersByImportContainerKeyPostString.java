@@ -18,6 +18,8 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for ProductVariants.</p>
+ *  <p>When updating existing ProductVariants, <code>sku</code>, <code>attributes</code>, <code>images</code>, and <code>assets</code> omitted from a <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a> are removed. Include all existing values you want to keep. To update only some Attributes, use the <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/product-variant-patches/import-containers/{importContainerKey}:POST" rel="nofollow">Product Variant Patches</a> endpoint.</p>
+ *  <p>ProductVariantImport does not change the Embedded Prices of an existing ProductVariant. A new ProductVariant created by this import has no Embedded Prices. Import them separately with the <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/prices/import-containers/{importContainerKey}:POST" rel="nofollow">Embedded Prices</a> endpoint. StandalonePrices are not affected.</p>
  *
  * <hr>
  * <div class=code-example>

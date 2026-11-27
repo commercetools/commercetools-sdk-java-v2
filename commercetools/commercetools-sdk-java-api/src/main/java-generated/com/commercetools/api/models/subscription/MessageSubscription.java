@@ -15,7 +15,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Messages will be delivered even if the Messages Query HTTP API <span>is not enabled</span>.</p>
+ *  <p>Messages will be delivered even if the Messages API <span>is not enabled</span>.</p>
  *  <p>For MessageSubscriptions, the format of the payload is <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>.</p>
  *
  * <hr>

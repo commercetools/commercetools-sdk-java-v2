@@ -38,6 +38,9 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    @Nullable
+    private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
+
     /**
      *  <p>The entity to create.</p>
      * @param outputType value to be set
@@ -62,7 +65,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached and <code>shoppingList</code> is not set. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @param prompt value to be set
      * @return Builder
      */
@@ -73,7 +76,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. Takes precedence over the Business Unit of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -87,7 +90,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. Takes precedence over the Business Unit of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -100,7 +103,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. Takes precedence over the Business Unit of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -112,7 +115,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. Takes precedence over the Store of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -124,7 +127,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. Takes precedence over the Store of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -136,7 +139,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. Takes precedence over the Store of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -144,6 +147,54 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     public AgentResponsesPayloadBuilder store(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to create the Cart or Quote Request from. Intake reads the list once and uses its Line Items as the Products of the request. The ShoppingList must exist and be accessible to the caller.</p>
+     *  <p>If the Shopping List can't be read, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentShoppingListUnresolvedError" rel="nofollow">ShoppingListUnresolved</a> error is returned.</p>
+     *  <p>If files are attached, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>If <code>outputType</code> is <code>ShoppingList</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     * @param builder function to build the shoppingList value
+     * @return Builder
+     */
+
+    public AgentResponsesPayloadBuilder shoppingList(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder> builder) {
+        this.shoppingList = builder
+                .apply(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to create the Cart or Quote Request from. Intake reads the list once and uses its Line Items as the Products of the request. The ShoppingList must exist and be accessible to the caller.</p>
+     *  <p>If the Shopping List can't be read, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentShoppingListUnresolvedError" rel="nofollow">ShoppingListUnresolved</a> error is returned.</p>
+     *  <p>If files are attached, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>If <code>outputType</code> is <code>ShoppingList</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     * @param builder function to build the shoppingList value
+     * @return Builder
+     */
+
+    public AgentResponsesPayloadBuilder withShoppingList(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier> builder) {
+        this.shoppingList = builder
+                .apply(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to create the Cart or Quote Request from. Intake reads the list once and uses its Line Items as the Products of the request. The ShoppingList must exist and be accessible to the caller.</p>
+     *  <p>If the Shopping List can't be read, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentShoppingListUnresolvedError" rel="nofollow">ShoppingListUnresolved</a> error is returned.</p>
+     *  <p>If files are attached, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>If <code>outputType</code> is <code>ShoppingList</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     * @param shoppingList value to be set
+     * @return Builder
+     */
+
+    public AgentResponsesPayloadBuilder shoppingList(
+            @Nullable final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
+        this.shoppingList = shoppingList;
         return this;
     }
 
@@ -166,7 +217,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached and <code>shoppingList</code> is not set. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @return prompt
      */
 
@@ -176,7 +227,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. Takes precedence over the Business Unit of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @return businessUnit
      */
 
@@ -186,7 +237,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. Takes precedence over the Store of the Shopping List in <code>shoppingList</code>. If omitted, Intake resolves it from the input or from the Shopping List.</p>
      * @return store
      */
 
@@ -196,13 +247,26 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to create the Cart or Quote Request from. Intake reads the list once and uses its Line Items as the Products of the request. The ShoppingList must exist and be accessible to the caller.</p>
+     *  <p>If the Shopping List can't be read, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentShoppingListUnresolvedError" rel="nofollow">ShoppingListUnresolved</a> error is returned.</p>
+     *  <p>If files are attached, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>If <code>outputType</code> is <code>ShoppingList</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     * @return shoppingList
+     */
+
+    @Nullable
+    public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
+        return this.shoppingList;
+    }
+
+    /**
      * builds AgentResponsesPayload with checking for non-null required values
      * @return AgentResponsesPayload
      */
     public AgentResponsesPayload build() {
         Objects.requireNonNull(outputType, AgentResponsesPayload.class + ": outputType is missing");
         Objects.requireNonNull(locale, AgentResponsesPayload.class + ": locale is missing");
-        return new AgentResponsesPayloadImpl(outputType, locale, prompt, businessUnit, store);
+        return new AgentResponsesPayloadImpl(outputType, locale, prompt, businessUnit, store, shoppingList);
     }
 
     /**
@@ -210,7 +274,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
      * @return AgentResponsesPayload
      */
     public AgentResponsesPayload buildUnchecked() {
-        return new AgentResponsesPayloadImpl(outputType, locale, prompt, businessUnit, store);
+        return new AgentResponsesPayloadImpl(outputType, locale, prompt, businessUnit, store, shoppingList);
     }
 
     /**
@@ -233,6 +297,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
         builder.prompt = template.getPrompt();
         builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
+        builder.shoppingList = template.getShoppingList();
         return builder;
     }
 

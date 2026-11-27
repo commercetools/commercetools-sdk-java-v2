@@ -20,6 +20,7 @@ import tools.jackson.databind.annotation.*;
 /**
  *  <p>Represents the data used to import a Product. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in the Project.</p>
  *  <p>This is the minimal representation required for creating a Product in Composable Commerce.</p>
+ *  <p>When updating an existing Product, <code>categories</code>, <code>taxCategory</code>, and product-level <code>attributes</code> omitted from the import are removed from the Product. Omitting <code>attributes</code> removes all product-level Attributes, and a partial list removes every Attribute that is not in the list. Include all existing values you want to keep. ProductImport does not change ProductVariants or Prices. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImportImpl implements ProductImport, ModelBase {
@@ -138,6 +139,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
@@ -145,7 +147,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -178,6 +181,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {

@@ -18,9 +18,9 @@ public class ReviewRatingStatisticsTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "averageRating", ReviewRatingStatistics.builder().averageRating(0.99762577) },
-                new Object[] { "highestRating", ReviewRatingStatistics.builder().highestRating(0.8229182) },
-                new Object[] { "lowestRating", ReviewRatingStatistics.builder().lowestRating(0.9610451) },
-                new Object[] { "count", ReviewRatingStatistics.builder().count(2) },
+                new Object[] { "highestRating", ReviewRatingStatistics.builder().highestRating(4) },
+                new Object[] { "lowestRating", ReviewRatingStatistics.builder().lowestRating(8) },
+                new Object[] { "count", ReviewRatingStatistics.builder().count(2L) },
                 new Object[] { "ratingsDistribution",
                         ReviewRatingStatistics.builder().ratingsDistribution("ratingsDistribution") } };
     }
@@ -35,22 +35,22 @@ public class ReviewRatingStatisticsTest {
     @Test
     public void highestRating() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setHighestRating(0.8229182);
-        Assertions.assertThat(value.getHighestRating()).isEqualTo(0.8229182);
+        value.setHighestRating(4);
+        Assertions.assertThat(value.getHighestRating()).isEqualTo(4);
     }
 
     @Test
     public void lowestRating() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setLowestRating(0.9610451);
-        Assertions.assertThat(value.getLowestRating()).isEqualTo(0.9610451);
+        value.setLowestRating(8);
+        Assertions.assertThat(value.getLowestRating()).isEqualTo(8);
     }
 
     @Test
     public void count() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setCount(2);
-        Assertions.assertThat(value.getCount()).isEqualTo(2);
+        value.setCount(2L);
+        Assertions.assertThat(value.getCount()).isEqualTo(2L);
     }
 
     @Test

@@ -138,7 +138,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Last seen version of the resource.</p>
+     *  <p>Version of the message. This is always <code>1</code>.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Date and time (UTC) the resource was initially created.</p>
+     *  <p>Date and time (UTC) the message was generated.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Date and time (UTC) the resource was last modified.</p>
+     *  <p>Date and time (UTC) the message was last modified. This always matches the value of <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Version of the resource on which the update was performed.</p>
+     *  <p>Version of the resource on which the change or action was performed.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Last seen version of the resource.</p>
+     *  <p>Version of the message. This is always <code>1</code>.</p>
      * @return version
      */
 
@@ -278,7 +278,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Date and time (UTC) the resource was initially created.</p>
+     *  <p>Date and time (UTC) the message was generated.</p>
      * @return createdAt
      */
 
@@ -287,7 +287,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Date and time (UTC) the resource was last modified.</p>
+     *  <p>Date and time (UTC) the message was last modified. This always matches the value of <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
 
@@ -305,7 +305,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Version of the resource on which the update was performed.</p>
+     *  <p>Version of the resource on which the change or action was performed.</p>
      * @return resourceVersion
      */
 

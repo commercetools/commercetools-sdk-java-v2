@@ -22,6 +22,9 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Project.</p>
+ *  <p>When updating an existing ProductVariant, the import replaces its <code>sku</code>, <code>attributes</code>, <code>images</code>, and <code>assets</code> with the imported values. Values omitted from the import are removed from the ProductVariant, so a request that contains only <code>images</code> also removes all Attributes and Assets. Include all existing values you want to keep.</p>
+ *  <p>ProductVariantImport does not change the Embedded Prices of an existing ProductVariant. A new ProductVariant created by this import has no Embedded Prices. Import them separately with <a href="https://docs.commercetools.com/apis/ctp:import:type:PriceImport" rel="nofollow">PriceImport</a>. StandalonePrices are not affected.</p>
+ *  <p>To change only some Attribute values, use <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>. For more information, see <span>Omitted values are removed on update</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,6 +52,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     *  <p>If the ProductVariant already has a <code>sku</code> and this field is omitted, the <code>sku</code> is removed.</p>
      * @return sku
      */
 
@@ -68,6 +72,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
+     *  <p>The imported Attributes replace the existing Attributes of the ProductVariant. Existing Attributes omitted from this array are removed. To change only some Attributes, use <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
      * @return attributes
      */
     @Valid
@@ -76,6 +81,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     *  <p>The imported images replace the existing images of the ProductVariant. If this field is omitted, all existing images are removed.</p>
      * @return images
      */
     @Valid
@@ -84,6 +90,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     *  <p>The imported Assets replace the existing Assets of the ProductVariant. If this field is omitted, all existing Assets are removed.</p>
      * @return assets
      */
     @Valid
@@ -119,6 +126,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     *  <p>If the ProductVariant already has a <code>sku</code> and this field is omitted, the <code>sku</code> is removed.</p>
      * @param sku value to be set
      */
 
@@ -136,6 +144,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
+     *  <p>The imported Attributes replace the existing Attributes of the ProductVariant. Existing Attributes omitted from this array are removed. To change only some Attributes, use <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
      * @param attributes values to be set
      */
 
@@ -144,6 +153,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
+     *  <p>The imported Attributes replace the existing Attributes of the ProductVariant. Existing Attributes omitted from this array are removed. To change only some Attributes, use <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
      * @param attributes values to be set
      */
 
@@ -151,6 +161,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     *  <p>The imported images replace the existing images of the ProductVariant. If this field is omitted, all existing images are removed.</p>
      * @param images values to be set
      */
 
@@ -159,6 +170,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     *  <p>The imported images replace the existing images of the ProductVariant. If this field is omitted, all existing images are removed.</p>
      * @param images values to be set
      */
 
@@ -166,6 +178,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     *  <p>The imported Assets replace the existing Assets of the ProductVariant. If this field is omitted, all existing Assets are removed.</p>
      * @param assets values to be set
      */
 
@@ -174,6 +187,7 @@ public interface ProductVariantImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     *  <p>The imported Assets replace the existing Assets of the ProductVariant. If this field is omitted, all existing Assets are removed.</p>
      * @param assets values to be set
      */
 

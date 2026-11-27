@@ -55,7 +55,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public String getId();
 
     /**
-     *  <p>Last seen version of the resource.</p>
+     *  <p>Version of the message. This is always <code>1</code>.</p>
      * @return version
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getVersion();
 
     /**
-     *  <p>Date and time (UTC) the resource was initially created.</p>
+     *  <p>Date and time (UTC) the message was generated.</p>
      * @return createdAt
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Date and time (UTC) the resource was last modified.</p>
+     *  <p>Date and time (UTC) the message was last modified. This always matches the value of <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getSequenceNumber();
 
     /**
-     *  <p>Version of the resource on which the update was performed.</p>
+     *  <p>Version of the resource on which the change or action was performed.</p>
      * @return resourceVersion
      */
     @NotNull
@@ -110,21 +110,21 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public void setId(final String id);
 
     /**
-     *  <p>Last seen version of the resource.</p>
+     *  <p>Version of the message. This is always <code>1</code>.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>Date and time (UTC) the resource was initially created.</p>
+     *  <p>Date and time (UTC) the message was generated.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Date and time (UTC) the resource was last modified.</p>
+     *  <p>Date and time (UTC) the message was last modified. This always matches the value of <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      */
 
@@ -138,7 +138,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Version of the resource on which the update was performed.</p>
+     *  <p>Version of the resource on which the change or action was performed.</p>
      * @param resourceVersion value to be set
      */
 

@@ -47,7 +47,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
-    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit;
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit;
 
     /**
      * create instance with all properties
@@ -63,7 +63,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
-            @JsonProperty("oldbusinessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit) {
+            @JsonProperty("oldBusinessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -75,7 +75,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.businessUnit = businessUnit;
-        this.oldbusinessUnit = oldbusinessUnit;
+        this.oldBusinessUnit = oldBusinessUnit;
         this.type = ORDER_BUSINESS_UNIT_SET;
     }
 
@@ -186,8 +186,8 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      */
 
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldbusinessUnit() {
-        return this.oldbusinessUnit;
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldBusinessUnit() {
+        return this.oldBusinessUnit;
     }
 
     public void setId(final String id) {
@@ -236,9 +236,9 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
         this.businessUnit = businessUnit;
     }
 
-    public void setOldbusinessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldbusinessUnit) {
-        this.oldbusinessUnit = oldbusinessUnit;
+    public void setOldBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldBusinessUnit) {
+        this.oldBusinessUnit = oldBusinessUnit;
     }
 
     @Override
@@ -263,7 +263,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(businessUnit, that.businessUnit)
-                .append(oldbusinessUnit, that.oldbusinessUnit)
+                .append(oldBusinessUnit, that.oldBusinessUnit)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -276,7 +276,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(businessUnit, that.businessUnit)
-                .append(oldbusinessUnit, that.oldbusinessUnit)
+                .append(oldBusinessUnit, that.oldBusinessUnit)
                 .isEquals();
     }
 
@@ -294,7 +294,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(businessUnit)
-                .append(oldbusinessUnit)
+                .append(oldBusinessUnit)
                 .toHashCode();
     }
 
@@ -312,7 +312,7 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("businessUnit", businessUnit)
-                .append("oldbusinessUnit", oldbusinessUnit)
+                .append("oldBusinessUnit", oldBusinessUnit)
                 .build();
     }
 

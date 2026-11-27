@@ -20,9 +20,9 @@ public class OrderBusinessUnitSetMessagePayloadTest {
         return new Object[][] {
                 new Object[] { "businessUnit", OrderBusinessUnitSetMessagePayload.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { "oldbusinessUnit",
+                new Object[] { "oldBusinessUnit",
                         OrderBusinessUnitSetMessagePayload.builder()
-                                .oldbusinessUnit(
+                                .oldBusinessUnit(
                                     new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
     }
 
@@ -35,10 +35,10 @@ public class OrderBusinessUnitSetMessagePayloadTest {
     }
 
     @Test
-    public void oldbusinessUnit() {
+    public void oldBusinessUnit() {
         OrderBusinessUnitSetMessagePayload value = OrderBusinessUnitSetMessagePayload.of();
-        value.setOldbusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
-        Assertions.assertThat(value.getOldbusinessUnit())
+        value.setOldBusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
+        Assertions.assertThat(value.getOldBusinessUnit())
                 .isEqualTo(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
     }
 }

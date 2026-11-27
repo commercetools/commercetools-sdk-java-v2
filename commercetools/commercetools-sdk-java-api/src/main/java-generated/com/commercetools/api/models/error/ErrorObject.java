@@ -144,6 +144,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for missingCurrency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingCurrencyErrorBuilder missingCurrencyBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCurrencyErrorBuilder.of();
+    }
+
+    /**
      * builder for missingCustomerEmail subtype
      * @return builder
      */
@@ -213,6 +221,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
         return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentShoppingListUnresolvedErrorBuilder shoppingListUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListUnresolvedErrorBuilder.of();
     }
 
     /**

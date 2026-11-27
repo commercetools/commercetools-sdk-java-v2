@@ -54,11 +54,11 @@ public interface OrderBusinessUnitSetMessage extends OrderMessage {
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @return oldbusinessUnit
+     * @return oldBusinessUnit
      */
     @Valid
-    @JsonProperty("oldbusinessUnit")
-    public BusinessUnitKeyReference getOldbusinessUnit();
+    @JsonProperty("oldBusinessUnit")
+    public BusinessUnitKeyReference getOldBusinessUnit();
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
@@ -69,10 +69,10 @@ public interface OrderBusinessUnitSetMessage extends OrderMessage {
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
-     * @param oldbusinessUnit value to be set
+     * @param oldBusinessUnit value to be set
      */
 
-    public void setOldbusinessUnit(final BusinessUnitKeyReference oldbusinessUnit);
+    public void setOldBusinessUnit(final BusinessUnitKeyReference oldBusinessUnit);
 
     /**
      * factory method
@@ -100,7 +100,7 @@ public interface OrderBusinessUnitSetMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setBusinessUnit(template.getBusinessUnit());
-        instance.setOldbusinessUnit(template.getOldbusinessUnit());
+        instance.setOldBusinessUnit(template.getOldBusinessUnit());
         return instance;
     }
 
@@ -131,8 +131,8 @@ public interface OrderBusinessUnitSetMessage extends OrderMessage {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
-        instance.setOldbusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference
-                .deepCopy(template.getOldbusinessUnit()));
+        instance.setOldBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference
+                .deepCopy(template.getOldBusinessUnit()));
         return instance;
     }
 

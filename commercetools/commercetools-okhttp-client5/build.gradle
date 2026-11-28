@@ -11,11 +11,11 @@ jmh {
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    api "com.squareup.okhttp3:okhttp:5.5.0" version {
+    api "com.squareup.okhttp3:okhttp:5.5.1" version {
         strictly '[5.0,5.99999]'
         prefer "5.5.0"
     }
-    implementation "com.squareup.okio:okio:3.18.1"
+    implementation "com.squareup.okio:okio:3.18.2"
 
     implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
 }
